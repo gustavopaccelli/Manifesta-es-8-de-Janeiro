@@ -1,0 +1,8 @@
+# Nenhuma conversão de quebra de linha, em nenhum arquivo.
+#
+# O CSV do codebook é gerado com terminador \n e BOM de UTF-8, por decisão
+# registrada em scripts/gerar_codebook.py — o BOM faz o Excel em português
+# abrir com acentuação correta. Deixar o git normalizar para CRLF faria o
+# arquivo em disco divergir do que o gerador escreve, e cada regeração
+# apareceria como diferença fantasma.
+* -text

@@ -5,6 +5,14 @@ __pycache__/
 # Arquivos de bloqueio do Excel/Word (aparecem ao abrir XLSX e DOCX do projeto)
 ~$*
 
+# Derivado que o ciclo regenera a cada execução. O openpyxl carimba a hora em
+# docProps/core.xml e nos timestamps do zip, então o arquivo muda de bytes sem
+# mudar de conteúdo — versioná-lo enche o histórico de diferença fantasma.
+# Nada se perde: sai de process_tracing_8jan_eventos.json por
+# scripts/gerar_codebook.py, ambos versionados, e o CSV com os mesmos 82 x 16
+# está no histórico. Regere com:  bash scripts/ciclo.sh
+process_tracing_8jan_codebook.xlsx
+
 # Sistema
 Thumbs.db
 .DS_Store

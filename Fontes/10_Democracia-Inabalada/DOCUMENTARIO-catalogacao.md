@@ -74,7 +74,7 @@ O documentário é **objeto de análise, não fonte de evento** — mesma catego
 Duas conexões com o corpus:
 
 1. **Com PT-38** (vandalismo e danos ao acervo): o R$ 11,4 milhões e a narrativa da restauração dialogam diretamente com o registro, cujo detalhamento por peça depende de laudo pericial não obtido.
-2. **Com a frente de disputa discursiva** aberta em `../../CATALOGO-IMPRENSA-MULTIDAO-8JAN.xlsx`: aqui o enquadramento não é de veículo de imprensa, é da própria vítima institucional — um caso distinto e analiticamente interessante.
+2. **Com a frente de disputa discursiva** aberta em `../../data/processed/CATALOGO-IMPRENSA-MULTIDAO-8JAN.xlsx`: aqui o enquadramento não é de veículo de imprensa, é da própria vítima institucional — um caso distinto e analiticamente interessante.
 
 ## Como obter a transcrição
 

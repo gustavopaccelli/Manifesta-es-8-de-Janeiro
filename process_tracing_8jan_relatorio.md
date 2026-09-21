@@ -25,7 +25,7 @@ Conforme sua orientação, a reconstrução abaixo foi montada por **pesquisa em
 
 **Números de multidão.** *Revisto em 16/08/2026.* O projeto **não usa estimativa pontual de multidão** para o 8 de Janeiro. Nenhuma fonte primária do corpus oferece contagem para a Praça dos Três Poderes às 15h26, e a cifra de "cerca de 4 mil pessoas" que constava aqui foi retirada — tinha fonte jornalística única, atribuída a "policiais" sem órgão nomeado, e não se confirmou. O que se usa é uma **faixa de 3.000 a 5.500 no conjunto mobilizado**, sustentada por duas medições oficiais independentes: a contagem de transporte da ANTT difundida pela Abin (105 ônibus, ~3.900 passageiros) e a contagem policial de público da SSP/DF (3.000 às 9h de 08/01). O dossiê está em [`ESTIMATIVA-MULTIDAO-8JAN.md`](ESTIMATIVA-MULTIDAO-8JAN.md).
 
-As cifras veiculadas pela **imprensa** ficam catalogadas à parte, em `CATALOGO-IMPRENSA-MULTIDAO-8JAN.xlsx`, e **não entram no codebook nem na cronologia interativa**. Elas são objeto de análise — a quantificação é uma das vias pelas quais os veículos disputam o processo político —, não fonte de dado.
+As cifras veiculadas pela **imprensa** ficam catalogadas à parte, em `data/processed/CATALOGO-IMPRENSA-MULTIDAO-8JAN.xlsx`, e **não entram no codebook nem na cronologia interativa**. Elas são objeto de análise — a quantificação é uma das vias pelas quais os veículos disputam o processo político —, não fonte de dado.
 
 ---
 
@@ -419,7 +419,7 @@ A primeira é de **datação**: a tentativa de alterar o resultado precede o res
 
 # ETAPA 2 — Tabulação Estruturada (Codebook)
 
-> Tabela resumida para leitura. O conteúdo integral de cada célula, com URL e status de verificação por registro, está em `process_tracing_8jan_eventos.csv` e `process_tracing_8jan_eventos.json`.
+> Tabela resumida para leitura. O conteúdo integral de cada célula, com URL e status de verificação por registro, está em `data/processed/process_tracing_8jan_eventos.csv` e `process_tracing_8jan_eventos.json`.
 
 | ID | Data/Hora | Fase | Ator/Grupo | Repertório de Ação | Target (Alvo) | Framing (Narrativa) | Resposta Estatal | Mecanismo Causal | Fonte/Trecho |
 |:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|
@@ -516,14 +516,14 @@ A primeira é de **datação**: a tentativa de alterar o resultado precede o res
 
 - **`process_tracing_8jan_eventos.json`** — objeto com `metadados` e array `eventos`. Os metadados trazem o vocabulário de `status_classe`, o registro de documentos (código curto → caminho) e o histórico de revisões.
   `pandas`: `pd.json_normalize(json.load(open("process_tracing_8jan_eventos.json", encoding="utf-8"))["eventos"])`
-- **`process_tracing_8jan_eventos.csv`** — separador vírgula, **UTF-8 com BOM**, todos os campos entre aspas. O BOM faz o Excel em português abrir com acentuação correta por duplo clique, sem assistente de importação.
-  `pandas`: `pd.read_csv("process_tracing_8jan_eventos.csv", encoding="utf-8-sig")`
-  `R`: `read.csv("process_tracing_8jan_eventos.csv", fileEncoding = "UTF-8-BOM")`
-- **`process_tracing_8jan_codebook.xlsx`** — quatro abas: `Codebook` (82 × 16, com filtros e painel congelado), `Dicionario` (definição, tipo, vocabulário e origem de cada campo), `Inventario_Fontes` (um arquivo por linha, com páginas, procedência e registros que o citam) e `Pendencias_Coleta`.
+- **`data/processed/process_tracing_8jan_eventos.csv`** — separador vírgula, **UTF-8 com BOM**, todos os campos entre aspas. O BOM faz o Excel em português abrir com acentuação correta por duplo clique, sem assistente de importação.
+  `pandas`: `pd.read_csv("data/processed/process_tracing_8jan_eventos.csv", encoding="utf-8-sig")`
+  `R`: `read.csv("data/processed/process_tracing_8jan_eventos.csv", fileEncoding = "UTF-8-BOM")`
+- **`data/processed/process_tracing_8jan_codebook.xlsx`** — quatro abas: `Codebook` (82 × 16, com filtros e painel congelado), `Dicionario` (definição, tipo, vocabulário e origem de cada campo), `Inventario_Fontes` (um arquivo por linha, com páginas, procedência e registros que o citam) e `Pendencias_Coleta`.
 
 **Como citar a partir do codebook.** O campo `fonte_pagina` prefixa a página com o código curto do documento — `CPMI: 646, 711 | Cappelli: 55, 57` — justamente para que a página nunca fique atribuída ao documento errado quando o registro se apoia em mais de uma fonte. O caminho do arquivo está em `fonte_local`, relativo à raiz do projeto.
 
-**Integridade.** `scripts/verificar_integridade.py` roda seis checagens (sincronia dos três formatos, integridade referencial, cobertura do inventário, vocabulário controlado, coerência página × documento e paginação real via PyPDF2) e falha se qualquer uma não passar. O vínculo registro → documento → página está auditado em [`AUDITORIA-FONTES.md`](AUDITORIA-FONTES.md).
+**Integridade.** `scripts/verificar_integridade.py` roda seis checagens (sincronia dos três formatos, integridade referencial, cobertura do inventário, vocabulário controlado, coerência página × documento e paginação real via PyPDF2) e falha se qualquer uma não passar. O vínculo registro → documento → página está auditado em [`reports/AUDITORIA-FONTES.md`](reports/AUDITORIA-FONTES.md).
 
 ---
 

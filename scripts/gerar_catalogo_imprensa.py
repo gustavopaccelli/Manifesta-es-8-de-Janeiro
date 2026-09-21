@@ -9,7 +9,7 @@ como os veículos disputam discursivamente o processo político pela via do núm
 
 O codebook mantém apenas os números do documento legal (CPMI e anexos oficiais).
 
-Gera: CATALOGO-IMPRENSA-MULTIDAO-8JAN.xlsx
+Gera: data/processed/CATALOGO-IMPRENSA-MULTIDAO-8JAN.xlsx
 
 Uso:  python scripts/gerar_catalogo_imprensa.py
 """
@@ -21,7 +21,7 @@ from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 
 RAIZ = Path(__file__).resolve().parent.parent
-SAIDA = RAIZ / "CATALOGO-IMPRENSA-MULTIDAO-8JAN.xlsx"
+SAIDA = RAIZ / "data/processed/CATALOGO-IMPRENSA-MULTIDAO-8JAN.xlsx"
 ACESSO = "16 ago. 2026"
 
 # ---------------------------------------------------------------------------

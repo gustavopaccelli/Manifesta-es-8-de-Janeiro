@@ -42,8 +42,8 @@ gancho de pré-commit se o projeto virar repositório git.
 
 | Script | O que faz |
 |:--|:--|
-| `gerar_codebook.py` | JSON → CSV (UTF-8 com BOM) + XLSX de quatro abas. Guarda `PROCEDENCIA` (procedência de cada arquivo do corpus) e `PENDENCIAS` (fila de coleta). |
-| `gerar_auditoria.py` | JSON → `AUDITORIA-FONTES.md`. A narrativa vive no script; as tabelas saem dos dados. |
+| `gerar_codebook.py` | JSON → `data/processed/`: CSV (UTF-8 com BOM) + XLSX de quatro abas. Guarda `PROCEDENCIA` (procedência de cada arquivo do corpus) e `PENDENCIAS` (fila de coleta). |
+| `gerar_auditoria.py` | JSON → `reports/AUDITORIA-FONTES.md`. A narrativa vive no script; as tabelas saem dos dados. |
 | `verificar_integridade.py` | Seis checagens **estruturais**. Ver a ressalva abaixo. |
 | `conferir_paginas.py` | Abre o PDF na página citada e procura a transcrição. **A única checagem que lê a fonte.** |
 | `baixar_fontes.sh` | Comandos de coleta do que falta. Não baixa nada sozinho: cada peça é um alvo nomeado. |

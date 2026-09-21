@@ -11,7 +11,7 @@ O projeto usa dois registros diferentes para material jornalístico, e confundi-
 | **Fonte de dado** | `09_Arquivamento-web/` | matéria arquivada que ancora um registro do codebook |
 | **Objeto de análise** | **esta pasta** | literatura sobre como a imprensa enquadrou o evento |
 
-Nenhum número veiculado pela imprensa entra no codebook. O process tracing mantém apenas os números do documento legal — CPMI e anexos oficiais. As cifras da imprensa estão catalogadas em `../../CATALOGO-IMPRENSA-MULTIDAO-8JAN.xlsx`, que é aparato de conferência.
+Nenhum número veiculado pela imprensa entra no codebook. O process tracing mantém apenas os números do documento legal — CPMI e anexos oficiais. As cifras da imprensa estão catalogadas em `../../data/processed/CATALOGO-IMPRENSA-MULTIDAO-8JAN.xlsx`, que é aparato de conferência.
 
 ## Acervo
 

@@ -11,10 +11,10 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 export PYTHONIOENCODING=utf-8
 
-echo "== 1/4  gerar_codebook — JSON -> CSV + XLSX"
+echo "== 1/4  gerar_codebook — JSON -> data/processed/ (CSV + XLSX)"
 python scripts/gerar_codebook.py
 
-echo "== 2/4  gerar_auditoria — JSON -> AUDITORIA-FONTES.md"
+echo "== 2/4  gerar_auditoria — JSON -> reports/AUDITORIA-FONTES.md"
 python scripts/gerar_auditoria.py
 
 echo "== 3/4  verificar_integridade — seis checagens estruturais"

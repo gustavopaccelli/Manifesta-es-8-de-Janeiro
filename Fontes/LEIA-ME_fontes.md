@@ -196,7 +196,7 @@ Uma peça depende de coleta manual (acórdão do TSE, seção Pendências acima)
 
 ## Auditoria de 16/08/2026 — este inventário divergia do codebook
 
-**Leia [`../AUDITORIA-FONTES.md`](../AUDITORIA-FONTES.md): ele, e não este arquivo, é a peça autoritativa sobre o vínculo registro ↔ documento ↔ página.**
+**Leia [`../reports/AUDITORIA-FONTES.md`](../reports/AUDITORIA-FONTES.md): ele, e não este arquivo, é a peça autoritativa sobre o vínculo registro ↔ documento ↔ página.**
 
 A auditoria encontrou que atribuições declaradas *aqui* nunca haviam chegado ao codebook. Cinco arquivos desta pasta estavam sem vínculo com registro nenhum, entre eles o livro oficial do STF (atribuído a PT-38 neste LEIA-ME, ausente do registro), a questão de ordem da AP 2668 (PT-56) e o segundo AgR do HC 193.726 (PT-06B). Todos foram vinculados.
 

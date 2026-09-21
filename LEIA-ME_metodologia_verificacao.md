@@ -38,7 +38,7 @@ O item de Amaral (2024), "Brazil as a Laboratory for Fascist Uprising", vinha co
 
 ## Adendo de 12/08/2026 — lacuna bibliográfica aberta pela revisão do process tracing
 
-Nesta data foi incorporado ao process tracing o arco judicial Lava Jato / prisão de Lula (2017–2021): registros **PT-03A a PT-03E, PT-05A e PT-06A a PT-06C** em `process_tracing_8jan_eventos.csv`. Ver a nota de revisão no topo de `process_tracing_8jan_relatorio.md`.
+Nesta data foi incorporado ao process tracing o arco judicial Lava Jato / prisão de Lula (2017–2021): registros **PT-03A a PT-03E, PT-05A e PT-06A a PT-06C** em `data/processed/process_tracing_8jan_eventos.csv`. Ver a nota de revisão no topo de `process_tracing_8jan_relatorio.md`.
 
 **Consequência para o levantamento bibliográfico: este corpus não cobre o novo eixo.** As 48 referências verificadas tratam de bolsonarismo, ativismo digital, política contestatória e resposta institucional ao 8/1 — nenhuma trata de Lava Jato, judicialização da política ou *lawfare*, que agora se tornaram necessárias ao referencial teórico da camada $T_{-1}$ conjuntural.
 

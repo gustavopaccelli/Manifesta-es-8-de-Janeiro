@@ -25,7 +25,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 **Abertos e de redação:** itens 3, 4, 5, 6, 9 e 10.
 **Abertos e de verificação:** item 7 (proveniência) e item 11 (coleta) estão **encerrados**. Nenhuma pendência de dado depende de você.
 
-> **✅ RESOLVIDO NO MESMO DIA — o balanço chegou.** PT-53 e PT-61 percorreram quatro estados em 16/08/2026: `Confirmado` (jornalístico) → **rebaixados** a `A verificar` pela auditoria → `Confirmado` por corroboração jornalística dupla → **`Confirmado em fonte primária`**, quando o pesquisador forneceu o documento: o **Relatório do Gabinete do Min. Alexandre de Moraes (29/04/2026, 15 p.)**, obtido do bucket oficial do STF e incorporado em `Fontes/10_Democracia-Inabalada/`. A cifra de **1.402 réus responsabilizados agora pode ser citada como dado oficial, com página** (p. 6). **Não resta nenhum registro em `A verificar` no codebook.** Detalhes nos itens 12–15 e em [`AUDITORIA-FONTES.md`](AUDITORIA-FONTES.md).
+> **✅ RESOLVIDO NO MESMO DIA — o balanço chegou.** PT-53 e PT-61 percorreram quatro estados em 16/08/2026: `Confirmado` (jornalístico) → **rebaixados** a `A verificar` pela auditoria → `Confirmado` por corroboração jornalística dupla → **`Confirmado em fonte primária`**, quando o pesquisador forneceu o documento: o **Relatório do Gabinete do Min. Alexandre de Moraes (29/04/2026, 15 p.)**, obtido do bucket oficial do STF e incorporado em `Fontes/10_Democracia-Inabalada/`. A cifra de **1.402 réus responsabilizados agora pode ser citada como dado oficial, com página** (p. 6). **Não resta nenhum registro em `A verificar` no codebook.** Detalhes nos itens 12–15 e em [`reports/AUDITORIA-FONTES.md`](reports/AUDITORIA-FONTES.md).
 >
 > **Os dois gráficos vetoriais foram lidos por renderização no mesmo dia** — e a leitura corrigiu o codebook: o total de ações penais é **1.335**, não "mais de 1.600"; o 1.618 que circulava é de **audiências de custódia**. Resta uma ressalva da própria peça: a soma das denúncias por inquérito não fecha com o total (1.819 × 1.878).
 
@@ -225,7 +225,7 @@ Werneck Vianna (1999), Arantes (2002), Kerche & Marona (2022) e correlatos sobre
 
 ## 12. Auditoria de fontes — ✅ EXECUTADA EM 16/08/2026
 
-Relatório completo em [`AUDITORIA-FONTES.md`](AUDITORIA-FONTES.md), gerado por script e refeito a cada rodada de coleta.
+Relatório completo em [`reports/AUDITORIA-FONTES.md`](reports/AUDITORIA-FONTES.md), gerado por script e refeito a cada rodada de coleta.
 
 A auditoria respondeu uma pergunta só, para os 81 registros: **onde está o documento que sustenta esta afirmação, e em que página?** Não alterou nenhum fato, mecanismo ou enquadramento — só vínculo e status. Três achados:
 
@@ -271,7 +271,7 @@ Contagem de transporte e contagem policial de público convergem na mesma ordem 
 
 ### 13.1 Catálogo de atribuições da imprensa — instrumento separado
 
-`CATALOGO-IMPRENSA-MULTIDAO-8JAN.xlsx`, gerado por `scripts/gerar_catalogo_imprensa.py`.
+`data/processed/CATALOGO-IMPRENSA-MULTIDAO-8JAN.xlsx`, gerado por `scripts/gerar_catalogo_imprensa.py`.
 
 **Por decisão do pesquisador em 16/08/2026, os números da imprensa NÃO entram no codebook nem na cronologia interativa.** O process tracing mantém apenas os números do documento legal. O catálogo é aparato de **conferência** e material para uma frente analítica própria: a de que os veículos disputam discursivamente o processo político pela via da quantificação.
 

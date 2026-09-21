@@ -123,7 +123,7 @@ O documento segue sem versão em domínio oficial — isso não mudou e continua
 ## 8. O que ficou aberto
 
 - **A distribuição temporal da multidão** — quantos na Praça às 15h26, especificamente — permanece sem fonte. Só se resolveria com laudo de contagem por imagem, que não consta de nenhum documento do corpus. **Recomendação: não perseguir.** É pergunta cuja resposta não muda o argumento.
-- **Os laudos do Instituto de Criminalística/PF** poderiam trazer contagem por imagem, mas estão provavelmente sob restrição de acesso (ver a fila em `AUDITORIA-FONTES.md`).
+- **Os laudos do Instituto de Criminalística/PF** poderiam trazer contagem por imagem, mas estão provavelmente sob restrição de acesso (ver a fila em `reports/AUDITORIA-FONTES.md`).
 
 ---
 

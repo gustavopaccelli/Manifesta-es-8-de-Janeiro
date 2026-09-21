@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Gera AUDITORIA-FONTES.md a partir do JSON do codebook.
+Gera reports/AUDITORIA-FONTES.md a partir do JSON do codebook.
 
 O relatório é gerado, não escrito à mão, para que possa ser refeito a cada
 rodada de coleta sem envelhecer. A narrativa fica neste arquivo; as tabelas
@@ -17,7 +17,7 @@ from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
 JSON_P = RAIZ / "process_tracing_8jan_eventos.json"
-SAIDA = RAIZ / "AUDITORIA-FONTES.md"
+SAIDA = RAIZ / "reports/AUDITORIA-FONTES.md"
 
 from gerar_codebook import PENDENCIAS, PROCEDENCIA  # noqa: E402
 
@@ -280,7 +280,7 @@ def main():
       "*Verificar a integridade com* `python scripts/verificar_integridade.py`.")
 
     SAIDA.write_text("\n".join(L) + "\n", encoding="utf-8")
-    print("AUDITORIA-FONTES.md gerado — {} linhas".format(len(L)))
+    print("reports/AUDITORIA-FONTES.md gerado — {} linhas".format(len(L)))
     print("  ancorados          : {}".format(len(ancorados)))
     print("  sem âncora legítima: {}".format(len(legitimos)))
     print("  dependentes coleta : {}".format(len(pendentes)))

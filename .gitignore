@@ -11,7 +11,7 @@ __pycache__/
 # Nada se perde: sai de process_tracing_8jan_eventos.json por
 # scripts/gerar_codebook.py, ambos versionados, e o CSV com os mesmos 82 x 16
 # está no histórico. Regere com:  bash scripts/ciclo.sh
-process_tracing_8jan_codebook.xlsx
+data/processed/process_tracing_8jan_codebook.xlsx
 
 # Sistema
 Thumbs.db

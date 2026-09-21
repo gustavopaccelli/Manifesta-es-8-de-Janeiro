@@ -29,8 +29,8 @@ sys.path.insert(0, str(RAIZ / "scripts"))
 from gerar_codebook import CABECALHOS, PROCEDENCIA  # noqa: E402
 
 JSON_P = RAIZ / "process_tracing_8jan_eventos.json"
-CSV_P = RAIZ / "process_tracing_8jan_eventos.csv"
-XLSX_P = RAIZ / "process_tracing_8jan_codebook.xlsx"
+CSV_P = RAIZ / "data/processed/process_tracing_8jan_eventos.csv"
+XLSX_P = RAIZ / "data/processed/process_tracing_8jan_codebook.xlsx"
 
 CLASSES = {"Confirmado em fonte primária", "Confirmado", "Contextual",
            "A verificar", "Inferência do analista"}

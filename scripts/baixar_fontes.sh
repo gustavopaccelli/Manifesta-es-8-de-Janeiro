@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # Coleta das fontes primárias que faltam ao corpus do 8 de Janeiro.
-# Gerado em 16/08/2026 a partir de AUDITORIA-FONTES.md.
+# Gerado em 16/08/2026 a partir de reports/AUDITORIA-FONTES.md.
 #
 # ============================================================================
 # LEIA ANTES DE RODAR

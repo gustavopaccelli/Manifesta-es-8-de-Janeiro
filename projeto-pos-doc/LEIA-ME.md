@@ -56,8 +56,8 @@ Pasta criada em **19/08/2026**, revista no mesmo dia. Reúne os documentos da ca
 
 | Original (raiz) | Cópia (`figuras/`) | sha1 |
 |:--|:--|:--|
-| `figura_cronologia_8jan.svg` | `figura-1_cronologia-causal.svg` | `35ea4fc963475fc2d4c1db934ddfda913fc4dbfd` |
-| `cronologia_8jan_interativa.html` | `cronologia-interativa.html` | `183dc2e9c87547c4a1708083e66d5a0012088df5` |
+| `reports/figures/figura_cronologia_8jan.svg` | `figura-1_cronologia-causal.svg` | `35ea4fc963475fc2d4c1db934ddfda913fc4dbfd` |
+| `reports/figures/cronologia_8jan_interativa.html` | `cronologia-interativa.html` | `183dc2e9c87547c4a1708083e66d5a0012088df5` |
 
 ### Números do projeto — rastreados até a fonte
 

@@ -6,8 +6,8 @@ Gerador do codebook do process tracing do 8 de Janeiro.
 O JSON é a ÚNICA fonte da verdade. Este script lê
 `process_tracing_8jan_eventos.json` e emite os outros dois formatos:
 
-  - process_tracing_8jan_eventos.csv     (UTF-8 com BOM, para Excel pt-BR)
-  - process_tracing_8jan_codebook.xlsx   (quatro abas)
+  - data/processed/process_tracing_8jan_eventos.csv     (UTF-8 com BOM, para Excel pt-BR)
+  - data/processed/process_tracing_8jan_codebook.xlsx   (quatro abas)
 
 Nunca edite o CSV ou o XLSX à mão: a próxima execução sobrescreve. Edite o JSON
 e rode este script. Foi assim que a divergência entre formatos foi eliminada em
@@ -28,8 +28,8 @@ from openpyxl.utils import get_column_letter
 
 RAIZ = Path(__file__).resolve().parent.parent
 JSON_IN = RAIZ / "process_tracing_8jan_eventos.json"
-CSV_OUT = RAIZ / "process_tracing_8jan_eventos.csv"
-XLSX_OUT = RAIZ / "process_tracing_8jan_codebook.xlsx"
+CSV_OUT = RAIZ / "data/processed/process_tracing_8jan_eventos.csv"
+XLSX_OUT = RAIZ / "data/processed/process_tracing_8jan_codebook.xlsx"
 
 CABECALHOS = OrderedDict([
     ("id", "ID"), ("data_hora", "Data_Hora"), ("fase", "Fase"),

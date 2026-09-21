@@ -34,7 +34,8 @@ A estrutura segue os princípios do padrão *Cookiecutter Data Science* — dado
 | `scripts/` | Geradores, verificadores e as migrações já executadas. Ver `scripts/LEIA-ME.md` | `src` |
 | `reports/` | `AUDITORIA-FONTES.md`, a auditoria de vínculos, **gerada** | `reports` |
 | `reports/figures/` | Figura da cadeia causal (SVG) e cronologia navegável (HTML) | `reports/figures` |
-| `process_tracing_8jan_relatorio.md` | Relatório de pesquisa, escrito à mão. Segue na raiz | `reports` |
+| `reports/process_tracing_8jan_relatorio.md` | Relatório de pesquisa, escrito à mão | `reports` |
+| `docs/Pesquisa-sobre-Mobilizações-de-8-de-Janeiro.md` | Documento-base do projeto, anterior ao process tracing | `docs` |
 | `docs/PENDENCIAS-ANALITICAS.md` | **A agenda.** O que está aberto e o que espera decisão sua | `docs` |
 | `docs/ESTIMATIVA-MULTIDAO-8JAN.md`, `docs/LEIA-ME_metodologia_verificacao.md` | Dossiês de método e de decisão sobre cifras | `docs` |
 | `data/external/levantamento_8_de_janeiro_*` | Levantamento bibliográfico original, coletado à mão | `data/external` |

@@ -99,7 +99,7 @@ Cinco notas passaram a sete, renumeradas na ordem de ocorrência. Conferido: usa
 1. **Qualis dos três periódicos** — não verificado (ver alerta acima).
 2. **Reconciliação 48/50** — a explicação da nota 1 é inferência aritmética minha, não conferência nos dados.
 3. **Errata de Tatagiba e Galvão (2019)** (`10.1590/1807-01912019252472`) — segue não consultada. O projeto não cita dados numéricos do artigo, então o risco é baixo, mas permanece.
-4. **Cifra de "mais de 1.600 ações penais"** em `process_tracing_8jan_relatorio.md` §3.2 — não alterada, por ser aparato auditado. Não afeta o projeto, que não usa a cifra.
+4. **Cifra de "mais de 1.600 ações penais"** em `../reports/process_tracing_8jan_relatorio.md` §3.2 — não alterada, por ser aparato auditado. Não afeta o projeto, que não usa a cifra.
 5. **Metadados de Alonso (2017) e Gohn** — divergência tese × CrossRef, mantida como estava.
 6. **Bibliografia nacional da semana 11** da disciplina — em aberto.
 

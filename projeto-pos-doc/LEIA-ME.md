@@ -74,7 +74,7 @@ Pasta criada em **19/08/2026**, revista no mesmo dia. Reúne os documentos da ca
 | "manifestante" supera "terrorista" e "golpista" no dia 8 | PT-50A · Manchetômetro/DOXA-IESP-UERJ, p. 9 |
 | 58 referências, 50 confirmadas; 17 em T+1, 10 em T0 | Contagem por status e por fase na aba `Levantamento_Organizado` |
 
-A cifra de "mais de 1.600 ações penais" que ainda consta de `process_tracing_8jan_relatorio.md` §3.2 **não foi usada**: o JSON a corrigiu para 1.335 em 16/08/2026.
+A cifra de "mais de 1.600 ações penais" que ainda consta de `../reports/process_tracing_8jan_relatorio.md` §3.2 **não foi usada**: o JSON a corrigiu para 1.335 em 16/08/2026.
 
 ### Referências — verificadas no CrossRef em 19/08/2026
 
@@ -103,7 +103,7 @@ As 58 do levantamento e as 20 do eixo Lava Jato entraram no `06_` **com o status
 1. **Validação do título** do projeto.
 2. **Periódicos-alvo.** O projeto ainda diz "estrato superior" sem nomear. O modelo FAPERJ que serviu de espelho nomeia revista por artigo, e é o único traço de escrita que ficou por aplicar.
 3. **A citação em bloco.** A seção 2 traz um marcador explícito no lugar da passagem de Koopmans e Olzak (2004). O AJS está fechado, o abstract foi elidido pela editora e a tese cita os autores sem transcrever. Ou você fornece a passagem, ou o marcador sai e o trecho segue sem citação em bloco.
-4. **A cifra remanescente no relatório.** `process_tracing_8jan_relatorio.md` §3.2 ainda traz "mais de 1.600 ações penais", corrigida no JSON para 1.335 em 16/08. Não alterei o aparato auditado — mexer nele é decisão sua.
+4. **A cifra remanescente no relatório.** `../reports/process_tracing_8jan_relatorio.md` §3.2 ainda traz "mais de 1.600 ações penais", corrigida no JSON para 1.335 em 16/08. Não alterei o aparato auditado — mexer nele é decisão sua.
 5. **Bibliografia nacional da semana 11 da disciplina**, deixada em aberto para diálogo com a linha de Sociologia Política do IESP.
 6. **Conversão para PDF.** A reescrita introduziu notas de rodapé em Markdown, que contam para o teto e podem não sobreviver ao conversor. Confira também que a Figura 1 em SVG atravessa, e reconfira a contagem no PDF final.
 

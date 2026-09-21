@@ -15,7 +15,7 @@ Projeto: *Manifestações 8 de Janeiro* · Marco: Teoria do Processo Político (
 
 ## Nota metodológica preliminar (leia antes de usar)
 
-O arquivo `Pesquisa-sobre-Mobilizações-de-8-de-Janeiro.md`, presente na pasta do projeto, **é um documento metodológico** — o registro da conversa em que foram desenhados o marco conceitual, o codebook e os prompts do projeto. Ele **não contém corpus empírico**: não traz cronologia factual, depoimentos, laudos nem autos. Portanto, não era possível extrair dele a reconstrução causal solicitada.
+O arquivo `docs/Pesquisa-sobre-Mobilizações-de-8-de-Janeiro.md`, **é um documento metodológico** — o registro da conversa em que foram desenhados o marco conceitual, o codebook e os prompts do projeto. Ele **não contém corpus empírico**: não traz cronologia factual, depoimentos, laudos nem autos. Portanto, não era possível extrair dele a reconstrução causal solicitada.
 
 Conforme sua orientação, a reconstrução abaixo foi montada por **pesquisa em fontes jornalísticas de referência e documentos oficiais públicos**, com URL registrada por sub-evento. Três ressalvas de rigor:
 
@@ -23,7 +23,7 @@ Conforme sua orientação, a reconstrução abaixo foi montada por **pesquisa em
 2. **Cada registro traz um campo `Status de verificação`**: `Confirmado` (fonte localizada e citada), `A verificar` (fato amplamente noticiado, mas sem fonte primária consultada nesta rodada), `Contextual` (item de enquadramento histórico que se apoia na bibliografia teórica, não em fonte primária) e `Inferência do analista`.
 3. **Os mecanismos causais são atribuições analíticas minhas**, derivadas do vocabulário de *Dynamics of Contention*, não citações das fontes. Devem ser tratados como hipóteses de trabalho sujeitas aos testes de process tracing (hoop, smoking gun, doubly decisive), não como achados estabelecidos.
 
-**Números de multidão.** *Revisto em 16/08/2026.* O projeto **não usa estimativa pontual de multidão** para o 8 de Janeiro. Nenhuma fonte primária do corpus oferece contagem para a Praça dos Três Poderes às 15h26, e a cifra de "cerca de 4 mil pessoas" que constava aqui foi retirada — tinha fonte jornalística única, atribuída a "policiais" sem órgão nomeado, e não se confirmou. O que se usa é uma **faixa de 3.000 a 5.500 no conjunto mobilizado**, sustentada por duas medições oficiais independentes: a contagem de transporte da ANTT difundida pela Abin (105 ônibus, ~3.900 passageiros) e a contagem policial de público da SSP/DF (3.000 às 9h de 08/01). O dossiê está em [`docs/ESTIMATIVA-MULTIDAO-8JAN.md`](docs/ESTIMATIVA-MULTIDAO-8JAN.md).
+**Números de multidão.** *Revisto em 16/08/2026.* O projeto **não usa estimativa pontual de multidão** para o 8 de Janeiro. Nenhuma fonte primária do corpus oferece contagem para a Praça dos Três Poderes às 15h26, e a cifra de "cerca de 4 mil pessoas" que constava aqui foi retirada — tinha fonte jornalística única, atribuída a "policiais" sem órgão nomeado, e não se confirmou. O que se usa é uma **faixa de 3.000 a 5.500 no conjunto mobilizado**, sustentada por duas medições oficiais independentes: a contagem de transporte da ANTT difundida pela Abin (105 ônibus, ~3.900 passageiros) e a contagem policial de público da SSP/DF (3.000 às 9h de 08/01). O dossiê está em [`docs/ESTIMATIVA-MULTIDAO-8JAN.md`](../docs/ESTIMATIVA-MULTIDAO-8JAN.md).
 
 As cifras veiculadas pela **imprensa** ficam catalogadas à parte, em `data/processed/CATALOGO-IMPRENSA-MULTIDAO-8JAN.xlsx`, e **não entram no codebook nem na cronologia interativa**. Elas são objeto de análise — a quantificação é uma das vias pelas quais os veículos disputam o processo político —, não fonte de dado.
 
@@ -306,7 +306,7 @@ A recodificação também produziu o inverso do reforço: quatro afirmações da
 
 | Registro | Afirmação | Situação |
 |:--|:--|:--|
-| PT-34 | "cerca de 4 mil pessoas" na Praça às 15h26 | ✅ **RESOLVIDA em 16/08/2026 — cifra retirada.** Fonte jornalística única, sem órgão nomeado, ausente das cronologias contemporâneas; na CPMI, "4 mil" é o acampamento de 15/11/2022 (p. 532) e o depoimento do gen. Heleno (p. 1324). Substituída por faixa de 3.000 a 5.500, com duas medições oficiais independentes. Ver [`docs/ESTIMATIVA-MULTIDAO-8JAN.md`](docs/ESTIMATIVA-MULTIDAO-8JAN.md) |
+| PT-34 | "cerca de 4 mil pessoas" na Praça às 15h26 | ✅ **RESOLVIDA em 16/08/2026 — cifra retirada.** Fonte jornalística única, sem órgão nomeado, ausente das cronologias contemporâneas; na CPMI, "4 mil" é o acampamento de 15/11/2022 (p. 532) e o depoimento do gen. Heleno (p. 1324). Substituída por faixa de 3.000 a 5.500, com duas medições oficiais independentes. Ver [`docs/ESTIMATIVA-MULTIDAO-8JAN.md`](../docs/ESTIMATIVA-MULTIDAO-8JAN.md) |
 | PT-12 | "mais de 100 acampamentos" no país | ✅ **RESOLVIDA em 16/08/2026 — cifra retirada, mesmo padrão do PT-34.** Sem lastro na CPMI nem no Cappelli; provinha da Agência Brasil, sem órgão nomeado. Substituída pela caracterização geográfica ancorada "em todos os Estados" (CPMI, p. 510) |
 | PT-17 | saída do país em 30/12 | ✅ **RESOLVIDA em 16/08/2026 — achado.** Busca exaustiva localizou a confirmação na CPMI, p. 612, no texto analítico da própria comissão sobre a "estratégia do caos" |
 | PT-52 | ≈1.200 presos em 40 ônibus | ✅ **RESOLVIDA em 16/08/2026 — cifra substituída.** Adotadas as **2.151 prisões em flagrante** (CPMI, p. 76 e 688) no lugar dos ~1.200, que vinham da imprensa e mediam pessoas levadas à triagem nas primeiras levas da manhã — a mesma reportagem registra o número subindo para ~2.000 à tarde. **Achado no processo:** a CPMI se contradiz sobre o escopo — a p. 76 distribui os 2.151 entre "o próprio domingo ou o dia seguinte" e a p. 688 os atribui só ao "ato de desocupação". Adotada a p. 76 |
@@ -523,13 +523,13 @@ A primeira é de **datação**: a tentativa de alterar o resultado precede o res
 
 **Como citar a partir do codebook.** O campo `fonte_pagina` prefixa a página com o código curto do documento — `CPMI: 646, 711 | Cappelli: 55, 57` — justamente para que a página nunca fique atribuída ao documento errado quando o registro se apoia em mais de uma fonte. O caminho do arquivo está em `fonte_local`, relativo à raiz do projeto.
 
-**Integridade.** `scripts/verificar_integridade.py` roda seis checagens (sincronia dos três formatos, integridade referencial, cobertura do inventário, vocabulário controlado, coerência página × documento e paginação real via PyPDF2) e falha se qualquer uma não passar. O vínculo registro → documento → página está auditado em [`reports/AUDITORIA-FONTES.md`](reports/AUDITORIA-FONTES.md).
+**Integridade.** `scripts/verificar_integridade.py` roda seis checagens (sincronia dos três formatos, integridade referencial, cobertura do inventário, vocabulário controlado, coerência página × documento e paginação real via PyPDF2) e falha se qualquer uma não passar. O vínculo registro → documento → página está auditado em [`AUDITORIA-FONTES.md`](AUDITORIA-FONTES.md).
 
 ---
 
 ## Próximos passos recomendados
 
-*Revisto em 14/08/2026. A agenda analítica detalhada — com o histórico das decisões e o que cada item exige — está em [`docs/PENDENCIAS-ANALITICAS.md`](docs/PENDENCIAS-ANALITICAS.md). Aqui fica só o essencial, na ordem em que convém atacar.*
+*Revisto em 14/08/2026. A agenda analítica detalhada — com o histórico das decisões e o que cada item exige — está em [`docs/PENDENCIAS-ANALITICAS.md`](../docs/PENDENCIAS-ANALITICAS.md). Aqui fica só o essencial, na ordem em que convém atacar.*
 
 **Concluído desde a versão anterior desta lista**
 

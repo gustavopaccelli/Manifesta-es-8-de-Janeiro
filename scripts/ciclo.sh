@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# O ciclo completo, na ordem. Falha na primeira checagem que não passar.
+#
+# Substitui o Makefile que o padrão Cookiecutter Data Science prevê: não há
+# make nesta máquina, e o ciclo é linear — quatro passos, sem grafo de
+# dependências para resolver.
+#
+# Uso:  bash scripts/ciclo.sh            # amostra de 12 no passo 4
+#       bash scripts/ciclo.sh --todos    # confere todos os registros com página
+set -euo pipefail
+cd "$(dirname "$0")/.."
+export PYTHONIOENCODING=utf-8
+
+echo "== 1/4  gerar_codebook — JSON -> CSV + XLSX"
+python scripts/gerar_codebook.py
+
+echo "== 2/4  gerar_auditoria — JSON -> AUDITORIA-FONTES.md"
+python scripts/gerar_auditoria.py
+
+echo "== 3/4  verificar_integridade — seis checagens estruturais"
+python scripts/verificar_integridade.py
+
+echo "== 4/4  conferir_paginas — transcrição x página no PDF"
+python scripts/conferir_paginas.py "$@"
+
+echo "== OK — ciclo completo sem falhas"

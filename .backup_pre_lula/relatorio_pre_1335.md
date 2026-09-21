@@ -1,0 +1,550 @@
+# Process Tracing do 8 de Janeiro de 2023
+
+**Reconstrução cronológico-causal e tabulação estruturada (PEA)**
+Projeto: *Manifestações 8 de Janeiro* · Marco: Teoria do Processo Político (McAdam, Tarrow, Tilly) · Gerado em 08/08/2026 · **Última revisão: 14/08/2026** · **81 sub-eventos**
+
+> **Revisão de 12/08/2026 — incorporação do arco judicial Lava Jato / prisão de Lula (2017–2021).** O levantamento original iniciava a camada conjuntural em 2013 e saltava do impeachment de 2016 (PT-03) para a eleição de 2018 (PT-04), deixando sem registro a sequência judicial que retirou Lula da disputa de 2018 e que, ao ser revertida em 2021, restaurou sua elegibilidade. Como a própria denúncia da PGR data o início do plano de ruptura em "poucos dias depois de Lula ter recuperado sua elegibilidade" (PT-07), essa lacuna deixava a cadeia causal começando arbitrariamente em 2021, sem explicar por quê. Foram acrescentados nove sub-eventos — **PT-03A a PT-03E, PT-05A e PT-06A a PT-06C** — todos ancorados em fontes oficiais (TRF-4, TSE, STF) ou na Agência Brasil (EBC). A numeração original (PT-01…PT-62) foi preservada por meio de sufixos alfabéticos, para não invalidar citações já feitas ao dataset.
+
+> **Segunda revisão de 12/08/2026 — recodificação sobre a CPMI e dois acréscimos.** Sete registros de $T_0$ (PT-21, PT-22, PT-23, PT-28, PT-31, PT-32 e PT-41) foram recodificados **diretamente sobre o Relatório Final da CPMI, com citação por página** — a numeração impressa coincide com a do PDF em `Fontes/`. A conferência produziu duas correções factuais e dois enriquecimentos materiais, detalhados na seção "O que a conferência com a fonte primária mudou", abaixo. Acrescentaram-se ainda **PT-02A** (HC 126.292, precondição jurisprudencial do arco judicial) e **PT-08A, PT-08B e PT-08C** (operação da PRF no segundo turno de 2022).
+
+> **Revisões seguintes, até 14/08/2026 — recodificação concluída e três acréscimos temáticos.** A recodificação sobre fonte primária foi estendida a **todo o corpus**: são hoje **49 registros com citação por página** da CPMI, com transcrição literal arquivada em `Caderno-de-evidencias/`. Incorporaram-se três fontes primárias novas (denúncia da PGR, relatório do interventor Cappelli e acórdão da AP 2668) e três acréscimos temáticos: **PT-19A e PT-19B** (circulação paga na biblioteca do Meta Ads; criação do grupo "Difusão" em 04/01/2023), **PT-20A e PT-20B** (dispensa de reforço pelo GSI; Relatório de Inteligência nº 006/2023 da SSP-DF) e **PT-10A e PT-12A** (o MBVA e os 272 caminhões; a arquitetura de financiamento dos acampamentos). Total: **81 sub-eventos**, dos quais 51 ancorados em fonte primária. O histórico rodada a rodada está no campo `metadados.revisoes` do JSON; a agenda do que segue aberto, em `PENDENCIAS-ANALITICAS.md`.
+
+---
+
+## Nota metodológica preliminar (leia antes de usar)
+
+O arquivo `Pesquisa-sobre-Mobilizações-de-8-de-Janeiro.md`, presente na pasta do projeto, **é um documento metodológico** — o registro da conversa em que foram desenhados o marco conceitual, o codebook e os prompts do projeto. Ele **não contém corpus empírico**: não traz cronologia factual, depoimentos, laudos nem autos. Portanto, não era possível extrair dele a reconstrução causal solicitada.
+
+Conforme sua orientação, a reconstrução abaixo foi montada por **pesquisa em fontes jornalísticas de referência e documentos oficiais públicos**, com URL registrada por sub-evento. Três ressalvas de rigor:
+
+1. **A espinha dorsal de $T_0$ é a cronologia do Relatório Final da CPMI do 8 de Janeiro**, reproduzida pela Agência Brasil (EBC). Trata-se de fonte secundária que cita a primária. Para publicação, recomendo recodificar diretamente sobre o [Relatório Final da CPMI](https://www12.senado.leg.br/noticias/arquivos/2023/10/17/relatorio-cpmi-versao-consolidada_231017_100010.pdf), o relatório da intervenção federal (Cappelli), os laudos periciais da PF e os autos da AP 2668.
+2. **Cada registro traz um campo `Status de verificação`**: `Confirmado` (fonte localizada e citada), `A verificar` (fato amplamente noticiado, mas sem fonte primária consultada nesta rodada), `Contextual` (item de enquadramento histórico que se apoia na bibliografia teórica, não em fonte primária) e `Inferência do analista`.
+3. **Os mecanismos causais são atribuições analíticas minhas**, derivadas do vocabulário de *Dynamics of Contention*, não citações das fontes. Devem ser tratados como hipóteses de trabalho sujeitas aos testes de process tracing (hoop, smoking gun, doubly decisive), não como achados estabelecidos.
+
+**Números de multidão.** *Revisto em 16/08/2026.* O projeto **não usa estimativa pontual de multidão** para o 8 de Janeiro. Nenhuma fonte primária do corpus oferece contagem para a Praça dos Três Poderes às 15h26, e a cifra de "cerca de 4 mil pessoas" que constava aqui foi retirada — tinha fonte jornalística única, atribuída a "policiais" sem órgão nomeado, e não se confirmou. O que se usa é uma **faixa de 3.000 a 5.500 no conjunto mobilizado**, sustentada por duas medições oficiais independentes: a contagem de transporte da ANTT difundida pela Abin (105 ônibus, ~3.900 passageiros) e a contagem policial de público da SSP/DF (3.000 às 9h de 08/01). O dossiê está em [`ESTIMATIVA-MULTIDAO-8JAN.md`](ESTIMATIVA-MULTIDAO-8JAN.md).
+
+As cifras veiculadas pela **imprensa** ficam catalogadas à parte, em `CATALOGO-IMPRENSA-MULTIDAO-8JAN.xlsx`, e **não entram no codebook nem na cronologia interativa**. Elas são objeto de análise — a quantificação é uma das vias pelas quais os veículos disputam o processo político —, não fonte de dado.
+
+---
+
+# ETAPA 1 — Reconstrução Cronológico-Causal
+
+## Fase 1 — Articulação e Antecedentes ($T_{-1}$)
+
+### 1.1 Dimensão histórico-conjuntural (2013–2022)
+
+Esta camada não explica o 8 de janeiro por si só, mas define as **condições de possibilidade** do repertório mobilizado naquele domingo. Ela é reconstruída aqui a partir da bibliografia teórica do projeto e está sinalizada como contextual — não deriva de fonte primária consultada nesta rodada.
+
+**Fato.** O ciclo contestatório aberto em junho de 2013 introduziu no Brasil um repertório de rua massivo, difuso e antipartidário. Entre 2015 e 2016, esse repertório foi apropriado por atores de direita (MBL, Vem Pra Rua, Revoltados Online) e canalizado contra o governo Dilma Rousseff, culminando no impeachment de agosto de 2016.
+**Mecanismo causal.** *Apropriação de repertório* (spin-off) e *certificação de eficácia*: a deposição de um governo eleito, precedida por mobilização de rua, estabelece o precedente de que a pressão extrainstitucional é via legítima de reversão de resultado eleitoral. É esse aprendizado que o 8 de janeiro tenta replicar — com a diferença decisiva de que, em 2016, houve rito constitucional, e em 2023, não.
+**Fonte.** Literatura do projeto — Alonso (2017); Tatagiba (2014); Nobre (2020). *Status: contextual.*
+
+#### O arco judicial: da condenação de Lula à restauração de sua elegibilidade (2016–2021)
+
+**Fato preliminar.** Em **17/02/2016**, no HC 126.292 (relator o ministro Teori Zavascki), o Plenário do STF passa a admitir a **execução provisória da pena** após condenação confirmada em segunda instância — entendimento reafirmado na medida cautelar das ADC 43 e 44, em 05/10/2016.
+**Mecanismo causal.** *Precondição jurisprudencial*. Não é evento de protesto: é a alteração de regra que torna possível, dois anos depois, converter uma condenação de segunda instância em prisão efetiva e, por essa via, em exclusão eleitoral. Sem ela, a condenação de 2018 não retiraria o candidato da disputa. É também exatamente a regra revertida em 2019 — o que faz do par **PT-02A / PT-05A** a moldura jurídica que abre e fecha a janela de remoção do competidor.
+**Fonte.** Acórdão das ADC 43/44/54, p. 3 e 9 do inteiro teor (`Fontes/01_Arco-judicial_2017-2021/`). *Status: confirmado.*
+
+
+Esta sequência é o que faltava entre o impeachment de 2016 e a eleição de 2018. Ela importa por duas razões distintas e igualmente necessárias à explicação: **em 2018, retira da disputa o candidato então líder das pesquisas, reconfigurando por via judicial a estrutura de oportunidade eleitoral que a candidatura de Bolsonaro ocupará; em 2021, ao ser revertida, devolve esse mesmo competidor ao jogo — e é a esse retorno que a denúncia da PGR ancora temporalmente o início do plano de ruptura.** Sem ela, PT-07 fica sem antecedente: a narrativa de fraude aparece em 2021 sem que nada explique por que naquele momento.
+
+**Fato.** Em **12/07/2017**, o juiz Sérgio Moro, da 13ª Vara Federal de Curitiba, condena Lula a 9 anos e 6 meses por corrupção passiva e lavagem de dinheiro no caso do triplex do Guarujá (AP 5046512-94.2016.4.04.7000). Na mesma sentença, absolve-o das acusações relativas ao acervo presidencial por falta de prova suficiente da materialidade.
+**Mecanismo causal.** *Certificação judicial do frame anticorrupção*. A acusação difusa que mobilizara as ruas em 2015–2016 converte-se em fato jurídico contra o principal quadro do PT. A arena judicial passa a operar como locus de definição de quem pode competir eleitoralmente — deslocamento que estrutura todo o ciclo seguinte.
+**Fonte.** Agência Brasil (12/07/2017) — [link](https://agenciabrasil.ebc.com.br/politica/noticia/2017-07/ex-presidente-lula-e-condenado-nove-anos-e-seis-meses-de-prisao). *Status: confirmado.*
+
+**Fato.** Em **24/01/2018**, a 8ª Turma do TRF-4 confirma a condenação por unanimidade (3x0) e majora a pena para **12 anos e 1 mês** em regime fechado, mais 280 dias-multa.
+**Mecanismo causal.** *Acionamento do gatilho de inelegibilidade*. A confirmação por órgão colegiado é exatamente o fato jurídico que a Lei da Ficha Limpa (LC 135/2010, sobre a LC 64/90) exige para gerar inelegibilidade. A decisão não apenas amplia a pena: transporta o caso do domínio penal para o domínio eleitoral.
+**Fonte.** TRF-4 — *"A 8ª Turma (…) confirmou hoje (24/1), por unanimidade, a condenação (…) passando a pena de nove anos e seis meses para 12 anos e um mês de reclusão em regime fechado"* — [link](https://www.trf4.jus.br/trf4/controlador.php?acao=noticia_visualizar&id_noticia=13418). *Status: confirmado (fonte oficial consultada).*
+
+**Fato.** Em **04/04/2018**, o Plenário do STF nega, por **6 votos a 5**, o Habeas Corpus 152.752, mantendo a jurisprudência da execução provisória da pena firmada no HC 126.292 (2016). Em **07/04/2018**, Lula se entrega à Polícia Federal em Curitiba e inicia o cumprimento da pena.
+**Mecanismo causal.** *Fechamento da via recursal* seguido de *remoção do competidor*. Em vocabulário de Tilly e Tarrow, trata-se de alteração exógena da estrutura de oportunidade política por via judicial. A margem mínima da decisão (6x5) é analiticamente relevante: a exclusão do favorito eleitoral repousou sobre um voto — fragilidade que a reversão de 2019 tornaria explícita. Registre-se também o efeito simétrico de enquadramento: constitui-se aqui, no campo derrotado, a gramática de "perseguição judicial" que o bolsonarismo mobilizaria, em espelho, a partir de 2023 (PT-62).
+**Fonte.** STF, HC 152.752 — [link](https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=374437); Agência Brasil (07/04/2018) — [link](https://agenciabrasil.ebc.com.br/politica/noticia/2018-04/lula-chega-policia-federal-em-curitiba-para-comecar-cumprir-pena). *Status: confirmado.*
+
+**Fato.** Em sessão iniciada em **31/08/2018** e concluída na madrugada de **01/09/2018**, o TSE indefere o registro de candidatura de Lula à Presidência, por maioria, com base na Lei da Ficha Limpa (art. 1º, I, "e", da LC 64/90), relator o ministro Luís Roberto Barroso. Veda-se propaganda eleitoral e concede-se prazo de 10 dias para substituição do candidato. O Tribunal rejeita o caráter vinculante da manifestação do Comitê de Direitos Humanos da ONU sobre os direitos políticos de Lula.
+**Mecanismo causal.** *Exclusão institucional do favorito*. A inelegibilidade converte a remoção física em remoção eleitoral formal. **Este é o elo que liga o arco judicial ao resultado de outubro:** o pleito de 2018 realiza-se com o principal competidor fora da disputa.
+**Fonte.** TSE — [link](https://www.tse.jus.br/comunicacao/noticias/2018/Setembro/tse-indefere-pedido-de-registro-de-candidatura-de-lula-a-presidencia-da-republica). *Status: confirmado (fonte oficial consultada).*
+
+**Fato.** Em **07/11/2019**, o Plenário do STF, julgando as **ADCs 43, 44 e 54**, declara por 6 votos a 5 a constitucionalidade do art. 283 do CPP, vedando a execução provisória da pena. No dia seguinte, **08/11/2019**, Lula é solto após **580 dias** de prisão.
+**Mecanismo causal.** *Reversão jurisprudencial e reabertura parcial da oportunidade*. A mesma arena que fechou a competição em 2018 começa a reabri-la — e o faz alterando a regra, não absolvendo o réu. Constitui-se aqui o **reservatório de deslegitimação recíproca do Judiciário**: cada campo passa a dispor de um episódio em que o STF, decidindo por margem mínima, alterou o resultado do jogo político. É esse reservatório que o enquadramento "STF ditador" (PT-05) explora.
+**Fonte.** Agência Brasil (08/11/2019) — [link](https://agenciabrasil.ebc.com.br/justica/noticia/2019-11/lula-deixa-carceragem-da-pf-em-curitiba). *Status: confirmado.*
+
+**Fato.** Em **08/03/2021**, o ministro Edson Fachin anula todos os atos decisórios da 13ª Vara Federal de Curitiba nas ações penais contra Lula (triplex, sítio de Atibaia, Instituto Lula), por incompetência do juízo. Em **23/03/2021**, a Segunda Turma reconhece a **suspeição do ex-juiz Sergio Moro** no caso do triplex (HC 164.493), anulando inclusive os atos da fase pré-processual — decisão mantida pelo Plenário por 7 votos a 4 em 23/06/2021. Em **15/04/2021**, o Plenário confirma a anulação por **8 votos a 3**; cessam as restrições eleitorais e **Lula recupera a elegibilidade**.
+**Mecanismo causal.** Dois mecanismos operam em conjunto. O primeiro é a *descertificação do agente judicial*: a autoridade que em 2017 certificara o frame anticorrupção é ela própria declarada parcial, o que desestabiliza retrospectivamente a legitimidade do ciclo 2014–2018 e corrói a função arbitral do Judiciário às vésperas do ciclo eleitoral de 2022. O segundo é a *reabertura da estrutura de oportunidade eleitoral* — **o elo que faltava na cadeia**: o competidor removido em 2018 retorna à disputa, e é a esse retorno que a denúncia da PGR ancora o início do plano de ruptura (PT-07).
+
+> **Precisão obtida com a denúncia da PGR — e uma retificação.** A peça acusatória (PET 12.100, p. 8, agora em `Fontes/02_T-1_Articulacao/`) data a primeira deliberação do grupo em **22 de março de 2021**: *"poucos dias depois de Lula da Silva haver superado a causa de inelegibilidade, o grupo de apoio do então Presidente da República, que formará o núcleo da organização criminosa, cogitou de o Presidente abertamente passar a afrontar e a desobedecer a decisões do Supremo Tribunal Federal, chegando a criar plano de contingenciamento e fuga de Bolsonaro, se a ousadia não viesse a ser tolerada pelos militares"*.
+>
+> Isso obriga a **corrigir qual decisão é o gatilho**. 22/03/2021 fica **catorze dias depois da anulação por Fachin (PT-06A, 08/03)** e **três semanas antes da confirmação plenária (PT-06C, 15/04)**. O "poucos dias depois" da PGR refere-se, portanto, à decisão monocrática de Fachin — não à sessão do Plenário, como a versão anterior deste relatório afirmava.
+>
+> A denúncia também **corrige o conteúdo** da primeira deliberação. Não foi a construção do frame de fraude: foi a cogitação de afrontar abertamente o STF, com plano de contingenciamento e fuga do Presidente caso os militares não tolerassem. O frame de fraude vem depois, como estratégia de sustentação — a peça registra que a organização "se dedicou, desde 2021, a incitar a intervenção militar no país e a disseminar (…) a falsa narrativa do emprego do sistema eletrônico de votação" (p. 249). O que se mantém, e agora com peso documental, é o essencial: **a contestação é anterior à derrota e reage ao retorno do competidor, não ao resultado.**
+Registre-se um ponto decisivo para o enquadramento posterior: a anulação foi **processual, não absolutória**. A distinção seria explorada sistematicamente nos acampamentos e nas redes ("não foi inocentado, foi solto por tecnicalidade"), sustentando a deslegitimação antecipada do pleito de 2022. *Este último ponto é leitura do analista sobre o material de enquadramento e demanda verificação empírica dedicada no corpus digital.*
+**Fonte.** STF — [anulação por Fachin](https://noticias.stf.jus.br/postsnoticias/fachin-anula-condenacoes-de-lula-e-manda-acoes-penais-para-justica-federal-do-df/); [suspeição de Moro](https://noticias.stf.jus.br/postsnoticias/stf-confirma-suspeicao-de-sergio-moro-na-acao-do-triplex-do-guaruja/); [confirmação da anulação](https://noticias.stf.jus.br/postsnoticias/stf-confirma-anulacao-de-condenacoes-do-ex-presidente-lula-na-lava-jato/). Corroborado por Agência Brasil ([08/03/2021](https://agenciabrasil.ebc.com.br/justica/noticia/2021-03/fachin-anula-condenacoes-de-lula-na-lava-jato); [15/04/2021](https://agenciabrasil.ebc.com.br/justica/noticia/2021-04/stf-mantem-anulacao-das-condenacoes-de-lula); [23/06/2021](https://agenciabrasil.ebc.com.br/justica/noticia/2021-06/stf-confirma-decisao-que-considera-moro-parcial-no-caso-do-triplex)). *Status: confirmado.*
+
+> **Nota de rigor sobre esta subseção.** Os fatos processuais estão ancorados em fontes oficiais (TRF-4, TSE, STF) ou na agência pública de notícias do Estado brasileiro. As **atribuições de mecanismo causal são do analista** e não constituem juízo sobre o mérito das decisões judiciais — a pergunta aqui não é se as condenações eram corretas, mas que efeitos a sequência produziu sobre a estrutura de oportunidade política. Esta é uma distinção que a redação do artigo deve preservar explicitamente, sob pena de o texto ser lido como tomada de posição no litígio.
+
+**Fato.** A eleição de Bolsonaro em 2018 — realizada, como se viu, **sem o candidato que liderava as pesquisas** — incorpora o movimento ao Estado sem que ele abandone a gramática contestatória. Entre 2019 e 2022, o Executivo mantém atrito sistemático com STF, TSE e Congresso; a gestão da pandemia (2020–2021) radicaliza as bases e consolida um ecossistema informacional paralelo em Telegram e WhatsApp.
+**Mecanismo causal.** *Erosão do consenso institucional* somada à *construção de infraestrutura comunicacional autônoma*. O segundo elemento é o que torna operacionalmente viável, dois anos depois, a convocação nacional codificada de $T_{-1}$ operacional.
+**Fonte.** Literatura — Cesarino (2022); Campos Mello (2020); Abranches; Avritzer. *Status: contextual.*
+
+**Fato.** Segundo a denúncia da PGR acolhida pelo STF, o plano de ruptura começou a ser esboçado **ainda em 2021**, poucos dias depois de Lula recuperar a elegibilidade, quando o núcleo passou a defender a deslegitimação do processo eleitoral em caso de derrota.
+**Mecanismo causal.** *Alinhamento de quadros (frame alignment) prévio*. A narrativa de fraude não é reação à derrota — é anterior a ela, construída para operar como gatilho pré-programado. Este é o achado que mais desloca a leitura do 8/1 de "surto espontâneo" para "desfecho de trama".
+**Fonte.** Agência Brasil (08/01/2026): *"O plano de ruptura, segundo a denúncia da PGR (...), começou a ser esboçado ainda em 2021, poucos dias depois de Lula ter recuperado sua elegibilidade."* — [link](https://agenciabrasil.ebc.com.br/politica/noticia/2026-01/cronologia-da-tentativa-de-golpe-atentados-bloqueios-e-acampamentos). *Status: confirmado.*
+
+**Contexto macro — com uma correção que a fonte primária impôs.** A invasão do Capitólio (06/01/2021) fornece um modelo transnacional de contestação violenta de resultado eleitoral. Mas a CPMI mostra que **o precedente efetivamente invocado pelos organizadores como "Plano B" não foi o Capitólio, e sim a revolta do Sri Lanka de julho de 2022**, em que a multidão invadiu o palácio presidencial e forçou a renúncia e a fuga do presidente — nas palavras do relatório, *"seria como uma invasão do Capitólio que teria dado certo"* (p. 614).
+**Mecanismo.** *Difusão / emulação*, com uma especificação relevante: o Capitólio permanece como referência de **repertório**; o Sri Lanka é a referência de **eficácia**. A distinção importa teoricamente — a emulação seleciona o precedente **bem-sucedido**, não o mais próximo culturalmente. Tratar o 8 de janeiro como "Capitólio brasileiro" descreve a forma e erra o cálculo dos atores.
+**Fonte.** Literatura comparada (Levitsky & Ziblatt; Norris & Inglehart) para o enquadramento; Relatório Final da CPMI, p. 614, para o modelo invocado. *Status: contextual quanto ao evento; confirmado em fonte primária quanto ao modelo invocado.*
+
+### 1.2 Dimensão logístico-operacional (05/10/2022 – 08/01/2023)
+
+#### Antes da derrota: a operação da PRF no segundo turno
+
+Este bloco estava ausente do levantamento e altera a datação do início da contestação. **A tentativa de interferir no resultado é anterior ao resultado.** O que segue vem da seção "Operação da PRF no segundo turno" do Relatório Final da CPMI (p. 465-470).
+
+**Fato — a seleção do alvo.** Logo após o primeiro turno, o ministro da Justiça Anderson Torres solicita à delegada Marília Ferreira de Alencar, diretora de Inteligência do MJ, um boletim com a lista dos municípios que concentraram votação superior a 75% para cada um dos dois candidatos. O analista encarregado declarou à PF que, embora tivesse levantado os dados dos dois, **"Marília Alencar requereu que fosse impresso apenas o de Lula"** (p. 466).
+**Mecanismo causal.** *Construção do alvo por critério eleitoral*. Este é o elo revelador de toda a operação: o recorte territorial que orientaria o policiamento foi filtrado pelo desempenho de um único candidato.
+
+**Fato — o planejamento.** Em **19/10/2022**, reúne-se o Conselho Superior da PRF, com pauta oficial ordinária mas **uso de celulares proibido**. Quebra de sigilo telemático na Operação Constituição Cidadã encontrou mensagens atestando que, nessa reunião, Silvinei Vasques falou em **"policiamento direcionado"** para o segundo turno (p. 467). O próprio ex-diretor confirmou à CPMI que ali foram apresentadas as operações "Eleições 2022" e "Transporte Seguro", com detalhamento de cidades e ruas do Nordeste que mereceriam "atenção mais direcionada". Em **26/10**, a PRF emite a Ordem de Serviço nº 163/2022, que inclui **fiscalização de transporte de passageiros** — item ausente da ordem que valia para o primeiro turno (p. 468).
+**Mecanismo causal.** *Captura de aparato estatal para fim eleitoral*. É um mecanismo distinto de todos os demais deste codebook: não é mobilização de rua nem omissão de contenção, é **uso ativo da máquina policial federal para suprimir participação**. Registre-se que a cúpula da PF na Bahia recusou o pedido de operação conjunta, por considerá-lo inadequado e baseado em notícias falsas (p. 468).
+
+**Fato — a proibição.** Em **29/10/2022**, véspera do pleito, o ministro Alexandre de Moraes, na presidência do TSE, determina ao diretor-geral da PRF *"a proibição, até o encerramento do segundo turno das eleições, de qualquer operação da Polícia Rodoviária Federal relacionada ao transporte público, gratuito ou não, disponibilizado aos eleitores (...) sob pena de responsabilização criminal do Diretor Geral da PRF, por desobediência e crime eleitoral, além da responsabilização dos respectivos executores"* (p. 468-469).
+**Mecanismo causal.** *Contenção institucional preventiva*. O valor analítico deste registro está em converter o que se seguiu em descumprimento inequívoco: a ordem é anterior, expressa, nominal e com cominação penal. Elimina a hipótese de desconhecimento ou ambiguidade.
+
+**Fato — a execução.** Em **30/10/2022**, "apesar da proibição expressa", a PRF realiza centenas de blitze contra veículos de transporte de passageiros a caminho dos locais de votação: **324 ônibus fiscalizados no Nordeste, 152 no Centro-Oeste, 79 no Sudeste, 76 no Norte e 65 no Sul** — cerca de **46% do total no Nordeste**, com 70% mais abordagens que no primeiro turno (p. 469). Um policial registrou em mensagem que seguiriam "correndo atrás dos eleitores do Lula" (p. 470).
+**Mecanismo causal.** *Supressão seletiva de participação eleitoral*. Três consequências para a cadeia causal. **Primeira, antecipa o gatilho:** a contestação não começa com a derrota (PT-09) — começa com a tentativa de evitá-la. **Segunda, estabelece o padrão que se repetiria em $T_0$:** ordem superior descumprida, agentes de segurança atuando contra a função institucional que lhes cabe. **Terceira,** a PF veio a sustentar que as blitze integravam o mesmo plano de ruptura de PT-07, o que costura o episódio à trama em vez de tratá-lo como desvio isolado.
+**Desfecho.** Prisão de Vasques decretada em 09/08/2023 (Petição 11.552/DF, p. 470); indiciamento pela PF em 16/08/2024 de Anderson Torres, Vasques e outros quatro por violência política (art. 359-P do Código Penal); condenação pela Primeira Turma do STF a 24 anos e 6 meses, com trânsito em julgado certificado em 23/04/2026.
+
+> **Ressalva de precisão numérica.** Circulam dois conjuntos de números que **não são intercambiáveis e não devem ser somados**. Os da CPMI (324 ônibus no Nordeste) referem-se ao **dia 30/10**. Os do indiciamento da PF (2.185 no Nordeste, 571 no Sudeste) cobrem a janela de **28 a 30/10**. Ao citar, explicite sempre o recorte temporal.
+
+#### Depois da derrota: bloqueios, acampamentos e escalada
+
+**Fato.** Lula vence com **50,90% (60,3 milhões)** contra **49,10% (58,2 milhões)**. Bolsonaro "não fez nenhum pronunciamento ou publicação nas redes sociais, nem foi ao encontro da imprensa que o aguardava em frente ao Palácio da Alvorada na noite da eleição" (p. 472). Na mesma noite, começam os bloqueios de rodovias: **1.300 pontos de interdição no país**, segundo o próprio diretor-geral da PRF em depoimento à CPMI — contra **270** na greve dos caminhoneiros de 2018, que motivara uma GLO. A PRF só encaminha ofícios às Superintendências pedindo desinterdição **na noite de 1º de novembro** (p. 999, 1021 e 1023).
+**Mecanismo causal.** *Gatilho* + *teste de contenção estatal*. A fonte primária acrescenta duas coisas. A escala: quase cinco vezes o episódio de 2018. E o vínculo de comando: a corporação que demorou a desobstruir era a mesma que, dois dias antes, descumprira a ordem do TSE sob o mesmo dirigente (PT-08C).
+
+**Fato — e aqui a paráfrase omitia o essencial.** Em **01/11/2022**, pressionado por auxiliares (entre eles o ministro da Casa Civil, Ciro Nogueira), Bolsonaro grava vídeo de pouco mais de dois minutos "em que pedia aos manifestantes que desobstruíssem as estradas, **mas em que encorajava outras manifestações**". Do texto lido: *"As manifestações pacíficas sempre serão bem-vindas (…) Outras manifestações que vocês estão fazendo pelo Brasil todo, em praças, fazem parte do jogo democrático. **Fiquem à vontade.**"* (p. 515).
+**Mecanismo causal.** *Sinalização ambígua da liderança* — e a fonte primária mostra que **a ambiguidade era estruturada, não acidental**. O pronunciamento separa dois repertórios: desautoriza o bloqueio de estradas e **autoriza expressamente a ocupação de praças**. É o ato que licencia a conversão de repertório de PT-12: os acampamentos em quartéis nascem sob permissão pública e explícita do líder, dias antes de se multiplicarem. Registre-se ainda que o vídeo foi gravado sob pressão de auxiliares — não é gesto espontâneo de pacificação, é **concessão negociada que preserva o núcleo da mobilização**.
+**Fonte.** Relatório Final da CPMI, p. 472, 515, 999, 1021 e 1023. *Status: confirmado em fonte primária.*
+
+**Fato — quem enviou os caminhões.** Os comboios não vieram de uma categoria profissional difusa. Relatório da Abin identifica o **Movimento Brasil Verde e Amarelo (MBVA)**, grupo informal de empresários do agronegócio, como responsável pelo envio de caminhões a Brasília e pelos bloqueios. A Abin contou **272 caminhões** nos comboios a partir de 04/11/2022, quase todos de Mato Grosso, Goiás, Bahia e Paraná. Entre os líderes identificados estão presidentes da Aprosoja Brasil, da Aprosoja Goiás, da Aprosoja Mato Grosso e de sindicatos rurais. O grupo tinha capacidade de mobilização nacional demonstrada **desde 2019**; em ato de 15/05/2021, estampou nos caminhões: *"Faça o que for preciso! Eu autorizo, Presidente!"* (CPMI, p. 884-887).
+**Mecanismo causal.** *Mobilização de recursos por setor econômico organizado*. A distinção importa para a Teoria do Processo Político: o repertório dos bloqueios **não emerge espontaneamente do descontentamento** — é ativado por uma estrutura de mobilização preexistente, com meios materiais próprios (frota) e coordenação interestadual. É a diferença entre multidão e organização.
+
+**Fato.** Enfraquecidos os bloqueios, formam-se acampamentos em frente a quartéis **em todos os Estados** (CPMI, p. 510), exigindo intervenção militar — sem que a CPMI ou o Cappelli quantifiquem o total nacional. *(Revisto em 16/08/2026: a cifra de "mais de 100 acampamentos" que constava aqui foi retirada — sem lastro em fonte primária. Ver PT-12 no codebook.)* Segundo a denúncia da PGR, os acampamentos tiveram **aval direto do então presidente**, e a nota dos comandantes das três Forças autorizando a permanência seria uma das provas.
+**Mecanismo causal.** *Conversão de repertório* (do bloqueio móvel para a ocupação territorial permanente) e *certificação por elite*. Este é o ponto de virada logístico de todo o processo: o acampamento não é apenas protesto, é **infraestrutura de mobilização** — alimentação, alojamento, coordenação e reserva de contingente. Sem ele, não há 8 de janeiro.
+
+#### O lastro material da palavra "infraestrutura"
+
+A afirmação acima é a mais forte do process tracing, e até esta revisão estava **asserida sem lastro**. A CPMI fornece a contabilidade.
+
+**O custo.** O acampamento de Brasília custou **R$ 376.043,64 à União** em 70 dias — quase R$ 5 mil por dia, com 200 militares a mais em prontidão (p. 577). Esse é apenas o custo público da *tolerância*.
+
+**A manutenção.** O acampamento "contava com uma infraestrutura sofisticada e incluía distribuição diária de refeições e materiais de higiene gratuitos", com "custos de manutenção apreciáveis" sustentados por "ampla rede de financiamento, por meio de transferências pix, vaquinhas virtuais, doações de empresas e também em mercadorias, prestação de serviços e dinheiro vivo" (p. 577). O comandante da PMDF, coronel Jorge Eduardo Naime, descreveu à CPI da Câmara Legislativa do DF uma **"máfia do pix"**: *"várias lideranças, dentro lá do acampamento (…) pedindo para as pessoas que estavam ali que fizessem pix, exatamente com a intenção de manter o acampamento"* (p. 578).
+
+**A arquitetura — e aqui há um achado.** A inteligência da Polícia Civil do DF registra que *"não foi identificada uma coordenação que envolvesse todos os manifestantes"* no financiamento (p. 881), o que sustenta a tese da **dispersão**. Mas a análise do COAF sobre a empresa **USA Brasil Informática** mostra o oposto no nível seguinte: conta pouco movimentada até outubro de 2022 que, em novembro e dezembro, recebe recursos de várias unidades da federação e **redistribui** a supermercados, açougues e locadoras de tenda em Brasília — *"utilizada como ponto centralizador de recursos"* (p. 882).
+
+Os dois achados **não se contradizem**: descrevem uma arquitetura de **duas camadas** — captação pulverizada, sem comando único, e execução concentrada em nós que convertem dinheiro em suprimento. É o padrão característico de movimentos **sem organização formal**, e dialoga diretamente com a Teoria da Mobilização de Recursos, da mesma família teórica de McAdam, Tarrow e Tilly já adotada aqui.
+
+**O que isso faz pelo argumento.** Converte "infraestrutura de mobilização" de metáfora do analista em **descrição verificável, com valores, fluxos e nós identificados**. Registros PT-10A e PT-12A.
+
+> **Nota de escopo.** O financiamento **não recebe seção própria** neste trabalho e não é tratado como objeto autônomo. Entra aqui, dentro da análise dos acampamentos, porque é o substrato material de uma afirmação que a pesquisa já fazia. Um tratamento próprio da rede de financiadores — nominal, com fluxos e responsabilização — é pesquisa distinta, e o capítulo 6.3.29 da CPMI é o ponto de partida para quem quiser fazê-la.
+**Fonte.** Agência Brasil (08/01/2026) — [link](https://agenciabrasil.ebc.com.br/politica/noticia/2026-01/cronologia-da-tentativa-de-golpe-atentados-bloqueios-e-acampamentos). *Status: confirmado.*
+
+**Fato.** Em **22/11/2022**, a coligação **Pelo Bem do Brasil** (PL, Republicanos e Progressistas) ajuíza ação no TSE requerendo verificação extraordinária e a anulação dos votos de **cerca de 280 mil urnas eletrônicas** — **exclusivamente as do segundo turno**. A ação é negada.
+**Mecanismo causal.** *Fechamento da via institucional*. A fonte primária traz o dado que dá sentido ao mecanismo: o pedido alcançava apenas as urnas do segundo turno, **não as do primeiro** — nas quais a mesma coligação elegera sua bancada. É a seletividade que permite ler a ação como instrumento de contestação do resultado, e não como zelo pela integridade do pleito. O próprio relatório registra a manobra como "tentar invalidar, sem justificativa razoável, a maioria dos votos do segundo turno, e apenas os do segundo turno" (p. 16). Negada a ação, a energia contestatória se desloca para o repertório extrainstitucional.
+**Fonte.** Relatório Final da CPMI, p. 481 e 16. *Status: confirmado em fonte primária.*
+
+**Fato.** Em **12/12/2022**, dia da diplomação de Lula, manifestantes tentam invadir a sede da PF em Brasília e incendeiam carros e ônibus, fechando o Setor Hoteleiro Norte e parte do Eixo Monumental. Em **24/12/2022**, um artefato explosivo é encontrado em caminhão-tanque próximo ao Aeroporto de Brasília; os autores, ligados ao acampamento do QG, pretendiam provocar comoção capaz de precipitar intervenção militar.
+**Mecanismo causal.** *Escalada de radicalização* e *radicalização de flanco*. O 12/12 é o ensaio geral: repertório violento testado no mesmo território, com custo desproporcionalmente baixo para os autores e **sem que o acampamento fosse desmobilizado**. Essa ausência de sanção é uma das evidências mais fortes da cadeia — um *hoop test* que a hipótese da falha de contenção passa com folga.
+**Fonte.** Agência Brasil (08/01/2026) — [link](https://agenciabrasil.ebc.com.br/politica/noticia/2026-01/cronologia-da-tentativa-de-golpe-atentados-bloqueios-e-acampamentos). *Status: confirmado.*
+
+
+**Fato — a mobilização também foi paga.** Levantamento do NetLab/UFRJ na biblioteca de anúncios da Meta localizou **185 anúncios com conteúdo golpista** veiculados entre novembro de 2022 e janeiro de 2023 — peças que contestavam a vitória eleitoral, questionavam as urnas, demandavam intervenção militar ou promoviam manifestações contra instituições democráticas. A coleta é de 24 a 26 de janeiro de 2023: as peças ainda estavam disponíveis semanas depois do evento.
+**Mecanismo causal.** *Circulação paga* — dimensão distinta da coordenação orgânica de PT-19, e não redundante com ela. Grupo de mensagens é gratuito, horizontal e sem rastro de autoria; **anúncio tem anunciante, valor pago e decisão de aprovação pela plataforma**. Cada peça é, em princípio, um vínculo documentável entre financiamento e mensagem — o que conecta este registro ao núcleo dos financiadores e à responsabilidade das plataformas, temas que o corpus menciona mas não sistematiza.
+**Ressalva de escopo.** O levantamento estabelece a **existência do canal, não seus operadores**: não identifica anunciantes nem valores. E é relatório de laboratório universitário, **não revisado por pares**, com a categoria "golpista" operacionalizada pelos próprios autores. Sustenta afirmar que houve canal pago e que a moderação falhou; não sustenta, ainda, afirmar quem pagou.
+**Fonte.** NetLab UFRJ (07/02/2023), transcrição em `Fontes/07_NetLab-UFRJ/`. *Status: confirmado quanto ao número, com as ressalvas acima.*
+
+**Fato — a inteligência do próprio DF.** Em **06/01/2023**, a Subsecretaria de Inteligência da SSP-DF elabora o **Relatório de Inteligência nº 006/2023** e o entrega **no mesmo dia** no gabinete do secretário: *"As divulgações apresentam-se de forma alarmante dada a afirmação que a tomada de poder ocorreria, principalmente com a invasão ao Congresso Nacional."* No mesmo 06/01 há reunião na SOPI/SSP com integrantes de vários órgãos de segurança, cuja memória "demonstra que participantes da reunião tomaram conhecimento do potencial lesivo da manifestação prevista". O interventor federal conclui, categoricamente: **"Pode-se concluir que não houve falta de informações e alertas sobre os riscos da manifestação."**
+**Mecanismo causal.** *Falha de conversão de inteligência em ação* — agora **certificada pela autoridade que investigou os fatos**, e não apenas atribuída pelo analista. Este registro é distinto dos alertas da Abin (PT-22, PT-23) em três aspectos: a fonte é a inteligência **do próprio DF**, o alerta é de **dois dias antes**, e a conclusão de que não faltou informação é oficial.
+**Fonte.** Relatório do Interventor Federal (Cappelli), conclusão B, p. 54. *Status: confirmado em fonte primária.*
+
+**Fato — a guarda dispensada.** Em **06/01/2023, às 17h30** — no mesmo dia, e dois dias antes do evento —, o coronel André Garcia, coordenador de segurança do GSI, em nome do general Carlos Feitosa Rodrigues, envia mensagem ao Comando Militar do Planalto **dispensando qualquer reforço de segurança** para o fim de semana. Com isso, a proteção do Palácio do Planalto passa a ser feita pelo contingente mínimo, **cerca de 10 soldados** revezando-se na rampa e nas guaritas. A CPMI registra que a dispensa ocorreu "apesar das intensas mobilizações que ocorriam para a 'Tomada do Poder pelo Povo', segundo informações repassadas pela Abin e de conhecimento do GSI".
+**Mecanismo causal.** *Desmobilização preventiva do dispositivo* — o elo que faltava entre a inteligência disponível e o subdimensionamento de $T_0$. Não é omissão passiva nem falha de comunicação: é **ato administrativo expresso e datado** que reduziu a guarda do Planalto a cerca de dez soldados às vésperas do evento. Se PT-22 e PT-23 mostram inteligência produzida e não convertida em ação, este registro mostra algo mais forte: **a capacidade instalada foi ativamente dispensada**.
+**Fonte.** Relatório Final da CPMI, p. 635 e 842. *Status: confirmado em fonte primária.*
+
+**Fato — a posse e o rebaixamento do dispositivo.** A posse de 01/01/2023 transcorre sob forte esquema e sem incidentes. Para o dia 8, porém, o dispositivo é **deliberadamente inferior ao da posse, em dois aspectos documentados**. Primeiro: "de forma também diversa da praticada na cerimônia de posse, o restante do efetivo policial foi colocado, pelo coronel da PMDF **Klepter Rosa**, então subcomandante-geral, **de sobreaviso** (com obrigação de se apresentar aos quartéis em caso de acionamento) **e não em regime de prontidão** (quando os militares ficam previamente aquartelados)". Segundo o depoimento do coronel Naime, "no sobreaviso, os militares permanecem em casa, com **tempo de deslocamento de duas horas e meia a três horas**; na prontidão, ficam a postos no quartel, com **tempo de deslocamento em torno de quarenta minutos**" (p. 646). Segundo: para o 7 de setembro de 2022 e para a posse elaborou-se um **Plano de Operações Integradas (POI)**; "no 8 de janeiro, e em que pesem os alertas recebidos, foi elaborado apenas o **PAI**" — instrumento de menor alcance (p. 711).
+**Mecanismo causal.** *Rebaixamento deliberado do dispositivo por comparação com a posse* — e não apenas "falso sinal de normalização". A fonte primária substitui uma inferência psicológica por **dois atos administrativos nomeados e datados**. Junto com PT-20A (dispensa de reforço pelo GSI em 06/01), forma um padrão: nos dias que antecedem o evento, decisões administrativas identificáveis reduzem a capacidade de resposta.
+**Fonte.** Relatório Final da CPMI, p. 646 e 711. *Status: confirmado em fonte primária.*
+
+**Fato.** Nas semanas anteriores, circula em Telegram, WhatsApp e Instagram o código **"Festa da Selma"** (alusão a "Selva", brado militar). A CPMI dedica-lhe seção própria (p. 614-625) e reproduz o convite: *"A Selma não convidou crianças e nem idosos, quer somente adultos dispostos para participarem de todas as brincadeiras, entre elas: tiro ao alvo, polícia e ladrão, dança da cadeira, dança dos índios, pega pega, e outras"* (p. 620). Segundo a empresa de análise de dados **Palver**, que monitora mais de 17 mil grupos públicos de WhatsApp, as mensagens "traziam detalhes de como agir durante os ataques a prédios públicos".
+**Mecanismo causal.** *Coordenação distribuída por criptolinguagem*. O código resolve o dilema de mobilizar massa em plataformas abertas sem acionar moderação nem monitoramento — explica como houve coordenação sem comando centralizado visível. A forma escolhida é analiticamente eloquente: **linguagem de festa infantil designando ações de confronto**, o que simultaneamente encobre e ritualiza a violência, rebaixando sua percepção entre os participantes.
+**Fonte.** Relatório Final da CPMI, seção "A festa da Selma", p. 614-625. *Status: confirmado em fonte primária* — substitui a cobertura da Agência Pública antes utilizada.
+
+**Fato — a curva de afluxo.** O acampamento do Setor Militar Urbano (SMU) tinha **300 pessoas em 05/01**; chega a **5.500 em 07/01** (estimativa), após a chegada de centenas de ônibus nos dois dias anteriores — multiplicação por quase 20 vezes. Na manhã de 08/01 a Abin emite três alertas: os dois primeiros, **às 08h53 e 09h00**, confirmam que **até as 08h20** haviam chegado 101 ônibus, e a mensagem das 9h ao grupo CIISP-DF estima 3.000 pessoas na área do SMU; o terceiro, **às 10h00**, informa que "permanecem convocações e incitações para deslocamento até a Esplanada dos Ministérios, ocupações de prédios públicos e ações violentas" e registra que, "em votação, decidiram que a marcha só iniciará quando todas as caravanas chegarem e estão evitando divulgar um horário para o início".
+**Mecanismo causal.** *Concentração de recursos* + *falha de conversão de inteligência em ação*. Este par é o núcleo explicativo de $T_{-1}$ operacional: a massa crítica foi construída à vista de todos, o alvo e o repertório foram explicitamente antecipados às 10h da manhã, e ainda assim o dispositivo permaneceu subdimensionado. Não é falha de informação — é falha de resposta.
+**Ressalva que a fonte primária impõe.** O alerta da véspera (07/01, 12h00, p. 374-375) trazia advertência equivalente **seguida da qualificação "mas sem coordenação concreta para tais ações"**. Essa qualificação não reaparece no alerta das 10h de 08/01, mas sua existência no dia anterior sustenta parcialmente a hipótese rival de que o dispositivo foi calibrado por uma inteligência que ela própria relativizava a ameaça. A pesquisa deve reportar isso, não omiti-lo.
+**Fonte.** Relatório Final da CPMI, p. 576 (curva de afluxo), p. 643 (alertas das 08h53 e 09h00) e p. 376 (alerta das 10h00) — `Fontes/04_T+1_Resposta-institucional/`. *Status: confirmado em fonte primária.*
+
+---
+
+## Fase 2 — Mobilização e Execução ($T_0$): 8 de janeiro de 2023
+
+Os horários abaixo seguem a reconstituição do Relatório Final da CPMI. A sequência revela um processo em quatro tempos: **deslocamento (13h–14h43) → ruptura de contenção (14h45–15h) → ocupação simultânea dos três alvos (15h–15h53) → retomada tardia (16h25–17h30)**.
+
+### 2.1 Deslocamento (13h–14h43)
+
+**13h00** — A marcha deixa o acampamento do SMU, a 9 km em linha reta dos três edifícios pelo Eixo Monumental. Nenhuma interdição na origem.
+**Mecanismo.** *Deslocamento espacial como escalada*. Sair da "servidão militar" — território de ocupação tolerada — em direção ao centro do poder converte a ocupação estática em ofensiva. O momento da partida é o ponto em que o repertório muda de natureza.
+
+**13h23** — Fernando de Sousa Oliveira, substituto de Anderson Torres na SSP-DF, envia áudio ao governador Ibaneis Rocha **tranquilizando-o** sobre a manifestação.
+**Mecanismo.** *Neutralização da percepção de ameaça no topo da cadeia política*. Evidência de bloqueio cognitivo/deliberado da resposta na cúpula da segurança do DF.
+
+**14h30** — A marcha alcança a primeira barreira policial na Via N1, altura da Catedral. **14h43** — Chega à linha de contenção formada por dois gradis na Avenida das Bandeiras.
+**Mecanismo.** *Teste sequencial de contenção*. Cada barreira transposta sem custo transmite à multidão a informação de que o avanço é barato — retroalimentação que acelera a escalada.
+
+### 2.2 Ruptura (14h45–15h00)
+
+**14h45** — Diante do Congresso Nacional há **apenas 20 PMs** do 1º Batalhão de Policiamento de Choque (Patamo Alfa), sob comando do segundo-tenente Marco Aurélio Teixeira Feitosa (CPMI, p. 657).
+**Mecanismo.** *Subdimensionamento crítico do dispositivo*. Em termos de process tracing, esta é a condição necessária (*hoop test*) do sucesso da invasão: sem ela, nada do que se segue é possível. Combinada com os alertas das 08h53, 09h00 e 10h, torna-se também evidência forte (*smoking gun*) de disfunção não acidental.
+
+> **Contraprova que o relatório do interventor impõe — e que redireciona a atribuição de responsabilidade.** A conclusão G (p. 57) registra que o **Comandante-Geral da PMDF "esteve em campo atuando operacionalmente"** e "figurou entre os policiais militares feridos no combate direto aos ataques ao Supremo Tribunal Federal". Isso **enfraquece a leitura de conivência no topo da corporação** — quem está conivente não se fere na linha de frente.
+>
+> O mesmo trecho, porém, acrescenta que "o coronel perdeu a capacidade de liderar seus comandados diretos, uma vez que **suas solicitações por reforço não foram consideradas nem atendidas prontamente**". A leitura que a evidência sustenta, portanto, não é conivência no comando-geral, e sim **ruptura da cadeia de comando abaixo dele**. Isso não desfaz o argumento — desloca o alvo da imputação, e o artigo ganha em precisão ao dizê-lo. Some-se a conclusão H (p. 57): em 08/01 estavam de férias os comandantes do 3º, 5º, 6º, 7º e 24º BPM, do 2º CPR, do CPME **e do próprio Batalhão de Choque**.
+
+**15h00** — Os manifestantes sobem a rampa do Congresso e invadem.
+**Mecanismo.** *Transposição do limiar*. A primeira invasão bem-sucedida funciona como sinal público de viabilidade e dispara o contágio.
+
+### 2.3 Ocupação simultânea dos três alvos (15h10–15h53)
+
+**15h10** — Grupos invadem o estacionamento e a parte de trás do Planalto.
+**15h15** — Doze PMs do 2º Pelotão de Choque chegam ao Congresso, **não reprimem** e, segundo o relatório da CPMI, "chegaram a sinalizar para que os presentes prosseguissem com a invasão".
+**15h16** — A PM se retira da via S1 na altura do Congresso, **liberando o acesso ao STF**.
+**15h20** — Derrubada das grades do Planalto, quebra dos vidros da fachada, entrada no prédio.
+**15h26** — Chegada à Praça dos Três Poderes, "em altura muito próxima ao prédio do STF" (CPMI, p. 674). **Sem estimativa oficial de público para este momento** — a CPMI caracteriza os invasores como "um grupo de poucos milhares" (p. 695).
+**15h37** — Início da invasão do edifício-sede do STF.
+**15h45** — Invasores alcançam o **3º andar do Planalto**, onde fica o gabinete presidencial.
+**15h53** — PMs abandonam o Congresso; alguns são atacados.
+
+**Mecanismos causais desta janela — o coração do argumento:**
+
+- *Defecção do agente de contenção* (15h15). Não é apenas omissão. A CPMI (p. 667) descreve: os 12 soldados do 2º Pelotão de Choque (Patamo Bravo), sob o major Flávio Silvestre de Alencar, *"posicionaram-se lateralmente, desobstruindo a passagem; cumprimentaram os insurgentes; e abandonaram, à própria sorte, a Polícia Legislativa"*. É sinalização ativa de permissividade por parte da força incumbida da repressão.
+- *Abertura de corredor* (15h16). Segundo a CPMI (p. 674), a tropa do tenente Rafael Pereira Martins, *"embora reduzida a 28 soldados"*, **continuava a bloquear efetivamente** o avanço pela via S1 em direção ao STF; às 15h16, *"sem justificativa"*, Martins determinou o recolhimento dos soldados aos veículos, liberando o acesso ao Supremo. Isso desloca o registro de omissão para **ato comissivo**. Ocorre que vinte minutos antes, às **14h56**, Anderson Torres — secretário de Segurança do DF, em férias nos EUA — havia enviado ao grupo Difusão a mensagem *"Não deixem chegar ao Supremo"* (p. 658).
+
+> **A contradição foi levada à AP 2668 — e o resultado é negativo, mas informativo.**
+>
+> A versão anterior deste relatório propunha que o acórdão arbitraria entre duas leituras: insubordinação do comandante em campo, ou mensagem performática do secretário. Conferidos o **inteiro teor do acórdão (1.991 p.)** e a **denúncia da PGR (272 p.)**, verifica-se que **nenhum dos dois menciona** a mensagem das 14h56, o horário 15h16 ou o tenente Rafael Pereira Martins. *(O "Rafael Martins de Oliveira" que aparece na denúncia é outra pessoa — um dos militares do grupo "Kids Pretos".)*
+>
+> **O STF não escolheu entre as duas leituras: adotou uma terceira moldura.** O acórdão imputa à cúpula da SSP-DF *"clara omissão"*, e assenta que Anderson Torres, Fernando de Sousa Oliveira e Marília Ferreira de Alencar *"se omitiram no exercício de suas funções o que foi essencial para a consumação dos atos antidemocráticos de 8/1/2023"* (p. 495). A *"omissão dolosa"* de Torres *"também caracterizou o crime de golpe de Estado"* (p. 497), tipificado no art. 359-M. Sob essa moldura, uma ordem isolada de proteção é analiticamente irrelevante — o que se imputa é **o conjunto do não agir**.
+>
+> **Três consequências para a pesquisa.** Primeira: a mensagem *"Não deixem chegar ao Supremo"* é **achado exclusivo da CPMI, sem validação judicial** — citável como tal, jamais como fato assentado pelo STF. Segunda: a moldura judicial é **omissiva, não comissiva**, o que é coerente com a contraprova do interventor sobre o comandante-geral da PMDF (conclusão G) e **localiza a imputação na cúpula civil da SSP-DF, não na corporação militar**. Terceira: a contradição permanece analiticamente aberta, agora com a informação adicional de que a mais alta corte, com acesso integral à prova, **não julgou necessário explicá-la**.
+- *Contágio e multiplicação de frentes* (15h10–15h37). A multidão se fraciona em três direções e satura qualquer capacidade residual de resposta. Os três Poderes são atingidos em **37 minutos** — velocidade que aponta para coordenação tácita prévia (compatível com as instruções da "Festa da Selma"), não para sequência aleatória.
+- *Penetração do núcleo simbólico* (15h45). O gabinete presidencial é o ponto de máxima profundidade da ofensiva.
+- *Colapso e inversão da relação de força* (15h53). O agente estatal deixa de ser obstáculo e passa a ser alvo.
+
+**Transversal (≈15h–16h30) — vandalismo simbólico.** Destruição de obras de arte, mobiliário histórico e documentos nos três edifícios.
+**Mecanismo.** *Violência simbólica dirigida*. O alvo não é o edifício como estrutura, mas a **memória material do pacto constitucional de 1988** — repertório performático cuja função é deslegitimar, não conquistar. Note-se que em nenhum momento houve tentativa de tomar o comando efetivo de qualquer instituição: a ação é iconoclasta, não instrumental.
+*Detalhamento por peça exige o laudo pericial do Instituto de Criminalística/PF.* [Contexto](https://agenciabrasil.ebc.com.br/geral/noticia/2024-09/democracia-restaurada-obras-vandalizadas-no-81-sao-recuperadas-0)
+
+### 2.4 Retomada (16h25–17h30)
+
+**16h25** — Início da expulsão dos invasores — cerca de **1h25 após a primeira invasão**.
+**16h40** — O Batalhão da Guarda Presidencial chega ao Planalto.
+**17h00** — O Batalhão de Choque da PMDF chega ao Congresso, **duas horas após ter sido requerido** — às 15h, pelo diretor da Polícia Legislativa da Câmara, Paul Pierre Deeter — e, **"em pouco mais de 3 minutos, conseguiu expulsar todos os invasores"** (CPMI, p. 679).
+**17h15** — Entram no palácio a Companhia da Base de Administração e Apoio do Comando Militar do Planalto e um pelotão do 1º Regimento de Cavalaria de Guardas.
+**17h30** — Prédios majoritariamente desocupados; multidão persiste na área externa do Congresso.
+
+**Mecanismos.** *Substituição do agente de contenção* (a falha da polícia estadual é suprida por tropa federal) e *latência de resposta*.
+
+O dado dos **três minutos** é o mais consequente desta rodada de recodificação, e não constava da versão anterior. Ele **desmonta a hipótese rival da incapacidade operacional**: a capacidade de desocupar o Congresso existia e era desproporcional à resistência encontrada. O que faltou não foi meio — foi emprego. É esse contraste, **duas horas de espera contra três minutos de execução**, que converte a latência de mero indício em evidência de alta unicidade (*smoking gun*) no sentido de Beach & Pedersen.
+
+> **Correção de rota imposta pela fonte primária — leia antes de usar este argumento.** A recodificação de PT-18 revelou que a latência de duas horas **tem explicação mecânica**: o efetivo estava em regime de **sobreaviso** (militares em casa, 2h30 a 3h de deslocamento) e não de **prontidão** (aquartelados, ≈40 min), por decisão do coronel Klepter Rosa, diversa da adotada na posse dias antes (p. 646). As duas horas, portanto, **não são anômalas em si** — são o resultado previsível do regime escolhido.
+>
+> Isso **não enfraquece o argumento, mas o desloca, e o texto do artigo precisa acompanhar esse deslocamento**. A pergunta suspeita deixa de ser *"por que a tropa demorou duas horas?"* — que agora tem resposta banal — e passa a ser *"por que o efetivo foi posto em sobreaviso, contrariando o protocolo da posse, dias depois de a Abin reportar convocações para ocupar prédios públicos?"*. O ônus probatório migra da execução para a decisão prévia, onde há **ato administrativo nomeado e datado** — evidência melhor que a inferência a partir de um intervalo de tempo. Sustentar o *smoking gun* na demora em si, agora que se conhece o regime de sobreaviso, seria erro que um parecerista atento identificaria.
+
+### 2.5 Desfecho do dia
+
+**17h08** — Ibaneis Rocha demite Anderson Torres (que estava nos EUA em férias antecipadas). *Mecanismo: deslocamento de responsabilidade.*
+**17h50** — De Araraquara (SP), Lula decreta **intervenção federal** na segurança pública do DF. *Mecanismo: federalização da resposta — remoção da cadeia de comando local sob suspeita de conivência.*
+**18h20** — Extremistas ateiam fogo no gramado do Congresso. *Mecanismo: repertório residual — sinal de desorganização, não de coordenação.*
+**19h00** — Ibaneis pede desculpas em vídeo.
+**20h00** — O interventor Ricardo Cappelli convoca todo o efetivo e negocia com militares as prisões no acampamento do SMU.
+**21h17** — Dos EUA, **cerca de 6 horas após o início**, Bolsonaro publica nota condenando os ataques e se eximindo de responsabilidade. *Mecanismo: descertificação tardia — a retirada de apoio simbólico só ocorre depois de consumado o fracasso tático.*
+**22h00** — Lula vistoria o Planalto e o STF com Rosa Weber, Roberto Barroso e Dias Toffoli. *Mecanismo: ritual de recertificação da ordem.*
+
+### 2.6 O que a conferência com a fonte primária mudou
+
+Sete registros de $T_0$ foram recodificados diretamente sobre o Relatório Final da CPMI. O resultado justifica o esforço e serve de advertência metodológica: **a paráfrase jornalística não errou os fatos, mas perdeu exatamente o que sustentava o peso probatório atribuído a eles.**
+
+**Duas correções factuais**
+
+| Registro | Antes (via Agência Brasil) | Agora (CPMI, com página) |
+|:--|:--|:--|
+| PT-22 | "08h20 — Abin emite alerta" | Os alertas saíram **às 08h53 e 09h00**; 08h20 é o **corte da contagem** dos 101 ônibus, não o horário de emissão (p. 643) |
+| PT-32 | "PM se retira da via S1, liberando acesso ao STF" | A tropa **ainda bloqueava efetivamente** o avanço; às 15h16 o comandante ordenou o recolhimento aos veículos **"sem justificativa"** (p. 674) |
+
+A primeira é uma imprecisão menor, mas do tipo que um parecerista atento encontra. A segunda é substantiva: muda a natureza do ato de **omissão** para **ação deliberada**.
+
+**Dois enriquecimentos que alteram a força do argumento**
+
+- **PT-41 — os três minutos.** A CPMI registra que o Batalhão de Choque, uma vez empregado, desocupou o Congresso em pouco mais de três minutos (p. 679). Sem esse dado, a latência de duas horas era compatível com incompetência; com ele, deixa de ser. É o único achado desta rodada que **muda a conclusão**, e não apenas a documentação dela.
+- **PT-31 — a descrição integral.** "Posicionaram-se lateralmente, desobstruindo a passagem; cumprimentaram os insurgentes; e abandonaram, à própria sorte, a Polícia Legislativa" (p. 667) é qualitativamente mais forte que "sinalizaram para prosseguir".
+
+**Duas ressalvas que a fonte primária impôs contra o argumento**
+
+Rigor exige registrar também o que enfraquece a tese. A conferência trouxe dois elementos nesse sentido, ambos incorporados ao codebook:
+
+1. **O alerta da véspera relativizava a ameaça.** O informe de 07/01 (12h00, p. 374-375) trazia a advertência sobre ocupações e violência **seguida de "mas sem coordenação concreta para tais ações"**. Isso dá sustentação parcial à hipótese rival de que o dispositivo foi calibrado por uma inteligência que ela própria duvidava do risco.
+2. **A ordem do secretário contradizia a execução em campo.** Torres mandou "Não deixem chegar ao Supremo" às 14h56 (p. 658); às 15h16 o comandante liberou justamente esse acesso (p. 674). Isso não se encaixa na leitura mais simples de conivência em cadeia e precisa ser enfrentado.
+
+**Estado final da recodificação — encerrada.** Concluída para **49 registros**: toda a camada coberta pelo Relatório Final da CPMI, do resultado eleitoral (PT-09) ao desmonte do acampamento (PT-52). Cada um traz página e transcrição literal, reunidos em `Caderno-de-evidencias/`. **Não resta nenhum registro que o relatório cubra e que siga apoiado em fonte secundária.** Os 27 restantes não dependem da CPMI: camada contextual da literatura teórica (PT-01 a PT-07), arco judicial com acórdãos próprios em `Fontes/01_`, resposta institucional posterior a out/2023 (fonte: STF), o laudo pericial não obtido (PT-38) e uma inferência declarada (PT-62).
+
+**A previsão inicial de que os registros restantes seriam "incontroversos" estava errada, e errou duas vezes.** A recodificação de PT-12 a PT-18, feita sem expectativa de rendimento, produziu o achado que mais alterou o argumento: o regime de sobreaviso (PT-18). E a última leva — os seis registros que sobraram, os mais banais da lista — trouxe o "Fiquem à vontade" de PT-11, que é provavelmente o **melhor único elemento de prova de certificação por elite** em todo o corpus, e a descoberta de que o modelo invocado pelos organizadores era o Sri Lanka, não o Capitólio (PT-19, com reflexo em PT-08).
+
+Registre-se como lição metodológica: **a triagem por "importância presumida" é má guia para decidir o que verificar.** Em ambas as vezes, os registros classificados como dispensáveis renderam mais que os classificados como centrais. A razão é estrutural — o valor de uma verificação não está no que o registro afirma, mas no que a fonte primária acrescenta ao redor dele, e isso é por definição desconhecido antes de olhar.
+
+### Quatro ressalvas de proveniência — três resolvidas em 16/08/2026
+
+A recodificação também produziu o inverso do reforço: quatro afirmações da cronologia **não se sustentaram na fonte primária** na rodada original. Revisitadas em 16/08/2026 com busca exaustiva no corpus inteiro (não só as seções já checadas), três se resolveram — uma por retirada, uma por achado, uma por esclarecimento sem substituição.
+
+| Registro | Afirmação | Situação |
+|:--|:--|:--|
+| PT-34 | "cerca de 4 mil pessoas" na Praça às 15h26 | ✅ **RESOLVIDA em 16/08/2026 — cifra retirada.** Fonte jornalística única, sem órgão nomeado, ausente das cronologias contemporâneas; na CPMI, "4 mil" é o acampamento de 15/11/2022 (p. 532) e o depoimento do gen. Heleno (p. 1324). Substituída por faixa de 3.000 a 5.500, com duas medições oficiais independentes. Ver [`ESTIMATIVA-MULTIDAO-8JAN.md`](ESTIMATIVA-MULTIDAO-8JAN.md) |
+| PT-12 | "mais de 100 acampamentos" no país | ✅ **RESOLVIDA em 16/08/2026 — cifra retirada, mesmo padrão do PT-34.** Sem lastro na CPMI nem no Cappelli; provinha da Agência Brasil, sem órgão nomeado. Substituída pela caracterização geográfica ancorada "em todos os Estados" (CPMI, p. 510) |
+| PT-17 | saída do país em 30/12 | ✅ **RESOLVIDA em 16/08/2026 — achado.** Busca exaustiva localizou a confirmação na CPMI, p. 612, no texto analítico da própria comissão sobre a "estratégia do caos" |
+| PT-52 | ≈1.200 presos em 40 ônibus | ✅ **RESOLVIDA em 16/08/2026 — cifra substituída.** Adotadas as **2.151 prisões em flagrante** (CPMI, p. 76 e 688) no lugar dos ~1.200, que vinham da imprensa e mediam pessoas levadas à triagem nas primeiras levas da manhã — a mesma reportagem registra o número subindo para ~2.000 à tarde. **Achado no processo:** a CPMI se contradiz sobre o escopo — a p. 76 distribui os 2.151 entre "o próprio domingo ou o dia seguinte" e a p. 688 os atribui só ao "ato de desocupação". Adotada a p. 76 |
+
+A de PT-34 segue sendo a mais instrutiva: era o tipo de número que se cita sem pensar, e sua proveniência real, na CPMI, é a fala de uma testemunha de defesa. A de PT-52 é a lição inversa: nem toda cifra sem fonte primária deve ser descartada ou trocada — às vezes duas cifras coexistem porque medem coisas diferentes, e forçar uma substituição seria erro tão grave quanto manter uma cifra sem lastro.
+
+---
+
+## Fase 3 — Resultados e Resposta Institucional ($T_{+1}$)
+
+### 3.1 Contenção imediata (08–09/01/2023)
+
+**Fato.** Ainda na noite de 08/01, o ministro Alexandre de Moraes determina "a desocupação total dos QGs e unidades militares **no País** em 24 horas", a prisão em flagrante dos participantes e **a apreensão e bloqueio dos ônibus** usados no transporte (p. 687). Na manhã de **09/01**, o acampamento do SMU é desmontado; cerca de 1.200 pessoas são levadas em 40 ônibus à Superintendência da PF, somando-se aos 204 detidos no domingo — *números que permanecem apoiados na Agência Brasil, não localizados no relatório.*
+**Mecanismo causal.** *Destruição da infraestrutura de mobilização*. É o mecanismo decisivo do desfecho: eliminada a base logística, o ciclo de rua se encerra materialmente — não por convencimento, mas por remoção da capacidade de agir. A ordem de Moraes ataca simultaneamente **o território e o meio de transporte**.
+**O ponto que a fonte primária resolve.** O Exército alegou que faltava ordem judicial para desmontar o acampamento. A CPMI rejeita a alegação frontalmente: o acampamento "só seria desfeito no dia 9 de janeiro, e tão somente em cumprimento a uma decisão judicial que, **como assinalado, nem sequer era necessária para a desocupação da área pelo Exército**" (p. 576). E reproduz a conclusão do interventor federal: "A permanência do acampamento na Praça dos Cristais no Setor Militar Urbano **permitiu apoio logístico e local de concentração** aos manifestantes que se deslocaram a Brasília para que as ações do dia 08 fossem desencadeadas". Ou seja: a tese de que o acampamento era infraestrutura de mobilização não é atribuição do analista — é **certificação oficial**.
+**Fonte.** Relatório Final da CPMI, p. 576 e 687. *Status: confirmado em fonte primária, salvo os números de detidos.*
+
+### 3.2 Resposta judicial (2023–2026)
+
+**Fato.** Instauram-se inquéritos no STF e a Operação Lesa Pátria (PF); ao todo, **mais de 1.600 ações penais** são abertas, escalonadas por núcleos: executores, financiadores, incitadores e núcleo político.
+**Mecanismo causal.** *Repressão jurídica escalonada*. A estratégia não trata o 8/1 como tumulto de massa, mas decompõe a cadeia causal em camadas de responsabilidade — o que, do ponto de vista analítico, é a própria adoção institucional de uma lógica de process tracing.
+
+**Fato.** Em **11/09/2025**, a Primeira Turma do STF condena o "núcleo crucial" (8 réus). **Jair Bolsonaro recebe 27 anos e 3 meses** em regime inicial fechado, por tentativa de golpe de Estado, abolição violenta do Estado Democrático de Direito, organização criminosa armada, dano qualificado e deterioração de patrimônio tombado. As penas do grupo variam de 16 a 27 anos. O acórdão da AP 2668 é publicado em **22/10/2025**.
+**Mecanismo causal.** *Fechamento causal "de cima"*. A condenação do núcleo político costura juridicamente $T_{-1}$ conjuntural (2021), $T_{-1}$ operacional (acampamentos) e $T_0$ (8/1) numa única cadeia de imputação. Para a pesquisa, o acórdão é a peça documental mais valiosa disponível: é uma reconstrução causal oficial, com evidência anexada.
+**Fonte.** STF — [link](https://noticias.stf.jus.br/postsnoticias/stf-fixa-penas-de-16-a-27-anos-para-condenados-por-tentativa-de-golpe-de-estado/). *Status: confirmado.*
+
+**Fato.** Segundo cobertura jornalística, Bolsonaro é preso preventivamente em **22/11/2025** e passa a cumprir pena em 25/11. Em **15/01/2026**, Moraes determina sua transferência para unidade da PM-DF no Complexo Penitenciário da Papuda. Em **março de 2026**, no âmbito da Execução Penal 169 e com parecer favorável da PGR, o regime fechado é temporariamente substituído por **prisão domiciliar humanitária** — 90 dias a contar da alta médica, por necessidade de monitoramento clínico contínuo (broncopneumonia) —, prorrogada por Moraes em **03/07/2026**.
+**Mecanismo causal.** *Modulação humanitária da sanção*. Analiticamente relevante: mede a elasticidade da resposta institucional sob pressão política e clínica, e é a variável a observar para avaliar se o custo penal imposto em $T_{+1}$ se sustenta no tempo.
+*Status: transferência e domiciliar confirmadas por comunicados do STF ([transferência](https://noticias.stf.jus.br/postsnoticias/stf-determina-transferencia-do-ex-presidente-bolsonaro-para-unidade-da-pm-df-no-complexo-penitenciario-da-papuda/); [domiciliar](https://noticias.stf.jus.br/postsnoticias/stf-concede-prisao-domiciliar-temporaria-ao-ex-presidente-jair-bolsonaro/)). As datas de prisão preventiva e início do cumprimento (nov/2025) vêm de fonte secundária e **precisam ser verificadas**. O regime está sujeito a reavaliação periódica — confira o status antes de citar.*
+
+**Fato.** Em **29/04/2026**, o relatório **"Democracia Inabalada"** registra o encerramento dos julgamentos do 8/1: **1.402 condenados**, 190 presos, 431 prisões, 419 penas alternativas, 552 acordos e 131 ações extintas por cumprimento de pena.
+**Mecanismo causal.** *Encerramento formal do ciclo repressivo-judicial*. O Estado converte a contestação em custo penal mensurável e o publica — a divulgação do balanço é ela própria um ato de dissuasão dirigido a ciclos futuros.
+**Fonte.** Correio Braziliense/STF — [link](https://www.correiobraziliense.com.br/politica/2026/04/7409048-stf-conclui-julgamentos-do-8-de-janeiro-com-1-402-condenacoes.html). *Status: confirmado.*
+
+### 3.3 Resposta legislativa
+
+**Fato.** A CPMI do 8 de Janeiro aprova, em **17–18/10/2023**, relatório final com **61 pedidos de indiciamento** (20 votos a 11, 1 abstenção), incluindo Jair Bolsonaro, Braga Netto, Augusto Heleno, Mauro Cid, Anderson Torres e Carla Zambelli, por associação criminosa, violência política, abolição violenta do Estado Democrático de Direito e golpe de Estado.
+**Mecanismo causal.** *Certificação parlamentar da cadeia causal*. O relatório fixa oficialmente a leitura de que o 8/1 foi desfecho de trama articulada — leitura que a AP 2668 confirmaria judicialmente dois anos depois.
+**Fonte.** Senado Notícias — [link](https://www12.senado.leg.br/noticias/materias/2023/10/17/relatora-da-cpmi-pede-indiciamento-de-bolsonaro-e-de-mais-60-pessoas). *Status: confirmado.*
+
+### 3.4 Efeitos de processo
+
+A desmobilização das redes de rua da extrema-direita e o deslocamento da contestação para arenas eleitorais e discursivas (com os enquadramentos de "perseguição política" e a pauta da "anistia") constituem o desfecho de médio prazo do ciclo. **Este item é inferência analítica, não fato verificado** — demanda pesquisa empírica dedicada (PEA longitudinal ou análise de redes) antes de figurar como achado.
+
+---
+
+## Síntese da cadeia causal
+
+```
+Ciclo contestatório 2013-2016  →  apropriação do repertório de rua pela direita
+        ↓ (certificação de eficácia)
+17/02/2016: HC 126.292  →  STF admite execução provisória da pena
+        ↓ (PRECONDIÇÃO JURISPRUDENCIAL: sem ela, condenação não vira prisão)
+2017-2018: ARCO JUDICIAL  →  Moro condena (jul/17) → TRF-4 confirma (jan/18)
+        ↓ (gatilho da Ficha Limpa)                     STF nega HC 6x5 → PRISÃO (07/04/18)
+        ↓                                              TSE barra a candidatura (31/08/18)
+        ↓ (REMOÇÃO DO COMPETIDOR: alteração exógena da estrutura de oportunidade)
+Eleição de 2018 sem o líder das pesquisas  →  vitória de Bolsonaro
+        ↓
+Bolsonarismo no governo (2019-2022)  →  erosão do consenso institucional
+        ↓ (pandemia: radicalização + ecossistema digital paralelo)
+2019-2021: REVERSÃO JUDICIAL  →  ADCs 43/44/54: fim da prisão em 2ª instância (07/11/19)
+        ↓                          soltura após 580 dias (08/11/19)
+        ↓                          Fachin anula por incompetência (08/03/21)
+        ↓                          suspeição de Moro (23/03/21)
+        ↓ (RESERVATÓRIO DE DESLEGITIMAÇÃO RECÍPROCA DO JUDICIÁRIO)
+15/04/2021: STF confirma anulação 8x3  →  ELEGIBILIDADE RESTAURADA
+        ↓ ("poucos dias depois", segundo a denúncia da PGR)
+Frame de fraude pré-construído (2021, segundo a PGR)
+        ↓
+out/2022: OPERAÇÃO DA PRF  →  boletim filtra municípios pró-Lula (>75%)
+        ↓                      19/10 "policiamento direcionado" (celulares proibidos)
+        ↓                      26/10 OS 163 inclui transporte de passageiros
+        ↓                      29/10 TSE PROÍBE, sob pena criminal
+        ↓                      30/10 blitze mesmo assim: 46% no Nordeste
+        ↓ (SUPRESSÃO SELETIVA DE PARTICIPAÇÃO — a contestação começa ANTES do resultado)
+        ↓ (GATILHO: derrota em 30/10/2022)
+Bloqueios de rodovias  →  ACAMPAMENTOS EM QUARTÉIS  ← certificação por elite
+        ↓ (conversão de repertório: infraestrutura de mobilização)
+12/12 e 24/12: escalada e radicalização de flanco SEM SANÇÃO
+        ↓ (convocação codificada "Festa da Selma" + caravanas: 300 → 5.500 pessoas)
+Alertas da Abin (08h53, 09h e 10h)  →  FALHA DE CONVERSÃO EM AÇÃO
+        ↓
+Marcha 13h  →  barreiras permeáveis  →  20 PMs às 14h45
+        ↓ (SUBDIMENSIONAMENTO + DEFECÇÃO + ABERTURA DE CORREDOR)
+15h00 Congresso → 15h20 Planalto → 15h37 STF  (37 minutos, contágio)
+        ↓ (latência de 2h na resposta)
+Retomada 16h25-17h30  →  INTERVENÇÃO FEDERAL 17h50
+        ↓ (federalização = unificação do comando)
+09/01: desmonte do acampamento; 2.151 prisões em flagrante no 8 e 9 de janeiro
+        ↓ (DESTRUIÇÃO DA INFRAESTRUTURA DE MOBILIZAÇÃO)
+Judicialização em massa (1.600+ ações)  →  CPMI (61 indiciamentos, 2023)
+        ↓
+AP 2668: condenação do núcleo político (2025)  →  balanço final: 1.402 condenados (2026)
+```
+
+**Três mecanismos fazem o trabalho causal pesado:**
+
+1. **Conversão de repertório com aval de elite** ($T_{-1}$): o acampamento tolerado é a infraestrutura sem a qual o evento não ocorre.
+2. **Falha de contenção em cadeia** ($T_{-1}$ → $T_0$): inteligência produzida e não convertida em ação, efetivo subdimensionado, defecção do agente e abertura de corredor. Quatro elos, todos documentados na CPMI.
+3. **Destruição da infraestrutura + repressão escalonada** ($T_{+1}$): o desfecho não decorre de convencimento nem de exaustão, mas da remoção material da capacidade de agir seguida da elevação drástica do custo penal.
+
+**Um quarto mecanismo, de natureza distinta: captura de aparato estatal (PT-08A–PT-08C).** A operação da PRF no segundo turno não se encaixa em nenhuma das três categorias acima, e é por isso que sua ausência empobrecia o modelo. Os três mecanismos anteriores descrevem **mobilização de rua e falha de contenção** — o Estado ora tolera, ora se omite, ora reprime. A PRF é outra coisa: o Estado **age**, com meios próprios, para suprimir participação eleitoral. Duas implicações.
+
+A primeira é de **datação**: a tentativa de alterar o resultado precede o resultado. O gatilho de PT-09 deixa de ser o início da sequência contestatória e passa a ser o momento em que ela **fracassa na via institucional** e migra para a rua. A segunda é de **padrão**: o descumprimento de ordem expressa do TSE em 30/10 é o primeiro caso documentado de agentes de segurança operando contra a função que lhes cabe — exatamente o que se repetiria, em outra escala, em $T_0$. Se a PF estiver certa ao vincular as blitze ao plano de PT-07, então não são dois episódios parecidos, mas duas execuções do mesmo desenho.
+
+**Onde entra o arco judicial (PT-03A–PT-06C).** Ele não pertence a esse grupo, e é importante não confundir os níveis. Os três mecanismos acima são **proximais**: sem eles, o 8 de janeiro não acontece. O arco judicial é **distal e condicionante**: opera sobre a estrutura de oportunidade, não sobre a execução. Sua contribuição específica é dupla — (i) explica a configuração do campo eleitoral de 2018 que levou Bolsonaro à Presidência, e (ii) fornece o antecedente datado que a própria denúncia da PGR usa para situar o início do plano de ruptura. Tratá-lo como causa proximal seria erro de nível; omiti-lo, como fazia a versão anterior, deixava PT-07 sem explicação. A formulação defensável é: *o arco judicial não produz o 8 de janeiro, mas produz as condições sob as quais o plano de 2021 foi formulado quando foi.*
+
+---
+
+# ETAPA 2 — Tabulação Estruturada (Codebook)
+
+> Tabela resumida para leitura. O conteúdo integral de cada célula, com URL e status de verificação por registro, está em `process_tracing_8jan_eventos.csv` e `process_tracing_8jan_eventos.json`.
+
+| ID | Data/Hora | Fase | Ator/Grupo | Repertório de Ação | Target (Alvo) | Framing (Narrativa) | Resposta Estatal | Mecanismo Causal | Fonte/Trecho |
+|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|
+| PT-01 | jun/2013 | $T_{-1}$ Conjuntural | Redes difusas urbanas; MPL | Marchas de massa | Sistema político | Antipolítica | Repressão inicial; recuo tarifário | Abertura de estrutura de oportunidade; difusão de repertório | Alonso (2017) — *contextual* |
+| PT-02 | 2015–2016 | $T_{-1}$ Conjuntural | MBL, Vem Pra Rua, Revoltados Online | Marchas verde-amarelas | Governo Dilma; PT | Antipetismo, anticorrupção | Tolerância policial | Apropriação de repertório; identidade política negativa | Alonso; Meneguello — *contextual* |
+| **PT-02A** | 17/02/2016 | $T_{-1}$ Conjuntural | Plenário do STF — HC 126.292, rel. min. Teori Zavascki | Mudança de jurisprudência: admite execução provisória da pena após condenação em 2ª instância | Art. 283 do CPP; presunção de inocência | "Efetividade penal" x "presunção de inocência" | Precedente aplicado pelos tribunais desde 2016 | **Precondição jurisprudencial do arco judicial** | Acórdão das ADC 43/44/54, p. 3 e 9 |
+| PT-03 | 31/08/2016 | $T_{-1}$ Conjuntural | Congresso; coalizão pró-impeachment | Impeachment | Presidência | "Legalidade constitucional" | Consumação | Certificação de eficácia da rua como via de deposição | Nobre (2020) — *contextual* |
+| **PT-03A** | 12/07/2017 | $T_{-1}$ Conjuntural | Juiz Sérgio Moro — 13ª Vara Federal de Curitiba; MPF | Sentença: 9a6m por corrupção passiva e lavagem (triplex) | Lula; PT | "Combate à corrupção" | Condenação em 1º grau | **Certificação judicial do frame anticorrupção** | Ag. Brasil (12/07/2017) |
+| **PT-03B** | 24/01/2018 | $T_{-1}$ Conjuntural | 8ª Turma do TRF-4 | Confirmação unânime (3x0); pena majorada para 12a1m + 280 dias-multa | Lula | "Confirmação da Justiça" x "lawfare" | Acórdão colegiado | **Acionamento do gatilho de inelegibilidade (Ficha Limpa)** | TRF-4 — *fonte oficial* |
+| **PT-03C** | 04/04/2018 | $T_{-1}$ Conjuntural | Plenário do STF | Denegação do HC 152.752 (6x5) | Lula; jurisprudência do HC 126.292 | "Presunção de inocência" x "efetividade penal" | Prisão viabilizada | Fechamento da via recursal | STF — HC 152.752 |
+| **PT-03D** | 07/04/2018 | $T_{-1}$ Conjuntural | Justiça Federal de Curitiba; PF | Cumprimento do mandado; entrega em Curitiba | Lula | "Ninguém acima da lei" x "preso político" | Encarceramento | **Remoção do competidor; alteração exógena da estrutura de oportunidade** | Ag. Brasil (07/04/2018) |
+| **PT-03E** | 31/08–01/09/2018 | $T_{-1}$ Conjuntural | Plenário do TSE; rel. min. Barroso | Indeferimento do registro de candidatura (Ficha Limpa) | Candidatura de Lula; coligação PT/PCdoB/Pros | "Aplicação da Ficha Limpa" x "cassação da soberania popular" | Inelegibilidade; substituição por Haddad | **Exclusão institucional do favorito** | TSE — *fonte oficial* |
+| PT-04 | 28/10/2018 | $T_{-1}$ Conjuntural | Coalizão bolsonarista; redes digitais | Campanha digital massiva | Sistema político | "Nova política" | Eleição validada pelo TSE | Incorporação do movimento ao Estado — **em pleito sem o líder das pesquisas** | Cesarino — *contextual* |
+| PT-05 | 2019–2022 | $T_{-1}$ Conjuntural | Presidência; base bolsonarista | Confronto institucional | STF; Congresso; TSE | "STF ditador" | Inquéritos do STF | Erosão do consenso institucional | Abranches; Avritzer — *contextual* |
+| **PT-05A** | 07–08/11/2019 | $T_{-1}$ Conjuntural | Plenário do STF (ADCs 43, 44 e 54); JF do Paraná | Constitucionalidade do art. 283 do CPP (6x5); soltura de Lula após 580 dias | Jurisprudência da execução provisória | "Presunção de inocência" x "impunidade" | Reversão jurisprudencial; alvarás em série | **Reversão jurisprudencial; reservatório de deslegitimação recíproca do Judiciário** | Ag. Brasil (08/11/2019) |
+| PT-06 | 2020–2021 | $T_{-1}$ Conjuntural | Governo; bases digitais | Motociatas; negacionismo | Governadores; STF; imprensa | "Liberdade", guerra cultural | CPI da Pandemia | Radicalização + ecossistema informacional paralelo | Cesarino (2022) — *contextual* |
+| **PT-06A** | 08/03/2021 | $T_{-1}$ Conjuntural | Min. Edson Fachin (STF) | Anulação dos atos da 13ª Vara de Curitiba por incompetência (triplex, Atibaia, Instituto Lula) | Condenações de Lula | "Vício de competência" x "anulação por tecnicalidade" | Anulação processual | Anulação por vício de competência — **processual, não absolutória** | STF (08/03/2021) |
+| **PT-06B** | 23/03/2021 (Plenário 23/06/2021) | $T_{-1}$ Conjuntural | 2ª Turma do STF (HC 164.493); Plenário | Reconhecimento da suspeição de Sergio Moro; anulação de todos os seus atos (7x4 no Plenário) | Atos do ex-juiz Moro | "Imparcialidade do julgador" | Anulação dos atos | **Descertificação do agente judicial** | STF — HC 164.493 |
+| **PT-06C** | 15/04/2021 | $T_{-1}$ Conjuntural | Plenário do STF | Confirmação da anulação (8x3); **elegibilidade restaurada** | Capacidade eleitoral passiva de Lula | "Restauração de direitos políticos" | Direitos políticos restabelecidos | **Reabertura da estrutura de oportunidade eleitoral — antecedente imediato de PT-07** | STF (15/04/2021) |
+| PT-07 | 2021 | $T_{-1}$ Conjuntural | Núcleo político do governo | Formulação de plano de ruptura (PGR) | Processo eleitoral; STF | "Fraude nas urnas" | Investigação posterior | Alinhamento de quadros prévio | Ag. Brasil: plano "esboçado ainda em 2021" |
+| PT-08 | 06/01/2021 | $T_{-1}$ Conjuntural | Apoiadores de Trump | Invasão do Capitólio | Congresso dos EUA | "Stop the Steal" | Resposta judicial nos EUA | Difusão / emulação — mas o **"Plano B" invocado foi o Sri Lanka**, não o Capitólio | Literatura comparada + CPMI, p. 614 |
+| **PT-08A** | 05–26/10/2022 | $T_{-1}$ Operacional | Anderson Torres (MJ); Marília Alencar (Inteligência/MJ); Silvinei Vasques (PRF) | Boletim com municípios de votação >75% "impresso apenas o de Lula"; reunião de 19/10 com celulares proibidos e "policiamento direcionado"; OS 163/2022 inclui fiscalização de transporte de passageiros | Eleitorado do Nordeste | "Combate à compra de votos" — recusado pela cúpula da PF/BA como infundado | Recusa da PF na Bahia; investigação posterior | **Captura de aparato estatal para fim eleitoral** | CPMI, p. 465-468 |
+| **PT-08B** | 29/10/2022 | $T_{-1}$ Operacional | Min. Alexandre de Moraes (presidência do TSE) | Proibição de qualquer operação da PRF sobre transporte de eleitores, sob pena de responsabilização criminal | Direção-geral da PRF | Garantia do exercício do voto | Ordem expressa na véspera do pleito | Contenção institucional preventiva — elimina a hipótese de desconhecimento | CPMI, p. 468-469 |
+| **PT-08C** | 30/10/2022 | $T_{-1}$ Operacional | PRF, sob direção de Silvinei Vasques | Centenas de blitze apesar da proibição: 324 ônibus no NE, 152 CO, 79 SE, 76 N, 65 S — 46% no Nordeste | Eleitores em deslocamento, sobretudo no NE | "Fiscalização de rotina"; agente registra que seguiriam "correndo atrás dos eleitores do Lula" | Prisão decretada 09/08/2023; indiciamento 16/08/2024 (art. 359-P); condenação a 24a6m, trânsito em julgado 23/04/2026 | **Supressão seletiva de participação eleitoral — antecipa o gatilho** | CPMI, p. 469-470 |
+| PT-09 | 30/10/2022 | $T_{-1}$ Operacional | Eleitorado | Pleito: 50,90% (60,3 mi) x 49,10% (58,2 mi) | — | — | Proclamação pelo TSE; **silêncio do derrotado por quase 48h** | **Gatilho** — a não certificação da derrota é o primeiro ato, e é omissivo | CPMI, p. 472 |
+| PT-10 | 30/10–06/11/2022 | $T_{-1}$ Operacional | Caminhoneiros e apoiadores | Bloqueio de rodovias: **1.300 pontos** (contra 270 na greve de 2018) | Circulação nacional | "Fraude eleitoral" | STF determina desobstrução; **PRF só oficia as Superintendências na noite de 01/11** | Teste de contenção estatal — **mesmo comando de PT-08C** | CPMI, p. 999, 1021 e 1023 |
+| **PT-10A** | nov/2022 (comboios desde 04/11) | $T_{-1}$ Operacional | **MBVA** — empresários do agronegócio; presidentes de Aprosoja Brasil/GO/MT e sindicatos rurais | Envio de comboios e organização de bloqueios: **272 caminhões** identificados pela Abin, quase todos de MT, GO, BA e PR | Circulação nacional; concentração próxima à Esplanada | "Faça o que for preciso! Eu autorizo, Presidente!" (2021) | Contas de Argino Bedin bloqueadas pelo STF (Pet 10.685); recomendação de indiciamento dos líderes | **Mobilização de recursos por setor econômico organizado — estrutura preexistente, não multidão** | CPMI, p. 884-887 |
+| PT-11 | 01/11/2022 | $T_{-1}$ Operacional | Jair Bolsonaro (vídeo gravado sob pressão de auxiliares) | Pede desobstrução das estradas **e encoraja as manifestações em praças** | Base de apoiadores | "Outras manifestações (…) em praças fazem parte do jogo democrático. **Fiquem à vontade**" | — | **Ambiguidade estruturada — licencia os acampamentos de PT-12** | CPMI, p. 515 |
+| PT-12 | nov/2022+ | $T_{-1}$ Operacional | Grupos bolsonaristas | **Acampamentos em quartéis (>100)** | Forças Armadas; regime constitucional | "Intervenção militar" | Indiferença e conivência | **Conversão de repertório; infraestrutura de mobilização** | Ag. Brasil |
+| **PT-12A** | nov/2022 – jan/2023 | $T_{-1}$ Operacional | Rede difusa de doadores; nós centralizadores (USA Brasil Informática e articuladores individuais) | Sustentação material dos acampamentos: Pix, vaquinhas (uma de +R$ 60 mil), doações de empresas, mercadorias e dinheiro vivo; COAF mostra conta usada como **ponto centralizador** | Manutenção da infraestrutura dos acampamentos | "Máfia do pix" (cel. Naime à CPI da CLDF) | Quebras de sigilo, RIF do COAF, bloqueio de contas, indiciamentos (cap. 6.3.29) | **Rede distribuída com nós centralizadores — arquitetura de duas camadas** | CPMI, p. 577-578 e 880-884 |
+| PT-13 | nov/2022 | $T_{-1}$ Operacional | Presidência; comandantes | Autorização de permanência (PGR) | — | "Manifestação legítima" | Omissão deliberada | **Certificação por elite** | Ag. Brasil / denúncia PGR |
+| PT-14 | **22/11/2022** | $T_{-1}$ Operacional | Coligação Pelo Bem do Brasil (PL, Republicanos, Progressistas) | Ação no TSE pedindo anulação de ≈**280 mil urnas — só do 2º turno** | TSE; processo eleitoral | "Desconformidades irreparáveis" | Ação negada | Fechamento da via institucional — **a seletividade revela a intenção** | CPMI, p. 481 e 16 |
+| PT-15 | 12/12/2022 | $T_{-1}$ Operacional | Manifestantes em Brasília | Tentativa de invadir a PF; incêndios | Polícia Federal; patrimônio | Reação à diplomação | Contenção pontual; **sem desmobilizar acampamentos** | Escalada; teste de repertório violento sem sanção | Ag. Brasil |
+| PT-16 | 24/12/2022 | $T_{-1}$ Operacional | G. W. de Oliveira Sousa e outros (acampamento do QG) | Tentativa de atentado a bomba | Aeroporto de Brasília | Precipitar intervenção militar | Desativação; prisões; condenações | Radicalização de flanco | Ag. Brasil |
+| PT-17 | 30/12/2022 | $T_{-1}$ Operacional | Jair Bolsonaro | Última live: **admite ter passado "dois meses (…) buscando alternativas"** ao resultado; partida para os EUA no mesmo dia | Base de apoiadores | "Busquei dentro das quatro linhas" | — | Desincorporação da liderança + **admissão contra o próprio interesse** | CPMI, p. 507 e 612 |
+| PT-18 | 01/01/2023 (e o dispositivo do dia 8) | $T_{-1}$ Operacional | Comando da PMDF; cel. Klepter Rosa, subcomandante-geral | Posse com POI; para o dia 8, efetivo em **sobreaviso** (2h30–3h) e não em **prontidão** (≈40 min), e apenas PAI | Dispositivo de segurança | — | Dispositivo do dia 8 inferior ao da posse | **Rebaixamento deliberado do dispositivo — explica a latência de PT-41** | CPMI, p. 646 e 711 |
+| PT-19 | dez/22–jan/23 | $T_{-1}$ Operacional | Perfis e canais bolsonaristas | **Convocação codificada "Festa da Selma"**; monitoramento Palver em +17 mil grupos de WhatsApp | Planalto, Congresso, STF | Convite em linguagem de festa infantil: "tiro ao alvo, polícia e ladrão…" | Sem bloqueio preventivo | Coordenação distribuída por criptolinguagem — **encobre e ritualiza a violência** | CPMI, p. 614-625 |
+| **PT-19A** | nov/22 – jan/23 | $T_{-1}$ Operacional | Anunciantes não identificados; plataformas da Meta como veículo | **Veiculação paga**: 185 anúncios com conteúdo golpista na biblioteca do Meta Ads | Usuários alcançáveis por segmentação | "Fraude nas urnas", "intervenção militar" — em formato publicitário | Nenhuma; moderação da plataforma insuficiente | **Circulação paga — dimensão comercial da mobilização** | NetLab UFRJ (07/02/2023) |
+| **PT-19B** | 04–05/01/2023 | $T_{-1}$ Operacional | Cel. Jorge Henrique da Silva Pinto (PMDF); Torres, Fernando de Sousa Oliveira e Marília Alencar entre os 7 participantes | Criação do grupo **"Difusão"** para acompanhar as manifestações; em 05/01 avisa sobre atos de 06 a 09/01 e a convocação **"Tomada de Poder"** | Cúpula da SSP-DF | "Tomada de Poder"; caráter violento das manifestações | Nenhuma medida proporcional; 1ª mensagem da subsecretária de Inteligência só às 16h50 de 8/1 | **Canal dedicado de alerta, criado e silenciado** | AP 2668, p. 495-496 |
+| PT-20 | 05/01/2023 | $T_{-1}$ Operacional | Acampados no SMU | Ocupação permanente | — | "Intervenção militar" | Nenhuma desmobilização | Linha de base: ~300 pessoas | CPMI |
+| **PT-20A** | 06/01/2023 17h30 | $T_{-1}$ Operacional | Cel. André Garcia (GSI), em nome do gen. Carlos Feitosa Rodrigues | **Mensagem ao CMP dispensando qualquer reforço de segurança** para o fim de semana | Dispositivo de proteção do Planalto | Avaliação de risco rebaixada | Proteção reduzida ao contingente mínimo — cerca de **10 soldados** | **Desmobilização preventiva do dispositivo** | CPMI, p. 635 e 842 |
+| **PT-20B** | 06/01/2023 | $T_{-1}$ Operacional | Subsecretaria de Inteligência da SSP-DF; SOPI/SSP-DF | **Relatório de Inteligência nº 006/2023**, entregue no mesmo dia ao secretário; reunião da SOPI com vários órgãos | Cúpula da segurança do DF | "As divulgações apresentam-se de forma alarmante" | Nenhuma elevação do dispositivo — no mesmo dia o GSI dispensava reforço | **Falha de conversão certificada pelo interventor: "não houve falta de informações e alertas"** | Cappelli, conclusão B, p. 54 |
+| PT-21 | 06–07/01/2023 | $T_{-1}$ Operacional | Caravanas; financiadores | Fretamento e deslocamento em massa | — | Convocação nacional | Nenhuma interdição | **Massa crítica: 5.500 pessoas em 07/01 (x20)** | CPMI |
+| PT-22 | 08/01 08h20 | $T_{-1}$ Operacional | Abin | Alerta de inteligência (101 ônibus) | — | — | Sem medida proporcional | Falha de conversão de inteligência em ação | CPMI |
+| PT-23 | 08/01 10h00 | $T_{-1}$ Operacional | Abin; grupo PMDF/GSI | Novo alerta | Prédios públicos da Esplanada | Registro de incitação a ocupações e violência | Sem reforço | Segunda falha de conversão | CPMI |
+| PT-24 | 08/01 13h00 | $T_0$ Mobilização | Milhares do acampamento do SMU | **Marcha (9 km)** | Esplanada / Praça dos Três Poderes | "Marcha patriótica" | Sem interdição na origem | Deslocamento espacial como escalada | CPMI |
+| PT-25 | 08/01 13h23 | $T_0$ Mobilização | F. de Sousa Oliveira (SSP-DF) | Áudio ao governador | — | "Sob controle" | Sem elevar alerta | Neutralização da percepção de ameaça | CPMI |
+| PT-26 | 08/01 14h30 | $T_0$ Mobilização | Marcha | Avanço sobre 1ª barreira (Via N1) | Contenção da PMDF | "O povo no poder" | Barreira não sustentada | Teste sequencial de contenção | CPMI |
+| PT-27 | 08/01 14h43 | $T_0$ Mobilização | Marcha | Chegada aos gradis (Av. das Bandeiras) | Perímetro de segurança | — | Gradis sem efetivo | Ruptura de barreira física | CPMI |
+| PT-28 | 08/01 14h45 | $T_0$ Mobilização | PMDF — 1º BPChoque | Postura defensiva | Congresso Nacional | — | **Apenas 20 PMs** | **Subdimensionamento crítico (hoop test)** | CPMI |
+| PT-29 | 08/01 15h00 | $T_0$ Execução | Manifestantes radicalizados | **Invasão do Congresso** | Congresso (Legislativo) | "Retomada do poder" | Ausência de repressão | Transposição do limiar → contágio | CPMI |
+| PT-30 | 08/01 15h10 | $T_0$ Execução | Grupos dissidentes | Invasão dos fundos do Planalto | Planalto (Executivo) | "Casa do povo" | Sem contenção | Multiplicação de frentes; saturação | CPMI |
+| PT-31 | 08/01 15h15 | $T_0$ Execução | PMDF — 2º Pel. Choque (12 PMs) | Chega e **sinaliza para prosseguir** | Congresso | — | Não repressão; conivência | **Defecção do agente de contenção** | CPMI |
+| PT-32 | 08/01 15h16 | $T_0$ Execução | PMDF (via S1) | **Retirada liberando acesso ao STF** | STF (Judiciário) | — | Retirada policial | **Abertura de corredor** | CPMI |
+| PT-33 | 08/01 15h20 | $T_0$ Execução | Manifestantes | Derrubada de grades; quebra de vidros | Planalto | "Ocupação do Poder Central" | Sem contenção | Escalada de repertório | CPMI |
+| PT-34 | 08/01 15h26 | $T_0$ Execução | Multidão — **poucos milhares**; sem estimativa oficial para este horário e local | Ocupação da Praça dos Três Poderes | Conjunto dos Três Poderes | "Praça do povo" | Sem capacidade de dispersão | Massa crítica no ponto de máxima densidade simbólica — **e a SSP/DF tinha contagem de público desde as 9h** | CPMI, p. 674, 695, 643 |
+| PT-35 | 08/01 15h37 | $T_0$ Execução | Manifestantes | **Invasão do STF** | STF | "STF ditador" | Sem contenção | Fechamento do ciclo de alvos em 37 min | CPMI |
+| PT-36 | 08/01 15h45 | $T_0$ Execução | Invasores no Planalto | Alcance do 3º andar | Gabinete presidencial | "Tomada do poder" | Nenhuma barreira interna | Penetração do núcleo simbólico | CPMI |
+| PT-37 | 08/01 15h53 | $T_0$ Execução | Manifestantes; PMs | PMs abandonam o Congresso; são atacados | Congresso; agentes do Estado | — | Retirada da força | Colapso e inversão da relação de força | CPMI |
+| PT-38 | 08/01 ~15h–16h30 | $T_0$ Execução | Manifestantes nos 3 edifícios | **Vandalismo simbólico** (obras, mobiliário, documentos) | Patrimônio histórico da República | Destruição dos signos de 1988 | Sem proteção do acervo | Violência simbólica dirigida; repertório iconoclasta | Ag. Brasil — *detalhe: laudo PF* |
+| PT-39 | 08/01 16h25 | $T_0$ Resposta tática | Forças de segurança | Início da expulsão | Manifestantes | — | Retomada operacional | Inflexão da contenção (1h25 após a 1ª invasão) | CPMI |
+| PT-40 | 08/01 16h40 | $T_0$ Resposta tática | Batalhão da Guarda Presidencial | Retomada do Planalto | Manifestantes | — | Tropa federal | Substituição do agente de contenção | CPMI |
+| PT-41 | 08/01 17h00 | $T_0$ Resposta tática | Batalhão de Choque da PMDF | Chegada ao Congresso | Manifestantes | — | **Retomada 2h após requisição** | **Latência de resposta (smoking gun)** | CPMI |
+| PT-42 | 08/01 17h08 | $T_0$ Resposta política | Ibaneis Rocha | Exoneração de Anderson Torres | Anderson Torres | Responsabilização individual | Demissão | Deslocamento de responsabilidade | CPMI |
+| PT-43 | 08/01 17h15 | $T_0$ Resposta tática | Cia. do CMP; 1º RCG | Entrada no palácio | Manifestantes | — | Reforço militar federal | Escalonamento de forças | CPMI |
+| PT-44 | 08/01 17h30 | $T_0$ Resposta tática | Segurança; remanescentes | Desocupação majoritária | Congresso (área externa) | — | Controle parcial | Retomada assimétrica | CPMI |
+| PT-45 | 08/01 17h50 | $T_0$/$T_{+1}$ | Presidente Lula | **Decreto de intervenção federal** | Governo do DF | "Defesa do Estado Democrático de Direito" | Intervenção federal | **Federalização da resposta** | CPMI |
+| PT-46 | 08/01 18h20 | $T_0$ Execução | Remanescentes | Incêndio no gramado do Congresso | Congresso | Manutenção do confronto | Contenção em curso | Repertório residual (desorganização) | CPMI |
+| PT-47 | 08/01 19h00 | $T_{+1}$ Política | Ibaneis Rocha | Pedido de desculpas em vídeo | Opinião pública | Contrição | — | Contenção reputacional | CPMI |
+| PT-48 | 08/01 20h00 | $T_{+1}$ Institucional | Ricardo Cappelli (interventor) | Convocação integral; negociação para prisões | Manifestantes; acampamento | "Restabelecimento da ordem" | Mobilização total | Unificação do comando sob autoridade federal | CPMI |
+| PT-49 | 08/01 (noite) | $T_{+1}$ Judicial | Min. Alexandre de Moraes | Desocupação total dos QGs **em todo o país** em 24h; prisões; **apreensão dos ônibus** | Acampamentos; meio de transporte | Enquadramento penal (7 crimes) | Ordem judicial | Gatilho jurídico — ataca **território e transporte** de uma vez | CPMI, p. 687 |
+| PT-50 | 08/01 21h17 | $T_{+1}$ Enquadramento | Jair Bolsonaro (EUA) | Nota condenando e se eximindo | Opinião pública; investigadores | Distanciamento | — | **Descertificação tardia (~6h depois)** | CPMI |
+| **PT-50A** | 08/01 a partir das 17h40 – 10/01 | $T_{+1}$ Enquadramento | Segmento bolsonarista no Facebook (Capitão Contar, cel. Aginaldo, Zambelli, mídia alinhada) | **Contraofensiva narrativa**: atribuição a "infiltrados da esquerda" e, depois, deslocamento para "o governo sabia" | A atribuição pública de responsabilidade | "Infiltrados"; "a direita sempre foi pacífica"; "o governo sabia" | Nenhuma no plano discursivo | **Recaptura do enquadramento em 48h — desmobilização de rua com capacidade discursiva preservada** | Manchetômetro/Doxa-IESP-UERJ, p. 10, 14 e 15 |
+| PT-51 | 08/01 22h00 | $T_{+1}$ Institucional | Lula; Weber, Barroso, Toffoli | Vistoria conjunta | Opinião pública | Unidade dos Poderes | Performance de reconstrução | Ritual de recertificação da ordem | CPMI |
+| PT-52 | 09/01/2023 | $T_{+1}$ Desarticulação | Polícia do Exército; PMDF | Desmonte do acampamento: das ~3.000 no local, 1.500 saem por conta própria; **2.151 prisões em flagrante no 8 e 9 de janeiro** | Acampamento do QG | "Cumprimento de ordem judicial" | Operação conjunta | **Destruição da infraestrutura** — e a CPMI afirma que a ordem judicial "nem sequer era necessária" | CPMI, p. 576 |
+| PT-53 | jan/2023+ | $T_{+1}$ Judicial | STF; PF; PGR | Inquéritos; Op. Lesa Pátria; >1.600 ações penais | Executores, financiadores, organizadores | "Abolição violenta do Estado Democrático de Direito" | Judicialização em massa | Repressão escalonada por núcleos | STF |
+| PT-54 | 2023 | $T_{+1}$ Legislativa | CPMI do 8 de Janeiro | Instalação e funcionamento | Autoridades civis e militares | Apuração de responsabilidades | Investigação parlamentar | Abertura de arena de responsabilização política | Senado |
+| PT-55 | 17–18/10/2023 | $T_{+1}$ Legislativa | CPMI; rel. Eliziane Gama | **Relatório final: 61 indiciamentos (20x11)** | Bolsonaro, Braga Netto, Heleno, Cid, Torres, Zambelli | Golpe de Estado; associação criminosa | Encaminhamento ao MP | Certificação parlamentar da cadeia causal | Senado |
+| PT-56 | 11/09/2025 | $T_{+1}$ Judicial | 1ª Turma do STF | **Condenação do núcleo crucial; Bolsonaro: 27a3m** | Bolsonaro e aliados | Tentativa de golpe; org. criminosa armada | Condenação penal | **Fechamento causal "de cima"** | STF |
+| PT-57 | 22/10/2025 | $T_{+1}$ Judicial | STF | Publicação do acórdão da AP 2668 | Condenados | — | Marco processual | Consolidação documental da narrativa causal oficial | *verificar inteiro teor* |
+| PT-58 | 22–25/11/2025 | $T_{+1}$ Judicial | STF; PF | Prisão preventiva e início do cumprimento | Jair Bolsonaro | — | Prisão | Responsabilização do topo da cadeia | *a verificar* |
+| PT-59 | 15/01/2026 | $T_{+1}$ Judicial | Min. Moraes | Transferência para a Papuda | Jair Bolsonaro | — | Execução penal | Normalização da execução penal do ex-chefe do Executivo | STF |
+| PT-60 | mar/2026 (prorrog. 03/07/2026) | $T_{+1}$ Judicial | Min. Moraes; PGR favorável | Prisão domiciliar humanitária (90 dias da alta médica), Exec. Penal 169 | Jair Bolsonaro | Monitoramento clínico contínuo (broncopneumonia) | Alteração do regime, com reavaliações periódicas | Modulação humanitária da sanção | STF |
+| PT-61 | 29/04/2026 | $T_{+1}$ Balanço | STF — "Democracia Inabalada" | **Balanço final: 1.402 condenados; 190 presos** | — | "Democracia Inabalada" | Conclusão dos julgamentos | Encerramento do ciclo repressivo-judicial; dissuasão | Correio Braziliense/STF |
+| PT-62 | 2023–2026 | $T_{+1}$ Efeito | Extrema-direita; redes digitais | Desmobilização de rua; migração para arenas eleitorais | — | "Perseguição política", "anistia" | Repressão mantida; debate sobre anistia | Desarticulação com deslocamento (não extinção) | *inferência do analista* |
+
+---
+
+# ETAPA 3 — Exportação
+
+*Revisto em 16/08/2026.* Os dados estão em **três formatos**, com **16 campos** por registro — os dez do codebook mais seis de rigor: `fonte_trecho`, `fonte_url`, `fonte_local`, `fonte_pagina`, `status_verificacao`, `status_classe` e `nota_auditoria`.
+
+> **O JSON é a única fonte da verdade.** CSV e XLSX são **gerados** a partir dele por `scripts/gerar_codebook.py`. Não os edite à mão: a próxima execução sobrescreve. Até 16/08/2026 os formatos tinham esquemas diferentes — o CSV carregava um campo `Fonte_Local` que o JSON não tinha, embora o próprio `metadados.colunas_codebook` já o declarasse. O gerador único existe para que isso não se repita.
+
+- **`process_tracing_8jan_eventos.json`** — objeto com `metadados` e array `eventos`. Os metadados trazem o vocabulário de `status_classe`, o registro de documentos (código curto → caminho) e o histórico de revisões.
+  `pandas`: `pd.json_normalize(json.load(open("process_tracing_8jan_eventos.json", encoding="utf-8"))["eventos"])`
+- **`process_tracing_8jan_eventos.csv`** — separador vírgula, **UTF-8 com BOM**, todos os campos entre aspas. O BOM faz o Excel em português abrir com acentuação correta por duplo clique, sem assistente de importação.
+  `pandas`: `pd.read_csv("process_tracing_8jan_eventos.csv", encoding="utf-8-sig")`
+  `R`: `read.csv("process_tracing_8jan_eventos.csv", fileEncoding = "UTF-8-BOM")`
+- **`process_tracing_8jan_codebook.xlsx`** — quatro abas: `Codebook` (81 × 16, com filtros e painel congelado), `Dicionario` (definição, tipo, vocabulário e origem de cada campo), `Inventario_Fontes` (um arquivo por linha, com páginas, procedência e registros que o citam) e `Pendencias_Coleta`.
+
+**Como citar a partir do codebook.** O campo `fonte_pagina` prefixa a página com o código curto do documento — `CPMI: 646, 711 | Cappelli: 55, 57` — justamente para que a página nunca fique atribuída ao documento errado quando o registro se apoia em mais de uma fonte. O caminho do arquivo está em `fonte_local`, relativo à raiz do projeto.
+
+**Integridade.** `scripts/verificar_integridade.py` roda seis checagens (sincronia dos três formatos, integridade referencial, cobertura do inventário, vocabulário controlado, coerência página × documento e paginação real via PyPDF2) e falha se qualquer uma não passar. O vínculo registro → documento → página está auditado em [`AUDITORIA-FONTES.md`](AUDITORIA-FONTES.md).
+
+---
+
+## Próximos passos recomendados
+
+*Revisto em 14/08/2026. A agenda analítica detalhada — com o histórico das decisões e o que cada item exige — está em [`PENDENCIAS-ANALITICAS.md`](PENDENCIAS-ANALITICAS.md). Aqui fica só o essencial, na ordem em que convém atacar.*
+
+**Concluído desde a versão anterior desta lista**
+
+1. **Recodificar sobre fontes primárias.** ✅ **Feito, e para todo o corpus** — não apenas para os sete registros que fazem trabalho causal. São **49 registros com citação por página** da CPMI, com transcrição literal em `Caderno-de-evidencias/`. Ver seção 2.6. Registre-se que a previsão feita aqui — de que os registros restantes descreveriam "fatos incontroversos" — **estava errada**: recodificados, produziram três dos achados mais fortes do projeto.
+2. **Acórdão da AP 2668.** ✅ **Aberto**, com resultado negativo e informativo: o STF não arbitra a contradição de PT-32, adota moldura própria (omissão dolosa da cúpula civil da SSP-DF). Ver a seção 2.6 e o item 2 da agenda.
+3. **Relatório do interventor federal (Cappelli).** ✅ **Localizado e incorporado** — quatro registros ancorados nele.
+4. **Bibliografia do arco judicial.** ✅ **Eixo construído** em `Fontes/06_Lava-Jato-judicializacao-lawfare/`: 20 referências, 18 com DOI confirmado no CrossRef. O LEIA-ME da pasta trata explicitamente do desequilíbrio do campo — a literatura revisada por pares posterior a 2019 é majoritariamente crítica à operação, e o registro é declarar isso, não simular simetria inexistente.
+
+**Aberto**
+
+5. **Testar os mecanismos.** Aplicar formalmente os testes de Beach & Pedersen aos mecanismos centrais, explicitando qual evidência serve de *hoop*, qual de *smoking gun*, e quais explicações rivais estão sendo descartadas. **Isto mudou de conteúdo com a recodificação:** o *smoking gun* de PT-41 deslocou-se da demora em si — que tem explicação mecânica banal no regime de sobreaviso — para a decisão administrativa prévia que instituiu esse regime (PT-18). Sustentá-lo na demora, conhecendo o sobreaviso, é erro que um parecerista identifica. Detalhes no item 4 da agenda.
+6. **Antecipar as três críticas previsíveis** — onde estava a ruptura da cadeia de comando (item 3 da agenda), o deslocamento do *smoking gun* (item 4) e a hipótese rival que a própria fonte primária sustenta (item 5). São os pontos que um parecerista atento levantaria, e todos têm resposta documentada; o custo de não escrevê-los é maior que o de escrevê-los.
+7. **Buscar evidência desconfirmatória.** O desenho segue exposto a viés de confirmação. A recodificação já trouxe duas contraprovas espontâneas — a conclusão G do relatório Cappelli e a ressalva "mas sem coordenação concreta" do alerta da Abin de 07/01 —, ambas registradas. Vale continuar procurando deliberadamente e reportar o resultado da busca, inclusive quando negativo.
+8. **Fechar as ressalvas de proveniência** (item 7 da agenda): seis registros, dos quais PT-34 é o que preocupa e PT-58 o mais fácil de resolver.
+9. **Camada $T_{-1}$ conjuntural.** Substituir os registros "contextuais" por codificação sobre a literatura efetivamente lida. As cinco sínteses recebidas em 13/08 dão o mapa, mas **não são citáveis** — os 325 DOIs que elas trazem precisam de verificação no CrossRef e de leitura na fonte. Item 11.3 da agenda.
+10. **Vigiar o risco de leitura partidária.** A inclusão do arco judicial torna o texto mais exposto a ser lido como tomada de posição. A salvaguarda metodológica é manter explícita, na redação, a distinção entre *efeitos sobre a estrutura de oportunidade política* (o que a pesquisa afirma) e *juízo sobre o mérito das decisões judiciais* (o que a pesquisa não afirma).
+
+---
+
+**A decisão que está na frente de todas.** O aparato — codebook, caderno de evidências, corpus documental, cronologia — sustenta o artigo. Os itens 5 a 9 podem ser resolvidos **durante** a escrita, e vários só se resolvem nela. Continuar acumulando apuração antes de começar a redigir tem, a esta altura, retorno decrescente.

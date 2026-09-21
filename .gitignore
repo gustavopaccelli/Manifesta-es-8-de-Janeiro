@@ -1,0 +1,13 @@
+# Cache do Python
+__pycache__/
+*.py[cod]
+
+# Arquivos de bloqueio do Excel/Word (aparecem ao abrir XLSX e DOCX do projeto)
+~$*
+
+# Sistema
+Thumbs.db
+.DS_Store
+
+# Permissões locais do Claude Code, específicas desta máquina
+.claude/settings.local.json

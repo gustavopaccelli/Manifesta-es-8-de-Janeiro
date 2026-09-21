@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cronologia causal do 8 de Janeiro — Process Tracing</title>
+<style>
+  :root{
+    --bg:#faf9f7; --ink:#1c1a17; --muted:#6b655c; --line:#d8d3ca; --card:#ffffff;
+    --c-conj:#6b7f96; --c-oper:#c08a2e; --c-t0:#b03636; --c-t1:#3f7f6f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:15px/1.55 "Iowan Old Style","Palatino Linotype",Georgia,serif;}
+  .wrap{max-width:1400px;margin:0 auto;padding:28px 24px 80px}
+  h1{font-size:26px;margin:0 0 4px;letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:14px;margin:0 0 22px;max-width:78ch}
+  .sub code{font-size:12px;background:#efece7;padding:1px 5px;border-radius:3px}
+
+  .toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:6px}
+  .chip{border:1px solid var(--line);background:#fff;color:var(--ink);
+    font:600 12px/1 ui-sans-serif,system-ui,sans-serif;letter-spacing:.02em;
+    padding:8px 12px;border-radius:999px;cursor:pointer;transition:.15s;display:flex;align-items:center;gap:7px}
+  .chip:hover{border-color:#a8a196}
+  .chip .dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+  .chip.off{opacity:.34}
+  .chip.mode{border-radius:6px}
+  .chip.mode.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .spacer{flex:1}
+
+  .stage{background:var(--card);border:1px solid var(--line);border-radius:10px;
+    padding:6px 0 0;margin:14px 0 0;overflow:hidden}
+  svg{display:block;width:100%;height:auto}
+  .ev{cursor:pointer}
+  .ev circle{transition:r .12s, stroke-width .12s}
+  .ev:hover circle{stroke-width:3.5}
+  .ev.sel circle{stroke:#1c1a17;stroke-width:3.5}
+  .lbl{font:11px/1.2 ui-sans-serif,system-ui,sans-serif;fill:var(--ink);pointer-events:none}
+  .lbl.key{font-weight:700}
+  .lbl.dim{fill:var(--muted)}
+  .axis{stroke:var(--line);stroke-width:1.5}
+  .tick{stroke:var(--line);stroke-width:1}
+  .tickt{font:10px ui-sans-serif,system-ui,sans-serif;fill:var(--muted)}
+  .bandttl{font:700 11.5px ui-sans-serif,system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase}
+  .bandsub{font:10.5px ui-sans-serif,system-ui,sans-serif;fill:var(--muted)}
+  .stem{stroke-width:1;opacity:.5}
+  .span rect{opacity:.10}
+  .spanlbl{font:italic 10.5px ui-sans-serif,system-ui,sans-serif;fill:var(--muted)}
+
+  .detail{margin-top:16px;background:var(--card);border:1px solid var(--line);
+    border-radius:10px;padding:20px 22px;min-height:120px}
+  .detail .placeholder{color:var(--muted);font-style:italic}
+  .dhead{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:2px}
+  .did{font:700 12px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.04em;
+    padding:3px 7px;border-radius:4px;color:#fff}
+  .ddate{font-weight:700;font-size:18px}
+  .dphase{font:600 11px ui-sans-serif,system-ui,sans-serif;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--muted)}
+  .dmech{margin:14px 0 16px;padding:12px 16px;border-left:3px solid var(--ink);background:#f4f1ec}
+  .dmech b{display:block;font:600 10.5px ui-sans-serif,system-ui,sans-serif;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px 22px}
+  .f b{display:block;font:600 10.5px ui-sans-serif,system-ui,sans-serif;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+  .f span{font-size:14px}
+  .src{margin-top:16px;padding-top:12px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+  .src a{color:#2f5d8a}
+  .badge{display:inline-block;font:600 10px ui-sans-serif,system-ui,sans-serif;
+    padding:2px 7px;border-radius:3px;margin-left:6px;vertical-align:1px}
+  .b-ok{background:#e3efe6;color:#2c6140}
+  .b-ver{background:#fbf0d8;color:#8a6410}
+  .b-ctx{background:#e9eaef;color:#4e5470}
+  .b-inf{background:#f6e6e6;color:#8a3535}
+
+  .tip{position:fixed;pointer-events:none;background:#1c1a17;color:#fff;
+    padding:7px 10px;border-radius:6px;font:12px/1.4 ui-sans-serif,system-ui,sans-serif;
+    max-width:280px;opacity:0;transition:opacity .1s;z-index:10}
+  .foot{margin-top:26px;color:var(--muted);font-size:12.5px;max-width:88ch}
+  .foot b{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Cronologia causal do 8 de Janeiro de 2023</h1>
+<p class="sub">62 sub-eventos codificados em <b>escala quebrada</b>: nove anos de gestação conjuntural, dez semanas de articulação, nove horas de execução e três anos de resposta institucional, cada faixa com sua própria escala. Clique num ponto para ver a codificação completa do <i>codebook</i>. Fonte dos dados: <code>process_tracing_8jan_eventos.json</code>.</p>
+
+<div class="toolbar">
+  <button class="chip mode on" data-mode="geral">Visão geral</button>
+  <button class="chip mode" data-mode="dia8">8 de janeiro, hora a hora</button>
+  <span class="spacer"></span>
+  <button class="chip" data-f="conj"><i class="dot" style="background:var(--c-conj)"></i>T−1 Conjuntural</button>
+  <button class="chip" data-f="oper"><i class="dot" style="background:var(--c-oper)"></i>T−1 Operacional</button>
+  <button class="chip" data-f="t0"><i class="dot" style="background:var(--c-t0)"></i>T0</button>
+  <button class="chip" data-f="t1"><i class="dot" style="background:var(--c-t1)"></i>T+1</button>
+</div>
+
+<div class="stage"><svg id="tl" viewBox="0 0 1360 560" preserveAspectRatio="xMidYMid meet"></svg></div>
+
+<div class="detail" id="detail"><p class="placeholder">Selecione um sub-evento na linha do tempo.</p></div>
+
+<p class="foot"><b>Leitura da figura.</b> As quatro faixas não são comparáveis entre si: cada uma tem escala própria, marcada pelas quebras em ziguezague. A compressão é deliberada — mostra que o processo acelera à medida que se aproxima de 8 de janeiro e desacelera na fase de resposta. Os pontos maiores destacam os elos que fazem o trabalho causal pesado. A faixa sombreada em T0 marca o vandalismo simbólico, que atravessa toda a janela de ocupação.<br>
+<b>Ressalva.</b> Os mecanismos causais são atribuições analíticas do pesquisador, não achados das fontes. As etiquetas de status (<span class="badge b-ok">Confirmado</span> <span class="badge b-ver">A verificar</span> <span class="badge b-ctx">Contextual</span> <span class="badge b-inf">Inferência</span>) indicam o grau de ancoragem documental de cada registro.</p>
+
+</div>
+<div class="tip" id="tip"></div>
+
+<script>
+const C = {conj:'#6b7f96', oper:'#c08a2e', t0:'#b03636', t1:'#3f7f6f'};
+const BADGE = {ok:['Confirmado','b-ok'], ver:['A verificar','b-ver'], ctx:['Contextual','b-ctx'], inf:['Inferência','b-inf']};
+
+// pos = posição relativa (0–1) dentro da própria faixa. k = evento-chave.
+const E = [
+{id:"PT-01",b:0,pos:0.00,f:"conj",k:0,d:"jun/2013",c:"Jornadas de Junho",fase:"T−1 Conjuntural",ator:"Redes difusas urbanas; MPL",rep:"Marchas de massa, ocupação de vias",tgt:"Governos municipais/estaduais; sistema político",frm:"“Não é só por 20 centavos” — antipolítica",res:"Repressão inicial; recuo tarifário",mec:"Abertura de estrutura de oportunidade política e difusão de um repertório de rua massivo, que seria apropriado pela direita dois anos depois.",src:"Literatura do projeto: Alonso (2017); Tatagiba (2014)",url:"",st:"ctx"},
+{id:"PT-02",b:0,pos:0.243,f:"conj",k:1,d:"2015–2016",c:"Marchas pró-impeachment",fase:"T−1 Conjuntural",ator:"MBL, Vem Pra Rua, Revoltados Online",rep:"Marchas verde-amarelas, panelaços",tgt:"Governo Dilma Rousseff; PT",frm:"Antipetismo, anticorrupção, “Fora Dilma”",res:"Tolerância policial; enquadramento midiático favorável",mec:"Apropriação de repertório (spin-off): a direita converte a rua em recurso próprio e forma uma identidade política negativa duradoura.",src:"Literatura: Alonso (2017); Meneguello; Rocha de Barros",url:"",st:"ctx"},
+{id:"PT-03",b:0,pos:0.342,f:"conj",k:1,d:"31/08/2016",c:"Impeachment consumado",fase:"T−1 Conjuntural",ator:"Congresso Nacional; coalizão pró-impeachment",rep:"Ação institucional (impeachment)",tgt:"Presidência da República",frm:"“Legalidade constitucional”",res:"Consumação do impeachment",mec:"Certificação de eficácia: a deposição de um governo eleito, precedida de mobilização de rua, estabelece o precedente que o 8/1 tentará replicar — sem o rito constitucional que houve em 2016.",src:"Literatura: Nobre (2020)",url:"",st:"ctx"},
+{id:"PT-04",b:0,pos:0.575,f:"conj",k:0,d:"28/10/2018",c:"Eleição de Bolsonaro",fase:"T−1 Conjuntural",ator:"Coalizão bolsonarista; redes digitais",rep:"Campanha eleitoral digital massiva",tgt:"Sistema político tradicional",frm:"“Nova política”, “anti-sistema”",res:"Eleição validada pelo TSE",mec:"Incorporação do movimento ao Estado: o ativismo de rua torna-se governo sem abandonar a gramática contestatória.",src:"Literatura: Campos Mello (2020); Cesarino (2022)",url:"",st:"ctx"},
+{id:"PT-05",b:0,pos:0.757,f:"conj",k:0,d:"2019–2022",c:"Atrito com STF e Congresso",fase:"T−1 Conjuntural",ator:"Presidência da República; base bolsonarista",rep:"Confronto discursivo e institucional recorrente",tgt:"STF; Congresso; TSE",frm:"“STF ditador”, “ativismo judicial”",res:"Inquéritos do STF (fake news, milícias digitais)",mec:"Erosão do consenso institucional: o atrito deliberado com o presidencialismo de coalizão deslegitima os árbitros do jogo democrático.",src:"Literatura: Abranches; Avritzer",url:"",st:"ctx"},
+{id:"PT-06",b:0,pos:0.784,f:"conj",k:1,d:"2020–2021",c:"Pandemia e radicalização",fase:"T−1 Conjuntural",ator:"Governo federal; bases ativistas digitais",rep:"Atos, motociatas, negacionismo sanitário",tgt:"Governadores; STF; imprensa; OMS",frm:"“Liberdade”, “tratamento precoce”, guerra cultural",res:"CPI da Pandemia (2021)",mec:"Radicalização das bases e consolidação de um ecossistema informacional paralelo (Telegram/WhatsApp) — a infraestrutura comunicacional que tornará viável a convocação nacional de dezembro de 2022.",src:"Literatura: Cesarino (2022)",url:"",st:"ctx"},
+{id:"PT-08",b:0,pos:0.813,f:"conj",k:0,d:"06/01/2021",c:"Capitólio (EUA)",fase:"T−1 Conjuntural",ator:"Apoiadores de Donald Trump",rep:"Invasão do Capitólio",tgt:"Congresso dos EUA",frm:"“Stop the Steal”",res:"Resposta judicial nos EUA",mec:"Difusão transnacional: circula entre as extremas-direitas das Américas um modelo de contestação violenta de resultado eleitoral.",src:"Literatura comparada: Levitsky & Ziblatt; Norris & Inglehart",url:"",st:"ctx"},
+{id:"PT-07",b:0,pos:0.865,f:"conj",k:1,d:"2021",c:"Plano de ruptura esboçado",fase:"T−1 Conjuntural",ator:"Núcleo político do governo Bolsonaro",rep:"Formulação de plano de ruptura, segundo denúncia da PGR",tgt:"Processo eleitoral; STF",frm:"“Fraude nas urnas”",res:"Investigação posterior (PGR/PF)",mec:"Alinhamento de quadros prévio. A narrativa de fraude não é reação à derrota — é anterior a ela, construída para operar como gatilho pré-programado. É o achado que desloca a leitura do 8/1 de surto espontâneo para desfecho de trama.",src:"Agência Brasil: “O plano de ruptura (…) começou a ser esboçado ainda em 2021, poucos dias depois de Lula ter recuperado sua elegibilidade”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2026-01/cronologia-da-tentativa-de-golpe-atentados-bloqueios-e-acampamentos",st:"ok"},
+
+{id:"PT-09",b:1,pos:0.00,f:"oper",k:1,d:"30/10/2022",c:"Derrota eleitoral",fase:"T−1 Operacional",ator:"Eleitorado brasileiro",rep:"Pleito eleitoral",tgt:"—",frm:"—",res:"Proclamação do resultado pelo TSE",mec:"Gatilho. A derrota por margem estreita (50,9% x 49,1%) ativa a sequência contestatória previamente enquadrada.",src:"Agência Brasil: “Lula venceu Jair Bolsonaro com 50,9% dos votos válidos, contra 49,1%”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2026-01/cronologia-da-tentativa-de-golpe-atentados-bloqueios-e-acampamentos",st:"ok"},
+{id:"PT-10",b:1,pos:0.020,f:"oper",k:1,d:"30/10–06/11/2022",c:"Bloqueios de rodovias",fase:"T−1 Operacional",ator:"Caminhoneiros e apoiadores de Bolsonaro",rep:"Bloqueio de rodovias — mais de mil interdições totais ou parciais (PRF)",tgt:"Circulação nacional; Estado",frm:"“Fraude eleitoral”, recusa do resultado",res:"Decisões do STF determinando desobstrução; atuação da PRF e das PMs",mec:"Ativação imediata e primeiro teste da capacidade de contenção estatal — aferição do custo da desobediência.",src:"Agência Brasil: “Foram mais de mil interdições totais ou parciais em estradas federais, segundo a PRF”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2026-01/cronologia-da-tentativa-de-golpe-atentados-bloqueios-e-acampamentos",st:"ok"},
+{id:"PT-11",b:1,pos:0.029,f:"oper",k:0,d:"01/11/2022",c:"Fala ambígua de Bolsonaro",fase:"T−1 Operacional",ator:"Jair Bolsonaro",rep:"Pronunciamento público ambíguo",tgt:"Base de apoiadores",frm:"Agradece votos sem reconhecer a derrota",res:"—",mec:"Sinalização ambígua da liderança: pede desobstrução das estradas mas não certifica o resultado, mantendo aberta a janela de contestação.",src:"Agência Brasil: “demorou dois dias para se manifestar, e o fez de forma ambígua”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2026-01/cronologia-da-tentativa-de-golpe-atentados-bloqueios-e-acampamentos",st:"ok"},
+{id:"PT-12",b:1,pos:0.071,f:"oper",k:1,d:"nov/2022 em diante",c:"Acampamentos em quartéis (+100)",fase:"T−1 Operacional",ator:"Grupos bolsonaristas em todo o país",rep:"Acampamentos permanentes em frente a quartéis — mais de 100 no país",tgt:"Forças Armadas (destinatário do apelo); regime constitucional",frm:"“Intervenção militar”, “SOS Forças Armadas”",res:"Indiferença e conivência de autoridades",mec:"Conversão de repertório: do bloqueio móvel para a ocupação territorial permanente. O acampamento não é só protesto — é infraestrutura de mobilização (alimentação, alojamento, coordenação, reserva de contingente). Sem ele, não há 8 de janeiro.",src:"Agência Brasil: “Foram mais de 100 acampamentos, incluindo o (…) montado em frente ao QG do Exército”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2026-01/cronologia-da-tentativa-de-golpe-atentados-bloqueios-e-acampamentos",st:"ok"},
+{id:"PT-13",b:1,pos:0.214,f:"oper",k:1,d:"nov/2022",c:"Aval presidencial aos acampamentos",fase:"T−1 Operacional",ator:"Presidência da República; comandantes das Forças",rep:"Autorização de permanência dos acampamentos, segundo denúncia da PGR",tgt:"—",frm:"“Manifestação legítima”",res:"Omissão deliberada de desmobilização",mec:"Certificação por elite: o aval da autoridade máxima converte ocupação ilegal em oportunidade política protegida.",src:"Agência Brasil: “os acampamentos golpistas (…) tiveram aval direto do então presidente (…) segundo consta na denúncia da PGR”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2026-01/cronologia-da-tentativa-de-golpe-atentados-bloqueios-e-acampamentos",st:"ok"},
+{id:"PT-14",b:1,pos:0.329,f:"oper",k:0,d:"nov/2022",c:"PL contesta urnas no TSE",fase:"T−1 Operacional",ator:"Partido Liberal (PL)",rep:"Ação judicial no TSE para invalidar votos de parte das urnas",tgt:"TSE; processo eleitoral",frm:"“Fraude nas urnas eletrônicas”",res:"Ação negada pela presidência do TSE",mec:"Fechamento da via institucional: o insucesso judicial desloca a energia contestatória para o repertório extrainstitucional.",src:"Agência Brasil: “ação do PL (…) no TSE para invalidar votos de parte das urnas eletrônicas”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2026-01/cronologia-da-tentativa-de-golpe-atentados-bloqueios-e-acampamentos",st:"ok"},
+{id:"PT-15",b:1,pos:0.614,f:"oper",k:1,d:"12/12/2022",c:"Diplomação: tentativa de invadir a PF",fase:"T−1 Operacional",ator:"Manifestantes bolsonaristas em Brasília",rep:"Tentativa de invasão da sede da PF; incêndio de carros e ônibus; fechamento do Setor Hoteleiro Norte",tgt:"Polícia Federal; patrimônio público e privado",frm:"Reação à diplomação de Lula no TSE",res:"Contenção policial pontual; sem desmobilização dos acampamentos",mec:"Escalada de radicalização e ensaio geral: repertório violento testado no mesmo território, com custo baixo e sem que o acampamento fosse desmobilizado. A ausência de sanção é uma das evidências mais fortes da falha de contenção.",src:"Agência Brasil: “Brasília viveu uma de suas noites mais violentas em décadas”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2026-01/cronologia-da-tentativa-de-golpe-atentados-bloqueios-e-acampamentos",st:"ok"},
+{id:"PT-19",b:1,pos:0.686,f:"oper",k:1,d:"dez/2022–jan/2023",c:"Código “Festa da Selma”",fase:"T−1 Operacional",ator:"Perfis e canais bolsonaristas (Telegram, WhatsApp, Instagram)",rep:"Convocação codificada, difusão de coordenadas, instruções e organização de transporte",tgt:"Palácio do Planalto, Congresso Nacional e STF",frm:"“Guerra”, “ocupar o Congresso”, “derrubar o governo constituído”",res:"Sem bloqueio preventivo das redes",mec:"Coordenação distribuída por criptolinguagem: o código resolve o dilema de mobilizar massa em plataformas abertas sem acionar moderação nem monitoramento. Explica como houve coordenação sem comando centralizado visível.",src:"Agência Pública: “Selma”, alusão a “Selva”, usada para combinar as etapas da invasão e compartilhar coordenadas",url:"https://apublica.org/sentinela/2023/01/bolsonaristas-usam-codigo-festa-da-selma-para-coordenar-invasao-em-brasilia/",st:"ok"},
+{id:"PT-16",b:1,pos:0.786,f:"oper",k:1,d:"24/12/2022",c:"Bomba no aeroporto",fase:"T−1 Operacional",ator:"G. W. de Oliveira Sousa, A. D. dos Santos Rodrigues, W. Macedo de Souza — ligados ao acampamento do QG",rep:"Tentativa de atentado a bomba em caminhão-tanque próximo ao Aeroporto de Brasília",tgt:"Infraestrutura aeroportuária; população",frm:"Provocar comoção social para precipitar intervenção militar",res:"Desativação do artefato; prisões; condenações em 2023 e ação penal no STF",mec:"Radicalização de flanco: uma fração do acampamento adota repertório terrorista para forçar a resposta militar que a mobilização de massa não conseguiu produzir.",src:"Agência Brasil: “tentativa de atentado a bomba organizado por apoiadores (…) que também estavam no acampamento golpista do QG”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2026-01/cronologia-da-tentativa-de-golpe-atentados-bloqueios-e-acampamentos",st:"ok"},
+{id:"PT-17",b:1,pos:0.871,f:"oper",k:0,d:"30/12/2022",c:"Bolsonaro deixa o país",fase:"T−1 Operacional",ator:"Jair Bolsonaro",rep:"Saída do país rumo aos EUA antes da posse",tgt:"—",frm:"—",res:"—",mec:"Desincorporação da liderança: a ausência física do líder desloca o comando para redes descentralizadas e amplia a autonomia tática da base.",src:"Amplamente noticiado; não verificado em fonte primária nesta rodada",url:"",st:"ver"},
+{id:"PT-18",b:1,pos:0.900,f:"oper",k:0,d:"01/01/2023",c:"Posse sem incidentes",fase:"T−1 Operacional",ator:"Estado brasileiro; público",rep:"Posse presidencial com forte esquema de segurança",tgt:"—",frm:"—",res:"Dispositivo reforçado; evento sem intercorrências",mec:"Falso sinal de normalização: o sucesso do dispositivo de 1º de janeiro alimenta uma avaliação de risco rebaixada para o domingo seguinte.",src:"Agência Brasil: “ocorreu sem intercorrências, o que (…) pode ter passado uma sensação de tranquilidade”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2026-01/cronologia-da-tentativa-de-golpe-atentados-bloqueios-e-acampamentos",st:"ok"},
+{id:"PT-20",b:1,pos:0.957,f:"oper",k:0,d:"05/01/2023",c:"Acampamento: 300 pessoas",fase:"T−1 Operacional",ator:"Acampados no Setor Militar Urbano (SMU)",rep:"Ocupação permanente",tgt:"—",frm:"“Intervenção militar”",res:"Nenhuma desmobilização",mec:"Linha de base do afluxo: cerca de 300 pessoas — ponto de partida para medir a escalada logística dos dias seguintes.",src:"Relatório da CPMI, via Agência Brasil: “300 manifestantes que ocupavam o local (…) 5 de janeiro”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-21",b:1,pos:0.979,f:"oper",k:1,d:"06–07/01/2023",c:"Caravanas: salto para 5.500",fase:"T−1 Operacional",ator:"Caravanas de ônibus de diferentes estados; financiadores",rep:"Fretamento e deslocamento em massa",tgt:"—",frm:"Convocação nacional (“Festa da Selma”)",res:"Nenhuma interdição das caravanas",mec:"Concentração de recursos: o acampamento multiplica-se por quase 20 vezes em dois dias, atingindo a massa crítica necessária para romper barreiras.",src:"Relatório da CPMI, via Agência Brasil: “5.500 pessoas estavam no acampamento no sábado, dia 7 de janeiro”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-22",b:1,pos:0.994,f:"oper",k:0,d:"08/01 08h20",c:"Abin: 101 ônibus",fase:"T−1 Operacional",ator:"Abin",rep:"Alerta de inteligência",tgt:"—",frm:"—",res:"Informação circulada, sem medida preventiva proporcional",mec:"Falha de conversão de inteligência em ação: o sinal existe e é distribuído, mas não gera resposta operacional.",src:"CPMI/Agência Brasil: “Alertas da Abin informam que até esse horário haviam chegado 101 ônibus a Brasília”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-23",b:1,pos:1.00,f:"oper",k:1,d:"08/01 10h00",c:"Alerta explícito às 10h",fase:"T−1 Operacional",ator:"Abin; grupo de WhatsApp PMDF/GSI-PR",rep:"Novo alerta de inteligência",tgt:"Prédios públicos da Esplanada",frm:"Registro de “convocações e incitações” a ocupações e ações violentas",res:"Nenhum reforço proporcional do dispositivo",mec:"Segunda falha de conversão. O alvo e o repertório estão explicitamente antecipados às 10h da manhã e ainda assim o dispositivo permanece subdimensionado. Não é falha de informação — é falha de resposta.",src:"CPMI/Agência Brasil: “permanecem convocações e incitações para deslocamento até a Esplanada (…) ocupações de prédios públicos e ações violentas”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+
+{id:"PT-24",b:2,pos:0.000,f:"t0",k:1,d:"13h00",c:"Marcha deixa o QG",fase:"T0 Mobilização",ator:"Milhares de manifestantes do acampamento do SMU",rep:"Marcha de 9 km pelo Eixo Monumental",tgt:"Esplanada dos Ministérios / Praça dos Três Poderes",frm:"“Marcha patriótica”",res:"Sem interdição na origem",mec:"Deslocamento espacial como escalada: sair da servidão militar — território de ocupação tolerada — em direção ao centro do poder converte a ocupação estática em ofensiva. É aqui que o repertório muda de natureza.",src:"CPMI/Agência Brasil: “13h – Marcha com milhares de pessoas deixa o acampamento do Setor Militar Urbano”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-25",b:2,pos:0.043,f:"t0",k:0,d:"13h23",c:"Áudio tranquiliza o governador",fase:"T0 Mobilização",ator:"Fernando de Sousa Oliveira (SSP-DF, substituto de Anderson Torres)",rep:"Áudio ao governador Ibaneis Rocha",tgt:"—",frm:"Manifestação “sob controle”",res:"Nenhuma elevação do nível de alerta",mec:"Neutralização da percepção de ameaça no topo da cadeia política do DF — bloqueio da resposta na cúpula da segurança.",src:"CPMI/Agência Brasil: “envia áudio ao governador (…) tranquilizando-o sobre a manifestação”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-26",b:2,pos:0.167,f:"t0",k:0,d:"14h30",c:"1ª barreira (Via N1)",fase:"T0 Mobilização",ator:"Marcha bolsonarista",rep:"Avanço sobre a primeira barreira policial, na altura da Catedral",tgt:"Linha de contenção da PMDF",frm:"“O povo no poder”",res:"Barreira não sustentada",mec:"Teste sequencial de contenção: cada barreira transposta sem custo informa à multidão que o avanço é barato — retroalimentação que acelera a escalada.",src:"CPMI/Agência Brasil: “a marcha alcança a primeira barreira policial na Via N1”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-27",b:2,pos:0.191,f:"t0",k:0,d:"14h43",c:"Gradis da Av. das Bandeiras",fase:"T0 Mobilização",ator:"Marcha bolsonarista",rep:"Chegada à linha de contenção formada por duas linhas de gradil",tgt:"Perímetro de segurança da Praça dos Três Poderes",frm:"—",res:"Gradis sem efetivo proporcional",mec:"Ruptura de barreira física: o gradil sem sustentação humana é obstáculo simbólico, não operacional.",src:"CPMI/Agência Brasil: “Grupo chega à linha de contenção formada por duas linhas de gradil”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-28",b:2,pos:0.194,f:"t0",k:1,d:"14h45",c:"Apenas 20 PMs no Congresso",fase:"T0 Mobilização",ator:"PMDF — 1º Batalhão de Policiamento de Choque",rep:"Postura defensiva com 20 policiais",tgt:"Congresso Nacional",frm:"—",res:"Efetivo de 20 PMs diante de milhares",mec:"Subdimensionamento crítico do dispositivo. Em process tracing, é a condição necessária (hoop test) do sucesso da invasão: sem ela, nada do que se segue é possível. Combinada com os alertas das 08h20 e 10h, torna-se também evidência forte de disfunção não acidental.",src:"CPMI/Agência Brasil: “À frente do Congresso Nacional estão apenas 20 PMs do 1º Batalhão de Policiamento de Choque”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-29",b:2,pos:0.222,f:"t0",k:1,d:"15h00",c:"Invasão do Congresso",fase:"T0 Execução",ator:"Manifestantes radicalizados",rep:"Subida da rampa; invasão e depredação",tgt:"Congresso Nacional (Poder Legislativo)",frm:"“Retomada do poder pelo povo”",res:"Ausência de repressão efetiva",mec:"Transposição do limiar: a primeira invasão bem-sucedida funciona como sinal público de viabilidade e dispara o contágio para os demais alvos.",src:"CPMI/Agência Brasil: “Golpistas já conseguiram subir a rampa do Congresso para invadir e destruir prédio”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-30",b:2,pos:0.241,f:"t0",k:0,d:"15h10",c:"Fundos do Planalto",fase:"T0 Execução",ator:"Grupos dissidentes da massa principal",rep:"Invasão do estacionamento e da parte posterior do Planalto",tgt:"Palácio do Planalto (Poder Executivo)",frm:"“Casa do povo”",res:"Sem contenção efetiva",mec:"Contágio e multiplicação de frentes: a multidão se fraciona e satura a capacidade residual de resposta.",src:"CPMI/Agência Brasil: “Outros grupos invadem o estacionamento e a parte de trás do Palácio do Planalto”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-31",b:2,pos:0.250,f:"t0",k:1,d:"15h15",c:"PMs sinalizam para prosseguir",fase:"T0 Execução",ator:"PMDF — 2º Pelotão de Policiamento de Choque (12 PMs)",rep:"Chegada ao Congresso sem repressão; sinalização para prosseguir com a invasão",tgt:"Congresso Nacional",frm:"—",res:"Não repressão; conivência registrada pela CPMI",mec:"Defecção do agente de contenção. Não é apenas omissão: é sinalização ativa de permissividade por parte da força incumbida da repressão, o que eleva a percepção de legitimidade da ação entre os manifestantes.",src:"CPMI/Agência Brasil: “não reprimem os invasores e chegaram a sinalizar para que os presentes prosseguissem com a invasão”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-32",b:2,pos:0.252,f:"t0",k:1,d:"15h16",c:"Retirada libera acesso ao STF",fase:"T0 Execução",ator:"PMDF (via S1)",rep:"Retirada do dispositivo, liberando o acesso ao STF",tgt:"STF (Poder Judiciário)",frm:"—",res:"Retirada policial",mec:"Abertura de corredor: a retirada da via S1 é vetor causal direto do alcance do terceiro alvo. Sem ela, o STF provavelmente não é atingido naquele intervalo.",src:"CPMI/Agência Brasil: “PM se retira da via S1 (…) e liberam acesso aos insurgentes para alcançarem o prédio do STF”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-33",b:2,pos:0.259,f:"t0",k:0,d:"15h20",c:"Grades e vidros do Planalto",fase:"T0 Execução",ator:"Manifestantes radicalizados",rep:"Derrubada das grades, quebra dos vidros da fachada e entrada no prédio",tgt:"Palácio do Planalto",frm:"“Ocupação do Poder Central”",res:"Sem contenção efetiva",mec:"Escalada de repertório: da transposição de perímetro para a destruição material da fronteira do edifício.",src:"CPMI/Agência Brasil: “Vândalos derrubam as grades de isolamento do Palácio do Planalto, sobem rampa, quebram os vidros da fachada”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-34",b:2,pos:0.270,f:"t0",k:0,d:"15h26",c:"~4 mil na Praça",fase:"T0 Execução",ator:"Multidão — estimativa policial de cerca de 4 mil pessoas",rep:"Ocupação da Praça dos Três Poderes",tgt:"Conjunto simbólico dos Três Poderes",frm:"“Praça do povo”",res:"Estimativa policial sem capacidade de dispersão",mec:"Massa crítica atingida no ponto de máxima densidade simbólica — condição de possibilidade da ocupação simultânea. Trata-se de estimativa policial, com as limitações usuais desse tipo de contagem.",src:"CPMI/Agência Brasil: “Policiais estimam a presença de cerca de 4 mil pessoas”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-35",b:2,pos:0.291,f:"t0",k:1,d:"15h37",c:"Invasão do STF",fase:"T0 Execução",ator:"Manifestantes radicalizados",rep:"Invasão do edifício-sede do STF",tgt:"STF (Poder Judiciário)",frm:"“STF ditador”",res:"Sem contenção efetiva",mec:"Fechamento do ciclo de alvos: os três Poderes são atingidos em 37 minutos. A velocidade aponta para coordenação tácita prévia — compatível com as instruções da “Festa da Selma” — e não para sequência aleatória.",src:"CPMI/Agência Brasil: “15h37 – Inicia a invasão do edifício-sede do STF”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-36",b:2,pos:0.306,f:"t0",k:1,d:"15h45",c:"3º andar do Planalto",fase:"T0 Execução",ator:"Invasores no Planalto",rep:"Alcance do 3º andar, onde fica o gabinete presidencial",tgt:"Gabinete da Presidência da República",frm:"“Tomada do poder”",res:"Nenhuma barreira interna eficaz",mec:"Penetração do núcleo simbólico: ponto de máxima profundidade da ofensiva.",src:"CPMI/Agência Brasil: “Golpistas chegam ao 3º andar do Planalto, onde fica o gabinete do presidente da República”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-37",b:2,pos:0.320,f:"t0",k:0,d:"15h53",c:"PMs abandonam o Congresso",fase:"T0 Execução",ator:"Manifestantes; PMs",rep:"Abandono do prédio pelos PMs; agressão a policiais",tgt:"Congresso Nacional; agentes do Estado",frm:"—",res:"Retirada da força de segurança",mec:"Colapso da contenção e inversão da relação de força: o agente estatal deixa de ser obstáculo e passa a ser alvo.",src:"CPMI/Agência Brasil: “PMs abandonam o prédio do Congresso Nacional. Alguns deles são atacados”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-39",b:2,pos:0.380,f:"t0",k:0,d:"16h25",c:"Início da expulsão",fase:"T0 Resposta tática",ator:"Forças de segurança",rep:"Início da expulsão dos invasores",tgt:"Manifestantes",frm:"—",res:"Retomada operacional",mec:"Ponto de inflexão da contenção: a resposta efetiva começa cerca de 1h25 após a primeira invasão.",src:"CPMI/Agência Brasil: “16h25 – Inicia a expulsão invasores dos prédios públicos”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-40",b:2,pos:0.407,f:"t0",k:0,d:"16h40",c:"Guarda Presidencial no Planalto",fase:"T0 Resposta tática",ator:"Batalhão da Guarda Presidencial (BGP)",rep:"Chegada e retomada do Planalto",tgt:"Manifestantes",frm:"—",res:"Emprego de tropa federal",mec:"Substituição do agente de contenção: a falha da polícia estadual é suprida por força federal — deslocamento do nível de resposta.",src:"CPMI/Agência Brasil: “Chega ao Palácio do Planalto o Batalhão da Guarda Presidencial”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-41",b:2,pos:0.444,f:"t0",k:1,d:"17h00",c:"Choque chega 2h após ser pedido",fase:"T0 Resposta tática",ator:"Batalhão de Choque da PMDF",rep:"Chegada ao Congresso Nacional, duas horas após a requisição",tgt:"Manifestantes",frm:"—",res:"Retomada tardia",mec:"Latência de resposta. As duas horas entre requisição e chegada são, no vocabulário de Beach & Pedersen, evidência de alta unicidade: difícil de explicar sem disfunção deliberada ou negligência grave.",src:"CPMI/Agência Brasil: “O Batalhão de Choque da PMDF, requerida duas horas antes, chegou ao Congresso Nacional”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-42",b:2,pos:0.459,f:"t0",k:0,d:"17h08",c:"Ibaneis demite Anderson Torres",fase:"T0 Resposta política",ator:"Ibaneis Rocha (governador do DF)",rep:"Exoneração do secretário de Segurança Pública",tgt:"Anderson Torres",frm:"Responsabilização individual",res:"Demissão",mec:"Deslocamento de responsabilidade sob pressão — primeira medida política de contenção da crise.",src:"CPMI/Agência Brasil: “demite o secretário de Segurança Pública, Anderson Torres, em férias antecipada nos Estados Unidos”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-43",b:2,pos:0.472,f:"t0",k:0,d:"17h15",c:"Reforço do CMP no palácio",fase:"T0 Resposta tática",ator:"Cia. da Base de Adm. e Apoio do CMP; pelotão do 1º Regimento de Cavalaria de Guardas",rep:"Entrada no palácio presidencial",tgt:"Manifestantes",frm:"—",res:"Reforço militar federal",mec:"Consolidação da retomada por escalonamento de forças.",src:"CPMI/Agência Brasil: “Entram no palácio presidencial a Companhia da Base de Administração e Apoio do Comando Militar do Planalto”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-44",b:2,pos:0.500,f:"t0",k:0,d:"17h30",c:"Prédios majoritariamente livres",fase:"T0 Resposta tática",ator:"Forças de segurança; manifestantes remanescentes",rep:"Desocupação majoritária dos prédios; concentração externa persistente",tgt:"Congresso Nacional (área externa)",frm:"—",res:"Controle parcial do território",mec:"Retomada assimétrica: o interior é recuperado, mas a rua permanece sob disputa.",src:"CPMI/Agência Brasil: “Boa parte dos prédios invadidos estão desocupados, mas multidão ainda se concentra em parte externa”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-45",b:2,pos:0.537,f:"t0",k:1,d:"17h50",c:"Intervenção federal decretada",fase:"T0 / T+1 Resposta institucional",ator:"Presidente Lula, de Araraquara (SP)",rep:"Decreto de intervenção federal na segurança pública do DF",tgt:"Governo do Distrito Federal",frm:"“Defesa do Estado Democrático de Direito”",res:"Intervenção federal decretada",mec:"Federalização da resposta: mecanismo institucional que remove a cadeia de comando local sob suspeita de conivência.",src:"CPMI/Agência Brasil: “o presidente Lula decreta intervenção federal na Secretaria de Segurança Pública do DF”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-46",b:2,pos:0.593,f:"t0",k:0,d:"18h20",c:"Fogo no gramado do Congresso",fase:"T0 Execução",ator:"Manifestantes remanescentes",rep:"Incêndio no gramado do Congresso Nacional",tgt:"Congresso Nacional",frm:"Manutenção do confronto",res:"Contenção em curso",mec:"Repertório residual de confronto após a perda do território interno — sinal de desorganização, não de coordenação.",src:"CPMI/Agência Brasil: “Extremistas colocam fogo no gramado do Congresso Nacional”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-47",b:2,pos:0.667,f:"t0",k:0,d:"19h00",c:"Ibaneis pede desculpas",fase:"T+1 Resposta política",ator:"Ibaneis Rocha",rep:"Pedido público de desculpas em vídeo",tgt:"Opinião pública",frm:"Contrição",res:"—",mec:"Tentativa de contenção reputacional diante da iminente responsabilização.",src:"CPMI/Agência Brasil: “Em vídeo na internet, o governador Ibaneis Rocha pede desculpas à população”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-48",b:2,pos:0.778,f:"t0",k:0,d:"20h00",c:"Cappelli convoca todo o efetivo",fase:"T+1 Resposta institucional",ator:"Ricardo Cappelli (interventor federal)",rep:"Convocação de todo o efetivo; negociação com militares para prisões no acampamento",tgt:"Manifestantes; acampamento do QG",frm:"“Restabelecimento da ordem”",res:"Mobilização integral do aparato de segurança",mec:"Reversão da falha de contenção pela unificação do comando sob autoridade federal.",src:"CPMI/Agência Brasil: “convoca todo efetivo de segurança para a Esplanada para efetuar o maior número possível de prisões”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-49",b:2,pos:0.845,f:"t0",k:1,d:"08/01, noite",c:"Moraes: desocupar em 24h",fase:"T+1 Resposta judicial",ator:"Ministro Alexandre de Moraes (STF)",rep:"Decisão determinando a desocupação do acampamento em 24h e autorizando prisões",tgt:"Acampamento do QG do Exército",frm:"Enquadramento penal dos acampados (ao menos sete crimes)",res:"Ordem judicial",mec:"Gatilho jurídico: destrava a desmobilização que a omissão política mantinha bloqueada — o Exército alegaria à CPMI ausência de ordem judicial como impedimento anterior.",src:"Agência Brasil / Rádio Senado: ordem determinando retirada em 24h e autorizando prisões",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2023-01/presos-no-qg-do-exercito-chegam-1200-204-foram-detidos-domingo",st:"ok"},
+{id:"PT-50",b:2,pos:0.920,f:"t0",k:1,d:"21h17",c:"Nota de Bolsonaro, 6h depois",fase:"T+1 Enquadramento",ator:"Jair Bolsonaro, dos EUA",rep:"Nota em rede social condenando os ataques e se eximindo de responsabilidade",tgt:"Opinião pública; investigadores",frm:"Distanciamento e negação de vínculo",res:"—",mec:"Descertificação tardia: a retirada de apoio simbólico só ocorre cerca de seis horas depois do início, quando o fracasso tático já estava consumado.",src:"CPMI/Agência Brasil: “cerca de 6 horas após o início das invasões (…) publica nota (…) se eximindo de qualquer responsabilidade”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+{id:"PT-51",b:2,pos:1.000,f:"t0",k:0,d:"22h00",c:"Lula e ministros vistoriam",fase:"T+1 Resposta institucional",ator:"Lula; ministros Rosa Weber, Roberto Barroso e Dias Toffoli",rep:"Vistoria conjunta do Planalto e do STF",tgt:"Opinião pública nacional e internacional",frm:"Unidade dos Poderes",res:"Performance institucional de reconstrução",mec:"Ritual de recertificação da ordem: a copresença dos chefes de Poder no espaço vandalizado reconstrói simbolicamente o pacto atacado.",src:"CPMI/Agência Brasil: “Lula vistoria o Palácio do Planalto e o STF em companhia dos ministros”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2024-01/relembre-o-passo-passo-da-tentativa-de-golpe-no-81",st:"ok"},
+
+{id:"PT-52",b:3,pos:0.000,f:"t1",k:1,d:"09/01/2023",c:"Desmonte do acampamento: ~1.200 presos",fase:"T+1 Desarticulação",ator:"Polícia do Exército; PMDF",rep:"Desmonte do acampamento do SMU; cerca de 1.200 pessoas levadas em 40 ônibus à Superintendência da PF, além de 204 detidos no domingo",tgt:"Acampamento do QG do Exército",frm:"“Cumprimento de ordem judicial”",res:"Operação conjunta de desmobilização",mec:"Destruição da infraestrutura de mobilização. É o mecanismo decisivo do desfecho: eliminada a base logística, o ciclo de rua se encerra materialmente — não por convencimento, mas por remoção da capacidade de agir.",src:"Agência Brasil: “Presos no QG do Exército chegam a 1.200; 204 foram detidos domingo”",url:"https://agenciabrasil.ebc.com.br/politica/noticia/2023-01/presos-no-qg-do-exercito-chegam-1200-204-foram-detidos-domingo",st:"ok"},
+{id:"PT-53",b:3,pos:0.017,f:"t1",k:1,d:"jan/2023 em diante",c:"Inquéritos e +1.600 ações penais",fase:"T+1 Resposta judicial",ator:"STF; Polícia Federal; PGR",rep:"Inquéritos, Operação Lesa Pátria e abertura de mais de 1.600 ações penais",tgt:"Executores, financiadores e organizadores",frm:"“Abolição violenta do Estado Democrático de Direito”, “tentativa de golpe de Estado”",res:"Judicialização em massa",mec:"Repressão jurídica escalonada por núcleos. A estratégia não trata o 8/1 como tumulto de massa, mas decompõe a cadeia causal em camadas de responsabilidade — adoção institucional de uma lógica de process tracing.",src:"Balanço “Democracia Inabalada” (STF): mais de 1.600 ações penais abertas",url:"https://noticias.stf.jus.br/postsnoticias/em-dois-anos-stf-responsabilizou-898-pessoas-por-atos-antidemocraticos-de-8-de-janeiro/",st:"ok"},
+{id:"PT-54",b:3,pos:0.108,f:"t1",k:0,d:"2023",c:"Instalação da CPMI",fase:"T+1 Resposta legislativa",ator:"Congresso Nacional — CPMI do 8 de Janeiro",rep:"Instalação e funcionamento da comissão parlamentar mista de inquérito",tgt:"Autoridades civis e militares",frm:"Apuração de responsabilidades",res:"Investigação parlamentar",mec:"Abertura de arena institucional de atribuição de responsabilidade política, distinta da arena penal.",src:"Senado Federal / Câmara dos Deputados — CPMI do 8 de Janeiro (data exata de instalação a verificar)",url:"https://www12.senado.leg.br/noticias/materias/2023/10/17/relatora-da-cpmi-pede-indiciamento-de-bolsonaro-e-de-mais-60-pessoas",st:"ok"},
+{id:"PT-55",b:3,pos:0.233,f:"t1",k:1,d:"17–18/10/2023",c:"Relatório da CPMI: 61 indiciamentos",fase:"T+1 Resposta legislativa",ator:"CPMI do 8 de Janeiro; relatora sen. Eliziane Gama",rep:"Aprovação do relatório final com 61 pedidos de indiciamento (20 votos a 11, 1 abstenção)",tgt:"Bolsonaro, Braga Netto, Augusto Heleno, Mauro Cid, Anderson Torres, Carla Zambelli e outros",frm:"Associação criminosa, violência política, abolição violenta do Estado Democrático de Direito e golpe de Estado",res:"Encaminhamento dos indiciamentos ao MP",mec:"Certificação parlamentar da cadeia causal: o relatório fixa oficialmente a leitura de que o 8/1 foi desfecho de trama articulada, e não surto espontâneo.",src:"Senado Notícias: “Relatora da CPMI pede indiciamento de Bolsonaro e de mais 60 pessoas”",url:"https://www12.senado.leg.br/noticias/materias/2023/10/17/relatora-da-cpmi-pede-indiciamento-de-bolsonaro-e-de-mais-60-pessoas",st:"ok"},
+{id:"PT-56",b:3,pos:0.809,f:"t1",k:1,d:"11/09/2025",c:"Condenação do núcleo crucial",fase:"T+1 Resposta judicial",ator:"Primeira Turma do STF",rep:"Condenação de 8 réus; Bolsonaro a 27 anos e 3 meses em regime inicial fechado; penas de 16 a 27 anos",tgt:"Jair Bolsonaro e aliados",frm:"Tentativa de golpe de Estado; abolição violenta do Estado Democrático de Direito; organização criminosa armada; dano qualificado; deterioração de patrimônio tombado",res:"Condenação penal",mec:"Fechamento causal “de cima”: a responsabilização do núcleo político costura juridicamente T−1 conjuntural (2021), T−1 operacional (acampamentos) e T0 numa única cadeia de imputação.",src:"STF: “STF fixa penas de 16 a 27 anos para condenados por tentativa de golpe de Estado”",url:"https://noticias.stf.jus.br/postsnoticias/stf-fixa-penas-de-16-a-27-anos-para-condenados-por-tentativa-de-golpe-de-estado/",st:"ok"},
+{id:"PT-57",b:3,pos:0.843,f:"t1",k:0,d:"22/10/2025",c:"Acórdão da AP 2668",fase:"T+1 Resposta judicial",ator:"STF",rep:"Publicação do acórdão da AP 2668",tgt:"Condenados do núcleo crucial",frm:"—",res:"Marco processual para recursos",mec:"Consolidação documental da narrativa causal oficial — a peça mais valiosa disponível para um process tracing baseado em fonte primária, por ser reconstrução causal com evidência anexada.",src:"Publicação do acórdão da AP 2668 (out/2025) — consultar inteiro teor no STF",url:"",st:"ver"},
+{id:"PT-58",b:3,pos:0.869,f:"t1",k:0,d:"22–25/11/2025",c:"Prisão de Bolsonaro",fase:"T+1 Resposta judicial",ator:"STF; Polícia Federal",rep:"Prisão preventiva e início do cumprimento de pena",tgt:"Jair Bolsonaro",frm:"—",res:"Prisão",mec:"Encerramento do ciclo de responsabilização do topo da cadeia.",src:"Cobertura jornalística (nov/2025) — datas a verificar em fonte primária",url:"",st:"ver"},
+{id:"PT-59",b:3,pos:0.914,f:"t1",k:0,d:"15/01/2026",c:"Transferência para a Papuda",fase:"T+1 Resposta judicial",ator:"Ministro Alexandre de Moraes (STF)",rep:"Determinação de transferência para unidade da PM-DF no Complexo Penitenciário da Papuda",tgt:"Jair Bolsonaro",frm:"—",res:"Execução penal",mec:"Normalização da execução penal do ex-chefe do Executivo — teste da capacidade do Judiciário de sustentar a sanção.",src:"STF: “STF determina transferência do ex-presidente Bolsonaro para unidade da PM-DF no Complexo Penitenciário da Papuda”",url:"https://noticias.stf.jus.br/postsnoticias/stf-determina-transferencia-do-ex-presidente-bolsonaro-para-unidade-da-pm-df-no-complexo-penitenciario-da-papuda/",st:"ok"},
+{id:"PT-60",b:3,pos:0.959,f:"t1",k:0,d:"mar/2026 (prorrog. 03/07/2026)",c:"Prisão domiciliar humanitária",fase:"T+1 Resposta judicial",ator:"Min. Alexandre de Moraes (STF); PGR com parecer favorável",rep:"Substituição temporária do regime fechado por prisão domiciliar humanitária (90 dias a contar da alta médica), na Execução Penal 169; prorrogação autorizada em 03/07/2026",tgt:"Jair Bolsonaro",frm:"Necessidade de monitoramento clínico contínuo (broncopneumonia)",res:"Alteração do regime de cumprimento, sem prejuízo de reavaliações periódicas",mec:"Modulação humanitária da sanção. Mede a elasticidade da resposta institucional sob pressão política e clínica — é a variável a observar para avaliar se o custo penal imposto em T+1 se sustenta no tempo.",src:"STF: “STF concede prisão domiciliar temporária ao ex-presidente Jair Bolsonaro”. Regime sujeito a reavaliação — confirme o status antes de citar.",url:"https://noticias.stf.jus.br/postsnoticias/stf-concede-prisao-domiciliar-temporaria-ao-ex-presidente-jair-bolsonaro/",st:"ok"},
+{id:"PT-61",b:3,pos:1.000,f:"t1",k:1,d:"29/04/2026",c:"Balanço: 1.402 condenados",fase:"T+1 Balanço institucional",ator:"STF — relatório “Democracia Inabalada”",rep:"Divulgação do balanço final: 1.402 condenados, 190 presos, 431 prisões, 419 penas alternativas, 552 acordos; 131 ações extintas por cumprimento de pena",tgt:"—",frm:"“Democracia Inabalada”",res:"Conclusão dos julgamentos do 8/1",mec:"Encerramento formal do ciclo repressivo-judicial: o Estado converte a contestação em custo penal mensurável e publica o resultado — a divulgação é ela própria um ato de dissuasão dirigido a ciclos futuros.",src:"Correio Braziliense / STF: “STF conclui julgamentos do 8 de janeiro com 1.402 condenações”",url:"https://www.correiobraziliense.com.br/politica/2026/04/7409048-stf-conclui-julgamentos-do-8-de-janeiro-com-1-402-condenacoes.html",st:"ok"}
+];
+
+// eventos-intervalo (renderizados como faixa sombreada, não como ponto)
+const SPANS = [
+ {b:2,a:0.222,z:0.389,f:"t0",t:"Vandalismo simbólico (PT-38)",
+  ev:{id:"PT-38",f:"t0",d:"≈15h–16h30",fase:"T0 Execução",ator:"Manifestantes nos três edifícios",rep:"Vandalismo simbólico: destruição de obras de arte, mobiliário histórico e documentos",tgt:"Patrimônio artístico e histórico da República",frm:"Destruição dos signos da ordem constitucional de 1988",res:"Nenhuma proteção do acervo durante a ocupação",mec:"Violência simbólica dirigida. O alvo não é o edifício como estrutura, mas a memória material do pacto democrático. Em nenhum momento houve tentativa de assumir o comando efetivo de qualquer instituição: a ação é iconoclasta, não instrumental.",src:"Agência Brasil (recuperação das obras vandalizadas). O detalhamento por peça exige o laudo pericial do Instituto de Criminalística da PF.",url:"https://agenciabrasil.ebc.com.br/geral/noticia/2024-09/democracia-restaurada-obras-vandalizadas-no-81-sao-recuperadas-0",st:"ok"}},
+ {b:3,a:0.02,z:1.0,f:"t1",t:"Desmobilização das redes de rua (PT-62)",
+  ev:{id:"PT-62",f:"t1",d:"2023–2026",fase:"T+1 Efeito de processo",ator:"Extrema-direita brasileira; redes digitais",rep:"Desmobilização das redes de rua; migração para arenas eleitorais e digitais",tgt:"—",frm:"“Perseguição política”, “anistia”",res:"Manutenção da repressão judicial; debate sobre anistia e dosimetria no Congresso",mec:"Desarticulação do repertório de rua com deslocamento — e não extinção — da contestação para arenas institucionais e discursivas.",src:"Inferência analítica a partir do conjunto das fontes. Não é fato verificado: demanda pesquisa empírica dedicada (PEA longitudinal ou análise de redes).",url:"",st:"inf"}}
+];
+
+const BANDS = [
+  {t:"T−1 Conjuntural", s:"jun/2013 – set/2022 · gestação", w:0.155, f:"conj",
+   ticks:[[0,"2013"],[0.27,"2016"],[0.59,"2019"],[0.86,"2021"]]},
+  {t:"T−1 Operacional", s:"30/10/2022 – 08/01/2023, 10h · articulação", w:0.265, f:"oper",
+   ticks:[[0,"30 out"],[0.24,"22 nov"],[0.61,"12 dez"],[0.9,"1º jan"],[1,"8 jan 10h"]]},
+  {t:"T0 · 8 de janeiro", s:"13h00 – 22h00 · execução", w:0.36, f:"t0",
+   ticks:[[0,"13h"],[0.111,"14h"],[0.222,"15h"],[0.333,"16h"],[0.444,"17h"],[0.556,"18h"],[0.667,"19h"],[0.778,"20h"],[0.889,"21h"],[1,"22h"]]},
+  {t:"T+1", s:"09/01/2023 – 29/04/2026 · resposta institucional", w:0.22, f:"t1",
+   ticks:[[0,"2023"],[0.3,"2024"],[0.6,"2025"],[1,"abr/2026"]]}
+];
+
+const W=1360, H=560, PAD=34, GAP=26, AX=300;
+const svg=document.getElementById('tl'), tip=document.getElementById('tip'), det=document.getElementById('detail');
+let mode='geral', off={}, sel=null;
+
+function bandGeom(){
+  const usable = W - PAD*2 - GAP*(BANDS.length-1);
+  let x=PAD, g=[];
+  BANDS.forEach(b=>{ const w=usable*b.w; g.push({...b,x,w}); x+=w+GAP; });
+  return g;
+}
+function el(n,a,txt){const e=document.createElementNS('http://www.w3.org/2000/svg',n);
+  for(const k in a) e.setAttribute(k,a[k]); if(txt!=null) e.textContent=txt; return e;}
+function trunc(s,n){return s.length>n? s.slice(0,n-1)+'…' : s;}
+
+function render(){
+  svg.innerHTML='';
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  const geo = mode==='geral' ? bandGeom()
+    : [{...BANDS[2], x:PAD, w:W-PAD*2}];
+  const active = geo.map(g=>g.f);
+
+  geo.forEach((g,gi)=>{
+    const bi = mode==='geral' ? gi : 2;
+    // título da faixa
+    svg.appendChild(el('text',{x:g.x,y:26,class:'bandttl',fill:C[g.f]},g.t));
+    svg.appendChild(el('text',{x:g.x,y:42,class:'bandsub'},g.s));
+    // eixo
+    svg.appendChild(el('line',{x1:g.x,y1:AX,x2:g.x+g.w,y2:AX,class:'axis'}));
+    // ticks
+    (g.ticks||[]).forEach(([p,t])=>{
+      const x=g.x+p*g.w;
+      svg.appendChild(el('line',{x1:x,y1:AX,x2:x,y2:AX+7,class:'tick'}));
+      svg.appendChild(el('text',{x:x,y:AX+21,class:'tickt','text-anchor':'middle'},t));
+    });
+    // quebra de escala
+    if(mode==='geral' && gi<geo.length-1){
+      const xb=g.x+g.w+GAP/2;
+      svg.appendChild(el('path',{d:`M${xb-5},${AX-13} l10,7 l-10,7 l10,7`,
+        fill:'none',stroke:'#b8b2a8','stroke-width':2,'stroke-linecap':'round'}));
+    }
+    // faixas de intervalo
+    SPANS.filter(s=>s.b===bi).forEach(s=>{
+      if(off[s.f]) return;
+      const x1=g.x+s.a*g.w, x2=g.x+s.z*g.w;
+      const grp=el('g',{class:'span ev',style:'cursor:pointer'});
+      grp.appendChild(el('rect',{x:x1,y:AX-16,width:Math.max(2,x2-x1),height:32,fill:C[s.f],rx:3}));
+      grp.appendChild(el('rect',{x:x1,y:AX-16,width:Math.max(2,x2-x1),height:32,fill:'transparent'}));
+      grp.appendChild(el('text',{x:(x1+x2)/2,y:AX+30,class:'spanlbl','text-anchor':'middle'},s.t));
+      grp.addEventListener('click',()=>show(s.ev));
+      grp.addEventListener('mousemove',e=>showTip(e,s.ev));
+      grp.addEventListener('mouseleave',hideTip);
+      svg.appendChild(grp);
+    });
+  });
+
+  // eventos
+  const list = E.filter(e=> mode==='geral' ? true : e.b===2)
+               .filter(e=> !off[e.f]);
+  // ordenar por x para alocação de faixas
+  const withX = list.map(e=>{
+    const g = mode==='geral' ? geo[e.b] : geo[0];
+    return {e, x: g.x + e.pos*g.w};
+  }).sort((a,b)=>a.x-b.x);
+
+  let lastUp=-999, lastDn=-999, upLvl=0, dnLvl=0;
+  withX.forEach(({e,x},idx)=>{
+    const goUp = (idx % 2)===0;   // alterna acima/abaixo
+    let lvl;
+    if(goUp){ if(x-lastUp<70){upLvl=(upLvl+1)%4;} else {upLvl=0;} lvl=upLvl; lastUp=x; }
+    else    { if(x-lastDn<70){dnLvl=(dnLvl+1)%4;} else {dnLvl=0;} lvl=dnLvl; lastDn=x; }
+
+    const r = e.k?7:4.5;
+    const stem = 26 + lvl*30;
+    const ly = goUp ? AX-stem : AX+stem+14;
+    const g=el('g',{class:'ev','data-id':e.id});
+    g.appendChild(el('line',{x1:x,y1:AX,x2:x,y2:goUp?AX-stem+4:AX+stem-2,
+      class:'stem',stroke:C[e.f]}));
+    g.appendChild(el('circle',{cx:x,cy:AX,r:r,fill:e.k?C[e.f]:'#fff',
+      stroke:C[e.f],'stroke-width':e.k?1.5:2}));
+    const anchor = x > W-160 ? 'end' : (x<160?'start':'middle');
+    const t=el('text',{x:x,y:ly,class:'lbl '+(e.k?'key':'dim'),'text-anchor':anchor},
+      trunc(e.c, e.k?30:26));
+    g.appendChild(t);
+    g.appendChild(el('circle',{cx:x,cy:AX,r:12,fill:'transparent'}));
+    g.addEventListener('click',()=>{show(e); mark(e.id);});
+    g.addEventListener('mousemove',ev=>showTip(ev,e));
+    g.addEventListener('mouseleave',hideTip);
+    svg.appendChild(g);
+  });
+}
+
+function mark(id){
+  svg.querySelectorAll('.ev').forEach(n=>n.classList.toggle('sel', n.dataset.id===id));
+}
+function showTip(ev,e){
+  tip.innerHTML = `<b>${e.d}</b> — ${e.c||e.fase}`;
+  tip.style.left = Math.min(window.innerWidth-300, ev.clientX+14)+'px';
+  tip.style.top = (ev.clientY-10)+'px'; tip.style.opacity=1;
+}
+function hideTip(){ tip.style.opacity=0; }
+
+function show(e){
+  const [btxt,bcls]=BADGE[e.st];
+  det.innerHTML = `
+   <div class="dhead">
+     <span class="did" style="background:${C[e.f]}">${e.id}</span>
+     <span class="ddate">${e.d}</span>
+     <span class="dphase">${e.fase}</span>
+     <span class="badge ${bcls}">${btxt}</span>
+   </div>
+   <div class="dmech"><b>Mecanismo causal</b>${e.mec}</div>
+   <div class="grid">
+     <div class="f"><b>Ator / Grupo</b><span>${e.ator}</span></div>
+     <div class="f"><b>Repertório de ação</b><span>${e.rep}</span></div>
+     <div class="f"><b>Target (alvo)</b><span>${e.tgt}</span></div>
+     <div class="f"><b>Framing</b><span>${e.frm}</span></div>
+     <div class="f"><b>Resposta estatal</b><span>${e.res}</span></div>
+   </div>
+   <div class="src"><b>Fonte:</b> ${e.src}${e.url?` · <a href="${e.url}" target="_blank" rel="noopener">abrir fonte ↗</a>`:''}</div>`;
+  det.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+document.querySelectorAll('.chip[data-f]').forEach(b=>{
+  b.addEventListener('click',()=>{ const f=b.dataset.f; off[f]=!off[f];
+    b.classList.toggle('off',!!off[f]); render(); });
+});
+document.querySelectorAll('.chip.mode').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.chip.mode').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on'); mode=b.dataset.mode; render();
+  });
+});
+render();
+</script>
+</body>
+</html>

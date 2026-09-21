@@ -54,7 +54,7 @@ Acrescentada a nota 1, na primeira ocorrência da cifra:
 
 > Dos 58 títulos: 50 confirmados, 6 não localizados e 2 disponíveis apenas em autoarquivamento. A cifra de 48 registrada na documentação de método exclui os dois de autoarquivamento; adota-se 50, com o critério declarado.
 
-A divergência entre `LEIA-ME_metodologia_verificacao.md` (48) e a contagem por status da planilha (50) deixa de ser uma inconsistência entre documentos do dossiê e passa a ser um critério de contagem explicitado. Neutraliza a pergunta na entrevista. **A reconciliação é uma proposta minha e continua sujeita à sua conferência** — a origem da diferença não foi verificada nos dados, apenas inferida da aritmética (50 + 6 + 2 = 58).
+A divergência entre `../docs/LEIA-ME_metodologia_verificacao.md` (48) e a contagem por status da planilha (50) deixa de ser uma inconsistência entre documentos do dossiê e passa a ser um critério de contagem explicitado. Neutraliza a pergunta na entrevista. **A reconciliação é uma proposta minha e continua sujeita à sua conferência** — a origem da diferença não foi verificada nos dados, apenas inferida da aritmética (50 + 6 + 2 = 58).
 
 ### 4. Falseabilidade explicitada nos métodos (§3, item 2)
 

@@ -17,7 +17,7 @@ O ciclo regenera os formatos derivados, refaz a auditoria e roda as duas checage
 
 1. **O JSON é a única fonte da verdade.** `process_tracing_8jan_eventos.json` é o que se edita. CSV e XLSX são gerados e sobrescritos sem aviso.
 2. **Toda fonte nova entra com procedência declarada** no dicionário `PROCEDENCIA`, em `scripts/gerar_codebook.py`, e no inventário `Fontes/LEIA-ME_fontes.md`. A terceira checagem falha se um arquivo ficar sem declaração.
-3. **Todo número é conferido contra a fonte, nunca contra outra citação dela.** O modo de falha recorrente do projeto é a cifra correta aplicada ao referente errado — aconteceu cinco vezes, e cada caso está registrado em `PENDENCIAS-ANALITICAS.md`.
+3. **Todo número é conferido contra a fonte, nunca contra outra citação dela.** O modo de falha recorrente do projeto é a cifra correta aplicada ao referente errado — aconteceu cinco vezes, e cada caso está registrado em `docs/PENDENCIAS-ANALITICAS.md`.
 4. **Nada se afirma sem ter sido lido.** Quando a leitura não foi possível, a peça entra como catalogação de metadados, com a limitação escrita.
 5. **Alteração que exige julgamento não se executa por conta própria** — vai para a agenda de pendências e espera decisão do pesquisador.
 
@@ -35,9 +35,9 @@ A estrutura segue os princípios do padrão *Cookiecutter Data Science* — dado
 | `reports/` | `AUDITORIA-FONTES.md`, a auditoria de vínculos, **gerada** | `reports` |
 | `reports/figures/` | Figura da cadeia causal (SVG) e cronologia navegável (HTML) | `reports/figures` |
 | `process_tracing_8jan_relatorio.md` | Relatório de pesquisa, escrito à mão. Segue na raiz | `reports` |
-| `PENDENCIAS-ANALITICAS.md` | **A agenda.** O que está aberto e o que espera decisão sua | `docs` |
-| `ESTIMATIVA-MULTIDAO-8JAN.md`, `LEIA-ME_metodologia_verificacao.md` | Dossiês de método e de decisão sobre cifras | `docs` |
-| `levantamento_8_de_janeiro_*.csv/.xlsx` | Levantamento bibliográfico original, coletado à mão | `data/external` |
+| `docs/PENDENCIAS-ANALITICAS.md` | **A agenda.** O que está aberto e o que espera decisão sua | `docs` |
+| `docs/ESTIMATIVA-MULTIDAO-8JAN.md`, `docs/LEIA-ME_metodologia_verificacao.md` | Dossiês de método e de decisão sobre cifras | `docs` |
+| `data/external/levantamento_8_de_janeiro_*` | Levantamento bibliográfico original, coletado à mão | `data/external` |
 | `projeto-pos-doc/` | Dossiê de candidatura ao PIPD/CAPES. Lê do repositório, não escreve nele | `reports` |
 | `.backup_pre_lula/` | Cópias manuais anteriores ao controle de versão. Redundantes desde que o histórico do git existe | — |
 
@@ -45,7 +45,7 @@ Uma migração antiga, `scripts/migrar_esquema16.py`, ainda aponta para o CSV na
 
 ## Por onde começar a ler
 
-1. `PENDENCIAS-ANALITICAS.md` — o painel de estado e a ordem de ataque.
+1. `docs/PENDENCIAS-ANALITICAS.md` — o painel de estado e a ordem de ataque.
 2. `reports/AUDITORIA-FONTES.md` — onde está o documento que sustenta cada afirmação, e em que página.
 3. `scripts/LEIA-ME.md` — o ciclo, os scripts e a ressalva que importa: a checagem estrutural não pega vínculo que aponta para o documento errado, e por isso as duas rodam sempre juntas.
 

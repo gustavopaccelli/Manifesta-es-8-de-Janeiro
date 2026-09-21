@@ -88,13 +88,13 @@ As 58 do levantamento e as 20 do eixo Lava Jato entraram no `06_` **com o status
 
 ## Três divergências encontradas — e não resolvidas por conta própria
 
-**1. 48 ou 50 referências confirmadas?** `LEIA-ME_metodologia_verificacao.md` diz 48; a contagem por status na planilha dá **50 confirmadas, 6 não localizadas, 2 só em autoarquivamento** (soma 58, que fecha). Usei 50. As duas de autoarquivamento são a explicação provável da diferença — decisão sua.
+**1. 48 ou 50 referências confirmadas?** `../docs/LEIA-ME_metodologia_verificacao.md` diz 48; a contagem por status na planilha dá **50 confirmadas, 6 não localizadas, 2 só em autoarquivamento** (soma 58, que fecha). Usei 50. As duas de autoarquivamento são a explicação provável da diferença — decisão sua.
 
 **2. Metadados divergentes em Alonso (2017) e Gohn.** A tese registra Alonso em número "Especial"; o CrossRef dá **v. 37**. A tese data Gohn em 2019; o CrossRef registra 2020, com DOI e volume de 2019. Mantive o dado do CrossRef, que é verificável.
 
 **3. Tatagiba & Galvão (2019) tem errata publicada** (`10.1590/1807-01912019252472`), não consultada. Verificar antes de citar dados numéricos do artigo.
 
-**Além disso, um defeito de arquivo:** a segunda aba de `levantamento_8_de_janeiro_organizado.xlsx` (`levantamento_8_de_janeiro_verif`) é uma importação malformada — cabeçalho todo em uma célula, acentuação corrompida. Só a primeira aba é utilizável. Não a removi.
+**Além disso, um defeito de arquivo:** a segunda aba de `../data/external/levantamento_8_de_janeiro_organizado.xlsx` (`levantamento_8_de_janeiro_verif`) é uma importação malformada — cabeçalho todo em uma célula, acentuação corrompida. Só a primeira aba é utilizável. Não a removi.
 
 ---
 

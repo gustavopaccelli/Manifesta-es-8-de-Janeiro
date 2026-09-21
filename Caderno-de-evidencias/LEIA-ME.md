@@ -37,7 +37,7 @@ A numeração impressa do relatório da CPMI **coincide com a paginação do PDF
 
 **Os mecanismos causais são atribuições do pesquisador.** Estão aqui apenas para vincular cada evidência à sua função no argumento. Nenhum deles é citação da fonte.
 
-**Há problemas de proveniência conhecidos** (a lista completa está ao final). O mais grave deles — a cifra de "cerca de 4 mil pessoas" na Praça dos Três Poderes às 15h26, em PT-34 — foi **resolvido em 16/08/2026: o número foi retirado**. Não tinha lastro em fonte primária nem corroboração jornalística independente; na própria CPMI, "4 mil" refere-se ao pico do acampamento em 15/11/2022 (p. 532) e ao depoimento do gen. Augusto Heleno (p. 1324). Em seu lugar entrou uma faixa de 3.000 a 5.500 no conjunto mobilizado, sustentada por duas medições oficiais independentes. Dossiê em [`../ESTIMATIVA-MULTIDAO-8JAN.md`](../ESTIMATIVA-MULTIDAO-8JAN.md).
+**Há problemas de proveniência conhecidos** (a lista completa está ao final). O mais grave deles — a cifra de "cerca de 4 mil pessoas" na Praça dos Três Poderes às 15h26, em PT-34 — foi **resolvido em 16/08/2026: o número foi retirado**. Não tinha lastro em fonte primária nem corroboração jornalística independente; na própria CPMI, "4 mil" refere-se ao pico do acampamento em 15/11/2022 (p. 532) e ao depoimento do gen. Augusto Heleno (p. 1324). Em seu lugar entrou uma faixa de 3.000 a 5.500 no conjunto mobilizado, sustentada por duas medições oficiais independentes. Dossiê em [`../docs/ESTIMATIVA-MULTIDAO-8JAN.md`](../docs/ESTIMATIVA-MULTIDAO-8JAN.md).
 
 ## O que ainda não está aqui
 

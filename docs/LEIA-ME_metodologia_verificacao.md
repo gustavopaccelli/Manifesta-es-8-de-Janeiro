@@ -2,7 +2,7 @@
 
 ## O que foi feito
 
-Você pediu para eu verificar e organizar em tabela a lista de ~58 referências que o OpenScience gerou, sinalizando o que fosse duvidoso (sem descartar nada) e aplicando as categorias de Process Tracing/PEA do projeto. É isso que está no arquivo `levantamento_8_de_janeiro_verificado.csv`.
+Você pediu para eu verificar e organizar em tabela a lista de ~58 referências que o OpenScience gerou, sinalizando o que fosse duvidoso (sem descartar nada) e aplicando as categorias de Process Tracing/PEA do projeto. É isso que está no arquivo `data/external/levantamento_8_de_janeiro_verificado.csv`.
 
 Cada referência foi checada individualmente:
 - **Com DOI**: consultei diretamente a API do CrossRef (api.crossref.org), que é a base oficial de metadados de publicações acadêmicas. Trouxe título, autores, periódico e resumo (quando o CrossRef o disponibiliza — muitas revistas não registram o abstract ali).
@@ -32,7 +32,7 @@ O item de Amaral (2024), "Brazil as a Laboratory for Fascist Uprising", vinha co
 
 ## Arquivo
 
-`levantamento_8_de_janeiro_verificado.csv` — abre em Excel, Google Sheets ou LibreOffice Calc. Colunas: Nº, Autor(es), Título, Periódico/Fonte, DOI, Link, Status de verificação, Resumo, Metodologia, Relevância ao 8/1, Fase do processo, Observações.
+`data/external/levantamento_8_de_janeiro_verificado.csv` — abre em Excel, Google Sheets ou LibreOffice Calc. Colunas: Nº, Autor(es), Título, Periódico/Fonte, DOI, Link, Status de verificação, Resumo, Metodologia, Relevância ao 8/1, Fase do processo, Observações.
 
 ---
 
@@ -48,6 +48,6 @@ Recomendo abrir um **quinto eixo** na Seção 1 do inventário de corpus, com tr
 2. **Separar as duas perguntas.** Uma coisa é a literatura sobre o *mérito* das decisões judiciais; outra é a literatura sobre *efeitos da judicialização na competição política*. É a segunda que a pesquisa precisa — a primeira só interessa como objeto de disputa a ser reportado, não como fundamento.
 3. **Verificação.** Aplicar o mesmo protocolo já usado aqui (CrossRef para itens com DOI; confirmação em página oficial de periódico ou repositório para os demais) antes de incorporar qualquer item ao corpus.
 
-As fontes primárias do arco judicial **já foram obtidas** e estão em `Fontes/01_Arco-judicial_2017-2021/` — inclusive o acórdão do TSE, obtido em 16/08/2026 pela Consulta Unificada PJe, sem captcha. Inventário completo, pendências e nota técnica de acesso em [`Fontes/LEIA-ME_fontes.md`](Fontes/LEIA-ME_fontes.md).
+As fontes primárias do arco judicial **já foram obtidas** e estão em `Fontes/01_Arco-judicial_2017-2021/` — inclusive o acórdão do TSE, obtido em 16/08/2026 pela Consulta Unificada PJe, sem captcha. Inventário completo, pendências e nota técnica de acesso em [`Fontes/LEIA-ME_fontes.md`](../Fontes/LEIA-ME_fontes.md).
 
 A antiga pasta `Referências/` foi consolidada em `Fontes/05_Bibliografia-teorica/`.

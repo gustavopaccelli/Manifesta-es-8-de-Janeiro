@@ -271,8 +271,8 @@ def main():
     w("3. **Não resolve as ressalvas de proveniência.** A auditoria as classifica; não as fecha. "
       "PT-34 — a mais grave, os \"4 mil\" sem lastro — **foi fechada em 16/08/2026 por trabalho "
       "próprio**, com a cifra retirada e substituída por faixa ancorada em duas medições oficiais "
-      "independentes (ver `ESTIMATIVA-MULTIDAO-8JAN.md`). PT-12, PT-17 e PT-52 seguem abertas, "
-      "detalhadas no item 7 de `PENDENCIAS-ANALITICAS.md`.")
+      "independentes (ver `docs/ESTIMATIVA-MULTIDAO-8JAN.md`). PT-12, PT-17 e PT-52 seguem abertas, "
+      "detalhadas no item 7 de `docs/PENDENCIAS-ANALITICAS.md`.")
     w("")
     w("---")
     w("")

@@ -13,7 +13,7 @@ Sem esse eixo, o artigo afirmaria que a arena judicial reconfigurou a competiç�
 | `bibliografia_eixo_lava-jato.csv` | 20 referências, 9 colunas, legível por máquina |
 | `bibliografia_comentada.md` | As mesmas, agrupadas por subeixo, com nota sobre o que cada uma serve no projeto |
 
-Protocolo de verificação: consulta à **API do CrossRef** por título, comparando o ano retornado com o da busca original — o mesmo protocolo usado no levantamento de 2026-08 (ver `LEIA-ME_metodologia_verificacao.md` na raiz).
+Protocolo de verificação: consulta à **API do CrossRef** por título, comparando o ano retornado com o da busca original — o mesmo protocolo usado no levantamento de 2026-08 (ver `../../docs/LEIA-ME_metodologia_verificacao.md` na raiz).
 
 **18 das 20 têm DOI confirmado.** Duas ressalvas anotadas na coluna de status:
 

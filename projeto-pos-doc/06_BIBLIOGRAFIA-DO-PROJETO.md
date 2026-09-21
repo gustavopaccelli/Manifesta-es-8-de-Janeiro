@@ -2,7 +2,7 @@
 
 > **Documento de apoio, não submetido como item do edital.** O projeto de pesquisa (`01_PROJETO-PESQUISA.md`) cita em texto apenas as referências que fazem trabalho argumentativo direto, por causa do limite de 2.500 palavras. Este arquivo guarda o aparato completo.
 
-> **Procedência das entradas.** As 58 referências sobre o 8 de Janeiro vêm da coluna `Referência Bibliográfica` de `levantamento_8_de_janeiro_organizado.xlsx` — **copiadas, não retranscritas**, para eliminar erro de transcrição. As 20 do eixo Lava Jato vêm de `Fontes/06_Lava-Jato-judicializacao-lawfare/bibliografia_eixo_lava-jato.csv`. O status de verificação de cada item é o registrado na origem.
+> **Procedência das entradas.** As 58 referências sobre o 8 de Janeiro vêm da coluna `Referência Bibliográfica` de `../data/external/levantamento_8_de_janeiro_organizado.xlsx` — **copiadas, não retranscritas**, para eliminar erro de transcrição. As 20 do eixo Lava Jato vêm de `Fontes/06_Lava-Jato-judicializacao-lawfare/bibliografia_eixo_lava-jato.csv`. O status de verificação de cada item é o registrado na origem.
 
 > ⚠️ **Advertência que vale para todo este documento.** Salvo onde indicado, **estas obras não foram lidas na íntegra** — o status confirma que a referência *existe* e que os metadados conferem, não que seu conteúdo tenha sido examinado. Elas são citadas no projeto como *posições no campo*, nunca como sustentação de autoridade. A leitura integral e a recodificação por camada são a atividade do 1º semestre do cronograma.
 
@@ -283,7 +283,7 @@ Estas são as obras que fazem o trabalho de **integração**, e não de cobertur
 
 Registradas porque o projeto trata cifra e metadado com o mesmo rigor, e porque nenhuma delas foi resolvida por conta própria.
 
-**1. Quantas referências estão confirmadas: 48 ou 50?** `LEIA-ME_metodologia_verificacao.md` afirma "a esmagadora maioria (48) foi confirmada". A contagem por status na planilha dá outro resultado: **50 confirmadas, 6 não localizadas e 2 localizadas apenas em repositório de autoarquivamento** — soma 58, que fecha. Adotei 50 e registro a divergência para decisão do pesquisador. As duas de autoarquivamento (itens 22 e 39) são provavelmente a origem da diferença, se tiverem sido contadas como não confirmadas.
+**1. Quantas referências estão confirmadas: 48 ou 50?** `../docs/LEIA-ME_metodologia_verificacao.md` afirma "a esmagadora maioria (48) foi confirmada". A contagem por status na planilha dá outro resultado: **50 confirmadas, 6 não localizadas e 2 localizadas apenas em repositório de autoarquivamento** — soma 58, que fecha. Adotei 50 e registro a divergência para decisão do pesquisador. As duas de autoarquivamento (itens 22 e 39) são provavelmente a origem da diferença, se tiverem sido contadas como não confirmadas.
 
 **2. Alonso (2017) e Gohn (2019) têm metadados divergentes entre a tese e o CrossRef.** A tese registra Alonso em número "Especial" de *Novos Estudos*; o CrossRef retorna **v. 37**, p. 49-58. A tese registra Gohn em 2019; o CrossRef data o registro em **2020**, embora o DOI contenha `2019` e o volume 6, n. 1 corresponda a 2019. Em ambos os casos mantive a paginação e o DOI do CrossRef, que é o dado verificável, e sinalizo a divergência de referência.
 
@@ -293,4 +293,4 @@ Registradas porque o projeto trata cifra e metadado com o mesmo rigor, e porque 
 
 ## Defeito de arquivo a corrigir na origem
 
-A segunda aba de `levantamento_8_de_janeiro_organizado.xlsx`, chamada `levantamento_8_de_janeiro_verif`, é uma **importação malformada** do CSV: todo o cabeçalho está numa única célula e a acentuação veio corrompida (`NÂº`, `TÃ­tulo`, `PeriÃ³dico`). Só a aba `Levantamento_Organizado` é utilizável, e foi a única usada aqui. A aba defeituosa não foi removida — é decisão do pesquisador.
+A segunda aba de `../data/external/levantamento_8_de_janeiro_organizado.xlsx`, chamada `levantamento_8_de_janeiro_verif`, é uma **importação malformada** do CSV: todo o cabeçalho está numa única célula e a acentuação veio corrompida (`NÂº`, `TÃ­tulo`, `PeriÃ³dico`). Só a aba `Levantamento_Organizado` é utilizável, e foi a única usada aqui. A aba defeituosa não foi removida — é decisão do pesquisador.

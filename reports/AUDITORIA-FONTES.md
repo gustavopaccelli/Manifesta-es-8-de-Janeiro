@@ -235,7 +235,7 @@ Três limites, declarados para que ninguém leia mais do que ela oferece.
 
 1. **Não confere, para todos os 81, se a página sustenta a afirmação.** A checagem estrutural verifica que o vínculo existe, que o arquivo está em disco e que a página pertence ao documento vinculado. A conferência do *conteúdo* contra o texto do PDF é feita **por amostra** — `scripts/conferir_paginas.py`, 12 registros por rodada, ou `--todos` para os 68 com página. A transcrição literal de 49 registros está no `Caderno-de-evidencias/`.
 2. **Não avalia a qualidade da fonte.** Que um registro esteja ancorado no relatório Cappelli não o torna verdadeiro — torna-o rastreável. E o Cappelli, registre-se, é **espelho jornalístico**: traz identificação oficial mas não foi localizado em domínio oficial. Isso está declarado no inventário e precisa constar da nota de fontes do artigo.
-3. **Não resolve as ressalvas de proveniência.** A auditoria as classifica; não as fecha. PT-34 — a mais grave, os "4 mil" sem lastro — **foi fechada em 16/08/2026 por trabalho próprio**, com a cifra retirada e substituída por faixa ancorada em duas medições oficiais independentes (ver `ESTIMATIVA-MULTIDAO-8JAN.md`). PT-12, PT-17 e PT-52 seguem abertas, detalhadas no item 7 de `PENDENCIAS-ANALITICAS.md`.
+3. **Não resolve as ressalvas de proveniência.** A auditoria as classifica; não as fecha. PT-34 — a mais grave, os "4 mil" sem lastro — **foi fechada em 16/08/2026 por trabalho próprio**, com a cifra retirada e substituída por faixa ancorada em duas medições oficiais independentes (ver `docs/ESTIMATIVA-MULTIDAO-8JAN.md`). PT-12, PT-17 e PT-52 seguem abertas, detalhadas no item 7 de `docs/PENDENCIAS-ANALITICAS.md`.
 
 ---
 

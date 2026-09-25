@@ -18,14 +18,14 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Caderno de evidências | **49 registros** com página e transcrição literal |
 | Corpus documental | **22 PDFs / 6.928 p.** + o acórdão do TSE em HTML + 6 matérias arquivadas contra link rot + 5 sínteses. Duas peças sem camada de texto, declaradas |
 | Figuras | SVG da cadeia causal e cronologia navegável — **realinhadas ao codebook em 25/09**, 82 registros cobertos. São a única parte do aparato escrita à mão |
-| Relatório de pesquisa | `reports/process_tracing_8jan_relatorio.md` — §3.2 corrigido em 11/09; "Próximos passos" reescrita em 25/09. **É a peça que reproduz números do codebook e ainda não tem checagem no ciclo** |
-| Verificação | `bash scripts/ciclo.sh` — cinco passos: dois geradores e três checagens, todas com código de saída ≠ 0 em caso de falha |
+| Relatório de pesquisa | `reports/process_tracing_8jan_relatorio.md` — §3.2 corrigido em 11/09; §2.1 e a tabela da Etapa 2 em 25/09; "Próximos passos" reescrita na mesma data. Agora tem checagem no ciclo |
+| Verificação | `bash scripts/ciclo.sh` — seis passos: dois geradores e quatro checagens, todas com código de saída ≠ 0 em caso de falha |
 | Controle de versão | git desde 20/09/2026, sem remoto configurado |
 | Eixo bibliográfico Lava Jato | 20 referências, 18 com DOI confirmado |
 | **Redação do artigo** | **não iniciada — por decisão, é o último item da fila** |
 
 **Fechados na rodada de 16/08/2026:** itens 1, 2 e 8, mais os seis novos — **12** (auditoria de fontes), **13** (estimativa de multidão), **14** (ressalvas restantes), **15** (balanço de 2026 e campanha), **16** (Manchetômetro → PT-50A), **17** (acórdão do TSE) e **18** (execução penal e arquivamento web).
-**Fechados depois:** **19** (11/09 — relatório e páginas da execução penal), **20** (20/09 — reorganização pelo Cookiecutter Data Science) e **21** (25/09 — figuras e quinto passo do ciclo).
+**Fechados depois:** **19** (11/09 — relatório e páginas da execução penal), **20** (20/09 — reorganização pelo Cookiecutter Data Science) e **21** (25/09 — figuras, relatório e os dois novos passos do ciclo).
 **Abertos e de redação:** itens 3, 4, 5, 6, 9 e 10.
 **Abertos e de verificação:** item 7 (proveniência) e item 11 (coleta) estão **encerrados**. Nenhuma pendência de dado depende de você — as que restam são decisões, e estão no item 21.4.
 
@@ -570,9 +570,9 @@ Na cronologia interativa entraram ainda duas mudanças de estrutura: o selo de s
 
 **`reports/figures/` é a única parte do aparato que não é gerada.** A cronologia interativa carrega uma cópia manual dos 82 registros dentro do `<script>`; o SVG é rótulo por rótulo, em coordenadas absolutas. Editar o JSON não as atualiza, e **nada no ciclo percebia**: `verificar_integridade.py` cobre JSON ↔ CSV ↔ XLSX ↔ `Fontes/`, e as figuras estão fora desse circuito.
 
-### 21.3 A correção estrutural: `conferir_figuras.py`, quinto passo do ciclo
+### 21.3 A correção estrutural: `conferir_figuras.py` entra no ciclo
 
-Quatro checagens: cobertura dos 82 ids, selo de status contra `status_classe`, uso de "fonte primária" só onde o codebook confirma, e 11 cifras mortas procuradas no SVG, cada uma com o registro onde foi retirada. Entrou como passo 4 de 5 em `scripts/ciclo.sh`, e foi testado por injeção de defeito — reprova nos cinco casos ensaiados: selo trocado, "fonte primária" indevida, id inexistente, cifra morta ressuscitada no SVG e contagem antiga.
+Quatro checagens: cobertura dos 82 ids, selo de status contra `status_classe`, uso de "fonte primária" só onde o codebook confirma, e 11 cifras mortas procuradas no SVG, cada uma com o registro onde foi retirada. Entrou como passo 4 de 6 em `scripts/ciclo.sh`, e foi testado por injeção de defeito — reprova nos cinco casos ensaiados: selo trocado, "fonte primária" indevida, id inexistente, cifra morta ressuscitada no SVG e contagem antiga.
 
 **O que ele não faz, e está declarado no cabeçalho:** compara o que as figuras *declaram*, não o conteúdo dos rótulos. Uma cifra nova e errada passa por ele, como passaria pelo estrutural. A correção das figuras continua manual.
 
@@ -589,6 +589,25 @@ Nenhum destes é falta de dado. Todos são escolha.
 5. **Divergências figura ↔ codebook que o verificador não cobre:** PT-17 e PT-18 preenchem *Target* e *Framing* no HTML onde o codebook traz "—"; PT-38 omite a restauração e os 106 itens de valor imensurável.
 6. **`.backup_pre_lula/`** ficou redundante desde que existe histórico git. Apagar?
 7. **Licença e remoto do git** — nenhum dos dois definido.
+
+### 21.5 O relatório também entrou no ciclo — e já tinha três defasagens
+
+`scripts/conferir_relatorio.py`, criado na mesma rodada, fecha o último buraco: o relatório de pesquisa era a peça que reproduzia números do codebook sem nenhuma checagem. Quatro comparações — cobertura da tabela da Etapa 2 contra os ids do codebook, páginas citadas contra `fonte_pagina`, cifras retiradas linha a linha, e caminhos citados em *code span*.
+
+**Na primeira execução achou quatro divergências, todas reais:**
+
+| Onde | O que estava |
+|:--|:--|
+| §2.1, narrativa das 13h00 | "a **9 km** em linha reta dos três edifícios pelo Eixo Monumental" — são **7,9 km pela via N1, com escolta da PMDF** (CPMI, p. 645 e 648), corrigido no codebook desde 12/08 |
+| Tabela da Etapa 2, linha PT-24 | repetia "**Marcha (9 km)**" |
+| §2.6 | `Fontes/01_` era abreviação de prosa, não caminho — vira `Fontes/01_Arco-judicial_2017-2021/` |
+| PT-10 | a tabela citava "CPMI, p. 999, **1021** e 1023" e o `fonte_pagina` trazia só 999 e 1023 |
+
+**O caso PT-10 inverte a expectativa e por isso vale registro.** Nas duas rodadas anteriores o JSON estava certo e a peça derivada, errada. Aqui foi o contrário: o relatório citava a página certa e o campo estruturado do codebook a havia perdido — o próprio registro nomeia as três páginas em `fonte_trecho` e em `status_verificacao`. A p. 1021 foi lida no PDF antes da correção e sustenta a afirmação: o diretor-geral da PRF declara ali que "essa foi, talvez, a maior manifestação do mundo, com **1,3 mil bloqueios montados**", a mesma cifra que a p. 999 registra como "um total de 1.300 pontos de interdição no País". Corrigido por `scripts/recodificar_pagina_pt10.py`.
+
+**O limite dos dois verificadores, declarado:** comparam o que a peça *declara* — ids, páginas, selo, cifras mortas, caminhos —, não a prosa. Uma cifra nova e errada passa; uma afirmação causal sem lastro passa. Eles pegam **regressão declarada**, não erro de interpretação.
+
+Os dois foram testados por injeção de defeito, um de cada vez, com a árvore restaurada em seguida. O do relatório reprova nos sete casos ensaiados: registro que some da tabela, id inexistente, página não ancorada, página de um documento atribuída a outro, cifra morta ressuscitada, vocabulário revertido para "condenados" e contagem antiga no cabeçalho.
 
 ---
 
@@ -617,6 +636,7 @@ Nenhum destes é falta de dado. Todos são escolha.
 | — | ~~Realinhar as duas figuras ao codebook~~ | 21.1 | ✅ 25/09 |
 | — | ~~Fechar o buraco: `conferir_figuras.py` no ciclo~~ | 21.3 | ✅ 25/09 |
 | — | ~~Reescrever "Próximos passos recomendados" no relatório~~ — parava em 14/08 e contrariava a ordem de 16/08 | 21.4 | ✅ 25/09 |
+| — | ~~Fechar o último buraco: `conferir_relatorio.py` no ciclo~~ — achou quatro divergências na primeira execução | 21.5 | ✅ 25/09 |
 
 ### Abertas
 
@@ -634,4 +654,4 @@ Nenhum destes é falta de dado. Todos são escolha.
 
 **Quando a redação começar**, os itens 3, 4 e 5 desta agenda vêm primeiro: são antecipação de crítica, os pontos que um parecerista atento levantaria, e os que mais mudam o texto. Os itens 6, 9 e 10 são parágrafos de discussão, resolvidos na escrita.
 
-**A lição das três últimas rodadas, que vale como regra de trabalho.** Em 11/09 o relatório estava quase um mês atrás do codebook; em 25/09 as figuras estavam seis semanas atrás. Nos dois casos o JSON estava certo e a peça derivada, errada — e nos dois casos nada avisou, porque o ciclo só cobria o que é gerado por script. **Toda peça escrita à mão que reproduz números do codebook precisa ou virar gerada, ou ganhar uma checagem no ciclo.** O relatório de pesquisa é, hoje, a peça que ainda não tem nenhum dos dois.
+**A lição das três últimas rodadas, que vale como regra de trabalho.** Em 11/09 o relatório estava quase um mês atrás do codebook; em 25/09 as figuras estavam seis semanas atrás. Nos dois casos o JSON estava certo e a peça derivada, errada — e nos dois casos nada avisou, porque o ciclo só cobria o que é gerado por script. **Toda peça escrita à mão que reproduz números do codebook precisa ou virar gerada, ou ganhar uma checagem no ciclo.** As três que existiam — as duas figuras e o relatório — ganharam a sua em 25/09, e a do relatório achou mais três defasagens no primeiro uso. A regra vale para a próxima peça que nascer: se ela repete um número do codebook e ninguém a gera, ela vai envelhecer.

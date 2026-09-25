@@ -546,7 +546,7 @@ A primeira é de **datação**: a tentativa de alterar o resultado precede o res
 5. **Fechar as ressalvas de proveniência.** ✅ **As seis fechadas em 16/08/2026** — PT-34, PT-12, PT-17, PT-52, PT-58 e PT-38 (item 7 da agenda). Três terminaram com a **retirada ou substituição de um número**, e o padrão que emergiu virou rotina de conferência do projeto: cifra correta aplicada ao referente errado.
 6. **Auditar o vínculo registro → documento → página.** ✅ **[`AUDITORIA-FONTES.md`](AUDITORIA-FONTES.md), 16/08/2026**, gerado por script e refeito a cada rodada. Foi ela que revelou que PT-28 citava a CPMI no texto e apontava para o acórdão da AP 2668 no vínculo.
 7. **Completar o arco documental de $T_{+1}$.** ✅ **16/08/2026** — balanço do Gabinete do Min. Moraes, acórdão do TSE (sem captcha, por rota pública) e as três decisões da execução penal, todas em inteiro teor. **Zero registros em "A verificar".**
-8. **Alinhar as peças derivadas ao codebook.** ✅ **11/09 e 25/09/2026** — este relatório (§3.2 e cabeçalho) e as duas figuras de `reports/figures/`, que estavam seis semanas atrás do JSON. A causa foi estrutural e está fechada: `scripts/conferir_figuras.py` entrou como quarto dos cinco passos de `scripts/ciclo.sh`.
+8. **Alinhar as peças derivadas ao codebook.** ✅ **11/09 e 25/09/2026** — este relatório — §3.2 e cabeçalho em 11/09, §2.1 e a tabela da Etapa 2 em 25/09 — e as duas figuras de `reports/figures/`, que estavam seis semanas atrás do JSON. A causa era estrutural e está fechada: nenhuma das três peças é gerada a partir do codebook, e agora `scripts/conferir_figuras.py` e `scripts/conferir_relatorio.py` acusam a defasagem no ciclo. Os dois comparam o que a peça declara, não a prosa.
 
 **Aberto — antes da redação**
 
@@ -563,6 +563,6 @@ A primeira é de **datação**: a tentativa de alterar o resultado precede o res
 
 ---
 
-**Onde o projeto está.** O aparato está pronto, auditado e verificável por um comando: `bash scripts/ciclo.sh` regenera os formatos derivados, refaz a auditoria e roda três checagens — a estrutural, a das figuras e a amostral contra o texto dos PDFs —, falhando se qualquer coisa divergir. São 82 sub-eventos, 60 deles em fonte primária citada por página, num corpus de 22 PDFs e 6.928 páginas. **Nenhuma pendência de dado depende de terceiros.**
+**Onde o projeto está.** O aparato está pronto, auditado e verificável por um comando: `bash scripts/ciclo.sh` regenera os formatos derivados, refaz a auditoria e roda quatro checagens — a estrutural, a das figuras, a do relatório e a amostral contra o texto dos PDFs —, falhando se qualquer coisa divergir. São 82 sub-eventos, 60 deles em fonte primária citada por página, num corpus de 22 PDFs e 6.928 páginas. **Nenhuma pendência de dado depende de terceiros.**
 
 **O que falta antes de escrever** é o item 9, e só ele: a camada conjuntural ainda se apoia em sete registros contextuais, sem codificação sobre literatura lida. É a parte mais fraca do aparato e a mais exposta a um parecerista — e é, por decisão de 16/08/2026, o que vem antes da primeira linha do artigo.

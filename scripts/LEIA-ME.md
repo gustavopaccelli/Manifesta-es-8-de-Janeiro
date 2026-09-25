@@ -34,12 +34,15 @@ python scripts/verificar_integridade.py
 # 6. confira as figuras de reports/figures/ contra o codebook
 python scripts/conferir_figuras.py
 
-# 7. confira a amostra contra o texto dos PDFs
+# 7. confira o relatório de pesquisa contra o codebook
+python scripts/conferir_relatorio.py
+
+# 8. confira a amostra contra o texto dos PDFs
 python scripts/conferir_paginas.py
 ```
 
-Os passos 3 a 7 são o que `bash scripts/ciclo.sh` roda, nessa ordem. Os passos
-5, 6 e 7 devolvem código de saída != 0 em caso de falha, então servem em gancho
+Os passos 3 a 8 são o que `bash scripts/ciclo.sh` roda, nessa ordem. Os passos
+5 a 8 devolvem código de saída != 0 em caso de falha, então servem em gancho
 de pré-commit.
 
 ## Os arquivos
@@ -49,10 +52,12 @@ de pré-commit.
 | `gerar_codebook.py` | JSON → `data/processed/`: CSV (UTF-8 com BOM) + XLSX de quatro abas. Guarda `PROCEDENCIA` (procedência de cada arquivo do corpus) e `PENDENCIAS` (fila de coleta). |
 | `gerar_auditoria.py` | JSON → `reports/AUDITORIA-FONTES.md`. A narrativa vive no script; as tabelas saem dos dados. |
 | `verificar_integridade.py` | Seis checagens **estruturais**. Ver a ressalva abaixo. |
-| `conferir_figuras.py` | As duas peças de `reports/figures/` contra o codebook: cobertura dos registros, selo de status, procedência e cifras já retiradas. **A única parte do aparato que não é gerada** — ver a segunda ressalva. |
+| `conferir_figuras.py` | As duas peças de `reports/figures/` contra o codebook: cobertura dos registros, selo de status, procedência e cifras já retiradas. Ver a segunda ressalva. |
+| `conferir_relatorio.py` | `reports/process_tracing_8jan_relatorio.md` contra o codebook: cobertura da tabela da Etapa 2, páginas citadas × `fonte_pagina`, cifras retiradas e caminhos citados. Ver a segunda ressalva. |
 | `conferir_paginas.py` | Abre o PDF na página citada e procura a transcrição. **A única checagem que lê a fonte.** |
 | `baixar_fontes.sh` | Comandos de coleta do que falta. Não baixa nada sozinho: cada peça é um alvo nomeado. |
 | `migrar_esquema16.py` | Rodada única de 16/08/2026 (12 → 16 campos + correções de auditoria). Idempotente. Mantido como registro da decisão, não faz parte do ciclo. |
+| `recodificar_*.py` | Migrações já executadas, uma por rodada, cada uma idempotente e com o achado que a motivou no cabeçalho. Registro do que foi feito, fora do ciclo. |
 
 ## Duas ressalvas que importam
 
@@ -71,23 +76,35 @@ revelou o descasamento.
 **Consequência prática: rode os dois.** O estrutural é barato e roda em segundos;
 o amostral é lento e cobre 12 registros por vez. Nenhum substitui o outro.
 
-### 2. As figuras não são geradas
+### 2. Três peças não são geradas, e envelhecem em silêncio
 
-`reports/figures/` é a única parte do aparato escrita à mão: a cronologia
-interativa carrega uma cópia dos 82 registros dentro do `<script>`, e o SVG é
-rótulo por rótulo em coordenadas absolutas. Editar o JSON não as atualiza.
+As duas figuras de `reports/figures/` e o relatório de pesquisa reproduzem
+números do codebook **à mão**. A cronologia interativa carrega uma cópia dos 82
+registros dentro do `<script>`; o SVG é rótulo por rótulo em coordenadas
+absolutas; o relatório traz a tabela da Etapa 2 e a cifra em prosa. Editar o
+JSON não atualiza nenhum dos três.
 
-Em 25/09/2026 descobriu-se o custo disso: as duas peças ainda traziam sete
-cifras retiradas em 16/08 e 11/09 — "+1.600 ações penais", "1.402 condenados",
-"~4 mil na Praça", "9 km", "+100 acampamentos", "~1.200 presos" e a prorrogação
-de 03/07/2026. Ficaram seis semanas publicadas numa figura que se apresenta como
-a codificação completa.
+O custo apareceu duas vezes, do mesmo jeito. Em **11/09/2026** o relatório
+carregava "mais de 1.600 ações penais" e "1.402 condenados", quase um mês
+depois de o codebook ter corrigido os dois. Em **25/09/2026** as figuras
+traziam treze divergências, seis delas cifras retiradas — e a correção de
+11/09, que alcançara a §3.2 do relatório, tinha deixado a §2.1 com a marcha de
+"9 km". Nos três casos o JSON estava certo e a peça derivada, errada.
 
-`conferir_figuras.py` existe para que a próxima defasagem apareça no ciclo, e
-não num parecer. Ele compara o que as figuras **declaram** — ids, selo de
-status, procedência, cifras mortas —, não o conteúdo dos rótulos: uma cifra
-nova e errada passa por ele. A correção continua sendo manual, nos dois
-arquivos.
+`conferir_figuras.py` e `conferir_relatorio.py` existem para que a próxima
+defasagem apareça no ciclo, e não num parecer.
+
+**O que os dois fazem é comparar o que a peça declara** — ids, páginas citadas,
+selo de status, cifras já retiradas, caminhos — contra o codebook. **O que não
+fazem é ler a prosa:** uma cifra nova e errada passa, e uma afirmação causal sem
+lastro passa. Eles pegam regressão declarada, não erro de interpretação, e a
+correção continua manual nas três peças.
+
+Um detalhe do `conferir_relatorio.py` que vale conhecer antes de editar o
+relatório: a busca por cifra morta **absolve a linha que também traz a cifra
+correta**. É o que permite ao texto narrar a própria história — "1.335, não
+'mais de 1.600'" — sem disparar alarme. Se você escrever a cifra antiga longe
+da nova, ele reclama, e está certo em reclamar.
 
 ## Dependências
 

@@ -589,6 +589,7 @@ Nenhum destes é falta de dado. Todos são escolha.
 5. **Divergências figura ↔ codebook que o verificador não cobre:** PT-17 e PT-18 preenchem *Target* e *Framing* no HTML onde o codebook traz "—"; PT-38 omite a restauração e os 106 itens de valor imensurável.
 6. **`.backup_pre_lula/`** ficou redundante desde que existe histórico git. Apagar?
 7. **Licença e remoto do git** — nenhum dos dois definido.
+8. **Duas lacunas de `fonte_pagina`, verificadas no PDF** (item 21.6): a p. 274 da CPMI em PT-15, e o Relatório do Interventor Federal — `fonte_local` e p. 57 — em PT-28. As duas mexem no JSON, por isso esperam você.
 
 ### 21.5 O relatório também entrou no ciclo — e já tinha três defasagens
 
@@ -608,6 +609,25 @@ Nenhum destes é falta de dado. Todos são escolha.
 **O limite dos dois verificadores, declarado:** comparam o que a peça *declara* — ids, páginas, selo, cifras mortas, caminhos —, não a prosa. Uma cifra nova e errada passa; uma afirmação causal sem lastro passa. Eles pegam **regressão declarada**, não erro de interpretação.
 
 Os dois foram testados por injeção de defeito, um de cada vez, com a árvore restaurada em seguida. O do relatório reprova nos sete casos ensaiados: registro que some da tabela, id inexistente, página não ancorada, página de um documento atribuída a outro, cifra morta ressuscitada, vocabulário revertido para "condenados" e contagem antiga no cabeçalho.
+
+---
+
+### 21.6 O varredor de `fonte_pagina` — dois candidatos verificados
+
+O caso PT-10 apareceu de raspão: o relatório citava uma página a mais, e por isso a lacuna no campo estruturado ficou visível. Onde nenhuma peça derivada cita, ninguém veria. `scripts/varrer_fonte_pagina.py` compara, nos 82 registros, as páginas citadas na prosa (`fonte_trecho`, `status_verificacao`, `nota_auditoria`) com o que o `fonte_pagina` ancora — 212 citações de página ao todo.
+
+**É triagem, não gate, e fica fora do ciclo.** Página citada na prosa não é, por si, página que falta: pode ser refutação, remissão a outro registro ou menção de passagem. Ele imprime o trecho em volta de cada achado para que a decisão leve segundos, e sai com código 0 por padrão. Testado contra o próprio PT-10: revertendo o campo para o estado anterior, o registro reaparece na lista.
+
+**Oito candidatos. Seis são legítimos** — PT-12 e PT-34 citam páginas para *refutar* uma cifra, PT-39 faz remissão à página de PT-08A, PT-06C remete à denúncia que ancora PT-07, e PT-59 é artefato do varredor ("PGR" ali é parte, não documento). **Dois são lacunas reais, e conferi as duas no PDF antes de afirmar:**
+
+| Registro | O que a prosa diz | O que o campo ancora | Conferido |
+|:--|:--|:--|:--|
+| **PT-15** | "CPMI, p. 25, 53 **e 274**" | `CPMI: 25, 53` | A p. 274 traz o atentado de 12/12/2022 e o pretexto alegado — a prisão do cacique Tserere —, que é justamente o acréscimo que o `status_verificacao` credita a ela |
+| **PT-28** | "Contraprova do Relatório do Interventor Federal (**conclusão G, p. 57**)" | `CPMI: 657`, e o `fonte_local` lista só a CPMI | A p. 57 do Cappelli traz a conclusão G: o comandante-geral esteve em campo, ficou entre os feridos e "perdeu a capacidade de liderar seus comandados diretos" |
+
+PT-28 é da mesma família que a auditoria de 16/08 fechou — "sete registros citavam dois documentos e declaravam apenas um". Este escapou, e é o registro que o codebook trata como *hoop test*.
+
+**As duas correções esperam decisão sua**, porque mexem no JSON: em PT-15 é acrescentar uma página; em PT-28 é acrescentar um documento ao `fonte_local` e sua página ao `fonte_pagina`. Modelo de como fazer: `scripts/recodificar_pagina_pt10.py`.
 
 ---
 
@@ -637,6 +657,7 @@ Os dois foram testados por injeção de defeito, um de cada vez, com a árvore r
 | — | ~~Fechar o buraco: `conferir_figuras.py` no ciclo~~ | 21.3 | ✅ 25/09 |
 | — | ~~Reescrever "Próximos passos recomendados" no relatório~~ — parava em 14/08 e contrariava a ordem de 16/08 | 21.4 | ✅ 25/09 |
 | — | ~~Fechar o último buraco: `conferir_relatorio.py` no ciclo~~ — achou quatro divergências na primeira execução | 21.5 | ✅ 25/09 |
+| — | ~~Varrer `fonte_pagina` contra a prosa dos 82 registros~~ — 8 candidatos, 2 lacunas reais | 21.6 | ✅ 25/09 |
 
 ### Abertas
 

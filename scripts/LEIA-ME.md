@@ -57,9 +57,10 @@ de pré-commit.
 | `conferir_paginas.py` | Abre o PDF na página citada e procura a transcrição. **A única checagem que lê a fonte.** |
 | `baixar_fontes.sh` | Comandos de coleta do que falta. Não baixa nada sozinho: cada peça é um alvo nomeado. |
 | `migrar_esquema16.py` | Rodada única de 16/08/2026 (12 → 16 campos + correções de auditoria). Idempotente. Mantido como registro da decisão, não faz parte do ciclo. |
+| `varrer_fonte_pagina.py` | **Triagem, fora do ciclo.** Compara as páginas citadas na prosa dos registros (`fonte_trecho`, `status_verificacao`, `nota_auditoria`) com o campo estruturado `fonte_pagina`, e imprime o trecho em volta de cada divergência. Nem todo achado é lacuna — ver a terceira ressalva. |
 | `recodificar_*.py` | Migrações já executadas, uma por rodada, cada uma idempotente e com o achado que a motivou no cabeçalho. Registro do que foi feito, fora do ciclo. |
 
-## Duas ressalvas que importam
+## Três ressalvas que importam
 
 ### 1. O estrutural não pega vínculo errado
 
@@ -105,6 +106,31 @@ relatório: a busca por cifra morta **absolve a linha que também traz a cifra
 correta**. É o que permite ao texto narrar a própria história — "1.335, não
 'mais de 1.600'" — sem disparar alarme. Se você escrever a cifra antiga longe
 da nova, ele reclama, e está certo em reclamar.
+
+### 3. `fonte_pagina` e a prosa podem divergir
+
+O campo `fonte_pagina` é o que as ferramentas leem. A prosa dos registros —
+`fonte_trecho`, `status_verificacao`, `nota_auditoria` — também cita páginas, e
+nada no ciclo compara as duas. Em 25/09/2026 divergiram: PT-10 ancorava "CPMI:
+999, 1023" e a própria prosa dizia "p. 999, 1021 e 1023". A p. 1021 sustenta a
+cifra dos bloqueios e tinha sumido do campo estruturado.
+
+Aquilo apareceu de raspão, porque o relatório citava a página a mais. Onde
+nenhuma peça derivada cita, ninguém vê. `varrer_fonte_pagina.py` olha os 82 de
+uma vez.
+
+**Ele é triagem, não gate, e por isso fica fora do ciclo.** Boa parte do que
+levanta é legítima: página citada para refutar, remissão a outro registro,
+menção de passagem a documento que o registro não precisa ancorar. Ele imprime
+o trecho em volta de cada achado justamente para que a triagem leve segundos, e
+sai com código 0 por padrão — `--estrito` sai com 1 havendo achados, se um dia
+você quiser prendê-lo a um gancho.
+
+O limite é de leitura, não de implementação: ele atribui cada "p. N" ao
+documento nomeado mais perto, antes dela, e erra quando a prosa volta a um
+documento anterior sem renomeá-lo. Duas salvaguardas reduzem o estrago —
+páginas já ancoradas sob outro documento do mesmo registro são silenciadas
+(`--tudo` mostra quais), e o trecho impresso deixa o engano visível.
 
 ## Dependências
 

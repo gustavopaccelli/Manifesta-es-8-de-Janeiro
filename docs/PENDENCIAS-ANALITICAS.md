@@ -1,14 +1,14 @@
 # Pendências analíticas — pontos a incorporar na redação do artigo
 
-Registro aberto em **12/08/2026** · **atualizado em 16/08/2026**. Não é codebook nem fonte: é a **agenda** do que ficou em aberto ao longo da verificação documental, e que precisa de decisão do pesquisador na hora de escrever.
+Registro aberto em **12/08/2026** · **atualizado em 25/09/2026**. Não é codebook nem fonte: é a **agenda** do que ficou em aberto ao longo da verificação documental, e que precisa de decisão do pesquisador na hora de escrever.
 
 Está fora do codebook de propósito. Codebook guarda dados; isto guarda perguntas. Misturá-los estraga os dois.
 
 ---
 
-## Painel de estado — 16/08/2026
+## Painel de estado — 25/09/2026
 
-**O aparato está pronto e agora está auditado; o artigo não começou.** Por decisão do pesquisador em 16/08/2026, a redação passou a ser o **último** item da fila: o conjunto de dados de todo o processo político vem primeiro.
+**O aparato está pronto, auditado, versionado e verificável por um comando; o artigo não começou.** Por decisão do pesquisador em 16/08/2026, a redação passou a ser o **último** item da fila: o conjunto de dados de todo o processo político vem primeiro. Nada mudou nessa decisão desde então.
 
 | Frente | Estado |
 |:--|:--|
@@ -17,13 +17,17 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Classes de verificação | **60 em fonte primária** · 14 confirmados por outra via · 7 contextuais · **0 a verificar** · 1 inferência declarada |
 | Caderno de evidências | **49 registros** com página e transcrição literal |
 | Corpus documental | **22 PDFs / 6.928 p.** + o acórdão do TSE em HTML + 6 matérias arquivadas contra link rot + 5 sínteses. Duas peças sem camada de texto, declaradas |
-| Cronologia interativa | 73 pontos + 3 faixas, sincronizada com o JSON |
+| Figuras | SVG da cadeia causal e cronologia navegável — **realinhadas ao codebook em 25/09**, 82 registros cobertos. São a única parte do aparato escrita à mão |
+| Relatório de pesquisa | `reports/process_tracing_8jan_relatorio.md` — §3.2 corrigido em 11/09. A seção "Próximos passos" **continua parada em 14/08** e contraria a ordem de 16/08 |
+| Verificação | `bash scripts/ciclo.sh` — cinco passos: dois geradores e três checagens, todas com código de saída ≠ 0 em caso de falha |
+| Controle de versão | git desde 20/09/2026, sem remoto configurado |
 | Eixo bibliográfico Lava Jato | 20 referências, 18 com DOI confirmado |
-| **Redação do artigo** | **não iniciada — por decisão, é o item 12 de 12** |
+| **Redação do artigo** | **não iniciada — por decisão, é o último item da fila** |
 
-**Fechados nesta rodada de trabalho:** itens 1, 2 e 8, mais os cinco novos — **12** (auditoria de fontes), **13** (estimativa de multidão), **14** (ressalvas restantes), **15** (balanço de 2026 e campanha), **16** (Manchetômetro → PT-50A) e **17** (acórdão do TSE).
+**Fechados na rodada de 16/08/2026:** itens 1, 2 e 8, mais os seis novos — **12** (auditoria de fontes), **13** (estimativa de multidão), **14** (ressalvas restantes), **15** (balanço de 2026 e campanha), **16** (Manchetômetro → PT-50A), **17** (acórdão do TSE) e **18** (execução penal e arquivamento web).
+**Fechados depois:** **19** (11/09 — relatório e páginas da execução penal), **20** (20/09 — reorganização pelo Cookiecutter Data Science) e **21** (25/09 — figuras e quinto passo do ciclo).
 **Abertos e de redação:** itens 3, 4, 5, 6, 9 e 10.
-**Abertos e de verificação:** item 7 (proveniência) e item 11 (coleta) estão **encerrados**. Nenhuma pendência de dado depende de você.
+**Abertos e de verificação:** item 7 (proveniência) e item 11 (coleta) estão **encerrados**. Nenhuma pendência de dado depende de você — as que restam são decisões, e estão no item 21.4.
 
 > **✅ RESOLVIDO NO MESMO DIA — o balanço chegou.** PT-53 e PT-61 percorreram quatro estados em 16/08/2026: `Confirmado` (jornalístico) → **rebaixados** a `A verificar` pela auditoria → `Confirmado` por corroboração jornalística dupla → **`Confirmado em fonte primária`**, quando o pesquisador forneceu o documento: o **Relatório do Gabinete do Min. Alexandre de Moraes (29/04/2026, 15 p.)**, obtido do bucket oficial do STF e incorporado em `Fontes/10_Democracia-Inabalada/`. A cifra de **1.402 réus responsabilizados agora pode ser citada como dado oficial, com página** (p. 6). **Não resta nenhum registro em `A verificar` no codebook.** Detalhes nos itens 12–15 e em [`reports/AUDITORIA-FONTES.md`](../reports/AUDITORIA-FONTES.md).
 >
@@ -138,7 +142,7 @@ Conferido contra o JSON em 14/08/2026. Os dois últimos não constavam da versã
 | ~~**PT-17**~~ | ~~saída do país em 30/12~~ | ✅ **RESOLVIDA em 16/08/2026 — achado.** Busca exaustiva no corpus inteiro localizou a confirmação em CPMI, p. 612, no texto analítico da própria comissão: "principalmente após a partida de Bolsonaro para os EUA no dia 30 de dezembro" |
 | ~~**PT-52**~~ | ~~≈1.200 presos em 40 ônibus~~ | ✅ **RESOLVIDA em 16/08/2026 — cifra substituída.** Adotadas as **2.151 prisões em flagrante** (CPMI, p. 76 e 688), primária, no lugar dos ~1.200 de imprensa, que mediam pessoas levadas à triagem nas primeiras levas da manhã. **Achado:** a CPMI se contradiz sobre o escopo — p. 76 diz "no próprio domingo ou no dia seguinte", p. 688 diz "no ato de desocupação". Adotada a p. 76, e o registro passou a dizer "8 e 9 de janeiro" |
 | **PT-38** | detalhamento dos danos ao acervo | "Confirmado em linha geral — detalhamento a verificar em laudo". Busca de 16/08/2026 (item 14) confirma que a perícia segue sem prazo definido (Agência Brasil, 2023); os laudos não foram obtidos e provavelmente permanecem restritos |
-| ~~**PT-58**~~ | ~~datas da prisão preventiva de Bolsonaro (22–25/11/2025)~~ | ✅ **RESOLVIDA em 16/08/2026 — achado.** Duas matérias independentes e datadas da Agência Brasil (22 e 25/11/2025) confirmam data, motivação (risco de fuga; tornozeleira eletrônica) e desfecho. Reclassificado para `Confirmado`. O inteiro teor da decisão segue atrás do WAF do STF — não é fonte primária, mas está corroborado |
+| ~~**PT-58**~~ | ~~datas da prisão preventiva de Bolsonaro (22–25/11/2025)~~ | ✅ **RESOLVIDA em 16/08/2026 — achado.** Duas matérias independentes e datadas da Agência Brasil (22 e 25/11/2025) confirmam data, motivação (risco de fuga; tornozeleira eletrônica) e desfecho. Reclassificado para `Confirmado`. *Superado ainda no mesmo dia:* a decisão da Pet 14.129 foi obtida em inteiro teor e PT-58 é hoje **fonte primária** — ver item 18, que corrige também o fato de que a preventiva não decorre da execução da AP 2668 |
 
 *Correção de 16/08/2026: até esta data, a linha de PT-58 afirmava ser ele o "único registro de $T_{+1}$ sem ancoragem documental". A auditoria mostrou que não — PT-53, PT-59, PT-60 e PT-61 também estavam sem arquivo local vinculado. PT-58 e PT-61 foram resolvidos por busca (ver item 14); PT-59 e PT-60 seguem sem mudança nesta rodada — não estavam entre as 12 ressalvas listadas para tratamento.*
 
@@ -199,7 +203,7 @@ A literatura revisada por pares posterior a 2019 é majoritariamente crítica à
 | Documento | Registro | Situação |
 |:--|:--|:--|
 | Sentença de 1ª instância de Moro (12/07/2017), inteiro teor | PT-03A | Baixa prioridade — o dispositivo está transcrito no acórdão do TRF-4 (Revista 97, p. 395). Busca de 16/08/2026 achou só comentário de terceiro (6 p.), não a peça; e-proc da JFPR não consultado, provável exigência de login |
-| Balanço "Democracia Inabalada" (29/04/2026, 1.402 condenados) | PT-53, PT-61 | ✅ **Corroborado por duas fontes jornalísticas em 16/08/2026** (Correio Braziliense + ohoje.com, com detalhamento consistente). PT-61 reclassificado para `Confirmado`. **O PDF do STF segue não indexado** — `portal.stf.jus.br/democraciainabalada` e `noticias.stf.jus.br` bloqueiam requisição automatizada (403), mesmo WAF de sempre. Solicitar à assessoria do STF continua sendo a via de obtenção do documento primário — ação fora do meu alcance de ferramentas |
+| ~~Balanço "Democracia Inabalada" (29/04/2026)~~ | PT-53, PT-61 | ✅ **OBTIDO em 16/08/2026 — ver item 15.1.** O PDF chegou pelo pesquisador, do bucket oficial do STF, e os dois registros passaram a `Confirmado em fonte primária`. *Registro do que se sabia antes, porque explica a busca:* o documento não estava indexado, e `portal.stf.jus.br/democraciainabalada` e `noticias.stf.jus.br` bloqueiam requisição automatizada com 403. **A leitura do documento corrigiu o codebook:** são 1.335 ações penais e 1.402 réus *responsabilizados*, não condenados |
 | Laudos periciais do Instituto de Criminalística/PF | PT-38 | Provavelmente sob restrição de acesso — confirmado por busca em 16/08/2026 |
 | Acórdão completo do HC 126.292 (todos os votos) | PT-02A | Busca de 16/08/2026 achou apenas o **voto individual do min. Barroso** (28 p.), em `luisrobertobarroso.com.br` — não baixado, por não ser o acórdão completo e por exigir confirmação antes de gravar em `Fontes/`. Ver pendência ao final deste documento |
 
@@ -227,7 +231,7 @@ Werneck Vianna (1999), Arantes (2002), Kerche & Marona (2022) e correlatos sobre
 
 Relatório completo em [`reports/AUDITORIA-FONTES.md`](../reports/AUDITORIA-FONTES.md), gerado por script e refeito a cada rodada de coleta.
 
-A auditoria respondeu uma pergunta só, para os 81 registros: **onde está o documento que sustenta esta afirmação, e em que página?** Não alterou nenhum fato, mecanismo ou enquadramento — só vínculo e status. Três achados:
+A auditoria respondeu uma pergunta só, para todos os registros: **onde está o documento que sustenta esta afirmação, e em que página?** Não alterou nenhum fato, mecanismo ou enquadramento — só vínculo e status. Três achados:
 
 **O inventário de fontes e o codebook divergiam em silêncio.** Cinco arquivos estavam no corpus sem vínculo com registro nenhum, e quatro deles já tinham atribuição declarada em `Fontes/LEIA-ME_fontes.md` que nunca chegara ao codebook. O caso mais grave: o livro oficial do STF sobre o vandalismo, atribuído a PT-38 no inventário e ausente do registro.
 
@@ -481,29 +485,152 @@ Uma falhou: a página de notícia do TSE sobre PT-03E devolve 403. Irrelevante a
 
 ---
 
+## 19. O relatório alinhado ao codebook — ✅ 11/09/2026
+
+Rodada feita item por item, a pedido do pesquisador. O gatilho foi uma falha: **`verificar_integridade.py` voltou a reprovar** porque duas sínteses LeapSpace tinham entrado em `Fontes/05_Bibliografia-teorica/` sem declaração em `PROCEDENCIA`. A terceira checagem existe exatamente para isso e funcionou.
+
+### 19.1 O relatório carregava cifras que o codebook já tinha corrigido
+
+`reports/process_tracing_8jan_relatorio.md` estava quase um mês atrás do JSON. Cinco correções em §3.2 e no cabeçalho:
+
+| Estava | Ficou | Onde |
+|:--|:--|:--|
+| "mais de 1.600 ações penais" (três ocorrências) | **1.335 ações penais** | Balanço 2026, p. 6 |
+| "1.402 condenados" | **1.402 réus responsabilizados** — 850 condenados em ação penal (29 núcleos + 402 graves + 419 menos graves) e 552 ANPPs | Balanço 2026, p. 6 |
+| "131 ações extintas por cumprimento de pena" | **retirado** — ausente da camada de texto do balanço | — |
+| execução penal citada por imprensa | fonte primária, com a **preventiva da Pet 14.129 separada do início da pena**, a Sala de Estado Maior nomeada, a domiciliar datada em 24/03/2026 e o indeferimento anterior de 2/3/2026 | Pet 14.129 e EP 169 |
+| prorrogação de 03/07/2026 | **retirada** — sem lastro no corpus | — |
+| "81 × 16" no cabeçalho | **82 × 16** | — |
+
+O cabeçalho ganhou um bloco de revisão declarando o que foi e o que **não** foi revisto nessa passagem — o resto do relatório não foi reconferido linha a linha.
+
+### 19.2 O achado que vale como método: a checagem amostral aprovava pelo motivo errado
+
+`scripts/recodificar_paginas_execucao.py` corrigiu `fonte_pagina` de PT-58, PT-59 e PT-60, que apontavam para a **capa e a assinatura** das peças em vez das páginas onde as transcrições estão. E corrigiu `metadados.n_subeventos` de 81 para 82, que estava defasado desde a entrada do 82º registro.
+
+O importante é **por que ninguém tinha visto**. `conferir_paginas.py` dava OK nos três:
+
+- **PT-58 e PT-60** passavam porque a primeira citação de cada um está mesmo na p. 1 — a capa. O verificador aprova quando *qualquer* citação casa com *qualquer* página listada, e parava na primeira.
+- **PT-59 passava pela citação errada.** Uma janela de 60 caracteres com o endereço do 19º BPM — fórmula que se repete ao longo de toda a decisão — casou com a p. 36. O dispositivo da transferência está na **p. 33**. O verificador confirmou a página com um trecho que não era o trecho.
+
+É o **quinto caso do projeto de cifra ou referência correta aplicada ao objeto errado**, e o primeiro em que a ferramenta de conferência participou do erro. A correção das páginas foi feita medindo cobertura por página, não assumindo.
+
+> **Pendência aberta aqui, e é de decisão sua:** endurecer o `conferir_paginas.py` para exigir que **cada** citação apareça, substancialmente, em alguma das páginas listadas — e não qualquer uma em qualquer uma. Antes de adotar, rodar contra os 68 registros com página: é provável que apareçam outros casos como o do PT-59, e o custo da mudança é justamente esse trabalho.
+
 ---
 
-## Ordem de ataque — revista em 16/08/2026
+## 20. Reprodutibilidade: o diretório reorganizado — ✅ 20/09/2026
 
-**A mudança desta revisão: a redação saiu do 3º lugar e foi para o último.** Isso é decisão do pesquisador, registrada aqui com data. A ordem anterior tratava o aparato como suficiente e punha a escrita como ponto de virada; a nova trata o conjunto de dados do processo político como pré-requisito. Os itens 7, 9 e 10 abaixo são independentes e podem correr em paralelo.
+Reorganização pelos princípios do *Cookiecutter Data Science* — dado bruto imutável, derivados gerados por script, fluxo em um sentido só —, em seis commits, **sem quebrar uma única âncora**.
+
+**O que entrou onde não havia nada:** controle de versão (o projeto não era repositório git), `README.md`, `requirements.txt` com versões travadas, e `scripts/ciclo.sh` no lugar do Makefile que o padrão prevê — não há `make` na máquina, e o ciclo é linear.
+
+**O que se moveu:** os derivados saíram da raiz para `data/processed/` (CSV, XLSX, catálogo da imprensa), `reports/` (auditoria, relatório, figuras), `docs/` (esta agenda, os dossiês de método, o documento-base) e `data/external/` (o levantamento bibliográfico original). Na raiz ficaram o JSON, o README e o `requirements.txt`.
+
+**O que deliberadamente não se moveu:** `Fontes/` e `scripts/` mantiveram os nomes em português. São citados por **290 referências** no JSON, nos scripts e nos documentos; renomeá-los custaria mais do que a nomenclatura do padrão vale.
+
+**Duas armadilhas técnicas fechadas na mesma rodada:**
+
+1. `.gitattributes` com `* -text`. O CSV é gerado com terminador `\n` e BOM de UTF-8, por decisão registrada em `gerar_codebook.py` — deixar o git normalizar para CRLF faria o arquivo em disco divergir do que o gerador escreve, e cada regeração apareceria como diferença fantasma.
+2. O XLSX saiu do versionamento. O openpyxl carimba a hora em `docProps/core.xml` e nos *timestamps* do zip: o arquivo muda de bytes sem mudar de conteúdo. Nada se perde — ele sai do JSON por script, e o CSV com os mesmos 82 × 16 está no histórico.
+
+**Verificação da mudança:** ciclo completo a cada etapa, mais um varredor de links relativos — 0 quebrados ao final.
+
+> **Ponteiros não atualizados, de propósito.** O JSON menciona nomes de arquivos movidos dentro de campos de texto (`PENDENCIAS-ANALITICAS.md`, `ESTIMATIVA-MULTIDAO-8JAN.md`, `Pesquisa-sobre-Mobilizações-de-8-de-Janeiro.md`). Corrigi-los reescreve o CSV e a auditoria na próxima execução do ciclo — é decisão sua se vale o ruído no histórico.
+
+---
+
+## 21. As figuras, e o buraco que elas revelaram no ciclo — ✅ 25/09/2026
+
+### 21.1 Seis semanas publicando cifras retiradas
+
+As duas peças de `reports/figures/` estavam paradas em 12/08 e traziam **treze divergências em relação ao codebook** — seis delas cifras retiradas nas rodadas de 16/08 e 11/09, as demais correções de data, de referente e de vocabulário:
+
+| Registro | A figura dizia | O codebook diz |
+|:--|:--|:--|
+| PT-24 | marcha de **9 km** | **7,9 km** pela via N1, com escolta da PMDF (CPMI, p. 645 e 648) |
+| PT-22 | alertas da Abin **às 8h20** | **8h53 e 9h** — 8h20 é o corte da contagem, não o horário de emissão |
+| PT-34 | **~4 mil** na Praça | faixa construída de **3.000 a 5.500** no conjunto mobilizado |
+| PT-12 | **+100** acampamentos | **em todos os Estados** (CPMI, p. 510) |
+| PT-10 | **>1.000** pontos de bloqueio | **1.300** pontos, cifra do diretor-geral da PRF (CPMI, p. 999) |
+| PT-52 | **~1.200** presos | **2.151** em flagrante nos dias 8 e 9 (CPMI, p. 76) |
+| PT-53 | **+1.600** ações penais | **1.335** — o 1.618 é de audiências de custódia |
+| PT-61 | 1.402 **condenados**; 131 ações extintas | 1.402 **responsabilizados**; a linha das extintas retirada |
+| PT-58 | "prisão preventiva e início da pena" | preventiva pela **Pet 14.129**, ato distinto do cumprimento da pena |
+| PT-59 | "transferência para a Papuda" | **Sala de Estado Maior** no 19º BPM, dentro do complexo |
+| PT-60 | "mar/2026 (prorrog. 03/07)" | **24/03/2026**, sem a prorrogação |
+| PT-07 | "2021" | **22/03/2021**, primeira deliberação datada pela denúncia da PGR |
+| contagem | 81 (HTML) e 75 (SVG) | **82** |
+
+Na cronologia interativa entraram ainda duas mudanças de estrutura: o selo de status passou a **distinguir "Confirmado em fonte primária" (60) de "Confirmado" (14)**, como o codebook faz; e **32 registros que citavam a cronologia da Agência Brasil**, onde já existe ancoragem primária, passaram a citar documento e página, com a transcrição literal remetida ao campo `fonte_trecho`.
+
+*Correção registrada: a reescrita automática aplicou "Fonte primária" a PT-27 e PT-38, que o codebook classifica só como `Confirmado`. Corrigido no mesmo dia.*
+
+### 21.2 A causa, que é estrutural
+
+**`reports/figures/` é a única parte do aparato que não é gerada.** A cronologia interativa carrega uma cópia manual dos 82 registros dentro do `<script>`; o SVG é rótulo por rótulo, em coordenadas absolutas. Editar o JSON não as atualiza, e **nada no ciclo percebia**: `verificar_integridade.py` cobre JSON ↔ CSV ↔ XLSX ↔ `Fontes/`, e as figuras estão fora desse circuito.
+
+### 21.3 A correção estrutural: `conferir_figuras.py`, quinto passo do ciclo
+
+Quatro checagens: cobertura dos 82 ids, selo de status contra `status_classe`, uso de "fonte primária" só onde o codebook confirma, e 11 cifras mortas procuradas no SVG, cada uma com o registro onde foi retirada. Entrou como passo 4 de 5 em `scripts/ciclo.sh`, e foi testado por injeção de defeito — reprova nos cinco casos ensaiados: selo trocado, "fonte primária" indevida, id inexistente, cifra morta ressuscitada no SVG e contagem antiga.
+
+**O que ele não faz, e está declarado no cabeçalho:** compara o que as figuras *declaram*, não o conteúdo dos rótulos. Uma cifra nova e errada passa por ele, como passaria pelo estrutural. A correção das figuras continua manual.
+
+Na mesma rodada, `gerar_auditoria.py` deixou de contar à mão: os "81 registros" estavam fixos no código desde que o codebook chegou a 82, em duas passagens, e a contagem do caderno de evidências também. E o item 3 dos limites da auditoria afirmava que PT-12, PT-17 e PT-52 seguiam abertas — as três foram fechadas em 16/08/2026, como registram seus próprios `nota_auditoria`.
+
+### 21.4 O que espera decisão sua
+
+Nenhum destes é falta de dado. Todos são escolha.
+
+1. **Endurecer o `conferir_paginas.py`** (item 19.2) — exigir que cada citação apareça na página que a ancora. Rodar contra os 68 antes de adotar.
+2. **PT-61, "Conclusão dos julgamentos"** no campo `resposta_estatal`, contra as **459 ações penais ainda em instrução** que o próprio balanço registra (p. 6). O balanço é do gabinete e usa a palavra; o codebook a reproduz. Manter com ressalva, ou reformular?
+3. **A seção "Próximos passos recomendados" do relatório** continua na versão de 14/08 e ainda recomenda começar a escrever — contrário à decisão de 16/08.
+4. **Ponteiros de arquivo dentro do JSON** (item 20) — atualizar reescreve CSV e auditoria no próximo ciclo.
+5. **Divergências figura ↔ codebook que o verificador não cobre:** PT-17 e PT-18 preenchem *Target* e *Framing* no HTML onde o codebook traz "—"; PT-38 omite a restauração e os 106 itens de valor imensurável.
+6. **`.backup_pre_lula/`** ficou redundante desde que existe histórico git. Apagar?
+7. **Licença e remoto do git** — nenhum dos dois definido.
+
+---
+
+## Ordem de ataque — revista em 25/09/2026
+
+**A decisão que ordena tudo continua sendo a de 16/08/2026: a redação é o último item.** A ordem anterior a essa data tratava o aparato como suficiente e punha a escrita como ponto de virada; esta trata o conjunto de dados do processo político como pré-requisito.
+
+**A mudança desta revisão é de contabilidade, não de rumo.** A tabela vinha mostrando como abertas quatro tarefas concluídas em 16/08 — o arquivamento web (4), a obtenção do balanço (8) e a reauditoria (11), além da 6. Foram fechadas aqui com a data correta. E entraram as tarefas nascidas das rodadas 19, 20 e 21.
+
+### Fechadas
+
+| # | Tarefa | Item desta agenda | Quando |
+|:--|:--|:--|:--|
+| 1 | ~~Sincronizar JSON/CSV/XLSX no esquema de 16 campos~~ | 12 | ✅ 16/08 |
+| 2 | ~~Aplicar as correções de vínculo e status da auditoria~~ | 12 | ✅ 16/08 |
+| 3 | ~~Publicar `AUDITORIA-FONTES.md`~~ | 12 | ✅ 16/08 |
+| 4 | ~~Arquivamento web e notícias do STF~~ — seis matérias em `Fontes/09_Arquivamento-web/` | 18 | ✅ 16/08 |
+| 5 | ~~Coleta manual: acórdão do TSE (PT-03E)~~ — obtido sem captcha, por rota pública | 11.1, 17 | ✅ 16/08 |
+| 6 | ~~Fechar PT-58~~ — e mais que isso: as três decisões da execução penal viraram fonte primária | 7, 18 | ✅ 16/08 |
+| 7 | ~~Resolver ou retirar PT-34 — os "4 mil" sem lastro~~ | 7, 13 | ✅ 16/08 |
+| 8 | ~~Obter o PDF do balanço "Democracia Inabalada"~~ — chegou pelo pesquisador; PT-53 e PT-61 a fonte primária | 15.1 | ✅ 16/08 |
+| 11 | ~~Reincorporar as peças novas ao codebook e reauditar~~ — hoje é `bash scripts/ciclo.sh` | 12, 20 | ✅ 16/08 |
+| — | ~~Alinhar o relatório de pesquisa ao codebook (§3.2 e cabeçalho)~~ | 19.1 | ✅ 11/09 |
+| — | ~~Corrigir as páginas de PT-58, PT-59 e PT-60 e o `n_subeventos`~~ | 19.2 | ✅ 11/09 |
+| — | ~~Reorganizar o diretório e pôr o projeto sob git~~ | 20 | ✅ 20/09 |
+| — | ~~Realinhar as duas figuras ao codebook~~ | 21.1 | ✅ 25/09 |
+| — | ~~Fechar o buraco: `conferir_figuras.py` no ciclo~~ | 21.3 | ✅ 25/09 |
+
+### Abertas
 
 | # | Tarefa | Item desta agenda | Depende de |
 |:--|:--|:--|:--|
-| 1 | ~~Sincronizar JSON/CSV/XLSX no esquema de 16 campos~~ ✅ 16/08 | 12 | — |
-| 2 | ~~Aplicar as correções de vínculo e status da auditoria~~ ✅ 16/08 | 12 | 1 |
-| 3 | ~~Publicar `AUDITORIA-FONTES.md`~~ ✅ 16/08 | 12 | 2 |
-| 4 | Rodar `scripts/baixar_fontes.sh` — arquivamento web e notícias do STF | 11 | 3 |
-| 5 | ~~Coleta manual: acórdão do TSE (PT-03E)~~ ✅ **16/08: obtido sem captcha** | 11.1, 17 | — |
-| 6 | ~~Fechar PT-58 por consulta processual~~ ✅ **16/08: resolvido por busca** (item 14) | 7 | 4 |
-| 7 | ~~Resolver ou retirar PT-34 — os "4 mil" sem lastro~~ ✅ **16/08: retirado** | 7, 13 | — |
-| 8 | Obter o PDF do balanço "Democracia Inabalada" — corroborado, não primário (item 14) | 7, 11.2 | você |
 | 9 | Verificar os 325 DOIs no CrossRef e triar por pertinência | 11.3 | — |
 | 10 | Acrescentar a literatura clássica brasileira (livros, sem DOI) | 11.4 | 9 |
-| 11 | Reincorporar as peças novas ao codebook e **reauditar** | 12 | 5, 6, 8 |
-| 12 | **Redação do artigo** | 3, 4, 5, 6, 9, 10 | tudo acima |
+| 12 | Endurecer o `conferir_paginas.py` e rodá-lo contra os 68 | 19.2, 21.4 | decisão sua |
+| 13 | Decidir o "Conclusão dos julgamentos" de PT-61 contra as 459 em instrução | 21.4 | decisão sua |
+| 14 | Reescrever "Próximos passos recomendados" no relatório — parado em 14/08 | 21.4 | decisão sua |
+| 15 | Higiene do repositório: licença, remoto, `.backup_pre_lula/`, ponteiros no JSON | 20, 21.4 | decisão sua |
+| 16 | **Redação do artigo** | 3, 4, 5, 6, 9, 10 | tudo acima |
 
-**Dentro da fila de coleta, o que resta depende de você.** PT-03E exige captcha manual; o PDF do "Democracia Inabalada" está atrás do WAF do STF (a matéria já está corroborada por imprensa, então isso não bloqueia citação — só a certificação como fonte primária). **PT-52 é a que mais pede uma decisão sua** — não é falta de dado, é escolha entre dois números que medem coisas diferentes.
-
-**O item 11 é o retorno ao início do ciclo.** Toda peça nova reentra no codebook e refaz a auditoria — é por isso que os geradores são scripts e não trabalho manual.
+**Nenhuma pendência de dado depende de você** — isso vale desde 16/08 e continua valendo. As tarefas 12 a 15 são decisões, não coleta; nenhuma bloqueia a redação, e as três primeiras podem ser tomadas durante a escrita.
 
 **Quando a redação começar**, os itens 3, 4 e 5 desta agenda vêm primeiro: são antecipação de crítica, os pontos que um parecerista atento levantaria, e os que mais mudam o texto. Os itens 6, 9 e 10 são parágrafos de discussão, resolvidos na escrita.
+
+**A lição das três últimas rodadas, que vale como regra de trabalho.** Em 11/09 o relatório estava quase um mês atrás do codebook; em 25/09 as figuras estavam seis semanas atrás. Nos dois casos o JSON estava certo e a peça derivada, errada — e nos dois casos nada avisou, porque o ciclo só cobria o que é gerado por script. **Toda peça escrita à mão que reproduz números do codebook precisa ou virar gerada, ou ganhar uma checagem no ciclo.** O relatório de pesquisa é, hoje, a peça que ainda não tem nenhum dos dois.

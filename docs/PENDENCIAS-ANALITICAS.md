@@ -18,7 +18,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Caderno de evidências | **49 registros** com página e transcrição literal |
 | Corpus documental | **22 PDFs / 6.928 p.** + o acórdão do TSE em HTML + 6 matérias arquivadas contra link rot + 5 sínteses. Duas peças sem camada de texto, declaradas |
 | Figuras | SVG da cadeia causal e cronologia navegável — **realinhadas ao codebook em 25/09**, 82 registros cobertos. São a única parte do aparato escrita à mão |
-| Relatório de pesquisa | `reports/process_tracing_8jan_relatorio.md` — §3.2 corrigido em 11/09. A seção "Próximos passos" **continua parada em 14/08** e contraria a ordem de 16/08 |
+| Relatório de pesquisa | `reports/process_tracing_8jan_relatorio.md` — §3.2 corrigido em 11/09; "Próximos passos" reescrita em 25/09. **É a peça que reproduz números do codebook e ainda não tem checagem no ciclo** |
 | Verificação | `bash scripts/ciclo.sh` — cinco passos: dois geradores e três checagens, todas com código de saída ≠ 0 em caso de falha |
 | Controle de versão | git desde 20/09/2026, sem remoto configurado |
 | Eixo bibliográfico Lava Jato | 20 referências, 18 com DOI confirmado |
@@ -584,7 +584,7 @@ Nenhum destes é falta de dado. Todos são escolha.
 
 1. **Endurecer o `conferir_paginas.py`** (item 19.2) — exigir que cada citação apareça na página que a ancora. Rodar contra os 68 antes de adotar.
 2. **PT-61, "Conclusão dos julgamentos"** no campo `resposta_estatal`, contra as **459 ações penais ainda em instrução** que o próprio balanço registra (p. 6). O balanço é do gabinete e usa a palavra; o codebook a reproduz. Manter com ressalva, ou reformular?
-3. **A seção "Próximos passos recomendados" do relatório** continua na versão de 14/08 e ainda recomenda começar a escrever — contrário à decisão de 16/08.
+3. ~~**A seção "Próximos passos recomendados" do relatório**~~ ✅ **reescrita em 25/09/2026.** Estava na versão de 14/08 e fechava recomendando começar a redigir, contrariando a decisão de 16/08. Agora abre declarando a decisão que a ordena e registra por que as rodadas seguintes lhe deram razão. Quatro frentes que ela dava como abertas foram para "concluído", com data, e os abertos passaram a separar o que vem antes da redação do que se resolve nela.
 4. **Ponteiros de arquivo dentro do JSON** (item 20) — atualizar reescreve CSV e auditoria no próximo ciclo.
 5. **Divergências figura ↔ codebook que o verificador não cobre:** PT-17 e PT-18 preenchem *Target* e *Framing* no HTML onde o codebook traz "—"; PT-38 omite a restauração e os 106 itens de valor imensurável.
 6. **`.backup_pre_lula/`** ficou redundante desde que existe histórico git. Apagar?
@@ -616,6 +616,7 @@ Nenhum destes é falta de dado. Todos são escolha.
 | — | ~~Reorganizar o diretório e pôr o projeto sob git~~ | 20 | ✅ 20/09 |
 | — | ~~Realinhar as duas figuras ao codebook~~ | 21.1 | ✅ 25/09 |
 | — | ~~Fechar o buraco: `conferir_figuras.py` no ciclo~~ | 21.3 | ✅ 25/09 |
+| — | ~~Reescrever "Próximos passos recomendados" no relatório~~ — parava em 14/08 e contrariava a ordem de 16/08 | 21.4 | ✅ 25/09 |
 
 ### Abertas
 
@@ -625,7 +626,7 @@ Nenhum destes é falta de dado. Todos são escolha.
 | 10 | Acrescentar a literatura clássica brasileira (livros, sem DOI) | 11.4 | 9 |
 | 12 | Endurecer o `conferir_paginas.py` e rodá-lo contra os 68 | 19.2, 21.4 | decisão sua |
 | 13 | Decidir o "Conclusão dos julgamentos" de PT-61 contra as 459 em instrução | 21.4 | decisão sua |
-| 14 | Reescrever "Próximos passos recomendados" no relatório — parado em 14/08 | 21.4 | decisão sua |
+| 14 | Codificar a camada $T_{-1}$ conjuntural — 7 registros ainda contextuais | 11.3, 19 | 9 |
 | 15 | Higiene do repositório: licença, remoto, `.backup_pre_lula/`, ponteiros no JSON | 20, 21.4 | decisão sua |
 | 16 | **Redação do artigo** | 3, 4, 5, 6, 9, 10 | tudo acima |
 

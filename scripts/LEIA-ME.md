@@ -57,7 +57,7 @@ de pré-commit.
 | `conferir_paginas.py` | Abre o PDF na página citada e procura a transcrição. **A única checagem que lê a fonte.** |
 | `baixar_fontes.sh` | Comandos de coleta do que falta. Não baixa nada sozinho: cada peça é um alvo nomeado. |
 | `migrar_esquema16.py` | Rodada única de 16/08/2026 (12 → 16 campos + correções de auditoria). Idempotente. Mantido como registro da decisão, não faz parte do ciclo. |
-| `varrer_fonte_pagina.py` | **Triagem, fora do ciclo.** Compara as páginas citadas na prosa dos registros (`fonte_trecho`, `status_verificacao`, `nota_auditoria`) com o campo estruturado `fonte_pagina`, e imprime o trecho em volta de cada divergência. Nem todo achado é lacuna — ver a terceira ressalva. |
+| `varrer_fonte_pagina.py` | **Triagem, fora do ciclo.** Compara as páginas citadas na prosa dos registros (`fonte_trecho`, `mecanismo_causal`, `status_verificacao`, `nota_auditoria`) com o campo estruturado `fonte_pagina`, e imprime o trecho em volta de cada divergência. Nem todo achado é lacuna — ver a terceira ressalva. |
 | `recodificar_*.py` | Migrações já executadas, uma por rodada, cada uma idempotente e com o achado que a motivou no cabeçalho. Registro do que foi feito, fora do ciclo. |
 
 ## Três ressalvas que importam
@@ -110,14 +110,16 @@ da nova, ele reclama, e está certo em reclamar.
 ### 3. `fonte_pagina` e a prosa podem divergir
 
 O campo `fonte_pagina` é o que as ferramentas leem. A prosa dos registros —
-`fonte_trecho`, `status_verificacao`, `nota_auditoria` — também cita páginas, e
-nada no ciclo compara as duas. Em 25/09/2026 divergiram: PT-10 ancorava "CPMI:
+`fonte_trecho`, `mecanismo_causal`, `status_verificacao`, `nota_auditoria` —
+também cita páginas, e nada no ciclo compara as duas. Em 25/09/2026 divergiram: PT-10 ancorava "CPMI:
 999, 1023" e a própria prosa dizia "p. 999, 1021 e 1023". A p. 1021 sustenta a
 cifra dos bloqueios e tinha sumido do campo estruturado.
 
 Aquilo apareceu de raspão, porque o relatório citava a página a mais. Onde
 nenhuma peça derivada cita, ninguém vê. `varrer_fonte_pagina.py` olha os 82 de
-uma vez.
+uma vez, e na estreia achou mais duas lacunas: a p. 274 da CPMI em PT-15, e dois
+documentos inteiros em PT-28 — o Cappelli e o acórdão da AP 2668 — que o
+`mecanismo_causal` do registro citava por extenso sem ancorar.
 
 **Ele é triagem, não gate, e por isso fica fora do ciclo.** Boa parte do que
 levanta é legítima: página citada para refutar, remissão a outro registro,

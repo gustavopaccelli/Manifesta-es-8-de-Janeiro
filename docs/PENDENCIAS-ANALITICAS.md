@@ -589,7 +589,7 @@ Nenhum destes é falta de dado. Todos são escolha.
 5. **Divergências figura ↔ codebook que o verificador não cobre:** PT-17 e PT-18 preenchem *Target* e *Framing* no HTML onde o codebook traz "—"; PT-38 omite a restauração e os 106 itens de valor imensurável.
 6. **`.backup_pre_lula/`** ficou redundante desde que existe histórico git. Apagar?
 7. **Licença e remoto do git** — nenhum dos dois definido.
-8. **Duas lacunas de `fonte_pagina`, verificadas no PDF** (item 21.6): a p. 274 da CPMI em PT-15, e o Relatório do Interventor Federal — `fonte_local` e p. 57 — em PT-28. As duas mexem no JSON, por isso esperam você.
+8. ~~**Duas lacunas de `fonte_pagina`**~~ ✅ **corrigidas em 25/09/2026** (item 21.6). PT-28 precisava de dois documentos, não um: o varredor só viu o segundo depois que o `mecanismo_causal` entrou na varredura.
 
 ### 21.5 O relatório também entrou no ciclo — e já tinha três defasagens
 
@@ -612,22 +612,28 @@ Os dois foram testados por injeção de defeito, um de cada vez, com a árvore r
 
 ---
 
-### 21.6 O varredor de `fonte_pagina` — dois candidatos verificados
+### 21.6 O varredor de `fonte_pagina` — e as duas âncoras que faltavam
 
-O caso PT-10 apareceu de raspão: o relatório citava uma página a mais, e por isso a lacuna no campo estruturado ficou visível. Onde nenhuma peça derivada cita, ninguém veria. `scripts/varrer_fonte_pagina.py` compara, nos 82 registros, as páginas citadas na prosa (`fonte_trecho`, `status_verificacao`, `nota_auditoria`) com o que o `fonte_pagina` ancora — 212 citações de página ao todo.
+O caso PT-10 apareceu de raspão: o relatório citava uma página a mais, e por isso a lacuna no campo estruturado ficou visível. Onde nenhuma peça derivada cita, ninguém veria. `scripts/varrer_fonte_pagina.py` compara, nos 82 registros, as **223 citações de página** que a prosa faz (`fonte_trecho`, `mecanismo_causal`, `status_verificacao`, `nota_auditoria`) com o que o `fonte_pagina` ancora.
 
-**É triagem, não gate, e fica fora do ciclo.** Página citada na prosa não é, por si, página que falta: pode ser refutação, remissão a outro registro ou menção de passagem. Ele imprime o trecho em volta de cada achado para que a decisão leve segundos, e sai com código 0 por padrão. Testado contra o próprio PT-10: revertendo o campo para o estado anterior, o registro reaparece na lista.
+**É triagem, não gate, e fica fora do ciclo.** Página citada na prosa não é, por si, página que falta: pode ser refutação, remissão a outro registro ou menção de passagem. Ele imprime o trecho em volta de cada achado para que a decisão leve segundos, e sai com código 0 por padrão. Testado contra o próprio PT-10: revertendo o campo ao estado anterior, o registro reaparece na lista.
 
-**Oito candidatos. Seis são legítimos** — PT-12 e PT-34 citam páginas para *refutar* uma cifra, PT-39 faz remissão à página de PT-08A, PT-06C remete à denúncia que ancora PT-07, e PT-59 é artefato do varredor ("PGR" ali é parte, não documento). **Dois são lacunas reais, e conferi as duas no PDF antes de afirmar:**
+**Na estreia, oito candidatos: seis legítimos e dois reais.** Os legítimos ficam registrados porque vão reaparecer a cada execução — PT-12 e PT-34 citam páginas para *refutar* uma cifra, PT-39 remete à página de PT-08A, PT-06C à denúncia que ancora PT-07, e PT-59 é artefato do varredor ("PGR" ali é parte processual, não documento).
 
-| Registro | O que a prosa diz | O que o campo ancora | Conferido |
+**Os dois reais foram corrigidos em 25/09/2026**, por `scripts/recodificar_ancoras_pt15_pt28.py`. Li as quatro páginas no PDF antes de mexer:
+
+| Registro | A prosa citava | O campo ancorava | O que a página traz |
 |:--|:--|:--|:--|
-| **PT-15** | "CPMI, p. 25, 53 **e 274**" | `CPMI: 25, 53` | A p. 274 traz o atentado de 12/12/2022 e o pretexto alegado — a prisão do cacique Tserere —, que é justamente o acréscimo que o `status_verificacao` credita a ela |
-| **PT-28** | "Contraprova do Relatório do Interventor Federal (**conclusão G, p. 57**)" | `CPMI: 657`, e o `fonte_local` lista só a CPMI | A p. 57 do Cappelli traz a conclusão G: o comandante-geral esteve em campo, ficou entre os feridos e "perdeu a capacidade de liderar seus comandados diretos" |
+| **PT-15** | "CPMI, p. 25, 53 **e 274**" | `CPMI: 25, 53` | A p. 274 traz o atentado de 12/12/2022 e o pretexto alegado — a prisão do cacique Tserere —, que é o acréscimo que o `status_verificacao` credita a ela |
+| **PT-28** | Cappelli, **conclusão G, p. 57**, e AP 2668, **p. 495 e 497** | `CPMI: 657`, e o `fonte_local` só com a CPMI | Cappelli p. 57: o comandante-geral "esteve em campo", "figurou entre os policiais militares feridos" e "perdeu a capacidade de liderar seus comandados diretos". AP 2668 p. 495 e 497: "a clara omissão de altos funcionários da Secretaria de Segurança Pública" e "a omissão dolosa do réu ANDERSON GUSTAVO TORRES também caracterizou o crime de golpe de Estado" |
 
-PT-28 é da mesma família que a auditoria de 16/08 fechou — "sete registros citavam dois documentos e declaravam apenas um". Este escapou, e é o registro que o codebook trata como *hoop test*.
+**PT-28 rendeu duas lições.** A primeira: o registro que o codebook trata como *hoop test* discutia a contraprova do interventor e a moldura do STF sem vincular nenhum dos dois documentos — é a mesma família que a auditoria de 16/08 fechou ("sete registros citavam dois documentos e declaravam apenas um"), e este escapou. O vínculo da AP 2668 sumiu na própria correção de 16/08, que trocou o arquivo errado pelo certo **em vez de somar os dois**.
 
-**As duas correções esperam decisão sua**, porque mexem no JSON: em PT-15 é acrescentar uma página; em PT-28 é acrescentar um documento ao `fonte_local` e sua página ao `fonte_pagina`. Modelo de como fazer: `scripts/recodificar_pagina_pt10.py`.
+A segunda é sobre o varredor: a primeira versão não lia o `mecanismo_causal`, e era ali que PT-28 citava os dois documentos. O campo entrou na varredura na mesma rodada — oito citações a mais, dois achados reais a mais, zero ruído a mais. **Uma varredura só encontra onde olha**, e o limite de escopo é mais fácil de errar que o de lógica.
+
+Sobram seis candidatos, todos legítimos, e o ciclo completo passa: seis checagens APROVADO, figuras e relatório OK, 59 confirmados / 0 falhas.
+
+> **Ressalva que esta rodada deixa mais visível.** O `conferir_paginas.py` não exercitou as quatro páginas novas: ele para na primeira citação que casa, e nos dois registros a primeira já casava. As páginas foram conferidas por leitura direta do PDF, não pela ferramenta. É mais um argumento para o item 1 da lista abaixo.
 
 ---
 
@@ -658,6 +664,7 @@ PT-28 é da mesma família que a auditoria de 16/08 fechou — "sete registros c
 | — | ~~Reescrever "Próximos passos recomendados" no relatório~~ — parava em 14/08 e contrariava a ordem de 16/08 | 21.4 | ✅ 25/09 |
 | — | ~~Fechar o último buraco: `conferir_relatorio.py` no ciclo~~ — achou quatro divergências na primeira execução | 21.5 | ✅ 25/09 |
 | — | ~~Varrer `fonte_pagina` contra a prosa dos 82 registros~~ — 8 candidatos, 2 lacunas reais | 21.6 | ✅ 25/09 |
+| — | ~~Ancorar as páginas e documentos que PT-15 e PT-28 citavam sem vincular~~ — 4 páginas lidas no PDF antes da correção | 21.6 | ✅ 25/09 |
 
 ### Abertas
 

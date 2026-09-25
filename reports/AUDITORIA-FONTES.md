@@ -38,11 +38,12 @@ Nenhum dado analítico foi tocado — nenhum fato, mecanismo causal ou enquadram
 | **PT-08** | vínculo corrigido em 16/08/2026 — O achado do Sri Lanka como precedente invocado está na CPMI p. 614 e é citado na tabela do relatório, mas fonte_local estava vazio. |
 | **PT-12** | PT-12 RESOLVIDO em 16/08/2026, mesmo padrão do PT-34. Cifra de 'mais de 100 acampamentos' retirada — busca exaustiva em todo o PDF da CPMI e no Cappelli não a localizou; provinha de retrospectiva da Agência Brasil sem órgão nomeado. Substituída pela caracterização geográfica que a CPMI sustenta com página: 'em todos os Estados' (p. 510). |
 | **PT-13** | vínculo corrigido em 16/08/2026 — Denúncia da PGR como peça integral, corroborada pela CPMI p. 230 e 566. |
+| **PT-15** | ACRESCENTADO EM 25/09/2026: a p. 274, que o status_verificacao já nomeava, entrou no fonte_pagina. Divergência achada por scripts/varrer_fonte_pagina.py. |
 | **PT-17** | PT-17 RESOLVIDO em 16/08/2026. Busca exaustiva em todo o PDF da CPMI (985 páginas além da seção já checada) localizou a confirmação da data de saída de Bolsonaro para os EUA em p. 612, no texto analítico da comissão sobre a 'estratégia do caos'. Reclassificado de 'A verificar' para 'Confirmado em fonte primária'. |
 | **PT-18** | vínculo corrigido em 16/08/2026 — CPMI p. 646 e 711; corroboração e agravamento em Cappelli, conclusões D e H. |
 | **PT-21** | Acrescentada em 16/08/2026 a contagem de transporte da ANTT difundida pela Abin (105 ônibus, ~3.900 passageiros), que estava ausente do codebook e sustenta a faixa de magnitude de PT-34. |
 | **PT-27** | vínculo corrigido em 16/08/2026 — CPMI p. 651 cita textualmente o relatório do interventor, hoje disponível em local. |
-| **PT-28** | vínculo corrigido em 16/08/2026 — fonte_trecho cita 'Relatório Final da CPMI, p. 657' e o texto foi localizado nessa página, mas fonte_local apontava para o acórdão da AP 2668. Erro anterior a esta rodada, corrigido em 16/08/2026. |
+| **PT-28** | vínculo corrigido em 16/08/2026 — fonte_trecho cita 'Relatório Final da CPMI, p. 657' e o texto foi localizado nessa página, mas fonte_local apontava para o acórdão da AP 2668. Erro anterior a esta rodada, corrigido em 16/08/2026. ANCORAS ACRESCENTADAS EM 25/09/2026: o registro citava por extenso o Relatório do Interventor Federal (conclusão G, p. 57) e o acórdão da AP 2668 (p. 495 e 497) sem vincular nenhum dos dois. As três páginas foram lidas antes da correção. O vínculo da AP 2668 sumira na própria correção de 16/08/2026, que trocou o arquivo errado pelo certo em vez de somar os dois. Achado por scripts/varrer_fonte_pagina.py. |
 | **PT-34** | PT-34 RESOLVIDO em 16/08/2026, após busca em veículos de escala nacional. Retirada a cifra pontual de 'cerca de 4 mil pessoas na Praça às 15h26': sem lastro primário e sem corroboração independente — fonte única (Agência Brasil, jan/2024, 'policiais' sem órgão nomeado), ausente das cronologias contemporâneas, e aplicada a referente diverso pela Wikipédia. Substituída por faixa de 3.000 a 5.500 no conjunto mobilizado, ancorada em duas medições oficiais independentes (ANTT/Abin: 105 ônibus e ~3.900 passageiros; SSP/DF: 3.000 de público às 9h) mais a caracterização da CPMI ('poucos milhares'). Ver o dossiê em ESTIMATIVA-MULTIDAO-8JAN.md. |
 | **PT-38** | PT-38, 16/08/2026: (a) repontado para a cópia consolidada do livro em 10_Democracia-Inabalada/, após a remoção da duplicata byte-idêntica que estava em 03_T0_8-de-janeiro/; (b) acrescentada a valoração do dano como série datada. O valor de R$ 11,4 mi, que vinha da sinopse do documentário, NÃO foi adotado como cifra final — foi superado pelo levantamento de ~R$ 12 mi. Nenhum documento primário do corpus carrega esses números; a busca no livro, no balanço e na CPMI foi exaustiva e negativa. |
 | **PT-39** | vínculo corrigido em 16/08/2026 — CPMI p. 677 mais o acréscimo da AP 2668 p. 496 sobre o silêncio no grupo Difusão. |
@@ -90,8 +91,8 @@ Além disso, **sete registros citavam dois documentos e declaravam apenas um**. 
 | Documento | Registros que ancora | Páginas | Natureza |
 |:--|--:|--:|:--|
 | CPMI | 52 | 1333 | oficial |
-| Cappelli | 4 | 62 | espelho |
-| AP 2668 | 4 | 1991 | oficial |
+| Cappelli | 5 | 62 | espelho |
+| AP 2668 | 5 | 1991 | oficial |
 | PGR | 3 | 272 | oficial |
 | Balanço 2026 | 3 | 15 | oficial |
 | ADC 43/44/54 | 2 | 489 | oficial |
@@ -140,7 +141,7 @@ Cada um aponta arquivo e página. A numeração impressa do relatório da CPMI c
 | PT-12A | CPMI | CPMI: 577-578, 880-884 | Confirmado em fonte primária |
 | PT-13 | PGR + CPMI | PGR: peça integral \| CPMI: 230, 566 | Confirmado em fonte primária |
 | PT-14 | CPMI | CPMI: 481, 16 | Confirmado em fonte primária |
-| PT-15 | CPMI | CPMI: 25, 53 | Confirmado em fonte primária |
+| PT-15 | CPMI | CPMI: 25, 53, 274 | Confirmado em fonte primária |
 | PT-16 | CPMI | CPMI: 584, 269, 1031, 599 | Confirmado em fonte primária |
 | PT-17 | CPMI | CPMI: 507, 612 | Confirmado em fonte primária |
 | PT-18 | CPMI + Cappelli | CPMI: 646, 711 \| Cappelli: 55, 57 | Confirmado em fonte primária |
@@ -157,7 +158,7 @@ Cada um aponta arquivo e página. A numeração impressa do relatório da CPMI c
 | PT-25 | CPMI | CPMI: 648 | Confirmado em fonte primária |
 | PT-26 | CPMI | CPMI: 650, 649 | Confirmado em fonte primária |
 | PT-27 | CPMI + Cappelli | CPMI: 651 | Confirmado |
-| PT-28 | CPMI | CPMI: 657 | Confirmado em fonte primária |
+| PT-28 | CPMI + Cappelli + AP 2668 | CPMI: 657 \| Cappelli: 57 \| AP 2668: 495, 497 | Confirmado em fonte primária |
 | PT-29 | CPMI | CPMI: 657 | Confirmado em fonte primária |
 | PT-30 | CPMI | CPMI: 670 | Confirmado em fonte primária |
 | PT-31 | CPMI | CPMI: 667 | Confirmado em fonte primária |

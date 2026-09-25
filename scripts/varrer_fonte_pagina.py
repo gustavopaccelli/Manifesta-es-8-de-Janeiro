@@ -5,8 +5,8 @@ A prosa do registro cita páginas que o `fonte_pagina` não ancora?
 
 `fonte_pagina` é o campo estruturado — o que as ferramentas leem, o que a
 auditoria publica, o que o `conferir_paginas.py` abre no PDF. A prosa dos
-campos `fonte_trecho`, `status_verificacao` e `nota_auditoria` também cita
-páginas, em linguagem corrida, e as duas coisas podem divergir sem que nada
+campos `fonte_trecho`, `mecanismo_causal`, `status_verificacao` e
+`nota_auditoria` também cita páginas, em linguagem corrida, e as duas coisas podem divergir sem que nada
 reclame: nenhuma checagem do ciclo compara uma com a outra.
 
 Divergiram. Em 25/09/2026, PT-10 ancorava "CPMI: 999, 1023" enquanto a própria
@@ -41,7 +41,9 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 JSON_P = RAIZ / "process_tracing_8jan_eventos.json"
 
-CAMPOS = ("fonte_trecho", "status_verificacao", "nota_auditoria")
+# `mecanismo_causal` entrou em 25/09/2026: é onde PT-28 citava dois documentos
+# sem ancorar nenhum, e a varredura sem ele não via. Custo em ruído: zero.
+CAMPOS = ("fonte_trecho", "mecanismo_causal", "status_verificacao", "nota_auditoria")
 
 # Como os documentos aparecem escritos na prosa, além do código curto que o
 # próprio JSON registra em metadados.registro_documentos.

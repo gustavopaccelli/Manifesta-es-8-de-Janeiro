@@ -5,22 +5,25 @@
 # make nesta máquina, e o ciclo é linear — quatro passos, sem grafo de
 # dependências para resolver.
 #
-# Uso:  bash scripts/ciclo.sh            # amostra de 12 no passo 4
+# Uso:  bash scripts/ciclo.sh            # amostra de 12 no passo 5
 #       bash scripts/ciclo.sh --todos    # confere todos os registros com página
 set -euo pipefail
 cd "$(dirname "$0")/.."
 export PYTHONIOENCODING=utf-8
 
-echo "== 1/4  gerar_codebook — JSON -> data/processed/ (CSV + XLSX)"
+echo "== 1/5  gerar_codebook — JSON -> data/processed/ (CSV + XLSX)"
 python scripts/gerar_codebook.py
 
-echo "== 2/4  gerar_auditoria — JSON -> reports/AUDITORIA-FONTES.md"
+echo "== 2/5  gerar_auditoria — JSON -> reports/AUDITORIA-FONTES.md"
 python scripts/gerar_auditoria.py
 
-echo "== 3/4  verificar_integridade — seis checagens estruturais"
+echo "== 3/5  verificar_integridade — seis checagens estruturais"
 python scripts/verificar_integridade.py
 
-echo "== 4/4  conferir_paginas — transcrição x página no PDF"
+echo "== 4/5  conferir_figuras — as figuras de reports/figures/ x codebook"
+python scripts/conferir_figuras.py
+
+echo "== 5/5  conferir_paginas — transcrição x página no PDF"
 python scripts/conferir_paginas.py "$@"
 
 echo "== OK — ciclo completo sem falhas"

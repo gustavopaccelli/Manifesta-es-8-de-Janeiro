@@ -11,7 +11,7 @@ pip install -r requirements.txt
 bash scripts/ciclo.sh
 ```
 
-O ciclo regenera os formatos derivados, refaz a auditoria e roda as duas checagens. Ele falha — com código de saída diferente de zero — se qualquer coisa divergir. Rode-o depois de **toda** alteração no JSON ou no corpus.
+O ciclo regenera os formatos derivados, refaz a auditoria e roda as três checagens: a estrutural, a das figuras e a amostral contra o texto dos PDFs. Ele falha — com código de saída diferente de zero — se qualquer coisa divergir. Rode-o depois de **toda** alteração no JSON ou no corpus.
 
 ## As regras que sustentam o aparato
 
@@ -33,7 +33,7 @@ A estrutura segue os princípios do padrão *Cookiecutter Data Science* — dado
 | `Caderno-de-evidencias/` | Transcrições literais com página, por registro | `references` |
 | `scripts/` | Geradores, verificadores e as migrações já executadas. Ver `scripts/LEIA-ME.md` | `src` |
 | `reports/` | `AUDITORIA-FONTES.md`, a auditoria de vínculos, **gerada** | `reports` |
-| `reports/figures/` | Figura da cadeia causal (SVG) e cronologia navegável (HTML) | `reports/figures` |
+| `reports/figures/` | Figura da cadeia causal (SVG) e cronologia navegável (HTML). **Escritas à mão** — editar o JSON não as atualiza; `scripts/conferir_figuras.py` acusa a defasagem | `reports/figures` |
 | `reports/process_tracing_8jan_relatorio.md` | Relatório de pesquisa, escrito à mão | `reports` |
 | `docs/Pesquisa-sobre-Mobilizações-de-8-de-Janeiro.md` | Documento-base do projeto, anterior ao process tracing | `docs` |
 | `docs/PENDENCIAS-ANALITICAS.md` | **A agenda.** O que está aberto e o que espera decisão sua | `docs` |
@@ -48,7 +48,7 @@ Uma migração antiga, `scripts/migrar_esquema16.py`, ainda aponta para o CSV na
 
 1. `docs/PENDENCIAS-ANALITICAS.md` — o painel de estado e a ordem de ataque.
 2. `reports/AUDITORIA-FONTES.md` — onde está o documento que sustenta cada afirmação, e em que página.
-3. `scripts/LEIA-ME.md` — o ciclo, os scripts e a ressalva que importa: a checagem estrutural não pega vínculo que aponta para o documento errado, e por isso as duas rodam sempre juntas.
+3. `scripts/LEIA-ME.md` — o ciclo, os scripts e as duas ressalvas que importam: a checagem estrutural não pega vínculo que aponta para o documento errado, e as figuras não são geradas a partir do JSON.
 
 ## Limites declarados do corpus
 

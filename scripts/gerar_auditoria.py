@@ -10,6 +10,7 @@ saem dos dados.
 Uso:  python scripts/gerar_auditoria.py
 """
 
+import csv
 import json
 from collections import Counter, defaultdict
 from datetime import date
@@ -26,6 +27,15 @@ HOJE = date.today().strftime("%d/%m/%Y")
 
 def esc(t):
     return (t or "").replace("|", "\\|").replace("\n", " ").strip()
+
+
+def linhas_caderno():
+    """Quantos registros têm transcrição literal no Caderno-de-evidencias."""
+    csv_p = RAIZ / "Caderno-de-evidencias/caderno_CPMI_verbatim.csv"
+    if not csv_p.exists():
+        return 0
+    with csv_p.open(encoding="utf-8-sig", newline="") as f:
+        return sum(1 for _ in csv.DictReader(f))
 
 
 def main():
@@ -61,7 +71,8 @@ def main():
     w("Gerado por `scripts/gerar_auditoria.py` em **{}**. ".format(HOJE) +
       "Não editar à mão: rode o script de novo depois de cada rodada de coleta.")
     w("")
-    w("Esta peça responde a uma pergunta única e a responde para os 81 registros: "
+    w("Esta peça responde a uma pergunta única e a responde para os {} registros: ".format(
+        len(eventos)) +
       "**onde está, exatamente, o documento que sustenta esta afirmação, e em que página?** "
       "É o que um parecerista cobra quando desconfia de um ponto da cronologia, e é o que "
       "separa uma cronologia auditável de uma cronologia asserida.")
@@ -257,22 +268,26 @@ def main():
     w("")
     w("Três limites, declarados para que ninguém leia mais do que ela oferece.")
     w("")
-    w("1. **Não confere, para todos os 81, se a página sustenta a afirmação.** A checagem "
+    w("1. **Não confere, para todos os {}, se a página sustenta a afirmação.** A checagem "
       "estrutural verifica que o vínculo existe, que o arquivo está em disco e que a página "
       "pertence ao documento vinculado. A conferência do *conteúdo* contra o texto do PDF é "
       "feita **por amostra** — `scripts/conferir_paginas.py`, 12 registros por rodada, ou "
-      "`--todos` para os {} com página. A transcrição literal de 49 registros está no "
+      "`--todos` para os {} com página. A transcrição literal de {} registros está no "
       "`Caderno-de-evidencias/`.".format(
-          sum(1 for e in eventos if e.get("fonte_pagina"))))
+          len(eventos),
+          sum(1 for e in eventos if e.get("fonte_pagina")),
+          linhas_caderno()))
     w("2. **Não avalia a qualidade da fonte.** Que um registro esteja ancorado no relatório "
       "Cappelli não o torna verdadeiro — torna-o rastreável. E o Cappelli, registre-se, é "
       "**espelho jornalístico**: traz identificação oficial mas não foi localizado em domínio "
       "oficial. Isso está declarado no inventário e precisa constar da nota de fontes do artigo.")
-    w("3. **Não resolve as ressalvas de proveniência.** A auditoria as classifica; não as fecha. "
-      "PT-34 — a mais grave, os \"4 mil\" sem lastro — **foi fechada em 16/08/2026 por trabalho "
-      "próprio**, com a cifra retirada e substituída por faixa ancorada em duas medições oficiais "
-      "independentes (ver `docs/ESTIMATIVA-MULTIDAO-8JAN.md`). PT-12, PT-17 e PT-52 seguem abertas, "
-      "detalhadas no item 7 de `docs/PENDENCIAS-ANALITICAS.md`.")
+    w("3. **Não resolve as ressalvas de proveniência.** A auditoria as classifica; não as fecha — "
+      "quem as fecha é a rodada de conferência. As quatro que existiam foram fechadas em "
+      "16/08/2026: PT-34, a mais grave, com os \"4 mil\" retirados e substituídos por faixa "
+      "ancorada em duas medições oficiais independentes (ver `docs/ESTIMATIVA-MULTIDAO-8JAN.md`); "
+      "PT-12, com a cifra de \"mais de 100 acampamentos\" retirada; PT-17, com a data de saída "
+      "localizada na CPMI, p. 612; e PT-52, com as 2.151 prisões em flagrante adotadas no lugar "
+      "dos ~1.200 de imprensa. Cada fechamento está no `nota_auditoria` do próprio registro.")
     w("")
     w("---")
     w("")

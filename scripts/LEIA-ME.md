@@ -31,12 +31,16 @@ python scripts/gerar_auditoria.py
 # 5. verifique — falha se algo divergir
 python scripts/verificar_integridade.py
 
-# 6. confira a amostra contra o texto dos PDFs
+# 6. confira as figuras de reports/figures/ contra o codebook
+python scripts/conferir_figuras.py
+
+# 7. confira a amostra contra o texto dos PDFs
 python scripts/conferir_paginas.py
 ```
 
-Os passos 5 e 6 devolvem código de saída != 0 em caso de falha, então servem em
-gancho de pré-commit se o projeto virar repositório git.
+Os passos 3 a 7 são o que `bash scripts/ciclo.sh` roda, nessa ordem. Os passos
+5, 6 e 7 devolvem código de saída != 0 em caso de falha, então servem em gancho
+de pré-commit.
 
 ## Os arquivos
 
@@ -45,11 +49,14 @@ gancho de pré-commit se o projeto virar repositório git.
 | `gerar_codebook.py` | JSON → `data/processed/`: CSV (UTF-8 com BOM) + XLSX de quatro abas. Guarda `PROCEDENCIA` (procedência de cada arquivo do corpus) e `PENDENCIAS` (fila de coleta). |
 | `gerar_auditoria.py` | JSON → `reports/AUDITORIA-FONTES.md`. A narrativa vive no script; as tabelas saem dos dados. |
 | `verificar_integridade.py` | Seis checagens **estruturais**. Ver a ressalva abaixo. |
+| `conferir_figuras.py` | As duas peças de `reports/figures/` contra o codebook: cobertura dos registros, selo de status, procedência e cifras já retiradas. **A única parte do aparato que não é gerada** — ver a segunda ressalva. |
 | `conferir_paginas.py` | Abre o PDF na página citada e procura a transcrição. **A única checagem que lê a fonte.** |
 | `baixar_fontes.sh` | Comandos de coleta do que falta. Não baixa nada sozinho: cada peça é um alvo nomeado. |
 | `migrar_esquema16.py` | Rodada única de 16/08/2026 (12 → 16 campos + correções de auditoria). Idempotente. Mantido como registro da decisão, não faz parte do ciclo. |
 
-## A ressalva que importa
+## Duas ressalvas que importam
+
+### 1. O estrutural não pega vínculo errado
 
 `verificar_integridade.py` **não pega vínculo apontando para o documento errado.**
 Ele deriva o código do documento a partir do próprio vínculo, então um registro
@@ -63,6 +70,24 @@ revelou o descasamento.
 
 **Consequência prática: rode os dois.** O estrutural é barato e roda em segundos;
 o amostral é lento e cobre 12 registros por vez. Nenhum substitui o outro.
+
+### 2. As figuras não são geradas
+
+`reports/figures/` é a única parte do aparato escrita à mão: a cronologia
+interativa carrega uma cópia dos 82 registros dentro do `<script>`, e o SVG é
+rótulo por rótulo em coordenadas absolutas. Editar o JSON não as atualiza.
+
+Em 25/09/2026 descobriu-se o custo disso: as duas peças ainda traziam sete
+cifras retiradas em 16/08 e 11/09 — "+1.600 ações penais", "1.402 condenados",
+"~4 mil na Praça", "9 km", "+100 acampamentos", "~1.200 presos" e a prorrogação
+de 03/07/2026. Ficaram seis semanas publicadas numa figura que se apresenta como
+a codificação completa.
+
+`conferir_figuras.py` existe para que a próxima defasagem apareça no ciclo, e
+não num parecer. Ele compara o que as figuras **declaram** — ids, selo de
+status, procedência, cifras mortas —, não o conteúdo dos rótulos: uma cifra
+nova e errada passa por ele. A correção continua sendo manual, nos dois
+arquivos.
 
 ## Dependências
 

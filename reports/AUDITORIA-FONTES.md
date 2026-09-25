@@ -2,7 +2,7 @@
 
 Gerado por `scripts/gerar_auditoria.py` em **25/09/2026**. Não editar à mão: rode o script de novo depois de cada rodada de coleta.
 
-Esta peça responde a uma pergunta única e a responde para os 81 registros: **onde está, exatamente, o documento que sustenta esta afirmação, e em que página?** É o que um parecerista cobra quando desconfia de um ponto da cronologia, e é o que separa uma cronologia auditável de uma cronologia asserida.
+Esta peça responde a uma pergunta única e a responde para os 82 registros: **onde está, exatamente, o documento que sustenta esta afirmação, e em que página?** É o que um parecerista cobra quando desconfia de um ponto da cronologia, e é o que separa uma cronologia auditável de uma cronologia asserida.
 
 ## Painel
 
@@ -233,9 +233,9 @@ Estas são as lacunas reais. Cada uma tem uma peça identificada e uma via de ob
 
 Três limites, declarados para que ninguém leia mais do que ela oferece.
 
-1. **Não confere, para todos os 81, se a página sustenta a afirmação.** A checagem estrutural verifica que o vínculo existe, que o arquivo está em disco e que a página pertence ao documento vinculado. A conferência do *conteúdo* contra o texto do PDF é feita **por amostra** — `scripts/conferir_paginas.py`, 12 registros por rodada, ou `--todos` para os 68 com página. A transcrição literal de 49 registros está no `Caderno-de-evidencias/`.
+1. **Não confere, para todos os 82, se a página sustenta a afirmação.** A checagem estrutural verifica que o vínculo existe, que o arquivo está em disco e que a página pertence ao documento vinculado. A conferência do *conteúdo* contra o texto do PDF é feita **por amostra** — `scripts/conferir_paginas.py`, 12 registros por rodada, ou `--todos` para os 68 com página. A transcrição literal de 49 registros está no `Caderno-de-evidencias/`.
 2. **Não avalia a qualidade da fonte.** Que um registro esteja ancorado no relatório Cappelli não o torna verdadeiro — torna-o rastreável. E o Cappelli, registre-se, é **espelho jornalístico**: traz identificação oficial mas não foi localizado em domínio oficial. Isso está declarado no inventário e precisa constar da nota de fontes do artigo.
-3. **Não resolve as ressalvas de proveniência.** A auditoria as classifica; não as fecha. PT-34 — a mais grave, os "4 mil" sem lastro — **foi fechada em 16/08/2026 por trabalho próprio**, com a cifra retirada e substituída por faixa ancorada em duas medições oficiais independentes (ver `docs/ESTIMATIVA-MULTIDAO-8JAN.md`). PT-12, PT-17 e PT-52 seguem abertas, detalhadas no item 7 de `docs/PENDENCIAS-ANALITICAS.md`.
+3. **Não resolve as ressalvas de proveniência.** A auditoria as classifica; não as fecha — quem as fecha é a rodada de conferência. As quatro que existiam foram fechadas em 16/08/2026: PT-34, a mais grave, com os "4 mil" retirados e substituídos por faixa ancorada em duas medições oficiais independentes (ver `docs/ESTIMATIVA-MULTIDAO-8JAN.md`); PT-12, com a cifra de "mais de 100 acampamentos" retirada; PT-17, com a data de saída localizada na CPMI, p. 612; e PT-52, com as 2.151 prisões em flagrante adotadas no lugar dos ~1.200 de imprensa. Cada fechamento está no `nota_auditoria` do próprio registro.
 
 ---
 

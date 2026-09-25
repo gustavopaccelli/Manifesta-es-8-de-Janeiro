@@ -77,6 +77,13 @@ revelou o descasamento.
 **Consequência prática: rode os dois.** O estrutural é barato e roda em segundos;
 o amostral é lento e cobre 12 registros por vez. Nenhum substitui o outro.
 
+Desde **25/09/2026** o amostral é estrito: toda transcrição do registro precisa
+ser localizada em alguma página listada, e não basta uma casar. Ele também passou
+a listar as **páginas que nenhuma transcrição alcança** — aviso, não falha, e o
+primeiro lugar a olhar quando uma âncora estiver sob suspeita. Duas ressalvas de
+leitura estão no cabeçalho do próprio script, e uma delas retifica um diagnóstico
+que este projeto vinha repetindo sobre PT-59.
+
 ### 2. Três peças não são geradas, e envelhecem em silêncio
 
 As duas figuras de `reports/figures/` e o relatório de pesquisa reproduzem

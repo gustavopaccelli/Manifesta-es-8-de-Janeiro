@@ -45,6 +45,14 @@ Nenhum fato, mecanismo, status ou transcrição é alterado — só página e
 contagem.
 
 Uso:  python scripts/recodificar_paginas_execucao.py [--dry-run]
+
+RESSALVA ACRESCENTADA EM 25/09/2026 — o texto acima diz que PT-59 foi "aprovado
+pela citação errada". A verificação feita ao endurecer o conferir_paginas.py
+mostrou que a leitura estava exagerada: o dispositivo COMEÇA na p. 33 e SEGUE até
+a p. 36, e a janela que casava na p. 36 é parte legítima da mesma transcrição, 300
+caracteres adiante. O vínculo antigo era INCOMPLETO, não falso — confirmava a
+página final sem nunca abrir a inicial. A correção que este script aplicou continua
+certa; o diagnóstico é que estava mais forte do que a evidência sustentava.
 """
 
 import json

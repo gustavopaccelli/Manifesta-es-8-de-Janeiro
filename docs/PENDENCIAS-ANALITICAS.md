@@ -511,7 +511,9 @@ O cabeçalho ganhou um bloco de revisão declarando o que foi e o que **não** f
 O importante é **por que ninguém tinha visto**. `conferir_paginas.py` dava OK nos três:
 
 - **PT-58 e PT-60** passavam porque a primeira citação de cada um está mesmo na p. 1 — a capa. O verificador aprova quando *qualquer* citação casa com *qualquer* página listada, e parava na primeira.
-- **PT-59 passava pela citação errada.** Uma janela de 60 caracteres com o endereço do 19º BPM — fórmula que se repete ao longo de toda a decisão — casou com a p. 36. O dispositivo da transferência está na **p. 33**. O verificador confirmou a página com um trecho que não era o trecho.
+- **PT-59 passava sem que a página do dispositivo fosse aberta.** Uma janela de 60 caracteres com o endereço do 19º BPM casou com a p. 36, e o verificador parou ali; o dispositivo da transferência começa na **p. 33**.
+
+> **Correção de 25/09/2026, feita ao endurecer a ferramenta.** A frase acima dizia, até esta data, que PT-59 passara "pela citação errada". Está imprecisa, e a verificação desmentiu-a: a decisão da EP 169 tem o dispositivo **começando na p. 33 e seguindo até a p. 36**, e a janela que casava na p. 36 é parte legítima da mesma transcrição — 300 caracteres adiante. O vínculo antigo não era falso, era **incompleto**: confirmava a página final sem nunca abrir a inicial. A correção de 11/09 continua certa; o diagnóstico é que estava exagerado. Ver a ressalva no cabeçalho de `scripts/conferir_paginas.py`.
 
 É o **quinto caso do projeto de cifra ou referência correta aplicada ao objeto errado**, e o primeiro em que a ferramenta de conferência participou do erro. A correção das páginas foi feita medindo cobertura por página, não assumindo.
 
@@ -582,7 +584,7 @@ Na mesma rodada, `gerar_auditoria.py` deixou de contar à mão: os "81 registros
 
 Nenhum destes é falta de dado. Todos são escolha.
 
-1. **Endurecer o `conferir_paginas.py`** (item 19.2) — exigir que cada citação apareça na página que a ancora. Rodar contra os 68 antes de adotar.
+1. ~~**Endurecer o `conferir_paginas.py`**~~ ✅ **feito em 25/09/2026** (item 21.7). Achou dois erros de página, em PT-02A e PT-03A, e desmentiu o diagnóstico que o projeto vinha repetindo sobre PT-59.
 2. **PT-61, "Conclusão dos julgamentos"** no campo `resposta_estatal`, contra as **459 ações penais ainda em instrução** que o próprio balanço registra (p. 6). O balanço é do gabinete e usa a palavra; o codebook a reproduz. Manter com ressalva, ou reformular?
 3. ~~**A seção "Próximos passos recomendados" do relatório**~~ ✅ **reescrita em 25/09/2026.** Estava na versão de 14/08 e fechava recomendando começar a redigir, contrariando a decisão de 16/08. Agora abre declarando a decisão que a ordena e registra por que as rodadas seguintes lhe deram razão. Quatro frentes que ela dava como abertas foram para "concluído", com data, e os abertos passaram a separar o que vem antes da redação do que se resolve nela.
 4. **Ponteiros de arquivo dentro do JSON** (item 20) — atualizar reescreve CSV e auditoria no próximo ciclo.
@@ -637,6 +639,40 @@ Sobram seis candidatos, todos legítimos, e o ciclo completo passa: seis checage
 
 ---
 
+### 21.7 O conferidor endurecido — e um diagnóstico meu que caiu
+
+Era a decisão mais antiga da lista, aberta desde 11/09. A versão anterior do `conferir_paginas.py` aprovava o registro assim que **uma** transcrição casasse com **uma** página listada, e parava ali. Quatro consequências, todas fechadas nesta rodada:
+
+| O que passava batido | Efeito |
+|:--|:--|
+| Só o **primeiro documento** de `fonte_pagina` era aberto | As âncoras novas de PT-28 — Cappelli e AP 2668 — seriam invisíveis |
+| Intervalos viravam **só as pontas** | "CPMI: 880-884" abria 880 e 884; duas transcrições de PT-12A estão nas p. 881 e 882 |
+| A elisão **"(...)"** quebrava o casamento | A janela literal atravessava o buraco (PT-34) |
+| Bastava **uma** transcrição de várias | O resto nunca era conferido |
+
+Agora cada transcrição precisa ser localizada, intervalos são expandidos, a elisão parte a citação em fragmentos e a normalização de busca apaga aspas — duas "não localizadas", PT-08A e PT-36, eram só isso: o PDF escreve «o painel "as mulatas", de di cavalcanti» e o codebook transcreve sem as aspas internas.
+
+**Dois erros de página reais na estreia**, corrigidos por `scripts/recodificar_paginas_pt02a_pt03a.py` com as páginas lidas antes:
+
+- **PT-02A** citava a **p. 3** do acórdão das ADC 43/44/54, que é a **autuação** — folha de rosto com partes e advogados. O trecho está na **p. 6**, onde começa o relatório do min. Marco Aurélio.
+- **PT-03A** ancorava só a p. 395, do dispositivo. A segunda transcrição — "a sentença condenou o ex-presidente por um único ato de corrupção" — está na **p. 348** do mesmo volume.
+
+A correção de PT-02A propagou: o `conferir_relatorio.py` reprovou em seguida, porque a tabela da Etapa 2 e a nota de fonte da §1.1 ainda diziam "p. 3 e 9", e a cronologia interativa também. **Os verificadores passaram a pegar os efeitos uns dos outros** — que é o comportamento que se quer de um ciclo.
+
+#### O que ele não pega, e a retificação que isso me obrigou a fazer
+
+**PT-59 continua passando com o vínculo de antes de 11/09.** Ao testar a ferramenta contra o caso que a motivou, o resultado foi negativo — e a investigação desmentiu o diagnóstico que este projeto vinha repetindo em quatro lugares.
+
+A decisão da EP 169 tem o dispositivo **começando na p. 33 e seguindo até a p. 36**. A janela de 60 caracteres que casava na p. 36, com o endereço do 19º BPM, é **parte legítima da mesma transcrição** — 300 caracteres adiante. Não era "a citação errada": era a citação certa, casada no fim em vez do começo. **O vínculo antigo era incompleto, não falso.**
+
+A correção de 11/09 continua certa — as p. 33 e 35 precisavam entrar. O que estava errado era a explicação, mais forte do que a evidência sustentava. A retificação está registrada no cabeçalho de `scripts/conferir_paginas.py`, no da migração de 11/09, em `metadados.revisoes` do JSON e no item 19.2 acima.
+
+**O que aponta para esse caso não é a falha, é o aviso.** A ferramenta agora lista as **páginas listadas que nenhuma transcrição alcança** — com o vínculo antigo de PT-59, a p. 1 aparecia ali. São 59 páginas nessa situação no corpus inteiro, e não é falha: a página pode sustentar um fato que o registro não transcreve entre aspas. É onde olhar primeiro quando uma âncora estiver sob suspeita.
+
+Testado por injeção de defeito: página trocada em PT-24 reprova (1/2 localizadas), documento trocado em PT-28 reprova (0/1). Uma exceção registrada em `EXCECOES`, com motivo: a manchete do STF que PT-06A cita de passagem e que não está — nem deveria estar — no PDF da denúncia da PGR.
+
+---
+
 ## Ordem de ataque — revista em 25/09/2026
 
 **A decisão que ordena tudo continua sendo a de 16/08/2026: a redação é o último item.** A ordem anterior a essa data tratava o aparato como suficiente e punha a escrita como ponto de virada; esta trata o conjunto de dados do processo político como pré-requisito.
@@ -665,6 +701,7 @@ Sobram seis candidatos, todos legítimos, e o ciclo completo passa: seis checage
 | — | ~~Fechar o último buraco: `conferir_relatorio.py` no ciclo~~ — achou quatro divergências na primeira execução | 21.5 | ✅ 25/09 |
 | — | ~~Varrer `fonte_pagina` contra a prosa dos 82 registros~~ — 8 candidatos, 2 lacunas reais | 21.6 | ✅ 25/09 |
 | — | ~~Ancorar as páginas e documentos que PT-15 e PT-28 citavam sem vincular~~ — 4 páginas lidas no PDF antes da correção | 21.6 | ✅ 25/09 |
+| — | ~~Endurecer o `conferir_paginas.py`~~ — toda transcrição precisa ser localizada; 2 erros de página achados | 21.7 | ✅ 25/09 |
 
 ### Abertas
 
@@ -672,7 +709,6 @@ Sobram seis candidatos, todos legítimos, e o ciclo completo passa: seis checage
 |:--|:--|:--|:--|
 | 9 | Verificar os 325 DOIs no CrossRef e triar por pertinência | 11.3 | — |
 | 10 | Acrescentar a literatura clássica brasileira (livros, sem DOI) | 11.4 | 9 |
-| 12 | Endurecer o `conferir_paginas.py` e rodá-lo contra os 68 | 19.2, 21.4 | decisão sua |
 | 13 | Decidir o "Conclusão dos julgamentos" de PT-61 contra as 459 em instrução | 21.4 | decisão sua |
 | 14 | Codificar a camada $T_{-1}$ conjuntural — 7 registros ainda contextuais | 11.3, 19 | 9 |
 | 15 | Higiene do repositório: licença, remoto, `.backup_pre_lula/`, ponteiros no JSON | 20, 21.4 | decisão sua |

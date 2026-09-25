@@ -31,8 +31,8 @@ Nenhum dado analítico foi tocado — nenhum fato, mecanismo causal ou enquadram
 
 | Registro | Alteração |
 |:--|:--|
-| **PT-02A** | PT-02A — busca de melhor esforço em 16/08/2026 (Tier 2), sem mudança de status. Localizado um mirror em luisrobertobarroso.com.br — mas é APENAS o voto do min. Barroso (28 p.), não o acórdão completo do HC 126.292 com todos os votos. Não resolve a lacuna declarada ('o acórdão do próprio HC 126.292 não foi baixado'). Arquivo NÃO baixado para Fontes/ — decisão sobre incorporá-lo como material suplementar fica pendente para o pesquisador (ver lista de pendências). |
-| **PT-03A** | PT-03A — busca de melhor esforço em 16/08/2026 (Tier 2), sem mudança de status. Localizados apenas comentários sobre a sentença (ex.: artigo de 6 p. de Mário Montanha Teixeira Filho), não o inteiro teor. O e-proc da JFPR não foi consultado diretamente — provavelmente exige login. Permanece baixa prioridade: o dispositivo já está transcrito no acórdão do TRF-4, p. 395. |
+| **PT-02A** | PT-02A — busca de melhor esforço em 16/08/2026 (Tier 2), sem mudança de status. Localizado um mirror em luisrobertobarroso.com.br — mas é APENAS o voto do min. Barroso (28 p.), não o acórdão completo do HC 126.292 com todos os votos. Não resolve a lacuna declarada ('o acórdão do próprio HC 126.292 não foi baixado'). Arquivo NÃO baixado para Fontes/ — decisão sobre incorporá-lo como material suplementar fica pendente para o pesquisador (ver lista de pendências). CORREÇÃO DE PÁGINA EM 25/09/2026: o registro citava a p. 3 do acórdão das ADC 43/44/54, que é a autuação — folha de rosto com partes e advogados. A transcrição está na p. 6, onde começa o relatório do min. Marco Aurélio. Achado pelo conferir_paginas.py, na primeira execução sob a regra que exige localizar TODAS as transcrições. |
+| **PT-03A** | PT-03A — busca de melhor esforço em 16/08/2026 (Tier 2), sem mudança de status. Localizados apenas comentários sobre a sentença (ex.: artigo de 6 p. de Mário Montanha Teixeira Filho), não o inteiro teor. O e-proc da JFPR não foi consultado diretamente — provavelmente exige login. Permanece baixa prioridade: o dispositivo já está transcrito no acórdão do TRF-4, p. 395. PÁGINA ACRESCENTADA EM 25/09/2026: a segunda transcrição do registro está na p. 348 do mesmo volume, e o campo ancorava apenas a p. 395, do dispositivo. Achado pelo conferir_paginas.py, na primeira execução sob a regra que exige localizar TODAS as transcrições. |
 | **PT-03E** | PT-03E RESOLVIDO em 16/08/2026 — última peça do arco judicial. O inteiro teor foi obtido SEM captcha, por rota pública distinta do buscador de jurisprudência: o endpoint de documento da Consulta Unificada PJe. A API do buscador (sjur-pesquisa-api) exige verificação antirrobô e responde 'Falha na verificação antirrobô' sem token; nenhuma tentativa de contorná-la foi feita. DUAS CORREÇÕES DE DOCUMENTAÇÃO: o captcha do TSE é hCAPTCHA e não reCAPTCHA, como o projeto vinha registrando; e o acórdão é servido em HTML, não em PDF. ACHADO SUBSTANTIVO: a Súmula 41/TSE, invocada na ementa, mostra que o efeito eleitoral da condenação opera por automatismo — a Justiça Eleitoral se declara incompetente para rever o mérito —, o que explica por que as anulações posteriores do STF (PT-06A e PT-06B) não puderam desfazer a exclusão de 2018. |
 | **PT-06B** | vínculo corrigido em 16/08/2026 — O Plenário confirmou a suspeição em 23/06/2021 no segundo AgR do HC 193.726 (7x4); o registro cita as duas decisões mas só apontava a primeira. |
 | **PT-08** | vínculo corrigido em 16/08/2026 — O achado do Sri Lanka como precedente invocado está na CPMI p. 614 e é citado na tabela do relatório, mas fonte_local estava vazio. |
@@ -119,8 +119,8 @@ Cada um aponta arquivo e página. A numeração impressa do relatório da CPMI c
 
 | Registro | Documento(s) | Página | Classe |
 |:--|:--|:--|:--|
-| PT-02A | ADC 43/44/54 + ADC 43-MC | ADC 43/44/54: 3, 9 | Confirmado |
-| PT-03A | TRF-4 | TRF-4: 395 | Confirmado em fonte primária |
+| PT-02A | ADC 43/44/54 + ADC 43-MC | ADC 43/44/54: 6, 9 | Confirmado |
+| PT-03A | TRF-4 | TRF-4: 348, 395 | Confirmado em fonte primária |
 | PT-03B | TRF-4 | — | Confirmado |
 | PT-03C | HC 152.752 | — | Confirmado |
 | PT-03E | TSE RCand | TSE RCand: ementa itens 2-4 e 12; dispositivo | Confirmado em fonte primária |

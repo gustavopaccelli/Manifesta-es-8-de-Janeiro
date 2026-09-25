@@ -133,7 +133,7 @@ Cada um aponta arquivo e página. A numeração impressa do relatório da CPMI c
 | PT-08B | CPMI | CPMI: 468-469 | Confirmado em fonte primária |
 | PT-08C | CPMI | CPMI: 469, 470 | Confirmado em fonte primária |
 | PT-09 | CPMI | CPMI: 472 | Confirmado em fonte primária |
-| PT-10 | CPMI | CPMI: 999, 1023 | Confirmado em fonte primária |
+| PT-10 | CPMI | CPMI: 999, 1021, 1023 | Confirmado em fonte primária |
 | PT-10A | CPMI | CPMI: 884-887, 887-890 | Confirmado em fonte primária |
 | PT-11 | CPMI | CPMI: 515 | Confirmado em fonte primária |
 | PT-12 | CPMI | CPMI: 524, 529, 531, 532, 510, 577 | Confirmado em fonte primária |

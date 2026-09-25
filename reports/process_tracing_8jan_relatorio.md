@@ -193,7 +193,7 @@ Os horários abaixo seguem a reconstituição do Relatório Final da CPMI. A seq
 
 ### 2.1 Deslocamento (13h–14h43)
 
-**13h00** — A marcha deixa o acampamento do SMU, a 9 km em linha reta dos três edifícios pelo Eixo Monumental. Nenhuma interdição na origem.
+**13h00** — A marcha deixa o acampamento do SMU e percorre **7,9 km pela via N1** até a Esplanada, **escoltada pela Polícia Militar do Distrito Federal**. Nenhuma interdição na origem.
 **Mecanismo.** *Deslocamento espacial como escalada*. Sair da "servidão militar" — território de ocupação tolerada — em direção ao centro do poder converte a ocupação estática em ofensiva. O momento da partida é o ponto em que o repertório muda de natureza.
 
 **13h23** — Fernando de Sousa Oliveira, substituto de Anderson Torres na SSP-DF, envia áudio ao governador Ibaneis Rocha **tranquilizando-o** sobre a manifestação.
@@ -296,7 +296,7 @@ Rigor exige registrar também o que enfraquece a tese. A conferência trouxe doi
 1. **O alerta da véspera relativizava a ameaça.** O informe de 07/01 (12h00, p. 374-375) trazia a advertência sobre ocupações e violência **seguida de "mas sem coordenação concreta para tais ações"**. Isso dá sustentação parcial à hipótese rival de que o dispositivo foi calibrado por uma inteligência que ela própria duvidava do risco.
 2. **A ordem do secretário contradizia a execução em campo.** Torres mandou "Não deixem chegar ao Supremo" às 14h56 (p. 658); às 15h16 o comandante liberou justamente esse acesso (p. 674). Isso não se encaixa na leitura mais simples de conivência em cadeia e precisa ser enfrentado.
 
-**Estado final da recodificação — encerrada.** Concluída para **49 registros**: toda a camada coberta pelo Relatório Final da CPMI, do resultado eleitoral (PT-09) ao desmonte do acampamento (PT-52). Cada um traz página e transcrição literal, reunidos em `Caderno-de-evidencias/`. **Não resta nenhum registro que o relatório cubra e que siga apoiado em fonte secundária.** Os 27 restantes não dependem da CPMI: camada contextual da literatura teórica (PT-01 a PT-07), arco judicial com acórdãos próprios em `Fontes/01_`, resposta institucional posterior a out/2023 (fonte: STF), o laudo pericial não obtido (PT-38) e uma inferência declarada (PT-62).
+**Estado final da recodificação — encerrada.** Concluída para **49 registros**: toda a camada coberta pelo Relatório Final da CPMI, do resultado eleitoral (PT-09) ao desmonte do acampamento (PT-52). Cada um traz página e transcrição literal, reunidos em `Caderno-de-evidencias/`. **Não resta nenhum registro que o relatório cubra e que siga apoiado em fonte secundária.** Os 27 restantes não dependem da CPMI: camada contextual da literatura teórica (PT-01 a PT-07), arco judicial com acórdãos próprios em `Fontes/01_Arco-judicial_2017-2021/`, resposta institucional posterior a out/2023 (fonte: STF), o laudo pericial não obtido (PT-38) e uma inferência declarada (PT-62).
 
 **A previsão inicial de que os registros restantes seriam "incontroversos" estava errada, e errou duas vezes.** A recodificação de PT-12 a PT-18, feita sem expectativa de rendimento, produziu o achado que mais alterou o argumento: o regime de sobreaviso (PT-18). E a última leva — os seis registros que sobraram, os mais banais da lista — trouxe o "Fiquem à vontade" de PT-11, que é provavelmente o **melhor único elemento de prova de certificação por elite** em todo o corpus, e a descoberta de que o modelo invocado pelos organizadores era o Sri Lanka, não o Capitólio (PT-19, com reflexo em PT-08).
 
@@ -467,7 +467,7 @@ A primeira é de **datação**: a tentativa de alterar o resultado precede o res
 | PT-21 | 06–07/01/2023 | $T_{-1}$ Operacional | Caravanas; financiadores | Fretamento e deslocamento em massa | — | Convocação nacional | Nenhuma interdição | **Massa crítica: 5.500 pessoas em 07/01 (x20)** | CPMI |
 | PT-22 | 08/01 08h20 | $T_{-1}$ Operacional | Abin | Alerta de inteligência (101 ônibus) | — | — | Sem medida proporcional | Falha de conversão de inteligência em ação | CPMI |
 | PT-23 | 08/01 10h00 | $T_{-1}$ Operacional | Abin; grupo PMDF/GSI | Novo alerta | Prédios públicos da Esplanada | Registro de incitação a ocupações e violência | Sem reforço | Segunda falha de conversão | CPMI |
-| PT-24 | 08/01 13h00 | $T_0$ Mobilização | Milhares do acampamento do SMU | **Marcha (9 km)** | Esplanada / Praça dos Três Poderes | "Marcha patriótica" | Sem interdição na origem | Deslocamento espacial como escalada | CPMI |
+| PT-24 | 08/01 13h00 | $T_0$ Mobilização | Milhares do acampamento do SMU | **Marcha (7,9 km, via N1)** | Esplanada / Praça dos Três Poderes | "Marcha patriótica" | Sem interdição na origem; escolta da PMDF | Deslocamento espacial como escalada | CPMI |
 | PT-25 | 08/01 13h23 | $T_0$ Mobilização | F. de Sousa Oliveira (SSP-DF) | Áudio ao governador | — | "Sob controle" | Sem elevar alerta | Neutralização da percepção de ameaça | CPMI |
 | PT-26 | 08/01 14h30 | $T_0$ Mobilização | Marcha | Avanço sobre 1ª barreira (Via N1) | Contenção da PMDF | "O povo no poder" | Barreira não sustentada | Teste sequencial de contenção | CPMI |
 | PT-27 | 08/01 14h43 | $T_0$ Mobilização | Marcha | Chegada aos gradis (Av. das Bandeiras) | Perímetro de segurança | — | Gradis sem efetivo | Ruptura de barreira física | CPMI |

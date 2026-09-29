@@ -59,6 +59,7 @@ de pré-commit.
 | `migrar_esquema16.py` | Rodada única de 16/08/2026 (12 → 16 campos + correções de auditoria). Idempotente. Mantido como registro da decisão, não faz parte do ciclo. |
 | `varrer_fonte_pagina.py` | **Triagem, fora do ciclo.** Compara as páginas citadas na prosa dos registros (`fonte_trecho`, `mecanismo_causal`, `status_verificacao`, `nota_auditoria`) com o campo estruturado `fonte_pagina`, e imprime o trecho em volta de cada divergência. Nem todo achado é lacuna — ver a terceira ressalva. |
 | `verificar_dois_sinteses.py` | **Triagem, fora do ciclo.** Os DOIs das sínteses LeapSpace no CrossRef e, em 404, na DataCite. Emite `data/processed/dois_sinteses_leapspace.csv` com metadados, e confere se o título registrado casa com o que a síntese declara. **Imprime a contagem por arquivo e cobra as duas contagens escritas à mão** — a de `PROCEDENCIA` e a do inventário de fontes —, saindo com código 1 se divergirem. Ver a quarta ressalva. |
+| `triar_dois.py` | **Triagem, fora do ciclo.** Classifica os DOIs verificados em três camadas contra os mecanismos que o codebook afirma, e emite `data/processed/triagem_dois.csv` com o uso declarado item por item. A chave é fragmento de título com número de correspondências esperado — aborta se divergir, para nenhuma referência ser inventada por engano de digitação. |
 | `recodificar_*.py` | Migrações já executadas, uma por rodada, cada uma idempotente e com o achado que a motivou no cabeçalho. Registro do que foi feito, fora do ciclo. |
 
 ## Três ressalvas que importam

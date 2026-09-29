@@ -251,6 +251,26 @@ def conferir_declaracoes(achados, mencoes):
     return divergencias
 
 
+def sem_doi():
+    """Entradas que a síntese cita por link do Scopus, sem DOI nenhum.
+
+    Elas não entram no universo desta varredura — que é de DOIs — e por isso
+    ficaram invisíveis até 29/09/2026, quando uma delas foi procurada por outro
+    motivo: Bröer & Duyvendak (2009), sobre oportunidades discursivas, que
+    `projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md` aponta como de interesse do
+    projeto. São 21, e três delas foram para a camada A da triagem. Ficam contadas
+    aqui para não voltarem a desaparecer: **um universo definido pelo que a
+    ferramenta lê não é o universo.**"""
+    total = {}
+    for arq in sorted(SINTESES.glob("*_LeapSpace.docx")):
+        t = texto_docx(arq)
+        lista = t[t.index("References"):] if "References" in t else t
+        n = lista.count("scopus.com")
+        if n:
+            total[arq.name.replace("_LeapSpace.docx", "")] = n
+    return total
+
+
 def cache_lido():
     if not CACHE.exists():
         return {}
@@ -392,6 +412,12 @@ def main():
 
     achados, mencoes = extrair()
     print(tabela(achados, mencoes))
+    faltantes = sem_doi()
+    if faltantes:
+        print("{} entrada(s) citada(s) por link do Scopus, SEM DOI — fora deste universo: {}"
+              .format(sum(faltantes.values()),
+                      ", ".join("{} ({})".format(k, v) for k, v in sorted(faltantes.items()))))
+        print("  8 identificadores já recuperados por busca de título; ver RECUPERADOS em triar_dois.py")
     divergencias = conferir_declaracoes(achados, mencoes)
     if divergencias:
         print("CONTAGEM DECLARADA DIVERGE DO ARQUIVO:")
@@ -404,7 +430,8 @@ def main():
     faltam = [d for d in achados if d not in cache]
     if args.limite:
         faltam = faltam[:args.limite]
-    print("{} em cache, {} a consultar".format(len(cache), len(faltam)))
+    print("{} no cache ({} do universo, o resto são recuperados sem DOI na síntese), "
+          "{} a consultar".format(len(cache), len(achados), len(faltam)))
 
     CACHE.parent.mkdir(parents=True, exist_ok=True)
     with CACHE.open("a", encoding="utf-8", newline="") as fh:

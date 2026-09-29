@@ -22,7 +22,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Verificação | `bash scripts/ciclo.sh` — seis passos: dois geradores e quatro checagens, todas com código de saída ≠ 0 em caso de falha |
 | Controle de versão | git desde 20/09/2026, sem remoto configurado |
 | Eixo bibliográfico Lava Jato | 20 referências, 18 com DOI confirmado |
-| Sínteses LeapSpace (não citáveis) | **411 DOIs verificados em 29/09** — 408 existem; os 3 que não existem já têm DOI correto registrado. **Zero referências sobre o Brasil** |
+| Sínteses LeapSpace (não citáveis) | **411 DOIs verificados e triados em 29/09** — 408 existem, os 3 restantes com DOI correto registrado; **35 na camada A**, 65 em B, 308 fora. **Zero referências sobre o Brasil, e o cânone de mecanismos ausente** — itens 22 e 23 |
 | **Redação do artigo** | **não iniciada — por decisão, é o último item da fila** |
 
 **Fechados na rodada de 16/08/2026:** itens 1, 2 e 8, mais os seis novos — **12** (auditoria de fontes), **13** (estimativa de multidão), **14** (ressalvas restantes), **15** (balanço de 2026 e campanha), **16** (Manchetômetro → PT-50A), **17** (acórdão do TSE) e **18** (execução penal e arquivamento web).
@@ -786,6 +786,88 @@ As 91 menções para 90 DOIs têm causa identificada, e é a mesma família dos 
 
 Era a **terceira cópia manual de uma cifra** do projeto, depois das figuras e do relatório, e falhou pelo mesmo mecanismo das outras duas: alguém corrigiu uma cópia e não a outra, e nada avisou. A regra da página anterior vale também para número de metadado: **se é digitado em dois lugares, vai divergir.**
 
+## 23. A triagem por pertinência — e o buraco que ela encontrou — ✅ 29/09/2026
+
+Passo 2 do encaminhamento do item 11.3, a pedido seu. `scripts/triar_dois.py` classifica os 411 em três camadas e emite [`data/processed/triagem_dois.csv`](../data/processed/triagem_dois.csv), com o uso declarado item por item.
+
+### 23.1 O critério, que não é de gosto
+
+Pertinência aqui significa uma coisa só: **sustentar um mecanismo que o codebook efetivamente afirma**. O vocabulário causal foi extraído dos **82 campos `mecanismo_causal` do JSON**, não de uma ideia geral do que seja literatura de movimentos sociais — certificação e descertificação, apropriação e mudança de repertório, difusão e emulação transnacional, alinhamento de quadros, estrutura de oportunidade e sua reversão, estruturas de mobilização e rede com nós, *policing* e defecção do agente de contenção, limiar e contágio, radicalização de flanco, repressão escalonada, ciclo e desmobilização, mais o próprio método.
+
+| Camada | Quantos | O que é |
+|:--|--:|:--|
+| **A** | **38** | Sustenta um mecanismo afirmado, ou é a referência canônica do conceito que o codebook usa pelo nome |
+| **B** | 69 | Leitura útil, decisão na escrita: teoria geral, caso comparável, verbete, instrumento adjacente |
+| **C** | 309 | Fora. Não é juízo de qualidade: é ausência de relação com o argumento |
+| — | 3 | Os DOIs inexistentes do item 22 |
+
+São **419 linhas**, não 411: oito entram por 23.5.
+
+**A camada A nomeia 25 dos 82 registros.** Cada linha da planilha diz qual — "PT-27, PT-31 e PT-32: presença e ação policial como variável do desfecho", e assim por diante.
+
+### 23.2 O buraco, que é o achado principal
+
+Procurei no corpus, um por um, os mecanismos que o codebook afirma **pelo nome**. O resultado importa mais do que os 35 selecionados:
+
+| O que o codebook afirma | O que as sínteses trazem |
+|:--|:--|
+| `Dynamics of Contention` (McAdam, Tarrow & Tilly, 2001) — a obra do vocabulário | **zero ocorrências** |
+| `Power in Movement` (Tarrow) | **zero ocorrências** |
+| *certification* / certificação — PT-03, PT-13, PT-50, PT-06B | **nenhum título** |
+| *brokerage* / corretagem | **nenhum título** |
+| *blame shifting* — PT-42 | **nenhum título** |
+| *threshold* e *critical mass* — PT-29, PT-34 | **nenhum título** |
+| McCarthy & Zald (1977), mobilização de recursos | ausente; há Zald & Ash (1966) |
+
+PT-03D diz, com essas palavras, "em vocabulário de Tilly e Tarrow" — e a obra desse vocabulário não está na lista de 411. O mais perto que o corpus chega é o verbete **"Mechanisms", de Tarrow**, na *Wiley-Blackwell Encyclopedia*, que por isso foi para a camada A.
+
+**A explicação é estrutural, e vale como regra sobre este tipo de insumo.** Uma lista gerada por sistema é densa onde a produção recente é densa — enquadramento, ativismo digital, e um bloco grande sobre formação do Estado em Tilly, que o codebook não usa — e rala exatamente nos clássicos que o desenho mobiliza. **Contar DOIs não revela isso. Só revela procurar, no corpus, cada mecanismo que o codebook afirma.**
+
+Consequência prática: o cânone de mecanismos entra **à mão**, pela mesma via da literatura clássica brasileira do item 11.4. São duas lacunas do mesmo tipo, e nenhuma delas se resolve com mais DOIs de síntese.
+
+### 23.3 O que a camada A cobre
+
+| Função no desenho | Itens |
+|:--|--:|
+| Método — process tracing, testes, mecanismo, catálogo de eventos, seleção de evento | 11 |
+| Enquadramento, alinhamento de quadros e oportunidade discursiva | 10 |
+| Repertório, difusão e contágio | 4 |
+| Estruturas de mobilização, recursos e rede | 4 |
+| *Policing*, repressão e defecção do agente de contenção | 4 |
+| Contestação de resultado eleitoral e o 6 de Janeiro | 2 |
+| Verbete de Tarrow sobre mecanismo (duas versões) | 2 |
+| Dinâmica relacional da radicalização | 1 |
+
+Três itens da camada A merecem nota, porque respondem a pontos que a agenda já tinha em aberto:
+
+- **`Event Catalogs as Theories`** (Tilly, 2002) — catálogo de eventos *é* teoria. É a descrição do que este codebook de 82 sub-eventos é, e o argumento pronto para quem o tratar como mera cronologia.
+- **`Focusing on Focusing Events`** (2018) — seleção de evento e viés de cobertura, que é a ressalva central da análise de eventos de protesto e que este corpus enfrenta por ser documental, não jornalístico.
+- **`January 6th and De-Democratization`** e **`Comparing the #StopTheSteal Movement`** — o caso de que PT-08 afirma ser emulação, lido pela literatura. Sem eles, a difusão transnacional fica asserida.
+
+### 23.5 As 21 entradas sem DOI, que nunca estiveram no universo
+
+A triagem tinha um limite que só apareceu quando fui conferir uma afirmação de `08_BIBLIOGRAFIA-METODOLOGICA.md`: ele diz que **Bröer e Duyvendak (2009)**, sobre oportunidades discursivas e regras de sentimento, "aparece nas sínteses". Procurei entre os 411 e não estava. A síntese o cita — mas **por link do Scopus, sem DOI**.
+
+**São 21 entradas nessa situação**, distribuídas nas sete sínteses. Elas nunca entraram no universo verificado, porque o universo era "DOIs impressos". E não eram periféricas:
+
+| Recuperado por busca de título | Camada | Por quê |
+|:--|:--|:--|
+| SNOW *et al.* (2014), *The Emergence, Development, and Future of the Framing Perspective* | **A** | PT-07: o balanço de 25 anos do alinhamento de quadros, pelos autores da formulação |
+| BRÖER & DUYVENDAK (2009), *Discursive Opportunities, Feeling Rules* | **A** | PT-07 e PT-50A: é o item que `08_BIBLIOGRAFIA` já apontava como de interesse |
+| ALIMI *et al.* (2012), *Relational Dynamics and Processes of Radicalization* | **A** | PT-06, PT-15 e PT-16: a radicalização de flanco em quadro relacional |
+| mais quatro em B e um em C | | oportunidade política em contexto repressivo, engajamento organizacional, desempregados, crítica ao estrutural |
+
+Oito identificadores distintos foram recuperados com **casamento de título exato** no CrossRef, e os metadados vieram da agência para o cache — nenhum título foi digitado à mão. Dois dos 21 eram duplicata de itens que a própria síntese cita com DOI em outra entrada (Beach & Pedersen, e Waldner). **Restam dez sem resolver**, e duas delas valem a busca: *A Tale of Two Cultures* (Goertz & Mahoney, 2012) e *Disentangling protest cycles*, que é do assunto de PT-62.
+
+**A lição é sobre o desenho da varredura, não sobre o LeapSpace.** Eu defini o universo pelo identificador que sabia extrair, e o que não tinha identificador ficou invisível — inclusive a referência mais central do eixo de enquadramento. **Um universo definido pelo que a ferramenta lê não é o universo.** `verificar_dois_sinteses.py` passou a imprimir a contagem dessas entradas a cada execução, para elas não voltarem a desaparecer.
+
+### 23.4 Os limites, que precisam ser ditos
+
+1. **A triagem lê metadado, não obra.** Título, veículo, ano, autoria e assunto — o que a agência registra. **Nada da camada A é citável antes do passo 3**, a leitura na fonte. As dez fichas de `08_BIBLIOGRAFIA-METODOLOGICA.md` mostram quanto de metadado não sobrevive à leitura.
+2. **A camada C não é lixo.** São 308 itens reais e verificados, sem relação com este argumento. Entre eles, o bloco de formação do Estado em Tilly, que seria pertinente a outra pesquisa.
+3. **Uma atribuição ficou marcada para conferência:** o balanço crítico de análise de enquadramento que o CrossRef devolve sob a autoria de van Dijk. Está na camada B com a ressalva escrita na própria linha.
+4. **A chave da triagem é o título, não o DOI.** Digitar 100 DOIs à mão seria convidar o defeito que este projeto persegue desde agosto; cada linha traz um fragmento de título e quantas correspondências espera, e o script aborta se achar número diferente. **Foi o que pegou onze fragmentos ambíguos na primeira execução** — `Mechanisms` casava com dezesseis títulos, `Democracy` com sete.
+
 ---
 
 ## Ordem de ataque — revista em 29/09/2026
@@ -818,13 +900,15 @@ Era a **terceira cópia manual de uma cifra** do projeto, depois das figuras e d
 | — | ~~Ancorar as páginas e documentos que PT-15 e PT-28 citavam sem vincular~~ — 4 páginas lidas no PDF antes da correção | 21.6 | ✅ 25/09 |
 | — | ~~Endurecer o `conferir_paginas.py`~~ — toda transcrição precisa ser localizada; 2 erros de página achados | 21.7 | ✅ 25/09 |
 | — | ~~Verificar os DOIs das sínteses~~ — são **411**, não 325; 3 inexistentes e 1 DOI real no autor errado, **os quatro já com identificador correto** | 22, 22.6 | ✅ 29/09 |
+| 9 | ~~Triar por pertinência~~ — 35 na camada A, e o cânone de mecanismos não está no corpus | 23 | ✅ 29/09 |
 
 ### Abertas
 
 | # | Tarefa | Item desta agenda | Depende de |
 |:--|:--|:--|:--|
-| 9 | **Triar por pertinência** os 408 DOIs confirmados — a verificação fechou em 29/09 | 11.3, 22 | decisão sua |
 | 10 | Acrescentar a literatura clássica brasileira (livros, sem DOI) — as sínteses têm **zero** referências sobre o Brasil | 11.4, 22.4 | — |
+| 17 | **Ler na fonte os 35 da camada A** (passo 3 do item 11.3) — nenhum é citável antes disso | 23 | — |
+| 18 | **Acrescentar à mão o cânone de mecanismos**: `Dynamics of Contention`, `Power in Movement`, McCarthy & Zald — nenhum está nas sínteses, e o codebook usa o vocabulário deles | 23.2 | — |
 | 13 | Decidir o "Conclusão dos julgamentos" de PT-61 contra as 459 em instrução | 21.4 | decisão sua |
 | 14 | Codificar a camada $T_{-1}$ conjuntural — 7 registros ainda contextuais | 11.3, 19 | 9 |
 | 15 | Higiene do repositório: licença, remoto, `.backup_pre_lula/`, ponteiros no JSON | 20, 21.4 | decisão sua |

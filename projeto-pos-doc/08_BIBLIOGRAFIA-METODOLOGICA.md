@@ -108,6 +108,8 @@ O projeto nomeia os quatro testes de Beach e Pedersen, mas não cita a literatur
 
 Aparecem nas sínteses e interessam ao projeto, mas **não passaram por verificação** e por isso não devem ser citados ainda: Bennett, Charman e Fairfield (2022) sobre bayesianismo aplicado ao *process tracing*; Barrenechea e Mahoney (2019) sobre a versão conjuntista; Falleti e Mahoney (2015) sobre o método sequencial comparado; Mayntz (2004) sobre mecanismos e macrofenômenos; Bröer e Duyvendak (2009) sobre oportunidades discursivas e regras de sentimento; Ekman (2018) sobre mobilização de extrema-direita em mídias sociais.
 
+> **Atualização de 29/09/2026 — existência conferida, ficha ainda não.** A varredura dos 411 DOIs (item 22 da agenda) e a triagem por pertinência (item 23) alcançaram estes itens. **Mayntz (2004)** e **Ekman (2018)** estão na camada A; **Fairfield & Charman (2021)** e **Falleti & Mahoney** (o método sequencial comparado) em B; o **Barrenechea & Mahoney** conjuntista ficou em C, porque o desenho deste projeto não é conjuntista. **Bröer & Duyvendak não tinha DOI na síntese** — era citado por link do Scopus, como outras 20 entradas, e por isso esteve fora do universo verificado até ser procurado por título; está na camada A, em `10.17813/maiq.14.3.kx87723664558jm4`. **A frase acima continua valendo no essencial:** camada A não é ficha, e nenhum destes itens é citável antes da leitura na fonte.
+
 ---
 
 ## 3. Como o projeto dialoga com a produção recente

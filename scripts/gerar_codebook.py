@@ -182,6 +182,10 @@ for _arq in ["AgenciaBrasil_2018-04-07_Prisao-Curitiba_PT-03D.html",
 
 # Sínteses geradas por sistema automatizado. Não são citáveis e não ancoram
 # registro nenhum — servem como mapa de leitura e lista de DOIs a verificar.
+# As contagens abaixo são DOIs distintos por arquivo, no critério de
+# scripts/verificar_dois_sinteses.py, que as imprime a cada execução.
+# Conferidas em 29/09/2026; a de Causal_mechanisms é 90, e o inventário de
+# fontes trazia 89 por recontagem errada de 01/09.
 for _nome, _dois in [("Process_tracing", 77), ("Causal_mechanisms_in_social_science", 90),
                      ("Political_Process_by_Charles_Tilly", 82),
                      ("Mobilization_structures", 76), ("Protest_cycle", 24),

@@ -27,10 +27,21 @@ Political_Process, Mobilization_structures, Protest_cycle — dá exatamente
 reproduz o levantamento anterior, então não está inventando nem perdendo DOIs.
 O `--autoteste` prende essa contagem.
 
-RESSALVA DE CONTAGEM. A agenda fala em 325 porque foi escrita quando havia cinco
-sínteses. Duas outras chegaram em 11/09/2026 —
-`Political_and_discursive_opportunities` e `Framing_process_and_alignment` — e
-acrescentam 86 DOIs distintos. O universo de hoje é **411**, não 325.
+CONTAGEM, E O CRITÉRIO DELA. A agenda falava em 325 porque foi escrita quando
+havia cinco sínteses; duas outras chegaram em 01/09/2026 e o universo é **411**.
+**DOI distinto** aqui é a cadeia normalizada — minúscula, pontuação final
+removida — achada em `word/document.xml`; **menção** é cada ocorrência. A tabela
+por arquivo sai deste script a cada execução, para nenhum documento precisar
+digitar o número de novo.
+
+O caso que obrigou a dizer o critério: `Causal_mechanisms` tem **91 menções e 90
+DOIs distintos**, porque duas entradas — capítulos diferentes — recebem o mesmo
+DOI de livro, `10.4324/9781315100371`. Seriam **88** se as duas versões `.pub2`
+fossem colapsadas com as suas v1, e **95** se a conta fosse de entradas da lista,
+quatro das quais não têm DOI. O inventário de fontes trazia **89** desde uma
+recontagem à mão de 01/09/2026, que nenhum destes critérios reproduz e cuja
+regra não ficou registrada — o git começa em 20/09, depois dela. Corrigido para
+90 em 29/09/2026, com o critério acima e a tabela gerada.
 
 =============================================================================
 O SEGUNDO EIXO, E A RAZÃO DE ELE EXISTIR — achado de 29/09/2026
@@ -186,6 +197,60 @@ def extrair():
     return achados, mencoes
 
 
+def tabela(achados, mencoes):
+    """A contagem por arquivo, para os documentos pararem de digitar o número.
+
+    Critério, e ele precisa estar dito onde o número nasce: **DOI distinto** é a
+    cadeia normalizada (minúscula, pontuação final removida) achada em
+    `word/document.xml`. Menção é cada ocorrência. Os dois números diferem quando
+    duas entradas da lista citam o mesmo DOI — acontece em `Causal_mechanisms`,
+    onde dois capítulos diferentes recebem o DOI do livro."""
+    linhas = ["| Arquivo | Menções | DOIs distintos |", "|:--|--:|--:|"]
+    for arq in sorted(SINTESES.glob("*_LeapSpace.docx")):
+        nome = arq.name.replace("_LeapSpace.docx", "")
+        m = [d for d, s, _ in mencoes if s == nome]
+        linhas.append("| `{}` | {} | {} |".format(arq.name, len(m), len(set(m))))
+    linhas.append("| **união das {} sínteses** | **{}** | **{}** |".format(
+        len(list(SINTESES.glob("*_LeapSpace.docx"))), len(mencoes), len(achados)))
+    return chr(10).join(linhas)
+
+
+def conferir_declaracoes(achados, mencoes):
+    """Os mesmos números vivem em dois documentos. Aqui eles são cobrados.
+
+    A contagem por arquivo estava escrita à mão em `PROCEDENCIA`
+    (scripts/gerar_codebook.py) e na tabela de `Fontes/LEIA-ME_fontes.md`. Em
+    01/09/2026 uma recontagem mudou um dos dois e não o outro, e a divergência
+    ficou quatro semanas de pé — um DOI, em `Causal_mechanisms`. Esta função
+    existe para que a próxima apareça na execução seguinte, e não num parecer.
+
+    Devolve a lista de divergências; vazia quando os três concordam."""
+    esperado = {}
+    for arq in sorted(SINTESES.glob("*_LeapSpace.docx")):
+        nome = arq.name.replace("_LeapSpace.docx", "")
+        esperado[nome] = len({d for d, s, _ in mencoes if s == nome})
+
+    declarado = {}
+    proc = (RAIZ / "scripts/gerar_codebook.py").read_text(encoding="utf-8")
+    for nome, n in re.findall(r'\("([A-Za-z_]+)", (\d+)\)', proc):
+        if nome in esperado:
+            declarado.setdefault(nome, {})["PROCEDENCIA"] = int(n)
+    inv = (RAIZ / "Fontes/LEIA-ME_fontes.md").read_text(encoding="utf-8")
+    for nome, n in re.findall(r'`([A-Za-z_]+)_LeapSpace\.docx` \| (\d+) \|', inv):
+        if nome in esperado:
+            declarado.setdefault(nome, {})["LEIA-ME_fontes"] = int(n)
+
+    divergencias = []
+    for nome, n in sorted(esperado.items()):
+        for onde, d in sorted(declarado.get(nome, {}).items()):
+            if d != n:
+                divergencias.append("{}: conto {}, {} declara {}".format(nome, n, onde, d))
+        for onde in ("PROCEDENCIA", "LEIA-ME_fontes"):
+            if onde not in declarado.get(nome, {}):
+                divergencias.append("{}: {} não declara contagem".format(nome, onde))
+    return divergencias
+
+
 def cache_lido():
     if not CACHE.exists():
         return {}
@@ -326,8 +391,14 @@ def main():
         return autoteste()
 
     achados, mencoes = extrair()
-    print("{} DOIs distintos em {} sínteses, {} menções".format(
-        len(achados), len(list(SINTESES.glob("*_LeapSpace.docx"))), len(mencoes)))
+    print(tabela(achados, mencoes))
+    divergencias = conferir_declaracoes(achados, mencoes)
+    if divergencias:
+        print("CONTAGEM DECLARADA DIVERGE DO ARQUIVO:")
+        for d in divergencias:
+            print("  " + d)
+    else:
+        print("contagem por arquivo confere com PROCEDENCIA e com o inventário de fontes")
 
     cache = cache_lido()
     faltam = [d for d in achados if d not in cache]
@@ -409,7 +480,7 @@ def main():
             print("     {}".format(NAO_EXISTEM.get(d, reg.get("detalhe", ""))))
 
     print("\nplanilha: {}".format(CSV_OUT.relative_to(RAIZ)))
-    return 1 if conta.get("ERRO") else 0
+    return 1 if (conta.get("ERRO") or divergencias) else 0
 
 
 if __name__ == "__main__":

@@ -58,7 +58,7 @@ de pré-commit.
 | `baixar_fontes.sh` | Comandos de coleta do que falta. Não baixa nada sozinho: cada peça é um alvo nomeado. |
 | `migrar_esquema16.py` | Rodada única de 16/08/2026 (12 → 16 campos + correções de auditoria). Idempotente. Mantido como registro da decisão, não faz parte do ciclo. |
 | `varrer_fonte_pagina.py` | **Triagem, fora do ciclo.** Compara as páginas citadas na prosa dos registros (`fonte_trecho`, `mecanismo_causal`, `status_verificacao`, `nota_auditoria`) com o campo estruturado `fonte_pagina`, e imprime o trecho em volta de cada divergência. Nem todo achado é lacuna — ver a terceira ressalva. |
-| `verificar_dois_sinteses.py` | **Triagem, fora do ciclo.** Os DOIs das sínteses LeapSpace no CrossRef e, em 404, na DataCite. Emite `data/processed/dois_sinteses_leapspace.csv` com metadados, e confere se o título registrado casa com o que a síntese declara. Ver a quarta ressalva. |
+| `verificar_dois_sinteses.py` | **Triagem, fora do ciclo.** Os DOIs das sínteses LeapSpace no CrossRef e, em 404, na DataCite. Emite `data/processed/dois_sinteses_leapspace.csv` com metadados, e confere se o título registrado casa com o que a síntese declara. **Imprime a contagem por arquivo e cobra as duas contagens escritas à mão** — a de `PROCEDENCIA` e a do inventário de fontes —, saindo com código 1 se divergirem. Ver a quarta ressalva. |
 | `recodificar_*.py` | Migrações já executadas, uma por rodada, cada uma idempotente e com o achado que a motivou no cabeçalho. Registro do que foi feito, fora do ciclo. |
 
 ## Três ressalvas que importam
@@ -155,6 +155,14 @@ O'Halloran não existe. **O primeiro responde 200 e passaria como confirmado.** 
 três DOIs quebrados e do par deslocado estão nos dicionários `NAO_EXISTEM` e
 `VIZINHOS_TROCADOS` do próprio script, e nas fichas de
 `../projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md`.
+
+A mesma rodada fechou uma **terceira cópia manual de cifra** do projeto, depois
+das figuras e do relatório: a contagem de DOIs por síntese estava digitada em
+`PROCEDENCIA` e no inventário de fontes, e em 01/09 uma recontagem mudou um dos
+dois e não o outro — um DOI de diferença, quatro semanas de pé. O script agora
+**imprime a tabela e cobra as duas declarações**, com código de saída 1 quando
+divergem. Provado por injeção: 89 posto de volta no inventário reprova, dizendo
+qual arquivo e qual número.
 
 Por isso o verificador tem dois eixos, e o segundo procura o título registrado
 na janela de texto que antecede o DOI na síntese. Das 444 menções, 435 casam e

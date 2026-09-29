@@ -686,7 +686,7 @@ O extrator foi calibrado contra um número que esta agenda já trazia: a união 
 
 Mas duas outras sínteses chegaram em **01/09** — `Political_and_discursive_opportunities` e `Framing_process_and_alignment` — e acrescentam **86 DOIs distintos**. O universo de hoje é **411 DOIs em 444 menções**.
 
-**A defasagem era desta agenda, não do projeto.** O inventário `Fontes/LEIA-ME_fontes.md` já registrava as sete sínteses, a substituição das cinco primeiras por reemissões em 01/09 e a contagem por arquivo — chegando a 410 distintos. Só o item 11.3 daqui ficou quatro semanas anunciando a conta de cinco arquivos enquanto sete estavam na pasta. Sobre a diferença de um DOI entre 410 e 411, ver o fim de 22.6.
+**A defasagem era desta agenda, não do projeto.** O inventário `Fontes/LEIA-ME_fontes.md` já registrava as sete sínteses, a substituição das cinco primeiras por reemissões em 01/09 e a contagem por arquivo — chegando a 410 distintos. Só o item 11.3 daqui ficou quatro semanas anunciando a conta de cinco arquivos enquanto sete estavam na pasta. A diferença de um DOI entre os 410 do inventário e os 411 daqui está resolvida no fim de 22.6: eram 90 em `Causal_mechanisms`, não 89.
 
 ### 22.2 Eixo 1 — o DOI existe?
 
@@ -767,9 +767,24 @@ Pela mesma razão, a abertura deste item 22 está corrigida: a tarefa 9 não est
 
 Em 22.2 eu disse que ele "nunca foi depositado" e que o caminho era citar pelo livro. **Errado.** Ele está em `10.4324/9781315731377-28`, com metadados completos no CrossRef. O engano tem causa identificável e vale como método: testei o DOI **do livro**, que responde, e concluí do sufixo inexistente que o capítulo não existia. A consulta que resolve é a **busca bibliográfica pelo título**, com filtro de prefixo — foi ela que achou o `-28` e, no mesmo movimento, o `-34` de Vaughan. **Sufixo inexistente não é capítulo inexistente.**
 
-#### Uma divergência de contagem que fica aberta, de um DOI
+#### A divergência de contagem, resolvida: 90, e a tabela deixa de ser digitada
 
-O inventário de fontes declara **410** DOIs distintos e **89** em `Causal_mechanisms`; a `PROCEDENCIA` de `gerar_codebook.py` declara **90** para esse arquivo; o extrator de 29/09 acha **90** nele e **411** no total. Os 90 são registros distintos e confirmados, inclusive pares legítimos como `wbespm091` e `wbespm091.pub2`. **Não alterei nenhum dos dois números:** a recontagem de 01/09 que chegou a 89 não está documentada, e trocar um número por outro sem saber o critério é o que este projeto evita por princípio. Fica anotado nos dois arquivos, para você decidir qual critério vale.
+O inventário de fontes declarava **410** DOIs distintos e **89** em `Causal_mechanisms`; a `PROCEDENCIA` de `gerar_codebook.py` declarava **90** para esse arquivo. A recontagem que chegou a 89 é de 01/09 e **não deixou registro do critério** — o git começa em 20/09, depois dela, então o histórico não a recupera. Restava contar de novo, dizendo a regra.
+
+**Nenhum critério principiado reproduz 89.** A anatomia do arquivo:
+
+| Critério | Número |
+|:--|--:|
+| Menções de DOI no texto | 91 |
+| **DOIs distintos** — cadeia normalizada em `word/document.xml` | **90** |
+| Obras distintas, colapsando as duas versões `.pub2` com as suas v1 | 88 |
+| Entradas da lista de referências (quatro sem DOI) | 95 |
+
+As 91 menções para 90 DOIs têm causa identificada, e é a mesma família dos achados de 22.3: **duas entradas, de capítulos diferentes, recebem o mesmo DOI de livro** — `10.4324/9781315100371`, *Immigration and Categorical Inequality*. Repetição de DOI dentro de um arquivo não é anomalia deste: ocorre em **cinco das sete** sínteses.
+
+**Adotado: 90 no arquivo, 411 no total, e 89 corrigido como erro de contagem à mão.** Os três lugares passaram a concordar. E a causa estrutural foi fechada do jeito que este projeto fecha: **a tabela por arquivo agora é impressa por `scripts/verificar_dois_sinteses.py` a cada execução**, com o critério no cabeçalho, e o script **cobra as duas contagens escritas à mão** — a de `PROCEDENCIA` e a do inventário de fontes —, saindo com código 1 quando divergem. Provado por injeção: 89 posto de volta no inventário reprova, nomeando arquivo e número.
+
+Era a **terceira cópia manual de uma cifra** do projeto, depois das figuras e do relatório, e falhou pelo mesmo mecanismo das outras duas: alguém corrigiu uma cópia e não a outra, e nada avisou. A regra da página anterior vale também para número de metadado: **se é digitado em dois lugares, vai divergir.**
 
 ---
 

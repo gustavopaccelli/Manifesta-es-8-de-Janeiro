@@ -796,12 +796,12 @@ Pertinência aqui significa uma coisa só: **sustentar um mecanismo que o codebo
 
 | Camada | Quantos | O que é |
 |:--|--:|:--|
-| **A** | **38** | Sustenta um mecanismo afirmado, ou é a referência canônica do conceito que o codebook usa pelo nome |
-| **B** | 69 | Leitura útil, decisão na escrita: teoria geral, caso comparável, verbete, instrumento adjacente |
-| **C** | 309 | Fora. Não é juízo de qualidade: é ausência de relação com o argumento |
+| **A** | **40** | Sustenta um mecanismo afirmado, ou é a referência canônica do conceito que o codebook usa pelo nome |
+| **B** | 72 | Leitura útil, decisão na escrita: teoria geral, caso comparável, verbete, instrumento adjacente |
+| **C** | 313 | Fora. Não é juízo de qualidade: é ausência de relação com o argumento |
 | — | 3 | Os DOIs inexistentes do item 22 |
 
-São **419 linhas**, não 411: oito entram por 23.5.
+São **428 linhas**: os 411 DOIs impressos, 12 recuperados por busca de título e 5 que não têm DOI em agência alguma — ver 23.5.
 
 **A camada A nomeia 25 dos 82 registros.** Cada linha da planilha diz qual — "PT-27, PT-31 e PT-32: presença e ação policial como variável do desfecho", e assim por diante.
 
@@ -829,7 +829,7 @@ Consequência prática: o cânone de mecanismos entra **à mão**, pela mesma vi
 
 | Função no desenho | Itens |
 |:--|--:|
-| Método — process tracing, testes, mecanismo, catálogo de eventos, seleção de evento | 11 |
+| Método — process tracing, testes, mecanismo, catálogo de eventos, seleção de evento | 12 |
 | Enquadramento, alinhamento de quadros e oportunidade discursiva | 10 |
 | Repertório, difusão e contágio | 4 |
 | Estruturas de mobilização, recursos e rede | 4 |
@@ -837,6 +837,7 @@ Consequência prática: o cânone de mecanismos entra **à mão**, pela mesma vi
 | Contestação de resultado eleitoral e o 6 de Janeiro | 2 |
 | Verbete de Tarrow sobre mecanismo (duas versões) | 2 |
 | Dinâmica relacional da radicalização | 1 |
+| Ciclo de protesto e desmobilização | 1 |
 
 Três itens da camada A merecem nota, porque respondem a pontos que a agenda já tinha em aberto:
 
@@ -857,7 +858,19 @@ A triagem tinha um limite que só apareceu quando fui conferir uma afirmação d
 | ALIMI *et al.* (2012), *Relational Dynamics and Processes of Radicalization* | **A** | PT-06, PT-15 e PT-16: a radicalização de flanco em quadro relacional |
 | mais quatro em B e um em C | | oportunidade política em contexto repressivo, engajamento organizacional, desempregados, crítica ao estrutural |
 
-Oito identificadores distintos foram recuperados com **casamento de título exato** no CrossRef, e os metadados vieram da agência para o cache — nenhum título foi digitado à mão. Dois dos 21 eram duplicata de itens que a própria síntese cita com DOI em outra entrada (Beach & Pedersen, e Waldner). **Restam dez sem resolver**, e duas delas valem a busca: *A Tale of Two Cultures* (Goertz & Mahoney, 2012) e *Disentangling protest cycles*, que é do assunto de PT-62.
+**Os 21 links apontam para 18 entradas distintas** — duas são citadas em duas sínteses, e um dos links é um **segundo identificador** na entrada do Waldner, que já tem DOI. As 18 foram resolvidas uma a uma:
+
+| Desfecho | Quantas |
+|:--|--:|
+| **Identificador recuperado** por busca de título, no CrossRef ou na DataCite | **12** |
+| **Sem DOI em agência alguma** — e com evidência disso, não só ausência de busca | 5 |
+| Duplicata de entrada que já tem DOI entre os 411 (Beach & Pedersen, 2013) | 1 |
+
+Cinco dos doze recuperados foram para a **camada A**: Snow *et al.* (2014), Bröer & Duyvendak (2009), Alimi *et al.* (2012), **Goertz & Mahoney (2012)** — as duas culturas de inferência, que é antecipação de crítica dos itens 3 a 5 — e **Jung (2010)**, análise de história de eventos de ciclos de protesto, que é o assunto de PT-62 com o instrumento que este codebook também usa.
+
+**Os cinco sem DOI, e a evidência de que não é falha de busca.** Para cada um perguntei ao CrossRef se o veículo depositou **qualquer** DOI naquele ano: a *Demokratizatsiya* não depositou nada em 2018; a *Política y Gobierno* nada em 2017; a *Kölner Zeitschrift* nada em 1999; a *Sociological Theory and Methods* (JAMS) não está no CrossRef; e o texto de Durán é working paper de instituto. Ficam na planilha com o metadado que a **síntese** declara, marcado como tal, porque nenhuma agência o confirma — e dois deles valem leitura: Inclán (2017) sobre o legado conceitual de Tarrow, e Rössel (1999) sobre por que o conflito social vira violento, que é a pergunta de PT-29 a PT-33 em outro caso.
+
+**Uma armadilha nova, e ela repete a lição da rodada.** A busca por *A Tale of Two Cultures* devolve primeiro o **artigo** homônimo de 2006, dos mesmos autores (`10.1093/pan/mpj017`); a entrada é o **livro** de 2012. Título parecido, autoria idêntica, obra outra. **Casar título e autor não basta quando o autor se repete** — o ano também entra na conferência. O livro tem três DOIs, de três plataformas; registrei o da Princeton.
 
 **A lição é sobre o desenho da varredura, não sobre o LeapSpace.** Eu defini o universo pelo identificador que sabia extrair, e o que não tinha identificador ficou invisível — inclusive a referência mais central do eixo de enquadramento. **Um universo definido pelo que a ferramenta lê não é o universo.** `verificar_dois_sinteses.py` passou a imprimir a contagem dessas entradas a cada execução, para elas não voltarem a desaparecer.
 

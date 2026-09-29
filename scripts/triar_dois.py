@@ -75,11 +75,19 @@ CSV_IN = RAIZ / "data/processed/dois_sinteses_leapspace.csv"
 CSV_OUT = RAIZ / "data/processed/triagem_dois.csv"
 CACHE = RAIZ / "data/external/crossref_cache.jsonl"
 
-# As 21 entradas que a síntese cita por LINK DO SCOPUS, sem DOI, ficaram fora do
-# universo dos 411 — e duas delas eram centrais. Busca por título no CrossRef
-# recuperou 8 identificadores distintos, com casamento de título exato; os
-# metadados vieram da agência para o cache, nada foi digitado aqui além do DOI, e
-# `main` aborta se algum não estiver confirmado no cache.
+# Os 21 links do Scopus das sínteses apontam para **18 entradas distintas** — duas
+# citadas duas vezes, e um dos links é segundo identificador de uma entrada que já
+# tem DOI (a do Waldner). Nenhuma delas entrou no universo dos 411, e cinco eram
+# centrais. Busca por título recuperou **12** identificadores, no CrossRef e na
+# DataCite; os metadados vieram da agência para o cache, nada foi digitado aqui
+# além do DOI, e `main` aborta se algum não estiver confirmado. As outras 5 estão
+# em SEM_IDENTIFICADOR, adiante.
+#
+# Uma armadilha desta leva, e ela repete a lição da sessão: a busca por 'A Tale of
+# Two Cultures' devolve primeiro o **artigo** homônimo de 2006 dos mesmos autores
+# (10.1093/pan/mpj017), e a entrada é o **livro** de 2012. Título parecido, autoria
+# idêntica, obra outra — casar título e autor não basta quando o autor se repete.
+# O ano também precisa entrar na conferência.
 RECUPERADOS = {
     "10.17813/maiq.19.1.x74278226830m69l": ("A", "PT-07: o balanço de 25 anos do alinhamento de quadros, "
         "pelos próprios autores da formulação — e a síntese o citava sem DOI"),
@@ -93,7 +101,45 @@ RECUPERADOS = {
     "10.5153/sro.1856": ("B", "crítica à leitura estrutural da mobilização — antecipação de crítica"),
     "10.4324/9781315063362-34": ("C", "desenvolvimento capitalista e democracia; o codebook não afirma "
         "mecanismo estrutural de democratização"),
+    # segunda leva de recuperação, 29/09/2026: as dez entradas que restavam
+    "10.17813/maiq.15.1.86260543m3110705": ("A", "PT-62: análise de história de eventos de ciclos de "
+        "protesto — a desmobilização com o instrumento que este codebook também usa"),
+    "10.23943/princeton/9780691149707.001.0001": ("A", "método: as duas culturas de inferência, "
+        "qualitativa e quantitativa — a antecipação de crítica dos itens 3 a 5 da agenda. CUIDADO: "
+        "é o LIVRO de 2012; o artigo homônimo de 2006 (10.1093/pan/mpj017) é outra obra"),
+    "10.4119/ijcv-2930": ("B", "violência estatal e protesto de oposição em regime autoritário de alta "
+        "capacidade — comparação de regime, não o caso"),
+    "10.6084/m9.figshare.15109395": ("C", "modelo matemático do nexo protesto-repressão; formalização "
+        "fora do desenho, como os outros dois modelos da camada C"),
 }
+
+# As cinco entradas sem DOI em nenhuma agência, com a evidência de que não é "não
+# achei" e sim "não existe": para cada uma, perguntei ao CrossRef se o veículo
+# depositou **qualquer** DOI naquele ano. Entram na planilha com o metadado que a
+# síntese declara — e só ele —, porque nenhuma agência o confirma. Citar pelo
+# veículo, nunca por DOI inventado.
+SEM_IDENTIFICADOR = [
+    ("Inclán, M.", "2017", "In the shadow of Sidney Tarrow’s legacy: concepts in the study of protest "
+     "movements", "Política y Gobierno", "B",
+     "balanço conceitual do legado de Tarrow — o vocabulário que este codebook usa",
+     "a revista não tem nenhum depósito de 2017 no CrossRef"),
+    ("Nomiya, D.", "1998", "Political opportunity structure, economic structure, and ideology: peasant "
+     "uprisings in 19th-century Japan", "Sociological Theory and Methods", "C",
+     "oportunidade política em revolta camponesa do século XIX; fora do escopo",
+     "a revista (JAMS) não está no CrossRef"),
+    ("Rössel, J.", "1999", "Why social conflicts turn violent: strikes and violence in American coal "
+     "mining", "Kölner Zeitschrift für Soziologie und Sozialpsychologie", "B",
+     "por que o conflito social vira violento — a pergunta de PT-29 a PT-33, em outro caso",
+     "a revista não tem depósito algum de 1999"),
+    ("Buck, A.; Hass, J.", "2018", "Coalitional configurations: a structural analysis of democratization "
+     "in the former Soviet Union", "Demokratizatsiya", "C",
+     "configuração de coalizão e democratização pós-soviética; sem mecanismo correspondente",
+     "a revista não depositou nada em 2018 — zero resultados"),
+    ("Durán, R.", "2000", "Reshaping state-society relations: democratization in Southern and Eastern "
+     "Europe", "Working Paper, Kellogg Institute for International Studies", "C",
+     "working paper de instituto sobre democratização comparada; sem mecanismo correspondente",
+     "working paper de instituto, sem depósito; citar pela URL do Kellogg"),
+]
 
 # (fragmento do título, correspondências esperadas, camada, uso no argumento)
 TRIAGEM = [
@@ -284,6 +330,12 @@ def main():
         reg = {k: ("" if v is None else str(v)) for k, v in reg.items()}   # o cache traz int
         saida.append(dict(reg, camada=camada, uso=uso, eixos="", sinteses="",
                           origem="sem DOI na síntese; achado por busca de título"))
+    for autores, ano, titulo, veiculo, camada, uso, evidencia in SEM_IDENTIFICADOR:
+        saida.append({"doi": "", "camada": camada, "uso": uso, "ano": ano, "titulo": titulo,
+                      "veiculo": veiculo, "autores": autores, "citado_por": "", "eixos": "",
+                      "sinteses": "", "situacao": "SEM DOI EM NENHUMA AGÊNCIA — " + evidencia,
+                      "origem": "sem DOI na síntese; metadado declarado por ela, não por agência"})
+
     saida.sort(key=lambda r: (ordem.get(r["camada"], 3), -int(r["citado_por"] or 0)))
 
     CSV_OUT.parent.mkdir(parents=True, exist_ok=True)
@@ -296,8 +348,9 @@ def main():
     conta = {}
     for r in saida:
         conta[r["camada"]] = conta.get(r["camada"], 0) + 1
-    print("TRIAGEM POR PERTINÊNCIA — {} DOIs ({} impressos + {} recuperados)".format(
-        len(saida), len(rows), len(RECUPERADOS)))
+    print("TRIAGEM POR PERTINÊNCIA — {} referências: {} DOIs impressos, {} recuperados por busca "
+          "de título, {} sem DOI em agência alguma".format(
+              len(saida), len(rows), len(RECUPERADOS), len(SEM_IDENTIFICADOR)))
     print("=" * 78)
     for c in ("A", "B", "C", "—"):
         if c in conta:

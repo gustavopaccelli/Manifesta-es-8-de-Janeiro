@@ -258,7 +258,7 @@ def sem_doi():
     ficaram invisíveis até 29/09/2026, quando uma delas foi procurada por outro
     motivo: Bröer & Duyvendak (2009), sobre oportunidades discursivas, que
     `projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md` aponta como de interesse do
-    projeto. São 21, e três delas foram para a camada A da triagem. Ficam contadas
+    projeto. São 21 links para **18 entradas distintas**, e cinco delas foram para a camada A da triagem. Ficam contadas
     aqui para não voltarem a desaparecer: **um universo definido pelo que a
     ferramenta lê não é o universo.**"""
     total = {}
@@ -417,7 +417,9 @@ def main():
         print("{} entrada(s) citada(s) por link do Scopus, SEM DOI — fora deste universo: {}"
               .format(sum(faltantes.values()),
                       ", ".join("{} ({})".format(k, v) for k, v in sorted(faltantes.items()))))
-        print("  8 identificadores já recuperados por busca de título; ver RECUPERADOS em triar_dois.py")
+        print("  são 18 entradas distintas (duas citadas duas vezes, e um link é segundo identificador "
+              "de entrada que já tem DOI); 12 identificadores recuperados por busca de título e 5 sem DOI "
+              "em agência alguma — ver RECUPERADOS e SEM_IDENTIFICADOR em triar_dois.py")
     divergencias = conferir_declaracoes(achados, mencoes)
     if divergencias:
         print("CONTAGEM DECLARADA DIVERGE DO ARQUIVO:")

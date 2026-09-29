@@ -563,6 +563,6 @@ A primeira é de **datação**: a tentativa de alterar o resultado precede o res
 
 ---
 
-**Onde o projeto está.** O aparato está pronto, auditado e verificável por um comando: `bash scripts/ciclo.sh` regenera os formatos derivados, refaz a auditoria e roda quatro checagens — a estrutural, a das figuras, a do relatório e a amostral contra o texto dos PDFs —, falhando se qualquer coisa divergir. São 82 sub-eventos, 60 deles em fonte primária citada por página, num corpus de 22 PDFs e 6.928 páginas. **Nenhuma pendência de dado depende de terceiros.**
+**Onde o projeto está.** O aparato está pronto, auditado e verificável por um comando: `bash scripts/ciclo.sh` regenera os formatos derivados, refaz a auditoria e roda quatro checagens — a estrutural, a das figuras, a do relatório e a amostral contra o texto dos PDFs —, falhando se qualquer coisa divergir. São 82 sub-eventos, 60 deles em fonte primária citada por página, num corpus de **20 PDFs documentais e 6.819 páginas** — 24 PDFs e 7.501 páginas contando a bibliografia teórica. **Nenhuma pendência de dado depende de terceiros.**
 
 **O que falta antes de escrever** é o item 9, e só ele: a camada conjuntural ainda se apoia em sete registros contextuais, sem codificação sobre literatura lida. É a parte mais fraca do aparato e a mais exposta a um parecerista — e é, por decisão de 16/08/2026, o que vem antes da primeira linha do artigo.

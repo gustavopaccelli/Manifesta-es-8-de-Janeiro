@@ -64,7 +64,7 @@ Pasta criada em **19/08/2026**, revista no mesmo dia. Reúne os documentos da ca
 | Afirmação | Conferência |
 |:--|:--|
 | 82 sub-eventos × 16 campos · 60 em fonte primária | Contagem direta no JSON: 60 primária · 14 confirmados · 7 contextuais · 1 inferência |
-| 22 documentos / 6.928 páginas | **Medido com PyPDF**, não copiado do painel |
+| 20 documentos / 6.819 páginas | **Medido com PyPDF**, não copiado do painel — e **corrigido em 29/09/2026**: a medição anterior somava **todos** os PDFs de `Fontes/` — 22 à época, 24 hoje —, entre eles os livros de método do eixo 05, e os declarava "documentos oficiais". Documento oficial é o que ancora registro; livro de teoria não ancora nenhum |
 | 2.151 prisões em flagrante (8 e 9/1) | PT-52 · CPMI, p. 76 e 688 |
 | 1.878 investigações · 1.335 ações penais · 1.402 responsabilizados | PT-53 · Balanço do Gabinete Moraes, 29/04/2026, p. 4–6 |
 | 272 caminhões (MBVA/Abin) | PT-10A · CPMI, p. 884-887 |

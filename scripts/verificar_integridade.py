@@ -179,20 +179,33 @@ def main():
         print("  ! PyPDF2 não instalado")
     else:
         total = n = 0
+        doc_total = doc_n = 0          # só fonte documental: fora do eixo 05
         for arq in sorted((RAIZ / "Fontes").rglob("*.pdf")):
             try:
                 p = len(PdfReader(str(arq)).pages)
                 total += p
                 n += 1
+                if arq.parent.name != "05_Bibliografia-teorica":
+                    doc_total += p
+                    doc_n += 1
             except Exception as exc:
                 falhas.append("PDF ilegível: {}".format(arq.name))
                 print("    ! {}: {}".format(arq.name, str(exc)[:60]))
-        print("  {} PDFs, {} páginas no total".format(n, total))
-        # Linha de base: 16/08/2026, após a entrada do preprint sobre editoriais
-        # (eixo 08). Atualize junto com o inventário sempre que uma peça entrar.
-        if (n, total) != (22, 6928):
-            avisos.append("corpus mudou: {} PDFs / {} páginas (era 22 / 6928)".format(n, total))
-            print("  ~ corpus difere do inventário de 16/08/2026 (19 PDFs / 6835 p.)")
+        print("  {} PDFs, {} páginas no total — dos quais {} PDFs / {} p. são fonte documental"
+              .format(n, total, doc_n, doc_total))
+        # Linha de base: 29/09/2026, quando o cânone de mecanismos entrou no eixo 05
+        # (Dynamics of Contention e O poder em movimento). Atualize junto com o
+        # inventário sempre que uma peça entrar.
+        #
+        # As DUAS contagens existem porque a de cima conflaciona. O dossiê de
+        # candidatura dizia "22 documentos oficiais que somam 6.928 páginas", e dois
+        # daqueles 22 eram livros de método do eixo 05. Documento oficial é o que
+        # ancora registro; livro de teoria não ancora nenhum.
+        if (n, total, doc_n, doc_total) != (24, 7501, 20, 6819):
+            avisos.append("corpus mudou: {} PDFs / {} páginas, {} documentais / {} p. "
+                          "(era 24 / 7501, 20 / 6819)".format(n, total, doc_n, doc_total))
+            print("  ~ corpus difere da linha de base de 29/09/2026 (24 PDFs / 7501 p., "
+                  "20 documentais / 6819 p.)")
         else:
             print("  OK — bate com o inventário")
 

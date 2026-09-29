@@ -90,6 +90,15 @@ Eixo aberto em 16/08/2026. **Leia o `LEIA-ME.md` da pasta** — ele fixa a disti
 
 ### 05 — Bibliografia teórica
 
+**O cânone de mecanismos, acrescentado à mão em 29/09/2026.** A triagem dos DOIs das sínteses (item 23 da agenda) mostrou que as obras de que o codebook toma o vocabulário — certificação, difusão, apropriação de repertório, limiar — **não estavam no corpus**, e nenhuma lista de DOIs gerada as traria. Entraram pelo pesquisador, e os dados abaixo foram lidos das próprias folhas de rosto:
+
+| Arquivo | Referência | Observação |
+|:--|:--|:--|
+| `McADAM-TARROW-TILLY_Dynamics-of-Contention_Cambridge-2001.pdf` (411 p.) | McADAM, D.; TARROW, S.; TILLY, C. **Dynamics of Contention**. Cambridge: Cambridge University Press, 2001. ISBN 0-521-80588-0 (cart.), 0-521-01187-6 (brochura), 0-511-02877-6 (eBook). Série *Cambridge Studies in Contentious Politics*. DOI `10.1017/CBO9780511805431` | Com camada de texto. PDF de 2004, distribuído pela Cambridge |
+| `TARROW_O-poder-em-movimento_Vozes-2009.pdf` (162 p.) | TARROW, S. **O poder em movimento: movimentos sociais e confronto político**. Trad. Ana Maria Sallum. Petrópolis: Vozes, 2009. Coleção Sociologia. ISBN 978-85-326-3828-1. Original: *Power in movement* | **Sem camada de texto** e em **duas páginas do livro por folha** — 162 folhas para ~324 páginas. `conferir_paginas.py` não o lê; a conferência foi por renderização. A folha de rosto **não declara a edição inglesa**; o sumário, em três partes e onze capítulos, corresponde à 2ª (1998), `10.1017/CBO9780511813245` |
+
+Nenhum dos dois **ancora registro algum** do codebook, e nem deve: são o referencial, não a evidência. Os capítulos 5 e 8 do Tarrow — *Oportunidades e restrições políticas* e *Estruturas de mobilização e confronto político* — são os dois conceitos que dão nome à tese de doutorado do pesquisador, no eixo 11.
+
 `Livro_Process tracing.pdf` (104 p.) · `process-tracing-research-designs-a-practical-guide.pdf` (5 p.) · `LEIA-ME_status_downloads.md` (status do levantamento bibliográfico)
 
 **Sete sínteses de literatura** (`*_LeapSpace.docx`), cobrindo os conceitos do referencial teórico — ~31,6 mil palavras e **411 DOIs distintos em 444 menções**. Cinco entraram em 13/08/2026; **duas foram acrescentadas em 01/09/2026** (assinaladas com ✚), na mesma data em que as cinco anteriores foram substituídas por reemissões:

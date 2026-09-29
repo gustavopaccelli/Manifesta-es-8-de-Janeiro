@@ -199,6 +199,23 @@ for _nome, _dois in [("Process_tracing", 77), ("Causal_mechanisms_in_social_scie
         "casa com o do DOI. Mapa de leitura, nunca citação.".format(_dois),
     )
 
+# Cânone de mecanismos, acrescentado à mão em 29/09/2026: a triagem dos DOIs das
+# sínteses (item 23 da agenda) mostrou que as obras de que o codebook toma o
+# vocabulário — certificação, difusão, repertório, limiar — não estavam no corpus.
+PROCEDENCIA["Fontes/05_Bibliografia-teorica/McADAM-TARROW-TILLY_Dynamics-of-Contention_Cambridge-2001.pdf"] = (
+    "McAdam, Tarrow e Tilly — Cambridge University Press", "bibliografia",
+    "McADAM, D.; TARROW, S.; TILLY, C. 'Dynamics of Contention'. Cambridge: CUP, 2001. "
+    "ISBN 0-521-80588-0. DOI 10.1017/CBO9780511805431. 411 p. no PDF, com camada de texto. "
+    "É a obra do vocabulário causal que o codebook usa; não ancora registro nenhum.",
+)
+PROCEDENCIA["Fontes/05_Bibliografia-teorica/TARROW_O-poder-em-movimento_Vozes-2009.pdf"] = (
+    "Sidney Tarrow — tradução brasileira, Editora Vozes", "bibliografia",
+    "TARROW, S. 'O poder em movimento: movimentos sociais e confronto político'. Trad. Ana "
+    "Maria Sallum. Petrópolis: Vozes, 2009. ISBN 978-85-326-3828-1. Original: 'Power in "
+    "movement'. 162 p. no PDF, digitalização em duas páginas por folha e SEM camada de "
+    "texto — conferir_paginas.py não o lê. Não ancora registro nenhum.",
+)
+
 # Antecedente teórico do projeto. Não ancora registro nenhum e não é fonte de
 # evento: é a obra de que a pesquisa parte, incorporada em 19/08/2026.
 PROCEDENCIA["Fontes/11_Tese-doutorado/PACCELLI_Tese-doutorado_UFJF_2024.docx"] = (

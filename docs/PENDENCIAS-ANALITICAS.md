@@ -16,7 +16,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Ancoragem documental | **74 registros** com arquivo local vinculado · 68 com página ou seção atribuída · 0 referências quebradas |
 | Classes de verificação | **60 em fonte primária** · 14 confirmados por outra via · 7 contextuais · **0 a verificar** · 1 inferência declarada |
 | Caderno de evidências | **49 registros** com página e transcrição literal |
-| Corpus documental | **22 PDFs / 6.928 p.** + o acórdão do TSE em HTML + 6 matérias arquivadas contra link rot + 5 sínteses. Duas peças sem camada de texto, declaradas |
+| Corpus documental | **20 PDFs / 6.819 p. de fonte documental** + o acórdão do TSE em HTML + 6 matérias arquivadas contra link rot + 7 sínteses. Com a bibliografia teórica do eixo 05, são 24 PDFs / 7.501 p. **Três peças sem camada de texto**, declaradas |
 | Figuras | SVG da cadeia causal e cronologia navegável — **realinhadas ao codebook em 25/09**, 82 registros cobertos. São a única parte do aparato escrita à mão |
 | Relatório de pesquisa | `reports/process_tracing_8jan_relatorio.md` — §3.2 corrigido em 11/09; §2.1 e a tabela da Etapa 2 em 25/09; "Próximos passos" reescrita na mesma data. Agora tem checagem no ciclo |
 | Verificação | `bash scripts/ciclo.sh` — seis passos: dois geradores e quatro checagens, todas com código de saída ≠ 0 em caso de falha |
@@ -796,14 +796,14 @@ Pertinência aqui significa uma coisa só: **sustentar um mecanismo que o codebo
 
 | Camada | Quantos | O que é |
 |:--|--:|:--|
-| **A** | **40** | Sustenta um mecanismo afirmado, ou é a referência canônica do conceito que o codebook usa pelo nome |
+| **A** | **43** | Sustenta um mecanismo afirmado, ou é a referência canônica do conceito que o codebook usa pelo nome |
 | **B** | 72 | Leitura útil, decisão na escrita: teoria geral, caso comparável, verbete, instrumento adjacente |
 | **C** | 313 | Fora. Não é juízo de qualidade: é ausência de relação com o argumento |
 | — | 3 | Os DOIs inexistentes do item 22 |
 
-São **428 linhas**: os 411 DOIs impressos, 12 recuperados por busca de título e 5 que não têm DOI em agência alguma — ver 23.5.
+São **431 linhas**: os 411 DOIs impressos, 12 recuperados por busca de título, 5 sem DOI em agência alguma (23.5) e as 3 do cânone acrescentado à mão (23.6).
 
-**A camada A nomeia 25 dos 82 registros.** Cada linha da planilha diz qual — "PT-27, PT-31 e PT-32: presença e ação policial como variável do desfecho", e assim por diante.
+**A camada A nomeia 31 dos 82 registros** — eram 25 antes de o cânone entrar, em 23.6. Cada linha da planilha diz qual — "PT-27, PT-31 e PT-32: presença e ação policial como variável do desfecho", e assim por diante.
 
 ### 23.2 O buraco, que é o achado principal
 
@@ -874,6 +874,33 @@ Cinco dos doze recuperados foram para a **camada A**: Snow *et al.* (2014), Brö
 
 **A lição é sobre o desenho da varredura, não sobre o LeapSpace.** Eu defini o universo pelo identificador que sabia extrair, e o que não tinha identificador ficou invisível — inclusive a referência mais central do eixo de enquadramento. **Um universo definido pelo que a ferramenta lê não é o universo.** `verificar_dois_sinteses.py` passou a imprimir a contagem dessas entradas a cada execução, para elas não voltarem a desaparecer.
 
+### 23.6 O cânone entrou — e a cifra do corpus estava conflacionada
+
+O buraco de 23.2 foi fechado pelo pesquisador, que forneceu os dois livros. Os dados abaixo foram **lidos das próprias folhas de rosto**, não de catálogo:
+
+| Obra | Onde está | DOI |
+|:--|:--|:--|
+| McADAM, TARROW & TILLY, *Dynamics of Contention* (CUP, 2001) | `Fontes/05_Bibliografia-teorica/`, 411 p., com camada de texto | `10.1017/CBO9780511805431` |
+| TARROW, *O poder em movimento* (Vozes, 2009, trad. Ana Maria Sallum) | idem, 162 folhas **em duas páginas por folha** e **sem camada de texto** | `10.1017/CBO9780511813245` (2ª ed. inglesa) |
+| McCARTHY & ZALD, *Resource Mobilization and Social Movements* (AJS, 1977) | referência acrescentada, **arquivo não coletado** | `10.1086/226464` |
+
+Os três DOIs foram confirmados no CrossRef. **A camada A vai a 43 e a cobertura sobe de 25 para 31 dos 82 registros** — três obras fecharam seis lacunas, entre elas a certificação de PT-13 e PT-50 e a mobilização de recursos de PT-10A e PT-19A, que nenhum dos 411 sustentava.
+
+A edição brasileira do Tarrow **não declara qual edição inglesa traduz**; o sumário, em três partes e onze capítulos, corresponde à 2ª (1998), e é esse o DOI registrado. A verificação foi por renderização de página, porque o arquivo não tem texto — é a terceira peça do corpus nessa condição.
+
+#### A cifra que a entrada dos livros obrigou a conferir
+
+Acrescentar dois PDFs ao eixo 05 mudou o total do corpus, e ao recontar apareceu um defeito **anterior** a esta rodada:
+
+| Onde | Dizia | É |
+|:--|:--|:--|
+| Painel, README, relatório | 22 PDFs / 6.928 p. | 24 PDFs / 7.501 p., dos quais **20 / 6.819 p. são fonte documental** |
+| `projeto-pos-doc/01_PROJETO-PESQUISA.md` | "**22 documentos oficiais** que somam 6.928 páginas" | **20 documentos oficiais / 6.819 páginas** |
+
+**Dois dos 22 nunca foram documentos oficiais:** eram os livros de método que já estavam no eixo 05. A contagem era medida com PyPDF — o `LEIA-ME` do dossiê até se gaba disso, "não copiado do painel" — e ainda assim somava o que não devia. **Medir certo não garante contar a coisa certa.** Documento oficial, neste projeto, é o que ancora registro; livro de teoria não ancora nenhum.
+
+`verificar_integridade.py` passou a conferir **as duas contagens**, total e documental, com a linha de base de 29/09/2026.
+
 ### 23.4 Os limites, que precisam ser ditos
 
 1. **A triagem lê metadado, não obra.** Título, veículo, ano, autoria e assunto — o que a agência registra. **Nada da camada A é citável antes do passo 3**, a leitura na fonte. As dez fichas de `08_BIBLIOGRAFIA-METODOLOGICA.md` mostram quanto de metadado não sobrevive à leitura.
@@ -913,7 +940,8 @@ Cinco dos doze recuperados foram para a **camada A**: Snow *et al.* (2014), Brö
 | — | ~~Ancorar as páginas e documentos que PT-15 e PT-28 citavam sem vincular~~ — 4 páginas lidas no PDF antes da correção | 21.6 | ✅ 25/09 |
 | — | ~~Endurecer o `conferir_paginas.py`~~ — toda transcrição precisa ser localizada; 2 erros de página achados | 21.7 | ✅ 25/09 |
 | — | ~~Verificar os DOIs das sínteses~~ — são **411**, não 325; 3 inexistentes e 1 DOI real no autor errado, **os quatro já com identificador correto** | 22, 22.6 | ✅ 29/09 |
-| 9 | ~~Triar por pertinência~~ — 35 na camada A, e o cânone de mecanismos não está no corpus | 23 | ✅ 29/09 |
+| 9 | ~~Triar por pertinência~~ — 43 na camada A, cobrindo 31 dos 82 registros | 23 | ✅ 29/09 |
+| 18 | ~~Acrescentar à mão o cânone de mecanismos~~ — DoC, Tarrow e McCarthy & Zald | 23.6 | ✅ 29/09 |
 
 ### Abertas
 
@@ -921,7 +949,7 @@ Cinco dos doze recuperados foram para a **camada A**: Snow *et al.* (2014), Brö
 |:--|:--|:--|:--|
 | 10 | Acrescentar a literatura clássica brasileira (livros, sem DOI) — as sínteses têm **zero** referências sobre o Brasil | 11.4, 22.4 | — |
 | 17 | **Ler na fonte os 35 da camada A** (passo 3 do item 11.3) — nenhum é citável antes disso | 23 | — |
-| 18 | **Acrescentar à mão o cânone de mecanismos**: `Dynamics of Contention`, `Power in Movement`, McCarthy & Zald — nenhum está nas sínteses, e o codebook usa o vocabulário deles | 23.2 | — |
+| — | ~~Acrescentar à mão o cânone de mecanismos~~ — os dois livros no eixo 05, McCarthy & Zald como referência; cobertura de A sobe a 31 dos 82 | 23.6 | ✅ 29/09 |
 | 13 | Decidir o "Conclusão dos julgamentos" de PT-61 contra as 459 em instrução | 21.4 | decisão sua |
 | 14 | Codificar a camada $T_{-1}$ conjuntural — 7 registros ainda contextuais | 11.3, 19 | 9 |
 | 15 | Higiene do repositório: licença, remoto, `.backup_pre_lula/`, ponteiros no JSON | 20, 21.4 | decisão sua |

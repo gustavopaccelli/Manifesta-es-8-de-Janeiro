@@ -279,6 +279,33 @@ TRIAGEM = [
 ]
 
 
+# O CÂNONE QUE FALTAVA, acrescentado à mão em 29/09/2026 pelo pesquisador. Nenhum
+# destes está nas sínteses — e era esse o achado de 23.2: a lista gerada não traz as
+# obras de que o codebook toma o vocabulário. Os dois primeiros estão em
+# `Fontes/05_Bibliografia-teorica/`, com os dados lidos das próprias folhas de rosto;
+# o terceiro entra como referência, sem arquivo coletado. Os três DOIs foram
+# confirmados no CrossRef em 29/09/2026.
+CANONE = [
+    ("McADAM, D.; TARROW, S.; TILLY, C.", "2001", "Dynamics of Contention",
+     "Cambridge University Press", "10.1017/CBO9780511805431", "A",
+     "a obra do vocabulário causal do codebook: certificação e descertificação (PT-03, PT-13, "
+     "PT-50, PT-06B), difusão e emulação (PT-08), corretagem, limiar e escalada",
+     "Fontes/05_Bibliografia-teorica/McADAM-TARROW-TILLY_Dynamics-of-Contention_Cambridge-2001.pdf"),
+    ("TARROW, S.", "2009", "O poder em movimento: movimentos sociais e confronto político "
+     "(trad. Ana Maria Sallum; orig. Power in movement)", "Vozes (Coleção Sociologia)",
+     "10.1017/CBO9780511813245", "A",
+     "ciclo de confronto (PT-62), estruturas de mobilização (PT-12A, PT-21) e oportunidade "
+     "política (PT-01, PT-03D, PT-05A). O DOI é o da 2ª edição inglesa, à qual o sumário da "
+     "tradução corresponde; a edição brasileira não tem DOI",
+     "Fontes/05_Bibliografia-teorica/TARROW_O-poder-em-movimento_Vozes-2009.pdf"),
+    ("McCARTHY, J. D.; ZALD, M. N.", "1977", "Resource Mobilization and Social Movements: "
+     "A Partial Theory", "American Journal of Sociology", "10.1086/226464", "A",
+     "mobilização de recursos (PT-10A, PT-12A, PT-19A) e destruição da infraestrutura de "
+     "mobilização (PT-52). Referência acrescentada; ARQUIVO NÃO COLETADO",
+     ""),
+]
+
+
 def carregar():
     with CSV_IN.open(encoding="utf-8-sig", newline="") as fh:
         return [r for r in csv.DictReader(fh)]
@@ -330,6 +357,13 @@ def main():
         reg = {k: ("" if v is None else str(v)) for k, v in reg.items()}   # o cache traz int
         saida.append(dict(reg, camada=camada, uso=uso, eixos="", sinteses="",
                           origem="sem DOI na síntese; achado por busca de título"))
+    for autores, ano, titulo, veiculo, doi, camada, uso, arquivo in CANONE:
+        saida.append({"doi": doi, "camada": camada, "uso": uso, "ano": ano, "titulo": titulo,
+                      "veiculo": veiculo, "autores": autores, "citado_por": "", "eixos": "",
+                      "sinteses": "", "situacao": "DOI confirmado no CrossRef em 29/09/2026",
+                      "origem": "cânone acrescentado à mão" + (" — " + arquivo if arquivo
+                                else " — referência, arquivo não coletado")})
+
     for autores, ano, titulo, veiculo, camada, uso, evidencia in SEM_IDENTIFICADOR:
         saida.append({"doi": "", "camada": camada, "uso": uso, "ano": ano, "titulo": titulo,
                       "veiculo": veiculo, "autores": autores, "citado_por": "", "eixos": "",
@@ -349,8 +383,8 @@ def main():
     for r in saida:
         conta[r["camada"]] = conta.get(r["camada"], 0) + 1
     print("TRIAGEM POR PERTINÊNCIA — {} referências: {} DOIs impressos, {} recuperados por busca "
-          "de título, {} sem DOI em agência alguma".format(
-              len(saida), len(rows), len(RECUPERADOS), len(SEM_IDENTIFICADOR)))
+          "de título, {} sem DOI em agência alguma, {} do cânone acrescentado à mão".format(
+              len(saida), len(rows), len(RECUPERADOS), len(SEM_IDENTIFICADOR), len(CANONE)))
     print("=" * 78)
     for c in ("A", "B", "C", "—"):
         if c in conta:

@@ -910,6 +910,46 @@ Acrescentar dois PDFs ao eixo 05 mudou o total do corpus, e ao recontar apareceu
 
 ---
 
+## 24. A leitura na fonte — onde os 43 estão, e os quatro que foram lidos — 🔶 29/09/2026
+
+Passo 3 do item 11.3. `scripts/localizar_camada_a.py` responde a pergunta que a triagem não respondeu — **desta lista, o que eu consigo abrir?** — e emite [`data/processed/camada_a_acesso.csv`](../data/processed/camada_a_acesso.csv).
+
+### 24.1 As quatro rotas
+
+| Rota | Itens | O que autoriza |
+|:--|--:|:--|
+| CORPUS | 2 | arquivo em `Fontes/`; ficha sem rede |
+| ABERTO | 7 | texto integral livre declarado |
+| VITRINE | 5 | o registro diz aberto e só devolve página de destino |
+| FECHADO | 29 | depende de acesso institucional |
+
+**"is_oa: true" não significa texto disponível**, e a distinção é o ponto do script. Dois casos provam:
+
+- **Cammaerts (2012)**, rota verde no repositório da LSE: o PDF depositado tem **1 página e 1.348 caracteres** — é a folha de capa, cujo texto termina aconselhando consultar o editor. O artigo não está lá.
+- **Mayntz (2004)**, classificada VITRINE pelo registro: o repositório do Max Planck tem o **texto integral, 23 páginas**. A rota estava no arquivo, não no registro.
+
+**Sete dos 43 já tinham ficha** da primeira leva (01/09) — Beach & Pedersen, Machamer, Cammaerts, Almeida, Motta, Koopmans e Waldner.
+
+### 24.2 O muro de acesso, que é o achado operacional
+
+Cloudflare barrou **SAGE, Wiley, Oxford, Chicago e eScholarship**, inclusive em navegador real; a eScholarship apresentou verificação humana, que não se contorna. Passaram **Cambridge Core, MDPI, Nature e MPG.PuRe**. Isso não é obstáculo técnico a resolver: é a constatação de que **29 dos 43 dependem do seu acesso institucional**, e que a leitura na fonte não é tarefa de script.
+
+### 24.3 Os quatro lidos, e o que a leitura mudou
+
+**COLLIER (2011), *Understanding Process Tracing*** — lido integralmente no Cambridge Core. Tipo declarado: *The Teacher*, PS 44(4), p. 823-830. A nota de fonte da tabela 1 diz que os quatro testes são **"adapted from Bennett (2010, 210), who builds on categories formulated by Van Evera (1997, 31-32)"**. O projeto os atribui a **Beach e Pedersen (2019)** em `01_PROJETO-PESQUISA_v1-compacto.md`; a proposta de disciplina já traz Collier ao lado. **A genealogia dos testes precisa ser decidida.** E Collier adverte que a distinção entre os quatro "should not be taken rigidly": a mesma evidência pode ser um teste ou outro conforme o conhecimento prévio e a formulação da hipótese — logo o teste nomeado exige a premissa declarada. Sobre PT-28, a leitura **confirma** a redação do codebook: o teste de argola estabelece critério **necessário**, elimina quem não passa e não confirma quem passa; "condição necessária (hoop test)" está correto nos termos de Collier.
+
+**MAYNTZ (2004), *Mechanisms in the Analysis of Social Macro-Phenomena*** — 23 páginas, texto integral no MPG.PuRe. **É a objeção mais séria que a leitura encontrou.** Mayntz registra as duas posições e adota uma: "most authors agree that mechanism statements are causal generalizations about **recurrent** processes. **In this sense, the term shall be used in this article.**" Mecanismos "são" sequências de eventos causalmente ligados "**that occur repeatedly in reality**". A posição oposta ela atribui a **Boudon (1998, p. 172)**, para quem mecanismos sociais "tend to be idiosyncratic and singular". O codebook chama de `mecanismo_causal` os elos de **um episódio único**. Nos termos que Mayntz adota, não são mecanismos — são **causal reconstruction**, nome que ela própria dá ao procedimento e que descreve o que este projeto faz. **Se o projeto mantém a palavra "mecanismo" para caso único, a citação que o autoriza é Boudon, não Mayntz.** E a última frase do resumo de Mayntz sustenta a camada estrutural: falta à literatura tratamento sistemático de mecanismos geradores em que instituições e configurações estruturais sejam decisivas.
+
+**GONZÁLEZ-BAILÓN et al. (2011), *Scientific Reports* 1:197** — 7 páginas, PDF aberto. Áreas declaradas: física, física aplicada, física estatística — é artigo de ciência de redes, não de sociologia de movimentos. O achado central é **negativo e mais preciso do que a triagem supôs**: os participantes iniciais, isto é, os recrutadores, **não têm posição topológica típica**; só os disseminadores de cascata são mais centrais. Isso casa com PT-19 ("coordenação sem comando centralizado visível") e qualifica PT-12A: "nós centralizadores" vale no nível da difusão, não do recrutamento. **Limite a declarar:** os dados são do Twitter espanhol de maio de 2011 — rede aberta —, enquanto PT-06 descreve ecossistema fechado de Telegram e WhatsApp.
+
+**CASTAÑEDA & JENKS (2023), *January 6th and De-Democratization*** — texto integral na MDPI, cc-by. Não contém as palavras *diffusion* nem *emulation*. O Brasil aparece **uma vez**, em uma frase: o ataque ao congresso para contestar eleição "has now become **a contentious performance** that was used by the equivalent actors in Brazil on January 8, 2023", ambos com encorajamento de Steve Bannon. **É literatura revisada por pares nomeando o 8 de Janeiro como a mesma *contentious performance* — o termo de Tilly, e `Contentious Performances` está na camada A.** Mas é asserção de uma frase, sem evidência no próprio artigo. Serve para mostrar que a leitura do 8/1 como emulação circula no campo; **não estabelece a difusão**, e PT-08 já registra que o precedente invocado pelos organizadores foi o Sri Lanka, não o Capitólio.
+
+### 24.4 Uma armadilha de extração, que quase produziu um achado falso
+
+Ao indexar o vocabulário causal em *Dynamics of Contention*, a busca por `certification` devolveu **zero páginas** — o que teria sustentado a afirmação de que a obra do vocabulário não usa o termo. **Errado.** O PDF grava a ligadura tipográfica **ﬁ** (U+FB01), e "certiﬁcation" não casa com "certification". Normalizada a ligadura, aparecem **42 páginas**. Conferido: *certification* 42, *decertification* 21, *brokerage* 93, *identity shift* 37, *radicalization* 34, *diffusion* 31, *category formation* 28, *social appropriation* 21, *object shift* 21, *emulation* 11, *escalation* 9, *attribution of similarity* 5, *threshold* 3. **Ausência em busca de PDF não é ausência na obra** — é a mesma regra do `conferir_paginas.py`, que abre a página em vez de confiar no campo.
+
+---
+
 ## Ordem de ataque — revista em 29/09/2026
 
 **A decisão que ordena tudo continua sendo a de 16/08/2026: a redação é o último item.** A ordem anterior a essa data tratava o aparato como suficiente e punha a escrita como ponto de virada; esta trata o conjunto de dados do processo político como pré-requisito.
@@ -948,7 +988,7 @@ Acrescentar dois PDFs ao eixo 05 mudou o total do corpus, e ao recontar apareceu
 | # | Tarefa | Item desta agenda | Depende de |
 |:--|:--|:--|:--|
 | 10 | Acrescentar a literatura clássica brasileira (livros, sem DOI) — as sínteses têm **zero** referências sobre o Brasil | 11.4, 22.4 | — |
-| 17 | **Ler na fonte os 35 da camada A** (passo 3 do item 11.3) — nenhum é citável antes disso | 23 | — |
+| 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — 4 lidos em 29/09, 7 já tinham ficha, **29 fechados por muro de acesso** | 23, 24 | acesso institucional |
 | — | ~~Acrescentar à mão o cânone de mecanismos~~ — os dois livros no eixo 05, McCarthy & Zald como referência; cobertura de A sobe a 31 dos 82 | 23.6 | ✅ 29/09 |
 | 13 | Decidir o "Conclusão dos julgamentos" de PT-61 contra as 459 em instrução | 21.4 | decisão sua |
 | 14 | Codificar a camada $T_{-1}$ conjuntural — 7 registros ainda contextuais | 11.3, 19 | 9 |

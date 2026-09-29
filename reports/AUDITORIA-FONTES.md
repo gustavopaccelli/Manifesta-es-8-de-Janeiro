@@ -1,6 +1,6 @@
 # Auditoria de fontes — vínculo registro ↔ documento ↔ página
 
-Gerado por `scripts/gerar_auditoria.py` em **25/09/2026**. Não editar à mão: rode o script de novo depois de cada rodada de coleta.
+Gerado por `scripts/gerar_auditoria.py` em **29/09/2026**. Não editar à mão: rode o script de novo depois de cada rodada de coleta.
 
 Esta peça responde a uma pergunta única e a responde para os 82 registros: **onde está, exatamente, o documento que sustenta esta afirmação, e em que página?** É o que um parecerista cobra quando desconfia de um ponto da cronologia, e é o que separa uma cronologia auditável de uma cronologia asserida.
 

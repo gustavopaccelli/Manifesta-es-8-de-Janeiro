@@ -58,6 +58,7 @@ de pré-commit.
 | `baixar_fontes.sh` | Comandos de coleta do que falta. Não baixa nada sozinho: cada peça é um alvo nomeado. |
 | `migrar_esquema16.py` | Rodada única de 16/08/2026 (12 → 16 campos + correções de auditoria). Idempotente. Mantido como registro da decisão, não faz parte do ciclo. |
 | `varrer_fonte_pagina.py` | **Triagem, fora do ciclo.** Compara as páginas citadas na prosa dos registros (`fonte_trecho`, `mecanismo_causal`, `status_verificacao`, `nota_auditoria`) com o campo estruturado `fonte_pagina`, e imprime o trecho em volta de cada divergência. Nem todo achado é lacuna — ver a terceira ressalva. |
+| `verificar_dois_sinteses.py` | **Triagem, fora do ciclo.** Os DOIs das sínteses LeapSpace no CrossRef e, em 404, na DataCite. Emite `data/processed/dois_sinteses_leapspace.csv` com metadados, e confere se o título registrado casa com o que a síntese declara. Ver a quarta ressalva. |
 | `recodificar_*.py` | Migrações já executadas, uma por rodada, cada uma idempotente e com o achado que a motivou no cabeçalho. Registro do que foi feito, fora do ciclo. |
 
 ## Três ressalvas que importam
@@ -140,6 +141,23 @@ documento nomeado mais perto, antes dela, e erra quando a prosa volta a um
 documento anterior sem renomeá-lo. Duas salvaguardas reduzem o estrago —
 páginas já ancoradas sob outro documento do mesmo registro são silenciadas
 (`--tudo` mostra quais), e o trecho impresso deixa o engano visível.
+
+### 4. DOI que responde não é DOI bem atribuído
+
+As sínteses de `Fontes/05_Bibliografia-teorica/` são geradas por sistema
+automatizado e **não são citáveis** — valem pelos DOIs. Em 29/09/2026 os 411
+foram verificados: 408 existem, 3 não.
+
+O achado que interessa é outro. Numa das sínteses, dois capítulos vizinhos do
+mesmo manual têm os DOIs deslocados: o que ela atribui a Vaughan
+(`10.4324/9780203856949-40`) é o capítulo de O'Halloran, e o que ela atribui a
+O'Halloran não existe. **O primeiro responde 200 e passaria como confirmado.**
+
+Por isso o verificador tem dois eixos, e o segundo procura o título registrado
+na janela de texto que antecede o DOI na síntese. Das 444 menções, 435 casam e
+9 vão para leitura — oito delas são título traduzido, absolvidas em segundos
+pelo trecho que ele imprime. **Nenhum DOI destas sínteses entra na bibliografia
+sem os dois eixos**, e a leitura é sempre na fonte, nunca na síntese.
 
 ## Dependências
 

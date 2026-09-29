@@ -29,7 +29,7 @@ A estrutura segue os princípios do padrão *Cookiecutter Data Science* — dado
 |:--|:--|:--|
 | `Fontes/` | Corpus documental, **imutável**. 22 PDFs, 6.928 p., mais HTML, arquivamento web e sínteses. Inventário em `Fontes/LEIA-ME_fontes.md` | `data/raw` |
 | `process_tracing_8jan_eventos.json` | Codebook — a fonte única da verdade. Fica na raiz porque é a porta de entrada dos dados e o que todo script lê | `data/interim` (curado à mão) |
-| `data/processed/` | Derivados, **gerados**: o CSV e o XLSX do codebook e o catálogo da imprensa. Não editar — a próxima execução sobrescreve | `data/processed` |
+| `data/processed/` | Derivados, **gerados**: o CSV e o XLSX do codebook, o catálogo da imprensa e a planilha dos 411 DOIs das sínteses. Não editar — a próxima execução sobrescreve | `data/processed` |
 | `Caderno-de-evidencias/` | Transcrições literais com página, por registro | `references` |
 | `scripts/` | Geradores, verificadores e as migrações já executadas. Ver `scripts/LEIA-ME.md` | `src` |
 | `reports/` | `AUDITORIA-FONTES.md`, a auditoria de vínculos, **gerada** | `reports` |
@@ -39,6 +39,7 @@ A estrutura segue os princípios do padrão *Cookiecutter Data Science* — dado
 | `docs/PENDENCIAS-ANALITICAS.md` | **A agenda.** O que está aberto e o que espera decisão sua | `docs` |
 | `docs/ESTIMATIVA-MULTIDAO-8JAN.md`, `docs/LEIA-ME_metodologia_verificacao.md` | Dossiês de método e de decisão sobre cifras | `docs` |
 | `data/external/levantamento_8_de_janeiro_*` | Levantamento bibliográfico original, coletado à mão | `data/external` |
+| `data/external/crossref_cache.jsonl` | O que o CrossRef e a DataCite responderam sobre cada DOI, em 29/09/2026. Cache e, ao mesmo tempo, registro da consulta | `data/external` |
 | `projeto-pos-doc/` | Dossiê de candidatura ao PIPD/CAPES. Lê do repositório, não escreve nele | `reports` |
 | `.backup_pre_lula/` | Cópias manuais anteriores ao controle de versão. Redundantes desde que o histórico do git existe | — |
 

@@ -189,8 +189,10 @@ for _nome, _dois in [("Process_tracing", 77), ("Causal_mechanisms_in_social_scie
                      ("Framing_process_and_alignment", 44)]:
     PROCEDENCIA["Fontes/05_Bibliografia-teorica/{}_LeapSpace.docx".format(_nome)] = (
         "LeapSpace — síntese gerada automaticamente", "não citável",
-        "NÃO revisada por pares, sem autoria identificável. {} DOIs a verificar no CrossRef "
-        "antes de qualquer incorporação. Mapa de leitura, nunca citação.".format(_dois),
+        "NÃO revisada por pares, sem autoria identificável. {} DOIs, verificados em "
+        "29/09/2026 no CrossRef e na DataCite por scripts/verificar_dois_sinteses.py — ver "
+        "data/processed/dois_sinteses_leapspace.csv, que registra também se o título declarado "
+        "casa com o do DOI. Mapa de leitura, nunca citação.".format(_dois),
     )
 
 # Antecedente teórico do projeto. Não ancora registro nenhum e não é fonte de

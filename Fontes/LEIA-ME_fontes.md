@@ -92,7 +92,7 @@ Eixo aberto em 16/08/2026. **Leia o `LEIA-ME.md` da pasta** — ele fixa a disti
 
 `Livro_Process tracing.pdf` (104 p.) · `process-tracing-research-designs-a-practical-guide.pdf` (5 p.) · `LEIA-ME_status_downloads.md` (status do levantamento bibliográfico)
 
-**Sete sínteses de literatura** (`*_LeapSpace.docx`), cobrindo os conceitos do referencial teórico — ~31,6 mil palavras e **410 DOIs distintos**. Cinco entraram em 13/08/2026; **duas foram acrescentadas em 01/09/2026** (assinaladas com ✚), na mesma data em que as cinco anteriores foram substituídas por reemissões:
+**Sete sínteses de literatura** (`*_LeapSpace.docx`), cobrindo os conceitos do referencial teórico — ~31,6 mil palavras e **410 DOIs distintos** (o extrator de 29/09/2026 acha 411 — ver a divergência de contagem adiante). Cinco entraram em 13/08/2026; **duas foram acrescentadas em 01/09/2026** (assinaladas com ✚), na mesma data em que as cinco anteriores foram substituídas por reemissões:
 
 | Arquivo | DOIs | Cobre |
 |:--|--:|:--|
@@ -115,6 +115,19 @@ Eixo aberto em 16/08/2026. **Leia o `LEIA-ME.md` da pasta** — ele fixa a disti
 - Escribà-Folch (2008), em *Dados*, é indexado pelo título em inglês, mas **o artigo foi publicado em português**: "Participação arriscada: manifestações e tumultos em regimes ditatoriais".
 - McCammon (2013), "Discursive Opportunity Structure", tem **duas versões com DOIs distintos**: a de 2013 e a `.pub2`, de 27/09/2022.
 - Há ainda ruído grosseiro nas listas: um item datado de **2099**; um registro reduzido a link do Scopus sem citação; itens de migração, clima de negócios e deslizamentos de terra sem relação com o tema; entradas duplicadas; e ao menos uma **colisão de homônimos** (Beach, D., de *The Lancet Global Health*, que não é Derek Beach).
+
+**Segunda leva de verificação, em 29/09/2026 — os 411 DOIs de uma vez, por `../scripts/verificar_dois_sinteses.py`.** Consulta o CrossRef e, em 404, a DataCite. **408 existem; 3 não.** Os três já têm DOI correto identificado e confirmado:
+
+| Declarado na síntese | Correto |
+|:--|:--|
+| `10.1007/9781139858472` (Bennett & Checkel) | `10.1017/CBO9781139858472` — **já corrigido na primeira leva** |
+| `10.4324/9780203856949-48` (O'Halloran) | `10.4324/9780203856949-40` |
+| `10.4324/9781315731377-34` (Chenoweth) | `10.4324/9781315731377-28` |
+
+- **Quatro DOIs só existem na DataCite**, não no CrossRef — dois da *Partecipazione e Conflitto* e dois da *European Papers*. Verificar numa agência só os condenaria como inexistentes.
+- **Um quinto modo de falha, e é o mais perigoso: DOIs de vizinhos trocados.** Em `Framing_process_and_alignment`, o `-40` atribuído a Vaughan é o capítulo de O'Halloran, e o de Vaughan é o `-34`. **O `-40` resolve e passaria por verificado.** Só comparar o título registrado com o título declarado revela — das 444 menções, 435 casam, 8 divergem por título traduzido e 1 é este par.
+- **Sufixo de capítulo inexistente não significa capítulo não depositado.** Os dois casos da Routledge só apareceram por busca bibliográfica pelo título; testar o DOI do livro, que responde, induz à conclusão errada.
+- **Divergência de contagem, de um DOI, a resolver.** Este inventário declara 410 distintos e 89 em `Causal_mechanisms`; a `PROCEDENCIA` de `../scripts/gerar_codebook.py` declara 90 para esse arquivo; o extrator de 29/09 também acha **90** nele e **411** no total, e os 90 são registros distintos confirmados no CrossRef (incluindo pares legítimos como `wbespm091` e `wbespm091.pub2`). Não alterei nenhum dos dois números: a recontagem de 01/09 que chegou a 89 não está documentada aqui, e sobrescrevê-la sem saber o critério seria trocar um número por outro sem lastro.
 
 Ficha completa da verificação em `../../projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md`. **A regra do projeto permanece: nenhum item destas sínteses entra em texto sem conferência item a item na fonte.**
 

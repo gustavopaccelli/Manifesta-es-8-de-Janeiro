@@ -22,7 +22,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Verificação | `bash scripts/ciclo.sh` — seis passos: dois geradores e quatro checagens, todas com código de saída ≠ 0 em caso de falha |
 | Controle de versão | git desde 20/09/2026, sem remoto configurado |
 | Eixo bibliográfico Lava Jato | 20 referências, 18 com DOI confirmado |
-| Sínteses LeapSpace (não citáveis) | **411 DOIs verificados em 29/09** — 408 existem, 3 não; 9 atribuições a conferir. **Zero referências sobre o Brasil** |
+| Sínteses LeapSpace (não citáveis) | **411 DOIs verificados em 29/09** — 408 existem; os 3 que não existem já têm DOI correto registrado. **Zero referências sobre o Brasil** |
 | **Redação do artigo** | **não iniciada — por decisão, é o último item da fila** |
 
 **Fechados na rodada de 16/08/2026:** itens 1, 2 e 8, mais os seis novos — **12** (auditoria de fontes), **13** (estimativa de multidão), **14** (ressalvas restantes), **15** (balanço de 2026 e campanha), **16** (Manchetômetro → PT-50A), **17** (acórdão do TSE) e **18** (execução penal e arquivamento web).
@@ -222,7 +222,7 @@ Estão em `Fontes/05_Bibliografia-teorica/`, geradas pelo LeapSpace, cobrindo ex
 
 **Risco a nomear, porque é o mesmo que o projeto já enfrentou uma vez.** O levantamento original tinha um DOI fabricado (`10.1215/00382876-12345678`, corrigido em `LEIA-ME_metodologia_verificacao.md`). Material gerado automaticamente exige a mesma desconfiança — verificar antes de incorporar, sem exceção.
 
-> **✅ PASSO 1 EXECUTADO EM 29/09/2026 — e o risco se confirmou, em forma pior.** 408 dos 411 DOIs existem; **3 não existem em nenhuma agência de registro**, um deles no lugar do Bennett & Checkel, que é referência central deste projeto. E um DOI **válido** estava colado ao **autor errado** — defeito que nenhuma verificação de existência pegaria. Os passos 2 e 3 seguem abertos, e são juízo do pesquisador. Detalhe no **item 22**.
+> **✅ PASSO 1 EXECUTADO EM 29/09/2026 — e o risco se confirmou, em forma pior.** 408 dos 411 DOIs existem; **3 não existem em nenhuma agência de registro** — os três já com DOI correto identificado e registrado (item 22.6), e um deles, o do Bennett & Checkel, **já corrigido na leva de 01/09**. E um DOI **válido** estava colado ao **autor errado** — defeito que nenhuma verificação de existência pegaria. Os passos 2 e 3 seguem abertos, e são juízo do pesquisador. Detalhe no **item 22**.
 
 ### 11.4 Literatura clássica brasileira ainda ausente
 
@@ -678,13 +678,15 @@ Testado por injeção de defeito: página trocada em PT-24 reprova (1/2 localiza
 
 ## 22. Os 411 DOIs das sínteses, verificados — ✅ 29/09/2026
 
-Tarefa 9 da ordem de ataque, aberta desde 14/08/2026. `scripts/verificar_dois_sinteses.py` extrai os DOIs das sete sínteses LeapSpace, consulta cada um no CrossRef — e, se lá não estiver, na DataCite — e emite [`data/processed/dois_sinteses_leapspace.csv`](../data/processed/dois_sinteses_leapspace.csv). Fica **fora do ciclo**, como o varredor de `fonte_pagina`: é instrumento de triagem, não gate.
+Tarefa 9 da ordem de ataque, aberta desde 14/08/2026 — e **não intocada**: dez itens foram conferidos à mão em **01/09/2026**, quatro divergentes, nas fichas de [`projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md`](../projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md). Os quatro modos de falha que essa leva nomeou orientaram esta. `scripts/verificar_dois_sinteses.py` extrai os DOIs das sete sínteses LeapSpace, consulta cada um no CrossRef — e, se lá não estiver, na DataCite — e emite [`data/processed/dois_sinteses_leapspace.csv`](../data/processed/dois_sinteses_leapspace.csv). Fica **fora do ciclo**, como o varredor de `fonte_pagina`: é instrumento de triagem, não gate.
 
 ### 22.1 A contagem certa é 411, não 325
 
 O extrator foi calibrado contra um número que esta agenda já trazia: a união dos DOIs das **cinco** sínteses de 13/08 dá **exatamente 325**, o que o item 11.3 declara desde 14/08. A regex reproduz o levantamento anterior, então não está inventando nem perdendo DOIs — e o `--autoteste` prende essa contagem.
 
-Mas duas outras sínteses chegaram em **11/09** — `Political_and_discursive_opportunities` e `Framing_process_and_alignment` — e acrescentam **86 DOIs distintos**. O universo de hoje é **411 DOIs em 444 menções**. O item 11.3 ficou seis semanas anunciando a contagem de cinco arquivos enquanto sete estavam na pasta: a mesma defasagem das figuras, agora num número desta agenda.
+Mas duas outras sínteses chegaram em **01/09** — `Political_and_discursive_opportunities` e `Framing_process_and_alignment` — e acrescentam **86 DOIs distintos**. O universo de hoje é **411 DOIs em 444 menções**.
+
+**A defasagem era desta agenda, não do projeto.** O inventário `Fontes/LEIA-ME_fontes.md` já registrava as sete sínteses, a substituição das cinco primeiras por reemissões em 01/09 e a contagem por arquivo — chegando a 410 distintos. Só o item 11.3 daqui ficou quatro semanas anunciando a conta de cinco arquivos enquanto sete estavam na pasta. Sobre a diferença de um DOI entre 410 e 411, ver o fim de 22.6.
 
 ### 22.2 Eixo 1 — o DOI existe?
 
@@ -700,9 +702,9 @@ Os quatro da DataCite seriam **falsos negativos** se o CrossRef fosse a única v
 
 | DOI declarado | O que é, de fato |
 |:--|:--|
-| `10.1007/9781139858472` | Prefixo da Springer colado a um ISBN da Cambridge. A obra é real e é **central para este projeto**: Bennett & Checkel (2014), *Process Tracing: From Metaphor to Analytic Tool*. O DOI verdadeiro é `10.1017/CBO9781139858472` |
-| `10.4324/9780203856949-48` | Capítulo nunca depositado pela Routledge. Ver 22.3 — é pior do que parece |
-| `10.4324/9781315731377-34` | Capítulo nunca depositado. O livro existe (*Routledge Handbook of Comparative Political Institutions*, 2015, `10.4324/9781315731377`) e o capítulo declarado é de Chenoweth. Citar pelo livro |
+| `10.1007/9781139858472` | Prefixo da Springer colado a um ISBN da Cambridge. A obra é real e é **central para este projeto**: Bennett & Checkel (2014, org.), *Process Tracing: From Metaphor to Analytic Tool*. O DOI verdadeiro é `10.1017/CBO9781139858472`. **Já achado e corrigido na leva de 01/09** — ver a retificação 1 em 22.6 |
+| `10.4324/9780203856949-48` | Sufixo inexistente. O capítulo de O'Halloran está no `-40` — ver 22.3, é pior do que parece |
+| `10.4324/9781315731377-34` | Sufixo inexistente, mas **o capítulo existe**: Chenoweth (2015), *Political mobilization and institutions*, está em `10.4324/9781315731377-28`. Ver a retificação 2 em 22.6 |
 
 ### 22.3 Eixo 2 — o DOI certo no autor errado
 
@@ -712,6 +714,8 @@ Os quatro da DataCite seriam **falsos negativos** se o CrossRef fosse a única v
 > O'Halloran, K. (2010) *How to use corpus linguistics in the study of media discourse* → `10.4324/9780203856949-48`
 
 O `-48` não existe. E o `-40`, que **existe e passou como confirmado**, é justamente o capítulo de O'Halloran sobre discurso midiático — não o de Vaughan. Os dois DOIs estão deslocados: um real, colado ao autor errado.
+
+Reconstruído pelo CrossRef, o par correto é **Vaughan → `10.4324/9780203856949-34`** e **O'Halloran → `10.4324/9780203856949-40`**.
 
 É o mesmo modo de falha que esta agenda já registrou quatro vezes dentro do codebook (itens 7 e 15.7) — *a cifra correta aplicada ao referente errado* — agora fora dele, na bibliografia gerada, e invisível a qualquer verificação que só pergunte "este DOI responde?". Daí o segundo eixo: para cada menção, o título que a agência devolve é procurado na janela de 300 caracteres que antecede o DOI na síntese. Abaixo de 60% dos termos significativos presentes, a menção vai para conferência **com o trecho impresso**.
 
@@ -737,6 +741,35 @@ Os 203 sem termo dão a medida do que as sínteses arrastam: entre eles, "Basics
 1. **A triagem por pertinência (passo 2) e a leitura na fonte (passo 3).** O que sustenta os mecanismos afirmados no codebook é juízo seu; a planilha existe para que esse juízo leve horas em vez de semanas.
 2. **O que fazer com os três DOIs quebrados e com a atribuição trocada.** As sínteses estão em `Fontes/`, que é imutável por princípio — não as editei. A correção pertence à bibliografia do projeto, quando essas obras forem incorporadas.
 3. **O "polite pool" do CrossRef.** Ele pede um e-mail no cabeçalho da requisição; não mandei o seu a serviço de terceiro sem você pedir. O pool público atendeu as 411 consultas sem recusa.
+
+### 22.6 Os três corrigidos — e duas retificações do que escrevi acima
+
+A pedido seu, os três DOIs quebrados ganharam substituto verificado no CrossRef:
+
+| Declarado na síntese | Correto | Obra |
+|:--|:--|:--|
+| `10.1007/9781139858472` | `10.1017/CBO9781139858472` | Bennett & Checkel (2014, org.), *Process tracing* |
+| `10.4324/9780203856949-48` | `10.4324/9780203856949-40` | O'Halloran (2010), capítulo sobre discurso midiático |
+| `10.4324/9781315731377-34` | `10.4324/9781315731377-28` | Chenoweth (2015), *Political mobilization and institutions* |
+| — (par deslocado) | `10.4324/9780203856949-34` | Vaughan (2010), o capítulo a que a síntese deu o `-40` |
+
+Registrados em três lugares: a ficha da **segunda leva** em [`projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md`](../projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md) §1.1, a lista de achados de [`Fontes/LEIA-ME_fontes.md`](../Fontes/LEIA-ME_fontes.md), e os dicionários `NAO_EXISTEM` e `VIZINHOS_TROCADOS` de `scripts/verificar_dois_sinteses.py`. **As sínteses não foram editadas** — `Fontes/` é imutável por princípio, e a correção pertence ao registro bibliográfico, não à fonte.
+
+**Isto corrige identificadores, não incorpora obras.** Se Vaughan, O'Halloran ou Chenoweth entram na bibliografia do artigo continua sendo juízo seu, e depende da triagem do passo 2.
+
+#### Retificação 1 — o caso Bennett & Checkel não era achado desta rodada
+
+**A primeira leva de verificação já o tinha achado e corrigido, em 01/09/2026.** Está na ficha 8 de `08_BIBLIOGRAFIA-METODOLOGICA.md`, com o diagnóstico completo — prefixo da Springer em obra da Cambridge — e na lista de achados de `Fontes/LEIA-ME_fontes.md`. Quando escrevi o item 22.2 eu não havia lido nenhum dos dois, e apresentei como novo o que o projeto já registrava. A varredura o **reencontrou**, o que vale como controle da ferramenta, não como descoberta.
+
+Pela mesma razão, a abertura deste item 22 está corrigida: a tarefa 9 não estava intocada desde 14/08 — dez itens foram conferidos à mão em 01/09, quatro divergentes, e os quatro modos de falha que essa leva nomeou são o que orientou esta.
+
+#### Retificação 2 — o capítulo do Chenoweth existe
+
+Em 22.2 eu disse que ele "nunca foi depositado" e que o caminho era citar pelo livro. **Errado.** Ele está em `10.4324/9781315731377-28`, com metadados completos no CrossRef. O engano tem causa identificável e vale como método: testei o DOI **do livro**, que responde, e concluí do sufixo inexistente que o capítulo não existia. A consulta que resolve é a **busca bibliográfica pelo título**, com filtro de prefixo — foi ela que achou o `-28` e, no mesmo movimento, o `-34` de Vaughan. **Sufixo inexistente não é capítulo inexistente.**
+
+#### Uma divergência de contagem que fica aberta, de um DOI
+
+O inventário de fontes declara **410** DOIs distintos e **89** em `Causal_mechanisms`; a `PROCEDENCIA` de `gerar_codebook.py` declara **90** para esse arquivo; o extrator de 29/09 acha **90** nele e **411** no total. Os 90 são registros distintos e confirmados, inclusive pares legítimos como `wbespm091` e `wbespm091.pub2`. **Não alterei nenhum dos dois números:** a recontagem de 01/09 que chegou a 89 não está documentada, e trocar um número por outro sem saber o critério é o que este projeto evita por princípio. Fica anotado nos dois arquivos, para você decidir qual critério vale.
 
 ---
 
@@ -769,7 +802,7 @@ Os 203 sem termo dão a medida do que as sínteses arrastam: entre eles, "Basics
 | — | ~~Varrer `fonte_pagina` contra a prosa dos 82 registros~~ — 8 candidatos, 2 lacunas reais | 21.6 | ✅ 25/09 |
 | — | ~~Ancorar as páginas e documentos que PT-15 e PT-28 citavam sem vincular~~ — 4 páginas lidas no PDF antes da correção | 21.6 | ✅ 25/09 |
 | — | ~~Endurecer o `conferir_paginas.py`~~ — toda transcrição precisa ser localizada; 2 erros de página achados | 21.7 | ✅ 25/09 |
-| — | ~~Verificar os DOIs das sínteses~~ — são **411**, não 325; 3 inexistentes, 1 DOI real no autor errado | 22 | ✅ 29/09 |
+| — | ~~Verificar os DOIs das sínteses~~ — são **411**, não 325; 3 inexistentes e 1 DOI real no autor errado, **os quatro já com identificador correto** | 22, 22.6 | ✅ 29/09 |
 
 ### Abertas
 

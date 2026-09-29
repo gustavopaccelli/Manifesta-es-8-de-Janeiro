@@ -1,6 +1,6 @@
 # Bibliografia metodológica e posicionamento do estudo
 
-Documento de trabalho da candidatura, produzido em 01/09/2026 a partir das sete sínteses `*_LeapSpace.docx` de `Fontes/05_Bibliografia-teorica/`. Não é achado de pesquisa e não deve ser citado como fonte.
+Documento de trabalho da candidatura, produzido em 01/09/2026 e ampliado em 29/09/2026 (seção 1.1) a partir das sete sínteses `*_LeapSpace.docx` de `Fontes/05_Bibliografia-teorica/`. Não é achado de pesquisa e não deve ser citado como fonte.
 
 Responde a três encaminhamentos: extrair das sínteses a bibliografia útil ao projeto, sobretudo no ponto metodológico; situar o projeto na produção recente; e dizer em que ele se diferencia.
 
@@ -35,6 +35,43 @@ As sete sínteses são geradas por sistema automatizado, sem autoria identificá
 Há ainda ruído bruto: um item datado de **2099**; uma entrada reduzida a link do Scopus, sem citação; entradas duplicadas; e, na síntese de oportunidades, seis itens sobre migração, clima de negócios nos Bálcãs e deslizamentos de terra, sem relação alguma com o tema.
 
 > **Conclusão operacional.** As sínteses são bons instrumentos de descoberta e péssimas fontes de metadados. A regra do projeto — conferir todo dado contra a fonte, nunca contra outra citação dela — aplica-se a elas integralmente. Nada abaixo entra em texto sem a conferência já feita nas dez fichas acima.
+
+---
+
+### 1.1 Segunda leva — os 411 DOIs, por script (29/09/2026)
+
+A primeira leva conferiu dez itens à mão. A segunda cobriu **todos os 411 DOIs distintos** das sete sínteses (444 menções) por `scripts/verificar_dois_sinteses.py`, que consulta o CrossRef e, em resposta 404, a DataCite. Resultado: **408 existem** — quatro deles registrados na DataCite e não no CrossRef, que uma verificação de uma agência só teria descartado como inexistentes — e **3 não existem**.
+
+**O que a segunda leva não faz, e por isso não substitui a ficha.** Ela verifica duas coisas: se o identificador resolve, e se o título que a agência devolve aparece no texto que a síntese escreve antes dele. Não verifica **edição** (o modo de falha nº 1, de Beach e Pedersen), não desfaz **homônimo** (o nº 4, de Motta e de Beach) e não lê a obra. **A regra do projeto continua: nada entra em texto sem ficha**, e as fichas são as de 1 acima.
+
+#### As três correções
+
+| DOI que a síntese declara | Não existe porque | DOI correto, confirmado no CrossRef | Obra |
+|:--|:--|:--|:--|
+| `10.1007/9781139858472` | prefixo da Springer em obra da Cambridge | `10.1017/CBO9781139858472` | BENNETT, A.; CHECKEL, J. T. (Org.). *Process tracing*: from metaphor to analytic tool. Cambridge: Cambridge University Press, 2014 |
+| `10.4324/9780203856949-48` | sufixo inexistente; o capítulo está no `-40` | `10.4324/9780203856949-40` | O'HALLORAN, K. How to use corpus linguistics in the study of media discourse. In: *The Routledge Handbook of Corpus Linguistics*. London: Routledge, 2010 |
+| `10.4324/9781315731377-34` | sufixo inexistente; o capítulo está no `-28` | `10.4324/9781315731377-28` | CHENOWETH, E. Political mobilization and institutions. In: *Routledge Handbook of Comparative Political Institutions*. London: Routledge, 2015 |
+
+**O primeiro caso já era conhecido** — é a ficha 8 da primeira leva, achada e corrigida em 01/09/2026. A varredura o reencontrou, o que serve de controle: a ferramenta acha o que a conferência à mão já havia achado.
+
+**Os dois últimos precisaram de busca por título.** Testar o DOI do livro não basta: `10.4324/9781315731377` responde, e concluir dali que o capítulo não foi depositado é erro — ele está no `-28`. A consulta que resolve é a busca bibliográfica pelo título com filtro de prefixo, não o teste do identificador declarado.
+
+#### Um quinto modo de falha: DOIs de vizinhos trocados
+
+Os quatro modos de falha da primeira leva tratam de **metadados errados** num item. Este é outro: **os identificadores certos nos itens errados**, dentro de uma sequência.
+
+A síntese `Framing_process_and_alignment` lista, em ordem, dois capítulos do mesmo manual:
+
+| A síntese atribui | ao DOI | que é, de fato, de |
+|:--|:--|:--|
+| Vaughan (2010), *How can teachers use a corpus for their own research?* | `…-40` | **O'Halloran** — o capítulo sobre discurso midiático |
+| O'Halloran (2010), *How to use corpus linguistics in the study of media discourse* | `…-48` | **ninguém** — não existe |
+
+Reconstruído pelo CrossRef, o par correto é: **Vaughan → `10.4324/9780203856949-34`** e **O'Halloran → `10.4324/9780203856949-40`**.
+
+**Por que este modo é o mais perigoso dos cinco.** O `-40` resolve, tem metadados completos e passaria por qualquer verificação que pergunte apenas "este DOI existe?". Só a comparação entre o título registrado e o título declarado o revela — é o segundo eixo do verificador, e é o mesmo princípio do `conferir_paginas.py`, que abre o PDF na página em vez de confiar no campo. **Um identificador confirma a si mesmo, nunca o vínculo.**
+
+Das 444 menções, 435 casam título com título; das 9 restantes, oito são título traduzido (a síntese escreve em inglês o que a *Dados*, a *Revista de Sociologia e Política*, a *CIAN*, a *Revista de Ciencia Política* e a *Polis* publicaram em português, espanhol ou russo — o mesmo caso do modo de falha nº 3) e a nona é este par.
 
 ---
 

@@ -3,8 +3,12 @@
 """
 Verificação dos DOIs das sínteses LeapSpace — existência e atribuição.
 
-Executa o passo 1 do encaminhamento do item 11.3 da agenda (tarefa 9 da "Ordem
-de ataque"): extrai os DOIs das sínteses de `Fontes/05_Bibliografia-teorica/`,
+Completa o passo 1 do encaminhamento do item 11.3 da agenda (tarefa 9 da "Ordem
+de ataque"). **Não é a primeira leva:** em 01/09/2026 dez itens foram conferidos
+à mão, quatro divergentes, e as fichas estão em
+`projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md` — leia-as antes de tratar
+qualquer achado daqui como novo. Este script cobre os 411 de uma vez: extrai os
+DOIs das sínteses de `Fontes/05_Bibliografia-teorica/`,
 consulta cada um no CrossRef — e, se lá não estiver, na DataCite — e emite a
 planilha que é o insumo da triagem por pertinência.
 
@@ -107,15 +111,30 @@ CORTE = 0.60            # fração dos termos do título que precisa aparecer al
 NAO_EXISTEM = {
     "10.1007/9781139858472":
         "Prefixo Springer (10.1007) colado a ISBN da Cambridge. A obra é real e é "
-        "central para este projeto: BENNETT & CHECKEL (2014), 'Process Tracing: From "
-        "Metaphor to Analytic Tool'. O DOI verdadeiro é 10.1017/CBO9781139858472.",
+        "central para este projeto: BENNETT & CHECKEL (2014, org.), 'Process Tracing: "
+        "From Metaphor to Analytic Tool'. DOI correto: 10.1017/CBO9781139858472. "
+        "JÁ ERA CONHECIDO: a primeira leva de verificação, de 01/09/2026, achou e "
+        "corrigiu este caso — ficha 8 de projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md.",
     "10.4324/9780203856949-48":
-        "Capítulo nunca depositado. Pior: o vizinho -40, que a síntese atribui a "
-        "Vaughan, é este capítulo de O'Halloran. DOI real no autor errado.",
+        "Este sufixo não existe. O capítulo de O'HALLORAN, 'How to use corpus "
+        "linguistics in the study of media discourse', está depositado em "
+        "10.4324/9780203856949-40 — que a síntese atribui a Vaughan. Ver o par em "
+        "VIZINHOS_TROCADOS.",
     "10.4324/9781315731377-34":
-        "Capítulo nunca depositado. O livro existe — 'Routledge Handbook of "
-        "Comparative Political Institutions' (2015), 10.4324/9781315731377 — e o "
-        "capítulo declarado é de CHENOWETH. Citar pelo livro.",
+        "Este sufixo não existe, mas o capítulo existe: CHENOWETH (2015), 'Political "
+        "mobilization and institutions', está em 10.4324/9781315731377-28. Achado por "
+        "busca de título em 29/09/2026 — testar só o DOI do livro levou, na primeira "
+        "passada, à conclusão errada de que o capítulo não tinha sido depositado.",
+}
+
+# O par deslocado do Routledge Handbook of Corpus Linguistics, com os DOIs que
+# o CrossRef confirma. Registro da correção; o script não reescreve a síntese,
+# que é fonte imutável em Fontes/.
+VIZINHOS_TROCADOS = {
+    "10.4324/9780203856949-34": "VAUGHAN (2010), 'How can teachers use a corpus for "
+                               "their own research?' — a síntese lhe deu o -40",
+    "10.4324/9780203856949-40": "O'HALLORAN (2010), 'How to use corpus linguistics in "
+                               "the study of media discourse' — a síntese lhe deu o -48",
 }
 
 # Ordenação mecânica por termo declarado. Não é triagem — ver o cabeçalho.

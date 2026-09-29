@@ -151,7 +151,10 @@ foram verificados: 408 existem, 3 não.
 O achado que interessa é outro. Numa das sínteses, dois capítulos vizinhos do
 mesmo manual têm os DOIs deslocados: o que ela atribui a Vaughan
 (`10.4324/9780203856949-40`) é o capítulo de O'Halloran, e o que ela atribui a
-O'Halloran não existe. **O primeiro responde 200 e passaria como confirmado.**
+O'Halloran não existe. **O primeiro responde 200 e passaria como confirmado.** Os identificadores corretos dos
+três DOIs quebrados e do par deslocado estão nos dicionários `NAO_EXISTEM` e
+`VIZINHOS_TROCADOS` do próprio script, e nas fichas de
+`../projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md`.
 
 Por isso o verificador tem dois eixos, e o segundo procura o título registrado
 na janela de texto que antecede o DOI na síntese. Das 444 menções, 435 casam e

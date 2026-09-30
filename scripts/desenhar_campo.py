@@ -304,10 +304,257 @@ FORA = [
 SISTEMAS = ["ALIANÇA", "INDIFERENTE", "CONFLITO", "CINDIDA", "MIGRANTE", "CONTESTADA"]
 
 
+SVG_OUT = RAIZ / "scripts/campo_multiorganizacional.svg"
+HTML_OUT = RAIZ / "scripts/campo_multiorganizacional.html"
+
+
 def carregar():
     with io.open(JSON_IN, encoding="utf-8") as f:
         regs = json.load(f)["eventos"]
     return {r["id"]: r for r in regs}, regs
+
+
+# =============================================================================
+# O DESENHO
+# =============================================================================
+# Sai do mesmo `ENTIDADES` que a planilha, e por isso não pode divergir dela:
+# é a regra de 25/09/2026 aplicada a figura. `conferir_figuras.py` cobre
+# `reports/figures/`; estas duas peças ficam em `scripts/` por pedido do
+# pesquisador, e a garantia aqui é a origem, não a checagem.
+#
+# A composição é o argumento: em cima, a dicotomia do modelo — aliança à
+# esquerda, conflito à direita, fronteira no meio. Embaixo, atravessando a
+# fronteira, as cinco entidades que o modelo não acomoda. O desenho mostra a
+# dicotomia e mostra onde ela não fecha.
+
+def quebrar(texto, largura):
+    """Quebra por contagem de caracteres; suficiente para rótulo curto."""
+    linhas, atual = [], ""
+    for p in texto.split():
+        if len(atual) + len(p) + 1 <= largura:
+            atual = (atual + " " + p).strip()
+        else:
+            linhas.append(atual)
+            atual = p
+    if atual:
+        linhas.append(atual)
+    return linhas
+
+
+def caixa(x, y, w, rotulo, sub, cor, traco="", raio=6):
+    """Devolve (svg, altura). A altura sai do texto — caixa fixa estourava o
+    rótulo de duas linhas, que é o caso de metade das entidades."""
+    linhas = quebrar(rotulo, int(w / 7.4))
+    sublinhas = quebrar(sub, int(w / 5.6)) if sub else []
+    h = 20 + 17 * len(linhas) + (15 * len(sublinhas) + 4 if sublinhas else 0)
+    txt = ['<rect x="{}" y="{}" width="{}" height="{}" rx="{}" class="cx"'
+           ' style="fill:var(--{}-f);stroke:var(--{}-s)"{}/>'.format(
+               x, y, w, h, raio, cor, cor,
+               ' stroke-dasharray="7 5"' if traco == "tracejada" else "")]
+    yt = y + 19
+    for l in linhas:
+        txt.append('<text x="{}" y="{}" class="rot">{}</text>'.format(x + 14, yt, l))
+        yt += 17
+    yt += 2
+    for l in sublinhas:
+        txt.append('<text x="{}" y="{}" class="sub">{}</text>'.format(x + 14, yt, l))
+        yt += 15
+    return "\n".join(txt), h
+
+
+def svg(por_id, regs):
+    sistemas = defaultdict(list)
+    for nome, s, refs, rec, _n in ENTIDADES:
+        ids = sorted({r for r, _, _ in refs})
+        sistemas[s].append((nome, ids, rec))
+
+    W, DIV = 1240, 620
+    p = []
+    p.append('<text x="30" y="46" class="t1">O campo multiorganizacional do 8 de Janeiro</text>')
+    p.append('<text x="30" y="72" class="t2">Ator focal declarado: {}</text>'.format(FOCAL))
+    p.append('<text x="30" y="94" class="t3">Sistemas de aliança e de conflito na acepção de '
+             'Klandermans (2013). Gerado de scripts/desenhar_campo.py — '
+             '{} entidades, todas com lastro em registro do codebook.</text>'.format(len(ENTIDADES)))
+
+    # a fronteira atravessa o desenho inteiro, porque é ela que está em questão
+    DIVISOR = len(p)
+    p.append('')  # a linha da fronteira entra no fim, com a altura real
+    p.append('<text x="{}" y="124" class="eixo">fronteira do campo</text>'.format(DIV - 62))
+
+    p.append('<text x="30" y="160" class="cab al">SISTEMA DE ALIANÇA</text>')
+    p.append('<text x="30" y="178" class="glosa">provê recurso ou oportunidade ao foco</text>')
+    p.append('<text x="910" y="160" class="cab co">SISTEMA DE CONFLITO</text>')
+    p.append('<text x="910" y="178" class="glosa">drena recurso ou restringe oportunidade</text>')
+
+    ya = yc = 196
+    for nome, ids, rec in sistemas["ALIANÇA"]:
+        s, h = caixa(30, ya, 300, nome, "{} · {}".format(" ".join(ids[:3]), rec), "al")
+        p.append(s)
+        ya += h + 9
+    for nome, ids, rec in sistemas["CONFLITO"]:
+        s, h = caixa(910, yc, 300, nome, " ".join(ids[:4]), "co")
+        p.append(s)
+        yc += h + 9
+
+    p.append('<text x="392" y="238" class="cab ind">INDIFERENTES</text>')
+    p.append('<text x="392" y="256" class="glosa">infraestrutura ou informação,</text>')
+    p.append('<text x="392" y="272" class="glosa">sem tomar partido</text>')
+    yi = 292
+    for nome, ids, rec in sistemas["INDIFERENTE"]:
+        s, h = caixa(392, yi, 200, nome, " ".join(ids), "ind")
+        p.append(s)
+        yi += h + 10
+
+    # a faixa de baixo: o que o modelo não acomoda, atravessando a fronteira
+    y = max(ya, yc, yi) + 62
+    p.append('<text x="30" y="{}" class="cab qb">O QUE O MODELO NÃO ACOMODA</text>'.format(y - 26))
+    p.append('<text x="30" y="{}" class="glosa">a unidade de análise de Klandermans é a organização — '
+             'aqui ela se divide por escalão e por data</text>'.format(y - 8))
+    for nome, ids, rec in sistemas["CINDIDA"]:
+        s, h = caixa(150, y, 940, "CINDIDA — " + nome,
+                     "nos dois sistemas ao mesmo tempo · " + " ".join(ids), "cin")
+        p.append(s)
+        y += h + 10
+    for nome, ids, rec in sistemas["MIGRANTE"]:
+        s, h = caixa(150, y, 940, "MIGRANTE — " + nome,
+                     "aliança → conflito, com data · " + " ".join(ids), "mig")
+        p.append(s)
+        p.append('<path d="M {} {} l 26 9 l -26 9 z" class="seta"/>'.format(
+            DIV - 13, y + h - 26))
+        y += h + 10
+    for nome, ids, rec in sistemas["CONTESTADA"]:
+        s, h = caixa(150, y, 940, "CONTESTADA — " + nome,
+                     "a classificação é o objeto da disputa do artigo · " + " ".join(ids),
+                     "con", traco="tracejada")
+        p.append(s)
+        y += h + 10
+
+    # o perfil por fase, que é onde a proposição do modelo não se confirma
+    porfase = defaultdict(set)
+    for nome, s, refs, _r, _n in ENTIDADES:
+        for rid, _c, _f in refs:
+            porfase[fase_larga(por_id[rid]["fase"])].add((nome, s))
+    y += 34
+    p.append('<text x="30" y="{}" class="cab">PRESENÇA POR FASE — e a proposição do ciclo '
+             'não se confirma</text>'.format(y))
+    p.append('<text x="30" y="{}" class="glosa">Klandermans prevê expansão no pico e '
+             'desligamento na queda. O pico do campo é T-1 Operacional, e o lado da '
+             'aliança desaparece em T0.</text>'.format(y + 18))
+    y += 44
+    for i, f in enumerate(ORDEM_FASE):
+        ativas = porfase[f]
+        al = sum(1 for _n, s in ativas if s == "ALIANÇA")
+        est = len(ativas) - al
+        x = 30 + i * 300
+        p.append('<text x="{}" y="{}" class="fase">{}</text>'.format(x, y, f))
+        p.append('<rect x="{}" y="{}" width="{}" height="20" class="bar al"'
+                 ' style="fill:var(--al-s)"/>'.format(x, y + 10, max(al * 16, 2)))
+        p.append('<rect x="{}" y="{}" width="{}" height="20" class="bar co"'
+                 ' style="fill:var(--co-s)"/>'.format(x, y + 34, max(est * 16, 2)))
+        p.append('<text x="{}" y="{}" class="num">{} de aliança</text>'.format(
+            x + max(al * 16, 2) + 8, y + 25, al))
+        p.append('<text x="{}" y="{}" class="num">{} do lado estatal</text>'.format(
+            x + max(est * 16, 2) + 8, y + 49, est))
+    H = y + 90
+    p[DIVISOR] = ('<line x1="{0}" y1="130" x2="{0}" y2="{1}" class="div"/>'
+                  .format(DIV, H - 150))
+
+    estilo = """
+  :root{--bg:#fbfbf9;--tx:#1a1a17;--tx2:#55524c;--ln:#c9c5bd;
+    --al-f:#eef4ec;--al-s:#4a7a52;--co-f:#f6eeec;--co-s:#9c4f3f;
+    --ind-f:#f2f1ed;--ind-s:#8a857b;--cin-f:#f2eff7;--cin-s:#6a5a8c;
+    --mig-f:#fdf3e6;--mig-s:#a8762c;--con-f:#fbf0f4;--con-s:#8d3c5c}
+  @media (prefers-color-scheme:dark){:root{--bg:#16161a;--tx:#ecebe7;--tx2:#a8a49c;--ln:#3b3a38;
+    --al-f:#1d2a20;--al-s:#79ab80;--co-f:#2c1d1a;--co-s:#d08976;
+    --ind-f:#232320;--ind-s:#9b968c;--cin-f:#231f2e;--cin-s:#a695c9;
+    --mig-f:#2b2116;--mig-s:#d7a css;--con-f:#2a1a22;--con-s:#cf7f9f}}
+  text{font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .t1{font-size:25px;font-weight:700;fill:var(--tx)}
+  .t2{font-size:14px;fill:var(--tx2)}
+  .t3{font-size:12.5px;fill:var(--tx2)}
+  .cab{font-size:13px;font-weight:700;letter-spacing:.06em;fill:var(--tx)}
+  .cab.al{fill:var(--al-s)} .cab.co{fill:var(--co-s)} .cab.ind{fill:var(--ind-s)}
+  .cab.qb{fill:var(--cin-s)}
+  .glosa{font-size:11.5px;fill:var(--tx2)}
+  .eixo{font-size:11px;fill:var(--tx2);font-style:italic}
+  .rot{font-size:13px;fill:var(--tx)}
+  .sub{font-size:10.5px;fill:var(--tx2)}
+  .cx{stroke-width:1.6}
+  .div{stroke:var(--ln);stroke-width:2;stroke-dasharray:3 6}
+  .seta{fill:var(--mig-s)}
+  .fase{font-size:12px;font-weight:600;fill:var(--tx)}
+  .num{font-size:11px;fill:var(--tx2)}
+""".replace("#d7a css", "#d7a45e")
+
+    return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" '
+            'width="{w}" height="{h}" role="img" '
+            'aria-label="Campo multiorganizacional do 8 de Janeiro">\n'
+            '<style>{e}</style>\n'
+            '<rect width="{w}" height="{h}" fill="var(--bg)"/>\n{c}\n</svg>\n'
+            ).format(w=W, h=H, e=estilo, c="\n".join(p))
+
+
+def html(desenho, por_id):
+    ncab = Counter(s for _n, s, _r, _rc, _nt in ENTIDADES)
+    linhas = []
+    for nome, s, refs, rec, nota in ENTIDADES:
+        ids = " ".join(sorted({r for r, _, _ in refs}))
+        linhas.append("<tr><td class=s>{}</td><td><b>{}</b></td><td class=r>{}</td>"
+                      "<td>{}</td><td class=n>{}</td></tr>".format(s, nome, ids, rec, nota))
+    return """<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Campo multiorganizacional — 8 de Janeiro</title>
+<style>
+:root{{--bg:#fbfbf9;--tx:#1a1a17;--tx2:#55524c;--ln:#e2ded6;--cd:#fff}}
+@media (prefers-color-scheme:dark){{:root{{--bg:#16161a;--tx:#ecebe7;--tx2:#a8a49c;
+  --ln:#32312f;--cd:#1d1d21}}}}
+*{{box-sizing:border-box}}
+body{{margin:0;background:var(--bg);color:var(--tx);
+  font:15px/1.6 ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif}}
+main{{max-width:1300px;margin:0 auto;padding:32px 16px 72px}}
+h1{{font-size:26px;margin:0 0 4px;line-height:1.25}}
+.meta{{color:var(--tx2);font-size:13.5px;margin:0 0 28px}}
+figure{{margin:0 0 36px;background:var(--cd);border:1px solid var(--ln);
+  border-radius:10px;padding:8px;overflow-x:auto}}
+svg{{display:block;min-width:900px;width:100%;height:auto}}
+table{{width:100%;border-collapse:collapse;font-size:13.5px}}
+th,td{{text-align:left;padding:9px 10px;border-bottom:1px solid var(--ln);
+  vertical-align:top}}
+th{{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--tx2)}}
+td.s{{font-size:11px;letter-spacing:.04em;white-space:nowrap;color:var(--tx2)}}
+td.r{{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:11.5px;
+  white-space:nowrap;color:var(--tx2)}}
+td.n{{color:var(--tx2);font-size:12.5px;max-width:34em}}
+.av{{border-left:3px solid #a8762c;background:var(--cd);padding:12px 16px;
+  border-radius:0 8px 8px 0;margin:0 0 28px;font-size:13.5px}}
+h2{{font-size:17px;margin:34px 0 10px}}
+code{{font-family:ui-monospace,Consolas,monospace;font-size:.92em}}
+</style></head><body><main>
+<h1>O campo multiorganizacional do 8 de Janeiro</h1>
+<p class="meta">Ator focal declarado: <b>{focal}</b> · {n} entidades ·
+gerado por <code>scripts/desenhar_campo.py</code> a partir de
+<code>process_tracing_8jan_eventos.json</code></p>
+
+<p class="av"><b>Campo é sempre de alguém.</b> Klandermans define campo como o das
+organizações com que <i>a organização do movimento</i> pode estabelecer vínculo — a
+definição é possessiva, e o codebook não é: ele codifica o episódio. Por isso o ator
+focal é declarado, e trocá-lo inverte o campo. As {aliados} entidades de aliança, as
+{opostos} de conflito e as {amb} que o modelo não acomoda estão todas ancoradas em
+registro, e <code>--autoteste</code> aborta se um fragmento deixar de ocorrer no
+campo declarado.</p>
+
+<figure>{svg}</figure>
+
+<h2>As {n} entidades</h2>
+<table><thead><tr><th>Sistema</th><th>Entidade</th><th>Registros</th>
+<th>Recurso</th><th>Nota</th></tr></thead><tbody>
+{linhas}
+</tbody></table>
+</main></body></html>
+""".format(focal=FOCAL, n=len(ENTIDADES), svg=desenho, linhas="\n".join(linhas),
+           aliados=ncab["ALIANÇA"], opostos=ncab["CONFLITO"],
+           amb=ncab["CINDIDA"] + ncab["MIGRANTE"] + ncab["CONTESTADA"])
 
 
 def verificar(por_id):
@@ -476,8 +723,14 @@ def main():
     for nome, rid, razao in FORA:
         print("- **{}** ({}): {}".format(nome, rid, razao))
 
+    desenho = svg(por_id, regs)
+    io.open(SVG_OUT, "w", encoding="utf-8", newline="\n").write(desenho)
+    io.open(HTML_OUT, "w", encoding="utf-8", newline="\n").write(html(desenho, por_id))
+
     print()
     print("Planilha: {}".format(SAIDA.relative_to(RAIZ)))
+    print("Desenho:  {}".format(SVG_OUT.relative_to(RAIZ)))
+    print("Página:   {}".format(HTML_OUT.relative_to(RAIZ)))
     return 0
 
 

@@ -1174,7 +1174,11 @@ Na primeira versão do documento, duas páginas foram escritas por **dedução d
 | 22 | **Datar a posse de Anderson Torres na SSP-DF** — é o que discrimina H1 de H2 em PT-28; uma página de fonte primária | 27.5 | — |
 | 16 | **Redação do artigo** | 3, 4, 5, 6, 9, 10 | tudo acima |
 
-**Nenhuma pendência de dado depende de você** — isso vale desde 16/08 e continua valendo: as 82 linhas do codebook estão ancoradas, e o que falta é bibliográfico ou é decisão. **As nove abertas dividem-se em três naturezas:** decisões suas (13, 15, 19, 20), leitura ou coleta bibliográfica (10, 17), trabalho de codificação (14, 21) e a redação (16). **Só a 16 depende de todas as outras**; nenhuma das oito primeiras bloqueia outra, e as quatro decisões podem ser tomadas durante a escrita.
+**Nenhuma pendência de dado depende de você** — isso valia desde 16/08 e **deixou de valer em 30/09**: a tarefa 22 é coleta de fonte primária, a primeira desde agosto. Fora ela, as 82 linhas seguem ancoradas e o que falta é bibliográfico ou é decisão.
+
+**As oito abertas, por natureza:** decisões suas (**13, 15, 19**), leitura ou coleta bibliográfica (**10, 17**), coleta de fonte primária (**22**), codificação (**14**) e a redação (**16**). **Só a 16 depende das outras**; nenhuma das sete primeiras bloqueia outra, e as três decisões podem ser tomadas durante a escrita.
+
+> **Esta tabela envelheceu duas vezes em dois dias** — em 29/09 trazia a 18 duplicada e três números à mão na 17; em 30/09 manteve 20 e 21 como abertas depois de fechadas e não contou a 22. É a mesma lição de 25/09 batendo na peça que existe para registrar a lição. **A contagem da 17 já é gerada; o resto desta tabela não é**, e é a próxima candidata a virar script.
 
 **Uma correção de contabilidade, em 30/09.** Esta tabela trazia a tarefa 18 duplicada na seção "Abertas" já riscada, uma referência a "tarefas 12 a 15" que não existem como tarefas — 12 é item desta agenda, não tarefa — e, na 17, três números à mão dos quais um não fechava a soma. **As contagens da 17 passaram a sair de `scripts/localizar_camada_a.py`**, com autoteste que exige que todo DOI declarado como lido, fichado ou impedido esteja de fato na camada A.
 

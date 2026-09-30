@@ -910,7 +910,7 @@ Acrescentar dois PDFs ao eixo 05 mudou o total do corpus, e ao recontar apareceu
 
 ---
 
-## 24. A leitura na fonte — onde os 43 estão, e os quatro que foram lidos — 🔶 29/09/2026
+## 24. A leitura na fonte — onde os 43 estão, e os cinco que foram lidos — 🔶 29-30/09/2026
 
 Passo 3 do item 11.3. `scripts/localizar_camada_a.py` responde a pergunta que a triagem não respondeu — **desta lista, o que eu consigo abrir?** — e emite [`data/processed/camada_a_acesso.csv`](../data/processed/camada_a_acesso.csv).
 
@@ -934,7 +934,7 @@ Passo 3 do item 11.3. `scripts/localizar_camada_a.py` responde a pergunta que a 
 
 Cloudflare barrou **SAGE, Wiley, Oxford, Chicago e eScholarship**, inclusive em navegador real; a eScholarship apresentou verificação humana, que não se contorna. Passaram **Cambridge Core, MDPI, Nature e MPG.PuRe**. Isso não é obstáculo técnico a resolver: é a constatação de que **29 dos 43 dependem do seu acesso institucional**, e que a leitura na fonte não é tarefa de script.
 
-### 24.3 Os quatro lidos, e o que a leitura mudou
+### 24.3 Os artigos lidos, e o que a leitura mudou
 
 **COLLIER (2011), *Understanding Process Tracing*** — lido integralmente no Cambridge Core. Tipo declarado: *The Teacher*, PS 44(4), p. 823-830. A nota de fonte da tabela 1 diz que os quatro testes são **"adapted from Bennett (2010, 210), who builds on categories formulated by Van Evera (1997, 31-32)"**. O projeto os atribui a **Beach e Pedersen (2019)** em `01_PROJETO-PESQUISA_v1-compacto.md`; a proposta de disciplina já traz Collier ao lado. **A genealogia dos testes precisa ser decidida.** E Collier adverte que a distinção entre os quatro "should not be taken rigidly": a mesma evidência pode ser um teste ou outro conforme o conhecimento prévio e a formulação da hipótese — logo o teste nomeado exige a premissa declarada. Sobre PT-28, a leitura **confirma** a redação do codebook: o teste de argola estabelece critério **necessário**, elimina quem não passa e não confirma quem passa; "condição necessária (hoop test)" está correto nos termos de Collier.
 
@@ -947,6 +947,32 @@ Cloudflare barrou **SAGE, Wiley, Oxford, Chicago e eScholarship**, inclusive em 
 ### 24.4 Uma armadilha de extração, que quase produziu um achado falso
 
 Ao indexar o vocabulário causal em *Dynamics of Contention*, a busca por `certification` devolveu **zero páginas** — o que teria sustentado a afirmação de que a obra do vocabulário não usa o termo. **Errado.** O PDF grava a ligadura tipográfica **ﬁ** (U+FB01), e "certiﬁcation" não casa com "certification". Normalizada a ligadura, aparecem **42 páginas**. Conferido: *certification* 42, *decertification* 21, *brokerage* 93, *identity shift* 37, *radicalization* 34, *diffusion* 31, *category formation* 28, *social appropriation* 21, *object shift* 21, *emulation* 11, *escalation* 9, *attribution of similarity* 5, *threshold* 3. **Ausência em busca de PDF não é ausência na obra** — é a mesma regra do `conferir_paginas.py`, que abre a página em vez de confiar no campo.
+
+### 24.5 *Dynamics of Contention* lida na fonte — as definições, e o que elas cobram do codebook
+
+A obra do vocabulário está no corpus e foi lida nos trechos definidores. **O desvio de paginação é de 24**: a página física 356 traz no rodapé "Part III: Applications and Conclusions **332**", e as páginas impressas abaixo estão convertidas por essa conferência, não por estimativa.
+
+| Mecanismo | Definição na obra | Página impressa |
+|:--|:--|--:|
+| **Brokerage** | "the linking of two or more previously unconnected social sites by a unit that mediates their relations with one another and/or with yet other sites" | 26 |
+| **Certification** | "refers to the validation of actors, their performances, and their claims **by external authorities**" | 145; repetida em 158 |
+| **Diffusion** | "the transfer of information along established lines of interaction" | 333 |
+| **Attribution of similarity** | o mecanismo pelo qual atores reconhecem outros como semelhantes o bastante para a ação se transferir | 333 |
+| **Scale shift** | processo com dois caminhos: o de **difusão/emulação** e o de **corretagem/formação de coalizão** | 332 |
+
+**Quatro registros usam "certificação". Três passam, um não.** Contra a definição da obra — validação **por autoridade externa** —, PT-13 ("o aval da autoridade máxima"), PT-06B ("a autoridade que havia certificado é ela própria declarada parcial") e PT-50 ("retirada de apoio simbólico") estão corretos: em todos há autoridade externa que valida ou retira validação. **PT-03 não.** "Certificação de eficácia: a mobilização de rua **é validada** como via legítima de deposição" — validada por quem? Não há autoridade no enunciado: o que valida é o **desfecho**, e isso não é certificação nos termos da obra. É, nos próprios termos dela, matéria do caminho de difusão/emulação e da atribuição de similaridade. **O rótulo de PT-03 precisa ou nomear a autoridade, ou mudar de nome.** Decisão sua.
+
+**O limiar não vem daqui — e a obra argumenta contra ele.** *Threshold* aparece três vezes em 411 páginas. Uma é idiomática ("at the threshold of the twenty-first century", p. 272). As outras duas são a **crítica**: a p. 306 apresenta o limiar crítico pela analogia da caldeira a vapor como um dos "standard accounts", e a p. 307 conclui que "**we have claimed that the threshold effect occurs rarely**", preferindo mecanismos relacionais — corretagem, certificação, formação de coalizão entre classes. PT-29 ("transposição do limiar... dispara o contágio") e PT-34 ("massa crítica") usam, portanto, vocabulário que a obra do vocabulário **rejeita como raro**. A triagem já havia registrado que *threshold* e *critical mass* não têm nenhum título no corpus (item 23.2); a leitura na fonte fecha a questão: **o cânone que está no corpus também não os fornece.** Se PT-29 e PT-34 permanecem, precisam de Granovetter ou da literatura de massa crítica — que não está coletada.
+
+### 24.6 A mesma objeção, das duas fontes do próprio vocabulário
+
+Mayntz adota mecanismo como processo **recorrente**. E *Dynamics of Contention* diz, na p. 13: "**Instead of seeking to identify necessary and sufficient conditions** for mobilization, action, or certain trajectories, **we search out recurrent causal mechanisms**."
+
+O codebook faz as duas coisas que essa frase separa: chama de `mecanismo_causal` os elos de **um episódio único** e os submete a testes de **condição necessária** (PT-28, *hoop test*). Não é incoerência de execução — é a junção de dois programas: o vocabulário vem de McAdam, Tarrow e Tilly, que buscam recorrência entre episódios e recusam a linguagem de necessidade e suficiência; o aparato de teste vem de Van Evera, Bennett, Collier e Beach & Pedersen, que testam hipóteses em caso único. **As duas fontes mais citadas do desenho apontam a mesma objeção, e ela chega ao artigo pela pena do parecerista se não chegar antes pela do autor.** Fica registrada aqui, com as três saídas visíveis: manter "mecanismo" e citar Boudon (1998, p. 172); trocar para *causal reconstruction*, nome de Mayntz para o procedimento; ou declarar a junção e defendê-la. É decisão sua, e é a que mais muda o texto.
+
+### 24.7 O Tarrow não foi lido, e a razão é física
+
+`TARROW_O-poder-em-movimento_Vozes-2009.pdf` é digitalização **sem camada de texto**, duas páginas do livro por folha. A edição foi conferida por renderização em 29/09; a **leitura** exigiria OCR de 162 folhas, e OCR de varredura em duas páginas por folha erra paginação, que é justamente o que uma ficha precisa ancorar. **Não foi feito, e não deve ser apresentado como feito.** Os usos declarados — ciclo de confronto (PT-62), estruturas de mobilização (PT-12A, PT-21), oportunidade política (PT-01, PT-03D, PT-05A) — seguem sem ficha.
 
 ---
 
@@ -988,7 +1014,7 @@ Ao indexar o vocabulário causal em *Dynamics of Contention*, a busca por `certi
 | # | Tarefa | Item desta agenda | Depende de |
 |:--|:--|:--|:--|
 | 10 | Acrescentar a literatura clássica brasileira (livros, sem DOI) — as sínteses têm **zero** referências sobre o Brasil | 11.4, 22.4 | — |
-| 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — 4 lidos em 29/09, 7 já tinham ficha, **29 fechados por muro de acesso** | 23, 24 | acesso institucional |
+| 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **5 lidos**, 7 já tinham ficha, 1 sem camada de texto, **29 fechados por muro de acesso** | 23, 24 | acesso institucional |
 | — | ~~Acrescentar à mão o cânone de mecanismos~~ — os dois livros no eixo 05, McCarthy & Zald como referência; cobertura de A sobe a 31 dos 82 | 23.6 | ✅ 29/09 |
 | 13 | Decidir o "Conclusão dos julgamentos" de PT-61 contra as 459 em instrução | 21.4 | decisão sua |
 | 14 | Codificar a camada $T_{-1}$ conjuntural — 7 registros ainda contextuais | 11.3, 19 | 9 |

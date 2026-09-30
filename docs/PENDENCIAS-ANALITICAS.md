@@ -1026,11 +1026,13 @@ Onze verbetes lidos integralmente, registro em [`projeto-pos-doc/10_VERBETES-ENC
 
 ---
 
-## Ordem de ataque — revista em 29/09/2026
+## Ordem de ataque — revista em 30/09/2026
 
 **A decisão que ordena tudo continua sendo a de 16/08/2026: a redação é o último item.** A ordem anterior a essa data tratava o aparato como suficiente e punha a escrita como ponto de virada; esta trata o conjunto de dados do processo político como pré-requisito.
 
-**A mudança desta revisão é de contabilidade, não de rumo.** A tabela vinha mostrando como abertas quatro tarefas concluídas em 16/08 — o arquivamento web (4), a obtenção do balanço (8) e a reauditoria (11), além da 6. Foram fechadas aqui com a data correta. E entraram as tarefas nascidas das rodadas 19, 20 e 21.
+**A revisão de 29/09 foi de contabilidade, não de rumo.** A tabela vinha mostrando como abertas quatro tarefas concluídas em 16/08 — o arquivamento web (4), a obtenção do balanço (8) e a reauditoria (11), além da 6. Foram fechadas com a data correta, e entraram as tarefas nascidas das rodadas 19, 20 e 21.
+
+**A de 30/09 acrescentou três tarefas nascidas da leitura na fonte** — 19, 20 e 21 — e corrigiu a contabilidade da 17, que passou a ser gerada.
 
 ### Fechadas
 
@@ -1064,17 +1066,18 @@ Onze verbetes lidos integralmente, registro em [`projeto-pos-doc/10_VERBETES-ENC
 | # | Tarefa | Item desta agenda | Depende de |
 |:--|:--|:--|:--|
 | 10 | Acrescentar a literatura clássica brasileira (livros, sem DOI) — as sínteses têm **zero** referências sobre o Brasil | 11.4, 22.4 | — |
-| 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **6 lidos**, 7 já tinham ficha, 1 sem camada de texto; a enciclopédia destravou 7 verbetes, e ~26 seguem atrás de muro | 23, 24, 25 | acesso institucional |
+| 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **27 pendentes**: 6 lidos, 7 com ficha da 1ª leva, 3 impedidos. Números gerados por `localizar_camada_a.py`, não digitados | 23, 24, 25 | acesso institucional |
 | 19 | **Decidir o nome de `mecanismo_causal`** e aplicar as sete cobranças da seção 4 do documento 09 | 24.6, 25.1, 25.2 | decisão sua |
 | 20 | **Escrever a hipótese rival de PT-28** — seletividade por recurso e conexão política, e sobrecarga analítica | 25.6 | decisão sua |
 | 21 | Desenhar o **campo multiorganizacional** (sistemas de aliança e de conflito) — os atores estão no codebook, o campo não existe como peça | 25.6 | — |
-| — | ~~Acrescentar à mão o cânone de mecanismos~~ — os dois livros no eixo 05, McCarthy & Zald como referência; cobertura de A sobe a 31 dos 82 | 23.6 | ✅ 29/09 |
 | 13 | Decidir o "Conclusão dos julgamentos" de PT-61 contra as 459 em instrução | 21.4 | decisão sua |
 | 14 | Codificar a camada $T_{-1}$ conjuntural — 7 registros ainda contextuais | 11.3, 19 | 9 |
 | 15 | Higiene do repositório: licença, remoto, `.backup_pre_lula/`, ponteiros no JSON | 20, 21.4 | decisão sua |
 | 16 | **Redação do artigo** | 3, 4, 5, 6, 9, 10 | tudo acima |
 
-**Nenhuma pendência de dado depende de você** — isso vale desde 16/08 e continua valendo. As tarefas 12 a 15 são decisões, não coleta; nenhuma bloqueia a redação, e as três primeiras podem ser tomadas durante a escrita.
+**Nenhuma pendência de dado depende de você** — isso vale desde 16/08 e continua valendo: as 82 linhas do codebook estão ancoradas, e o que falta é bibliográfico ou é decisão. **As nove abertas dividem-se em três naturezas:** decisões suas (13, 15, 19, 20), leitura ou coleta bibliográfica (10, 17), trabalho de codificação (14, 21) e a redação (16). **Só a 16 depende de todas as outras**; nenhuma das oito primeiras bloqueia outra, e as quatro decisões podem ser tomadas durante a escrita.
+
+**Uma correção de contabilidade, em 30/09.** Esta tabela trazia a tarefa 18 duplicada na seção "Abertas" já riscada, uma referência a "tarefas 12 a 15" que não existem como tarefas — 12 é item desta agenda, não tarefa — e, na 17, três números à mão dos quais um não fechava a soma. **As contagens da 17 passaram a sair de `scripts/localizar_camada_a.py`**, com autoteste que exige que todo DOI declarado como lido, fichado ou impedido esteja de fato na camada A.
 
 **Quando a redação começar**, os itens 3, 4 e 5 desta agenda vêm primeiro: são antecipação de crítica, os pontos que um parecerista atento levantaria, e os que mais mudam o texto. Os itens 6, 9 e 10 são parágrafos de discussão, resolvidos na escrita.
 

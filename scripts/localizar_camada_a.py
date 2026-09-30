@@ -78,6 +78,47 @@ NO_CORPUS = {
         "Fontes/05_Bibliografia-teorica/McADAM-TARROW-TILLY_Dynamics-of-Contention_Cambridge-2001.pdf",
     "10.1017/CBO9780511813245":
         "Fontes/05_Bibliografia-teorica/TARROW_O-poder-em-movimento_Vozes-2009.pdf",
+    "10.1002/9780470674871.wbespm127":
+        "Fontes/05_Bibliografia-teorica/SNOW-DELLA-PORTA-KLANDERMANS-McADAM_"
+        "Wiley-Blackwell-Encyclopedia-of-Social-and-Political-Movements_2013.pdf",
+}
+
+# =============================================================================
+# O ESTADO DE LEITURA — e por que ele é gerado, não digitado
+# =============================================================================
+# A regra de 25/09/2026: peça escrita à mão que reproduz número do codebook
+# envelhece. A tarefa 17 da "Ordem de ataque" trazia "os 43 da camada A, 6
+# lidos, ~26 atrás de muro" — três números à mão, e o terceiro não fechava a
+# soma. Aqui eles passam a sair da execução.
+#
+# FICHA: item com ficha da PRIMEIRA leva (01/09/2026), em
+# `projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md` §1. Ficha é o padrão do
+# projeto para "verificado"; nem toda ficha é leitura integral.
+FICHAS = {
+    "10.3998/mpub.2556282": "ficha 1 — Beach & Pedersen, divergência de edição",
+    "10.1086/392759": "ficha 2 — Machamer, Darden & Craver",
+    "10.1177/0267323112441007": "ficha 3 — Cammaerts",
+    "10.1086/378395": "ficha 4 — Almeida",
+    "10.1080/14742837.2014.947253": "ficha 5 — Motta, Renata",
+    "10.17813/maiq.10.1.t5767064661w2u34": "ficha 6 — Koopmans",
+    "10.1080/09636412.2015.1036624": "ficha 9 — Waldner",
+}
+
+# LIDO NA FONTE: obra aberta e lida, com onde e quando. É o passo 3.
+LIDOS = {
+    "10.1017/s1049096511001429": ("30/09", "Cambridge Core, integral"),
+    "10.1177/0048393103262552": ("30/09", "MPG.PuRe, integral, 23 p."),
+    "10.1038/srep00197": ("30/09", "PDF aberto da Nature, integral"),
+    "10.3390/socsci12040238": ("30/09", "MDPI, integral"),
+    "10.1017/CBO9780511805431": ("30/09", "corpus, trechos definidores + índice"),
+    "10.1002/9780470674871.wbespm127": ("30/09", "corpus, integral"),
+}
+
+# Impedimento declarado, para a conta não sugerir que só falta querer.
+IMPEDIDOS = {
+    "10.1017/CBO9780511813245": "varredura sem camada de texto, 2 págs. por folha",
+    "10.1086/226464": "referência sem arquivo coletado",
+    "10.1002/9780470674871.wbespm127.pub2": "revisão de 2022; não está no volume de 2013",
 }
 
 
@@ -137,6 +178,20 @@ def consultar(doi):
     }
 
 
+def estado(doi):
+    """Em que pé está a leitura deste item. Exclusivo e exaustivo, nesta ordem.
+
+    LIDO vence FICHA porque leitura integral supera conferência de metadado;
+    IMPEDIDO só se aplica a quem não foi lido nem tem ficha."""
+    if doi in LIDOS:
+        return "LIDO"
+    if doi in FICHAS:
+        return "FICHA"
+    if doi in IMPEDIDOS:
+        return "IMPEDIDO"
+    return "PENDENTE"
+
+
 def rota(linha, reg):
     """Classifica o item numa das quatro rotas. Ver o cabeçalho."""
     if linha["doi"] in NO_CORPUS:
@@ -172,7 +227,20 @@ def autoteste():
     assert rota({"doi": "x"}, {"achado": True, "is_oa": True, "pdf_url": ""}) == "VITRINE"
     assert rota({"doi": "x"}, {"achado": True, "is_oa": True, "pdf_url": "u"}) == "ABERTO"
     assert rota({"doi": "x"}, {"achado": False}) == "FECHADO"
-    print("autoteste OK — 43 itens, normalizador e as quatro rotas")
+
+    # Todo DOI declarado em FICHAS, LIDOS ou IMPEDIDOS tem de estar na camada A;
+    # senão a conta de estado divide um universo que não é o dela.
+    dois = {r["doi"] for r in linhas}
+    for nome, d in (("FICHAS", FICHAS), ("LIDOS", LIDOS), ("IMPEDIDOS", IMPEDIDOS)):
+        for doi in d:
+            assert doi in dois, "{} declara DOI fora da camada A: {}".format(nome, doi)
+
+    # Os três conjuntos não se sobrepõem onde importa: nenhum item lido pode
+    # estar declarado como impedido.
+    assert not (set(LIDOS) & set(IMPEDIDOS)), "item lido nao pode estar impedido"
+    assert estado(next(iter(LIDOS))) == "LIDO"
+    assert estado("10.1017/CBO9780511813245") == "IMPEDIDO"
+    print("autoteste OK — 43 itens, normalizador, as quatro rotas e os quatro estados")
 
 
 def main():
@@ -208,16 +276,22 @@ def main():
         print("todos os 43 vieram do cache de {}".format(CACHE.relative_to(RAIZ)))
 
     contagem = {"CORPUS": 0, "ABERTO": 0, "VITRINE": 0, "FECHADO": 0}
+    leitura = {"LIDO": 0, "FICHA": 0, "IMPEDIDO": 0, "PENDENTE": 0}
     divergencias = []
     saida = []
     for r in linhas:
         reg = guardado.get(r["doi"], {"achado": False})
         rt = rota(r, reg)
         contagem[rt] += 1
+        est = estado(r["doi"])
+        leitura[est] += 1
         if reg.get("achado") and normalizar(reg["titulo"]) != normalizar(r["titulo"]):
             divergencias.append((r["doi"], r["titulo"], reg["titulo"]))
         saida.append({
             "rota": rt,
+            "estado": est,
+            "nota": LIDOS.get(r["doi"], ("", ""))[1] or FICHAS.get(r["doi"], "")
+                    or IMPEDIDOS.get(r["doi"], ""),
             "doi": r["doi"],
             "ano": r["ano"],
             "titulo": r["titulo"],
@@ -237,6 +311,14 @@ def main():
         w.writeheader()
         w.writerows(saida)
 
+    print()
+    print("| Estado da leitura | Itens | O que significa |")
+    print("|:--|--:|:--|")
+    print("| LIDO na fonte | {} | obra aberta e lida — o passo 3 |".format(leitura["LIDO"]))
+    print("| FICHA, sem leitura | {} | primeira leva, 01/09: metadado conferido |".format(leitura["FICHA"]))
+    print("| IMPEDIDO | {} | sem camada de texto, sem arquivo, ou fora do volume |".format(leitura["IMPEDIDO"]))
+    print("| PENDENTE | {} | **é o que falta da tarefa 17** |".format(leitura["PENDENTE"]))
+    print("| **Total** | **{}** | |".format(sum(leitura.values())))
     print()
     print("| Rota | Itens | O que autoriza |")
     print("|:--|--:|:--|")

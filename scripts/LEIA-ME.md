@@ -42,10 +42,13 @@ python scripts/conferir_paginas.py
 
 # 9. confira o campo multiorganizacional contra o codebook
 python scripts/desenhar_campo.py --autoteste
+
+# 10. confira as citações do documento 11 contra o codebook
+python scripts/conferir_hipoteses.py
 ```
 
-Os passos 3 a 9 são o que `bash scripts/ciclo.sh` roda, nessa ordem. Os passos
-5 a 9 devolvem código de saída != 0 em caso de falha, então servem em gancho
+Os passos 3 a 10 são o que `bash scripts/ciclo.sh` roda, nessa ordem. Os passos
+5 a 10 devolvem código de saída != 0 em caso de falha, então servem em gancho
 de pré-commit.
 
 ## Os arquivos
@@ -59,6 +62,7 @@ de pré-commit.
 | `conferir_relatorio.py` | `reports/process_tracing_8jan_relatorio.md` contra o codebook: cobertura da tabela da Etapa 2, páginas citadas × `fonte_pagina`, cifras retiradas e caminhos citados. Ver a segunda ressalva. |
 | `conferir_paginas.py` | Abre o PDF na página citada e procura a transcrição. **A única checagem que lê a fonte.** |
 | `desenhar_campo.py` | O campo multiorganizacional do episódio: sistemas de aliança e de conflito em relação a um **ator focal declarado**, porque campo é sempre de alguém e o codebook é neutro quanto ao ator. Emite `data/processed/campo_multiorganizacional.csv`. Cada entidade declara os registros e o campo do codebook que a sustentam, e `--autoteste` exige que o fragmento ocorra literalmente ali — com prova negativa por injeção de defeito. **É o passo 7/7 do ciclo.** |
+| `conferir_hipoteses.py` | `projeto-pos-doc/11_HIPOTESES-RIVAIS-PT-28.md` contra o codebook: cada linha de tabela que cita um registro tem de citar página que aquele registro ancora, **e no documento-fonte certo** — "Cappelli: 679" é reprovado quando a página é do CPMI. Não abre PDF; a pergunta é anterior. **Passo 8/8 do ciclo.** |
 | `baixar_fontes.sh` | Comandos de coleta do que falta. Não baixa nada sozinho: cada peça é um alvo nomeado. |
 | `migrar_esquema16.py` | Rodada única de 16/08/2026 (12 → 16 campos + correções de auditoria). Idempotente. Mantido como registro da decisão, não faz parte do ciclo. |
 | `varrer_fonte_pagina.py` | **Triagem, fora do ciclo.** Compara as páginas citadas na prosa dos registros (`fonte_trecho`, `mecanismo_causal`, `status_verificacao`, `nota_auditoria`) com o campo estruturado `fonte_pagina`, e imprime o trecho em volta de cada divergência. Nem todo achado é lacuna — ver a terceira ressalva. |

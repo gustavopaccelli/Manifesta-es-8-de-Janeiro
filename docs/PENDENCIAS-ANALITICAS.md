@@ -19,7 +19,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Corpus documental | **20 PDFs / 6.819 p. de fonte documental** + o acórdão do TSE em HTML + 6 matérias arquivadas contra link rot + 7 sínteses. Com a bibliografia teórica do eixo 05, são 24 PDFs / 7.501 p. **Três peças sem camada de texto**, declaradas |
 | Figuras | SVG da cadeia causal e cronologia navegável — **realinhadas ao codebook em 25/09**, 82 registros cobertos. São a única parte do aparato escrita à mão |
 | Relatório de pesquisa | `reports/process_tracing_8jan_relatorio.md` — §3.2 corrigido em 11/09; §2.1 e a tabela da Etapa 2 em 25/09; "Próximos passos" reescrita na mesma data. Agora tem checagem no ciclo |
-| Verificação | `bash scripts/ciclo.sh` — **sete passos**: dois geradores e cinco checagens, todas com código de saída ≠ 0 em caso de falha |
+| Verificação | `bash scripts/ciclo.sh` — **oito passos**: dois geradores e seis checagens, todas com código de saída ≠ 0 em caso de falha |
 | Controle de versão | git desde 20/09/2026, sem remoto configurado |
 | Eixo bibliográfico Lava Jato | 20 referências, 18 com DOI confirmado |
 | Sínteses LeapSpace (não citáveis) | **411 DOIs verificados e triados em 29/09** — 408 existem, os 3 restantes com DOI correto registrado; **35 na camada A**, 65 em B, 308 fora. **Zero referências sobre o Brasil, e o cânone de mecanismos ausente** — itens 22 e 23 |
@@ -1082,6 +1082,48 @@ A **cúpula da segurança do DF** (SSP-DF, SOI, GSI) entra como `CONTESTADA`, co
 
 ---
 
+## 27. As hipóteses rivais de PT-28 — uma cai, outra sobrevive e relocaliza o argumento — ✅ 30/09/2026
+
+Tarefa 20, em [`projeto-pos-doc/11_HIPOTESES-RIVAIS-PT-28.md`](../projeto-pos-doc/11_HIPOTESES-RIVAIS-PT-28.md). É também a primeira aplicação do enquadramento de Zaks (2017) que o item 2.1 de `08` registra como "a peça que o projeto mais precisa e não tem".
+
+### 27.1 Cinco hipóteses, e a classificação já resolve duas coisas
+
+Enunciadas na melhor versão: **H1** omissão dolosa da cúpula civil da SSP-DF (a moldura do STF na AP 2668, que é **omissiva, não comissiva**); **H2** seletividade estrutural do policiamento; **H3** sobrecarga analítica da inteligência; **H4** ruptura da cadeia de comando abaixo do comandante-geral; **H5** incapacidade operacional.
+
+Pela relação lógica, **H4 sai da lista de rivais**: é **aninhada** em H1 — o mecanismo pelo qual a omissão produziu efeito —, e o registro já a tratava assim. E **H3 e H5 são contraditórias com H1**, logo testáveis com a evidência que o projeto já tem.
+
+### 27.2 As duas contraditórias caem, com registros já ancorados
+
+**H5 está refutada por PT-41:** o Batalhão de Choque chegou duas horas após ser requerido e, empregado, expulsou todos os invasores em **pouco mais de três minutos**. A capacidade existia e era desproporcional à resistência. Faltou emprego, não meio.
+
+**H3 está refutada por PT-19B.** Sobrecarga supõe sinal perdido no volume; a evidência mostra o contrário — um grupo de WhatsApp **criado em 04/01 pela própria cúpula**, com sete participantes, **para acompanhar essas manifestações**, que recebeu o aviso em 05/01 e no qual a subsecretária de Inteligência só escreveu **às 16h50 do dia 8**. Canal dedicado e de baixo volume não é aparelho soterrado por informação.
+
+### 27.3 H2 sobrevive — e o ganho é a distinção que ela obriga a fazer
+
+H2 explica bem a tolerância prolongada (PT-20), a não interdição das caravanas (PT-21) e o **tamanho** do efetivo (PT-28): para grupo rico em recurso e em conexão política, policiamento brando é a regularidade da literatura, não o desvio. **Enquanto o argumento de PT-28 se apoiar no tamanho, ele disputa o terreno em que H2 é forte.**
+
+**Mas há um conjunto que H2 não explica, e não é tamanho.** PT-18: **PAI** em vez do **POI** usado no 7 de setembro e na posse, e **sobreaviso** (2h30 a 3h) em vez de **prontidão** (≈40 min), "de forma também diversa da praticada na cerimônia de posse"; Cappelli, conclusão D: **sem previsão de acionamento** para BOPE, BPCÃES, BAVOP e RPMON; conclusão H: **oito comandos de férias**, inclusive o do Batalhão de Choque; PT-20A: dispensa expressa de reforço dois dias antes.
+
+**A distinção é dimensionamento contra capacidade de escalada.** H2 é teoria do primeiro — prediz menos policiais na linha, e acerta. **Não prediz a remoção da capacidade de escalar**: não explica pôr oito comandos em férias no mesmo dia, deixar quatro unidades especializadas sem previsão de acionamento, rebaixar o instrumento de planejamento em relação ao de sete dias antes e dispensar reforço por escrito.
+
+**E a comparação que sustenta isso é interna** — mesma corporação, mesma praça, sete dias de intervalo —, não entre grupos, que é onde a seletividade sempre teria o que dizer.
+
+### 27.4 A redação de PT-28 não muda; falta-lhe declarar a rival
+
+"Condição necessária (*hoop test*)" está exato. O que falta é o parágrafo da seção 5 do documento 11, que **não inseri**: é acréscimo ao `mecanismo_causal` e é decisão sua.
+
+### 27.5 Falta uma coisa só, e é um *smoking gun* em potencial
+
+**A data em que Anderson Torres assumiu a SSP-DF não está no codebook** — procurada nos 82 registros, ausente. Se o **decisor mudou** entre a posse e o dia 8, a diferença de tratamento deixa de ser propensão institucional, que é o terreno de H2, e passa a ser decisão de quem entrou, que é onde o STF a localizou. Se não mudou, **H2 fica mais forte**. Custa uma página de fonte primária, e não a afirmei porque não a li.
+
+### 27.6 Duas citações erradas, achadas na própria redação — e a checagem que entrou no ciclo
+
+Na primeira versão do documento, duas páginas foram escritas por **dedução de vizinhança** em vez de leitura: PT-20 saiu como "CPMI: 631" quando o registro ancora **576**, e PT-21 como "CPMI: 640" quando ancora **576, 374, 637, 643**. As duas eram plausíveis — vizinhas das certas, na seção certa do relatório — e é por isso que passariam.
+
+`scripts/conferir_hipoteses.py` passou a conferir **toda citação de página do documento contra o `fonte_pagina` do registro**, exigindo também que o **documento-fonte** bata: "Cappelli: 679" é reprovado quando a página é do CPMI. **11 citações conferidas**, e há prova negativa por injeção dos dois defeitos. **Entrou como passo 8/8 do ciclo.**
+
+---
+
 ## Ordem de ataque — revista em 30/09/2026
 
 **A decisão que ordena tudo continua sendo a de 16/08/2026: a redação é o último item.** A ordem anterior a essa data tratava o aparato como suficiente e punha a escrita como ponto de virada; esta trata o conjunto de dados do processo político como pré-requisito.
@@ -1117,6 +1159,7 @@ A **cúpula da segurança do DF** (SSP-DF, SOI, GSI) entra como `CONTESTADA`, co
 | 9 | ~~Triar por pertinência~~ — 43 na camada A, cobrindo 31 dos 82 registros | 23 | ✅ 29/09 |
 | 18 | ~~Acrescentar à mão o cânone de mecanismos~~ — DoC, Tarrow e McCarthy & Zald | 23.6 | ✅ 29/09 |
 | 21 | ~~Desenhar o campo multiorganizacional~~ — 22 entidades, e o modelo não acomoda 5 delas; no ciclo como passo 7/7 | 26 | ✅ 30/09 |
+| 20 | ~~Escrever as hipóteses rivais de PT-28~~ — H3 e H5 refutadas com evidência já ancorada; H2 sobrevive e relocaliza o ônus | 27 | ✅ 30/09 |
 
 ### Abertas
 
@@ -1125,10 +1168,10 @@ A **cúpula da segurança do DF** (SSP-DF, SOI, GSI) entra como `CONTESTADA`, co
 | 10 | Acrescentar a literatura clássica brasileira (livros, sem DOI) — as sínteses têm **zero** referências sobre o Brasil | 11.4, 22.4 | — |
 | 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **27 pendentes**: 6 lidos, 7 com ficha da 1ª leva, 3 impedidos. Números gerados por `localizar_camada_a.py`, não digitados | 23, 24, 25 | acesso institucional |
 | 19 | **Decidir o nome de `mecanismo_causal`** e aplicar as sete cobranças da seção 4 do documento 09 | 24.6, 25.1, 25.2 | decisão sua |
-| 20 | **Escrever a hipótese rival de PT-28** — seletividade por recurso e conexão política, e sobrecarga analítica | 25.6 | decisão sua |
 | 13 | Decidir o "Conclusão dos julgamentos" de PT-61 contra as 459 em instrução | 21.4 | decisão sua |
 | 14 | Codificar a camada $T_{-1}$ conjuntural — 7 registros ainda contextuais | 11.3, 19 | 9 |
 | 15 | Higiene do repositório: licença, remoto, `.backup_pre_lula/`, ponteiros no JSON | 20, 21.4 | decisão sua |
+| 22 | **Datar a posse de Anderson Torres na SSP-DF** — é o que discrimina H1 de H2 em PT-28; uma página de fonte primária | 27.5 | — |
 | 16 | **Redação do artigo** | 3, 4, 5, 6, 9, 10 | tudo acima |
 
 **Nenhuma pendência de dado depende de você** — isso vale desde 16/08 e continua valendo: as 82 linhas do codebook estão ancoradas, e o que falta é bibliográfico ou é decisão. **As nove abertas dividem-se em três naturezas:** decisões suas (13, 15, 19, 20), leitura ou coleta bibliográfica (10, 17), trabalho de codificação (14, 21) e a redação (16). **Só a 16 depende de todas as outras**; nenhuma das oito primeiras bloqueia outra, e as quatro decisões podem ser tomadas durante a escrita.

@@ -19,7 +19,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Corpus documental | **20 PDFs / 6.819 p. de fonte documental** + o acórdão do TSE em HTML + 6 matérias arquivadas contra link rot + 7 sínteses. Com a bibliografia teórica do eixo 05, são 24 PDFs / 7.501 p. **Três peças sem camada de texto**, declaradas |
 | Figuras | SVG da cadeia causal e cronologia navegável — **realinhadas ao codebook em 25/09**, 82 registros cobertos. São a única parte do aparato escrita à mão |
 | Relatório de pesquisa | `reports/process_tracing_8jan_relatorio.md` — §3.2 corrigido em 11/09; §2.1 e a tabela da Etapa 2 em 25/09; "Próximos passos" reescrita na mesma data. Agora tem checagem no ciclo |
-| Verificação | `bash scripts/ciclo.sh` — seis passos: dois geradores e quatro checagens, todas com código de saída ≠ 0 em caso de falha |
+| Verificação | `bash scripts/ciclo.sh` — **sete passos**: dois geradores e cinco checagens, todas com código de saída ≠ 0 em caso de falha |
 | Controle de versão | git desde 20/09/2026, sem remoto configurado |
 | Eixo bibliográfico Lava Jato | 20 referências, 18 com DOI confirmado |
 | Sínteses LeapSpace (não citáveis) | **411 DOIs verificados e triados em 29/09** — 408 existem, os 3 restantes com DOI correto registrado; **35 na camada A**, 65 em B, 308 fora. **Zero referências sobre o Brasil, e o cânone de mecanismos ausente** — itens 22 e 23 |
@@ -1026,6 +1026,62 @@ Onze verbetes lidos integralmente, registro em [`projeto-pos-doc/10_VERBETES-ENC
 
 ---
 
+## 26. O campo multiorganizacional — desenhado, e ele contraria a proposição do modelo — ✅ 30/09/2026
+
+Tarefa 21, cobrança do verbete de Klandermans. `scripts/desenhar_campo.py` emite [`data/processed/campo_multiorganizacional.csv`](../data/processed/campo_multiorganizacional.csv) e **entrou no ciclo como passo 7/7**.
+
+### 26.1 A primeira decisão: o campo é de alguém
+
+Klandermans define campo como "the total possible number of organizations with which **the movement organization** might establish specific links". **A definição é possessiva, e o codebook não é.** Ele codifica o episódio: em T-1 Conjuntural o `ator_grupo` é majoritariamente tribunal, em T0 são manifestantes e batalhões, em T+1 são STF, PF, PGR e Congresso. Somar `ator_grupo` daria a lista de quem agiu, não um campo.
+
+Por isso o script **declara o foco** — a coalizão bolsonarista desafiante — e classifica tudo em relação a ele. Trocado o foco, o campo se inverte, e é o que o modelo prevê.
+
+### 26.2 Como a classificação se sustenta
+
+Cada entidade entra com os registros que a sustentam **e o campo do codebook em que ela aparece**; `verificar()` exige que o fragmento declarado ocorra literalmente ali. Digitar classificação sem lastro aborta a execução — mesmo mecanismo de `triar_dois.py`, e há **prova negativa por injeção de defeito** no autoteste. **22 entidades**, todas com lastro.
+
+| Sistema | Entidades |
+|:--|--:|
+| ALIANÇA — provê recurso ou oportunidade | 8 |
+| INDIFERENTE — infraestrutura ou informação, sem partido | 2 |
+| CONFLITO — drena recurso ou restringe oportunidade | 7 |
+| **CINDIDA** — nos dois sistemas ao mesmo tempo | 2 |
+| **MIGRANTE** — mudou de sistema, com data | 2 |
+| **CONTESTADA** — a classificação é o objeto da disputa | 1 |
+
+### 26.3 O que o caso cobra do modelo
+
+Klandermans prevê fronteira fluida: "organizations that try to keep aloof may choose **or be forced** to take sides. **Coalitions can fall apart and former allies can become opponents.**" Os dois **MIGRANTES** são exatamente isso, com data: **Anderson Torres, MJ e PRF** (aparelho operando a favor em PT-08A e PT-08C, alvo em PT-42, com prisão de Vasques em 09/08/2023) e **Ibaneis Rocha / GDF** (demite o aliado em PT-42, torna-se alvo da intervenção em PT-45, pede desculpas em PT-47).
+
+**Mas as duas CINDIDAS são outra coisa, e é o achado.** A **PMDF** está nos dois sistemas no mesmo dia, dividida por escalão: o comando produz o dispositivo inferior (PT-18, PT-19B), os pelotões de choque são a linha invadida (PT-28, PT-31, PT-32), a corporação dispersa (PT-41) e desmonta o acampamento (PT-52) — **sete registros**. As **Forças Armadas** ocupam cinco posições em cinco registros: destinatária do apelo (PT-12), presente na certificação (PT-13), anfitriã do acampamento no SMU (PT-20), reforço tático contra a invasão (PT-43) e executora da desmobilização (PT-52).
+
+**Isso não é fronteira fluida: é a unidade de análise que não se sustenta.** O modelo toma a organização como unidade; aqui ela se divide por escalão e por hora do dia. É cobrança do caso ao modelo, e fica registrada como tal.
+
+### 26.4 A proposição do ciclo não se confirma como enunciada
+
+Klandermans: "a proporção do campo engajada expande ou contrai conforme os ciclos de protesto. No **pico**, organizações inicialmente indiferentes tomam partido; na **queda**, organizações se desligam."
+
+| Fase | Entidades ativas | do sistema de ALIANÇA | do lado estatal | Registros |
+|:--|--:|--:|--:|--:|
+| T-1 Conjuntural | 4 | 2 | 2 | 18 |
+| T-1 Operacional | **17** | **8** | 7 | 24 |
+| T0 | 7 | **0** | 7 | 23 |
+| T+1 | 9 | **0** | 9 | 17 |
+
+**O pico do campo é T-1 Operacional, não T0.** E a quebra por sistema mostra por quê: **em T0 o lado do foco desaparece como organização** — o codebook registra ali multidão, marcha e manifestantes radicalizados — **enquanto o lado estatal se individua em batalhões e pelotões**. Zero entidades de aliança ativas em T0 e em T+1.
+
+**Isso conversa diretamente com PT-19**, que afirma "coordenação sem comando centralizado visível": o campo organizacional opera na preparação e não aparece na execução. **Mas é confundido com a codificação**, porque T0 foi codificado com massa no lugar de organização. Se a contração é propriedade do episódio ou do registro é **pergunta aberta**, e não a resolvi.
+
+### 26.5 Declarado fora do campo
+
+**Apoiadores de Trump (PT-08).** Campo é vínculo organizacional; PT-08 é difusão por laço indireto, e o laço direto — Bannon, na frase única de Castañeda & Jenks — não está demonstrado em nenhuma fonte lida. A ausência é declarada no script, não omitida.
+
+### 26.6 O caso contestado, que não decidi
+
+A **cúpula da segurança do DF** (SSP-DF, SOI, GSI) entra como `CONTESTADA`, com as duas leituras escritas na própria linha: **(a)** omissão deliberada, que é o que o codebook afirma — dispositivo inferior ao da posse em regime e em planejamento, nenhuma elevação após os alertas; **(b)** seletividade estrutural, a hipótese rival de *Policing protest*. **A classificação dessa entidade é o objeto da disputa do artigo, e o script não pode resolvê-la** — é a tarefa 20.
+
+---
+
 ## Ordem de ataque — revista em 30/09/2026
 
 **A decisão que ordena tudo continua sendo a de 16/08/2026: a redação é o último item.** A ordem anterior a essa data tratava o aparato como suficiente e punha a escrita como ponto de virada; esta trata o conjunto de dados do processo político como pré-requisito.
@@ -1060,6 +1116,7 @@ Onze verbetes lidos integralmente, registro em [`projeto-pos-doc/10_VERBETES-ENC
 | — | ~~Verificar os DOIs das sínteses~~ — são **411**, não 325; 3 inexistentes e 1 DOI real no autor errado, **os quatro já com identificador correto** | 22, 22.6 | ✅ 29/09 |
 | 9 | ~~Triar por pertinência~~ — 43 na camada A, cobrindo 31 dos 82 registros | 23 | ✅ 29/09 |
 | 18 | ~~Acrescentar à mão o cânone de mecanismos~~ — DoC, Tarrow e McCarthy & Zald | 23.6 | ✅ 29/09 |
+| 21 | ~~Desenhar o campo multiorganizacional~~ — 22 entidades, e o modelo não acomoda 5 delas; no ciclo como passo 7/7 | 26 | ✅ 30/09 |
 
 ### Abertas
 
@@ -1069,7 +1126,6 @@ Onze verbetes lidos integralmente, registro em [`projeto-pos-doc/10_VERBETES-ENC
 | 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **27 pendentes**: 6 lidos, 7 com ficha da 1ª leva, 3 impedidos. Números gerados por `localizar_camada_a.py`, não digitados | 23, 24, 25 | acesso institucional |
 | 19 | **Decidir o nome de `mecanismo_causal`** e aplicar as sete cobranças da seção 4 do documento 09 | 24.6, 25.1, 25.2 | decisão sua |
 | 20 | **Escrever a hipótese rival de PT-28** — seletividade por recurso e conexão política, e sobrecarga analítica | 25.6 | decisão sua |
-| 21 | Desenhar o **campo multiorganizacional** (sistemas de aliança e de conflito) — os atores estão no codebook, o campo não existe como peça | 25.6 | — |
 | 13 | Decidir o "Conclusão dos julgamentos" de PT-61 contra as 459 em instrução | 21.4 | decisão sua |
 | 14 | Codificar a camada $T_{-1}$ conjuntural — 7 registros ainda contextuais | 11.3, 19 | 9 |
 | 15 | Higiene do repositório: licença, remoto, `.backup_pre_lula/`, ponteiros no JSON | 20, 21.4 | decisão sua |

@@ -1008,6 +1008,22 @@ A enciclopédia imprime no rodapé de cada verbete `10.1002/9781405198431.wbespm
 
 **Corpus:** 25 PDFs / 9.139 páginas; **documental inalterado em 20 / 6.819**, que é o que a separação de 29/09 existe para garantir.
 
+### 25.6 Os sete verbetes restantes, lidos na fonte — e PT-28 ganha hipótese rival
+
+Onze verbetes lidos integralmente, registro em [`projeto-pos-doc/10_VERBETES-ENCICLOPEDIA.md`](../projeto-pos-doc/10_VERBETES-ENCICLOPEDIA.md). Os sete DOIs foram testados: **todos resolvem, e nos sete o título e a autoria casam** com o que a obra imprime.
+
+**O achado de maior consequência é sobre PT-28.** *Policing protest* (della Porta & Reiter) afirma que "a intervenção da polícia em caso de violação da lei **não é automática**: muitas violações menores são toleradas para evitar desordem maior", e que "a polícia goza de **amplas margens de discricionariedade**". E fornece **duas hipóteses rivais em sua melhor versão**: (i) a **seletividade estrutural** — "police repression is more likely to be directed against groups that are **poorer in material resources as well as in political connections**" —, que **prediz policiamento brando** para um acampamento financiado e com aval de autoridade, sem precisar de conivência; e (ii) a **sobrecarga analítica** da inteligência, que a literatura nomeia como falha conhecida. **PT-28 continua correto na forma — condição necessária é *hoop test* —, mas está substantivamente desprotegido enquanto não enfrentar a rival.**
+
+**O segundo achado é diretamente citável.** *Repertoires of contention* lista, entre as formas do repertório **moderno** com genealogia em Tilly: "strikes, electoral rallies, public meetings, petitions, marches, insurrection, and **the invasion of legislative bodies**". A invasão do legislativo é **forma catalogada**, não inovação — e o repertório moderno é definido por "addressing **seats and symbols of the national public power**".
+
+**E a triagem errou esse verbete**, que está na camada **B** por metadado. É o argumento do passo 3 com caso concreto: metadado não diz o que está escrito na página. Não movi a linha da planilha — a promoção é decisão sua, e apagar o juízo original apagaria a evidência do limite.
+
+**Mais três:** *Diffusion and scale shift* separa laço **direto** de **indireto**, e a evidência do projeto (Sri Lanka na CPMI p. 614) sustenta **atribuição de similaridade por laço indireto**, não o laço direto de Bannon, que segue não demonstrado; declara ainda a lacuna de "como a estrutura de oportunidade de um nível **impele** o *scale shift* — se barrados num nível, movem-se para outro", que é o caso. *Political opportunity* dá a formulação do episódio — "**closed opportunities might be perceived as open by the activists**" — e cobra que o projeto declare quais dimensões usa e o que elas explicam, sob pena de herdar a crítica do conceito como "**trash can**". *Demobilization* abre dizendo que "**we know little about the mechanisms governing the decline** of social movements", nomeia **sentença de prisão** como causa de desmobilização individual involuntária — o que dá lastro teórico a PT-61 — e declara a lacuna dos **efeitos do fracasso** de um movimento sobre outros, que é a camada T+1.
+
+**As lacunas declaradas pelo campo passaram de cinco a oito**, consolidadas na seção 9 do documento 10. **Não reescrevi a §3.1 de `08`**, que traz cinco.
+
+**E as estruturas de mobilização ficaram resolvidas pela obra canônica**, não pela enciclopédia — que não tem verbete disso. *Dynamics of Contention*, p. 45 impressa, conferida na fonte: "**Mobilizing structures can be preexisting or created in the course of contention but in any case need to be appropriated as vehicles of struggle.**" PT-12A e PT-21 tratam de estruturas **preexistentes apropriadas**, o que na obra é *social appropriation*, não criação de estrutura.
+
 ---
 
 ## Ordem de ataque — revista em 29/09/2026
@@ -1050,6 +1066,8 @@ A enciclopédia imprime no rodapé de cada verbete `10.1002/9781405198431.wbespm
 | 10 | Acrescentar a literatura clássica brasileira (livros, sem DOI) — as sínteses têm **zero** referências sobre o Brasil | 11.4, 22.4 | — |
 | 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **6 lidos**, 7 já tinham ficha, 1 sem camada de texto; a enciclopédia destravou 7 verbetes, e ~26 seguem atrás de muro | 23, 24, 25 | acesso institucional |
 | 19 | **Decidir o nome de `mecanismo_causal`** e aplicar as sete cobranças da seção 4 do documento 09 | 24.6, 25.1, 25.2 | decisão sua |
+| 20 | **Escrever a hipótese rival de PT-28** — seletividade por recurso e conexão política, e sobrecarga analítica | 25.6 | decisão sua |
+| 21 | Desenhar o **campo multiorganizacional** (sistemas de aliança e de conflito) — os atores estão no codebook, o campo não existe como peça | 25.6 | — |
 | — | ~~Acrescentar à mão o cânone de mecanismos~~ — os dois livros no eixo 05, McCarthy & Zald como referência; cobertura de A sobe a 31 dos 82 | 23.6 | ✅ 29/09 |
 | 13 | Decidir o "Conclusão dos julgamentos" de PT-61 contra as 459 em instrução | 21.4 | decisão sua |
 | 14 | Codificar a camada $T_{-1}$ conjuntural — 7 registros ainda contextuais | 11.3, 19 | 9 |

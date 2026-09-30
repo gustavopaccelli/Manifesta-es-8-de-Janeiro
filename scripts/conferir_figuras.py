@@ -3,9 +3,17 @@
 """
 As duas figuras ainda dizem o que o codebook diz?
 
-`reports/figures/` guarda a única parte do aparato que **não** é gerada a partir
-do JSON: a cronologia interativa carrega uma cópia manual dos 82 registros
-dentro do `<script>`, e o SVG é rótulo por rótulo, em coordenadas absolutas.
+**ATENÇÃO AO ESCOPO: este script confere DUAS peças nomeadas, não a pasta.**
+Desde 30/09/2026 `reports/figures/` tem dois regimes. As figuras da cronologia
+— `figura_cronologia_8jan.svg` e `cronologia_8jan_interativa.html` — são feitas
+à mão e é por isso que existem as checagens abaixo. As do campo
+multiorganizacional são **geradas** por `scripts/desenhar_campo.py` a partir do
+mesmo dicionário que alimenta a planilha, e não passam por aqui: peça gerada
+não envelhece, e conferi-la seria conferir o gerador contra si mesmo.
+
+A cronologia é a parte do aparato que **não** é gerada a partir do JSON: a
+interativa carrega uma cópia manual dos 82 registros dentro do `<script>`, e o
+SVG é rótulo por rótulo, em coordenadas absolutas.
 Reescrevê-los como geradores seria o certo; enquanto não são, nada no ciclo
 percebe que envelheceram.
 

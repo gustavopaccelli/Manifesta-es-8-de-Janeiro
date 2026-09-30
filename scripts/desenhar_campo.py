@@ -304,8 +304,8 @@ FORA = [
 SISTEMAS = ["ALIANÇA", "INDIFERENTE", "CONFLITO", "CINDIDA", "MIGRANTE", "CONTESTADA"]
 
 
-SVG_OUT = RAIZ / "scripts/campo_multiorganizacional.svg"
-HTML_OUT = RAIZ / "scripts/campo_multiorganizacional.html"
+SVG_OUT = RAIZ / "reports/figures/figura_campo_multiorganizacional.svg"
+HTML_OUT = RAIZ / "reports/figures/campo_multiorganizacional.html"
 
 
 def carregar():
@@ -318,9 +318,11 @@ def carregar():
 # O DESENHO
 # =============================================================================
 # Sai do mesmo `ENTIDADES` que a planilha, e por isso não pode divergir dela:
-# é a regra de 25/09/2026 aplicada a figura. `conferir_figuras.py` cobre
-# `reports/figures/`; estas duas peças ficam em `scripts/` por pedido do
-# pesquisador, e a garantia aqui é a origem, não a checagem.
+# é a regra de 25/09/2026 aplicada a figura. Vive em `reports/figures/`, ao lado
+# da cronologia — mas por razão oposta: aquela é conferida por
+# `conferir_figuras.py` porque foi feita à mão, e esta dispensa conferência
+# porque é gerada. A pasta passou a ter os dois regimes, e o cabeçalho de
+# `conferir_figuras.py` diz qual peça está em qual.
 #
 # A composição é o argumento: em cima, a dicotomia do modelo — aliança à
 # esquerda, conflito à direita, fronteira no meio. Embaixo, atravessando a

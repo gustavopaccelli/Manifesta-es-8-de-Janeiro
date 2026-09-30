@@ -193,18 +193,19 @@ def main():
                 print("    ! {}: {}".format(arq.name, str(exc)[:60]))
         print("  {} PDFs, {} páginas no total — dos quais {} PDFs / {} p. são fonte documental"
               .format(n, total, doc_n, doc_total))
-        # Linha de base: 29/09/2026, quando o cânone de mecanismos entrou no eixo 05
-        # (Dynamics of Contention e O poder em movimento). Atualize junto com o
-        # inventário sempre que uma peça entrar.
+        # Linha de base: 30/09/2026, quando a Wiley-Blackwell Encyclopedia entrou no
+        # eixo 05, somando-se ao cânone de 29/09 (Dynamics of Contention e O poder em
+        # movimento). Atualize junto com o inventário sempre que uma peça entrar.
         #
         # As DUAS contagens existem porque a de cima conflaciona. O dossiê de
         # candidatura dizia "22 documentos oficiais que somam 6.928 páginas", e dois
         # daqueles 22 eram livros de método do eixo 05. Documento oficial é o que
-        # ancora registro; livro de teoria não ancora nenhum.
-        if (n, total, doc_n, doc_total) != (24, 7501, 20, 6819):
+        # ancora registro; livro de teoria não ancora nenhum. **A documental não muda
+        # quando entra teoria** — é o que esta separação garante.
+        if (n, total, doc_n, doc_total) != (25, 9139, 20, 6819):
             avisos.append("corpus mudou: {} PDFs / {} páginas, {} documentais / {} p. "
-                          "(era 24 / 7501, 20 / 6819)".format(n, total, doc_n, doc_total))
-            print("  ~ corpus difere da linha de base de 29/09/2026 (24 PDFs / 7501 p., "
+                          "(era 25 / 9139, 20 / 6819)".format(n, total, doc_n, doc_total))
+            print("  ~ corpus difere da linha de base de 30/09/2026 (25 PDFs / 9139 p., "
                   "20 documentais / 6819 p.)")
         else:
             print("  OK — bate com o inventário")

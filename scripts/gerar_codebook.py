@@ -215,6 +215,18 @@ PROCEDENCIA["Fontes/05_Bibliografia-teorica/TARROW_O-poder-em-movimento_Vozes-20
     "movement'. 162 p. no PDF, digitalização em duas páginas por folha e SEM camada de "
     "texto — conferir_paginas.py não o lê. Não ancora registro nenhum.",
 )
+# Acrescentada em 30/09/2026 pelo pesquisador. É a obra-contêiner de boa parte dos
+# 411 DOIs das sínteses: 434 verbetes com DOI próprio, o que a torna a fonte que
+# permite ler na fonte os verbetes da camada A sem passar por muro de editor.
+PROCEDENCIA["Fontes/05_Bibliografia-teorica/SNOW-DELLA-PORTA-KLANDERMANS-McADAM_Wiley-Blackwell-Encyclopedia-of-Social-and-Political-Movements_2013.pdf"] = (
+    "Snow, della Porta, Klandermans e McAdam (orgs.) — Wiley-Blackwell", "bibliografia",
+    "SNOW, D. A.; DELLA PORTA, D.; KLANDERMANS, B.; McADAM, D. (Orgs.). 'The "
+    "Wiley-Blackwell Encyclopedia of Social and Political Movements'. Oxford: Blackwell, "
+    "2013. 1.638 p. no PDF, com camada de texto; 434 verbetes com DOI impresso no rodapé. "
+    "ATENÇÃO AO IDENTIFICADOR: o rodapé imprime o prefixo do ISBN impresso "
+    "(10.1002/9781405198431.wbespmNNN), que retorna 404 no CrossRef; o registrado é o do "
+    "ISBN eletrônico (10.1002/9780470674871.wbespmNNN). Não ancora registro nenhum.",
+)
 
 # Antecedente teórico do projeto. Não ancora registro nenhum e não é fonte de
 # evento: é a obra de que a pesquisa parte, incorporada em 19/08/2026.

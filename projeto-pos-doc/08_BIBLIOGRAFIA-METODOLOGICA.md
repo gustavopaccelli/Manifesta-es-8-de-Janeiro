@@ -144,7 +144,7 @@ Aparecem nas sínteses e interessam ao projeto, mas **não passaram por verifica
 
 As sínteses trazem, cada uma, uma seção em que a própria literatura declara onde está travada. É aí que o projeto se posiciona melhor — não contra achados, mas contra lacunas que o campo reconhece ter.
 
-### 3.1 Quatro lacunas declaradas pelo campo, e a resposta do projeto
+### 3.1 Cinco lacunas declaradas pelo campo, e a resposta do projeto
 
 **Primeira: padrões de reprodutibilidade em rastreamento documental.** A síntese de *process tracing* lista, entre as pesquisas ainda necessárias, "expandir o trabalho sobre análise de casos negativos, evidência ausente e padrões de reprodutibilidade para rastreamento arquivístico e por entrevistas". É uma lacuna de infraestrutura, não de teoria — e é exatamente o que o projeto já construiu antes de começar: 82 sub-eventos em 16 campos, 60 ancorados em fonte primária com página e transcrição literal, estatuto probatório classificado registro a registro, verificação automatizada a cada alteração e depósito previsto em repositório aberto com DOI. **Este é o ponto em que o projeto não acompanha o campo: ele o precede.** Vale dizê-lo assim na entrevista.
 
@@ -153,6 +153,10 @@ As sínteses trazem, cada uma, uma seção em que a própria literatura declara 
 **Terceira: oportunidade como estrutura, percepção ou realização relacional.** A síntese de oportunidades registra que a controvérsia mais aguda do campo é se oportunidades são estruturas objetivas, percepções subjetivas ou algo produzido na própria interação. O projeto tem uma posição empírica sobre isso, e ela é forte: no 8 de janeiro a oportunidade discursiva é **verificável em documento** — a convocação codificada, os anúncios pagos, o precedente nomeado pelos organizadores. Não é uma percepção reconstruída em entrevista *a posteriori*; é registro. O caso permite testar a tese relacional com evidência que a maior parte da literatura não tem.
 
 **Quarta: instrumentos que atravessem o híbrido on-line/off-line.** Tanto a síntese de oportunidades quanto a de estruturas de mobilização registram que falta instrumental unificado para arenas híbridas, e que não há métrica padronizada para comparar estruturas de mobilização. A camada organizacional do projeto faz precisamente essa junção numa só cadeia causal: convocação digital, financiamento por Pix, fretamento de ônibus, comboios, acampamento. Digital e material no mesmo grafo, não em capítulos separados.
+
+**Quinta, acrescentada em 30/09/2026 — e é a única lida na fonte, não em síntese.** O verbete *Resource mobilization theory* da *Wiley-Blackwell Encyclopedia* (EDWARDS & GILLHAM, 2013), lido integralmente, encerra a seção de direções promissoras assim: "**Resource demobilization or reduction of resources to SMOs also needs further investigation, as it is currently assumed that the processes for mobilizing resources are reversed when SMOs fail.**"
+
+**PT-52 é um caso dessa lacuna, e não do que ela supõe.** A desmobilização de recursos no 8 de Janeiro não foi o inverso da mobilização: foi **remoção coercitiva por autoridade estatal**, com data, decisão judicial e ordem de desocupação — "eliminada a base logística, o ciclo de rua se encerra materialmente, não por convencimento, mas por remoção da capacidade de agir". O campo, em 2013, dizia **presumir** que o processo se inverte quando a organização fracassa; o caso mostra um desfecho em que ele não se inverte, é interrompido de fora. É a contribuição mais nítida que o material oferece à teoria de mobilização de recursos, e a que menos depende de leitura adicional — o verbete está no corpus e a evidência de PT-52 está ancorada.
 
 ### 3.2 Onde o projeto tensiona com a produção
 

@@ -976,6 +976,40 @@ O codebook faz as duas coisas que essa frase separa: chama de `mecanismo_causal`
 
 ---
 
+## 25. A enciclopédia entra, e com ela a decisão sobre "mecanismo" fica instruída — 🔶 30/09/2026
+
+O pesquisador acrescentou ao eixo 05 a **Wiley-Blackwell Encyclopedia of Social and Political Movements** (Snow, della Porta, Klandermans e McAdam, orgs., 2013; 1.638 p., com camada de texto). **É a obra-contêiner de boa parte dos 411 DOIs das sínteses** — 434 verbetes com DOI próprio —, e por isso destrava a tarefa 17: sete verbetes da camada A e adjacências deixam de depender de assinatura de editor.
+
+**Quatro verbetes lidos integralmente na fonte:** *Mechanisms* (Tarrow), *Protest cycles and waves* (della Porta), *Resource mobilization theory* (Edwards & Gillham) e *Critical mass theory* (Oliver). O resultado está em [`projeto-pos-doc/09_CONCEITO-MECANISMO.md`](../projeto-pos-doc/09_CONCEITO-MECANISMO.md), com a tabela de **quatorze concepções de mecanismo causal** e o preço de cada saída.
+
+**Só um dos quatro estava nos 411, e isso confirma o buraco do item 23.2.** *Mechanisms* (`wbespm127`) é o item 39-40 da camada A. Os outros três — **protest cycles, resource mobilization e critical mass** — **não aparecem em nenhuma das sete sínteses**, embora duas delas se chamem `Protest_cycle_LeapSpace.docx` e `Mobilization_structures_LeapSpace.docx`. As sínteses citam 411 DOIs e não citam o verbete de referência do próprio conceito que dá nome ao arquivo. **A leitura na fonte, portanto, subiu de 5 para 6 dos 43** — o `.pub2` de 2022 é revisão posterior e não está neste volume.
+
+### 25.1 A decisão do item 24.6 deixou de ser aposta
+
+A objeção era: o codebook nomeia mecanismo em episódio único e o testa por condição necessária, enquanto Mayntz e *Dynamics of Contention* exigem recorrência. **A saída apareceu no manual brasileiro que já estava no corpus** — CUNHA & ARAÚJO (2018, Enap), que registra: os estudos de caso causais diferem "ao nível no qual a relação causal opera (regularidade... ou **singularidade, num único caso**)", e **Beach e Pedersen (2016) admitem a singularidade**, indicando o *process tracing* como o método próprio dela. É a mesma tradição de que o projeto já toma o aparato de teste. **Boudon deixa de ser necessário.**
+
+E Tarrow acrescenta o critério que falta: **processo é "larger-scale causal event that contains sequences or combinations of mechanisms"**, e "distinguishing mechanisms from processes is essential". Vários dos 82 registros são processos — PT-62 entre eles. Com o esquema `X [A → B → C] → Y` de Machamer via Beach & Pedersen, a triagem é aplicável registro a registro.
+
+### 25.2 Sete cobranças ao codebook, todas decisão sua
+
+PT-03 (certificação sem autoridade), a tensão PT-19/PT-29 (limiar pressupõe ausência de coordenação, e PT-19 afirma coordenação), PT-34 (massa crítica são os organizadores, não a multidão), PT-12A (tipificável nas quatro vias de acesso a recurso), PT-28 (**confirmado**, agora com âncora em português), PT-62 (processo, não mecanismo) e a atribuição dos quatro testes. Detalhadas na seção 4 do documento 09.
+
+### 25.3 Uma lacuna do campo que PT-52 responde
+
+O verbete de RMT encerra dizendo que "**resource demobilization** ... needs further investigation, as it is **currently assumed** that the processes for mobilizing resources are reversed when SMOs fail". PT-52 é um caso em que não se inverte: é interrompido de fora, por remoção coercitiva com decisão judicial. Entrou como quinta lacuna em `08_BIBLIOGRAFIA-METODOLOGICA.md` §3.1.
+
+### 25.4 O identificador impresso na obra não existe
+
+A enciclopédia imprime no rodapé de cada verbete `10.1002/9781405198431.wbespmNNN` — prefixo do ISBN impresso. Os quatro testados retornam **404 no CrossRef**. O que resolve é `10.1002/9780470674871.wbespmNNN`, o do ISBN eletrônico, **que é o que as sínteses automatizadas declaram**. É a primeira vez que a fonte impressa erra o identificador e a síntese acerta. **A regra deixa de ser "confiar na fonte contra a síntese" e passa a ser "testar o identificador, qualquer que seja a origem".** Registrado na `PROCEDENCIA` da obra.
+
+### 25.5 Duas obras que já estavam no corpus e não constavam do inventário com referência completa
+
+`Livro_Process tracing.pdf` é **CUNHA & ARAÚJO (2018)**, Enap — a referência metodológica em português, com o esquema de mecanismo e a definição de condição necessária que PT-28 usa. `process-tracing-research-designs-a-practical-guide.pdf` é **RICKS & LIU (2018)**, *PS*, seção *The Teacher*, a mesma de Collier (2011). Ambas passaram a constar de `Fontes/LEIA-ME_fontes.md` com referência completa. **Nenhuma das duas obras de Beach e Pedersen está no corpus** — nem a de 2013, nem a de 2016, nem a 2ª edição de 2019 que o projeto cita.
+
+**Corpus:** 25 PDFs / 9.139 páginas; **documental inalterado em 20 / 6.819**, que é o que a separação de 29/09 existe para garantir.
+
+---
+
 ## Ordem de ataque — revista em 29/09/2026
 
 **A decisão que ordena tudo continua sendo a de 16/08/2026: a redação é o último item.** A ordem anterior a essa data tratava o aparato como suficiente e punha a escrita como ponto de virada; esta trata o conjunto de dados do processo político como pré-requisito.
@@ -1014,7 +1048,8 @@ O codebook faz as duas coisas que essa frase separa: chama de `mecanismo_causal`
 | # | Tarefa | Item desta agenda | Depende de |
 |:--|:--|:--|:--|
 | 10 | Acrescentar a literatura clássica brasileira (livros, sem DOI) — as sínteses têm **zero** referências sobre o Brasil | 11.4, 22.4 | — |
-| 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **5 lidos**, 7 já tinham ficha, 1 sem camada de texto, **29 fechados por muro de acesso** | 23, 24 | acesso institucional |
+| 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **6 lidos**, 7 já tinham ficha, 1 sem camada de texto; a enciclopédia destravou 7 verbetes, e ~26 seguem atrás de muro | 23, 24, 25 | acesso institucional |
+| 19 | **Decidir o nome de `mecanismo_causal`** e aplicar as sete cobranças da seção 4 do documento 09 | 24.6, 25.1, 25.2 | decisão sua |
 | — | ~~Acrescentar à mão o cânone de mecanismos~~ — os dois livros no eixo 05, McCarthy & Zald como referência; cobertura de A sobe a 31 dos 82 | 23.6 | ✅ 29/09 |
 | 13 | Decidir o "Conclusão dos julgamentos" de PT-61 contra as 459 em instrução | 21.4 | decisão sua |
 | 14 | Codificar a camada $T_{-1}$ conjuntural — 7 registros ainda contextuais | 11.3, 19 | 9 |

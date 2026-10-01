@@ -120,6 +120,20 @@ O anexo 14 do relatório do interventor é nomeado: "**Atos de nomeação e publ
 
 **O que limita H6, e vem das mesmas fontes.** Torres não era novato no cargo: ocupou-o por 27 meses, entre 2019 e 2021, e chegou de 21 meses como Ministro da Justiça com ascendência sobre PF e PRF. A CPMI extrai daí a inferência de que ele "era **uma das autoridades públicas que mais possuía conhecimento** a respeito das ameaças golpistas". **Logo H6, na sua melhor versão, não é "gente nova errou": é "a troca do escalão de planejamento desorganizou a cadeia"** — afirmação sobre os substituídos, não sobre o secretário.
 
+#### A descontinuidade é demonstrável, e a CPMI a documenta em três lugares
+
+| Fonte | Página | O que diz |
+|:--|:--|:--|
+| CPMI | 834 | Fernando de Sousa Oliveira, "então secretário-executivo da Secretaria de Segurança Pública do Distrito Federal, afirmou que **não houve qualquer repasse de informações ou transição no período**" |
+| CPMI | 1070 | O coronel Naime, em licença, declara que "**todos os grupos referentes à Polícia Militar, dos quais fazia parte, estavam silenciados** durante o período de sua licença", e que o seu substituto "negou ter recebido qualquer informação, **porque não participava dos grupos 'Perímetro', 'Difusão' ou 'Sisp'**" |
+| CPMI | 1069 | O mesmo depoente conclui: "**ou as agências de informação não passaram o conhecimento da situação para o secretário nem para o comandante-geral, ou esses receberam a informação e ficaram inertes**" |
+
+**As duas primeiras linhas sustentam H6 e são fortes:** não houve transição, e os substitutos estavam **fora dos canais** em que a informação circulava. Isso não é sobrecarga analítica — é descontinuidade estrutural, e casa com as oito férias de comando já registradas em PT-18 via Cappelli, conclusão H.
+
+**A terceira é a disjunção que o conjunto de hipóteses tem de resolver**, enunciada por testemunha e não pelo pesquisador — e o projeto já tem a resposta para um dos ramos: **PT-19B refuta o primeiro**, porque a informação chegou, por canal dedicado criado para isso.
+
+**O que a descontinuidade demonstrada ainda não decide.** Ela mostra que a cadeia estava rompida; não mostra se o rompimento foi **produzido** ou **herdado**. É a diferença entre H6 e H1, e quem a decide são os atos de 02-03/01 — quem assinou as exonerações, e com que justificativa.
+
 ### 6.3 Um segundo achado, que nenhuma das seis hipóteses previa
 
 O relatório da CPMI (p. 874) registra que **Fernando de Sousa Oliveira, que estava no comando da SSP-DF no dia 8**, tinha o nome ainda **não publicado no DODF** — era "apenas um '**funcionário de fato**' na Administração Pública do GDF" —, disse não ter sido apresentado formalmente "sequer ao governador, muito menos aos comandantes das forças", e teve a **nomeação oficial publicada só em 9 de janeiro**, início das férias formais de Torres.

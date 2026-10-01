@@ -1154,6 +1154,17 @@ CPMI p. 874: **Fernando de Sousa Oliveira, no comando da SSP-DF no dia 8, tinha 
 
 Conferido: `02/01/2023`, `DODF`, `funcionário de fato` e `férias formais` têm **zero ocorrências** nos 82 registros. **Não os inseri** — criar registro ou estender PT-18 é decisão de codificação. O que já estava: o pré-aval da Força Nacional na véspera está em PT-40, ancorado na CPMI p. 678; a p. 874 só acrescenta o detalhe do Ofício 5/2023 das 18h23 e da Portaria 272 das 19h11, cujo efeito "dependeria da efetiva solicitação de Ibaneis Rocha". **É refinamento de registro existente, e está dito assim porque este projeto já apresentou uma vez como novo o que ele próprio já registrava.**
 
+
+### 28.5 A 24 avançou dentro do corpus — a descontinuidade é demonstrável
+
+O anexo 14 **não está no PDF**: o relatório lista quinze anexos na p. 61 e termina na 62. Mas a CPMI documenta a descontinuidade em três lugares, e eles bastam para firmar H6 como hipótese séria:
+
+- **p. 834** — Fernando de Sousa Oliveira "afirmou que **não houve qualquer repasse de informações ou transição no período**";
+- **p. 1070** — o coronel Naime declara que "**todos os grupos referentes à Polícia Militar [...] estavam silenciados** durante o período de sua licença", e que o seu substituto "negou ter recebido qualquer informação, **porque não participava dos grupos 'Perímetro', 'Difusão' ou 'Sisp'**";
+- **p. 1069** — o mesmo depoente formula a disjunção que o conjunto de hipóteses tem de resolver: "**ou as agências de informação não passaram o conhecimento [...], ou esses receberam a informação e ficaram inertes**" — e **PT-19B já refuta o primeiro ramo**.
+
+**Logo a cadeia estava rompida, e isso é fato de fonte primária.** O que falta decidir é se o rompimento foi **produzido** ou **herdado** — diferença entre H1 e H6 —, e quem a decide são os atos de 02-03/01. **A via é o DODF**, que é público, e não o anexo.
+
 ---
 
 ## Ordem de ataque — revista em 30/09/2026
@@ -1205,10 +1216,10 @@ Conferido: `02/01/2023`, `DODF`, `funcionário de fato` e `férias formais` têm
 | 14 | Codificar a camada $T_{-1}$ conjuntural — 7 registros ainda contextuais | 11.3, 19 | 9 |
 | 15 | Higiene do repositório: licença, remoto, `.backup_pre_lula/`, ponteiros no JSON | 20, 21.4 | decisão sua |
 | 23 | **Codificar os três fatos novos** — troca de titularidade (02/01), do escalão de planejamento (03/01) e o defeito de autoridade formal de Fernando de Sousa Oliveira | 28.4 | decisão de codificação |
-| 24 | Obter o **anexo 14** do Relatório do Interventor — atos de nomeação e exoneração de 02-03/01; decide H6 | 28.3 | coleta |
+| 24 | **Obter os atos de 02-03/01/2023** — quem assinou as exonerações do escalão de planejamento da SSP-DF. O anexo 14 do Relatório do Interventor **não está no PDF do corpus**, que lista 15 anexos e não os traz; a via direta é o **DODF de 02 e 03/01/2023**, que é público. Decide H6 contra H1 | 28.3, 28.5 | coleta |
 | 16 | **Redação do artigo** | 3, 4, 5, 6, 9, 10 | tudo acima |
 
-**Nenhuma pendência de dado depende de você** — isso valia desde 16/08 e **deixou de valer em 30/09**: a tarefa 22 é coleta de fonte primária, a primeira desde agosto. Fora ela, as 82 linhas seguem ancoradas e o que falta é bibliográfico ou é decisão.
+**Nenhuma pendência de dado depende de você** — isso valia desde 16/08 e **deixou de valer em 30/09**: a tarefa **24** é coleta de fonte primária, a primeira desde agosto. Fora ela, as 82 linhas seguem ancoradas e o que falta é bibliográfico, codificação ou decisão.
 
 **As nove abertas, por natureza:** decisões suas (**13, 15, 19**), leitura ou coleta bibliográfica (**10, 17**), coleta de fonte primária (**24**), codificação (**14, 23**) e a redação (**16**). **Só a 16 depende das outras**; nenhuma das oito primeiras bloqueia outra, e as três decisões podem ser tomadas durante a escrita.
 

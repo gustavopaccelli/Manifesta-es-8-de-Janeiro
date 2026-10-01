@@ -3,7 +3,7 @@
     "projeto": "Manifestações 8 de Janeiro — Process Tracing e Análise de Eventos de Protesto (PEA)",
     "marco_teorico": "Teoria do Processo Político (McAdam, Tarrow, Tilly); Process Tracing (Beach & Pedersen, 2019); Framing (Snow & Benford, 2000)",
     "data_geracao": "2026-08-12",
-    "n_subeventos": 82,
+    "n_subeventos": 83,
     "fases": {
       "T-1 Conjuntural": "Antecedentes histórico-conjunturais (2013–2022) e contexto macro/internacional",
       "T-1 Operacional": "Articulação logística pós-eleição (30/10/2022 – 08/01/2023, 10h)",
@@ -688,6 +688,24 @@
       "status_verificacao": "Confirmado em duas fontes primárias independentes — CPMI, p. 646 e 711; e Relatório do Interventor Federal, conclusões D (p. 55) e H (p. 57). ACRÉSCIMOS: não havia previsão de acionamento para quatro unidades especializadas, e oito comandos estavam de férias, inclusive o do Batalhão de Choque.",
       "status_classe": "Confirmado em fonte primária",
       "nota_auditoria": "vínculo corrigido em 16/08/2026 — CPMI p. 646 e 711; corroboração e agravamento em Cappelli, conclusões D e H."
+    },
+    {
+      "id": "PT-18A",
+      "data_hora": "02–03/01/2023",
+      "fase": "T-1 Operacional",
+      "ator_grupo": "Governo do Distrito Federal — Ibaneis Rocha (nomeante); Anderson Gustavo Torres (empossado na SSP-DF); ocupantes substituídos dos cargos centrais de planejamento e coordenação da SSP-DF; Fernando de Sousa Oliveira (secretário-executivo, sem nomeação publicada)",
+      "repertorio_acao": "Atos administrativos de nomeação e exoneração: em 02/01, publicada a nomeação de Anderson Torres para a SSP-DF, no dia seguinte ao da posse presidencial; em 03/01, exoneração e troca dos ocupantes de cargos centrais na estrutura de planejamento e coordenação da pasta",
+      "target_alvo": "Estrutura de planejamento e coordenação da SSP-DF",
+      "framing_narrativa": "—",
+      "resposta_estatal": "Troca completa do escalão de planejamento da segurança pública do DF a cinco dias do evento, sem repasse de informações nem transição",
+      "mecanismo_causal": "Descontinuidade administrativa do escalão de planejamento — e é o registro que permite separar duas leituras de PT-18 e PT-28 que até aqui se confundiam. A posse presidencial de 01/01 foi planejada e executada por uma cúpula; o dia 8, por outra, empossada no dia seguinte à posse, com os cargos centrais de planejamento e coordenação substituídos em 03/01. CONSEQUÊNCIA PARA A COMPARAÇÃO INTERNA: o contraste entre POI/prontidão na posse e PAI/sobreaviso no dia 8 (PT-18) NÃO opõe dois tratamentos da mesma cúpula, e isso enfraquece a hipótese rival de seletividade estrutural do policiamento, que explica propensão institucional estável. Em contrapartida, abre a hipótese rival de descontinuidade administrativa, que alcança o que a seletividade não alcançava — PAI em lugar de POI, sobreaviso em lugar de prontidão, ausência de previsão de acionamento — e que é a conclusão do próprio interventor federal, para quem a troca 'afetou o planejamento e a execução das ações'. O QUE LIMITA ESSA LEITURA: Torres não era novato no cargo, que ocupara por 27 meses entre 2019 e 2021, e chegava de 21 meses como Ministro da Justiça; a CPMI conclui daí que era 'uma das autoridades públicas que mais possuía conhecimento a respeito das ameaças golpistas'. A hipótese de descontinuidade, portanto, é afirmação sobre os substituídos, não sobre o secretário. DEFEITO DE AUTORIDADE FORMAL: quem comandava a SSP-DF no dia 8 não tinha nomeação publicada no DODF, não foi apresentado formalmente ao governador nem aos comandantes das forças, e teve o ato publicado só em 09/01 — logo exercia de fato um cargo sobre cujos comandos não tinha autoridade formal. O QUE ESTE REGISTRO NÃO DECIDE: se o rompimento da cadeia foi produzido ou herdado. Isso depende dos atos de 02-03/01 — quem assinou as exonerações e com que justificativa —, que o anexo 14 do Relatório do Interventor nomeia e o corpus não traz. Ver projeto-pos-doc/11_HIPOTESES-RIVAIS-PT-28.md.",
+      "fonte_trecho": "Relatório do Interventor Federal (Cappelli), item 4.9, p. 35: 'No dia 02 de janeiro de 2023, após a realização do evento da posse, foi publicada a nomeação do Delegado da Polícia Federal Anderson Gustavo Torres para atuar como Secretário de Estado de Segurança Pública do Distrito Federal.' Conclusões, p. 58: 'no dia 03/01/2023, houve a exoneração e troca de ocupantes de cargos centrais na estrutura de planejamento e coordenação'. Relatório Final da CPMI, item 6.3.12, p. 831: 'No dia 2 de janeiro de 2023, assumiu o posto de Secretário de Segurança Pública do Distrito Federal'. CPMI, p. 834, sobre a ausência de transição: 'afirmou que não houve qualquer repasse de informações ou transição no período'.",
+      "fonte_url": "https://www12.senado.leg.br/noticias/arquivos/2023/10/17/relatorio-cpmi-versao-consolidada_231017_100010.pdf",
+      "fonte_local": "Fontes/03_T0_8-de-janeiro/GDF-SSP_Relatorio-Interventor-Federal_Cappelli_2023-01-27.pdf; Fontes/04_T+1_Resposta-institucional/CPMI-8-de-Janeiro_Relatorio-Final_2023-10-17.pdf",
+      "fonte_pagina": "Cappelli: 35, 58 | CPMI: 831, 834",
+      "status_verificacao": "Confirmado em duas fontes primárias independentes — Relatório do Interventor Federal, item 4.9 (p. 35) e conclusões (p. 58); Relatório Final da CPMI, itens 6.3.12 (p. 831) e 6.3.21 (p. 834). O anexo 14 do Relatório do Interventor ('Atos de nomeação e publicação de férias de Anderson Gustavo Torres, e demais autoridades') NÃO integra o PDF do corpus, que lista quinze anexos e não os traz.",
+      "status_classe": "Confirmado em fonte primária",
+      "nota_auditoria": "Registro criado em 30/09/2026 pela tarefa 22 da agenda. Os três fatos — troca de titularidade em 02/01, troca do escalão de planejamento em 03/01 e o defeito de autoridade formal de Fernando de Sousa Oliveira — tinham ZERO ocorrências nos 82 registros anteriores. Codificado como registro próprio, e não como acréscimo a PT-18, porque são atos administrativos com data e autoria próprias, anteriores ao rebaixamento do dispositivo: somá-los a PT-18 misturaria duas decisões distintas num só registro, que é o defeito que a auditoria de 16/08/2026 corrigiu em sete casos."
     },
     {
       "id": "PT-19",

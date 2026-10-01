@@ -12,12 +12,12 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 
 | Frente | Estado |
 |:--|:--|
-| Codebook | **82 sub-eventos × 16 campos** — JSON, CSV e XLSX gerados de uma fonte única, com zero divergências |
+| Codebook | **83 sub-eventos × 16 campos** — JSON, CSV e XLSX gerados de uma fonte única, com zero divergências |
 | Ancoragem documental | **74 registros** com arquivo local vinculado · 68 com página ou seção atribuída · 0 referências quebradas |
 | Classes de verificação | **60 em fonte primária** · 14 confirmados por outra via · 7 contextuais · **0 a verificar** · 1 inferência declarada |
 | Caderno de evidências | **49 registros** com página e transcrição literal |
 | Corpus documental | **20 PDFs / 6.819 p. de fonte documental** + o acórdão do TSE em HTML + 6 matérias arquivadas contra link rot + 7 sínteses. Com a bibliografia teórica do eixo 05, são 24 PDFs / 7.501 p. **Três peças sem camada de texto**, declaradas |
-| Figuras | SVG da cadeia causal e cronologia navegável — **realinhadas ao codebook em 25/09**, 82 registros cobertos. São a única parte do aparato escrita à mão |
+| Figuras | SVG da cadeia causal e cronologia navegável — **realinhadas ao codebook em 25/09**, 83 registros cobertos. São a única parte do aparato escrita à mão |
 | Relatório de pesquisa | `reports/process_tracing_8jan_relatorio.md` — §3.2 corrigido em 11/09; §2.1 e a tabela da Etapa 2 em 25/09; "Próximos passos" reescrita na mesma data. Agora tem checagem no ciclo |
 | Verificação | `bash scripts/ciclo.sh` — **oito passos**: dois geradores e seis checagens, todas com código de saída ≠ 0 em caso de falha |
 | Controle de versão | git desde 20/09/2026, sem remoto configurado |
@@ -1165,6 +1165,36 @@ O anexo 14 **não está no PDF**: o relatório lista quinze anexos na p. 61 e te
 
 **Logo a cadeia estava rompida, e isso é fato de fonte primária.** O que falta decidir é se o rompimento foi **produzido** ou **herdado** — diferença entre H1 e H6 —, e quem a decide são os atos de 02-03/01. **A via é o DODF**, que é público, e não o anexo.
 
+
+## 29. PT-18A entra, e o codebook vai a 83 — ✅ 30/09/2026
+
+Tarefa 23. Os três fatos da tarefa 22 viraram **registro próprio**, não acréscimo a PT-18: são atos administrativos com data e autoria próprias, anteriores ao rebaixamento do dispositivo, e somá-los a PT-18 misturaria duas decisões num só registro — o defeito que a auditoria de 16/08/2026 corrigiu em sete casos.
+
+**PT-18A · 02–03/01/2023 · T-1 Operacional · Confirmado em fonte primária**, em duas fontes independentes: Relatório do Interventor Federal (p. 35 e 58) e Relatório Final da CPMI (p. 831 e 834). As quatro transcrições foram localizadas nas páginas citadas por `conferir_paginas.py`.
+
+### 29.1 O custo que um registro novo cobra, e que vale registrar
+
+Acrescentar uma linha ao JSON **quebrou o ciclo em quatro pontos**, e todos na parte escrita à mão:
+
+| Onde | O que falhou |
+|:--|:--|
+| `cronologia_8jan_interativa.html` | PT-18A ausente da cópia manual dos registros no `<script>` |
+| as duas figuras | ambas declaravam "82 sub-eventos" |
+| `reports/process_tracing_8jan_relatorio.md` | cabeçalho com 82, e a tabela da Etapa 2 sem a linha |
+| `verificar_integridade.py` | mensagem com "82 x 16" fixo no texto — passava na checagem e mentia na saída |
+
+**Nada disso é acidente: é a confirmação da regra de 25/09.** As peças geradas — CSV, XLSX, auditoria, planilha e figura do campo — absorveram o registro novo sem intervenção. **As escritas à mão exigiram quatro edições, e o ciclo as cobrou uma a uma.** É o argumento mais limpo que o projeto já produziu a favor de transformar a cronologia em peça gerada.
+
+### 29.2 Uma asserção afrouxada, de propósito
+
+`desenhar_campo.py` exigia `len(regs) == 82`. Virou piso (`>= 82`), com a razão escrita no código: prender o número ali obrigaria a editar o script a cada registro novo. **Quem garante a aderência ao codebook não é a contagem — é `verificar()`**, que exige que cada fragmento declarado ocorra no campo declarado do registro.
+
+### 29.3 Denominadores antigos que ficam como estão
+
+Os itens 23 e 25 desta agenda dizem "31 dos 82 registros" ao descrever a cobertura da camada A. **São afirmações datadas de 29–30/09 e ficam**: reescrevê-las apagaria o estado em que a triagem foi feita. O denominador corrente é 83.
+
+---
+
 ---
 
 ## Ordem de ataque — revista em 30/09/2026
@@ -1204,6 +1234,7 @@ O anexo 14 **não está no PDF**: o relatório lista quinze anexos na p. 61 e te
 | 21 | ~~Desenhar o campo multiorganizacional~~ — 22 entidades, e o modelo não acomoda 5 delas; no ciclo como passo 7/7 | 26 | ✅ 30/09 |
 | 20 | ~~Escrever as hipóteses rivais de PT-28~~ — H3 e H5 refutadas com evidência já ancorada; H2 sobrevive e relocaliza o ônus | 27 | ✅ 30/09 |
 | 22 | ~~Datar a posse de Torres na SSP-DF~~ — 02/01/2023, em duas fontes; H2 enfraquece e entra H6 | 28 | ✅ 30/09 |
+| 23 | ~~Codificar os três fatos novos~~ — **PT-18A**, registro próprio; codebook a 83 | 29 | ✅ 30/09 |
 
 ### Abertas
 
@@ -1215,13 +1246,12 @@ O anexo 14 **não está no PDF**: o relatório lista quinze anexos na p. 61 e te
 | 13 | Decidir o "Conclusão dos julgamentos" de PT-61 contra as 459 em instrução | 21.4 | decisão sua |
 | 14 | Codificar a camada $T_{-1}$ conjuntural — 7 registros ainda contextuais | 11.3, 19 | 9 |
 | 15 | Higiene do repositório: licença, remoto, `.backup_pre_lula/`, ponteiros no JSON | 20, 21.4 | decisão sua |
-| 23 | **Codificar os três fatos novos** — troca de titularidade (02/01), do escalão de planejamento (03/01) e o defeito de autoridade formal de Fernando de Sousa Oliveira | 28.4 | decisão de codificação |
 | 24 | **Obter os atos de 02-03/01/2023** — quem assinou as exonerações do escalão de planejamento da SSP-DF. O anexo 14 do Relatório do Interventor **não está no PDF do corpus**, que lista 15 anexos e não os traz; a via direta é o **DODF de 02 e 03/01/2023**, que é público. Decide H6 contra H1 | 28.3, 28.5 | coleta |
 | 16 | **Redação do artigo** | 3, 4, 5, 6, 9, 10 | tudo acima |
 
 **Nenhuma pendência de dado depende de você** — isso valia desde 16/08 e **deixou de valer em 30/09**: a tarefa **24** é coleta de fonte primária, a primeira desde agosto. Fora ela, as 82 linhas seguem ancoradas e o que falta é bibliográfico, codificação ou decisão.
 
-**As nove abertas, por natureza:** decisões suas (**13, 15, 19**), leitura ou coleta bibliográfica (**10, 17**), coleta de fonte primária (**24**), codificação (**14, 23**) e a redação (**16**). **Só a 16 depende das outras**; nenhuma das oito primeiras bloqueia outra, e as três decisões podem ser tomadas durante a escrita.
+**As oito abertas, por natureza:** decisões suas (**13, 15, 19**), leitura ou coleta bibliográfica (**10, 17**), coleta de fonte primária (**24**), codificação (**14**) e a redação (**16**). **Só a 16 depende das outras**; nenhuma das oito primeiras bloqueia outra, e as três decisões podem ser tomadas durante a escrita.
 
 > **Esta tabela envelheceu duas vezes em dois dias** — em 29/09 trazia a 18 duplicada e três números à mão na 17; em 30/09 manteve 20 e 21 como abertas depois de fechadas e não contou a 22. É a mesma lição de 25/09 batendo na peça que existe para registrar a lição. **A contagem da 17 já é gerada; o resto desta tabela não é**, e é a próxima candidata a virar script.
 

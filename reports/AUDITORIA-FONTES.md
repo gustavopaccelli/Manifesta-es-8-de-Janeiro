@@ -2,15 +2,15 @@
 
 Gerado por `scripts/gerar_auditoria.py` em **30/09/2026**. Não editar à mão: rode o script de novo depois de cada rodada de coleta.
 
-Esta peça responde a uma pergunta única e a responde para os 82 registros: **onde está, exatamente, o documento que sustenta esta afirmação, e em que página?** É o que um parecerista cobra quando desconfia de um ponto da cronologia, e é o que separa uma cronologia auditável de uma cronologia asserida.
+Esta peça responde a uma pergunta única e a responde para os 83 registros: **onde está, exatamente, o documento que sustenta esta afirmação, e em que página?** É o que um parecerista cobra quando desconfia de um ponto da cronologia, e é o que separa uma cronologia auditável de uma cronologia asserida.
 
 ## Painel
 
 | Indicador | Valor |
 |:--|--:|
-| Sub-eventos no codebook | 82 |
-| Com documento local vinculado | **74** |
-| Com página atribuída ao documento | 68 |
+| Sub-eventos no codebook | 83 |
+| Com documento local vinculado | **75** |
+| Com página atribuída ao documento | 69 |
 | Sem âncora local, por natureza do registro | 7 |
 | Sem âncora local, dependentes de coleta | **1** |
 | Referências quebradas | 0 |
@@ -20,7 +20,7 @@ Esta peça responde a uma pergunta única e a responde para os 82 registros: **o
 
 | Classe | N |
 |:--|--:|
-| Confirmado em fonte primária | 60 |
+| Confirmado em fonte primária | 61 |
 | Confirmado | 14 |
 | Contextual | 7 |
 | Inferência do analista | 1 |
@@ -41,6 +41,7 @@ Nenhum dado analítico foi tocado — nenhum fato, mecanismo causal ou enquadram
 | **PT-15** | ACRESCENTADO EM 25/09/2026: a p. 274, que o status_verificacao já nomeava, entrou no fonte_pagina. Divergência achada por scripts/varrer_fonte_pagina.py. |
 | **PT-17** | PT-17 RESOLVIDO em 16/08/2026. Busca exaustiva em todo o PDF da CPMI (985 páginas além da seção já checada) localizou a confirmação da data de saída de Bolsonaro para os EUA em p. 612, no texto analítico da comissão sobre a 'estratégia do caos'. Reclassificado de 'A verificar' para 'Confirmado em fonte primária'. |
 | **PT-18** | vínculo corrigido em 16/08/2026 — CPMI p. 646 e 711; corroboração e agravamento em Cappelli, conclusões D e H. |
+| **PT-18A** | Registro criado em 30/09/2026 pela tarefa 22 da agenda. Os três fatos — troca de titularidade em 02/01, troca do escalão de planejamento em 03/01 e o defeito de autoridade formal de Fernando de Sousa Oliveira — tinham ZERO ocorrências nos 82 registros anteriores. Codificado como registro próprio, e não como acréscimo a PT-18, porque são atos administrativos com data e autoria próprias, anteriores ao rebaixamento do dispositivo: somá-los a PT-18 misturaria duas decisões distintas num só registro, que é o defeito que a auditoria de 16/08/2026 corrigiu em sete casos. |
 | **PT-21** | Acrescentada em 16/08/2026 a contagem de transporte da ANTT difundida pela Abin (105 ônibus, ~3.900 passageiros), que estava ausente do codebook e sustenta a faixa de magnitude de PT-34. |
 | **PT-27** | vínculo corrigido em 16/08/2026 — CPMI p. 651 cita textualmente o relatório do interventor, hoje disponível em local. |
 | **PT-28** | vínculo corrigido em 16/08/2026 — fonte_trecho cita 'Relatório Final da CPMI, p. 657' e o texto foi localizado nessa página, mas fonte_local apontava para o acórdão da AP 2668. Erro anterior a esta rodada, corrigido em 16/08/2026. ANCORAS ACRESCENTADAS EM 25/09/2026: o registro citava por extenso o Relatório do Interventor Federal (conclusão G, p. 57) e o acórdão da AP 2668 (p. 495 e 497) sem vincular nenhum dos dois. As três páginas foram lidas antes da correção. O vínculo da AP 2668 sumira na própria correção de 16/08/2026, que trocou o arquivo errado pelo certo em vez de somar os dois. Achado por scripts/varrer_fonte_pagina.py. |
@@ -90,8 +91,8 @@ Além disso, **sete registros citavam dois documentos e declaravam apenas um**. 
 
 | Documento | Registros que ancora | Páginas | Natureza |
 |:--|--:|--:|:--|
-| CPMI | 52 | 1333 | oficial |
-| Cappelli | 5 | 62 | espelho |
+| CPMI | 53 | 1333 | oficial |
+| Cappelli | 6 | 62 | espelho |
 | AP 2668 | 5 | 1991 | oficial |
 | PGR | 3 | 272 | oficial |
 | Balanço 2026 | 3 | 15 | oficial |
@@ -111,9 +112,9 @@ Além disso, **sete registros citavam dois documentos e declaravam apenas um**. 
 | Pet 14.129 | 1 | 17 | oficial |
 | EP 169-Domiciliar | 1 | 40 | oficial |
 
-O Relatório Final da CPMI ancora sozinho **52 dos 74 registros vinculados**. Isso é uma dependência a declarar no artigo: a espinha dorsal de $T_0$ vem de uma peça de investigação parlamentar, com posição política própria e votos em separado. Que a CPMI afirme algo não é o mesmo que o fato estar estabelecido — advertência que já consta do `Caderno-de-evidencias/LEIA-ME.md` e que o artigo precisa repetir.
+O Relatório Final da CPMI ancora sozinho **53 dos 75 registros vinculados**. Isso é uma dependência a declarar no artigo: a espinha dorsal de $T_0$ vem de uma peça de investigação parlamentar, com posição política própria e votos em separado. Que a CPMI afirme algo não é o mesmo que o fato estar estabelecido — advertência que já consta do `Caderno-de-evidencias/LEIA-ME.md` e que o artigo precisa repetir.
 
-## Lista 1 — Registros ancorados (74)
+## Lista 1 — Registros ancorados (75)
 
 Cada um aponta arquivo e página. A numeração impressa do relatório da CPMI coincide com a paginação do PDF, então a conferência é direta: abrir o arquivo na página indicada.
 
@@ -145,6 +146,7 @@ Cada um aponta arquivo e página. A numeração impressa do relatório da CPMI c
 | PT-16 | CPMI | CPMI: 584, 269, 1031, 599 | Confirmado em fonte primária |
 | PT-17 | CPMI | CPMI: 507, 612 | Confirmado em fonte primária |
 | PT-18 | CPMI + Cappelli | CPMI: 646, 711 \| Cappelli: 55, 57 | Confirmado em fonte primária |
+| PT-18A | Cappelli + CPMI | Cappelli: 35, 58 \| CPMI: 831, 834 | Confirmado em fonte primária |
 | PT-19 | CPMI | CPMI: 614-625, 614, 620 | Confirmado em fonte primária |
 | PT-19A | NetLab | — | Confirmado |
 | PT-19B | AP 2668 | AP 2668: 495-496 | Confirmado em fonte primária |
@@ -234,7 +236,7 @@ Estas são as lacunas reais. Cada uma tem uma peça identificada e uma via de ob
 
 Três limites, declarados para que ninguém leia mais do que ela oferece.
 
-1. **Não confere, para todos os 82, se a página sustenta a afirmação.** A checagem estrutural verifica que o vínculo existe, que o arquivo está em disco e que a página pertence ao documento vinculado. A conferência do *conteúdo* contra o texto do PDF é feita **por amostra** — `scripts/conferir_paginas.py`, 12 registros por rodada, ou `--todos` para os 68 com página. A transcrição literal de 49 registros está no `Caderno-de-evidencias/`.
+1. **Não confere, para todos os 83, se a página sustenta a afirmação.** A checagem estrutural verifica que o vínculo existe, que o arquivo está em disco e que a página pertence ao documento vinculado. A conferência do *conteúdo* contra o texto do PDF é feita **por amostra** — `scripts/conferir_paginas.py`, 12 registros por rodada, ou `--todos` para os 69 com página. A transcrição literal de 49 registros está no `Caderno-de-evidencias/`.
 2. **Não avalia a qualidade da fonte.** Que um registro esteja ancorado no relatório Cappelli não o torna verdadeiro — torna-o rastreável. E o Cappelli, registre-se, é **espelho jornalístico**: traz identificação oficial mas não foi localizado em domínio oficial. Isso está declarado no inventário e precisa constar da nota de fontes do artigo.
 3. **Não resolve as ressalvas de proveniência.** A auditoria as classifica; não as fecha — quem as fecha é a rodada de conferência. As quatro que existiam foram fechadas em 16/08/2026: PT-34, a mais grave, com os "4 mil" retirados e substituídos por faixa ancorada em duas medições oficiais independentes (ver `docs/ESTIMATIVA-MULTIDAO-8JAN.md`); PT-12, com a cifra de "mais de 100 acampamentos" retirada; PT-17, com a data de saída localizada na CPMI, p. 612; e PT-52, com as 2.151 prisões em flagrante adotadas no lugar dos ~1.200 de imprensa. Cada fechamento está no `nota_auditoria` do próprio registro.
 

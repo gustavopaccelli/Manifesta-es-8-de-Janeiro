@@ -599,7 +599,11 @@ ORDEM_FASE = ["T-1 Conjuntural", "T-1 Operacional", "T0", "T+1"]
 
 def autoteste():
     por_id, regs = carregar()
-    assert len(regs) == 82, "o codebook tem 82 registros; achei {}".format(len(regs))
+    # Piso, não igualdade: o codebook cresce, e prender o número aqui obrigaria
+    # a editar este script a cada registro novo — a brittleness que o projeto
+    # combate. Quem garante a aderência ao codebook é verificar(), que exige
+    # que cada fragmento declarado ocorra no campo declarado do registro.
+    assert len(regs) >= 82, "o codebook encolheu: {} registros".format(len(regs))
 
     falhas = verificar(por_id)
     assert not falhas, "declaracoes sem lastro:\n  " + "\n  ".join(falhas)

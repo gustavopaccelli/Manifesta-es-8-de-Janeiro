@@ -85,7 +85,7 @@ def main():
     if div or not (len(eventos) == len(csv_rows) == len(xlsx_rows)):
         falhas.append("sincronia entre formatos ({} células)".format(div))
     else:
-        print("  OK — os três formatos são idênticos nos 82 x 16")
+        print("  OK — os três formatos são idênticos nos {} x 16".format(len(eventos)))
 
     # ------------------------------------------------------------------ 2 ---
     cabecalho(2, "INTEGRIDADE REFERENCIAL DOS CAMINHOS")

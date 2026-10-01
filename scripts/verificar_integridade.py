@@ -202,11 +202,11 @@ def main():
         # daqueles 22 eram livros de método do eixo 05. Documento oficial é o que
         # ancora registro; livro de teoria não ancora nenhum. **A documental não muda
         # quando entra teoria** — é o que esta separação garante.
-        if (n, total, doc_n, doc_total) != (25, 9139, 20, 6819):
+        if (n, total, doc_n, doc_total) != (27, 9271, 22, 6951):
             avisos.append("corpus mudou: {} PDFs / {} páginas, {} documentais / {} p. "
-                          "(era 25 / 9139, 20 / 6819)".format(n, total, doc_n, doc_total))
-            print("  ~ corpus difere da linha de base de 30/09/2026 (25 PDFs / 9139 p., "
-                  "20 documentais / 6819 p.)")
+                          "(era 27 / 9271, 22 / 6951)".format(n, total, doc_n, doc_total))
+            print("  ~ corpus difere da linha de base de 30/09/2026 (27 PDFs / 9271 p., "
+                  "22 documentais / 6951 p.)")
         else:
             print("  OK — bate com o inventário")
 

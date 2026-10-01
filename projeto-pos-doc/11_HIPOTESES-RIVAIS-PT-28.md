@@ -132,6 +132,12 @@ O anexo 14 do relatório do interventor é nomeado: "**Atos de nomeação e publ
 
 **A terceira é a disjunção que o conjunto de hipóteses tem de resolver**, enunciada por testemunha e não pelo pesquisador — e o projeto já tem a resposta para um dos ramos: **PT-19B refuta o primeiro**, porque a informação chegou, por canal dedicado criado para isso.
 
+#### 30/09/2026 — o Diário Oficial não confirma a troca do escalão
+
+Varridas todas as seções do DODF de **02 a 09/01/2023** — 1.740 matérias em 177 páginas —, os atos de pessoal da SSP-DF são **três**: a nomeação de Torres (decreto de 1º/01, DODF 001 p. 16), a troca do Chefe da **Ajudância de Ordens do Gabinete** (decreto de 03/01, DODF 003 p. 35) e a exoneração de Torres (decreto de 08/01). **A Ajudância de Ordens é o apoio pessoal do secretário, não a estrutura de planejamento e coordenação.**
+
+**H6 perde o seu elemento mais forte.** A troca em bloco do escalão de planejamento, que o interventor descreve e que explicaria o PAI e o sobreaviso sem recurso a dolo, **não está no Diário Oficial**. H6 não cai — a ausência de transição e os substitutos fora dos canais continuam de pé —, mas passa a depender de fatos de funcionamento, e não de atos publicados. As duas edições entraram no corpus e ancoram PT-18A.
+
 **O que a descontinuidade demonstrada ainda não decide.** Ela mostra que a cadeia estava rompida; não mostra se o rompimento foi **produzido** ou **herdado**. É a diferença entre H6 e H1, e quem a decide são os atos de 02-03/01 — quem assinou as exonerações, e com que justificativa.
 
 ### 6.3 Um segundo achado, que nenhuma das seis hipóteses previa

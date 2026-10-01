@@ -55,7 +55,7 @@ Nenhum dado analítico foi tocado — nenhum fato, mecanismo causal ou enquadram
 | **PT-58** | PT-58 elevado a fonte primária em 16/08/2026, com as decisões obtidas. CORREÇÃO DE FATO: a prisão preventiva de 22/11/2025 foi decretada na PETIÇÃO 14.129 — por coação no curso do processo, obstrução e art. 359-L —, convertendo cautelares de 17/7/2025, e NÃO na execução da AP 2668. São dois atos distintos: a preventiva contém risco de fuga em 22/11; o cumprimento da pena começa em 25/11. O registro anterior os tratava como um só. PÁGINAS CORRIGIDAS em 11/09/2026: o vínculo anterior ('Pet 14.129: 1 \| EP 169-Transferência: 1') apontava para a capa e a assinatura da peça; as transcrições foram localizadas página a página e o campo passou a 'Pet 14.129: 1, 7, 8, 10, 14, 16 \| EP 169-Transferência: 1'. |
 | **PT-59** | PT-59 elevado a fonte primária em 16/08/2026. A decisão traz precisão que o registro não tinha: a transferência é para SALA DE ESTADO MAIOR no 19º BPM, dentro da Papuda — prerrogativa preservada, não equiparação ao regime comum. A mesma decisão ordena a junta médica que dois meses depois fundamenta a domiciliar de PT-60. PÁGINAS CORRIGIDAS em 11/09/2026: o vínculo anterior ('EP 169-Transferência: 1, 36') apontava para a capa e a assinatura da peça; as transcrições foram localizadas página a página e o campo passou a 'EP 169-Transferência: 1, 33, 35, 36'. |
 | **PT-60** | PT-60 elevado a fonte primária em 16/08/2026. Duas precisões: a data é 24/03/2026, e a menção a 'prorrog. 03/07/2026' que constava do registro NÃO tem lastro no corpus — foi retirada do campo de data e marcada como não verificada. Acrescentado o antecedente relevante: o mesmo pedido fora INDEFERIDO em 2/3/2026 após perícia oficial, o que sustenta ler a concessão como modulação técnica e não como recuo. PÁGINAS CORRIGIDAS em 11/09/2026: o vínculo anterior ('EP 169-Domiciliar: 1, 40') apontava para a capa e a assinatura da peça; as transcrições foram localizadas página a página e o campo passou a 'EP 169-Domiciliar: 1, 35, 36, 37, 38, 40'. |
-| **PT-61** | PT-61 RESOLVIDO em 16/08/2026 com a chegada do documento primário, fornecido pelo pesquisador. Percorreu três estados no mesmo dia: 'Confirmado' (jornalístico) → rebaixado a 'A verificar' pela auditoria → 'Confirmado' por corroboração jornalística dupla → agora 'Confirmado em fonte primária'. A cifra de 1.402 pode ser citada como dado oficial, com página. |
+| **PT-61** | PT-61 RESOLVIDO em 16/08/2026 com a chegada do documento primário, fornecido pelo pesquisador. Percorreu três estados no mesmo dia: 'Confirmado' (jornalístico) → rebaixado a 'A verificar' pela auditoria → 'Confirmado' por corroboração jornalística dupla → agora 'Confirmado em fonte primária'. A cifra de 1.402 pode ser citada como dado oficial, com página. TAREFA 13 RESOLVIDA EM 30/09/2026. O campo resposta_estatal trazia 'Conclusão dos julgamentos do 8/1', e a agenda registrava que a expressão vinha do balanço. CONFERIDO NAS 15 PÁGINAS DO PDF, por dois extratores independentes (PyPDF2 e PyMuPDF): a expressão NÃO EXISTE no documento. A única ocorrência de 'julgamento' é '21 SESSÕES DE JULGAMENTO REALIZADAS NOS MESES DE SETEMBRO, OUTUBRO, NOVEMBRO E DEZEMBRO' (p. 14), que se refere aos quatro núcleos, não ao universo de 1.335 ações penais. A formulação era do codebook, não da fonte, e atribuí-la ao balanço era erro de procedência. Reformulada para o que a fonte sustenta — e o novo texto preserva a tensão que motivou a tarefa, em vez de escondê-la: 459 ações seguem em instrução. |
 
 ### Os três achados que motivaram as correções
 
@@ -105,6 +105,8 @@ Além disso, **sete registros citavam dois documentos e declaravam apenas um**. 
 | HC 164.493 | 1 | 441 | oficial |
 | HC 193.726-2 | 1 | 182 | oficial |
 | HC 193.726 | 1 | 264 | oficial |
+| DODF 001 | 1 | 66 | oficial |
+| DODF 003 | 1 | 66 | oficial |
 | NetLab | 1 |  | transcrição |
 | Livro STF 2023 | 1 | 210 | oficial |
 | Manchetômetro | 1 | 16 | laboratório |
@@ -146,7 +148,7 @@ Cada um aponta arquivo e página. A numeração impressa do relatório da CPMI c
 | PT-16 | CPMI | CPMI: 584, 269, 1031, 599 | Confirmado em fonte primária |
 | PT-17 | CPMI | CPMI: 507, 612 | Confirmado em fonte primária |
 | PT-18 | CPMI + Cappelli | CPMI: 646, 711 \| Cappelli: 55, 57 | Confirmado em fonte primária |
-| PT-18A | Cappelli + CPMI | Cappelli: 35, 58 \| CPMI: 831, 834 | Confirmado em fonte primária |
+| PT-18A | Cappelli + CPMI + DODF 001 + DODF 003 | Cappelli: 35, 58 \| CPMI: 831, 834 \| DODF 001: 16 \| DODF 003: 35 | Confirmado em fonte primária |
 | PT-19 | CPMI | CPMI: 614-625, 614, 620 | Confirmado em fonte primária |
 | PT-19A | NetLab | — | Confirmado |
 | PT-19B | AP 2668 | AP 2668: 495-496 | Confirmado em fonte primária |

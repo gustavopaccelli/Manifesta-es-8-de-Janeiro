@@ -199,6 +199,23 @@ for _nome, _dois in [("Process_tracing", 77), ("Causal_mechanisms_in_social_scie
         "casa com o do DOI. Mapa de leitura, nunca citação.".format(_dois),
     )
 
+# Diário Oficial do DF, coletado em 30/09/2026 pela tarefa 24: são a fonte dos
+# atos que o anexo 14 do Relatório do Interventor apenas compila, e entraram
+# porque a varredura do DODF contrariou a descrição do interventor.
+PROCEDENCIA["Fontes/02_T-1_Articulacao/DODF-001_Decreto-01-01-2023_Nomeacao-Torres-SSPDF_2023-01-02.pdf"] = (
+    "Diário Oficial do Distrito Federal — portal oficial dodf.df.gov.br", "oficial",
+    "DODF nº 001, de 02/01/2023, 66 p. Seção II, p. 16: decreto de 1º/01/2023 que exonera "
+    "Julio Danilo Souza Ferreira e nomeia Anderson Gustavo Torres secretário de Segurança "
+    "Pública do DF, assinado por Ibaneis Rocha. Ancora PT-18A.",
+)
+PROCEDENCIA["Fontes/02_T-1_Articulacao/DODF-003_Decreto-03-01-2023_Ajudancia-de-Ordens-SSPDF_2023-01-04.pdf"] = (
+    "Diário Oficial do Distrito Federal — portal oficial dodf.df.gov.br", "oficial",
+    "DODF nº 003, de 04/01/2023, 66 p. Seção II, p. 35: decreto de 03/01/2023, ÚNICO ato de "
+    "pessoal da SSP-DF publicado naquele dia — troca do Chefe da Ajudância de Ordens do "
+    "Gabinete, que é apoio pessoal do secretário e não a estrutura de planejamento. Ancora a "
+    "divergência registrada em PT-18A.",
+)
+
 # Cânone de mecanismos, acrescentado à mão em 29/09/2026: a triagem dos DOIs das
 # sínteses (item 23 da agenda) mostrou que as obras de que o codebook toma o
 # vocabulário — certificação, difusão, repertório, limiar — não estavam no corpus.

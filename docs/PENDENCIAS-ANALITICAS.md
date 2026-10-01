@@ -1195,6 +1195,39 @@ Os itens 23 e 25 desta agenda dizem "31 dos 82 registros" ao descrever a cobertu
 
 ---
 
+
+## 30. Tarefas 24 e 13 — o Diário Oficial contraria o interventor, e uma expressão não estava na fonte — ✅ 30/09/2026
+
+### 30.1 Tarefa 24: a varredura do DODF
+
+Portal oficial `dodf.df.gov.br`, 02 a 09/01/2023, **todas as seções, 1.740 matérias em 177 páginas**. Atos de pessoal da SSP-DF encontrados: **três**.
+
+| Publicado | Decreto de | Ato |
+|:--|:--|:--|
+| 02/01 (DODF 001, p. 16) | 1º/01/2023 | Exonera **Julio Danilo Souza Ferreira**; nomeia **Anderson Gustavo Torres** secretário — assina **Ibaneis Rocha** |
+| 04/01 (DODF 003, p. 35) | 03/01/2023 | Exonera o Maj **Jadson Barros de Lacerda** de Chefe da **Ajudância de Ordens do Gabinete**; nomeia a Maj **Gizela Lucy Teixeira Barros** |
+| 09/01 | 08/01/2023 | **Exonera Anderson Gustavo Torres** — Ibaneis Rocha |
+
+**O achado é negativo, e é o que importa.** O Relatório do Interventor afirma que em 03/01 "houve a exoneração e troca de ocupantes de **cargos centrais na estrutura de planejamento e coordenação** da SSPDF". O Diário Oficial registra, naquele decreto, **um único ato: a Ajudância de Ordens do Gabinete** — que é o apoio pessoal do secretário, não a estrutura de planejamento.
+
+**Consequência para H6.** A troca em bloco do escalão de planejamento era o melhor apoio empírico da hipótese de descontinuidade administrativa. **Ela não se confirma no Diário Oficial.** H6 não cai — a ausência de transição (CPMI p. 834) e os substitutos fora dos canais (p. 1070) continuam de pé —, mas perde o seu elemento mais forte, e passa a depender de fatos de funcionamento, não de atos publicados.
+
+**Ressalvas da varredura, declaradas no próprio registro:** o filtro exigiu a expressão literal "Segurança Pública do Distrito Federal", de modo que um ato nomeando apenas a subsecretaria escaparia — mas as buscas por "Operações Integradas", "Subsecretaria de Inteligência" e pelos nomes de Fernando de Sousa Oliveira e Marília Ferreira de Alencar também devolveram zero em 02 e 03/01; e edições extras fora da rota consultada não foram cobertas.
+
+As duas edições entraram no corpus com `PROCEDENCIA` declarada. **Corpus: 27 PDFs / 9.271 páginas, 22 documentais / 6.951** — a primeira vez desde agosto que a contagem documental sobe.
+
+### 30.2 Tarefa 13: a expressão não estava no balanço
+
+PT-61 trazia **"Conclusão dos julgamentos do 8/1"** em `resposta_estatal`, e o item 21.4 desta agenda registrava que *"o balanço é do gabinete e usa a palavra; o codebook a reproduz"*.
+
+**Conferido nas 15 páginas do PDF, por dois extratores independentes — PyPDF2 e PyMuPDF: a expressão não existe no documento.** A única ocorrência de "julgamento" é *"21 SESSÕES DE JULGAMENTO REALIZADAS NOS MESES DE SETEMBRO, OUTUBRO, NOVEMBRO E DEZEMBRO"* (p. 14), que se refere aos **quatro núcleos**, não ao universo de 1.335 ações penais.
+
+**A formulação era do codebook, e foi atribuída à fonte.** É o modo de falha do projeto numa variante nova: não a cifra no referente errado, mas **a frase própria com procedência emprestada**.
+
+Reformulado para o que a fonte sustenta: **"Balanço do ciclo repressivo-judicial: 21 sessões de julgamento dos quatro núcleos concluídas, com 459 das 1.335 ações penais ainda em instrução"** — e o novo texto **preserva a tensão** que motivou a tarefa, em vez de escondê-la.
+
+---
+
 ---
 
 ## Ordem de ataque — revista em 30/09/2026
@@ -1235,6 +1268,8 @@ Os itens 23 e 25 desta agenda dizem "31 dos 82 registros" ao descrever a cobertu
 | 20 | ~~Escrever as hipóteses rivais de PT-28~~ — H3 e H5 refutadas com evidência já ancorada; H2 sobrevive e relocaliza o ônus | 27 | ✅ 30/09 |
 | 22 | ~~Datar a posse de Torres na SSP-DF~~ — 02/01/2023, em duas fontes; H2 enfraquece e entra H6 | 28 | ✅ 30/09 |
 | 23 | ~~Codificar os três fatos novos~~ — **PT-18A**, registro próprio; codebook a 83 | 29 | ✅ 30/09 |
+| 24 | ~~Obter os atos de 02-03/01/2023~~ — DODF varrido; a troca de "cargos centrais" **não se confirma** | 30.1 | ✅ 30/09 |
+| 13 | ~~Decidir o "Conclusão dos julgamentos" de PT-61~~ — a expressão **não estava no balanço**; reformulada | 30.2 | ✅ 30/09 |
 
 ### Abertas
 
@@ -1243,15 +1278,13 @@ Os itens 23 e 25 desta agenda dizem "31 dos 82 registros" ao descrever a cobertu
 | 10 | Acrescentar a literatura clássica brasileira (livros, sem DOI) — as sínteses têm **zero** referências sobre o Brasil | 11.4, 22.4 | — |
 | 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **27 pendentes**: 6 lidos, 7 com ficha da 1ª leva, 3 impedidos. Números gerados por `localizar_camada_a.py`, não digitados | 23, 24, 25 | acesso institucional |
 | 19 | **Decidir o nome de `mecanismo_causal`** e aplicar as sete cobranças da seção 4 do documento 09 | 24.6, 25.1, 25.2 | decisão sua |
-| 13 | Decidir o "Conclusão dos julgamentos" de PT-61 contra as 459 em instrução | 21.4 | decisão sua |
 | 14 | Codificar a camada $T_{-1}$ conjuntural — 7 registros ainda contextuais | 11.3, 19 | 9 |
 | 15 | Higiene do repositório: licença, remoto, `.backup_pre_lula/`, ponteiros no JSON | 20, 21.4 | decisão sua |
-| 24 | **Obter os atos de 02-03/01/2023** — quem assinou as exonerações do escalão de planejamento da SSP-DF. O anexo 14 do Relatório do Interventor **não está no PDF do corpus**, que lista 15 anexos e não os traz; a via direta é o **DODF de 02 e 03/01/2023**, que é público. Decide H6 contra H1 | 28.3, 28.5 | coleta |
 | 16 | **Redação do artigo** | 3, 4, 5, 6, 9, 10 | tudo acima |
 
 **Nenhuma pendência de dado depende de você** — isso valia desde 16/08 e **deixou de valer em 30/09**: a tarefa **24** é coleta de fonte primária, a primeira desde agosto. Fora ela, as 82 linhas seguem ancoradas e o que falta é bibliográfico, codificação ou decisão.
 
-**As oito abertas, por natureza:** decisões suas (**13, 15, 19**), leitura ou coleta bibliográfica (**10, 17**), coleta de fonte primária (**24**), codificação (**14**) e a redação (**16**). **Só a 16 depende das outras**; nenhuma das oito primeiras bloqueia outra, e as três decisões podem ser tomadas durante a escrita.
+**As seis abertas, por natureza:** decisões suas (**15, 19**), leitura ou coleta bibliográfica (**10, 17**), codificação (**14**) e a redação (**16**). **Só a 16 depende das outras**; nenhuma das oito primeiras bloqueia outra, e as três decisões podem ser tomadas durante a escrita.
 
 > **Esta tabela envelheceu duas vezes em dois dias** — em 29/09 trazia a 18 duplicada e três números à mão na 17; em 30/09 manteve 20 e 21 como abertas depois de fechadas e não contou a 22. É a mesma lição de 25/09 batendo na peça que existe para registrar a lição. **A contagem da 17 já é gerada; o resto desta tabela não é**, e é a próxima candidata a virar script.
 

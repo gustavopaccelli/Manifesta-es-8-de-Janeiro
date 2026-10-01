@@ -1124,6 +1124,38 @@ Na primeira versão do documento, duas páginas foram escritas por **dedução d
 
 ---
 
+## 28. A tarefa 22 resolvida — e ela troca a rival fraca por uma forte — ✅ 30/09/2026
+
+A data foi lida em **duas fontes primárias independentes do corpus**, e diz mais do que a pergunta pedia.
+
+**Relatório do Interventor Federal, §4.9, p. 35:** "No dia **02 de janeiro de 2023, após a realização do evento da posse**, foi publicada a nomeação do Delegado da Polícia Federal Anderson Gustavo Torres para atuar como Secretário de Estado de Segurança Pública do Distrito Federal. **No dia seguinte, foram publicadas outras nomeações e exonerações de ocupantes de cargos centrais**." E na conclusão, p. 58: a troca de titularidade "**afetou o planejamento e a execução das ações**", seguida em **03/01/2023** da "exoneração e troca de ocupantes de cargos centrais na **estrutura de planejamento e coordenação** da SSPDF".
+
+**Relatório Final da CPMI, item 6.3.12, p. 831:** Torres assumiu em 2 de janeiro de 2023 "**posição que havia ocupado anteriormente entre 1º de janeiro de 2019 e 29 de março de 2021**", e entre 30/03/2021 e 31/12/2022 foi **Ministro da Justiça**, com ascendência sobre PF e PRF — donde a CPMI conclui que ele "era **uma das autoridades públicas que mais possuía conhecimento** a respeito das ameaças golpistas".
+
+### 28.1 H2 enfraquece; entra H6, e é mais forte
+
+**A comparação interna que sustentava o argumento — mesma corporação, mesma praça, sete dias — não opõe dois tratamentos da mesma cúpula.** O titular mudou em 02/01 e o escalão de planejamento em 03/01. H2 (seletividade estrutural) explica propensão institucional estável; **perdeu o seu melhor apoio empírico**.
+
+Mas entra **H6 — descontinuidade administrativa**, e ela é a rival mais forte do conjunto: trocar o titular e, no dia seguinte, os cargos centrais de planejamento, cinco dias antes de um evento anunciado, degrada a capacidade de planejar **sem que ninguém precise querer isso**. **A hipótese não é minha — é a conclusão do próprio interventor federal.** E ela alcança exatamente o que H2 não alcançava: o PAI em lugar do POI, o sobreaviso em lugar da prontidão, a ausência de previsão de acionamento.
+
+**O que limita H6:** Torres não era novato — 27 meses no mesmo cargo entre 2019 e 2021, e 21 meses no MJ. Na melhor versão, H6 não é "gente nova errou", é "a troca do escalão de planejamento desorganizou a cadeia", afirmação sobre os substituídos.
+
+### 28.2 Um segundo achado, que nenhuma das seis previa
+
+CPMI p. 874: **Fernando de Sousa Oliveira, no comando da SSP-DF no dia 8, tinha o nome ainda não publicado no DODF** — era "apenas um '**funcionário de fato**'" —, disse não ter sido apresentado formalmente "sequer ao governador, muito menos aos comandantes das forças", e teve a nomeação publicada só em **9 de janeiro**, início das férias formais de Torres.
+
+**Quem estava na cadeira não tinha autoridade formal sobre os comandos que precisaria acionar.** Não é omissão, não é seletividade, não é sobrecarga: é **defeito de autoridade formal**, e reabre H4 como hipótese autônoma, não mais aninhada em H1.
+
+### 28.3 O que a tarefa 22 mudou, e o que não
+
+**Não fechou a questão: trocou a pergunta.** Não é mais "o subdimensionamento prova omissão?", e sim "**a desorganização do escalão de planejamento em 02-03/01 explica o dispositivo do dia 8 sem recurso a dolo?**". A resposta depende de quais foram as exonerações de 03/01 e de quem as assinou — que o **anexo 14** do relatório do interventor nomeia e o corpus não tem.
+
+### 28.4 Três fatos novos, e nenhum está no codebook
+
+Conferido: `02/01/2023`, `DODF`, `funcionário de fato` e `férias formais` têm **zero ocorrências** nos 82 registros. **Não os inseri** — criar registro ou estender PT-18 é decisão de codificação. O que já estava: o pré-aval da Força Nacional na véspera está em PT-40, ancorado na CPMI p. 678; a p. 874 só acrescenta o detalhe do Ofício 5/2023 das 18h23 e da Portaria 272 das 19h11, cujo efeito "dependeria da efetiva solicitação de Ibaneis Rocha". **É refinamento de registro existente, e está dito assim porque este projeto já apresentou uma vez como novo o que ele próprio já registrava.**
+
+---
+
 ## Ordem de ataque — revista em 30/09/2026
 
 **A decisão que ordena tudo continua sendo a de 16/08/2026: a redação é o último item.** A ordem anterior a essa data tratava o aparato como suficiente e punha a escrita como ponto de virada; esta trata o conjunto de dados do processo político como pré-requisito.
@@ -1160,6 +1192,7 @@ Na primeira versão do documento, duas páginas foram escritas por **dedução d
 | 18 | ~~Acrescentar à mão o cânone de mecanismos~~ — DoC, Tarrow e McCarthy & Zald | 23.6 | ✅ 29/09 |
 | 21 | ~~Desenhar o campo multiorganizacional~~ — 22 entidades, e o modelo não acomoda 5 delas; no ciclo como passo 7/7 | 26 | ✅ 30/09 |
 | 20 | ~~Escrever as hipóteses rivais de PT-28~~ — H3 e H5 refutadas com evidência já ancorada; H2 sobrevive e relocaliza o ônus | 27 | ✅ 30/09 |
+| 22 | ~~Datar a posse de Torres na SSP-DF~~ — 02/01/2023, em duas fontes; H2 enfraquece e entra H6 | 28 | ✅ 30/09 |
 
 ### Abertas
 
@@ -1171,12 +1204,13 @@ Na primeira versão do documento, duas páginas foram escritas por **dedução d
 | 13 | Decidir o "Conclusão dos julgamentos" de PT-61 contra as 459 em instrução | 21.4 | decisão sua |
 | 14 | Codificar a camada $T_{-1}$ conjuntural — 7 registros ainda contextuais | 11.3, 19 | 9 |
 | 15 | Higiene do repositório: licença, remoto, `.backup_pre_lula/`, ponteiros no JSON | 20, 21.4 | decisão sua |
-| 22 | **Datar a posse de Anderson Torres na SSP-DF** — é o que discrimina H1 de H2 em PT-28; uma página de fonte primária | 27.5 | — |
+| 23 | **Codificar os três fatos novos** — troca de titularidade (02/01), do escalão de planejamento (03/01) e o defeito de autoridade formal de Fernando de Sousa Oliveira | 28.4 | decisão de codificação |
+| 24 | Obter o **anexo 14** do Relatório do Interventor — atos de nomeação e exoneração de 02-03/01; decide H6 | 28.3 | coleta |
 | 16 | **Redação do artigo** | 3, 4, 5, 6, 9, 10 | tudo acima |
 
 **Nenhuma pendência de dado depende de você** — isso valia desde 16/08 e **deixou de valer em 30/09**: a tarefa 22 é coleta de fonte primária, a primeira desde agosto. Fora ela, as 82 linhas seguem ancoradas e o que falta é bibliográfico ou é decisão.
 
-**As oito abertas, por natureza:** decisões suas (**13, 15, 19**), leitura ou coleta bibliográfica (**10, 17**), coleta de fonte primária (**22**), codificação (**14**) e a redação (**16**). **Só a 16 depende das outras**; nenhuma das sete primeiras bloqueia outra, e as três decisões podem ser tomadas durante a escrita.
+**As nove abertas, por natureza:** decisões suas (**13, 15, 19**), leitura ou coleta bibliográfica (**10, 17**), coleta de fonte primária (**24**), codificação (**14, 23**) e a redação (**16**). **Só a 16 depende das outras**; nenhuma das oito primeiras bloqueia outra, e as três decisões podem ser tomadas durante a escrita.
 
 > **Esta tabela envelheceu duas vezes em dois dias** — em 29/09 trazia a 18 duplicada e três números à mão na 17; em 30/09 manteve 20 e 21 como abertas depois de fechadas e não contou a 22. É a mesma lição de 25/09 batendo na peça que existe para registrar a lição. **A contagem da 17 já é gerada; o resto desta tabela não é**, e é a próxima candidata a virar script.
 

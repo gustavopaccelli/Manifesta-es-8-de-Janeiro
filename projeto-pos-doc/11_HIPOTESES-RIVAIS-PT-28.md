@@ -10,6 +10,8 @@
 
 ## 1. As cinco hipóteses, na melhor versão de cada
 
+> **Atualização de 30/09/2026, depois da tarefa 22.** A seção 6 acrescenta uma sexta hipótese — **H6, descontinuidade administrativa** —, que não estava nesta lista quando ela foi escrita e que a leitura na fonte mostrou ser a mais forte do conjunto. Leia a seção 6 antes de usar este quadro.
+
 **H1 — Omissão dolosa da cúpula civil da segurança do DF.** É a moldura que o codebook registra e a que o STF adotou na AP 2668: o Tribunal não trata o subdimensionamento como falha isolada, e sim como parte de "clara omissão de altos funcionários da Secretaria de Segurança Pública do Distrito Federal", cuja omissão "foi essencial para a consumação dos atos". **A moldura é omissiva, não comissiva**, e localiza a imputação na cúpula civil — Torres, Fernando de Sousa Oliveira, Marília Ferreira de Alencar —, não na corporação militar.
 
 **H2 — Seletividade estrutural do policiamento.** Na melhor versão, e é a mais forte das rivais: *Policing protest* registra que "police repression is more likely to be directed against groups that are **poorer in material resources as well as in political connections**", e que há "a tendency to use harsher styles of protest policing against social and political groups that are **perceived as larger threats to political elites**". Os acampamentos eram **ricos em recurso** — financiamento em rede, patrocínio do agronegócio, caravanas custeadas — e **ricos em conexão política**, com aval da autoridade máxima registrado em PT-13. **A teoria prediz policiamento brando para esse perfil, sem nenhuma necessidade de conivência.** Dois meses de tolerância e um dispositivo pequeno seriam o desfecho normal, não o anômalo.
@@ -91,13 +93,55 @@ Tolerância prolongada e dispositivo pequeno para um grupo rico em recurso e em 
 
 > H2 (seletividade estrutural) explica o dimensionamento e a tolerância prolongada, e é a leitura por default da literatura para grupos ricos em recurso e em conexão política. Ela não explica o rebaixamento do **instrumento** e do **regime de acionamento** em relação à posse de sete dias antes (PT-18), a ausência de previsão de acionamento de quatro unidades especializadas e as férias simultâneas de oito comandos (Cappelli, conclusões D e H), nem a dispensa expressa de reforço (PT-20A). **A tese sustentada não é sobre o tamanho do efetivo, é sobre a remoção da capacidade de escalada.** H3 (sobrecarga analítica) está refutada por PT-19B e H5 (incapacidade operacional) por PT-41.
 
-## 6. O que falta, e é uma coisa só
+## 6. A data, lida na fonte em 30/09/2026 — e ela troca a rival fraca por uma forte
 
-**A data em que Anderson Torres assumiu a SSP-DF não está no codebook.** Procurada nos 82 registros: ausente.
+A pergunta desta seção, na versão anterior do documento, era: o decisor mudou entre a posse e o dia 8? Se sim, a variação sai do terreno de H2; se não, H2 ganha força. **A resposta está em duas fontes primárias independentes do corpus, e é mais específica do que a pergunta.**
 
-**Por que ela é a evidência mais valiosa que falta.** A posse e o 8 de janeiro são separados por sete dias, e a diferença de tratamento é o núcleo do argumento da seção 4. Se o **decisor mudou** entre os dois eventos, a variação deixa de ser atribuível a propensão institucional — que é o terreno de H2 — e passa a ser atribuível a **decisão de quem entrou**, que é o terreno de H1 e é exatamente onde o STF a localizou. Se o decisor **não** mudou, H2 fica mais forte, porque a mesma cúpula tratou os dois eventos de modo diferente sem troca de comando.
+| Fonte | Página | O que diz |
+|:--|:--|:--|
+| Relatório do Interventor Federal (Cappelli), §4.9 | 35 | "No dia **02 de janeiro de 2023, após a realização do evento da posse**, foi publicada a nomeação do Delegado da Polícia Federal Anderson Gustavo Torres para atuar como Secretário de Estado de Segurança Pública do Distrito Federal. **No dia seguinte, foram publicadas outras nomeações e exonerações de ocupantes de cargos centrais**" |
+| Relatório do Interventor Federal, conclusões | 58 | "planejamento e comando operacional da SSPDF **afetou o planejamento e a execução das ações**. No dia 02 de janeiro de 2023, após a realização do evento da posse, houve a **troca de titularidade da SSPDF** [...] Seguido dessa mudança, no dia **03/01/2023, houve a exoneração e troca de ocupantes de cargos centrais na estrutura de planejamento e coordenação da SSPDF**" |
+| Relatório Final da CPMI, item 6.3.12 | 831 | "No dia 2 de janeiro de 2023, assumiu o posto de Secretário de Segurança Pública do Distrito Federal, **posição que havia ocupado anteriormente entre os dias 1º de janeiro de 2019 e 29 de março de 2021**" — e, entre 30/03/2021 e 31/12/2022, foi **Ministro da Justiça**, com ascendência sobre PF e PRF |
+| Relatório do Interventor Federal | 36 | Durante os atos, Torres "encontrava-se **viajando para Orlando**", e o período oficial de férias estava marcado para começar em **9 de janeiro** |
 
-**É um *smoking gun* em potencial e custa uma página de fonte primária.** Não a inseri porque não a li: o projeto não afirma o que não leu.
+O anexo 14 do relatório do interventor é nomeado: "**Atos de nomeação e publicação de férias de Anderson Gustavo Torres**".
+
+### 6.1 O que isso faz com H2
+
+**A troca não foi só do titular: foi do escalão de planejamento.** A posse foi planejada e executada sob uma cúpula; o dia 8, sob outra, empossada no dia seguinte à posse, com os cargos centrais de planejamento e coordenação substituídos em **03/01** — cinco dias antes.
+
+**Logo a comparação da seção 4 não opõe dois tratamentos da mesma cúpula.** H2 explica propensão institucional estável diante de grupos com certo perfil; aqui o que varia entre os dois eventos não é só o grupo policiado, é **quem planeja**. **A rival mais forte que eu havia enunciado perde o seu melhor apoio empírico** — que era justamente a comparação interna.
+
+### 6.2 Mas entra uma rival nova, e mais forte — H6
+
+**H6 — descontinuidade administrativa.** Substituir o titular e, no dia seguinte, os ocupantes dos cargos centrais de planejamento e coordenação, cinco dias antes de um evento anunciado, degrada a capacidade de planejar **sem que ninguém precise querer isso**. E a hipótese não é minha: **é a conclusão do próprio interventor federal**, que atribui à mudança o efeito sobre "o planejamento e a execução das ações" (p. 58).
+
+**H6 é a rival mais forte do conjunto**, porque explica de uma vez o PAI em lugar do POI, o sobreaviso em lugar da prontidão e a ausência de previsão de acionamento — tudo o que a seção 4 apresentou como o que H2 não explicava. **Onde H2 falhava, H6 alcança.**
+
+**O que limita H6, e vem das mesmas fontes.** Torres não era novato no cargo: ocupou-o por 27 meses, entre 2019 e 2021, e chegou de 21 meses como Ministro da Justiça com ascendência sobre PF e PRF. A CPMI extrai daí a inferência de que ele "era **uma das autoridades públicas que mais possuía conhecimento** a respeito das ameaças golpistas". **Logo H6, na sua melhor versão, não é "gente nova errou": é "a troca do escalão de planejamento desorganizou a cadeia"** — afirmação sobre os substituídos, não sobre o secretário.
+
+### 6.3 Um segundo achado, que nenhuma das seis hipóteses previa
+
+O relatório da CPMI (p. 874) registra que **Fernando de Sousa Oliveira, que estava no comando da SSP-DF no dia 8**, tinha o nome ainda **não publicado no DODF** — era "apenas um '**funcionário de fato**' na Administração Pública do GDF" —, disse não ter sido apresentado formalmente "sequer ao governador, muito menos aos comandantes das forças", e teve a **nomeação oficial publicada só em 9 de janeiro**, início das férias formais de Torres.
+
+**Quem estava na cadeira no dia 8 não tinha autoridade formal sobre os comandos que precisaria acionar.** Isso não é omissão, não é seletividade e não é sobrecarga: é **defeito de autoridade formal**, e reforça H4 — a ruptura da cadeia de comando —, que a seção 2 havia classificado como aninhada em H1. Depois deste achado, H4 merece ser reexaminada como hipótese autônoma.
+
+### 6.4 Onde isso deixa PT-28
+
+| Hipótese | Antes de 30/09 | Depois |
+|:--|:--|:--|
+| H1 omissão dolosa da cúpula civil | moldura do STF | inalterada; segue a moldura judicial |
+| H2 seletividade estrutural | rival mais forte | **enfraquecida** — perdeu a comparação interna que a sustentava |
+| H3 sobrecarga analítica | refutada (PT-19B) | refutada |
+| H4 ruptura da cadeia de comando | aninhada em H1 | **candidata a autônoma**, pelo defeito de autoridade formal |
+| H5 incapacidade operacional | refutada (PT-41) | refutada |
+| **H6 descontinuidade administrativa** | não enunciada | **a rival mais forte, e endossada pelo interventor** |
+
+**A tarefa 22 não fechou a questão: trocou a pergunta.** Não é mais "o subdimensionamento prova omissão?", e sim "**a desorganização do escalão de planejamento em 02-03/01 explica o dispositivo do dia 8 sem recurso a dolo?**". Quem decide é a leitura de quais foram as exonerações do dia 03/01 e quem as assinou — e isso o anexo 14 do relatório do interventor nomeia, mas o corpus não tem.
+
+### 6.5 O que já estava no codebook, e não é novidade
+
+O **pré-aval da Força Nacional na véspera** já está em PT-40, ancorado na CPMI p. 678: a autorização "já havia sido dada na véspera" e o Governo do DF "não a acionou tempestivamente". A p. 874 acrescenta o **detalhe do mecanismo** — Ofício 5/2023 do diretor-geral da PF às **18h23 de 7/1** alertando para caravanas com "clara intenção de confrontar as Forças de Segurança", e a **Portaria 272** de Flávio Dino às **19h11**, cujo efeito "dependeria da efetiva solicitação de Ibaneis Rocha". **É refinamento de registro existente, não achado novo**, e está dito assim porque este projeto já apresentou uma vez como novo o que ele próprio já registrava.
 
 ---
 

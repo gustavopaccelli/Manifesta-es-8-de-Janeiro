@@ -9,9 +9,9 @@ Esta peça responde a uma pergunta única e a responde para os 83 registros: **o
 | Indicador | Valor |
 |:--|--:|
 | Sub-eventos no codebook | 83 |
-| Com documento local vinculado | **78** |
-| Com página atribuída ao documento | 72 |
-| Sem âncora local, por natureza do registro | 4 |
+| Com documento local vinculado | **79** |
+| Com página atribuída ao documento | 73 |
+| Sem âncora local, por natureza do registro | 3 |
 | Sem âncora local, dependentes de coleta | **1** |
 | Referências quebradas | 0 |
 | Arquivos do corpus sem procedência declarada | 0 |
@@ -21,8 +21,8 @@ Esta peça responde a uma pergunta única e a responde para os 83 registros: **o
 | Classe | N |
 |:--|--:|
 | Confirmado em fonte primária | 61 |
-| Confirmado | 17 |
-| Contextual | 4 |
+| Confirmado | 18 |
+| Contextual | 3 |
 | Inferência do analista | 1 |
 
 ## O que esta auditoria alterou
@@ -31,13 +31,13 @@ Nenhum dado analítico foi tocado — nenhum fato, mecanismo causal ou enquadram
 
 | Registro | Alteração |
 |:--|:--|
-| **PT-01** | recodificado em 04/10/2026, tarefa 14 — o campo framing_narrativa dizia “'Não é só por 20 centavos' — antipolítica”. As duas obras lidas contradizem a atribuição: Tatagiba (2014, p. 40) afirma que “desde o começo, foi sim uma luta por 0,20 centavos” e que nenhum frame unificou o ciclo; Pinto (2017, p. 131) mostra a leitura ampliada como quadro imposto ao MPL por terceiros. “Antipolítica” também muda de referente: em Pinto (p. 131) o discurso antipolítico é o que emerge DEPOIS da retirada do MPL e está “claramente à direita”. O termo documentado para 2013 é antipartidarismo (Tatagiba, 2014, p. 47; Pinto, 2017, p. 149). Quarta variante do modo de falha do projeto: o enquadramento do adversário atribuído ao ator. Alonso (2017), citada no campo anterior, nunca esteve no corpus nem foi lida. |
-| **PT-02** | recodificado em 04/10/2026, tarefa 14 — atores, repertório e enquadramento passam a ter página. Três ressalvas que a leitura impõe e que o registro não resolve sozinho: (1) Tatagiba e Galvão (2019, p. 71, 91) sustentam que “não observamos uma descontinuidade entre 2013 e os protestos posteriores”, o que enfraquece a leitura de spin-off como ruptura e a converte em difusão dentro de um mesmo ciclo; (2) os grupos antipetistas já protestavam em 2011 (p. 82), de modo que a apropriação do repertório é de escala, não de origem; (3) Alonso (2012, p. 24) registra que “Tilly não detalha o processo de apropriação do repertório pelos atores” — o nome do mecanismo não tem, na fonte do conceito, o conteúdo que sugere. O nome é decisão da tarefa 19. “Tolerância policial” permanece sem âncora. |
+| **PT-01** | recodificado em 04/10/2026, tarefa 14 — o campo framing_narrativa dizia “'Não é só por 20 centavos' — antipolítica”. As duas obras lidas contradizem a atribuição: Tatagiba (2014, p. 40) afirma que “desde o começo, foi sim uma luta por 0,20 centavos” e que nenhum frame unificou o ciclo; Pinto (2017, p. 131) mostra a leitura ampliada como quadro imposto ao MPL por terceiros. “Antipolítica” também muda de referente: em Pinto (p. 131) o discurso antipolítico é o que emerge DEPOIS da retirada do MPL e está “claramente à direita”. O termo documentado para 2013 é antipartidarismo (Tatagiba, 2014, p. 47; Pinto, 2017, p. 149). Quarta variante do modo de falha do projeto: o enquadramento do adversário atribuído ao ator. Alonso (2017), citada no campo anterior, nunca esteve no corpus nem foi lida. SEGUNDA RODADA, 04/10/2026 — o campo ator_grupo passou a nomear o campo patriota. O codebook punha a direita apenas em PT-02, a partir de 2015, e era essa ausência que fazia a leitura de ruptura parecer correta: Alonso (2023, p. 223) sustenta que o campo patriota era “o maior dos lados de 2013, tão grande quanto ignorado em junho”, e Kunrath Silva (2023, p. 77 impressa) data a organização da direita “pelo menos desde a eleição de Lula em 2003”. |
+| **PT-02** | recodificado em 04/10/2026, tarefa 14 — atores, repertório e enquadramento passam a ter página. Três ressalvas que a leitura impõe e que o registro não resolve sozinho: (1) Tatagiba e Galvão (2019, p. 71, 91) sustentam que “não observamos uma descontinuidade entre 2013 e os protestos posteriores”, o que enfraquece a leitura de spin-off como ruptura e a converte em difusão dentro de um mesmo ciclo; (2) os grupos antipetistas já protestavam em 2011 (p. 82), de modo que a apropriação do repertório é de escala, não de origem; (3) Alonso (2012, p. 24) registra que “Tilly não detalha o processo de apropriação do repertório pelos atores” — o nome do mecanismo não tem, na fonte do conceito, o conteúdo que sugere. O nome é decisão da tarefa 19. “Tolerância policial” permanece sem âncora. SEGUNDA RODADA, 04/10/2026 — o mecanismo dizia “Apropriação de repertório (spin-off): a direita converte a rua em recurso próprio e forma identidade política negativa”. O parêntese afirmava ruptura entre ciclos, e foi retirado. Três coisas sustentam a troca. (1) A decisão do pesquisador, em 04/10/2026, pela continuidade. (2) A peça que nomeia o mecanismo: Kunrath Silva (2018, § 15) mostra que o que se apropria não são recursos nem estruturas, mas um repertório — o que VINDICA o nome “apropriação de repertório” e corrige o diagnóstico da primeira rodada, que tratara a observação de Alonso (2012, p. 24) sobre Tilly como defeito do codebook; a apropriação de repertório é mecanismo distinto da apropriação social de McAdam, Tarrow e Tilly, e é por isso que a obra deles não a detalha. (3) A ressalva de § 56, que proíbe a leitura determinista e agora está no próprio mecanismo. O que NÃO se fez: redatar o registro. A apropriação começa na segunda fase de junho de 2013; o evento que o registro codifica continua sendo o ciclo de 2015-2016, e mudar isso é decisão sua. |
 | **PT-02A** | PT-02A — busca de melhor esforço em 16/08/2026 (Tier 2), sem mudança de status. Localizado um mirror em luisrobertobarroso.com.br — mas é APENAS o voto do min. Barroso (28 p.), não o acórdão completo do HC 126.292 com todos os votos. Não resolve a lacuna declarada ('o acórdão do próprio HC 126.292 não foi baixado'). Arquivo NÃO baixado para Fontes/ — decisão sobre incorporá-lo como material suplementar fica pendente para o pesquisador (ver lista de pendências). CORREÇÃO DE PÁGINA EM 25/09/2026: o registro citava a p. 3 do acórdão das ADC 43/44/54, que é a autuação — folha de rosto com partes e advogados. A transcrição está na p. 6, onde começa o relatório do min. Marco Aurélio. Achado pelo conferir_paginas.py, na primeira execução sob a regra que exige localizar TODAS as transcrições. |
-| **PT-03** | recodificado em 04/10/2026, tarefa 14. O rótulo do mecanismo continua pendente desde 30/09: “certificação de eficácia” não satisfaz a definição de Dynamics of Contention, que exige validação por autoridade externa, e o enunciado não nomeia autoridade alguma (agenda, item 24.6). A leitura desta rodada não resolve — reforça, porque a literatura lida descreve o impeachment como desfecho de uma crise política, não como validação de uma via. Decisão da tarefa 19. O campo framing_narrativa foi mantido, porque codifica o quadro do ator e não a avaliação da literatura; a divergência fica declarada no status. |
+| **PT-03** | recodificado em 04/10/2026, tarefa 14. O rótulo do mecanismo continua pendente desde 30/09: “certificação de eficácia” não satisfaz a definição de Dynamics of Contention, que exige validação por autoridade externa, e o enunciado não nomeia autoridade alguma (agenda, item 24.6). A leitura desta rodada não resolve — reforça, porque a literatura lida descreve o impeachment como desfecho de uma crise política, não como validação de uma via. Decisão da tarefa 19. O campo framing_narrativa foi mantido, porque codifica o quadro do ator e não a avaliação da literatura; a divergência fica declarada no status. SEGUNDA RODADA, 04/10/2026 — nenhum campo deste registro mudou de conteúdo. Entraram duas âncoras novas e a nota de que a certificação documentada é midiática, não de autoridade. |
 | **PT-03A** | PT-03A — busca de melhor esforço em 16/08/2026 (Tier 2), sem mudança de status. Localizados apenas comentários sobre a sentença (ex.: artigo de 6 p. de Mário Montanha Teixeira Filho), não o inteiro teor. O e-proc da JFPR não foi consultado diretamente — provavelmente exige login. Permanece baixa prioridade: o dispositivo já está transcrito no acórdão do TRF-4, p. 395. PÁGINA ACRESCENTADA EM 25/09/2026: a segunda transcrição do registro está na p. 348 do mesmo volume, e o campo ancorava apenas a p. 395, do dispositivo. Achado pelo conferir_paginas.py, na primeira execução sob a regra que exige localizar TODAS as transcrições. |
 | **PT-03E** | PT-03E RESOLVIDO em 16/08/2026 — última peça do arco judicial. O inteiro teor foi obtido SEM captcha, por rota pública distinta do buscador de jurisprudência: o endpoint de documento da Consulta Unificada PJe. A API do buscador (sjur-pesquisa-api) exige verificação antirrobô e responde 'Falha na verificação antirrobô' sem token; nenhuma tentativa de contorná-la foi feita. DUAS CORREÇÕES DE DOCUMENTAÇÃO: o captcha do TSE é hCAPTCHA e não reCAPTCHA, como o projeto vinha registrando; e o acórdão é servido em HTML, não em PDF. ACHADO SUBSTANTIVO: a Súmula 41/TSE, invocada na ementa, mostra que o efeito eleitoral da condenação opera por automatismo — a Justiça Eleitoral se declara incompetente para rever o mérito —, o que explica por que as anulações posteriores do STF (PT-06A e PT-06B) não puderam desfazer a exclusão de 2018. |
-| **PT-04** | revisado em 04/10/2026, tarefa 14 — permanece contextual. A pasta de literatura anexada à sessão cobre densamente o ciclo 2013-2016 e não cobre o período 2018-2022: é a mesma lacuna que a triagem de 29/09 encontrou nos 411 DOIs das sínteses (agenda, item 23.2), agora confirmada por varredura de conteúdo numa segunda coleção independente. |
+| **PT-04** | recodificado em 04/10/2026, segunda rodada da tarefa 14 — passou de Contextual a Confirmado. A primeira rodada deste mesmo dia havia declarado que “a literatura sobre o bolsonarismo não está no alcance deste projeto”, com base na varredura dos 145 arquivos e nos 411 DOIs das sínteses. A declaração estava certa sobre as duas coleções varridas e ERRADA como conclusão geral: Kunrath Silva (2023) liga o ciclo de protestos a Bolsonaro e ao intervencionismo militar em uma frase com página, e é a primeira peça do corpus a fazê-lo. A lição não é sobre o bolsonarismo: é que varredura exaustiva de duas coleções prova a lacuna DELAS, não a lacuna da literatura. A tarefa 25 passa a ter um ponto de partida dentro do corpus. |
 | **PT-05** | revisado em 04/10/2026, tarefa 14 — permanece contextual, pela mesma varredura que fechou PT-04. Observação de ancoragem, não de leitura: o atrito institucional de 2019-2022 que este registro descreve tem, no próprio codebook, registros vizinhos já ancorados em fonte primária (PT-05A, PT-06A a PT-06C, do arco judicial). O que falta aqui é a literatura que interpreta o período, não a documentação dele. |
 | **PT-06** | revisado em 04/10/2026, tarefa 14 — permanece contextual, pela mesma varredura que fechou PT-04. É o registro de maior custo entre os quatro: o mecanismo que ele afirma — consolidação do ecossistema informacional paralelo — é o que liga T-1 conjuntural a T-1 operacional, e segue sem leitura. |
 | **PT-06B** | vínculo corrigido em 16/08/2026 — O Plenário confirmou a suspeição em 23/06/2021 no segundo AgR do HC 193.726 (7x4); o registro cita as duas decisões mas só apontava a primeira. |
@@ -100,10 +100,13 @@ Além disso, **sete registros citavam dois documentos e declaravam apenas um**. 
 | CPMI | 53 | 1333 | oficial |
 | Cappelli | 6 | 62 | espelho |
 | AP 2668 | 5 | 1991 | oficial |
+| KUNRATH SILVA 2023 | 4 | 34 | literatura |
+| ALONSO 2023 | 4 | 309 | literatura |
 | TATAGIBA E GALVAO 2019 | 3 | 34 | literatura |
 | PGR | 3 | 272 | oficial |
 | Balanço 2026 | 3 | 15 | oficial |
 | PINTO 2017 | 2 | 37 | literatura |
+| KUNRATH SILVA 2018 | 2 | 20 | literatura |
 | ADC 43/44/54 | 2 | 489 | oficial |
 | TRF-4 | 2 | 657 | oficial |
 | EP 169-Transferência | 2 | 36 | oficial |
@@ -124,22 +127,23 @@ Além disso, **sete registros citavam dois documentos e declaravam apenas um**. 
 | Pet 14.129 | 1 | 17 | oficial |
 | EP 169-Domiciliar | 1 | 40 | oficial |
 
-O Relatório Final da CPMI ancora sozinho **53 dos 78 registros vinculados**. Isso é uma dependência a declarar no artigo: a espinha dorsal de $T_0$ vem de uma peça de investigação parlamentar, com posição política própria e votos em separado. Que a CPMI afirme algo não é o mesmo que o fato estar estabelecido — advertência que já consta do `Caderno-de-evidencias/LEIA-ME.md` e que o artigo precisa repetir.
+O Relatório Final da CPMI ancora sozinho **53 dos 79 registros vinculados**. Isso é uma dependência a declarar no artigo: a espinha dorsal de $T_0$ vem de uma peça de investigação parlamentar, com posição política própria e votos em separado. Que a CPMI afirme algo não é o mesmo que o fato estar estabelecido — advertência que já consta do `Caderno-de-evidencias/LEIA-ME.md` e que o artigo precisa repetir.
 
-## Lista 1 — Registros ancorados (78)
+## Lista 1 — Registros ancorados (79)
 
 Cada um aponta arquivo e página. A numeração impressa do relatório da CPMI coincide com a paginação do PDF, então a conferência é direta: abrir o arquivo na página indicada.
 
 | Registro | Documento(s) | Página | Classe |
 |:--|:--|:--|:--|
-| PT-01 | TATAGIBA 2014 + PINTO 2017 + TATAGIBA E GALVAO 2019 | TATAGIBA 2014: 2, 4, 6, 13 \| PINTO 2017: 10, 11, 12, 13 \| TATAGIBA E GALVAO 2019: 8, 10, 12 | Confirmado |
-| PT-02 | PINTO 2017 + TATAGIBA E GALVAO 2019 + ALONSO 2012 | PINTO 2017: 25, 26, 31, 32, 34 \| TATAGIBA E GALVAO 2019: 9, 19, 20 \| ALONSO 2012: 4, 10 | Confirmado |
+| PT-01 | TATAGIBA 2014 + PINTO 2017 + TATAGIBA E GALVAO 2019 + KUNRATH SILVA 2018 + KUNRATH SILVA 2023 + ALONSO 2023 | TATAGIBA 2014: 2, 4, 6, 13 \| PINTO 2017: 10, 11, 12, 13 \| TATAGIBA E GALVAO 2019: 8, 10, 12 \| KUNRATH SILVA 2018: 6, 11, 13 \| KUNRATH SILVA 2023: 21, 23 \| ALONSO 2023: 220 | Confirmado |
+| PT-02 | PINTO 2017 + TATAGIBA E GALVAO 2019 + ALONSO 2012 + KUNRATH SILVA 2018 + KUNRATH SILVA 2023 + ALONSO 2023 | PINTO 2017: 25, 26, 31, 32, 34 \| TATAGIBA E GALVAO 2019: 9, 19, 20 \| ALONSO 2012: 4, 10 \| KUNRATH SILVA 2018: 6, 14, 15 \| KUNRATH SILVA 2023: 30 \| ALONSO 2023: 219, 223, 224 | Confirmado |
 | PT-02A | ADC 43/44/54 + ADC 43-MC | ADC 43/44/54: 6, 9 | Confirmado |
-| PT-03 | TATAGIBA E GALVAO 2019 | TATAGIBA E GALVAO 2019: 3, 7, 29 | Confirmado |
+| PT-03 | TATAGIBA E GALVAO 2019 + KUNRATH SILVA 2023 + ALONSO 2023 | TATAGIBA E GALVAO 2019: 3, 7, 29 \| KUNRATH SILVA 2023: 29 \| ALONSO 2023: 225, 226 | Confirmado |
 | PT-03A | TRF-4 | TRF-4: 348, 395 | Confirmado em fonte primária |
 | PT-03B | TRF-4 | — | Confirmado |
 | PT-03C | HC 152.752 | — | Confirmado |
 | PT-03E | TSE RCand | TSE RCand: ementa itens 2-4 e 12; dispositivo | Confirmado em fonte primária |
+| PT-04 | KUNRATH SILVA 2023 + ALONSO 2023 | KUNRATH SILVA 2023: 30 \| ALONSO 2023: 227 | Confirmado |
 | PT-05A | ADC 43/44/54 | — | Confirmado |
 | PT-06A | PGR | PGR: 8 | Confirmado |
 | PT-06B | HC 164.493 + HC 193.726-2 | HC 164.493: inteiro teor | Confirmado |
@@ -211,13 +215,12 @@ Cada um aponta arquivo e página. A numeração impressa do relatório da CPMI c
 | PT-60 | EP 169-Domiciliar | EP 169-Domiciliar: 1, 35, 36, 37, 38, 40 | Confirmado em fonte primária |
 | PT-61 | Balanço 2026 | Balanço 2026: 6, 7, 8, 10, 11, 13, 14 | Confirmado em fonte primária |
 
-## Lista 2 — Sem âncora documental por natureza do registro (4)
+## Lista 2 — Sem âncora documental por natureza do registro (3)
 
 Estes **não são lacunas**. São itens de enquadramento histórico apoiados na bibliografia teórica, mais uma inferência declarada. Perseguir fonte primária para eles seria erro de categoria: não são fatos a verificar em documento, são leituras a discutir em referencial teórico.
 
 | Registro | Classe | Apoio declarado |
 |:--|:--|:--|
-| PT-04 | Contextual | Literatura declarada no registro original — Campos Mello (2020); Cesarino (2022) — NÃO ESTÁ NO CORPUS e não fo |
 | PT-05 | Contextual | Literatura declarada no registro original — Abranches; Avritzer — NÃO ESTÁ NO CORPUS e não foi lida. Item cont |
 | PT-06 | Contextual | Literatura declarada no registro original — Cesarino (2022) — NÃO ESTÁ NO CORPUS e não foi lida. Item contextu |
 | PT-62 | Inferência do analista | Inferência analítica a partir do conjunto das fontes — requer verificação empírica dedicada |
@@ -248,7 +251,7 @@ Estas são as lacunas reais. Cada uma tem uma peça identificada e uma via de ob
 
 Três limites, declarados para que ninguém leia mais do que ela oferece.
 
-1. **Não confere, para todos os 83, se a página sustenta a afirmação.** A checagem estrutural verifica que o vínculo existe, que o arquivo está em disco e que a página pertence ao documento vinculado. A conferência do *conteúdo* contra o texto do PDF é feita **por amostra** — `scripts/conferir_paginas.py`, 12 registros por rodada, ou `--todos` para os 72 com página. A transcrição literal de 49 registros está no `Caderno-de-evidencias/`.
+1. **Não confere, para todos os 83, se a página sustenta a afirmação.** A checagem estrutural verifica que o vínculo existe, que o arquivo está em disco e que a página pertence ao documento vinculado. A conferência do *conteúdo* contra o texto do PDF é feita **por amostra** — `scripts/conferir_paginas.py`, 12 registros por rodada, ou `--todos` para os 73 com página. A transcrição literal de 49 registros está no `Caderno-de-evidencias/`.
 2. **Não avalia a qualidade da fonte.** Que um registro esteja ancorado no relatório Cappelli não o torna verdadeiro — torna-o rastreável. E o Cappelli, registre-se, é **espelho jornalístico**: traz identificação oficial mas não foi localizado em domínio oficial. Isso está declarado no inventário e precisa constar da nota de fontes do artigo.
 3. **Não resolve as ressalvas de proveniência.** A auditoria as classifica; não as fecha — quem as fecha é a rodada de conferência. As quatro que existiam foram fechadas em 16/08/2026: PT-34, a mais grave, com os "4 mil" retirados e substituídos por faixa ancorada em duas medições oficiais independentes (ver `docs/ESTIMATIVA-MULTIDAO-8JAN.md`); PT-12, com a cifra de "mais de 100 acampamentos" retirada; PT-17, com a data de saída localizada na CPMI, p. 612; e PT-52, com as 2.151 prisões em flagrante adotadas no lugar dos ~1.200 de imprensa. Cada fechamento está no `nota_auditoria` do próprio registro.
 

@@ -123,7 +123,78 @@ def norm_busca(s):
     return re.sub(r"[\"“”‘’'‐-―\-]+", "", norm(s))
 
 
+# Fontes cujo CMap vem defeituoso e precisam de conserto por span. Ver
+# _mupdf() logo abaixo.
+FONTES_DESLOCADAS = {"Gentium-Book-Basic"}
+
+
+def _desloca(t):
+    """Desfaz o deslocamento de glifos de um subconjunto de fonte quebrado.
+
+    O PDF da OpenEdition de Kunrath Silva (2018) traz camada de texto PRESENTE
+    E ERRADA: o código de cada glifo é o ASCII menos 29 — espaço=0x03, 'A'=0x24,
+    'a'=0x44, vírgula=0x0F, '0'=0x13 — e os acentuados saem deslocados de 62 na
+    faixa 0xA2. PyPDF2 e PyMuPDF devolvem os dois a mesma sopa de letras.
+
+    Isto é pior que a digitalização sem texto de Tatagiba (2014): lá a string
+    vinha vazia e a ausência era visível; aqui a string vem cheia, e uma busca
+    por qualquer frase "prova" com alta confiança que o artigo não a contém.
+    O 0x20 fica de fora porque, dentro do mesmo span, ele é espaço de verdade:
+    deslocá-lo trocava cada espaço de texto justificado por um '='.
+    """
+    out = []
+    for c in t:
+        o = ord(c)
+        if o == 0x20:
+            out.append(c)
+        elif 0x03 <= o <= 0x5D:
+            out.append(chr(o + 29))
+        elif 0xA2 <= o <= 0xBF:
+            out.append(chr(o + 62))
+        else:
+            out.append(c)
+    return "".join(out)
+
+
+def _mupdf(caminho, n, consertar):
+    """Leitura por PyMuPDF; com consertar=True, aplica _desloca span por span.
+
+    Por span, não pela página: no mesmo arquivo da OpenEdition as fontes Roboto
+    saem corretas, e consertar a página inteira estragaria o que estava bom.
+    """
+    try:
+        import pymupdf
+    except ImportError:
+        return ""
+    d = _cache.get(("mu", caminho))
+    if d is None:
+        d = _cache[("mu", caminho)] = pymupdf.open(str(RAIZ / caminho))
+    pag = d[n - 1]
+    if not consertar:
+        return pag.get_text()
+    linhas = []
+    for b in pag.get_text("dict")["blocks"]:
+        for l in b.get("lines", []):
+            linhas.append("".join(
+                _desloca(s["text"]) if s["font"] in FONTES_DESLOCADAS else s["text"]
+                for s in l["spans"]))
+    return "\n".join(linhas)
+
+
 def texto_pagina(caminho, n):
+    """Todas as leituras fiéis da página, concatenadas, para busca de substring.
+
+    São três — PyPDF2, PyMuPDF e PyMuPDF com conserto de glifo — porque nenhuma
+    serve sozinha. PyPDF2 injeta espaço DENTRO das palavras em alguns PDFs
+    ("destaca -se", "empac amentos"), e foi por isso que nenhuma das 26 âncoras
+    que entraram em 04/10/2026 casava; PyMuPDF não faz isso, mas nem ele lê a
+    fonte deslocada da OpenEdition.
+
+    É acréscimo, não troca: as leituras são concatenadas, de modo que o que
+    casava antes continua casando, e as 63 âncoras anteriores seguem idênticas.
+    O separador \\x00 impede casamento que atravesse a junção — nenhuma citação
+    normalizada contém byte nulo.
+    """
     r = _cache.get(caminho)
     if r is None:
         r = _cache[caminho] = PdfReader(str(RAIZ / caminho))
@@ -132,7 +203,10 @@ def texto_pagina(caminho, n):
     chave = (caminho, n)
     txt = _cache.get(chave)
     if txt is None:
-        txt = _cache[chave] = norm_busca(r.pages[n - 1].extract_text() or "")
+        leituras = [r.pages[n - 1].extract_text() or "",
+                    _mupdf(caminho, n, False),
+                    _mupdf(caminho, n, True)]
+        txt = _cache[chave] = "\x00".join(norm_busca(t) for t in leituras)
     return txt
 
 

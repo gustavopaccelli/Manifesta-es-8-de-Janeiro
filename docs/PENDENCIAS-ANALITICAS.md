@@ -13,10 +13,10 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Frente | Estado |
 |:--|:--|
 | Codebook | **83 sub-eventos × 16 campos** — JSON, CSV e XLSX gerados de uma fonte única, com zero divergências |
-| Ancoragem documental | **78 registros** com arquivo local vinculado · 72 com página ou seção atribuída · 0 referências quebradas |
-| Classes de verificação | **61 em fonte primária** · 17 confirmados por outra via · **4 contextuais** (eram 7 até 04/10) · **0 a verificar** · 1 inferência declarada |
+| Ancoragem documental | **79 registros** com arquivo local vinculado · 73 com página ou seção atribuída · 0 referências quebradas |
+| Classes de verificação | **61 em fonte primária** · 18 confirmados por outra via · **3 contextuais** (eram 7 até 04/10) · **0 a verificar** · 1 inferência declarada |
 | Caderno de evidências | **49 registros** com página e transcrição literal |
-| Corpus documental | **22 PDFs / 6.951 p. de fonte documental** + o acórdão do TSE em HTML + 6 matérias arquivadas contra link rot + 7 sínteses. Com a bibliografia teórica do eixo 05 e a literatura da camada $T_{-1}$ do eixo 12, são **31 PDFs / 9.391 p. Quatro peças sem camada de texto**, declaradas |
+| Corpus documental | **22 PDFs / 6.951 p. de fonte documental** + o acórdão do TSE em HTML + 6 matérias arquivadas contra link rot + 7 sínteses. Com a bibliografia teórica do eixo 05 e as sete peças da camada $T_{-1}$ do eixo 12, são **34 PDFs / 9.754 p.** — o eixo 12 acrescentou 363 páginas em 04/10 **sem que a documental mudasse**, que é o que a separação das duas contagens serve para mostrar. **Quatro peças sem camada de texto e uma com camada de texto errada**, declaradas |
 | Figuras | SVG da cadeia causal e cronologia navegável — **realinhadas ao codebook em 25/09**, 83 registros cobertos. São a única parte do aparato escrita à mão |
 | Relatório de pesquisa | `reports/process_tracing_8jan_relatorio.md` — §3.2 corrigido em 11/09; §2.1 e a tabela da Etapa 2 em 25/09; "Próximos passos" reescrita na mesma data. Agora tem checagem no ciclo |
 | Verificação | `bash scripts/ciclo.sh` — **oito passos**: dois geradores e seis checagens, todas com código de saída ≠ 0 em caso de falha |
@@ -1278,6 +1278,80 @@ O painel do alto dizia **60 em fonte primária / 14 confirmados / 7 contextuais*
 
 ---
 
+## 32. A descontinuidade sai do codebook, e um quarto registro deixa de ser contextual — 🔶 04/10/2026
+
+**Segunda rodada da tarefa 14, no mesmo dia.** O item 31 fechou entregando seis decisões, e a primeira delas era a mais cara: *"o par PT-01 → PT-02, com mecanismo de spin-off, codifica ruptura"*. **O pesquisador decidiu pela continuidade** e indicou a literatura — Marcelo Kunrath Silva. Esta rodada executa a decisão com três peças novas, todas lidas na fonte, e documento completo em [`projeto-pos-doc/12_CAMADA-T-1-CONJUNTURAL.md`](../projeto-pos-doc/12_CAMADA-T-1-CONJUNTURAL.md).
+
+### 32.1 A peça que nomeia o mecanismo — e desfaz uma cobrança da rodada anterior
+
+**Kunrath Silva (2018)**, *Lusotopie* 17(1):88-111, distingue sua tese das duas apropriações já na literatura — a **social**, de McAdam, Tarrow e Tilly, e a **institucional**, de Tarrow — e conclui que no caso de 2013 *"não há uma apropriação de recursos ou de estruturas organizativas, mas sim de um repertório: o protesto"* (§ 15).
+
+Isso **vindica o nome que PT-02 já usava** e **corrige o item 31.3 desta agenda**, que tomara a observação de Alonso (2012, p. 24) — *"Tilly não detalha o processo de apropriação do repertório pelos atores"* — como defeito do codebook. Não era defeito. A apropriação de repertório é mecanismo distinto da apropriação social, e é por isso que a obra de Tilly não a detalha. O achado de Alonso continua verdadeiro; a conclusão que dele se tirou estava errada, e a cobrança sai da fila da tarefa 19.
+
+### 32.2 Continuidade não é determinação, e isso entrou no próprio campo
+
+O ponto que **nenhum dos dois lados do debate fazia**, e o que mais obriga um codebook que é uma cadeia causal. Kunrath Silva (2018, § 56): *"é um equívoco afirmar que tais processos posteriores já estavam predeterminados pelo que ocorreu"* em 2013. Alonso (2023, p. 227 da edição digital): *"junho não foi uma causa primeira, da qual decorreria inevitavelmente tudo o que veio depois"*.
+
+Duas obras independentes, com teses diferentes sobre a forma do ciclo, convergem na mesma proibição. A ressalva entrou no `mecanismo_causal` de PT-02, não em nota: um campo que diz "continuidade" sem dizer isso afirma mais do que a fonte sustenta.
+
+### 32.3 O ator estava em 2013, e o codebook não o registrava
+
+O codebook punha a direita apenas em PT-02, a partir de 2015 — e era essa ausência que fazia a leitura de ruptura parecer correta. Alonso (2023) dá o ator e o nome: o **campo patriota**, que esteve na rua em junho de 2013 sem ser reconhecido como ator político, e que, segundo ela, era *"o maior dos lados de 2013, tão grande quanto ignorado em junho"* (p. 223 da edição digital). Kunrath Silva (2023, p. 77) data a organização da direita *"pelo menos desde a eleição de Lula em 2003"*. O `ator_grupo` de PT-01 e PT-02 passou a nomeá-lo.
+
+### 32.4 PT-04 sai de contextual — e a declaração do item 31.4 estava errada como conclusão geral
+
+O item 31.4 escreveu que *"a literatura sobre o bolsonarismo não está no alcance deste projeto"*, com base em duas varreduras exaustivas: os 411 DOIs das sínteses e os 145 arquivos da pasta anexada. As duas estavam certas **sobre as duas coleções**. A conclusão geral estava errada, e bastou uma peça para mostrá-lo: Kunrath Silva (2023, p. 86) registra o ciclo de 2013 como laboratório do que se emprega depois na campanha do impeachment e *"nas mobilizações de grupos políticos da extrema-direita crescentemente articulados em torno de Jair Bolsonaro e/ou do intervencionismo militar"*.
+
+> **A lição não é sobre o bolsonarismo: é sobre o que uma varredura prova.** Varredura exaustiva de duas coleções demonstra a lacuna **delas**, não a lacuna da literatura — e a diferença entre as duas afirmações é a diferença entre uma condição de pesquisa e um erro. É irmã da lição de 29/09 sobre DOI: *distância de título não prova ausência*.
+
+PT-04 passou a **`Confirmado`** quanto ao mecanismo e à genealogia do ator, e o `status_verificacao` declara nominalmente o que **não** ancorou: o repertório digital da campanha de 2018, o enquadramento "nova política" / "anti-sistema" e a validação pelo TSE. Contextuais: **4 → 3**.
+
+### 32.5 Uma armadilha de ferramenta nova, e um defeito antigo que só agora apareceu
+
+**Nenhuma das 26 âncoras novas casava na primeira tentativa**, e as duas causas são tão instrutivas quanto o conteúdo.
+
+1. **PyPDF2 injeta espaço DENTRO das palavras** em alguns PDFs — "destaca -se", "empac amentos". O defeito está no projeto desde o início e nunca havia aparecido, porque nenhuma âncora anterior caía num PDF com esse perfil. `conferir_paginas.py` passou a tentar **PyMuPDF** quando PyPDF2 não acha: é acréscimo, não troca, e as 63 âncoras anteriores seguem idênticas.
+2. **O PDF da OpenEdition tem camada de texto PRESENTE E ERRADA.** A fonte `Gentium-Book-Basic` vem subconjuntada com CMap defeituoso: o código de cada glifo é o ASCII menos 29 — espaço = 0x03, `A` = 0x24, `a` = 0x44, vírgula = 0x0F, `0` = 0x13. **Isto é pior que a digitalização sem texto de Tatagiba (2014):** lá a string vinha vazia e a ausência era visível; aqui a string vem cheia, e uma busca por qualquer frase do artigo "prova" com alta confiança que ele não a contém. O conserto é **por span**, nunca pela página, porque as fontes Roboto do mesmo arquivo saem corretas.
+
+E uma **terceira variante** de armadilha de numeração no eixo 12: **Alonso (2023) é edição digital sem paginação impressa**. Não há deslocamento a declarar porque não há página de papel no arquivo — "p. 224" é a página *deste PDF*, e quem conferir no livro impresso não vai achar o mesmo número. Declarado em `PROCEDENCIA` e repetido em cada `fonte_trecho`.
+
+### 32.6 O que esta rodada NÃO fez
+
+- **Não redatou PT-02.** A apropriação começa na segunda fase de junho de 2013; o evento que o registro codifica continua sendo o ciclo de 2015-2016. Mudar `data_hora` é decisão sua.
+- **Não renomeou nenhum outro mecanismo.** A tarefa 19 segue sendo sua, e ganhou um ponto novo: o nome "certificação" de PT-03 não fecha com a definição de *Dynamics of Contention*, que exige autoridade externa, enquanto o que a literatura documenta é validação **pela imprensa e pela opinião pública** (Kunrath Silva, 2023, p. 85).
+- **Não criou registro** para o apelo à intervenção militar de março de 2015, embora a segunda rodada reforce o caso.
+- **Não apagou a divergência.** Alonso e Mische (2016), citadas por Kunrath Silva (2018, nota 6), sustentam a descontinuidade. O `status_verificacao` de PT-02 as nomeia.
+
+---
+
+## 33. A coleta da literatura do bolsonarismo — catorze peças, nenhuma lida — 🔶 04/10/2026
+
+**Tarefa 25, primeira metade.** O pesquisador deu o recorte: o bolsonarismo **como fenômeno de mobilização social e política**, com foco nas dinâmicas de manifestação e protesto e nos **repertórios próprios do campo das direitas**. Documento completo em [`projeto-pos-doc/13_LITERATURA-BOLSONARISMO.md`](../projeto-pos-doc/13_LITERATURA-BOLSONARISMO.md).
+
+Busca no OpenAlex — escolhido porque **responde sem identificação** —, dezessete consultas em português e inglês mais nove por autor. **345 obras distintas** na união das duas rodadas, com apenas 20 em comum, o que diz que nenhuma das duas estratégias bastaria sozinha. Dezoito peças escolhidas, **catorze coletadas**, 378 páginas, em `Fontes/13_Bolsonarismo-mobilizacao/`.
+
+> **NENHUMA FOI LIDA, E NENHUMA ANCORA REGISTRO.** PT-05, PT-06 e PT-08 continuam `Contextual`, e seus `status_verificacao` continuam dizendo que a literatura não foi lida — o que é verdade, e seria falso se coleta tivesse sido confundida com leitura. A declaração está em `PROCEDENCIA` peça por peça, porque um arquivo dentro de `Fontes/` parece lastro.
+
+### 33.1 Três peças que valem antes de qualquer leitura
+
+- **A obra que PT-04 citava sem ter, agora está** — e são duas Cesarino, a de 2019 e a de 2022. Qual delas o registro queria, só a leitura dirá.
+- **Araujo e Sales (2022) cobrem exatamente 2013-2022**, Forças Armadas e bolsonarismo: é a junta entre T₋₁ conjuntural e T₋₁ operacional, que o item 31.4 chamou de "a mais cara" da camada.
+- **Fernandes e Silva (2021)**, sobre policiamento a protestos no Rio Grande do Sul, é a literatura mais próxima que a busca achou da única afirmação órfã de PT-02 — a "tolerância policial" que nenhuma das sete peças do eixo 12 sustenta. Pode confirmar, pode refutar, pode não falar do período.
+
+### 33.2 O que a coleta mostrou sobre acesso — e é resultado, não incidente
+
+**As catorze que chegaram são todas de plataformas latino-americanas ou de acesso aberto diamante.** As quatro que não chegaram são de editora comercial grande: Cambridge (429), SAGE (403), Oxford (403) e um OJS equatoriano que recusa até a página do artigo (403). **Três das quatro são declaradas ouro ou híbrida pelo OpenAlex** — isto é, de acesso aberto — e ainda assim inalcançáveis por via automatizada. Os 403 da SAGE e da Oxford confirmam o que a memória do projeto já registrava; o 429 da Cambridge contradiz, e é o único dos quatro que vale retentar.
+
+*A literatura do bolsonarismo efetivamente ao alcance deste projeto é a brasileira em acesso aberto diamante.* Campos Mello, Abranches e Avritzer — os três nomes que o item 25 listava — publicam **em livro**, e seguem fora pelo mesmo motivo que a literatura clássica brasileira da tarefa 10.
+
+### 33.3 Um descarte que vale registro
+
+A tentativa na Cambridge devolveu uma página de erro de 1,3 KB que o `curl` gravou com extensão `.pdf`. **Foi apagada.** HTML de erro guardado como PDF é defeito silencioso do tipo exato que este projeto caça — e por isso todo arquivo da coleta foi conferido para começar com `%PDF`, abrir no PyPDF2 e devolver texto na primeira página. Nenhuma das catorze tem o problema de camada de texto que o eixo 12 trouxe.
+
+E uma correção dentro do próprio documento 13: a primeira redação dizia **"365 obras distintas"**, que é a soma de 151 e 214 — e as duas listas se sobrepõem em 20. A união é **345**. **A soma de duas buscas não é a união delas**, e somar sem conferir a interseção é a forma aritmética do mesmo defeito: o número certo medindo a coisa errada.
+
+---
+
 ## Ordem de ataque — revista em 30/09/2026
 
 **A decisão que ordena tudo continua sendo a de 16/08/2026: a redação é o último item.** A ordem anterior a essa data tratava o aparato como suficiente e punha a escrita como ponto de virada; esta trata o conjunto de dados do processo político como pré-requisito.
@@ -1318,7 +1392,7 @@ O painel do alto dizia **60 em fonte primária / 14 confirmados / 7 contextuais*
 | 23 | ~~Codificar os três fatos novos~~ — **PT-18A**, registro próprio; codebook a 83 | 29 | ✅ 30/09 |
 | 24 | ~~Obter os atos de 02-03/01/2023~~ — DODF varrido; a troca de "cargos centrais" **não se confirma** | 30.1 | ✅ 30/09 |
 | 13 | ~~Decidir o "Conclusão dos julgamentos" de PT-61~~ — a expressão **não estava no balanço**; reformulada | 30.2 | ✅ 30/09 |
-| 14 | ~~Codificar a camada $T_{-1}$ conjuntural~~ — **3 de 7** codificados na fonte com página; os 4 restantes com a lacuna declarada e varrida | 31 | 🔶 04/10 |
+| 14 | ~~Codificar a camada $T_{-1}$ conjuntural~~ — **4 de 7** codificados na fonte com página, em duas rodadas; os 3 restantes com a lacuna declarada e varrida. A segunda rodada tirou a descontinuidade 2013→2015 do codebook, por decisão do pesquisador | 31, 32 | 🔶 04/10 |
 
 ### Abertas
 
@@ -1326,8 +1400,8 @@ O painel do alto dizia **60 em fonte primária / 14 confirmados / 7 contextuais*
 |:--|:--|:--|:--|
 | 10 | Acrescentar a literatura clássica brasileira (livros, sem DOI) — as sínteses têm **zero** referências sobre o Brasil | 11.4, 22.4 | — |
 | 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **27 pendentes**: 6 lidos, 7 com ficha da 1ª leva, 3 impedidos. Números gerados por `localizar_camada_a.py`, não digitados | 23, 24, 25 | acesso institucional |
-| 19 | **Decidir o nome de `mecanismo_causal`** e aplicar as sete cobranças da seção 4 do documento 09 — a tarefa 14 acrescentou duas: a apropriação de repertório que Tilly não detalha, e a descontinuidade de 2013→2015 que a literatura nega | 24.6, 25.1, 25.2, 31.3, 31.6 | decisão sua |
-| 25 | **A literatura do bolsonarismo (2018-2022)** — Cesarino, Campos Mello, Abranches, Avritzer. É o que falta para PT-04, PT-05 e PT-06 saírem de contextuais, e **não está em nenhuma das duas coleções já varridas** | 23.2, 31.4 | coleta sua |
+| 19 | **Decidir o nome de `mecanismo_causal`** e aplicar as sete cobranças da seção 4 do documento 09. A tarefa 14 acrescentou duas e **devolveu as duas**: a descontinuidade 2013→2015 foi decidida e aplicada (item 32), e a "apropriação de repertório que Tilly não detalha" era conclusão errada — Kunrath Silva (2018, § 15) mostra que é mecanismo distinto da apropriação social. **Fica uma nova:** "certificação", em PT-03, não fecha com a definição de *Dynamics of Contention*, que exige autoridade externa | 24.6, 25.1, 25.2, 31.6, 32.1, 32.6 | decisão sua |
+| 25 | **A literatura do bolsonarismo como mobilização** — 🔶 **coleta feita em 04/10**: 14 artigos de acesso aberto, 378 p., em `Fontes/13_Bolsonarismo-mobilizacao/`, **nenhum lido e nenhum ancorando registro**. PT-04 já saiu de contextual por outra via (item 32.4). **Falta a leitura**, com página, no padrão do eixo 12 — e as 4 peças barradas por Cambridge, SAGE, Oxford e um OJS equatoriano | 23.2, 31.4, 33 | leitura |
 | 15 | Higiene do repositório: licença, remoto, `.backup_pre_lula/`, ponteiros no JSON | 20, 21.4 | decisão sua |
 | 16 | **Redação do artigo** | 3, 4, 5, 6, 9, 10 | tudo acima |
 

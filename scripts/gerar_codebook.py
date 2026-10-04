@@ -270,7 +270,12 @@ PROCEDENCIA["Fontes/11_Tese-doutorado/PACCELLI_Tese-doutorado_UFJF_2024.docx"] =
 # `fonte_pagina` guarda a do PDF, que é a que conferir_paginas.py abre. O
 # deslocamento vai declarado aqui, item por item, porque é o que permite
 # converter a âncora em citação publicável.
-for _arq, _ref, _desloc, _nota in [
+# A ORIGEM entrou como quinto campo em 04/10/2026, na segunda rodada da tarefa 14:
+# as quatro primeiras peças vieram todas da mesma pasta do pesquisador, e a origem
+# estava fixa no código. As três que entraram depois vêm de três lugares distintos,
+# e de onde veio a peça é parte da proveniência, não detalhe de coleta.
+_PASTA = "Pasta de textos de ação coletiva do pesquisador — artigo revisado por pares"
+for _arq, _ref, _desloc, _nota, _orig in [
     ("TATAGIBA_Ciclos-de-protestos-e-democracia_Politica-e-Sociedade-28_2014.pdf",
      "TATAGIBA, Luciana. '1984, 1992 e 2013. Sobre ciclos de protestos e democracia no "
      "Brasil'. Política & Sociedade, Florianópolis, v. 13, n. 28, p. 35-62, set./dez. 2014. "
@@ -278,31 +283,159 @@ for _arq, _ref, _desloc, _nota in [
      "p. da revista = p. do PDF + 34",
      "SEM CAMADA DE TEXTO — é digitalização. Lido por renderização a 170 dpi, a mesma "
      "técnica usada nos dois gráficos vetoriais do balanço do STF. As transcrições deste "
-     "documento estão em EXCECOES de conferir_paginas.py, com o motivo. Ancora PT-01."),
+     "documento estão em EXCECOES de conferir_paginas.py, com o motivo. Ancora PT-01.",
+     _PASTA),
     ("TATAGIBA-GALVAO_Protestos-no-Brasil-em-tempos-de-crise_Opiniao-Publica-25-1_2019.pdf",
      "TATAGIBA, Luciana; GALVÃO, Andreia. 'Os protestos no Brasil em tempos de crise "
      "(2011-2016)'. Opinião Pública, Campinas, v. 25, n. 1, p. 63-96, jan./abr. 2019. "
      "DOI 10.1590/1807-0191201925163",
      "p. da revista = p. do PDF + 62",
      "Análise de eventos de protesto sobre a Folha de S.Paulo: 1.285 eventos entre "
-     "1/1/2011 e 31/8/2016. Ancora PT-01, PT-02 e PT-03."),
+     "1/1/2011 e 31/8/2016. Ancora PT-01, PT-02 e PT-03.",
+     _PASTA),
     ("PINTO_Trajetoria-discursiva-das-manifestacoes-de-rua_Lua-Nova-100_2017.pdf",
      "PINTO, Céli Regina Jardim. 'A trajetória discursiva das manifestações de rua no "
      "Brasil (2013-2015)'. Lua Nova, São Paulo, n. 100, p. 119-153, 2017. "
      "DOI 10.1590/0102-119153/100",
      "p. da revista = p. do PDF + 118",
      "Ancora PT-01 e PT-02. É a peça que documenta, na p. 150, faixas por intervenção "
-     "militar e o movimento 'SOS Forças Armadas' já em março de 2015."),
+     "militar e o movimento 'SOS Forças Armadas' já em março de 2015.",
+     _PASTA),
     ("ALONSO_Repertorio-segundo-Charles-Tilly_Sociologia-e-Antropologia-2-3_2012.pdf",
      "ALONSO, Angela. 'Repertório, segundo Charles Tilly: história de um conceito'. "
      "Sociologia & Antropologia, Rio de Janeiro, v. 2, n. 3, p. 21-41, 2012",
      "p. da revista = p. do PDF + 20",
      "ATENÇÃO: NÃO é a 'Alonso (2017)' que PT-01 e PT-02 citavam — essa nunca esteve no "
-     "corpus. Ancora PT-02 pela história do conceito de repertório."),
+     "corpus. Ancora PT-02 pela história do conceito de repertório.",
+     _PASTA),
+    # As três abaixo entraram em 04/10/2026, na SEGUNDA rodada da tarefa 14, e são
+    # as que sustentam a leitura de continuidade entre 2013 e 2015-2016.
+    ("KUNRATH-SILVA_Apropriacao-conservadora-do-ciclo-de-protestos_Lusotopie-17-1_2018.pdf",
+     "SILVA, Marcelo Kunrath. 'A apropriação conservadora do ciclo de protestos de 2013: "
+     "rumo aos protestos anti-Dilma?'. Lusotopie, v. 17, n. 1, p. 88-111, 2018. "
+     "DOI 10.1163/17683084-12341713",
+     "NÃO HÁ OFFSET: a edição eletrônica da OpenEdition não reproduz a paginação impressa "
+     "88-111. A unidade citável é o PARÁGRAFO (§), numerado pela própria OpenEdition; "
+     "`fonte_pagina` guarda, como sempre, a página do PDF",
+     "CAMADA DE TEXTO PRESENTE E ERRADA — a fonte Gentium-Book-Basic vem com CMap "
+     "defeituoso: o código de cada glifo é o ASCII menos 29. PyPDF2 e PyMuPDF devolvem "
+     "sopa de letras, e uma busca ingênua 'prova' que o artigo não diz nada. "
+     "conferir_paginas.py desfaz o deslocamento span por span (_desloca), porque as outras "
+     "fontes do mesmo arquivo saem corretas. É a peça que NOMEIA o mecanismo de PT-02: a "
+     "apropriação em causa não é de recursos nem de estruturas, é de um repertório (§ 15). "
+     "Ancora PT-01 e PT-02.",
+     "OpenEdition (journals.openedition.org/lusotopie/2568) — acesso aberto, "
+     "artigo revisado por pares"),
+    ("KUNRATH-SILVA_Ciclo-de-protestos-de-2013-objeto-de-disputa_Desigualdade-e-Diversidade-23_2023.pdf",
+     "SILVA, Marcelo Kunrath. 'Ciclo de protestos de 2013: contribuições do campo de estudos "
+     "de movimentos sociais e protesto para a análise de um objeto de disputa'. Desigualdade "
+     "& Diversidade, n. 23, p. 57-90, 2023. DOI 10.17771/PUCRio.DDCIS.64184",
+     "p. da revista = p. do PDF + 56",
+     "É a PRIMEIRA peça do corpus que liga o ciclo de protestos a Bolsonaro e ao "
+     "intervencionismo militar, na p. 86 impressa — e é por isso que PT-04 deixou de ser "
+     "contextual. Ancora PT-01, PT-03 e PT-04.",
+     "Maxwell PUC-Rio (maxwell.vrac.puc-rio.br/64184) — acesso aberto, "
+     "artigo revisado por pares"),
+    ("ALONSO_Treze-a-politica-de-rua-de-Lula-a-Dilma_Companhia-das-Letras_2023.pdf",
+     "ALONSO, Angela. Treze: a política de rua de Lula a Dilma. São Paulo: Companhia das "
+     "Letras, 2023. ISBN 978-85-3593-492-2",
+     "NÃO HÁ OFFSET A DECLARAR PORQUE NÃO HÁ PAGINAÇÃO IMPRESSA: é edição digital, sem "
+     "número de página de papel e sem rótulos de página no PDF. 'p. 219' é a página do PDF, "
+     "e quem conferir na edição em papel não encontrará o mesmo número. Esta é a terceira "
+     "variante de armadilha de numeração do eixo 12",
+     "Livro acadêmico, não artigo: tem capítulo de método ('História de uma pesquisa') e "
+     "lista de fontes primárias. Entra como literatura secundária, como os demais do eixo. "
+     "É a peça que dá o ATOR — o 'campo patriota', presente em junho de 2013 e então não "
+     "reconhecido como ator político. Ancora PT-01, PT-02, PT-03 e PT-04.",
+     "Exemplar fornecido pelo pesquisador em 04/10/2026 — livro de editora comercial"),
 ]:
     PROCEDENCIA["Fontes/12_Camada-T-1_Literatura/" + _arq] = (
-        "Pasta de textos de ação coletiva do pesquisador — artigo revisado por pares",
-        "literatura", "{} | {} | {}".format(_ref, _desloc, _nota))
+        _orig, "literatura", "{} | {} | {}".format(_ref, _desloc, _nota))
+
+# Eixo 13 — a literatura do bolsonarismo como fenômeno de mobilização, coletada em
+# 04/10/2026 pela tarefa 25. Catorze peças de acesso aberto, todas com DOI resolvido
+# e título conferido contra o que o OpenAlex devolve (os DOIS eixos da regra de
+# 29/09: existir não é estar bem atribuído).
+#
+# **NENHUMA FOI LIDA, E NENHUMA ANCORA REGISTRO.** Isto está escrito aqui, e não só
+# no documento 13, porque é a declaração que impede o acidente: um arquivo em
+# Fontes/ parece lastro, e estes catorze são fila de leitura. Quem for ancorar
+# registro em qualquer um deles precisa abrir, ler e pôr página — como se fez com
+# as sete peças do eixo 12.
+_COLETA25 = ("Coleta da tarefa 25 (04/10/2026) via OpenAlex — acesso aberto, "
+             "artigo revisado por pares. COLETADA, NÃO LIDA: não ancora registro")
+for _arq, _ref, _serve in [
+    ("MESSENBERG_A-direita-que-saiu-do-armario_Sociedade-e-Estado-32-3_2017.pdf",
+     "MESSENBERG, Débora. 'A direita que saiu do armário: a cosmovisão dos formadores de "
+     "opinião dos manifestantes de direita'. Sociedade e Estado, v. 32, n. 3, 2017. "
+     "DOI 10.1590/s0102-69922017.3203004",
+     "PT-02 — cosmovisão dos manifestantes de direita de 2015-2016"),
+    ("ROCHA_Imposto-e-roubo-contrapublico-ultraliberal_Dados-62-3_2019.pdf",
+     "ROCHA, Camila. \"'Imposto é Roubo!' A Formação de um Contrapúblico Ultraliberal e os "
+     "Protestos Pró-Impeachment de Dilma Rousseff\". Dados, v. 62, n. 3, 2019. "
+     "DOI 10.1590/001152582019189",
+     "PT-02 e PT-03 — formação do contrapúblico ultraliberal e os protestos pró-impeachment"),
+    ("CESARINO_Identidade-e-representacao-no-bolsonarismo_Revista-de-Antropologia-62-3_2019.pdf",
+     "CESARINO, Letícia. 'Identidade e representação no bolsonarismo'. Revista de "
+     "Antropologia, v. 62, n. 3, 2019. DOI 10.11606/2179-0892.ra.2019.165232",
+     "PT-04 — a obra que PT-04 citava sem ter; entra no corpus pela primeira vez"),
+    ("CESARINO_Bolsonarismo-sem-Bolsonaro-publicos-antiestruturais_Revista-do-IEB-82_2022.pdf",
+     "CESARINO, Letícia. 'Bolsonarismo sem Bolsonaro? Públicos antiestruturais na nova "
+     "fronteira cibernética'. Revista do Instituto de Estudos Brasileiros, n. 82, 2022. "
+     "DOI 10.11606/issn.2316-901x.v1i82p162-188",
+     "PT-06 — públicos antiestruturais e o ecossistema informacional, que é a junta da cadeia"),
+    ("TATAGIBA_Entre-as-ruas-e-as-instituicoes-impeachment_Lusotopie-17-1_2018.pdf",
+     "TATAGIBA, Luciana. 'Entre as ruas e as instituições: os protestos e o impeachment de "
+     "Dilma Rousseff'. Lusotopie, v. 17, n. 1, p. 112-135, 2018. DOI 10.1163/17683084-12341714",
+     "PT-02 e PT-03 — mesmo número da Lusotopie em que está Kunrath Silva (2018)"),
+    ("SANTOS-TANSCHEIT_Quando-velhos-atores-saem-de-cena-nova-direita_Colombia-Internacional-99_2019.pdf",
+     "SANTOS, Fabiano; TANSCHEIT, Talita. 'Quando velhos atores saem de cena: a ascensão da "
+     "nova direita política no Brasil'. Colombia Internacional, n. 99, 2019. "
+     "DOI 10.7440/colombiaint99.2019.06",
+     "PT-04 — ascensão da nova direita política"),
+    ("ARAUJO-SALES_Atuacao-politica-das-Forcas-Armadas-e-bolsonarismo_Cadernos-do-Tempo-Presente-13-1_2022.pdf",
+     "ARAUJO, Rafael; SALES, Jean Rodrigues. 'Atuação política das Forças Armadas e o "
+     "fenômeno bolsonarista no Brasil (2013-2022)'. Cadernos do Tempo Presente, v. 13, n. 1, "
+     "2022. DOI 10.33662/ctp.v13i01.17763",
+     "PT-05 e PT-12 — cobre exatamente o arco 2013-2022 do apelo militar, que é a lacuna "
+     "mais cara da camada"),
+    ("CARVALHO-TATAGIBA_Quando-o-conflito-eleitoral-extravasa-para-as-ruas_Lua-Nova-124_2025.pdf",
+     "CARVALHO, Priscila Delgado de; TATAGIBA, Luciana. 'Quando o conflito eleitoral "
+     "extravasa para as ruas: protestos e eleições presidenciais no Brasil'. Lua Nova, "
+     "n. 124, 2025. DOI 10.1590/0102-124046pd/124",
+     "PT-04 e T-1 operacional — conflito eleitoral que extravasa para as ruas"),
+    ("KAYSEL-BIANCHI_Bolsonarismo-como-coalizao-discursiva-de-extrema-direita_Caderno-CRH-38_2025.pdf",
+     "KAYSEL, André; BIANCHI, Álvaro. 'Bolsonarismo como coalizão discursiva de "
+     "extrema-direita'. Caderno CRH, v. 38, 2025. DOI 10.9771/ccrh.v38i0.66145",
+     "PT-04 — o bolsonarismo como coalizão, não como partido nem como movimento único"),
+    ("NUNES_A-palavra-e-a-coisa-bolsonarismo-como-infraestrutura_Lua-Nova-122_2024.pdf",
+     "NUNES, Rodrigo. 'A palavra e a coisa: bolsonarismo como convergência, horizonte, "
+     "infraestrutura, ecologia'. Lua Nova, n. 122, 2024. DOI 10.1590/0102-001020rn/122",
+     "PT-06 — bolsonarismo como infraestrutura e ecologia, vocabulário próximo do mecanismo "
+     "que PT-06 afirma"),
+    ("MENDONCA-FREITAS_Fake-news-e-o-repertorio-contemporaneo-de-acao-politica_Dados-66-2_2022.pdf",
+     "MENDONÇA, Ricardo Fabrino; FREITAS, Viviane Gonçalves. 'Fake News e o Repertório "
+     "Contemporâneo de Ação Política'. Dados, v. 66, n. 2, 2022. "
+     "DOI 10.1590/dados.2023.66.2.301",
+     "PT-06 — desinformação tratada como repertório, que é o vocabulário do codebook"),
+    ("MENDONCA-DOMINGUES_Protestos-contemporaneos-e-a-crise-da-democracia_RBCP-37_2021.pdf",
+     "MENDONÇA, Ricardo Fabrino; DOMINGUES, Letícia Birchal. 'Protestos contemporâneos e a "
+     "crise da democracia'. Revista Brasileira de Ciência Política, n. 37, 2021. "
+     "DOI 10.1590/0103-3352.2022.37.246424",
+     "PT-05 — protesto e erosão democrática"),
+    ("CHAGAS-CARREIRO_Far-right-digital-activism-in-polarized-contexts_Media-and-Communication-10-4_2022.pdf",
+     "CHAGAS, Viktor; CARREIRO, Rodrigo. 'Far-Right Digital Activism in Polarized Contexts'. "
+     "Media and Communication, v. 10, n. 4, 2022. DOI 10.17645/mac.v10i4.5622",
+     "PT-06 — ativismo digital de extrema-direita"),
+    ("FERNANDES-SILVA_Dinamicas-do-controle-a-acao-coletiva-policiamento_Mediacoes-26-3_2021.pdf",
+     "FERNANDES, Eduardo Georjão; SILVA, Camila Farias da. 'Dinâmicas do controle à ação "
+     "coletiva: o policiamento a protestos no Rio Grande do Sul'. Mediações, v. 26, n. 3, "
+     "2021. DOI 10.5433/2176-6665.2021v26n3p485",
+     "PT-02 — é a literatura mais próxima da 'tolerância policial' que PT-02 afirma e que "
+     "nenhuma das sete peças do eixo 12 sustenta"),
+]:
+    PROCEDENCIA["Fontes/13_Bolsonarismo-mobilizacao/" + _arq] = (
+        _COLETA25, "literatura", "{} | SERVE A: {}".format(_ref, _serve))
 
 # O que falta coletar. Alimenta a aba Pendencias_Coleta e o script baixar_fontes.sh.
 PENDENCIAS = [

@@ -162,7 +162,7 @@ Ficha completa da verificação em `../../projeto-pos-doc/08_BIBLIOGRAFIA-METODO
 
 ### 12 — Literatura da camada $T_{-1}$ conjuntural
 
-*Eixo aberto em 04/10/2026, pela tarefa 14.* Quatro artigos **revisados por pares**, vindos da pasta de textos de ação coletiva do pesquisador. Até aqui, quem ancorava registro era documento oficial, e a teoria do eixo 05 não ancorava nada; **este é o primeiro eixo de literatura secundária que ancora registro**, e é por isso que ele ficou **fora da contagem documental** em `verificar_integridade.py`: a cifra de "documentos oficiais" não pode crescer porque entrou artigo de revista.
+*Eixo aberto em 04/10/2026, pela tarefa 14, em duas rodadas no mesmo dia.* **Sete peças** — seis artigos revisados por pares e um livro acadêmico. Até aqui, quem ancorava registro era documento oficial, e a teoria do eixo 05 não ancorava nada; **este é o primeiro eixo de literatura secundária que ancora registro**, e é por isso que ele ficou **fora da contagem documental** em `verificar_integridade.py`: a cifra de "documentos oficiais" não pode crescer porque entrou artigo de revista. O eixo tem **483 páginas** e levou o corpus de 31 para 34 PDFs e de 9.391 para 9.754 páginas, **sem mexer na documental** (22 PDFs / 6.951 p.).
 
 | Arquivo | Registros | Referência | Páginas |
 |:--|:--|:--|:--|
@@ -170,13 +170,36 @@ Ficha completa da verificação em `../../projeto-pos-doc/08_BIBLIOGRAFIA-METODO
 | `TATAGIBA-GALVAO_Protestos-no-Brasil-em-tempos-de-crise_Opiniao-Publica-25-1_2019.pdf` | PT-01, PT-02, PT-03 | TATAGIBA, L.; GALVÃO, A. "Os protestos no Brasil em tempos de crise (2011-2016)". *Opinião Pública*, 25(1):63-96, 2019. DOI 10.1590/1807-0191201925163 | 34 |
 | `PINTO_Trajetoria-discursiva-das-manifestacoes-de-rua_Lua-Nova-100_2017.pdf` | PT-01, PT-02 | PINTO, C. R. J. "A trajetória discursiva das manifestações de rua no Brasil (2013-2015)". *Lua Nova*, 100:119-153, 2017. DOI 10.1590/0102-119153/100 | 37 |
 | `ALONSO_Repertorio-segundo-Charles-Tilly_Sociologia-e-Antropologia-2-3_2012.pdf` | PT-02 | ALONSO, A. "Repertório, segundo Charles Tilly: história de um conceito". *Sociologia & Antropologia*, 2(3):21-41, 2012 | 21 |
+| `KUNRATH-SILVA_Apropriacao-conservadora-do-ciclo-de-protestos_Lusotopie-17-1_2018.pdf` | PT-01, PT-02 | SILVA, M. K. "A apropriação conservadora do ciclo de protestos de 2013: rumo aos protestos anti-Dilma?". *Lusotopie*, 17(1):88-111, 2018. DOI 10.1163/17683084-12341713 | 20 |
+| `KUNRATH-SILVA_Ciclo-de-protestos-de-2013-objeto-de-disputa_Desigualdade-e-Diversidade-23_2023.pdf` | PT-01, PT-03, PT-04 | SILVA, M. K. "Ciclo de protestos de 2013: contribuições do campo de estudos de movimentos sociais e protesto para a análise de um objeto de disputa". *Desigualdade & Diversidade*, 23:57-90, 2023. DOI 10.17771/PUCRio.DDCIS.64184 | 34 |
+| `ALONSO_Treze-a-politica-de-rua-de-Lula-a-Dilma_Companhia-das-Letras_2023.pdf` | PT-01, PT-02, PT-03, PT-04 | ALONSO, A. *Treze: a política de rua de Lula a Dilma*. São Paulo: Companhia das Letras, 2023 | 309 |
 
-**Duas armadilhas declaradas, e as duas já custaram caro a este projeto em outras formas.**
+**De onde veio cada peça.** As quatro primeiras, da pasta de textos de ação coletiva do pesquisador. Kunrath Silva (2018), da OpenEdition (`journals.openedition.org/lusotopie/2568`), acesso aberto. Kunrath Silva (2023), do Maxwell PUC-Rio (`maxwell.vrac.puc-rio.br/64184`), acesso aberto. Alonso (2023), exemplar fornecido pelo pesquisador — **é o único livro de editora comercial do eixo**, e entrou pelo precedente do eixo 05, que já traz dois livros de método.
 
-1. **A numeração da revista não coincide com a do PDF em nenhum dos quatro.** `fonte_pagina` guarda a **página do PDF**, que é a que `conferir_paginas.py` abre; a da revista, citável, está em `fonte_trecho` e em `PROCEDENCIA`, com o deslocamento de cada peça. Confundi-las produziria a cifra correta no referente errado.
-2. **Tatagiba (2014) é digitalização SEM CAMADA DE TEXTO.** PyPDF2 devolve string vazia nas 28 páginas. Foi lida por **renderização a 170 dpi**, a mesma técnica usada nos gráficos vetoriais do balanço do STF, e suas duas transcrições estão em `EXCECOES`, no alto de `conferir_paginas.py`, com o motivo. É a **quarta** peça do corpus sem camada de texto.
+**Quatro armadilhas declaradas, e todas já custaram caro a este projeto em outras formas.**
 
-**ATENÇÃO — Alonso (2012) não é "Alonso (2017)".** PT-01 e PT-02 citavam "Alonso (2017)" desde agosto; essa obra nunca esteve no corpus e não foi lida. O que entrou é outro texto, sobre a história do conceito de repertório.
+1. **A numeração da revista não coincide com a do PDF em nenhum dos cinco artigos.** `fonte_pagina` guarda a **página do PDF**, que é a que `conferir_paginas.py` abre; a da revista, citável, está em `fonte_trecho` e em `PROCEDENCIA`, com o deslocamento de cada peça — 34, 62, 118, 20 e 56. Confundi-las produziria a cifra correta no referente errado.
+2. **Duas peças não têm paginação impressa, por motivos diferentes.** Kunrath Silva (2018) é a edição eletrônica da OpenEdition, que não reproduz as páginas 88-111 do impresso: a unidade citável é o **parágrafo (§)**. Alonso (2023) é **edição digital, sem número de página de papel e sem rótulo de página no PDF**: "p. 224" é a página *deste arquivo*, e quem conferir no livro em papel não vai encontrar o mesmo número.
+3. **Tatagiba (2014) é digitalização SEM CAMADA DE TEXTO.** PyPDF2 devolve string vazia nas 28 páginas. Foi lida por **renderização a 170 dpi**, a mesma técnica usada nos gráficos vetoriais do balanço do STF, e suas duas transcrições estão em `EXCECOES`, no alto de `conferir_paginas.py`, com o motivo. É a **quarta** peça do corpus sem camada de texto.
+4. **Kunrath Silva (2018) tem camada de texto PRESENTE E ERRADA**, e isto é pior que a ausência. A fonte `Gentium-Book-Basic` vem subconjuntada com CMap defeituoso: o código de cada glifo é o ASCII menos 29. PyPDF2 e PyMuPDF devolvem os dois a mesma sopa de letras, e uma busca por qualquer frase do artigo "prova" com alta confiança que ele não a contém. `conferir_paginas.py` desfaz o deslocamento **span por span** — as outras fontes do mesmo arquivo saem corretas, e consertar a página inteira estragaria o que estava bom.
+
+**No mesmo movimento, um defeito que estava lá desde o início do projeto e só apareceu agora:** **PyPDF2 injeta espaço DENTRO das palavras** em alguns PDFs ("destaca -se", "empac amentos"), e por isso nenhuma das 26 âncoras que entraram na segunda rodada casava, embora todas as frases estivessem nas páginas certas. A conferência passou a tentar PyMuPDF quando PyPDF2 não acha — **acréscimo, não troca**.
+
+**ATENÇÃO — são duas Alonso e dois Kunrath Silva, e nenhum par é a mesma coisa.** Alonso (2012) é a história do conceito de repertório; Alonso (2023) é *Treze*, sobre a política de rua. E **nenhuma das duas é a "Alonso (2017)"** que PT-01 e PT-02 citavam desde agosto: essa obra nunca esteve no corpus e não foi lida. Kunrath Silva (2018) é o artigo da *Lusotopie* sobre a apropriação conservadora; Kunrath Silva (2023) é o da *Desigualdade & Diversidade*, sobre o ciclo como objeto de disputa.
+
+---
+
+### 13 — Literatura do bolsonarismo como mobilização
+
+*Eixo aberto em 04/10/2026, pela tarefa 25.* **Catorze artigos de acesso aberto, 378 páginas**, coletados via OpenAlex sob o recorte dado pelo pesquisador: o bolsonarismo como fenômeno de mobilização social e política, com foco nas dinâmicas de manifestação e protesto e nos repertórios próprios do campo das direitas. Como o 05 e o 12, está **fora da contagem documental**.
+
+> **NENHUMA DAS CATORZE FOI LIDA, E NENHUMA ANCORA REGISTRO.** É fila de leitura, e está declarada assim em `PROCEDENCIA`, peça por peça. Um arquivo dentro de `Fontes/` parece lastro; estes não são. Quem for ancorar registro em qualquer um deles precisa abrir, ler e pôr página — o padrão que o eixo 12 estabeleceu no mesmo dia.
+
+A lista completa, com a referência de cada peça, o registro a que ela pode servir **depois de lida**, e as quatro que não chegaram, está em [`projeto-pos-doc/13_LITERATURA-BOLSONARISMO.md`](../projeto-pos-doc/13_LITERATURA-BOLSONARISMO.md). Em resumo: Messenberg (2017), Rocha (2019), Tatagiba (2018) e Fernandes e Silva (2021) para **PT-02**; Santos e Tanscheit (2019), Cesarino (2019), Kaysel e Bianchi (2025) e Carvalho e Tatagiba (2025) para **PT-04**; Araujo e Sales (2022) e Mendonça e Domingues (2021) para **PT-05**; Cesarino (2022), Nunes (2024), Mendonça e Freitas (2022) e Chagas e Carreiro (2022) para **PT-06**.
+
+**O que a coleta mostrou sobre acesso, e é resultado antes de qualquer leitura.** Das dezoito peças escolhidas, **as catorze que chegaram são todas de plataformas latino-americanas ou de acesso aberto diamante** — SciELO, portais de universidade, OpenEdition, Cogitatio. As quatro que não chegaram são de editora comercial grande: Cambridge (429), SAGE (403), Oxford (403) e um portal OJS equatoriano que recusa requisição automatizada até na página do artigo (403). Três delas são declaradas **ouro ou híbrida** pelo OpenAlex, isto é, de acesso aberto — e ainda assim inalcançáveis por via automatizada. *A literatura do bolsonarismo efetivamente ao alcance deste projeto é a brasileira em acesso aberto diamante.*
+
+**Um descarte que vale registro.** A tentativa na Cambridge devolveu uma página de erro de 1,3 KB que o `curl` gravou com extensão `.pdf`. Foi apagada. HTML de erro guardado como PDF é defeito silencioso do tipo exato que este projeto caça: todo arquivo desta coleta foi conferido para começar com `%PDF`, abrir no PyPDF2 e devolver texto na primeira página.
 
 ---
 

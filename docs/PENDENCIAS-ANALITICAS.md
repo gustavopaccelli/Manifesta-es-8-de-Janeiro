@@ -13,10 +13,10 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Frente | Estado |
 |:--|:--|
 | Codebook | **83 sub-eventos × 16 campos** — JSON, CSV e XLSX gerados de uma fonte única, com zero divergências |
-| Ancoragem documental | **79 registros** com arquivo local vinculado · 73 com página ou seção atribuída · 0 referências quebradas |
-| Classes de verificação | **61 em fonte primária** · 18 confirmados por outra via · **3 contextuais** (eram 7 até 04/10) · **0 a verificar** · 1 inferência declarada |
+| Ancoragem documental | **81 registros** com arquivo local vinculado · 75 com página ou seção atribuída · 0 referências quebradas |
+| Classes de verificação | **61 em fonte primária** · 19 confirmados por outra via · **2 contextuais** (eram 7 até 04/10) · **0 a verificar** · 1 inferência declarada |
 | Caderno de evidências | **49 registros** com página e transcrição literal |
-| Corpus documental | **22 PDFs / 6.951 p. de fonte documental** + o acórdão do TSE em HTML + 6 matérias arquivadas contra link rot + 7 sínteses. Com a bibliografia teórica do eixo 05 e as sete peças da camada $T_{-1}$ do eixo 12, são **34 PDFs / 9.754 p.** — o eixo 12 acrescentou 363 páginas em 04/10 **sem que a documental mudasse**, que é o que a separação das duas contagens serve para mostrar. **Quatro peças sem camada de texto e uma com camada de texto errada**, declaradas |
+| Corpus documental | **22 PDFs / 6.951 p. de fonte documental** + o acórdão do TSE em HTML + 6 matérias arquivadas contra link rot + 7 sínteses. Com a bibliografia teórica do eixo 05, as sete peças da camada $T_{-1}$ do eixo 12 e as dezoito do eixo 13, são **52 PDFs / 10.207 p.** — os eixos 12 e 13 acrescentaram **816 páginas** em 04/10, em três rodadas, **sem que a documental mudasse**, que é o que a separação das duas contagens serve para mostrar. **Quatro peças sem camada de texto, uma com camada de texto errada e uma sem rótulo de página algum**, declaradas |
 | Figuras | SVG da cadeia causal e cronologia navegável — **realinhadas ao codebook em 25/09**, 83 registros cobertos. São a única parte do aparato escrita à mão |
 | Relatório de pesquisa | `reports/process_tracing_8jan_relatorio.md` — §3.2 corrigido em 11/09; §2.1 e a tabela da Etapa 2 em 25/09; "Próximos passos" reescrita na mesma data. Agora tem checagem no ciclo |
 | Verificação | `bash scripts/ciclo.sh` — **oito passos**: dois geradores e seis checagens, todas com código de saída ≠ 0 em caso de falha |
@@ -1326,9 +1326,11 @@ E uma **terceira variante** de armadilha de numeração no eixo 12: **Alonso (20
 
 ## 33. A coleta da literatura do bolsonarismo — catorze peças, nenhuma lida — 🔶 04/10/2026
 
+> **ATUALIZADO NO MESMO DIA PELO ITEM 34.** O eixo foi a **dezoito** peças: o pesquisador entregou as quatro barradas, e **duas das catorze foram lidas** e ancoram registro. O que está escrito abaixo é o estado da coleta, e vale como registro do que a coleta por si mostrou.
+
 **Tarefa 25, primeira metade.** O pesquisador deu o recorte: o bolsonarismo **como fenômeno de mobilização social e política**, com foco nas dinâmicas de manifestação e protesto e nos **repertórios próprios do campo das direitas**. Documento completo em [`projeto-pos-doc/13_LITERATURA-BOLSONARISMO.md`](../projeto-pos-doc/13_LITERATURA-BOLSONARISMO.md).
 
-Busca no OpenAlex — escolhido porque **responde sem identificação** —, dezessete consultas em português e inglês mais nove por autor. **345 obras distintas** na união das duas rodadas, com apenas 20 em comum, o que diz que nenhuma das duas estratégias bastaria sozinha. Dezoito peças escolhidas, **catorze coletadas**, 378 páginas, em `Fontes/13_Bolsonarismo-mobilizacao/`.
+Busca no OpenAlex — escolhido porque **responde sem identificação** —, dezessete consultas em português e inglês mais nove por autor. **345 obras distintas** na união das duas rodadas, com apenas 20 em comum, o que diz que nenhuma das duas estratégias bastaria sozinha. Dezoito peças escolhidas, **catorze coletadas** por via automatizada, 378 páginas, em `Fontes/13_Bolsonarismo-mobilizacao/` — e as outras quatro chegaram pelas mãos do pesquisador horas depois (item 34.6).
 
 > **NENHUMA FOI LIDA, E NENHUMA ANCORA REGISTRO.** PT-05, PT-06 e PT-08 continuam `Contextual`, e seus `status_verificacao` continuam dizendo que a literatura não foi lida — o que é verdade, e seria falso se coleta tivesse sido confundida com leitura. A declaração está em `PROCEDENCIA` peça por peça, porque um arquivo dentro de `Fontes/` parece lastro.
 
@@ -1349,6 +1351,72 @@ Busca no OpenAlex — escolhido porque **responde sem identificação** —, dez
 A tentativa na Cambridge devolveu uma página de erro de 1,3 KB que o `curl` gravou com extensão `.pdf`. **Foi apagada.** HTML de erro guardado como PDF é defeito silencioso do tipo exato que este projeto caça — e por isso todo arquivo da coleta foi conferido para começar com `%PDF`, abrir no PyPDF2 e devolver texto na primeira página. Nenhuma das catorze tem o problema de camada de texto que o eixo 12 trouxe.
 
 E uma correção dentro do próprio documento 13: a primeira redação dizia **"365 obras distintas"**, que é a soma de 151 e 214 — e as duas listas se sobrepõem em 20. A união é **345**. **A soma de duas buscas não é a união delas**, e somar sem conferir a interseção é a forma aritmética do mesmo defeito: o número certo medindo a coisa errada.
+
+---
+
+## 34. A terceira rodada da tarefa 14: os oito encaminhamentos, e uma afirmação de dez anos sai do codebook — 🔶 04/10/2026
+
+**Terceira rodada do mesmo dia.** A segunda terminou com oito pontos para o pesquisador. Ele respondeu os oito, e esta rodada executou o que era executável: **sete viraram mudança de campo, um virou entrega de arquivo.** Detalhe completo em [`projeto-pos-doc/12_CAMADA-T-1-CONJUNTURAL.md`](../projeto-pos-doc/12_CAMADA-T-1-CONJUNTURAL.md), §4.
+
+Contextuais: **7 → 4 → 3 → 2**. Classes: **61 primária · 19 confirmado · 2 contextual · 1 inferência.**
+
+### 34.1 "Tolerância policial" sai do codebook, e não por falta de fonte: por contradição
+
+PT-02 afirmava, em `resposta_estatal`, **"Tolerância policial; enquadramento midiático favorável"**. A expressão estava lá desde a versão inicial de agosto e **nunca teve fonte**. A primeira rodada a procurou nas sete peças do eixo 12 e não achou; a segunda a deixou declarada como sem âncora.
+
+A leitura de Fernandes e Silva (2021) — 45 anos de policiamento a protestos no Rio Grande do Sul — **não a confirmou: contradisse.** Os autores encontram *"o uso prevalente de táticas de repressão física, pouco tolerantes à demonstração pública de demandas coletivas"* (rev. p. 492 — PDF p. 8), com **seletividade pelo grau de contestação à ordem** (rev. p. 494) e as táticas mais disruptivas mais duramente policiadas (rev. p. 498). O campo passou a dizer seletividade.
+
+**Dois limites ficam declarados, e são sérios:** a série é de **um estado** e **termina em 2015**. E uma ausência que não é evidência: os grupos de direita **não aparecem** entre os atores policiados da série, embora os autores os nomeiem na introdução. **Ausência numa série é ausência, não tolerância medida** — dizer o contrário seria o modo de falha do projeto com o sinal invertido.
+
+### 34.2 Dois mecanismos mudaram de nome, por motivo de definição
+
+- **PT-01** — de *"abertura de estrutura de oportunidade política"* para a formulação do pesquisador: **"no ciclo de 2013 há uma janela de oportunidades políticas aberta na qual as direitas passariam a disputar e ocupar posteriormente"**. Resolve a divergência que a segunda rodada só declarava: Kunrath Silva (2018, § 14) **inverte** a estrutura canônica para este caso.
+- **PT-03** — de *"certificação de eficácia"* para **"ressignificação do protesto"**, com a mudança explicada em nota no próprio registro. Certificação, em *Dynamics of Contention*, exige validação por **autoridade externa**, e o enunciado nunca nomeou autoridade alguma: era a cobrança do item 24.6, aberta em 30/09. **Esta cobrança sai da tarefa 19**; as outras sete da seção 4 do documento 09 continuam lá.
+
+### 34.3 O apelo de intervenção militar é frame, e o codebook já o tinha — faltava a genealogia
+
+O pesquisador decidiu que o apelo de março de 2015 é **frame**, não registro novo: "uma forma de desejo dos grupos envolvidos", articulado para angariar manifestantes do próprio campo. Entrou em `framing_narrativa` de PT-02.
+
+**PT-12 já codificava o mesmo frame em fonte primária**, sete anos depois. O que entrou com página foi a genealogia: *"Após junho de 2013, o pleito de uma intervenção militar constitucional foi bradada por setores conservadores da sociedade"* (Araujo e Sales, 2022, rev. p. 29 — PDF p. 4), e o artigo 142 *"desfraldado pelos ativistas favoráveis à intervenção militar"* nos atos de 2020-2021 (rev. p. 33). **O apelo tem três momentos no codebook agora — 2015, 2020-2021 e 2022 — e é o mesmo apelo.** O item 31.3 e o 32.6, que o traziam como registro em potencial, estão fechados.
+
+### 34.4 PT-05 sai de contextual. PT-06 não sai, e a recusa é o achado metodológico
+
+**PT-05 passou a `Confirmado`**: Araujo e Sales documentam a cadeia causal que o registro afirma — atos e motociatas *"com o intuito de legitimar as hostilidades do mandatário em relação aos membros dos outros poderes constitucionais"* (rev. p. 33). O que não ficou coberto está declarado nominalmente: os rótulos *"STF ditador"* e *"ativismo judicial"* não aparecem na peça.
+
+**PT-06 recebeu página no mesmo movimento e continua `Contextual`.** Repertório e enquadramento ganharam âncora; o **mecanismo** — consolidação do ecossistema informacional paralelo — segue sem leitura. O critério foi fixado por PT-04 na rodada anterior e está escrito na nota dele: *"passou a Confirmado porque a cadeia causal que ele afirma está ancorada"*. Em PT-04 e PT-05 foi a cadeia; em PT-06 foram repertório e enquadramento. **Promover aqui seria trocar o critério no meio da aplicação — a forma metodológica do modo de falha deste projeto.**
+
+**E a peça que fecharia PT-06 entrou no corpus hoje e não foi lida:** von Bülow e Abers (2024) sustentam que o bolsonarismo é **movimento social**, não só ideologia, e cobrem março/2020 a outubro/2021, o período exato de PT-06.
+
+### 34.5 A prova negativa achou um defeito meu, e uma limitação do harness
+
+**O defeito meu, corrigido antes de gravar.** A primeira redação de PT-06 transcrevia *"A reivindicação do tratamento precoce e do "kit Covid""* — com **aspas aninhadas**, porque na fonte a expressão já vem aspada. `transcricoes()` fatia `fonte_trecho` em todo caractere de aspa e fica com os índices ímpares; a aspa interna inverte a paridade, o pedaço restante fica com 43 caracteres, abaixo do mínimo de 45, e **é descartado em silêncio**. O registro entraria no ciclo com uma transcrição conferida em vez de três.
+
+> **A regra que isto deixa, e vale para todo o codebook: transcrição com aspa dentro de aspa não é conferida, e o silêncio do ciclo não distingue *conferida-e-OK* de *nunca-conferida*.**
+
+**A limitação do harness, segunda ocorrência registrada.** Injetado o defeito de trocar a p. 8 pela p. 7 em `FERNANDES E SILVA 2021`, a conferência **continuou aprovando**: `casa()` desce a janelas de 40 caracteres, e *"antes a demonstracao publica de demandas"* aparece também na p. 14, que o registro lista — os autores repetem a própria fórmula na conclusão. **A âncora está certa** (busca independente nas 17 páginas: a frase inteira só existe na p. 8), mas a prova negativa para essa peça é **inconclusiva**. É a mesma limitação que o docstring de `conferir_paginas.py` declara para PT-59.
+
+Os outros três defeitos foram pegos: página errada por um em PT-05 e em PT-04, por `conferir_paginas.py`; e vínculo apontando para a peça errada do mesmo eixo em PT-06, por `verificar_integridade.py`. **Na primeira tentativa eu havia jogado esse terceiro defeito no script errado e lido o resultado como aprovação** — erro meu de leitura, não do harness. Codebook restaurado byte a byte nas quatro injeções.
+
+### 34.6 As quatro barradas chegaram, e abrir o arquivo corrigiu duas atribuições
+
+O encaminhamento 4 pediu os links. O pesquisador os usou e **entregou as quatro peças no mesmo dia**, o que **confirma** o achado de acesso do item 33.2 e **corrige a sua formulação**: o alcance limitado era da **coleta automatizada**, não do projeto. O PDF de Bastos e Recuero traz licença **CC BY impressa na primeira página** — a obra era livre, o acesso não era.
+
+| O que a lista do projeto dizia | O que o arquivo diz |
+|:--|:--|
+| Gohn **2020** | GOHN, M. G. "Ciclos de protestos no Brasil: 1970-2019". *mundosplurales*, 6(1):93-119, **2019** — o DOI traz `.1.2019.` e o rodapé registra *"Aceptado: 17/11/2019"* |
+| Farias **e Casarões** 2022 | FARIAS, D. B. L.; CASARÕES, G.; **MAGALHÃES, D.** — **três** autores, *Global Studies Quarterly*, 2:1-13, 2022 |
+| von Bülow e Abers **2022** | *Government and Opposition*, **59**:998-1016, **2024**. O slug `gov.2022.14` é o ano da publicação on-line; **o fascículo é de 2024** |
+
+**O ano do DOI não é o ano de publicação** — armadilha de citação que entra na lista das registradas.
+
+### 34.7 O que esta rodada NÃO fez
+
+- **Não redatou PT-02.** A ressalva de datação está **redigida como nota**, por seu encaminhamento 5, e explica a diferença entre a data do evento (2015-2016, correta) e a data do ator (2011 em mobilização, 2003 em organização). Mas `data_hora` não mudou: **a nota explica a diferença, não a resolve.**
+- **Não leu as outras dezesseis peças do eixo 13**, 419 páginas. A de maior retorno é von Bülow e Abers (2024), por fechar o mecanismo de PT-06.
+- **Não promoveu PT-06**, e o item 34.4 diz por quê. **É reversível em um comando, mas muda o critério para todos.**
+- **Não reexaminou PT-08** sob o critério novo, e precisaria ser reexaminado junto se o critério mudar.
+- **Não renomeou nenhum outro mecanismo.** A tarefa 19 segue sua, agora com **sete** cobranças em vez de oito.
+- **Não decidiu** se Gohn (2019) conta como fechamento parcial da tarefa 10. É o único balanço da literatura brasileira de protesto no corpus, e a tarefa 10 existe porque *"as sínteses têm zero referências sobre o Brasil"*.
 
 ---
 
@@ -1392,7 +1460,7 @@ E uma correção dentro do próprio documento 13: a primeira redação dizia **"
 | 23 | ~~Codificar os três fatos novos~~ — **PT-18A**, registro próprio; codebook a 83 | 29 | ✅ 30/09 |
 | 24 | ~~Obter os atos de 02-03/01/2023~~ — DODF varrido; a troca de "cargos centrais" **não se confirma** | 30.1 | ✅ 30/09 |
 | 13 | ~~Decidir o "Conclusão dos julgamentos" de PT-61~~ — a expressão **não estava no balanço**; reformulada | 30.2 | ✅ 30/09 |
-| 14 | ~~Codificar a camada $T_{-1}$ conjuntural~~ — **4 de 7** codificados na fonte com página, em duas rodadas; os 3 restantes com a lacuna declarada e varrida. A segunda rodada tirou a descontinuidade 2013→2015 do codebook, por decisão do pesquisador | 31, 32 | 🔶 04/10 |
+| 14 | ~~Codificar a camada $T_{-1}$ conjuntural~~ — **5 de 7** codificados na fonte com página, em **três** rodadas; os 2 restantes com a lacuna declarada e varrida. A segunda rodada tirou a descontinuidade 2013→2015 do codebook; a terceira executou os oito encaminhamentos, renomeou dois mecanismos e **tirou de PT-02 a "tolerância policial", que a leitura contradisse** | 31, 32, 34 | 🔶 04/10 |
 
 ### Abertas
 
@@ -1400,14 +1468,16 @@ E uma correção dentro do próprio documento 13: a primeira redação dizia **"
 |:--|:--|:--|:--|
 | 10 | Acrescentar a literatura clássica brasileira (livros, sem DOI) — as sínteses têm **zero** referências sobre o Brasil | 11.4, 22.4 | — |
 | 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **27 pendentes**: 6 lidos, 7 com ficha da 1ª leva, 3 impedidos. Números gerados por `localizar_camada_a.py`, não digitados | 23, 24, 25 | acesso institucional |
-| 19 | **Decidir o nome de `mecanismo_causal`** e aplicar as sete cobranças da seção 4 do documento 09. A tarefa 14 acrescentou duas e **devolveu as duas**: a descontinuidade 2013→2015 foi decidida e aplicada (item 32), e a "apropriação de repertório que Tilly não detalha" era conclusão errada — Kunrath Silva (2018, § 15) mostra que é mecanismo distinto da apropriação social. **Fica uma nova:** "certificação", em PT-03, não fecha com a definição de *Dynamics of Contention*, que exige autoridade externa | 24.6, 25.1, 25.2, 31.6, 32.1, 32.6 | decisão sua |
-| 25 | **A literatura do bolsonarismo como mobilização** — 🔶 **coleta feita em 04/10**: 14 artigos de acesso aberto, 378 p., em `Fontes/13_Bolsonarismo-mobilizacao/`, **nenhum lido e nenhum ancorando registro**. PT-04 já saiu de contextual por outra via (item 32.4). **Falta a leitura**, com página, no padrão do eixo 12 — e as 4 peças barradas por Cambridge, SAGE, Oxford e um OJS equatoriano | 23.2, 31.4, 33 | leitura |
+| 19 | **Decidir o nome de `mecanismo_causal`** e aplicar as **sete** cobranças da seção 4 do documento 09. A tarefa 14 acrescentou três e **devolveu as três**: a descontinuidade 2013→2015 (item 32); a "apropriação de repertório que Tilly não detalha", que era conclusão errada — Kunrath Silva (2018, § 15) mostra mecanismo distinto da apropriação social; e **"certificação" em PT-03, que o pesquisador renomeou para *ressignificação do protesto* em 04/10** (item 34.2). Dois nomes de mecanismo saíram daqui decididos — PT-01 e PT-03 | 24.6, 25.1, 25.2, 31.6, 32.1, 34.2 | decisão sua |
+| 25 | **A literatura do bolsonarismo como mobilização** — 🔶 **coleta fechada em 04/10**: **18 peças, 453 p.** em `Fontes/13_Bolsonarismo-mobilizacao/` — 14 por OpenAlex e **as 4 barradas entregues pelo pesquisador** (item 34.6). **Duas foram lidas** e ancoram registro: Araujo e Sales (2022), que tirou PT-05 de contextual, e Fernandes e Silva (2021), que tirou a "tolerância policial" de PT-02. **Faltam 16, 419 p.**, e a de maior retorno é von Bülow e Abers (2024), que fecha o mecanismo de PT-06 | 23.2, 31.4, 33, 34 | leitura |
 | 15 | Higiene do repositório: licença, remoto, `.backup_pre_lula/`, ponteiros no JSON | 20, 21.4 | decisão sua |
 | 16 | **Redação do artigo** | 3, 4, 5, 6, 9, 10 | tudo acima |
 
-**Nenhuma pendência de dado depende de você** — isso valia desde 16/08, deixou de valer em 30/09 com a tarefa 24, e em 04/10 mudou de novo: a tarefa **14** fechou a parte que podia fechar e deixou uma coleta nova, a **25**, que é bibliográfica e depende de você.
+**Nenhuma pendência de dado depende de você** — isso valia desde 16/08, deixou de valer em 30/09 com a tarefa 24, e em 04/10 mudou duas vezes: a tarefa **14** fechou a parte que podia fechar e deixou a **25**, bibliográfica; e horas depois, na terceira rodada, **você entregou as quatro peças barradas e mandou ler duas**, o que fechou a coleta da 25 e tirou PT-05 de contextual. **O que resta da 25 é leitura, e a leitura não depende de você.**
 
 **As seis abertas, por natureza:** decisões suas (**15, 19**), leitura ou coleta bibliográfica (**10, 17, 25**) e a redação (**16**). **Não resta nenhuma tarefa de codificação** — a 14 era a última, e está fechada no que a evidência permitia fechar. **Só a 16 depende das outras.**
+
+> **Três decisões suas que a terceira rodada deixou, e nenhuma bloqueia o resto.** (1) **Redatar `data_hora` de PT-02** — a ressalva está redigida como nota, a diferença entre data do evento e data do ator está explicada, mas mudar o campo é seu (item 34.7). (2) **Promover ou não PT-06** — repertório e enquadramento têm página, o mecanismo não; mantive `Contextual` pelo critério que PT-04 fixou, e mudá-lo muda o critério para todos, com PT-08 a reexaminar junto (item 34.4). (3) **Se Gohn (2019) fecha parcialmente a tarefa 10** — é o único balanço da literatura brasileira de protesto no corpus, e a 10 existe por essa lacuna.
 
 > **Uma correção de contabilidade, em 04/10.** A tarefa 14 aparecia como dependente da **9** (triagem por pertinência), e a dependência estava errada: a camada A dos 411 DOIs é metodológica e de teoria geral, com **zero** referências sobre o Brasil, e nunca poderia codificar PT-01 a PT-06. A literatura que resolveu a tarefa veio de fora dos 411, de uma pasta que ninguém havia varrido. **A dependência real era de coleta brasileira — isto é, da tarefa 10 e da 25 —, não da triagem.**
 

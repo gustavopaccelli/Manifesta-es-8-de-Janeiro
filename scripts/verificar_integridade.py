@@ -211,15 +211,18 @@ def main():
         # daqueles 22 eram livros de método do eixo 05. Documento oficial é o que
         # ancora registro; livro de teoria não ancora nenhum. **A documental não muda
         # quando entra teoria** — é o que esta separação garante.
-        # Linha de base atualizada em 04/10/2026, em dois passos do mesmo dia: entram
-        # Kunrath Silva (2018 e 2023) e Alonso (2023) no eixo 12, e as 14 peças da
-        # coleta da tarefa 25 no eixo 13. A documental continua em 22 / 6.951, e é
-        # exatamente o que a separação serve para mostrar: o corpus cresceu 741
-        # páginas sem que um único documento oficial entrasse.
-        if (n, total, doc_n, doc_total) != (48, 10132, 22, 6951):
+        # Linha de base atualizada em 04/10/2026, em TRÊS passos do mesmo dia: entram
+        # Kunrath Silva (2018 e 2023) e Alonso (2023) no eixo 12; as 14 peças da
+        # coleta da tarefa 25 no eixo 13; e, na terceira rodada, as 4 peças que a
+        # coleta automatizada não alcançara (Gohn 2019, von Bülow e Abers 2024,
+        # Bastos e Recuero 2023, Farias, Casarões e Magalhães 2022), entregues pelo
+        # pesquisador. A documental continua em 22 / 6.951, e é exatamente o que a
+        # separação serve para mostrar: o corpus cresceu 816 páginas sem que um
+        # único documento oficial entrasse.
+        if (n, total, doc_n, doc_total) != (52, 10207, 22, 6951):
             avisos.append("corpus mudou: {} PDFs / {} páginas, {} documentais / {} p. "
-                          "(era 48 / 10132, 22 / 6951)".format(n, total, doc_n, doc_total))
-            print("  ~ corpus difere da linha de base de 04/10/2026 (48 PDFs / 10132 p., "
+                          "(era 52 / 10207, 22 / 6951)".format(n, total, doc_n, doc_total))
+            print("  ~ corpus difere da linha de base de 04/10/2026 (52 PDFs / 10207 p., "
                   "22 documentais / 6951 p.)")
         else:
             print("  OK — bate com o inventário")

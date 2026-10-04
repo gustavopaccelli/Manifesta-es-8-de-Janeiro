@@ -352,16 +352,27 @@ for _arq, _ref, _desloc, _nota, _orig in [
     PROCEDENCIA["Fontes/12_Camada-T-1_Literatura/" + _arq] = (
         _orig, "literatura", "{} | {} | {}".format(_ref, _desloc, _nota))
 
-# Eixo 13 — a literatura do bolsonarismo como fenômeno de mobilização, coletada em
-# 04/10/2026 pela tarefa 25. Catorze peças de acesso aberto, todas com DOI resolvido
-# e título conferido contra o que o OpenAlex devolve (os DOIS eixos da regra de
-# 29/09: existir não é estar bem atribuído).
+# Eixo 13 — a literatura do bolsonarismo como fenômeno de mobilização. DEZOITO
+# peças, em três procedências distintas, e a distinção é o que este bloco existe
+# para registrar:
 #
-# **NENHUMA FOI LIDA, E NENHUMA ANCORA REGISTRO.** Isto está escrito aqui, e não só
-# no documento 13, porque é a declaração que impede o acidente: um arquivo em
-# Fontes/ parece lastro, e estes catorze são fila de leitura. Quem for ancorar
-# registro em qualquer um deles precisa abrir, ler e pôr página — como se fez com
-# as sete peças do eixo 12.
+#   (a) DOZE coletadas em 04/10/2026 pela tarefa 25 via OpenAlex, com DOI resolvido
+#       e título conferido contra o que o OpenAlex devolve (os DOIS eixos da regra
+#       de 29/09: existir não é estar bem atribuído). **Nenhuma lida, nenhuma
+#       ancorando registro.** Isto está escrito aqui, e não só no documento 13,
+#       porque é a declaração que impede o acidente: um arquivo em Fontes/ parece
+#       lastro, e estas doze são fila de leitura.
+#
+#   (b) DUAS lidas na fonte na terceira rodada do mesmo dia, por encaminhamento do
+#       pesquisador, e que ANCORAM registro com página — Araujo e Sales (2022) e
+#       Fernandes e Silva (2021). Entram no mesmo padrão do eixo 12: offset de
+#       paginação declarado e transcrição conferida por conferir_paginas.py.
+#
+#   (c) QUATRO entregues pelo pesquisador em 04/10/2026, as mesmas que a coleta
+#       automatizada não alcançara (Cambridge, SAGE, Oxford e um OJS equatoriano).
+#       **Coletadas, não lidas.** O bloqueio era do acesso automatizado, não da
+#       obra: é o resultado que o documento 13 registra, e a entrega o confirma.
+#       Duas trazem correção de atribuição — ver o campo de nota de cada uma.
 _COLETA25 = ("Coleta da tarefa 25 (04/10/2026) via OpenAlex — acesso aberto, "
              "artigo revisado por pares. COLETADA, NÃO LIDA: não ancora registro")
 for _arq, _ref, _serve in [
@@ -393,12 +404,6 @@ for _arq, _ref, _serve in [
      "nova direita política no Brasil'. Colombia Internacional, n. 99, 2019. "
      "DOI 10.7440/colombiaint99.2019.06",
      "PT-04 — ascensão da nova direita política"),
-    ("ARAUJO-SALES_Atuacao-politica-das-Forcas-Armadas-e-bolsonarismo_Cadernos-do-Tempo-Presente-13-1_2022.pdf",
-     "ARAUJO, Rafael; SALES, Jean Rodrigues. 'Atuação política das Forças Armadas e o "
-     "fenômeno bolsonarista no Brasil (2013-2022)'. Cadernos do Tempo Presente, v. 13, n. 1, "
-     "2022. DOI 10.33662/ctp.v13i01.17763",
-     "PT-05 e PT-12 — cobre exatamente o arco 2013-2022 do apelo militar, que é a lacuna "
-     "mais cara da camada"),
     ("CARVALHO-TATAGIBA_Quando-o-conflito-eleitoral-extravasa-para-as-ruas_Lua-Nova-124_2025.pdf",
      "CARVALHO, Priscila Delgado de; TATAGIBA, Luciana. 'Quando o conflito eleitoral "
      "extravasa para as ruas: protestos e eleições presidenciais no Brasil'. Lua Nova, "
@@ -427,15 +432,100 @@ for _arq, _ref, _serve in [
      "CHAGAS, Viktor; CARREIRO, Rodrigo. 'Far-Right Digital Activism in Polarized Contexts'. "
      "Media and Communication, v. 10, n. 4, 2022. DOI 10.17645/mac.v10i4.5622",
      "PT-06 — ativismo digital de extrema-direita"),
-    ("FERNANDES-SILVA_Dinamicas-do-controle-a-acao-coletiva-policiamento_Mediacoes-26-3_2021.pdf",
-     "FERNANDES, Eduardo Georjão; SILVA, Camila Farias da. 'Dinâmicas do controle à ação "
-     "coletiva: o policiamento a protestos no Rio Grande do Sul'. Mediações, v. 26, n. 3, "
-     "2021. DOI 10.5433/2176-6665.2021v26n3p485",
-     "PT-02 — é a literatura mais próxima da 'tolerância policial' que PT-02 afirma e que "
-     "nenhuma das sete peças do eixo 12 sustenta"),
 ]:
     PROCEDENCIA["Fontes/13_Bolsonarismo-mobilizacao/" + _arq] = (
         _COLETA25, "literatura", "{} | SERVE A: {}".format(_ref, _serve))
+
+# (b) As duas LIDAS na terceira rodada de 04/10/2026, por encaminhamento do
+# pesquisador. Ancoram registro com página, e por isso declaram offset — a regra
+# do eixo 12 vale igual aqui.
+_LIDAS25 = ("Coleta da tarefa 25 (04/10/2026) via OpenAlex, LIDA NA FONTE na "
+            "terceira rodada do mesmo dia — acesso aberto, artigo revisado por "
+            "pares. ANCORA REGISTRO com página")
+for _arq, _ref, _desloc, _serve in [
+    ("ARAUJO-SALES_Atuacao-politica-das-Forcas-Armadas-e-bolsonarismo_Cadernos-do-Tempo-Presente-13-1_2022.pdf",
+     "ARAUJO, Rafael; SALES, Jean Rodrigues. 'Atuação política das Forças Armadas e o "
+     "fenômeno bolsonarista no Brasil (2013-2022)'. Cadernos do Tempo Presente, v. 13, n. 1, "
+     "p. 26-42, 2022. DOI 10.33662/ctp.v13i01.17763",
+     "PÁGINA IMPRESSA = PDF + 25, e o offset é DERIVADO, não lido: as páginas deste PDF não "
+     "imprimem número algum. O que se lê, no cabeçalho corrente de toda página, é o "
+     "intervalo do artigo — 'p. 26-42' — e o PDF tem exatamente 17 páginas, 42-26+1. A "
+     "derivação é aritmética e verificável; não é leitura de rótulo",
+     "PT-02, PT-04, PT-05 e PT-12 — a genealogia do apelo de intervenção militar depois de "
+     "junho de 2013 (PDF p. 4), a assertividade da caserna (p. 5), a instrumentalização "
+     "autoritária das manifestações (p. 6), motociatas, artigo 142 e 'kit Covid' (p. 8) e a "
+     "superação parcial da atomização das direitas depois de 2013 (p. 11)"),
+    ("FERNANDES-SILVA_Dinamicas-do-controle-a-acao-coletiva-policiamento_Mediacoes-26-3_2021.pdf",
+     "FERNANDES, Eduardo Georjão; SILVA, Camila Farias da. 'Dinâmicas do controle à ação "
+     "coletiva: o policiamento a protestos no Rio Grande do Sul'. Mediações, v. 26, n. 3, "
+     "p. 485-502, 2021. DOI 10.5433/2176-6665.2021v26n3p485",
+     "PÁGINA IMPRESSA = PDF + 484, e este offset É LIDO: a p. 1 do PDF imprime '485'",
+     "PT-02 — e resolve o conflito, em vez de declará-lo. O que PT-02 chamava de 'tolerância "
+     "policial' não se sustenta: as autoras documentam 'o uso prevalente de táticas de "
+     "repressão física, pouco tolerantes' (PDF p. 8) e seletividade pelo grau de contestação "
+     "à ordem (p. 10). DOIS LIMITES DECLARADOS: um só estado (RS) e série que termina em "
+     "2015, de modo que a peça não cobre 2015-2016 inteiro nem 2018-2022"),
+]:
+    PROCEDENCIA["Fontes/13_Bolsonarismo-mobilizacao/" + _arq] = (
+        _LIDAS25, "literatura", "{} | {} | SERVE A: {}".format(_ref, _desloc, _serve))
+
+# (c) As QUATRO que a coleta automatizada não alcançou, entregues pelo pesquisador
+# em 04/10/2026 depois que o encaminhamento 4 pediu os links. A entrega confirma o
+# achado de acesso do documento 13: o bloqueio era do acesso automatizado, não da
+# obra. COLETADAS, NÃO LIDAS — valem exatamente como as doze do bloco (a).
+#
+# E duas trazem CORREÇÃO DE ATRIBUIÇÃO, apurada ao abrir o arquivo. A lista que o
+# projeto vinha carregando dizia 'Gohn 2020' e 'Farias e Casarões 2022'. Nenhuma
+# das duas estava certa, e o padrão é o de sempre nesta pesquisa: o identificador
+# certo no referente errado.
+_ENTREGA25 = ("Entregue pelo pesquisador em 04/10/2026 (encaminhamento 4 da "
+              "terceira rodada) — peça que a coleta automatizada da tarefa 25 não "
+              "alcançou. COLETADA, NÃO LIDA: não ancora registro")
+for _arq, _ref, _desloc, _serve in [
+    ("GOHN_Ciclos-de-protestos-no-Brasil-1970-2019_Mundos-Plurales-6-1_2019.pdf",
+     "GOHN, Maria da Glória. 'Ciclos de protestos no Brasil: 1970-2019'. mundosplurales — "
+     "Revista Latinoamericana de Políticas y Acción Pública, FLACSO Sede Ecuador, v. 6, "
+     "n. 1, p. 93-119, 2019. DOI 10.17141/mundosplurales.1.2019.3925",
+     "PÁGINA IMPRESSA = PDF + 92, offset LIDO: a p. 1 do PDF imprime '93'. CORREÇÃO DE ANO: "
+     "o projeto vinha listando esta peça como 'Gohn 2020'. É de 2019 — o próprio DOI traz "
+     "'.1.2019.' e o rodapé registra 'Recibido: 3/4/2019 - Aceptado: 17/11/2019'",
+     "PT-01 a PT-04, e também a tarefa 10 — é levantamento de cinco décadas de estudos "
+     "brasileiros de protesto, com o quinto ciclo definido como 'pós junho de 2013'. É a "
+     "única peça do corpus que faz o balanço da própria literatura brasileira"),
+    ("VON-BULOW-ABERS_Denialism-and-populism-two-sides-of-a-coin_Government-and-Opposition-59_2024.pdf",
+     "VON BÜLOW, Marisa; ABERS, Rebecca Neaera. 'Denialism and Populism: Two Sides of a Coin "
+     "in Jair Bolsonaro’s Brazil'. Government and Opposition, v. 59, p. 998-1016, 2024. "
+     "DOI 10.1017/gov.2022.14",
+     "PÁGINA IMPRESSA = PDF + 997 (p. 998-1016 em 19 páginas de PDF). CORREÇÃO DE ANO, e é "
+     "uma armadilha de citação: o slug do DOI é 'gov.2022.14' e a primeira publicação "
+     "on-line é de 10/05/2022, mas o FASCÍCULO é de 2024, v. 59. O projeto vinha listando "
+     "'von Bülow e Abers 2022'. O ano do DOI não é o ano de publicação",
+     "PT-05 e PT-06 — é a peça que sustenta, com pesquisa, o que PT-06 afirma sem âncora: "
+     "as autoras argumentam que o bolsonarismo precisa ser entendido como MOVIMENTO SOCIAL, "
+     "não só como ideologia, e analisam o negacionismo pandêmico de março/2020 a "
+     "outubro/2021 — exatamente o período de PT-06"),
+    ("BASTOS-RECUERO_The-insurrectionist-playbook_Social-Media-and-Society-out-dez_2023.pdf",
+     "BASTOS, Marco; RECUERO, Raquel. 'The Insurrectionist Playbook: Jair Bolsonaro and the "
+     "National Congress of Brazil'. Social Media + Society, out.-dez. 2023, p. 1-16. "
+     "DOI 10.1177/20563051231211881",
+     "SEM OFFSET: a paginação impressa do artigo é 1-16 e o PDF tem 16 páginas. O fascículo "
+     "não traz volume nem número impressos na peça — só 'October-December 2023' —, e por "
+     "isso o nome do arquivo não os inventa",
+     "PT-06 e T-1 operacional — trata o repertório insurrecional do 8 de janeiro nas redes, "
+     "e é a peça mais próxima do objeto central desta pesquisa entre as dezoito"),
+    ("FARIAS-CASAROES-MAGALHAES_Radical-right-populism-and-the-politics-of-cruelty_Global-Studies-Quarterly-2_2022.pdf",
+     "FARIAS, Deborah Barros Leal; CASARÕES, Guilherme; MAGALHÃES, David. 'Radical Right "
+     "Populism and the Politics of Cruelty: The Case of COVID-19 in Brazil Under President "
+     "Bolsonaro'. Global Studies Quarterly, v. 2, p. 1-13, 2022. DOI 10.1093/isagsq/ksab048",
+     "SEM OFFSET: 'Global Studies Quarterly (2022) 2, 1-13' e 13 páginas de PDF. CORREÇÃO DE "
+     "AUTORIA: o projeto vinha listando 'Farias e Casarões'. São TRÊS autores — David "
+     "Magalhães (PUC-SP e FAAP) faltava. ARMADILHA DE BUSCA JÁ CONHECIDA: o texto usa "
+     "ligadura ﬁ ('deﬁned'), de modo que buscar 'defined' sem normalizar NFKC não acha",
+     "PT-05 e PT-06 — crueldade como estratégia política sob populismo de direita radical, "
+     "no caso da COVID-19. Toca o enquadramento de PT-06, não o ecossistema informacional"),
+]:
+    PROCEDENCIA["Fontes/13_Bolsonarismo-mobilizacao/" + _arq] = (
+        _ENTREGA25, "literatura", "{} | {} | SERVE A: {}".format(_ref, _desloc, _serve))
 
 # O que falta coletar. Alimenta a aba Pendencias_Coleta e o script baixar_fontes.sh.
 PENDENCIAS = [

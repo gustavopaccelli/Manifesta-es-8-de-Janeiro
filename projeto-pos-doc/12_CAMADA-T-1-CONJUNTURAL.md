@@ -1,12 +1,12 @@
 # A camada T₋₁ conjuntural, codificada sobre literatura lida na fonte
 
-**04/10/2026 — tarefa 14, em duas rodadas no mesmo dia.** Os sete registros contextuais do codebook (PT-01 a PT-06 e PT-08) sustentavam-se, desde agosto, numa lista de nomes: *"Literatura: Alonso (2017); Tatagiba (2014) — item contextual, sem fonte primária consultada"*. Nenhuma dessas obras estava no corpus e nenhuma havia sido lida.
+**04/10/2026 — tarefa 14, em três rodadas no mesmo dia.** Os sete registros contextuais do codebook (PT-01 a PT-06 e PT-08) sustentavam-se, desde agosto, numa lista de nomes: *"Literatura: Alonso (2017); Tatagiba (2014) — item contextual, sem fonte primária consultada"*. Nenhuma dessas obras estava no corpus e nenhuma havia sido lida.
 
-A **primeira rodada** trocou a lista de nomes por ancoragem com página em três registros, declarou a lacuna em quatro, e terminou entregando seis pontos que exigiam juízo do pesquisador. A **segunda rodada** executa o primeiro e maior deles — a decisão entre descontinuidade e continuidade de 2013 para 2015-2016 — com três peças novas, e por causa delas um quarto registro deixa de ser contextual.
+A **primeira rodada** trocou a lista de nomes por ancoragem com página em três registros, declarou a lacuna em quatro, e terminou entregando seis pontos que exigiam juízo do pesquisador. A **segunda rodada** executa o primeiro e maior deles — a decisão entre descontinuidade e continuidade de 2013 para 2015-2016 — com três peças novas, e por causa delas um quarto registro deixa de ser contextual. A **terceira rodada** executa os oito encaminhamentos que o pesquisador devolveu: dois mecanismos mudam de nome, uma afirmação de dez anos sai do codebook porque a leitura a contradisse, um quinto registro deixa de ser contextual — e um sexto **não** deixa, por uma razão de critério que vale registrar.
 
 O relatório de pesquisa chamava esta camada de *"a parte mais fraca do aparato e a mais exposta a um parecerista"*. Ela deixa de ser a mais fraca em 2013-2018 e continua sendo em 2019-2022, agora com o motivo escrito.
 
-Contextuais: **7 → 4 → 3**.
+Contextuais: **7 → 4 → 3 → 2**.
 
 ---
 
@@ -31,6 +31,17 @@ A primeira: **a numeração da revista não coincide com a do PDF em nenhum dos 
 A segunda: **KUNRATH SILVA 2018 não tem paginação impressa**. A edição eletrônica da OpenEdition não reproduz as páginas 88-111 do impresso; a unidade citável é o **parágrafo (§)**, numerado pela própria OpenEdition. Não há deslocamento a declarar porque não há par de numerações a confundir — há uma que existe e outra que não está no arquivo.
 
 A terceira, e é a mais escorregadia: **ALONSO 2023 também não tem paginação impressa**, mas por outro motivo — é edição digital, sem número de página de papel e sem rótulo de página no PDF. Citar "Alonso (2023, p. 224)" é citar a página **deste PDF**, e quem conferir no livro em papel não vai encontrar o mesmo número. Está declarado em `PROCEDENCIA` e repetido em cada `fonte_trecho` com a fórmula "da edição digital".
+
+### 1.1 Duas peças a mais, e vêm do eixo 13
+
+A terceira rodada leu duas peças que **não estão no eixo 12**: estavam entre as catorze que a tarefa 25 coletou no mesmo dia, declaradas como *coletadas, não lidas*, e o pesquisador mandou lê-las nesta ordem. Entraram no padrão do eixo 12 — offset declarado, transcrição conferida pelo ciclo —, mas continuam fisicamente em `Fontes/13_Bolsonarismo-mobilizacao/`, porque é de lá que vêm.
+
+| Peça | Referência | Lida | Páginas que ancoram | Offset |
+|:--|:--|:--|:--|:--|
+| **ARAUJO E SALES 2022** | ARAUJO, R.; SALES, J. R. "Atuação política das Forças Armadas e o fenômeno bolsonarista no Brasil (2013-2022)". *Cadernos do Tempo Presente*, 13(1):26-42, 2022 | **Integral** | PDF 4, 5, 6, 8, 11 | impressa = PDF + 25, **derivado** |
+| **FERNANDES E SILVA 2021** | FERNANDES, E. G.; SILVA, C. F. "Dinâmicas do controle à ação coletiva: o policiamento a protestos no Rio Grande do Sul". *Mediações*, 26(3):485-502, 2021 | **Integral** | PDF 2, 8, 10, 14 | impressa = PDF + 484, **lido** |
+
+**Uma quarta advertência de numeração, e é de outra espécie.** Nos cinco artigos do eixo 12 o deslocamento foi **lido** num rótulo de página. Em `ARAUJO E SALES 2022` não há rótulo nenhum: nenhuma página do PDF imprime número. O deslocamento de 25 é **derivado** — o cabeçalho corrente de toda página traz o intervalo do artigo, *"p. 26-42"*, e o PDF tem exatamente 17 páginas, que é 42−26+1. A derivação é aritmética e verificável, mas é derivação, e está declarada como tal em `PROCEDENCIA`. Em `FERNANDES E SILVA 2021` o offset é lido: a p. 1 do PDF imprime *485*.
 
 ---
 
@@ -112,7 +123,91 @@ PT-04 passou a **`Confirmado`** quanto ao mecanismo e à genealogia do ator. O `
 
 ---
 
-## 4. Os quatro que mudaram de classe
+## 4. Terceira rodada: os oito encaminhamentos, executados
+
+A segunda rodada terminou com oito pontos. O pesquisador respondeu os oito; **sete viraram mudança de campo e um virou entrega de arquivo**. O que segue é o que cada resposta produziu, e não a resposta em si.
+
+### 4.1 A ordem de leitura foi dada, e importava
+
+O encaminhamento 8 pediu Araujo e Sales primeiro, Fernandes e Silva depois. A ordem não é detalhe: a primeira peça datava o apelo de intervenção militar e a segunda dizia como o Estado reage a protesto. Lidas nessa ordem, a segunda responde a uma pergunta que a primeira formula. Lidas ao contrário, a conclusão sobre policiamento ficaria sem o ator a que se aplica.
+
+### 4.2 O conflito que se resolveu em vez de ficar declarado
+
+PT-02 afirmava, em `resposta_estatal`, **"Tolerância policial; enquadramento midiático favorável"**. A expressão estava no codebook desde a versão inicial de agosto e **nunca teve fonte**: a primeira rodada a procurou nas sete obras do eixo 12 e não achou; a segunda a deixou declarada como sem âncora.
+
+A leitura não a confirmou. **Contradisse.** Fernandes e Silva analisam 45 anos de policiamento a protestos e encontram *"o uso prevalente de táticas de repressão física, pouco tolerantes à demonstração pública de demandas coletivas"* (rev. p. 492 — PDF p. 8). O que existe é **seletividade, não tolerância**: *"Os dados tendem a confirmar a seletividade da ação policial sobre os grupos mais contestadores à ordem social"* (rev. p. 494 — PDF p. 10), e *"as táticas da ação coletiva mais disruptivas tendem a ser mais duramente policiadas"* (rev. p. 498 — PDF p. 14).
+
+O campo passou a dizer **policiamento seletivo pelo grau de contestação à ordem — não tolerância**, com o enquadramento midiático mantido e datado em 2013.
+
+**Dois limites desta âncora ficam declarados, e são sérios.** A série é de **um estado** (Rio Grande do Sul) e **termina em 2015**: não cobre 2016 nem o período posterior. E há uma observação que não é evidência: os grupos de direita **não aparecem** entre os atores policiados da série, embora os autores nomeiem na introdução *"a mobilização de grupos de extrema direita favoráveis à intervenção militar"* como marcador recente (rev. p. 486 — PDF p. 2). Ausência numa série é ausência, **não tolerância medida**. Dizer o contrário seria repetir o modo de falha do projeto com sinal invertido.
+
+### 4.3 O apelo à intervenção militar é frame, e isso fecha um ponto aberto desde a primeira rodada
+
+A primeira rodada achou, em Pinto (2017, rev. p. 150), faixas pedindo intervenção militar já em março de 2015 e um movimento "SOS Forças Armadas" *"pouco expressivo em número"*. O achado ficou em `fonte_trecho` sem campo que o acolhesse, e a pergunta — vira registro próprio? — foi parar na lista de decisões.
+
+O pesquisador decidiu: **é frame**, "uma forma de desejo dos grupos envolvidos", articulado "como forma de angariar mais manifestantes do campo da direita e extrema-direita que pensam ideologicamente como eles". Frame se codifica no evento que o articula, não em evento próprio — e por isso entrou em `framing_narrativa` de PT-02, não num PT novo.
+
+Isso tem uma consequência que vale notar: **o frame já estava no codebook, em fonte primária, sete anos depois.** PT-12 codifica *"Intervenção militar"* e *"SOS Forças Armadas"* desde sempre, ancorados na CPMI. O que faltava era a **genealogia**, e ela entrou com página: *"Após junho de 2013, o pleito de uma intervenção militar constitucional foi bradada por setores conservadores da sociedade"* (Araujo e Sales, 2022, rev. p. 29 — PDF p. 4). O mesmo artigo registra o artigo 142 da Constituição *"desfraldado pelos ativistas favoráveis à intervenção militar"* nos atos de 2020-2021 (rev. p. 33 — PDF p. 8). **O apelo tem três momentos no codebook agora — 2015, 2020-2021 e 2022 —, e é o mesmo apelo.**
+
+### 4.4 Dois mecanismos mudaram de nome, e os dois por motivo de definição
+
+**PT-01.** O campo dizia *"Abertura de estrutura de oportunidade política e difusão de repertório de rua massivo, posteriormente apropriado pela direita"*. A segunda rodada mostrou que Kunrath Silva (2018, § 14) **inverte** essa estrutura para este caso — a oportunidade não vem de realinhamento de elites, vem do confronto produzido pelos movimentos progressistas, lido como oportunidade pelos contramovimentos —, e deixou a divergência declarada no status, remetendo o nome à tarefa 19.
+
+O encaminhamento 2 fechou isso com uma formulação própria, que entrou no campo com as palavras do pesquisador: **"no ciclo de 2013 há uma janela de oportunidades políticas aberta na qual as direitas passariam a disputar e ocupar posteriormente"**. O campo passou a carregar também a zona de indefinição de Kunrath Silva (2023, rev. p. 79), que é o que dá conteúdo empírico à janela, e a proibição da leitura determinista, que antes só existia em PT-02.
+
+**PT-03.** De *"Certificação de eficácia"* para **"Ressignificação do protesto"**, por encaminhamento 6, que pediu que a mudança fosse explicada em nota. A explicação está em `nota_auditoria` e é esta: certificação, em *Dynamics of Contention*, é validação por **autoridade externa**, e o enunciado do registro nunca nomeou autoridade alguma — cobrança aberta em 30/09/2026 (item 24.6 da agenda). A leitura da tarefa 14 não a resolveu, **agravou**: o que a literatura documenta é validação pela imprensa e pela opinião pública. "Ressignificação" diz o que a fonte sustenta — *"destaca-se a incorporação do protesto ao repertório de ação de forças sociais e políticas identificadas à direita do espectro ideológico"* (Kunrath Silva, 2023, rev. p. 85) — e não reivindica o que ela não mostra.
+
+**Uma cobrança sai da tarefa 19.** Era a única nova que a tarefa 14 tinha acrescentado. As outras sete da seção 4 do documento 09 continuam lá.
+
+### 4.5 A ressalva de datação virou nota redigida
+
+O encaminhamento 5 pediu que a ressalva de datação de PT-02 fosse **redigida como nota**, para compor o artigo. Está em `nota_auditoria`, delimitada por `RESSALVA DE DATAÇÃO`, e diz o seguinte.
+
+O registro data o **evento** em 2015-2016 e está correto: é nesse biênio que ocorrem as marchas verde-amarelas de massa, os panelaços e a convocação pelo MBL, Vem Pra Rua e Revoltados Online. O **ator**, porém, é anterior ao evento, e a literatura dá duas datas para isso — de mobilização, *"os grupos antipetistas já estão presentes em protestos organizados em 2011, mantendo a mesma estética e slogans"* (Tatagiba e Galvão, 2019, rev. p. 82); e de organização, *"havia um intenso processo de organização e mobilização de forças sociais e políticas à direita do espectro político pelo menos desde a eleição de Lula em 2003"* (Kunrath Silva, 2023, rev. p. 77).
+
+O que 2015-2016 tem de próprio não é o surgimento do ator nem a invenção do repertório: é a **escala** — *"em 15 de março de 2015, apenas em São Paulo, apareceu coisa de 1 milhão, mobilizados por apenas um campo"* (Alonso, 2023, p. 224) — e a **convocação**, que passa a ser assumida por organizações identificadas.
+
+**A consequência analítica é a razão de a nota existir:** datar o ator em 2015 produziria exatamente a leitura de ruptura que esta tarefa retirou do codebook. A data do evento e a data do ator são coisas distintas, e o registro passa a dizer as duas. **Redatar o `data_hora` continua sendo decisão sua** — a nota explica a diferença, não a resolve.
+
+### 4.6 PT-05 sai de contextual. PT-06 não sai, e a recusa é o achado
+
+**PT-05 passou a `Confirmado`.** Araujo e Sales documentam a cadeia causal que o registro afirma: *"diversos atos e motociatas ocorreram com o intuito de legitimar as hostilidades do mandatário em relação aos membros dos outros poderes constitucionais"* (rev. p. 33 — PDF p. 8), com a intervenção militar *"para moderar o conflito entre os poderes"* entre as principais consignas, as mobilizações *"instrumentalizadas por segmentos autoritários"* (rev. p. 31 — PDF p. 6) e a caserna assumindo *"um papel mais assertivo no diálogo com líderes políticos"* (rev. p. 30 — PDF p. 5).
+
+**PT-06 recebeu página no mesmo movimento e continua contextual.** Araujo e Sales ancoram o repertório — os atos de sete de setembro e as motociatas — e o enquadramento — os pleitos da liberdade de expressão, a reivindicação do tratamento precoce e do kit Covid (rev. p. 33 — PDF p. 8). Mas o **mecanismo** que o registro afirma é a consolidação do ecossistema informacional paralelo, e esse segue sem leitura.
+
+O critério não é novo: foi PT-04 que o fixou, na rodada anterior, e está escrito na nota dele — *"passou a Confirmado porque a cadeia causal que ele afirma está ancorada"*. Em PT-04 e PT-05 o que ganhou âncora foi a cadeia causal. Em PT-06 foram repertório e enquadramento. **Promover aqui seria trocar o critério no meio da aplicação**, que é a forma metodológica do modo de falha deste projeto: o dado correto no referente errado.
+
+E há uma ironia que o registro declara: **a peça que fecharia PT-06 entrou no corpus hoje e não foi lida.** Von Bülow e Abers (2024) argumentam, com pesquisa, que o bolsonarismo precisa ser entendido como **movimento social** e não só como ideologia, e analisam o negacionismo pandêmico de março de 2020 a outubro de 2021 — o período exato de PT-06. É uma das quatro que o pesquisador entregou hoje.
+
+### 4.7 As quatro obras barradas chegaram — e duas estavam mal atribuídas na minha própria lista
+
+O encaminhamento 4 pediu os links das quatro peças que a coleta automatizada não alcançou. O pesquisador os usou e **entregou as quatro no mesmo dia**, o que confirma o achado de acesso do documento 13: *o bloqueio era do acesso automatizado, não da obra*. Entraram no eixo 13 como **coletadas, não lidas**.
+
+**Abrir os arquivos corrigiu duas atribuições que eu vinha repetindo.**
+
+| O que a lista dizia | O que o arquivo diz | Onde estava o erro |
+|:--|:--|:--|
+| Gohn **2020** | GOHN, M. G. "Ciclos de protestos no Brasil: 1970-2019". *mundosplurales*, 6(1):93-119, **2019** | O próprio DOI traz `.1.2019.`, e o rodapé registra *"Recibido: 3/4/2019 - Aceptado: 17/11/2019"* |
+| Farias **e Casarões** 2022 | FARIAS, D. B. L.; CASARÕES, G.; **MAGALHÃES, D.** "Radical Right Populism and the Politics of Cruelty". *Global Studies Quarterly*, 2:1-13, 2022 | **Três autores.** David Magalhães (PUC-SP e FAAP) faltava |
+| von Bülow e Abers **2022** | VON BÜLOW, M.; ABERS, R. N. "Denialism and Populism: Two Sides of a Coin in Jair Bolsonaro's Brazil". *Government and Opposition*, **59**:998-1016, **2024** | O slug do DOI é `gov.2022.14` e a publicação on-line é de 10/05/2022, **mas o fascículo é de 2024** |
+
+A terceira linha é a mais instrutiva, e é uma armadilha de citação que vale guardar: **o ano do DOI não é o ano de publicação.** Um artigo publicado on-line em 2022 e paginado num fascículo de 2024 tem duas datas verdadeiras, e citar a do DOI produz uma referência que não localiza o texto na revista.
+
+A quarta peça confirmou-se como esperado — Bastos e Recuero (2023), *"The Insurrectionist Playbook: Jair Bolsonaro and the National Congress of Brazil"*, *Social Media + Society*, p. 1-16 —, e é, entre as dezoito do eixo 13, **a mais próxima do objeto central desta pesquisa**.
+
+### 4.8 A prova negativa achou um defeito meu e uma limitação do harness
+
+**O defeito meu.** A primeira redação de PT-06 transcrevia *"A reivindicação do tratamento precoce e do "kit Covid""* — com **aspas aninhadas**, porque na fonte a expressão já vem aspada. `transcricoes()` fatia `fonte_trecho` em **todo** caractere de aspa e fica com os índices ímpares; a aspa interna inverte a paridade, o pedaço restante fica com 43 caracteres, abaixo do mínimo de 45, e **é descartado em silêncio**. O registro entraria no ciclo com uma transcrição conferida em vez de três, e a âncora do enquadramento sanitário não seria verificada por ninguém — um arquivo em `Fontes/` com página ao lado, parecendo lastro. Corrigido antes de gravar, com dois trechos da mesma página sem aspas internas.
+
+> **A regra que isto deixa, e vale para todo o codebook: transcrição com aspa dentro de aspa não é conferida, e o silêncio do ciclo não distingue *conferida-e-OK* de *nunca-conferida*.**
+
+**A limitação do harness.** Injetado o defeito de trocar a p. 8 pela p. 7 em `FERNANDES E SILVA 2021`, a conferência **continuou aprovando**. `casa()` desce a janelas de 40 caracteres, e *"antes a demonstracao publica de demandas"* aparece também na p. 14, que o registro lista — os autores repetem a própria fórmula na conclusão. **A âncora está certa**: a frase inteira só existe na p. 8, verificado por busca independente nas 17 páginas do PDF. Mas a prova negativa para essa peça é **inconclusiva**, e é a mesma limitação que o docstring de `conferir_paginas.py` já declara para PT-59. **Segunda ocorrência registrada.**
+
+Os outros três defeitos foram pegos: página errada por um em PT-05 e em PT-04 (por `conferir_paginas.py`), e vínculo apontando para a peça errada do mesmo eixo em PT-06 (por `verificar_integridade.py`, que é de quem é o trabalho — na primeira tentativa eu havia jogado esse defeito no script errado e lido o resultado como aprovação). Codebook restaurado byte a byte nas quatro.
+
+---
+
+## 5. Os cinco que mudaram de classe
 
 Cada linha declara o registro, o que a fonte sustenta e a âncora. **A coluna de páginas traz a página do PDF** — é a que o codebook ancora e a que `conferir_hipoteses.py` confere a cada rodada do ciclo.
 
@@ -134,59 +229,69 @@ Cada linha declara o registro, o que a fonte sustenta e a âncora. **A coluna de
 | PT-03 | o processo aberto na Câmara como resposta ao clamor da rua; a rua partida ao meio em 2016 | ALONSO 2023: 225, 226 |
 | PT-04 | o ciclo de 2013 como laboratório do que se emprega depois nas mobilizações em torno de Bolsonaro e do intervencionismo militar | KUNRATH SILVA 2023: 30 |
 | PT-04 | a presidência ocupada pela facção mais extrema do campo patriota como desfecho não planejado de um processo longo | ALONSO 2023: 227 |
+| PT-04 | o bolsonarismo como a expressão política antissistêmica derivada da crise de legitimidade da Nova República após junho de 2013; e a atomização das direitas superada "em parte" depois de 2013 | ARAUJO E SALES 2022: 11 |
+| PT-02 | a genealogia do apelo de intervenção militar: bradado por setores conservadores já depois de junho de 2013 | ARAUJO E SALES 2022: 4 |
+| PT-02 | predomínio de repressão física; seletividade pelo grau de contestação à ordem; táticas disruptivas mais duramente policiadas; a extrema direita pró-intervenção nomeada na introdução | FERNANDES E SILVA 2021: 2, 8, 10, 14 |
+| PT-05 | atos e motociatas para legitimar as hostilidades aos outros poderes; o artigo 142 desfraldado; as mobilizações instrumentalizadas por segmentos autoritários; a caserna mais assertiva | ARAUJO E SALES 2022: 5, 6, 8 |
 
-Os quatro passaram de **`Contextual`** a **`Confirmado`**. Não a `Confirmado em fonte primária`: artigo de revista e livro são fonte secundária para o evento, e o registro não reivindica mais do que tem.
+Os cinco passaram de **`Contextual`** a **`Confirmado`**. Não a `Confirmado em fonte primária`: artigo de revista e livro são fonte secundária para o evento, e o registro não reivindica mais do que tem.
 
-**Duas afirmações de PT-02 continuam sem âncora, e estão declaradas no status.** *"Tolerância policial"* não aparece em nenhuma das sete obras. E o enquadramento midiático favorável está documentado para **2013** (Kunrath Silva, 2018, § 41-45; Pinto, 2017, rev. p. 130, nota 11), **não para 2015-2016** — transferir a âncora de um período para o outro seria a cifra correta no referente errado, pela décima segunda vez.
+**Das duas afirmações de PT-02 que não tinham âncora, uma saiu do campo e a outra continua declarada.** *"Tolerância policial"* **saiu**: a terceira rodada não a achou, achou o contrário, e o campo passou a dizer seletividade (ver §4.2). O enquadramento midiático favorável continua documentado para **2013** (Kunrath Silva, 2018, § 41-45; Pinto, 2017, rev. p. 130, nota 11), **não para 2015-2016** — transferir a âncora de um período para o outro seria a cifra correta no referente errado, pela décima segunda vez.
 
 **Uma divergência de PT-03 ficou declarada em vez de resolvida.** O campo `framing_narrativa` guarda *"legalidade constitucional"*, que é o quadro do campo pró-impeachment — o que o registro deve codificar. A literatura lida adota a caracterização oposta: Tatagiba e Galvão escrevem *"2016, ano do golpe jurídico-parlamentar"* (rev. p. 65). O codebook registra o quadro do ator, não o veredito do analista.
 
 ---
 
-## 5. Os três que continuam contextuais
+## 6. Os dois que continuam contextuais
 
-**PT-05** (atrito institucional 2019-2022), **PT-06** (pandemia e ecossistema informacional) e **PT-08** (Capitólio) não mudaram de classe.
+**PT-06** (pandemia e ecossistema informacional) e **PT-08** (Capitólio) não mudaram de classe. **PT-05 saiu desta lista na terceira rodada** — ver §4.6.
 
 Varredura de conteúdo em 04/10/2026, nos **145 arquivos** da pasta anexada, com normalização NFKC: **zero ocorrências de `Bolsonaro`**, zero de `pandemia`, 2 arquivos com `negacion` e nenhum sobre o Brasil, 11 com `Capitol` e **todos anteriores a 2021**.
 
-O que a segunda rodada mudou aqui é a **precisão da lacuna**, não o seu tamanho:
+**E a varredura continua valendo apenas para o que mediu.** A lição da segunda rodada vale aqui também: varredura exaustiva de duas coleções prova a lacuna **delas**, não a lacuna da literatura. Foi uma peça de fora das duas coleções que tirou PT-04 de contextual, e foi uma peça da coleta da tarefa 25 que tirou PT-05.
 
-- **PT-05** ganhou a nota de que as peças novas cobrem a **genealogia** do atrito — Kunrath Silva (2023, rev. p. 86) nomeia o intervencionismo militar como um dos eixos em torno dos quais a extrema-direita se articula depois de 2013; Alonso (2023, p. 226 da edição digital) registra que a zona de conflito em torno da violência legítima se alça ao primeiro plano na votação do impeachment — **mas nenhuma cobre 2019-2022**. Falta a literatura que interpreta o período, não a documentação do atrito: essa PT-05A e PT-06A a PT-06C têm em fonte primária.
-- **PT-06 é o mais caro dos três.** O mecanismo que afirma — consolidação do ecossistema informacional paralelo — é a junta que liga T₋₁ conjuntural a T₋₁ operacional, e é a que está sem leitura.
+O que a terceira rodada mudou aqui é o **tamanho** da lacuna, não só a precisão:
+
+- **PT-06 é agora o mais caro dos dois, e por um motivo preciso.** Repertório e enquadramento ganharam página (Araujo e Sales, 2022, rev. p. 33). O mecanismo que o registro afirma — consolidação do ecossistema informacional paralelo — é a junta que liga T₋₁ conjuntural a T₋₁ operacional, e é a que segue sem leitura. **A peça que o fecharia está no corpus desde 04/10/2026 e não foi lida**: von Bülow e Abers (2024) cobrem março de 2020 a outubro de 2021 e sustentam que o bolsonarismo é movimento social, não só ideologia. Cesarino (2022), que o registro citava desde agosto sem ter, também entrou e também não foi lida.
 - **PT-08** segue com o evento contextual e o essencial confirmado em fonte primária: o precedente efetivamente invocado pelos organizadores como "Plano B" não foi o Capitólio, foi a revolta do Sri Lanka (CPMI, p. 614).
 
 ---
 
-## 6. O que a leitura cobra do codebook — e é decisão sua
+## 7. O que a leitura cobra do codebook — e é decisão sua
 
-Dos seis pontos que a primeira rodada deixou, **dois foram resolvidos** nesta segunda e estão riscados abaixo. Os outros quatro continuam, mais dois novos. Nenhum foi executado; todos exigem juízo.
+Dos oito pontos que as duas primeiras rodadas deixaram, **cinco estão resolvidos** e riscados abaixo — dois pela segunda rodada, três pela terceira. **Três continuam, e um deles é novo.** Nenhum dos três foi executado; todos exigem juízo.
 
 1. ~~**A descontinuidade de 2013 para 2015-2016 não é consensual, e o codebook adota um lado sem dizer.**~~ **RESOLVIDO em 04/10/2026:** você decidiu pela continuidade; PT-02 perdeu o "(spin-off)"; PT-01 e PT-02 nomeiam o campo patriota; a ressalva anti-determinista entrou no mecanismo. A divergência segue visível — Alonso e Mische (2016), citadas por Kunrath Silva (2018, nota 6), sustentam a leitura oposta.
 
 2. ~~**"Apropriação de repertório" é nome que a fonte do conceito não detalha.**~~ **RESOLVIDO:** Kunrath Silva (2018, § 15) mostra que é mecanismo distinto da apropriação social de McAdam, Tarrow e Tilly. O nome estava certo; a cobrança estava errada. Ver §3.1.
 
-3. **Os antipetistas já estavam na rua em 2011**, com *"a mesma estética e slogans que caracterizaram sua atuação nos anos de 2015 e 2016"* (Tatagiba e Galvão, rev. p. 82) — e, segundo Kunrath Silva (2023, rev. p. 77), organizados desde 2003. PT-02 continua datando o ator em 2015-2016. O `ator_grupo` passou a dizer que a origem é anterior ao ciclo, mas o campo `data_hora` não mudou: **redatar o registro é decisão sua.**
+3. **Os antipetistas já estavam na rua em 2011**, com *"a mesma estética e slogans que caracterizaram sua atuação nos anos de 2015 e 2016"* (Tatagiba e Galvão, rev. p. 82) — e, segundo Kunrath Silva (2023, rev. p. 77), organizados desde 2003. **A ressalva está redigida como nota em PT-02 desde a terceira rodada** (§4.5), por seu encaminhamento, e explica a diferença entre a data do evento e a data do ator. Mas **o campo `data_hora` continua em 2015-2016**: a nota explica a diferença, não a resolve. **Redatar o registro é decisão sua** — e é a única das três pendências antigas que a terceira rodada não fechou.
 
-4. **O apelo à intervenção militar em março de 2015 pode virar registro próprio** (§2.3) — mesma forma do PT-18A da tarefa 23, e pela mesma razão: criar registro é juízo, não execução. A segunda rodada reforça o caso: Kunrath Silva (2023, rev. p. 86) põe o intervencionismo militar no mesmo arco.
+4. ~~**O apelo à intervenção militar em março de 2015 pode virar registro próprio**~~ **RESOLVIDO em 04/10/2026:** você decidiu que é **frame**, não registro — articulado para angariar manifestantes do próprio campo. Entrou em `framing_narrativa` de PT-02; a genealogia entrou em PT-12 com página. Ver §4.3.
 
 5. **A tese de doutorado do pesquisador está no corpus e analisa exatamente estes ciclos.** `PROCEDENCIA` a declara, desde 19/08/2026, como antecedente teórico que *"NÃO é fonte de evento e não deve ancorar registro do codebook"*. A decisão foi respeitada nas duas rodadas. Vale reabri-la?
 
 6. **Alonso (2017) continua citada no relatório de pesquisa e no projeto de pesquisa**, e segue não lida. O codebook já não a cita.
 
-7. **NOVO — o mecanismo de PT-03 continua se chamando "certificação", e a definição não fecha.** *Dynamics of Contention* exige validação por **autoridade externa**; o que a literatura documenta é validação pela imprensa e pela opinião pública (Kunrath Silva, 2023, rev. p. 85). Há nome melhor na própria fonte — **ressignificação do protesto** —, e trocá-lo é tarefa 19.
+7. ~~**O mecanismo de PT-03 continua se chamando "certificação", e a definição não fecha.**~~ **RESOLVIDO em 04/10/2026:** você atribuiu **ressignificação do protesto**, e a mudança está explicada em nota no próprio registro. Ver §4.4. Esta cobrança **sai da tarefa 19**; as outras sete da seção 4 do documento 09 continuam lá.
 
-8. **NOVO — o eixo 12 agora contém um livro de editora comercial.** `ALONSO 2023` entrou seguindo o precedente do eixo 05, que já traz dois livros de método. Se o repositório algum dia ganhar remoto público (tarefa 15), isso precisa ser decidido antes, não depois.
+8. **O eixo 12 agora contém um livro de editora comercial.** `ALONSO 2023` entrou seguindo o precedente do eixo 05, que já traz dois livros de método. Se o repositório algum dia ganhar remoto público (tarefa 15), isso precisa ser decidido antes, não depois. **A terceira rodada agravou o ponto**: as quatro peças que você entregou incluem três de editoras comerciais — Cambridge, SAGE e Oxford —, duas delas com licença Creative Commons declarada na própria peça e uma sem declaração visível no PDF.
+
+9. **NOVO — PT-06 ficou contextual por escolha de critério, e o critério é reversível.** Repertório e enquadramento têm página; o mecanismo não. Mantive `Contextual` porque foi a cadeia causal que promoveu PT-04 e PT-05, e trocar o critério no meio da aplicação é o modo de falha deste projeto em forma metodológica. **Se você decidir que `Confirmado` admite registro com repertório e enquadramento ancorados e mecanismo declarado em aberto, PT-06 muda em um comando — mas o critério muda para todos, e PT-08 precisa ser reexaminado junto.** Ver §4.6.
 
 ---
 
-## 7. O que mudou no aparato
+## 8. O que mudou no aparato
 
 - **`Fontes/12_Camada-T-1_Literatura/`** — de quatro para **sete peças**. É o **primeiro caso no corpus de peça que é literatura secundária e ancora registro**: até aqui, quem ancorava era documento oficial, e teoria não ancorava nada. Por isso o eixo 12 está na lista `FORA_DA_DOCUMENTAL` de `verificar_integridade.py`, ao lado do eixo 05 — *a contagem documental não pode crescer porque entrou artigo de revista*. Corpus: **34 PDFs / 9.754 páginas**, dos quais **22 / 6.951 documentais**, inalterados. O corpus cresceu 363 páginas sem que um único documento oficial entrasse, e é exatamente isso que a separação das duas contagens serve para mostrar.
-- **`scripts/recodificar_camada_t1.py`** e **`scripts/recodificar_camada_t1_arco.py`** — as duas rodadas, as duas com `--dry-run`.
+- **`scripts/recodificar_camada_t1.py`**, **`scripts/recodificar_camada_t1_arco.py`** e **`scripts/recodificar_camada_t1_frames.py`** — as três rodadas, as três com `--dry-run`.
 - **`conferir_paginas.py`** ganhou **duas leituras adicionais da mesma página**, concatenadas para busca de substring. Não é troca de extrator, é acréscimo: o que casava antes continua casando, e as 63 âncoras anteriores seguem idênticas. Os motivos estão no docstring de `texto_pagina` e valem como armadilha registrada:
   - **PyPDF2 injeta espaço dentro das palavras** em alguns PDFs — "destaca -se", "empac amentos" — e por isso **nenhuma** das 26 âncoras novas casava, embora todas as frases estivessem nas páginas certas;
   - e o PDF da OpenEdition tem **camada de texto presente e errada**: a fonte `Gentium-Book-Basic` vem com CMap defeituoso, em que o código de cada glifo é o ASCII menos 29. É pior que a digitalização sem texto de Tatagiba (2014): lá a string vinha vazia e a ausência era visível; aqui a string vem cheia, e uma busca "prova" com alta confiança que o artigo não diz o que diz. O conserto é **por span**, nunca pela página, porque as outras fontes do mesmo arquivo saem corretas.
 - **`conferir_hipoteses.py`** confere **dois** documentos; este entrou na checagem no dia em que nasceu, pela regra de 25/09.
 - **`gerar_codebook.py`** declara a procedência das sete peças, cada uma com a sua armadilha de numeração, e passou a declarar também **de onde veio** cada peça — campo novo, porque as quatro primeiras vinham todas da mesma pasta e a origem estava fixa no código.
 
-Classes de verificação: **61 em fonte primária · 18 confirmados · 3 contextuais · 0 a verificar · 1 inferência declarada.**
+- **Terceira rodada, 04/10/2026.** O eixo 12 não cresceu: as duas peças lidas são do eixo 13 (§1.1). O corpus foi a **52 PDFs / 10.207 páginas** porque você entregou as quatro peças barradas; a contagem documental continua em **22 / 6.951**. Em três rodadas do mesmo dia o corpus cresceu **816 páginas sem que um único documento oficial entrasse** — e a linha de base de `verificar_integridade.py` foi atualizada junto, como a regra manda.
+- **`gerar_codebook.py`** reescreveu o eixo 13 em **três blocos de procedência**, porque as dezoito peças já não têm a mesma origem: doze coletadas e não lidas, duas lidas que ancoram registro, quatro entregues pelo pesquisador e não lidas. A distinção não é burocrática — é o que impede que um arquivo em `Fontes/` seja tomado por lastro.
+
+Classes de verificação: **61 em fonte primária · 19 confirmados · 2 contextuais · 0 a verificar · 1 inferência declarada.**

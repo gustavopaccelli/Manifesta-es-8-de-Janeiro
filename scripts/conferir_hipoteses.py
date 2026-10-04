@@ -42,7 +42,14 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 RAIZ = Path(__file__).resolve().parent.parent
 JSON_IN = RAIZ / "process_tracing_8jan_eventos.json"
-DOC = RAIZ / "projeto-pos-doc/11_HIPOTESES-RIVAIS-PT-28.md"
+
+# Um documento por peça escrita à mão que cita registro e página em tabela. O 12
+# entrou em 04/10/2026 com a tarefa 14, e a checagem valeu de imediato: a mesma
+# ferramenta, o mesmo formato de tabela, zero código novo.
+DOCS = [
+    RAIZ / "projeto-pos-doc/11_HIPOTESES-RIVAIS-PT-28.md",
+    RAIZ / "projeto-pos-doc/12_CAMADA-T-1-CONJUNTURAL.md",
+]
 
 # | PT-xx | ... | Rotulo: 123, 456 |  — a última célula é a das páginas
 LINHA = re.compile(r"^\|\s*(PT-[0-9]+[A-Z]?)\s*\|.*\|\s*([^|]*?)\s*\|\s*$")
@@ -76,45 +83,47 @@ def paginas_do_registro(fonte_pagina):
 def main():
     with io.open(JSON_IN, encoding="utf-8") as f:
         por_id = {r["id"]: r for r in json.load(f)["eventos"]}
-    if not DOC.exists():
-        print("ABORTA: {} nao existe".format(DOC.relative_to(RAIZ)))
-        return 1
 
     falhas, conferidas = [], 0
-    for n, linha in enumerate(io.open(DOC, encoding="utf-8"), 1):
-        m = LINHA.match(linha.rstrip("\n"))
-        if not m:
-            continue
-        rid, celula = m.group(1), m.group(2)
-        reg = por_id.get(rid)
-        if reg is None:
-            falhas.append("l.{}: registro {} nao existe no codebook".format(n, rid))
-            continue
-        ancorado = paginas_do_registro(reg.get("fonte_pagina"))
-        citou = False
-        for cm in CITACAO.finditer(celula):
-            rotulo = cm.group(1).strip().lower()
-            if rotulo not in ancorado:
-                falhas.append("l.{}: {} cita '{}', e o registro ancora {}".format(
-                    n, rid, cm.group(1).strip(), sorted(ancorado) or "nada"))
-                citou = True
+    for doc in DOCS:
+        if not doc.exists():
+            print("ABORTA: {} nao existe".format(doc.relative_to(RAIZ)))
+            return 1
+        for n, linha in enumerate(io.open(doc, encoding="utf-8"), 1):
+            m = LINHA.match(linha.rstrip("\n"))
+            if not m:
                 continue
-            for p in cm.group(2).split(","):
-                p = p.strip()
-                if not p:
+            rid, celula = m.group(1), m.group(2)
+            onde = "{} l.{}".format(doc.name, n)
+            reg = por_id.get(rid)
+            if reg is None:
+                falhas.append("{}: registro {} nao existe no codebook".format(onde, rid))
+                continue
+            ancorado = paginas_do_registro(reg.get("fonte_pagina"))
+            citou = False
+            for cm in CITACAO.finditer(celula):
+                rotulo = cm.group(1).strip().lower()
+                if rotulo not in ancorado:
+                    falhas.append("{}: {} cita '{}', e o registro ancora {}".format(
+                        onde, rid, cm.group(1).strip(), sorted(ancorado) or "nada"))
+                    citou = True
                     continue
-                citou = True
-                conferidas += 1
-                if p not in ancorado[rotulo]:
-                    falhas.append("l.{}: {} cita {} p. {}, e o registro ancora {}".format(
-                        n, rid, cm.group(1).strip(), p,
-                        ", ".join(sorted(ancorado[rotulo]))))
-        if not citou:
-            falhas.append("l.{}: {} aparece em tabela sem citar pagina".format(n, rid))
+                for p in cm.group(2).split(","):
+                    p = p.strip()
+                    if not p:
+                        continue
+                    citou = True
+                    conferidas += 1
+                    if p not in ancorado[rotulo]:
+                        falhas.append("{}: {} cita {} p. {}, e o registro ancora {}".format(
+                            onde, rid, cm.group(1).strip(), p,
+                            ", ".join(sorted(ancorado[rotulo]))))
+            if not citou:
+                falhas.append("{}: {} aparece em tabela sem citar pagina".format(onde, rid))
 
     print("=" * 74)
-    print("11_HIPOTESES-RIVAIS-PT-28.md x codebook — {} citações de página".format(
-        conferidas))
+    print("{} x codebook — {} citações de página".format(
+        " + ".join(d.name for d in DOCS), conferidas))
     print("=" * 74)
     if falhas:
         for f in falhas:

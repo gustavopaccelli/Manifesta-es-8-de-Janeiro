@@ -35,6 +35,14 @@ XLSX_P = RAIZ / "data/processed/process_tracing_8jan_codebook.xlsx"
 CLASSES = {"Confirmado em fonte primária", "Confirmado", "Contextual",
            "A verificar", "Inferência do analista"}
 
+# Eixos que NÃO entram na contagem de fonte documental. O eixo 05 está fora desde
+# sempre: livro de método não é documento oficial. O eixo 12 entrou em 04/10/2026,
+# pela tarefa 14, e é um caso novo — literatura revisada por pares que **ancora
+# registro**, coisa que a teoria do eixo 05 nunca fez. A regra que a separação
+# protege continua a mesma: a contagem documental mede documento oficial, e não
+# pode crescer porque entrou artigo de revista.
+FORA_DA_DOCUMENTAL = {"05_Bibliografia-teorica", "12_Camada-T-1_Literatura"}
+
 falhas = []
 avisos = []
 
@@ -185,7 +193,7 @@ def main():
                 p = len(PdfReader(str(arq)).pages)
                 total += p
                 n += 1
-                if arq.parent.name != "05_Bibliografia-teorica":
+                if arq.parent.name not in FORA_DA_DOCUMENTAL:
                     doc_total += p
                     doc_n += 1
             except Exception as exc:
@@ -202,10 +210,10 @@ def main():
         # daqueles 22 eram livros de método do eixo 05. Documento oficial é o que
         # ancora registro; livro de teoria não ancora nenhum. **A documental não muda
         # quando entra teoria** — é o que esta separação garante.
-        if (n, total, doc_n, doc_total) != (27, 9271, 22, 6951):
+        if (n, total, doc_n, doc_total) != (31, 9391, 22, 6951):
             avisos.append("corpus mudou: {} PDFs / {} páginas, {} documentais / {} p. "
-                          "(era 27 / 9271, 22 / 6951)".format(n, total, doc_n, doc_total))
-            print("  ~ corpus difere da linha de base de 30/09/2026 (27 PDFs / 9271 p., "
+                          "(era 31 / 9391, 22 / 6951)".format(n, total, doc_n, doc_total))
+            print("  ~ corpus difere da linha de base de 04/10/2026 (31 PDFs / 9391 p., "
                   "22 documentais / 6951 p.)")
         else:
             print("  OK — bate com o inventário")

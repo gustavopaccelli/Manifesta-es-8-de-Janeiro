@@ -90,6 +90,18 @@ EXCECOES = {
         "manchete do portal do STF (08/03/2021), citada como referência do fato; "
         "o que o registro ancora na denúncia da PGR é a correlação com a elegibilidade, "
         "e essa transcrição está na p. 8",
+    # Tatagiba (2014) entrou no corpus em 04/10/2026 e é DIGITALIZAÇÃO SEM CAMADA
+    # DE TEXTO: PyPDF2 devolve string vazia em todas as 28 páginas. As duas
+    # transcrições abaixo foram lidas por renderização a 170 dpi — a mesma técnica
+    # com que o projeto leu os gráficos vetoriais do balanço do STF em 16/08/2026 —
+    # e estão nas páginas 2 e 6 do PDF (p. 36 e 40 da revista). Quem quiser
+    # conferir, renderize: ausência de texto extraível não é ausência de conteúdo.
+    ("PT-01", "foram nacionalizados a partir da forte repressao policial"):
+        "Tatagiba (2014, p. 36) — PDF p. 2, peça sem camada de texto, lida por "
+        "renderização a 170 dpi",
+    ("PT-01", "nao houve a conformacao de um frame capaz de conferir unidade"):
+        "Tatagiba (2014, p. 40) — PDF p. 6, peça sem camada de texto, lida por "
+        "renderização a 170 dpi",
 }
 
 

@@ -13,10 +13,10 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Frente | Estado |
 |:--|:--|
 | Codebook | **83 sub-eventos × 16 campos** — JSON, CSV e XLSX gerados de uma fonte única, com zero divergências |
-| Ancoragem documental | **74 registros** com arquivo local vinculado · 68 com página ou seção atribuída · 0 referências quebradas |
-| Classes de verificação | **60 em fonte primária** · 14 confirmados por outra via · 7 contextuais · **0 a verificar** · 1 inferência declarada |
+| Ancoragem documental | **78 registros** com arquivo local vinculado · 72 com página ou seção atribuída · 0 referências quebradas |
+| Classes de verificação | **61 em fonte primária** · 17 confirmados por outra via · **4 contextuais** (eram 7 até 04/10) · **0 a verificar** · 1 inferência declarada |
 | Caderno de evidências | **49 registros** com página e transcrição literal |
-| Corpus documental | **20 PDFs / 6.819 p. de fonte documental** + o acórdão do TSE em HTML + 6 matérias arquivadas contra link rot + 7 sínteses. Com a bibliografia teórica do eixo 05, são 24 PDFs / 7.501 p. **Três peças sem camada de texto**, declaradas |
+| Corpus documental | **22 PDFs / 6.951 p. de fonte documental** + o acórdão do TSE em HTML + 6 matérias arquivadas contra link rot + 7 sínteses. Com a bibliografia teórica do eixo 05 e a literatura da camada $T_{-1}$ do eixo 12, são **31 PDFs / 9.391 p. Quatro peças sem camada de texto**, declaradas |
 | Figuras | SVG da cadeia causal e cronologia navegável — **realinhadas ao codebook em 25/09**, 83 registros cobertos. São a única parte do aparato escrita à mão |
 | Relatório de pesquisa | `reports/process_tracing_8jan_relatorio.md` — §3.2 corrigido em 11/09; §2.1 e a tabela da Etapa 2 em 25/09; "Próximos passos" reescrita na mesma data. Agora tem checagem no ciclo |
 | Verificação | `bash scripts/ciclo.sh` — **oito passos**: dois geradores e seis checagens, todas com código de saída ≠ 0 em caso de falha |
@@ -1230,6 +1230,54 @@ Reformulado para o que a fonte sustenta: **"Balanço do ciclo repressivo-judicia
 
 ---
 
+## 31. A camada $T_{-1}$ conjuntural, codificada na fonte — e a lacuna de 2018-2022 fica declarada — 🔶 04/10/2026
+
+Tarefa 14. Relatório completo em [`projeto-pos-doc/12_CAMADA-T-1-CONJUNTURAL.md`](../projeto-pos-doc/12_CAMADA-T-1-CONJUNTURAL.md).
+
+### 31.1 Três de sete, e a literatura veio de onde ninguém tinha olhado
+
+Os sete registros contextuais sustentavam-se numa lista de nomes — *"Literatura: Alonso (2017); Tatagiba (2014)"* — e **nenhuma dessas obras estava no corpus ou havia sido lida**. A pasta de textos de ação coletiva anexada à sessão tem **145 arquivos** e cobre densamente o ciclo 2013-2016. Quatro artigos revisados por pares entraram em `Fontes/12_Camada-T-1_Literatura/`: Tatagiba (2014), Tatagiba e Galvão (2019), Pinto (2017) e Alonso (2012).
+
+**PT-01, PT-02 e PT-03 passaram de `Contextual` a `Confirmado`**, com página e transcrição literal. Os contextuais caem de **7 para 4**.
+
+### 31.2 O achado que muda registro: o enquadramento do adversário na boca do ator
+
+PT-01 declarava como enquadramento **"'Não é só por 20 centavos' — antipolítica"**. Tatagiba (2014, p. 40) sustenta o oposto — *"desde o começo, foi sim uma luta por 0,20 centavos"* — e nega que tenha havido quadro unificador: *"não houve a conformação de um frame capaz de conferir unidade a essa diversidade para além do estopim"*. Pinto (2017, p. 131) traz a militante do MPL Nina Cappello: *"Interessava para vários setores dizer que a luta não era somente pelos R$ 0,20. [...] Para nós do movimento, era, sim, pelos R$ 0,20"*.
+
+E "antipolítica" muda de referente: em Pinto, o discurso antipolítico emerge **depois** da saída do MPL e está *"claramente à direita"*. O termo documentado para junho de 2013 é **antipartidarismo**.
+
+> **Quarta variante do modo de falha do projeto.** Depois da cifra correta no referente errado, do termo técnico no referente errado (PT-03) e da frase própria com proveniência emprestada (PT-61), esta é **o enquadramento do adversário atribuído ao ator**. As três primeiras eram erros de proveniência; esta inverte quem disse o quê — num registro cujo objeto é a disputa pelo sentido.
+
+### 31.3 Dois achados menores, e um deles é um registro em potencial
+
+**A obra citada nunca esteve no corpus.** "Alonso (2017)" não está em lugar algum. O que há é **Alonso (2012)**, outro texto, e ele cobra: *"Tilly não detalha o processo de apropriação do repertório pelos atores"* (p. 24). O mecanismo que PT-02 chama de apropriação não tem, na fonte do conceito, o conteúdo que o nome sugere. Entra na fila da tarefa 19, ao lado da certificação de PT-03.
+
+**A intervenção militar já estava nas ruas em março de 2015.** Pinto (2017, p. 150) documenta faixas pedindo intervenção militar, algumas em inglês, e o movimento "SOS Forças Armadas", que *"atualizava o espaço político das Forças Armadas"*. O codebook trata esse apelo em $T_{-1}$ **operacional** (PT-12), oito anos depois. Está anotado em PT-02; virar registro próprio é decisão sua.
+
+### 31.4 Os quatro que ficam, e por que não é trabalho pendente
+
+PT-04, PT-05, PT-06 e PT-08 continuam contextuais. Varredura de conteúdo nos 145 arquivos, com normalização NFKC: **zero ocorrências de "Bolsonaro"**, zero de "pandemia", e todas as de "Capitol" em obras anteriores a 2021.
+
+**É a mesma lacuna do item 23.2, achada por um terceiro caminho.** A triagem de 29/09 registrou que os 411 DOIs das sínteses trazem zero referências sobre o Brasil; a varredura de hoje confirma numa coleção independente, montada por outra pessoa com outro propósito. A literatura sobre o bolsonarismo **não está ao alcance deste projeto** — é condição a declarar no artigo, não pendência a perseguir. O status dos quatro deixou de dizer "requer fonte primária" e passou a dizer o que foi varrido, quando, e o que não se achou.
+
+### 31.5 Uma divergência que ficou declarada em vez de resolvida
+
+PT-03 guarda como enquadramento *"legalidade constitucional"*, que é o quadro do campo pró-impeachment. Tatagiba e Galvão escrevem *"2016, ano do golpe jurídico-parlamentar"* (p. 65). **O campo foi mantido**: ele codifica o quadro do ator, não o veredito do analista. A divergência está no `status_verificacao`.
+
+E uma afirmação de PT-02 continua **sem âncora**: *"tolerância policial"*. Nenhuma das quatro obras a sustenta. Está declarada no status.
+
+### 31.6 O que a leitura cobra, e o que o aparato ganhou
+
+A cobrança mais pesada não é de nome, é de desenho: **Tatagiba e Galvão negam a descontinuidade entre 2013 e 2015-2016** — *"não observamos uma descontinuidade entre 2013 e os protestos posteriores"* (p. 71) — e registram que os grupos antipetistas **já protestavam em 2011** (p. 82). O par PT-01 → PT-02, com mecanismo de *spin-off*, codifica ruptura. Se a leitura delas for adotada, o mecanismo vira difusão intraciclo e a apropriação passa a ser de escala, não de origem.
+
+No aparato: o eixo 12 entrou em `FORA_DA_DOCUMENTAL` — **a contagem documental não pode crescer porque entrou artigo de revista** —; `conferir_hipoteses.py` passou a conferir **dois** documentos em vez de um, sem lógica nova, e o documento 12 entrou na checagem no dia em que nasceu; `conferir_paginas.py` ganhou duas exceções declaradas, porque Tatagiba (2014) é **digitalização sem camada de texto**, lida por renderização a 170 dpi. Prova negativa feita com dois defeitos — página vizinha e página certa no documento errado —, os dois pegos.
+
+### 31.7 Dois números deste documento estavam velhos de novo
+
+O painel do alto dizia **60 em fonte primária / 14 confirmados / 7 contextuais** quando o codebook dizia 61 / 14 / 7, e **20 PDFs / 6.819 p.** quando o inventário já ia em 22 / 6.951. O parágrafo de fechamento do relatório de pesquisa trazia as mesmas duas cifras velhas, e `conferir_relatorio.py` **não o cobre** — ele confere a tabela da Etapa 2, as páginas e os caminhos, não a prosa de fechamento. Corrigidos nos dois lugares em 04/10. **Os buracos de checagem continuam abertos**, e é a terceira vez que esta peça envelhece sem aviso.
+
+---
+
 ## Ordem de ataque — revista em 30/09/2026
 
 **A decisão que ordena tudo continua sendo a de 16/08/2026: a redação é o último item.** A ordem anterior a essa data tratava o aparato como suficiente e punha a escrita como ponto de virada; esta trata o conjunto de dados do processo político como pré-requisito.
@@ -1270,6 +1318,7 @@ Reformulado para o que a fonte sustenta: **"Balanço do ciclo repressivo-judicia
 | 23 | ~~Codificar os três fatos novos~~ — **PT-18A**, registro próprio; codebook a 83 | 29 | ✅ 30/09 |
 | 24 | ~~Obter os atos de 02-03/01/2023~~ — DODF varrido; a troca de "cargos centrais" **não se confirma** | 30.1 | ✅ 30/09 |
 | 13 | ~~Decidir o "Conclusão dos julgamentos" de PT-61~~ — a expressão **não estava no balanço**; reformulada | 30.2 | ✅ 30/09 |
+| 14 | ~~Codificar a camada $T_{-1}$ conjuntural~~ — **3 de 7** codificados na fonte com página; os 4 restantes com a lacuna declarada e varrida | 31 | 🔶 04/10 |
 
 ### Abertas
 
@@ -1277,14 +1326,16 @@ Reformulado para o que a fonte sustenta: **"Balanço do ciclo repressivo-judicia
 |:--|:--|:--|:--|
 | 10 | Acrescentar a literatura clássica brasileira (livros, sem DOI) — as sínteses têm **zero** referências sobre o Brasil | 11.4, 22.4 | — |
 | 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **27 pendentes**: 6 lidos, 7 com ficha da 1ª leva, 3 impedidos. Números gerados por `localizar_camada_a.py`, não digitados | 23, 24, 25 | acesso institucional |
-| 19 | **Decidir o nome de `mecanismo_causal`** e aplicar as sete cobranças da seção 4 do documento 09 | 24.6, 25.1, 25.2 | decisão sua |
-| 14 | Codificar a camada $T_{-1}$ conjuntural — 7 registros ainda contextuais | 11.3, 19 | 9 |
+| 19 | **Decidir o nome de `mecanismo_causal`** e aplicar as sete cobranças da seção 4 do documento 09 — a tarefa 14 acrescentou duas: a apropriação de repertório que Tilly não detalha, e a descontinuidade de 2013→2015 que a literatura nega | 24.6, 25.1, 25.2, 31.3, 31.6 | decisão sua |
+| 25 | **A literatura do bolsonarismo (2018-2022)** — Cesarino, Campos Mello, Abranches, Avritzer. É o que falta para PT-04, PT-05 e PT-06 saírem de contextuais, e **não está em nenhuma das duas coleções já varridas** | 23.2, 31.4 | coleta sua |
 | 15 | Higiene do repositório: licença, remoto, `.backup_pre_lula/`, ponteiros no JSON | 20, 21.4 | decisão sua |
 | 16 | **Redação do artigo** | 3, 4, 5, 6, 9, 10 | tudo acima |
 
-**Nenhuma pendência de dado depende de você** — isso valia desde 16/08 e **deixou de valer em 30/09**: a tarefa **24** é coleta de fonte primária, a primeira desde agosto. Fora ela, as 82 linhas seguem ancoradas e o que falta é bibliográfico, codificação ou decisão.
+**Nenhuma pendência de dado depende de você** — isso valia desde 16/08, deixou de valer em 30/09 com a tarefa 24, e em 04/10 mudou de novo: a tarefa **14** fechou a parte que podia fechar e deixou uma coleta nova, a **25**, que é bibliográfica e depende de você.
 
-**As seis abertas, por natureza:** decisões suas (**15, 19**), leitura ou coleta bibliográfica (**10, 17**), codificação (**14**) e a redação (**16**). **Só a 16 depende das outras**; nenhuma das oito primeiras bloqueia outra, e as três decisões podem ser tomadas durante a escrita.
+**As seis abertas, por natureza:** decisões suas (**15, 19**), leitura ou coleta bibliográfica (**10, 17, 25**) e a redação (**16**). **Não resta nenhuma tarefa de codificação** — a 14 era a última, e está fechada no que a evidência permitia fechar. **Só a 16 depende das outras.**
+
+> **Uma correção de contabilidade, em 04/10.** A tarefa 14 aparecia como dependente da **9** (triagem por pertinência), e a dependência estava errada: a camada A dos 411 DOIs é metodológica e de teoria geral, com **zero** referências sobre o Brasil, e nunca poderia codificar PT-01 a PT-06. A literatura que resolveu a tarefa veio de fora dos 411, de uma pasta que ninguém havia varrido. **A dependência real era de coleta brasileira — isto é, da tarefa 10 e da 25 —, não da triagem.**
 
 > **Esta tabela envelheceu duas vezes em dois dias** — em 29/09 trazia a 18 duplicada e três números à mão na 17; em 30/09 manteve 20 e 21 como abertas depois de fechadas e não contou a 22. É a mesma lição de 25/09 batendo na peça que existe para registrar a lição. **A contagem da 17 já é gerada; o resto desta tabela não é**, e é a próxima candidata a virar script.
 

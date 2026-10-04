@@ -259,6 +259,51 @@ PROCEDENCIA["Fontes/11_Tese-doutorado/PACCELLI_Tese-doutorado_UFJF_2024.docx"] =
     "extrema-direita. NÃO é fonte de evento e não deve ancorar registro do codebook.",
 )
 
+# Literatura da camada T-1 conjuntural, incorporada em 04/10/2026 pela tarefa 14.
+# São o PRIMEIRO caso no corpus de peça que é literatura secundária E ancora
+# registro: até aqui, quem ancorava era documento oficial, e teoria não ancorava
+# nada. Por isso o eixo 12 fica FORA da contagem documental em
+# verificar_integridade.py, ao lado do eixo 05 — o número de "documentos oficiais"
+# não pode crescer porque entrou artigo de revista.
+#
+# A NUMERAÇÃO DA REVISTA NÃO COINCIDE COM A DO PDF em nenhum dos quatro, e
+# `fonte_pagina` guarda a do PDF, que é a que conferir_paginas.py abre. O
+# deslocamento vai declarado aqui, item por item, porque é o que permite
+# converter a âncora em citação publicável.
+for _arq, _ref, _desloc, _nota in [
+    ("TATAGIBA_Ciclos-de-protestos-e-democracia_Politica-e-Sociedade-28_2014.pdf",
+     "TATAGIBA, Luciana. '1984, 1992 e 2013. Sobre ciclos de protestos e democracia no "
+     "Brasil'. Política & Sociedade, Florianópolis, v. 13, n. 28, p. 35-62, set./dez. 2014. "
+     "DOI 10.5007/2175-7984.2014v13n28p35",
+     "p. da revista = p. do PDF + 34",
+     "SEM CAMADA DE TEXTO — é digitalização. Lido por renderização a 170 dpi, a mesma "
+     "técnica usada nos dois gráficos vetoriais do balanço do STF. As transcrições deste "
+     "documento estão em EXCECOES de conferir_paginas.py, com o motivo. Ancora PT-01."),
+    ("TATAGIBA-GALVAO_Protestos-no-Brasil-em-tempos-de-crise_Opiniao-Publica-25-1_2019.pdf",
+     "TATAGIBA, Luciana; GALVÃO, Andreia. 'Os protestos no Brasil em tempos de crise "
+     "(2011-2016)'. Opinião Pública, Campinas, v. 25, n. 1, p. 63-96, jan./abr. 2019. "
+     "DOI 10.1590/1807-0191201925163",
+     "p. da revista = p. do PDF + 62",
+     "Análise de eventos de protesto sobre a Folha de S.Paulo: 1.285 eventos entre "
+     "1/1/2011 e 31/8/2016. Ancora PT-01, PT-02 e PT-03."),
+    ("PINTO_Trajetoria-discursiva-das-manifestacoes-de-rua_Lua-Nova-100_2017.pdf",
+     "PINTO, Céli Regina Jardim. 'A trajetória discursiva das manifestações de rua no "
+     "Brasil (2013-2015)'. Lua Nova, São Paulo, n. 100, p. 119-153, 2017. "
+     "DOI 10.1590/0102-119153/100",
+     "p. da revista = p. do PDF + 118",
+     "Ancora PT-01 e PT-02. É a peça que documenta, na p. 150, faixas por intervenção "
+     "militar e o movimento 'SOS Forças Armadas' já em março de 2015."),
+    ("ALONSO_Repertorio-segundo-Charles-Tilly_Sociologia-e-Antropologia-2-3_2012.pdf",
+     "ALONSO, Angela. 'Repertório, segundo Charles Tilly: história de um conceito'. "
+     "Sociologia & Antropologia, Rio de Janeiro, v. 2, n. 3, p. 21-41, 2012",
+     "p. da revista = p. do PDF + 20",
+     "ATENÇÃO: NÃO é a 'Alonso (2017)' que PT-01 e PT-02 citavam — essa nunca esteve no "
+     "corpus. Ancora PT-02 pela história do conceito de repertório."),
+]:
+    PROCEDENCIA["Fontes/12_Camada-T-1_Literatura/" + _arq] = (
+        "Pasta de textos de ação coletiva do pesquisador — artigo revisado por pares",
+        "literatura", "{} | {} | {}".format(_ref, _desloc, _nota))
+
 # O que falta coletar. Alimenta a aba Pendencias_Coleta e o script baixar_fontes.sh.
 PENDENCIAS = [
     ("Decisão de transferência para a Papuda (15/01/2026)", "PT-59",

@@ -160,6 +160,24 @@ Ficha completa da verificação em `../../projeto-pos-doc/08_BIBLIOGRAFIA-METODO
 
 **O que ela não é.** Não é fonte de evento e **não ancora registro nenhum do codebook**. Declarada em `PROCEDENCIA` (`scripts/gerar_codebook.py`) com o tipo `bibliografia`, pela mesma razão das sínteses do eixo 05: é insumo de leitura e referencial, não evidência empírica sobre o 8 de janeiro. Formato `.docx`, sem paginação estável — citar por seção, não por página.
 
+### 12 — Literatura da camada $T_{-1}$ conjuntural
+
+*Eixo aberto em 04/10/2026, pela tarefa 14.* Quatro artigos **revisados por pares**, vindos da pasta de textos de ação coletiva do pesquisador. Até aqui, quem ancorava registro era documento oficial, e a teoria do eixo 05 não ancorava nada; **este é o primeiro eixo de literatura secundária que ancora registro**, e é por isso que ele ficou **fora da contagem documental** em `verificar_integridade.py`: a cifra de "documentos oficiais" não pode crescer porque entrou artigo de revista.
+
+| Arquivo | Registros | Referência | Páginas |
+|:--|:--|:--|:--|
+| `TATAGIBA_Ciclos-de-protestos-e-democracia_Politica-e-Sociedade-28_2014.pdf` | PT-01 | TATAGIBA, L. "1984, 1992 e 2013. Sobre ciclos de protestos e democracia no Brasil". *Política & Sociedade*, 13(28):35-62, 2014. DOI 10.5007/2175-7984.2014v13n28p35 | 28 |
+| `TATAGIBA-GALVAO_Protestos-no-Brasil-em-tempos-de-crise_Opiniao-Publica-25-1_2019.pdf` | PT-01, PT-02, PT-03 | TATAGIBA, L.; GALVÃO, A. "Os protestos no Brasil em tempos de crise (2011-2016)". *Opinião Pública*, 25(1):63-96, 2019. DOI 10.1590/1807-0191201925163 | 34 |
+| `PINTO_Trajetoria-discursiva-das-manifestacoes-de-rua_Lua-Nova-100_2017.pdf` | PT-01, PT-02 | PINTO, C. R. J. "A trajetória discursiva das manifestações de rua no Brasil (2013-2015)". *Lua Nova*, 100:119-153, 2017. DOI 10.1590/0102-119153/100 | 37 |
+| `ALONSO_Repertorio-segundo-Charles-Tilly_Sociologia-e-Antropologia-2-3_2012.pdf` | PT-02 | ALONSO, A. "Repertório, segundo Charles Tilly: história de um conceito". *Sociologia & Antropologia*, 2(3):21-41, 2012 | 21 |
+
+**Duas armadilhas declaradas, e as duas já custaram caro a este projeto em outras formas.**
+
+1. **A numeração da revista não coincide com a do PDF em nenhum dos quatro.** `fonte_pagina` guarda a **página do PDF**, que é a que `conferir_paginas.py` abre; a da revista, citável, está em `fonte_trecho` e em `PROCEDENCIA`, com o deslocamento de cada peça. Confundi-las produziria a cifra correta no referente errado.
+2. **Tatagiba (2014) é digitalização SEM CAMADA DE TEXTO.** PyPDF2 devolve string vazia nas 28 páginas. Foi lida por **renderização a 170 dpi**, a mesma técnica usada nos gráficos vetoriais do balanço do STF, e suas duas transcrições estão em `EXCECOES`, no alto de `conferir_paginas.py`, com o motivo. É a **quarta** peça do corpus sem camada de texto.
+
+**ATENÇÃO — Alonso (2012) não é "Alonso (2017)".** PT-01 e PT-02 citavam "Alonso (2017)" desde agosto; essa obra nunca esteve no corpus e não foi lida. O que entrou é outro texto, sobre a história do conceito de repertório.
+
 ---
 
 ## Pendências

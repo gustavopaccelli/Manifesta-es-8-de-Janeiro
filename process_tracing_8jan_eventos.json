@@ -59,7 +59,8 @@
       "2026-09-25 (PT-10) — fonte_pagina corrigido de 'CPMI: 999, 1023' para 'CPMI: 999, 1021, 1023'. A p. 1021 era nomeada em fonte_trecho e em status_verificacao e faltava no campo estruturado; foi lida no PDF e sustenta a cifra dos bloqueios ('1,3 mil bloqueios montados'). Divergência achada por scripts/conferir_relatorio.py, na primeira execução.",
       "2026-09-25 (PT-15, PT-28) — âncoras que a prosa declarava e o campo estruturado não tinha. PT-15: fonte_pagina passa de 'CPMI: 25, 53' para 'CPMI: 25, 53, 274'. PT-28: fonte_pagina passa de 'CPMI: 657' para 'CPMI: 657 | Cappelli: 57 | AP 2668: 495, 497', e fonte_local passa a declarar os três arquivos. As quatro páginas novas foram lidas no PDF antes da correção. Nenhum fato, status ou transcrição alterado. Divergências achadas por scripts/varrer_fonte_pagina.py, que compara as páginas citadas na prosa dos registros com o campo fonte_pagina.",
       "2026-09-25 (PT-02A, PT-03A) — correção de página, achada pelo conferir_paginas.py endurecido. PT-02A: 'ADC 43/44/54: 3, 9' passa a '6, 9' — a p. 3 é a autuação e a transcrição está na p. 6, onde começa o relatório. PT-03A: 'TRF-4: 395' passa a '348, 395' — a segunda transcrição está na p. 348 do volume. As duas páginas foram lidas no PDF antes da correção; nenhum fato, status ou transcrição alterado.",
-      "2026-09-25 (conferir_paginas endurecido) — a checagem amostral passou a exigir que TODA transcricao do registro seja localizada em ALGUMA pagina listada de ALGUM documento listado; antes bastava uma casar e ela parava ali. Intervalos em fonte_pagina passam a ser expandidos, a elisao '(...)' parte a citacao em fragmentos e a normalizacao de busca apaga aspas. Dois erros de pagina achados e corrigidos: PT-02A (p. 3 e a autuacao; o trecho esta na p. 6) e PT-03A (segunda transcricao na p. 348, que nao estava ancorada). RETIFICACAO DE DIAGNOSTICO: a entrada de 2026-09-11 afirma que PT-59 fora aprovado 'pela citacao errada'. A verificacao feita agora mostra que o dispositivo COMECA na p. 33 e SEGUE ate a p. 36, e que a janela casada na p. 36 e parte legitima da mesma transcricao, 300 caracteres adiante. O vinculo antigo era INCOMPLETO, nao falso. A correcao de 11/09 continua valida; o diagnostico e que estava mais forte que a evidencia."
+      "2026-09-25 (conferir_paginas endurecido) — a checagem amostral passou a exigir que TODA transcricao do registro seja localizada em ALGUMA pagina listada de ALGUM documento listado; antes bastava uma casar e ela parava ali. Intervalos em fonte_pagina passam a ser expandidos, a elisao '(...)' parte a citacao em fragmentos e a normalizacao de busca apaga aspas. Dois erros de pagina achados e corrigidos: PT-02A (p. 3 e a autuacao; o trecho esta na p. 6) e PT-03A (segunda transcricao na p. 348, que nao estava ancorada). RETIFICACAO DE DIAGNOSTICO: a entrada de 2026-09-11 afirma que PT-59 fora aprovado 'pela citacao errada'. A verificacao feita agora mostra que o dispositivo COMECA na p. 33 e SEGUE ate a p. 36, e que a janela casada na p. 36 e parte legitima da mesma transcricao, 300 caracteres adiante. O vinculo antigo era INCOMPLETO, nao falso. A correcao de 11/09 continua valida; o diagnostico e que estava mais forte que a evidencia.",
+      "2026-10-04 (tarefa 14) — camada T-1 conjuntural codificada sobre literatura lida na fonte. Entram no corpus quatro artigos revisados por pares, em Fontes/12_Camada-T-1_Literatura/: Tatagiba (2014), Tatagiba e Galvão (2019), Pinto (2017) e Alonso (2012). PT-01, PT-02 e PT-03 passam de Contextual a Confirmado, com página. PT-04, PT-05, PT-06 e PT-08 permanecem contextuais, agora com a lacuna datada e a varredura declarada. Três achados: o enquadramento de PT-01 era o do adversário, não o do ator; Alonso (2017), citada em dois registros, nunca esteve no corpus; e o apelo à intervenção militar está documentado nas ruas em março de 2015, oito anos antes de PT-12. Contagem de contextuais: 7 -> 4."
     ],
     "nota_numeracao": "Os identificadores com sufixo alfabético (PT-03A…PT-06C) foram inseridos em revisão posterior e mantêm a ordem cronológica. A numeração base (PT-01…PT-62) não foi alterada.",
     "vocabulario_status_classe": [
@@ -93,7 +94,11 @@
       "EP 169-Transferência": "Fontes/04_T+1_Resposta-institucional/STF_EP-169_Decisao-Transferencia-Papuda_2026-01-15.pdf",
       "EP 169-Domiciliar": "Fontes/04_T+1_Resposta-institucional/STF_EP-169_Decisao-Prisao-Domiciliar_2026-03-24.pdf",
       "DODF 001": "Fontes/02_T-1_Articulacao/DODF-001_Decreto-01-01-2023_Nomeacao-Torres-SSPDF_2023-01-02.pdf",
-      "DODF 003": "Fontes/02_T-1_Articulacao/DODF-003_Decreto-03-01-2023_Ajudancia-de-Ordens-SSPDF_2023-01-04.pdf"
+      "DODF 003": "Fontes/02_T-1_Articulacao/DODF-003_Decreto-03-01-2023_Ajudancia-de-Ordens-SSPDF_2023-01-04.pdf",
+      "ALONSO 2012": "Fontes/12_Camada-T-1_Literatura/ALONSO_Repertorio-segundo-Charles-Tilly_Sociologia-e-Antropologia-2-3_2012.pdf",
+      "PINTO 2017": "Fontes/12_Camada-T-1_Literatura/PINTO_Trajetoria-discursiva-das-manifestacoes-de-rua_Lua-Nova-100_2017.pdf",
+      "TATAGIBA 2014": "Fontes/12_Camada-T-1_Literatura/TATAGIBA_Ciclos-de-protestos-e-democracia_Politica-e-Sociedade-28_2014.pdf",
+      "TATAGIBA E GALVAO 2019": "Fontes/12_Camada-T-1_Literatura/TATAGIBA-GALVAO_Protestos-no-Brasil-em-tempos-de-crise_Opiniao-Publica-25-1_2019.pdf"
     }
   },
   "eventos": [
@@ -104,16 +109,16 @@
       "ator_grupo": "Redes difusas urbanas; MPL",
       "repertorio_acao": "Marchas de massa, ocupação de vias",
       "target_alvo": "Governos municipais/estaduais; sistema político",
-      "framing_narrativa": "'Não é só por 20 centavos' — antipolítica",
+      "framing_narrativa": "Sem quadro unificador — a literatura lida registra que nenhum enquadramento deu unidade à diversidade para além do estopim tarifário. O que se documenta é antipartidarismo, com hostilidade inédita a partidos e militantes nos atos; e a leitura ampliada dos 20 centavos é atribuída pelo próprio MPL a terceiros, de direita e de esquerda, não ao movimento",
       "resposta_estatal": "Repressão inicial; recuo tarifário",
       "mecanismo_causal": "Abertura de estrutura de oportunidade política e difusão de repertório de rua massivo, posteriormente apropriado pela direita",
-      "fonte_trecho": "Literatura: Alonso (2017); Tatagiba (2014) — item contextual, sem fonte primária consultada",
+      "fonte_trecho": "TATAGIBA (2014, p. 36, 38, 40, 47) e PINTO (2017, p. 128-131); séries de protesto em TATAGIBA E GALVÃO (2019, p. 70-74). Sobre a resposta estatal: “foram nacionalizados a partir da forte repressão policial contra os manifestantes na cidade de São Paulo. Os protestos provocaram redução das tarifas em várias cidades” (Tatagiba, 2014, p. 36). Sobre o quadro: “não houve a conformação de um frame capaz de conferir unidade a essa diversidade para além do estopim: contra o aumento da tarifa do transporte público” (p. 40). Sobre os 20 centavos, a militante do MPL Nina Cappello: “Interessava para vários setores dizer que a luta não era somente pelos R$ 0,20. Colocam um monte de coisas no mesmo saco e não se conquista nada. Para nós do movimento, era, sim, pelos R$ 0,20” (Pinto, 2017, p. 131). Sobre a oportunidade: “Junho de 2013 representa o ápice desse processo e constitui uma extraordinária oportunidade para os setores oposicionistas, à esquerda e à direita do espectro político, expressarem seu descontentamento com as políticas do governo” (Tatagiba e Galvão, 2019, p. 74). Sobre o ator: “Grupos autonomistas, que defendem a horizontalidade contra a hierarquia de partidos e sindicatos, emergem especialmente nesse segmento, como o Movimento Passe Livre (MPL), que deflagrou as Jornadas de 2013” (p. 72).",
       "fonte_url": null,
-      "fonte_local": null,
-      "fonte_pagina": null,
-      "status_verificacao": "Contextual — requer fonte primária",
-      "status_classe": "Contextual",
-      "nota_auditoria": null
+      "fonte_local": "Fontes/12_Camada-T-1_Literatura/TATAGIBA_Ciclos-de-protestos-e-democracia_Politica-e-Sociedade-28_2014.pdf; Fontes/12_Camada-T-1_Literatura/PINTO_Trajetoria-discursiva-das-manifestacoes-de-rua_Lua-Nova-100_2017.pdf; Fontes/12_Camada-T-1_Literatura/TATAGIBA-GALVAO_Protestos-no-Brasil-em-tempos-de-crise_Opiniao-Publica-25-1_2019.pdf",
+      "fonte_pagina": "TATAGIBA 2014: 2, 4, 6, 13 | PINTO 2017: 10, 11, 12, 13 | TATAGIBA E GALVAO 2019: 8, 10, 12",
+      "status_verificacao": "Confirmado em literatura revisada por pares, lida na fonte com página. Não há fonte primária de 2013 no corpus, e o registro não a reivindica.",
+      "status_classe": "Confirmado",
+      "nota_auditoria": "recodificado em 04/10/2026, tarefa 14 — o campo framing_narrativa dizia “'Não é só por 20 centavos' — antipolítica”. As duas obras lidas contradizem a atribuição: Tatagiba (2014, p. 40) afirma que “desde o começo, foi sim uma luta por 0,20 centavos” e que nenhum frame unificou o ciclo; Pinto (2017, p. 131) mostra a leitura ampliada como quadro imposto ao MPL por terceiros. “Antipolítica” também muda de referente: em Pinto (p. 131) o discurso antipolítico é o que emerge DEPOIS da retirada do MPL e está “claramente à direita”. O termo documentado para 2013 é antipartidarismo (Tatagiba, 2014, p. 47; Pinto, 2017, p. 149). Quarta variante do modo de falha do projeto: o enquadramento do adversário atribuído ao ator. Alonso (2017), citada no campo anterior, nunca esteve no corpus nem foi lida."
     },
     {
       "id": "PT-02",
@@ -125,13 +130,13 @@
       "framing_narrativa": "Antipetismo, anticorrupção, 'Fora Dilma'",
       "resposta_estatal": "Tolerância policial; enquadramento midiático favorável",
       "mecanismo_causal": "Apropriação de repertório (spin-off): a direita converte a rua em recurso próprio e forma identidade política negativa",
-      "fonte_trecho": "Literatura: Alonso (2017); Meneguello; Rocha de Barros — item contextual",
+      "fonte_trecho": "PINTO (2017, p. 143-152) e TATAGIBA E GALVÃO (2019, p. 81-82). Sobre o marco inicial: a vaia à presidenta na abertura da Copa, em 12/06/2014, “foi o momento inaugural do discurso conservador, fundamentalmente antipetista, que tomou fôlego a partir de então, dando sentido às manifestações por seu impeachment em março de 2015” (Pinto, 2017, p. 143). Sobre a base social: “esse discurso com apelo popular não foi levado a efeito pelas classes populares indignadas, mas por setores da alta classe média” (p. 144). Sobre o deslocamento do quadro: “Se, em 2013, poderia ser identificado um antipartidarismo, mesmo em grupos identificados com posições à esquerda, como o Movimento Passe Livre, que se declarava antipartidário, em 2015 o cenário foi distinto, centralizando-se no discurso anti-PT” (p. 149). Sobre os convocantes: “A convocação dos protestos foi assumida por organizações como o MBL, Vem Pra Rua, Revoltados Online, Nas Ruas, Movimento Contra a Corrupção, entre outras organizações menores, a partir de um forte uso das redes sociais” (Tatagiba e Galvão, 2019, p. 82) — e, no mesmo parágrafo, a ressalva de que “os grupos antipetistas já estão presentes em protestos organizados em 2011, mantendo a mesma estética e slogans”. ACHADO QUE O CODEBOOK NÃO REGISTRA: já em março de 2015 havia “faixas pedindo intervenção militar”, algumas em inglês, e um movimento “SOS Forças Armadas” que, pouco expressivo em número, “atualizava o espaço político das Forças Armadas” (Pinto, 2017, p. 150).",
       "fonte_url": null,
-      "fonte_local": null,
-      "fonte_pagina": null,
-      "status_verificacao": "Contextual — requer fonte primária",
-      "status_classe": "Contextual",
-      "nota_auditoria": null
+      "fonte_local": "Fontes/12_Camada-T-1_Literatura/PINTO_Trajetoria-discursiva-das-manifestacoes-de-rua_Lua-Nova-100_2017.pdf; Fontes/12_Camada-T-1_Literatura/TATAGIBA-GALVAO_Protestos-no-Brasil-em-tempos-de-crise_Opiniao-Publica-25-1_2019.pdf; Fontes/12_Camada-T-1_Literatura/ALONSO_Repertorio-segundo-Charles-Tilly_Sociologia-e-Antropologia-2-3_2012.pdf",
+      "fonte_pagina": "PINTO 2017: 25, 26, 31, 32, 34 | TATAGIBA E GALVAO 2019: 9, 19, 20 | ALONSO 2012: 4, 10",
+      "status_verificacao": "Confirmado em literatura revisada por pares, lida na fonte com página. Uma afirmação do registro segue sem âncora: “tolerância policial” não foi localizada em nenhuma das obras lidas. O enquadramento midiático favorável está em Pinto (2017, p. 130, nota 11).",
+      "status_classe": "Confirmado",
+      "nota_auditoria": "recodificado em 04/10/2026, tarefa 14 — atores, repertório e enquadramento passam a ter página. Três ressalvas que a leitura impõe e que o registro não resolve sozinho: (1) Tatagiba e Galvão (2019, p. 71, 91) sustentam que “não observamos uma descontinuidade entre 2013 e os protestos posteriores”, o que enfraquece a leitura de spin-off como ruptura e a converte em difusão dentro de um mesmo ciclo; (2) os grupos antipetistas já protestavam em 2011 (p. 82), de modo que a apropriação do repertório é de escala, não de origem; (3) Alonso (2012, p. 24) registra que “Tilly não detalha o processo de apropriação do repertório pelos atores” — o nome do mecanismo não tem, na fonte do conceito, o conteúdo que sugere. O nome é decisão da tarefa 19. “Tolerância policial” permanece sem âncora."
     },
     {
       "id": "PT-02A",
@@ -161,13 +166,13 @@
       "framing_narrativa": "'Legalidade constitucional'",
       "resposta_estatal": "Consumação do impeachment",
       "mecanismo_causal": "Certificação de eficácia: a mobilização de rua é validada como via legítima de deposição de governo eleito — precedente para T0",
-      "fonte_trecho": "Literatura: Nobre (2020) — item contextual",
+      "fonte_trecho": "TATAGIBA E GALVÃO (2019, p. 65, 69, 91). A data: o banco cobre até “31/8/2016, quando ela é definitivamente afastada pelo Senado” (p. 69). A cadeia: “o pico das mobilizações em 2013 cria oportunidades políticas inéditas para os setores oposicionistas, à direita e à esquerda do PT, conformando um cenário de crise política que, associado à crise econômica, abre caminho para o impeachment” (p. 91). As autoras tratam 2016 como o “ano do golpe jurídico-parlamentar que levou à sua destituição e substituição por seu vice, Michel Temer” (p. 65) — caracterização delas, oposta à do campo pró-impeachment que o registro codifica.",
       "fonte_url": null,
-      "fonte_local": null,
-      "fonte_pagina": null,
-      "status_verificacao": "Contextual — requer fonte primária",
-      "status_classe": "Contextual",
-      "nota_auditoria": null
+      "fonte_local": "Fontes/12_Camada-T-1_Literatura/TATAGIBA-GALVAO_Protestos-no-Brasil-em-tempos-de-crise_Opiniao-Publica-25-1_2019.pdf",
+      "fonte_pagina": "TATAGIBA E GALVAO 2019: 3, 7, 29",
+      "status_verificacao": "Confirmado quanto à data e ao encadeamento com o ciclo de protestos, em literatura revisada por pares lida na fonte. O enquadramento “legalidade constitucional” é o do campo pró-impeachment e não foi localizado nas obras lidas, que adotam a caracterização oposta.",
+      "status_classe": "Confirmado",
+      "nota_auditoria": "recodificado em 04/10/2026, tarefa 14. O rótulo do mecanismo continua pendente desde 30/09: “certificação de eficácia” não satisfaz a definição de Dynamics of Contention, que exige validação por autoridade externa, e o enunciado não nomeia autoridade alguma (agenda, item 24.6). A leitura desta rodada não resolve — reforça, porque a literatura lida descreve o impeachment como desfecho de uma crise política, não como validação de uma via. Decisão da tarefa 19. O campo framing_narrativa foi mantido, porque codifica o quadro do ator e não a avaliação da literatura; a divergência fica declarada no status."
     },
     {
       "id": "PT-03A",
@@ -269,13 +274,13 @@
       "framing_narrativa": "'Nova política', 'anti-sistema'",
       "resposta_estatal": "Eleição validada pelo TSE",
       "mecanismo_causal": "Incorporação do movimento ao Estado: o ativismo de rua converte-se em governo, mantendo a gramática contestatória",
-      "fonte_trecho": "Literatura: Campos Mello (2020); Cesarino (2022) — item contextual",
+      "fonte_trecho": "Literatura declarada no registro original — Campos Mello (2020); Cesarino (2022) — NÃO ESTÁ NO CORPUS e não foi lida. Item contextual.",
       "fonte_url": null,
       "fonte_local": null,
       "fonte_pagina": null,
-      "status_verificacao": "Contextual — requer fonte primária",
+      "status_verificacao": "Contextual — varredura de conteúdo em 04/10/2026 nos 145 arquivos da pasta de textos de ação coletiva não localizou literatura sobre o período: zero ocorrências de 'Bolsonaro', zero de 'pandemia', e as de 'Capitol' são todas de obras anteriores a 2021, sobre história norte-americana. As obras citadas não estão no corpus e não foram lidas.",
       "status_classe": "Contextual",
-      "nota_auditoria": null
+      "nota_auditoria": "revisado em 04/10/2026, tarefa 14 — permanece contextual. A pasta de literatura anexada à sessão cobre densamente o ciclo 2013-2016 e não cobre o período 2018-2022: é a mesma lacuna que a triagem de 29/09 encontrou nos 411 DOIs das sínteses (agenda, item 23.2), agora confirmada por varredura de conteúdo numa segunda coleção independente."
     },
     {
       "id": "PT-05",
@@ -287,13 +292,13 @@
       "framing_narrativa": "'STF ditador', 'ativismo judicial'",
       "resposta_estatal": "Inquéritos do STF (fake news, milícias digitais)",
       "mecanismo_causal": "Erosão do consenso institucional: atrito deliberado com o presidencialismo de coalizão deslegitima os árbitros do jogo",
-      "fonte_trecho": "Literatura: Abranches; Avritzer — item contextual",
+      "fonte_trecho": "Literatura declarada no registro original — Abranches; Avritzer — NÃO ESTÁ NO CORPUS e não foi lida. Item contextual.",
       "fonte_url": null,
       "fonte_local": null,
       "fonte_pagina": null,
-      "status_verificacao": "Contextual — requer fonte primária",
+      "status_verificacao": "Contextual — varredura de conteúdo em 04/10/2026 nos 145 arquivos da pasta de textos de ação coletiva não localizou literatura sobre o período: zero ocorrências de 'Bolsonaro', zero de 'pandemia', e as de 'Capitol' são todas de obras anteriores a 2021, sobre história norte-americana. As obras citadas não estão no corpus e não foram lidas.",
       "status_classe": "Contextual",
-      "nota_auditoria": null
+      "nota_auditoria": "revisado em 04/10/2026, tarefa 14 — permanece contextual, pela mesma varredura que fechou PT-04. Observação de ancoragem, não de leitura: o atrito institucional de 2019-2022 que este registro descreve tem, no próprio codebook, registros vizinhos já ancorados em fonte primária (PT-05A, PT-06A a PT-06C, do arco judicial). O que falta aqui é a literatura que interpreta o período, não a documentação dele."
     },
     {
       "id": "PT-05A",
@@ -323,13 +328,13 @@
       "framing_narrativa": "'Liberdade', 'tratamento precoce', 'guerra cultural'",
       "resposta_estatal": "CPI da Pandemia (2021)",
       "mecanismo_causal": "Radicalização de bases e consolidação de ecossistema informacional paralelo (Telegram/WhatsApp) que servirá de infraestrutura de convocação em T-1 Operacional",
-      "fonte_trecho": "Literatura: Cesarino (2022) — item contextual",
+      "fonte_trecho": "Literatura declarada no registro original — Cesarino (2022) — NÃO ESTÁ NO CORPUS e não foi lida. Item contextual.",
       "fonte_url": null,
       "fonte_local": null,
       "fonte_pagina": null,
-      "status_verificacao": "Contextual — requer fonte primária",
+      "status_verificacao": "Contextual — varredura de conteúdo em 04/10/2026 nos 145 arquivos da pasta de textos de ação coletiva não localizou literatura sobre o período: zero ocorrências de 'Bolsonaro', zero de 'pandemia', e as de 'Capitol' são todas de obras anteriores a 2021, sobre história norte-americana. As obras citadas não estão no corpus e não foram lidas.",
       "status_classe": "Contextual",
-      "nota_auditoria": null
+      "nota_auditoria": "revisado em 04/10/2026, tarefa 14 — permanece contextual, pela mesma varredura que fechou PT-04. É o registro de maior custo entre os quatro: o mecanismo que ele afirma — consolidação do ecossistema informacional paralelo — é o que liga T-1 conjuntural a T-1 operacional, e segue sem leitura."
     },
     {
       "id": "PT-06A",
@@ -417,9 +422,9 @@
       "fonte_url": null,
       "fonte_local": "Fontes/04_T+1_Resposta-institucional/CPMI-8-de-Janeiro_Relatorio-Final_2023-10-17.pdf",
       "fonte_pagina": "CPMI: 614",
-      "status_verificacao": "Contextual quanto ao evento; o modelo efetivamente invocado pelos organizadores está confirmado em fonte primária — CPMI, p. 614 (ver PT-19).",
+      "status_verificacao": "Contextual quanto ao evento; o modelo efetivamente invocado pelos organizadores está confirmado em fonte primária — CPMI, p. 614 (ver PT-19). A varredura de conteúdo de 04/10/2026 nos 145 arquivos da pasta anexada não localizou literatura sobre 6 de janeiro de 2021: todas as ocorrências de 'Capitol' são de obras anteriores a 2021, sobre história norte-americana. Levitsky & Ziblatt e Norris & Inglehart não estão no corpus e não foram lidos.",
       "status_classe": "Contextual",
-      "nota_auditoria": "vínculo corrigido em 16/08/2026 — O achado do Sri Lanka como precedente invocado está na CPMI p. 614 e é citado na tabela do relatório, mas fonte_local estava vazio."
+      "nota_auditoria": "vínculo corrigido em 16/08/2026 — O achado do Sri Lanka como precedente invocado está na CPMI p. 614 e é citado na tabela do relatório, mas fonte_local estava vazio. | revisado em 04/10/2026, tarefa 14 — a comparação com o Capitólio continua sem literatura comparada lida na fonte, e a ressalva do registro (Sri Lanka, não Capitólio) continua sendo o que o projeto tem de próprio aqui."
     },
     {
       "id": "PT-08A",

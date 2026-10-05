@@ -4,9 +4,9 @@
 
 O pesquisador especificou o recorte: **o bolsonarismo enquanto fenômeno de mobilização social e política**, com foco nas dinâmicas de mobilização, manifestação e protesto, e em particular nas **formas de repertório específicas do campo das direitas**. Este documento registra a coleta feita sob esse recorte.
 
-> **ATUALIZADO EM 04/10/2026, ao fim do mesmo dia: o eixo passou de catorze a DEZOITO peças, e a declaração de abertura deixou de valer para todas.** Duas foram lidas na fonte, por encaminhamento do pesquisador, e **ancoram registro com página**: `ARAUJO E SALES 2022` e `FERNANDES E SILVA 2021`. Quatro entraram porque o pesquisador **entregou as peças barradas**. **As dezesseis restantes continuam coletadas e não lidas.**
+> **ATUALIZADO EM 04/10/2026, ao fim do mesmo dia: o eixo passou de catorze a DEZOITO peças, e a declaração de abertura deixou de valer para todas.** **TRÊS** foram lidas na fonte, por encaminhamento do pesquisador, e **ancoram registro com página**: `ARAUJO E SALES 2022`, `FERNANDES E SILVA 2021` e `VON BÜLOW E ABERS 2024` — esta na quarta rodada, e foi ela que **fechou PT-06**, o último contextual da camada brasileira. Quatro entraram porque o pesquisador **entregou as peças barradas**, e uma dessas quatro é justamente a que fechou PT-06. **As quinze restantes continuam coletadas e não lidas.**
 >
-> **A DECLARAÇÃO, AGORA COM A DISTINÇÃO QUE ELA PRECISA: das dezoito peças, duas foram lidas e ancoram registro; dezesseis não foram lidas e não ancoram nada.** As dezesseis estão em `Fontes/13_Bolsonarismo-mobilizacao/` como **fila de leitura**, com proveniência declarada em `PROCEDENCIA` — que é o que `verificar_integridade.py` exige de todo arquivo que não ancora registro. Um arquivo dentro de `Fontes/` parece lastro, e estas dezesseis não são: quem for ancorar registro em qualquer uma delas precisa abrir, ler e pôr página, como se fez com as sete peças do eixo 12 e com as duas lidas aqui. **`PROCEDENCIA` passou a declarar o eixo 13 em três blocos — doze coletadas e não lidas, duas lidas que ancoram, quatro entregues e não lidas — justamente para que a distinção não dependa deste documento.**
+> **A DECLARAÇÃO, AGORA COM A DISTINÇÃO QUE ELA PRECISA: das dezoito peças, três foram lidas e ancoram registro; quinze não foram lidas e não ancoram nada.** As quinze estão em `Fontes/13_Bolsonarismo-mobilizacao/` como **fila de leitura**, com proveniência declarada em `PROCEDENCIA` — que é o que `verificar_integridade.py` exige de todo arquivo que não ancora registro. Um arquivo dentro de `Fontes/` parece lastro, e estas quinze não são: quem for ancorar registro em qualquer uma delas precisa abrir, ler e pôr página, como se fez com as sete peças do eixo 12 e com as duas lidas aqui. **`PROCEDENCIA` declara o eixo 13 em três blocos de ORIGEM — doze coletadas, duas lidas que ancoram, quatro entregues — justamente para que a distinção não dependa deste documento. E note-se que origem e leitura são eixos independentes: a terceira peça lida vem do bloco das ENTREGUES, de modo que a contagem de lidas (três) não bate com nenhum bloco isolado.**
 
 ---
 
@@ -30,16 +30,19 @@ Uma peça precisou ser descartada depois de baixada: a tentativa na Cambridge de
 
 A coluna **serve a** diz qual registro a peça tem condições de ancorar **depois de lida**. É mapa de leitura, não âncora — exceto nas duas primeiras linhas, marcadas **LIDA**, onde já é âncora conferida pelo ciclo.
 
-### 2.1 As duas lidas, que ancoram registro
+### 2.1 As três lidas, que ancoram registro
 
 | Peça | Referência | p. | Offset | Ancora |
 |:--|:--|--:|:--|:--|
 | **ARAUJO E SALES 2022** — *LIDA* | "Atuação política das Forças Armadas e o fenômeno bolsonarista no Brasil (2013-2022)". *Cadernos do Tempo Presente*, 13(1):26-42 | 17 | impressa = PDF + 25, **derivado** | **PT-02** (genealogia do frame), **PT-04** (expressão antissistêmica), **PT-05** (cadeia causal — saiu de contextual), **PT-06** (repertório e enquadramento), **PT-12** (genealogia) |
 | **FERNANDES E SILVA 2021** — *LIDA* | "Dinâmicas do controle à ação coletiva: o policiamento a protestos no Rio Grande do Sul". *Mediações*, 26(3):485-502 | 17 | impressa = PDF + 484, **lido** | **PT-02** — e **tirou do campo** a "tolerância policial", que contradisse |
+| **VON BÜLOW E ABERS 2024** — *LIDA* | "Denialism and Populism: Two Sides of a Coin in Jair Bolsonaro's Brazil". *Government and Opposition*, 59:998-1016 | 19 | impressa = PDF + 997, **lido** | **PT-06** — **fechou o registro** e **retificou o mecanismo**: a infraestrutura informacional antecede a pandemia. Também **PT-05**, em corroboração dupla |
 
-**O que a leitura dessas duas produziu está no documento 12, §4.** Em uma linha: uma afirmação de dez anos saiu do codebook porque a leitura a contradisse, e um registro deixou de ser contextual.
+**O que a leitura dessas três produziu está no documento 12, §4 e §5.** Em duas linhas: uma afirmação de dez anos saiu do codebook porque a leitura a contradisse; e dois registros deixaram de ser contextuais, o segundo deles com o mecanismo **retificado** — a pandemia carrega uma infraestrutura anterior, em vez de consolidá-la.
 
-### 2.2 As dezesseis não lidas
+**E um achado que não é de registro nenhum.** Von Bülow e Abers sustentam que o bolsonarismo é **movimento social com autonomia relativa**, um processo que *precedes his rise to power* e que o líder *does not fully control* (p. 1000 e 1009 impressas). Nenhum dos 16 campos do esquema codifica grau de autonomia, e por isso entrou como achado em `fonte_trecho`. É material de argumento para a redação, e está anotado como pendência de decisão no documento 12, §8, item 10.
+
+### 2.2 As quinze não lidas
 
 | Peça | Referência | p. | Serve a |
 |:--|:--|--:|:--|
@@ -56,7 +59,6 @@ A coluna **serve a** diz qual registro a peça tem condições de ancorar **depo
 | MENDONÇA E FREITAS 2022 | "Fake News e o Repertório Contemporâneo de Ação Política". *Dados*, 66(2) | 33 | **PT-06** |
 | CHAGAS E CARREIRO 2022 | "Far-Right Digital Activism in Polarized Contexts". *Media and Communication*, 10(4) | 14 | **PT-06** |
 | **GOHN 2019** — *entregue* | "Ciclos de protestos no Brasil: 1970-2019". *mundosplurales*, 6(1):93-119 | 27 | **PT-01 a PT-04**, e a **tarefa 10** |
-| **VON BÜLOW E ABERS 2024** — *entregue* | "Denialism and Populism: Two Sides of a Coin in Jair Bolsonaro's Brazil". *Government and Opposition*, 59:998-1016 | 19 | **PT-05, PT-06** — é a que fecharia o mecanismo de PT-06 |
 | **BASTOS E RECUERO 2023** — *entregue* | "The Insurrectionist Playbook: Jair Bolsonaro and the National Congress of Brazil". *Social Media + Society*, p. 1-16 | 16 | **PT-06** e T₋₁ operacional — a mais próxima do objeto central |
 | **FARIAS, CASARÕES E MAGALHÃES 2022** — *entregue* | "Radical Right Populism and the Politics of Cruelty: The Case of COVID-19 in Brazil Under President Bolsonaro". *Global Studies Quarterly*, 2:1-13 | 13 | **PT-05, PT-06** |
 
@@ -104,10 +106,11 @@ O que a coleta mostrou: três das quatro são de editora comercial grande, e as 
 
 ## 4. O que a coleta não fez, e é decisão sua
 
-1. **Leu duas das dezoito, e por encaminhamento seu.** O próximo passo da tarefa 25 continua sendo leitura com página — o padrão que o eixo 12 estabeleceu hoje. **Restam dezesseis peças, 419 páginas.** A prioridade mudou de dono: a peça de maior retorno agora é **von Bülow e Abers (2024)**, porque é a que fecha o mecanismo de PT-06, que é a junta da cadeia.
-2. **A coleta não mudou registro; a leitura mudou.** PT-06 e PT-08 continuam `Contextual`; **PT-05 saiu**, com a cadeia causal ancorada em Araujo e Sales (2022). Os `status_verificacao` das dezesseis não lidas continuam dizendo que a literatura não foi lida — o que é verdade, e o que seria falso se a coleta tivesse sido confundida com leitura.
+1. **Leu três das dezoito, e as três por encaminhamento seu.** **Restam quinze peças, 400 páginas.** E a natureza do que falta mudou: **nenhuma das quinze bloqueia mais registro algum do codebook.** A camada conjuntural brasileira está fechada, e o único contextual que resta — PT-08 — pede literatura comparada sobre o Capitólio, que nenhuma das quinze cobre. **A leitura restante passou a servir à redação, não à codificação**, e por isso deixa de ter ordem de prioridade imposta pela cadeia causal.
+2. **A coleta não mudou registro; a leitura mudou — dois registros.** **PT-05 saiu** de contextual com Araujo e Sales (2022) e **PT-06 saiu** com von Bülow e Abers (2024). Resta `Contextual` apenas **PT-08**. Os `status_verificacao` das quinze não lidas continuam dizendo que a literatura não foi lida — o que é verdade, e o que seria falso se a coleta tivesse sido confundida com leitura. **Cesarino (2022), que PT-06 citava desde agosto sem ter, está no corpus e continua não lida**, e o registro diz isso.
 3. ~~**Não escolheu a ordem de leitura.**~~ **VOCÊ ESCOLHEU, em 04/10/2026**, e as duas sugestões foram as lidas, nessa ordem: Araujo e Sales (2022) e depois Fernandes e Silva (2021). A ordem importou — ver documento 12, §4.1.
 4. ~~**Não retentou as quatro barradas.**~~ **DESNECESSÁRIO: você entregou as quatro.** Estão no eixo 13, coletadas e não lidas, com procedência declarada.
 5. **O eixo 13 entrou em `FORA_DA_DOCUMENTAL`**, como o 05 e o 12. Corpus: **52 PDFs / 10.207 páginas**, dos quais **22 / 6.951 documentais, inalterados**. O corpus cresceu **816 páginas** hoje, em três rodadas, sem que um único documento oficial entrasse.
 6. **NOVO — três das dezoito peças são de editora comercial grande**, e entraram porque você as entregou. Duas declaram licença Creative Commons na própria peça; a terceira não traz declaração visível no PDF. **Se o repositório ganhar remoto público (tarefa 15), isso precisa ser decidido antes, não depois** — é o mesmo ponto que `ALONSO 2023` abriu no eixo 12.
-7. **NOVO — Gohn (2019) pode servir à tarefa 10, e não só à 25.** É levantamento de cinco décadas de estudos brasileiros de protesto, com o quinto ciclo definido como "pós junho de 2013". É a única peça do corpus que faz o **balanço da própria literatura brasileira** — exatamente a lacuna que a tarefa 10 registra como "as sínteses têm zero referências sobre o Brasil". Se ela conta como fechamento parcial da 10, é decisão sua.
+7. **Gohn (2019) pode servir à tarefa 10, e não só à 25.** É levantamento de cinco décadas de estudos brasileiros de protesto, com o quinto ciclo definido como "pós junho de 2013". É a única peça do corpus que faz o **balanço da própria literatura brasileira** — exatamente a lacuna que a tarefa 10 registra como "as sínteses têm zero referências sobre o Brasil". Se ela conta como fechamento parcial da 10, é decisão sua.
+8. **NOVO — duas plataformas continuam nomeadas no codebook sem verificação.** O `mecanismo_causal` de PT-06 nomeia Telegram e WhatsApp. Von Bülow e Abers as nomeiam também, mas **por citação de segunda mão** — as 802 mensagens de WhatsApp são de Soares et al. (2021) e as 867 de Telegram são de Nascimento et al. (2020), nenhum dos dois no corpus. A regra deste projeto proíbe lastrear cifra conferida apenas contra outra citação dela, e por isso as duas estão **declaradas como não verificadas** no status do registro. **Se quiser âncora de primeira mão para as plataformas, as peças a ler são Chagas e Carreiro (2022) e Mendonça e Freitas (2022)**, já no corpus. Caso contrário, a saída honesta é tirar as duas do campo.

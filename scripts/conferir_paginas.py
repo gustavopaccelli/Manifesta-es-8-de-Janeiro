@@ -80,6 +80,11 @@ except ImportError:
 
 ASPAS_ABRE = "\"“‘'"
 ASPAS_FECHA = "\"”’'"
+
+# Apóstrofo entre dois caracteres de palavra NÃO é aspa: é "Bolsonaro's". Ver o
+# docstring de transcricoes(), que explica o buraco que isto fecha.
+_INTRA_APOSTROFO = re.compile(r"(?<=\w)['’](?=\w)")
+
 _cache = {}
 
 # Transcrições que legitimamente NÃO estão no documento ancorado. Cada uma com
@@ -119,8 +124,20 @@ def norm_busca(s):
     turno» e o codebook transcreve sem as aspas internas. Comparar literalmente
     falhava por causa de dois caracteres, e era assim que PT-08A e PT-36
     apareciam como não localizados tendo a frase exatamente na página citada.
+
+    ACRESCENTADO EM 04/10/2026, terceira rodada da tarefa 14: o hífen passou a
+    engolir o espaço que vem depois dele, para **unir a hifenização de quebra de
+    linha**. A versão anterior apagava o hífen e deixava o espaço, de modo que o
+    PDF "mobiliza-\\ntion" normalizava para "mobiliza tion" enquanto o codebook
+    trazia "mobilization": duas âncoras de von Bülow e Abers (2024) apareciam
+    como não localizadas tendo a frase exatamente na página citada — o mesmo
+    sintoma de PT-08A e PT-36, por outra causa. A simetria é o que torna isto
+    seguro: a mesma normalização se aplica à citação e ao texto da página, e por
+    isso juntar demais não cria casamento falso, só perde legibilidade da forma
+    normalizada. As 66 âncoras anteriores continuam idênticas.
     """
-    return re.sub(r"[\"“”‘’'‐-―\-]+", "", norm(s))
+    s = re.sub(r"[‐-―\-]\s*", "", norm(s))
+    return re.sub(r"[\"“”‘’']+", "", s)
 
 
 # Fontes cujo CMap vem defeituoso e precisam de conserto por span. Ver
@@ -254,8 +271,29 @@ def transcricoes(trecho):
     A abordagem aqui é grosseira de propósito: fatia em todo caractere de aspa,
     fica com os pedaços longos e descarta os que parecem aparato. Gerar
     candidato demais é barato; perder o candidato certo custa um falso alarme.
+
+    CORRIGIDO EM 04/10/2026, terceira rodada da tarefa 14 — e era um buraco aberto
+    desde o começo. **Apóstrofo dentro de palavra também era tomado por
+    delimitador:** ASPAS_FECHA contém U+2019, que é o apóstrofo tipográfico de
+    todo texto em inglês ("Bolsonaro's"). A paridade invertia e a citação inteira
+    era descartada **em silêncio** — zero candidatos, nenhum aviso, e o ciclo
+    passava verde porque não havia o que conferir. Auditado o codebook no dia da
+    descoberta: as 57 transcrições entre aspas curvas então existentes NÃO eram
+    afetadas, por serem em português e sem aspa interna, de modo que nada
+    retroativo mudou. Mas a primeira peça em inglês a ancorar registro cairia no
+    buraco — e caiu: von Bülow e Abers (2024), em PT-06.
+
+    O conserto mascara o apóstrofo INTRAPALAVRA antes de fatiar e o devolve
+    depois. Aspa que de fato abre ou fecha nunca está entre dois caracteres de
+    palavra, e por isso a máscara não a atinge. Continua valendo a limitação
+    irmã, que NÃO tem conserto aqui: **aspa dupla aninhada** — uma citação que
+    contenha outra citação aspada — ainda inverte a paridade, e a saída correta é
+    escolher outro trecho da mesma página. Ver PT-06 e o item 34.5 da agenda.
     """
-    partes = re.split("[{}]".format(re.escape(ASPAS_ABRE + ASPAS_FECHA)), trecho or "")
+    masc = _INTRA_APOSTROFO.sub("\x01", trecho or "")
+    partes = [p.replace("\x01", "'")
+              for p in re.split("[{}]".format(
+                  re.escape(ASPAS_ABRE + ASPAS_FECHA)), masc)]
     if len(partes) < 2:
         return []  # nenhuma aspa: é referência, não transcrição
     # Índices ímpares são o que está DENTRO de aspas; os pares são o aparato

@@ -548,74 +548,65 @@ for _arq, _ref, _desloc, _serve in [
 # Vozes, Companhia das Letras, Todavia) e seguem dependendo dos arquivos do
 # pesquisador, como Alonso (2023) dependeu.
 #
-# ARMADILHA DE NUMERAÇÃO, QUINTA VARIANTE DO CORPUS, e é a mais perigosa até
-# agora. Os seis capítulos do volume *Giros à direita* são offprints: cada PDF
-# traz as MESMAS 12 páginas de pré-textuais do volume (capa sem camada de texto,
-# biografias, folha de rosto, ficha, sumário, apresentação) e só então o
-# capítulo, que começa sempre na **PDF p. 13**. Logo o deslocamento é DIFERENTE
-# em cada arquivo — impressa = PDF + (primeira_impressa − 13) — e **a mesma
-# página de PDF significa páginas impressas diferentes em arquivos distintos do
-# mesmo volume**. Citar PDF p. 1-12 é citar o pré-textual do volume através do
-# arquivo errado.
+# ARMADILHA DE NUMERAÇÃO, QUINTA VARIANTE — **RETIRADA DO CORPUS EM 08/10/2026,
+# À NOITE, e esta é a primeira vez que uma armadilha de numeração sai em vez de
+# ser declarada.** Os oito offprints de *Giros à direita* traziam cada um as
+# MESMAS 12 páginas de pré-textuais do volume e só então o capítulo, sempre na
+# PDF p. 13: o deslocamento era diferente em cada arquivo (+0, +7, +33, +58, +77,
+# +109, +161, +209) e **a mesma página de PDF significava páginas impressas
+# diferentes em arquivos distintos do mesmo volume**. O pesquisador mandou
+# resolver a pendência e entregou o volume inteiro; a coleta pela API REST do
+# IBICT (deposita/166) baixou o mesmo arquivo, e **o SHA-256 das duas cópias é
+# idêntico** — 560f5bd947c323249d4018988d151ad292c830a6473bce96f4218ab5104c9f67 —,
+# de modo que a procedência é dupla e concordante.
+#
+# **O VOLUME TEM OFFSET ZERO: impressa = PDF, de p. 9 a p. 256**, porque as oito
+# páginas de pré-textuais não são numeradas e a numeração impressa começa em 9 na
+# PDF p. 9. Um arquivo, um offset, e o offset é a identidade. Os oito offprints
+# foram removidos do corpus.
+#
+# **E A TROCA NÃO FOI SÓ HIGIENE: entraram três capítulos que o corpus não
+# tinha** — Torres (p. 159-173, política educacional do governo Bolsonaro), Costa
+# Filho (p. 193-221, Gustavo Barroso e o antissemitismo nos anos 1930) e Marques
+# (p. 241-255, *O conto da aia* como distopia líbero-conservadora). O volume tem
+# ONZE capítulos e o corpus tinha oito. Nenhum registro apontava para os
+# offprints (zero ocorrências de SertaoCult no JSON), de modo que a troca não
+# tocou âncora nenhuma.
+#
+# OFFSET DOS QUATRO LIVROS, MEDIDO EM 08/10/2026 À NOITE, e a lição é dura: **a
+# diferença entre o total impresso declarado na ficha e o total de páginas do PDF
+# NÃO é o offset.** Lavalle et al. declara 411 impressas em 414 de PDF (diferença
+# 3) e o offset é 2; Abers declara 356 em 359 (diferença 3) e o offset é 2;
+# Madeira et al. declara 423 em 427 (diferença 4) e o offset é 2. Derivar o
+# deslocamento da aritmética da ficha — que é o que o caso Araujo e Sales ensinou
+# a fazer a partir de um intervalo declarado — daria a resposta ERRADA nos três.
+# Só a folha impressa na página decide. Singer et al., do mesmo dia e de outra
+# editora, tem offset 1. **Quatro livros, três editoras, três offsets, e o volume
+# com zero: não há atalho que sobreviva.**
+#
+# UM CANAL DE CONFERÊNCIA QUE APARECEU DE GRAÇA: Abers e Madeira saíram do
+# InDesign com o rodapé de diagramação embutido no PDF (“v3 - Miolo - Ativismo
+# institucional.indd 18”), e esse número é a folha impressa. Serve para medir o
+# offset mesmo nas páginas de pré-textual, onde a folha não é impressa.
+#
+# UMA FALHA DE EXTRAÇÃO DECLARADA, no arquivo de Abers: em 4 das 359 páginas o
+# pypdf devolve nomes de glifo (/uni0041/uni0074...) em vez de caracteres, porque
+# a fonte de display é CFF Type1 sem o fontTools instalado. São 62 ocorrências em
+# 772.578 caracteres, todas em títulos. **Quem buscar termo nessas quatro páginas
+# recebe zero por defeito do extrator, não por ausência no texto** — é irmã da
+# armadilha da ligadura ﬁ, e por isso fica escrita aqui.
 _COLETA10 = ("Coleta da tarefa 10 (08/10/2026) — literatura brasileira em livro, "
              "acesso aberto, verificada nos dois eixos (o arquivo é PDF e o "
              "título/autoria lidos DENTRO dele casam). COLETADA, NÃO LIDA: não "
              "ancora registro")
 for _arq, _ref, _desloc, _serve in [
-    ("LOWY_Extrema-direita-e-neofascismo-o-caso-Bolsonaro_SertaoCult_2020.pdf",
-     "LÖWY, Michael. 'Extrema direita e neofascismo: um fenômeno planetário: o caso "
-     "Bolsonaro'. In: Giros à direita: análises e perspectivas sobre o campo "
-     "líbero-conservador. Sobral: SertãoCult, 2020, p. 13-19. "
-     "DOI 10.35260/87429052p.13-19.2020",
-     "PÁGINA IMPRESSA = PDF + 0, e a coincidência é acidente: o capítulo começa na "
-     "PDF p. 13 e na impressa p. 13. Nos outros cinco capítulos do volume o "
-     "deslocamento é outro",
-     "PT-04 e PT-05 — caracterização do bolsonarismo como neofascismo, por um autor "
-     "de fora do campo brasileiro de movimentos sociais"),
-    ("MONTENEGRO_Ultraliberalismo-autoritario-e-dependencia_SertaoCult_2020.pdf",
-     "MONTENEGRO, David Moreno. 'Ultraliberalismo autoritário e o aprofundamento da "
-     "dependência: o governo de extrema direita no Brasil no contexto da crise "
-     "latino-americana'. In: Giros à direita. Sobral: SertãoCult, 2020, p. 46-70. "
-     "DOI 10.35260/87429052p.46-70.2020",
-     "PÁGINA IMPRESSA = PDF + 33 (capítulo na PDF p. 13 = impressa 46)",
-     "PT-05 — o governo de extrema direita no contexto latino-americano"),
-    ("HOEVELER_A-reorganizacao-da-extrema-direita-latino-americana_SertaoCult_2020.pdf",
-     "HOEVELER, Rejane Carolina. 'A reorganização da extrema direita latino-americana "
-     "no ascenso bolsonarista: fóruns e redes organizativas'. In: Giros à direita. "
-     "Sobral: SertãoCult, 2020, p. 71-89. DOI 10.35260/87429052p.71-89.2020",
-     "PÁGINA IMPRESSA = PDF + 58 (capítulo na PDF p. 13 = impressa 71)",
-     "PT-04 e **PT-08** — é a peça do corpus mais próxima do mecanismo que PT-08 "
-     "afirma, a difusão transnacional, e pelo lado brasileiro: fóruns e redes "
-     "organizativas da extrema direita latino-americana"),
-    ("LERNER_A-direita-unida-em-torno-de-Bolsonaro-rede-no-Facebook_SertaoCult_2020.pdf",
-     "LERNER, Celina. 'A direita unida em torno de Bolsonaro: uma análise da rede "
-     "conservadora no Facebook'. In: Giros à direita. Sobral: SertãoCult, 2020, "
-     "p. 90-121. DOI 10.35260/87429052p.90-121.2020",
-     "PÁGINA IMPRESSA = PDF + 77 (capítulo na PDF p. 13 = impressa 90)",
-     "PT-04 e PT-06 — rede conservadora no Facebook. É candidata a dar ÂNCORA DE "
-     "PRIMEIRA MÃO à infraestrutura digital que PT-06 nomeia e que von Bülow e Abers "
-     "(2024) só reportam por citação de segunda mão"),
-    ("CAZETTA_A-revolucao-a-partir-da-extrema-direita-integralismo_SertaoCult_2020.pdf",
-     "CAZETTA, Felipe Azevedo. 'A revolução a partir da extrema direita: análises dos "
-     "projetos da Ação Integralista Brasileira'. In: Giros à direita. Sobral: "
-     "SertãoCult, 2020, p. 174-192. DOI 10.35260/87429052p.174-192.2020",
-     "PÁGINA IMPRESSA = PDF + 161 (capítulo na PDF p. 13 = impressa 174)",
-     "PT-01 e PT-02 — genealogia longa da extrema direita brasileira, anterior ao "
-     "ciclo de 2013; é o capítulo de ajuste mais frouxo entre os seis"),
-    ("GENTILE_Uma-direita-plural-configuracoes-ideologicas_SertaoCult_2020.pdf",
-     "GENTILE, Fábio. 'Uma direita \u201cplural\u201d: configurações ideológicas e "
-     "organizações políticas da direita brasileira'. In: Giros à direita. Sobral: "
-     "SertãoCult, 2020, p. 222-240. DOI 10.35260/87429052p.222-240.2020",
-     "PÁGINA IMPRESSA = PDF + 209 (capítulo na PDF p. 13 = impressa 222)",
-     "PT-02 e PT-04 — a pluralidade do campo da direita, que é o que o codebook "
-     "chama de campo patriota desde a segunda rodada da tarefa 14"),
     ("SINGER-ARAUJO-RUGITSKY_O-Brasil-no-inferno-global_FFLCH-USP_2022.pdf",
      "SINGER, André; ARAUJO, Cicero; RUGITSKY, Fernando (orgs.). O Brasil no inferno "
      "global: capitalismo e democracia fora dos trilhos. São Paulo: FFLCH/USP, 2022. "
      "ISBN 978-85-7506-408-5. DOI 10.11606/9788575064085",
-     "SEM OFFSET DECLARADO AINDA: é livro inteiro, 374 páginas de PDF, e a paginação "
-     "impressa precisa ser conferida no momento da leitura. NÃO assumir PDF = "
-     "impressa antes de abrir",
+     "PÁGINA IMPRESSA = PDF − 1, MEDIDO EM 08/10/2026 (PDF p. 9 = impressa 8). O "
+     "registro anterior dizia SEM OFFSET DECLARADO e mandava não assumir PDF = "
+     "impressa; estava certo em mandar, e o valor agora está medido",
      "PT-01 a PT-05 — cobre o arco 2013-2022 pela economia política. **André Singer é "
      "o único autor do cânone brasileiro que a coleta alcançou em acesso aberto**, e "
      "mesmo assim como organizador de coletânea, não em monografia"),
@@ -623,27 +614,69 @@ for _arq, _ref, _desloc, _serve in [
     PROCEDENCIA["Fontes/14_Livros-brasileiros/" + _arq] = (
         _COLETA10, "literatura", "{} | {} | SERVE A: {}".format(_ref, _desloc, _serve))
 
-# Eixo 14, SEGUNDO passo de 08/10/2026. Tres livros entregues pelo pesquisador --
-# os mesmos que o Bunny Shield do books.scielo.org barrava -- e dois capitulos a
-# mais de Giros a direita, coletados por encaminhamento dele.
+# O VOLUME INTEGRAL, que entrou em 08/10/2026 a noite no lugar dos oito offprints.
+PROCEDENCIA["Fontes/14_Livros-brasileiros/"
+            "FARIA-MARQUES_Giros-a-direita-volume-integral_SertaoCult_2020.pdf"] = (
+    "Entregue pelo pesquisador em 08/10/2026 e, no mesmo dia, coletado por mim no "
+    "depósito do IBICT (deposita/166) pela API REST do DSpace 7 — as duas cópias "
+    "com SHA-256 idêntico. SUBSTITUI os oito offprints, que saíram do corpus. "
+    "COLETADO, NÃO LIDO: não ancora registro",
+    "literatura",
+    "FARIA, Fabiano Godinho; MARQUES, Mauro Luiz Barbosa (orgs.). Giros à direita: "
+    "análises e perspectivas sobre o campo líbero-conservador. Sobral: SertãoCult, "
+    "2020, 256 p. — **SEM ISBN E SEM DOI DE VOLUME VERIFICÁVEIS NO ARQUIVO**: a "
+    "palavra ISBN não ocorre nenhuma vez no texto extraído, a página de ficha "
+    "catalográfica (PDF p. 6) só devolve o título, e o arquivo traz apenas os ONZE "
+    "DOIs de capítulo. O slug 87429052 dos DOIs de capítulo SUGERE o ISBN "
+    "978-65-87429-05-2, e é exatamente por isso que não vai declarado: derivar a "
+    "cifra de um rótulo é o modo de falha deste projeto. A organização, essa sim, "
+    "está verificada em primeira mão na PDF p. 4: “© 2020 copyright by Fabiano "
+    "Godinho Faria & Mauro Luiz Barbosa Marques (Orgs.)” "
+    "| PÁGINA IMPRESSA = PDF + 0, de p. 9 a p. 256, MEDIDO no texto integral. Os "
+    "capítulos, com a página impressa que é também a do PDF: Apresentação dos "
+    "organizadores (9); LÖWY, neofascismo e o caso Bolsonaro (13); RAMÍREZ, "
+    "neoliberalismo e (neo)autoritarismo no cone sul (20); MONTENEGRO, "
+    "ultraliberalismo autoritário e dependência (46); HOEVELER, reorganização da "
+    "extrema direita latino-americana (71); LERNER, a direita unida em torno de "
+    "Bolsonaro no Facebook (90); FARIA, a doutrina da guerra revolucionária e o "
+    "delírio anticomunista da família Bolsonaro (122); TORRES, os primeiros 18 meses "
+    "da política educacional do governo Bolsonaro (159); CAZETTA, a revolução a "
+    "partir da extrema direita, AIB e Nacional Sindicalismo (174); COSTA FILHO, "
+    "armas, literatura panfletária e antissemitismo em Gustavo Barroso (193); "
+    "GENTILE, uma direita plural (222); MARQUES, um fantasma ronda o mundo, o "
+    "fantasma de Gilead (241). Cada capítulo mantém o seu próprio DOI, no padrão "
+    "10.35260/87429052p.<primeira>-<ultima>.2020 "
+    "| SERVE A: PT-01, PT-02, PT-04, PT-05, PT-06, PT-08 e PT-12, por capítulos "
+    "distintos. Os dois de maior valor declarado continuam sendo HOEVELER (p. 71), a "
+    "peça do corpus mais próxima do mecanismo de difusão transnacional que PT-08 "
+    "afirma, e pelo lado brasileiro; e LERNER (p. 90), candidata a dar âncora de "
+    "primeira mão à infraestrutura digital que PT-06 nomeia e que von Bülow e Abers "
+    "(2024) só reportam por citação de segunda mão")
+
+# Eixo 14, SEGUNDO passo de 08/10/2026: os tres livros entregues pelo pesquisador,
+# os mesmos que o Bunny Shield do books.scielo.org barrava ao curl. No fim do dia
+# o pesquisador mandou LE-LOS, e o offset de cada um passou de A DETERMINAR a
+# MEDIDO. A leitura foi PARCIAL e o que foi lido esta dito peca por peca abaixo.
 #
-# **NENHUM FOI LIDO E NENHUM ANCORA REGISTRO.** Continuam fila de leitura.
-#
-# UMA CORRECAO DE METODO DESTE MESMO DIA: o probe que eu usei para achar o
-# capitulo de Faria nao seguia o redirecionamento http->https do IBICT, e por
-# isso dei o handle como inexistente. Nao era: a falha era do probe. O caminho
-# que funcionou foi a API REST do DSpace 7 (/server/api/discover/search/objects),
-# porque a interface do IBICT e renderizada em JavaScript e nao devolve itens no
-# HTML. **E a mesma API mostrou que o VOLUME INTEIRO esta depositado** em
-# deposita/166, "Faria & Marques - Giros a Direita.pdf", 2,5 MB -- o que torna os
-# oito offprints redundantes e permitiria retirar a armadilha de offset por
-# capitulo. Nao foi feito: trocar peca ja incorporada e decisao do pesquisador.
+# **UMA CORRECAO DE PROCEDENCIA QUE A LEITURA OBRIGOU, e e a 16a ocorrencia do
+# modo de falha deste projeto.** A ficha que eu mesmo escrevi pela manha declarava
+# Gurza Lavalle et al. (2018) como "o livro brasileiro de referencia sobre
+# MOVIMENTO QUE ENTRA NO ESTADO, que e o mecanismo que PT-04 afirma". A leitura
+# desmentiu a ficha: o livro nao cita Bolsonaro nenhuma vez, nao usa a palavra
+# "direita" nenhuma vez e nao menciona junho de 2013 — zero, em busca normalizada
+# com dobra de diacriticos e uniao de hifenizacao, com a linha de base provada
+# (17 ocorrencias de "cooptacao" reproduzidas pelo probe). "Movimento que entra no
+# Estado" em Gurza Lavalle et al. quer dizer encaixes institucionais construidos
+# por movimentos de grupos marginalizados dentro da burocracia, entre 1985 e 2016;
+# em PT-04 quer dizer um movimento de rua que ganha a eleicao presidencial. **As
+# mesmas palavras, referentes diferentes** — e quem casou as palavras fui eu, numa
+# ficha escrita antes de abrir o arquivo.
 _ENTREGA10 = ("Entregue pelo pesquisador em 08/10/2026 — livro de acesso aberto que o "
               "Bunny Shield do books.scielo.org barrava ao curl. Verificado nos dois "
-              "eixos no TEXTO INTEGRAL. COLETADO, NÃO LIDO: não ancora registro")
-_COLETA10B = ("Coleta da tarefa 10 (08/10/2026), por encaminhamento do pesquisador — "
-              "capítulo de Giros à direita obtido no depósito do IBICT via API REST do "
-              "DSpace 7. COLETADO, NÃO LIDO: não ancora registro")
+              "eixos no TEXTO INTEGRAL. LIDO EM PARTE em 08/10/2026, por ordem do "
+              "pesquisador: ver o que foi lido no campo seguinte. NÃO ANCORA REGISTRO "
+              "ainda — nenhuma âncora foi lançada nesta leitura, por decisão de não "
+              "recodificar registro sem o pesquisador")
 for _arq, _orig, _ref, _desloc, _serve in [
     ("LAVALLE-CARLOS-DOWBOR-SZWAKO_Movimentos-sociais-e-institucionalizacao_EdUERJ_2018.pdf",
      _ENTREGA10,
@@ -651,53 +684,66 @@ for _arq, _orig, _ref, _desloc, _serve in [
      "Movimentos sociais e institucionalização: políticas sociais, raça e gênero no Brasil "
      "pós-transição. Rio de Janeiro: EdUERJ, 2018, 411 p. ISBN 978-85-7511-479-7. "
      "DOI 10.7476/9788575114797",
-     "OFFSET A DETERMINAR NA LEITURA: a ficha declara 411 páginas impressas e o PDF tem "
-     "414. Não assumir PDF = impressa antes de abrir",
-     "PT-04 — é o livro brasileiro de referência sobre MOVIMENTO QUE ENTRA NO ESTADO, que "
-     "é o mecanismo que PT-04 afirma (“incorporação do movimento ao Estado”)"),
+     "PÁGINA IMPRESSA = PDF − 2, MEDIDO EM 08/10/2026 (PDF p. 11 = impressa 9). A ficha "
+     "declara 411 impressas em 414 de PDF, e a diferença 3 NÃO é o offset",
+     "**NÃO SERVE A PT-04 COMO A FICHA DA MANHÃ DIZIA.** Lido: Sumário e o capítulo de "
+     "abertura, “Movimentos sociais, institucionalização e domínios de agência” (p. 21-42 "
+     "impressas), mais varredura normalizada do volume inteiro. O que o livro DE FATO "
+     "oferece a este projeto é outra coisa, e é mais incômoda: ele mostra que identificar "
+     "institucionalização com desmobilização e cooptação é um DEFEITO da literatura "
+     "estadunidense de movimentos sociais, e nomeia como responsáveis Tarrow (1997), "
+     "McAdam, Tarrow e Tilly (2001) e Tilly e Tarrow (2007) — que são marco teórico "
+     "declarado deste projeto (p. 37-38 impressas). Diz que desmobilização e cooptação são "
+     "“possibilidades e não fatalidades” (p. 41 impressa). E abre explicitamente a "
+     "abordagem a governos “de cunho regressivo, como o que seguiu ao impeachment da "
+     "presidente Dilma Rousseff”, com a ressalva de que aí “as configurações mudam "
+     "conforme a coalizão governante, cedendo passo a outros atores e outros encaixes” "
+     "(p. 28 impressa). Isto é: licença para a pergunta, não resposta sobre o caso"),
     ("ABERS_Ativismo-institucional-criatividade-e-luta-na-burocracia_Editora-UnB_2021.pdf",
      _ENTREGA10,
      "ABERS, Rebecca Neaera (org.). Ativismo institucional: criatividade e luta na "
      "burocracia brasileira. Brasília: Editora UnB, 2021, 356 p. ISBN 978-65-5846-159-3. "
      "DOI 10.7476/9786558461593",
-     "OFFSET A DETERMINAR NA LEITURA: a ficha declara 356 páginas impressas e o PDF tem 359",
-     "PT-04 e PT-05 — e a autora é a MESMA Rebecca Neaera Abers que co-assina von Bülow e "
-     "Abers (2024), a peça que fechou PT-06. O conceito de ativismo institucional é o par "
-     "brasileiro do argumento de autonomia relativa do movimento"),
+     "PÁGINA IMPRESSA = PDF − 2, MEDIDO EM 08/10/2026 (PDF p. 20 = impressa 18), "
+     "confirmado também pelo rodapé de diagramação do InDesign, que traz a folha impressa",
+     "PT-04 e PT-05, e com âncora CONCEITUAL nova para o corpus. Lido: Sumário e a "
+     "introdução da organizadora, “Ação criativa, ativismo e lutas no interior do Estado” "
+     "(p. 15-45 impressas). Abers afirma que “a mobilização de atores ideologicamente à "
+     "direita deve também ser compreendida como ativismo” e que “causas contenciosas podem "
+     "ser conservadoras” (p. 44 impressa), e que “com a vitória da extrema direita nas "
+     "urnas, o contexto mudou profundamente” (p. 44 impressa). É a primeira peça do corpus "
+     "a dizer, em livro brasileiro, que a mobilização à direita é ativismo — o que é "
+     "pressuposto de PT-04 e nunca teve lastro. Sobre o período de PT-05: “a partir de "
+     "2019, as possibilidades de agir em prol dos direitos sociais e ambientais de dentro "
+     "das estruturas burocráticas se tornou muito mais difícil” (p. 45 impressa). E deixa "
+     "ABERTA, como pergunta de pesquisa, a questão de “em que medida ativismo institucional "
+     "à direita se diferencia do ativismo em defesa da inclusão política e social” (p. 45 "
+     "impressa) — o projeto não pode tratar como respondido o que a autora declara aberto. "
+     "A autora é a mesma Rebecca Neaera Abers de von Bülow e Abers (2024), que fechou PT-06"),
     ("MADEIRA-MARONA-DEL-RIO_Democracia-e-justica-na-America-Latina_EdUERJ_2022.pdf",
      _ENTREGA10,
      "MADEIRA, Lígia Mori; MARONA, Marjorie Corrêa; DEL RÍO, Andrés (orgs.). Democracia e "
      "justiça na América Latina: para onde vamos?. Rio de Janeiro: EdUERJ, 2022, 423 p. "
      "ISBN 978-65-87949-55-0. DOI 10.7476/9786587949550",
-     "OFFSET A DETERMINAR NA LEITURA: a ficha declara 423 páginas impressas e o PDF tem 427",
-     "ARCO JUDICIAL — PT-03A a PT-06C, PT-02A e PT-05A. É a primeira peça de literatura do "
-     "corpus sobre judicialização da política na América Latina: o arco judicial se apoia "
-     "hoje só em acórdãos, isto é, em fonte primária sem literatura que a interprete"),
-    ("RAMIREZ_Neoliberalismo-e-neoautoritarismo-no-cone-sul_SertaoCult_2020.pdf",
-     _COLETA10B,
-     "RAMÍREZ, Hernán. 'Neoliberalismo e (neo)autoritarismo: uma perspectiva de longo prazo "
-     "a partir de casos do cone sul da América Latina'. In: Giros à direita: análises e "
-     "perspectivas sobre o campo líbero-conservador (org. Fabiano Godinho Faria e Mauro "
-     "Luiz Barbosa Marques). Sobral: SertãoCult, 2020, p. 20-45. "
-     "DOI 10.35260/87429052p.20-45.2020",
-     "PÁGINA IMPRESSA = PDF + 7 (capítulo na PDF p. 13 = impressa 20). Ver a regra do eixo: "
-     "só citar PDF p. >= 13",
-     "PT-05 e PT-08 — perspectiva de longo prazo do (neo)autoritarismo no cone sul; é o "
-     "contexto regional em que o apelo de intervenção militar brasileiro se inscreve"),
-    ("FARIA_Alguma-coisa-esta-fora-do-tempo-guerra-revolucionaria_SertaoCult_2020.pdf",
-     _COLETA10B,
-     "FARIA, Fabiano Godinho. 'Alguma coisa está fora do tempo: a doutrina da guerra "
-     "revolucionária e o delírio anticomunista da família Bolsonaro'. In: Giros à direita. "
-     "Sobral: SertãoCult, 2020, p. 122-158. DOI 10.35260/87429052p.122-158.2020",
-     "PÁGINA IMPRESSA = PDF + 109 (capítulo na PDF p. 13 = impressa 122). O autor é também "
-     "um dos dois ORGANIZADORES do volume, o que explica a sua biografia na p. 2 de todos "
-     "os offprints",
-     "PT-05, PT-06 e PT-12 — a doutrina da guerra revolucionária e o anticomunismo da "
-     "família Bolsonaro: é a genealogia doutrinária do apelo militar que PT-02, PT-05 e "
-     "PT-12 codificam como frame"),
+     "PÁGINA IMPRESSA = PDF − 2, MEDIDO EM 08/10/2026 (PDF p. 10 = impressa 8). A ficha "
+     "declara 423 impressas em 427 de PDF, e a diferença 4 NÃO é o offset",
+     "ARCO JUDICIAL — PT-02A, PT-03A a PT-06C, PT-05A — e também PT-05 e PT-12. Lido: "
+     "Sumário e o capítulo 8, de Andrés del Río e André Rodrigues, “Os desafios dos "
+     "Direitos Humanos em tempos distorcidos: milícia, militares e Justiça Militar no "
+     "Brasil” (p. 251-282 impressas), escolhido por mapa de pertinência medido por "
+     "capítulo. É a primeira literatura do corpus sobre judicialização na região, e o "
+     "capítulo 8 documenta o apelo à intervenção militar AMARRADO A UMA DECISÃO JUDICIAL: "
+     "um general da reserva declarou, em abril de 2018, que se o STF deixasse Lula solto e "
+     "elegível, “só restará o recurso à reação armada. Aí é dever da Força Armada restaurar "
+     "a ordem” (p. 254 impressa). Documenta ainda a Lei 13.491/2017, que levou à Justiça "
+     "Militar o homicídio doloso de civis por militares (p. 256 impressa), e sustenta a "
+     "tese de que “o bolsonarismo é uma ideologia política de caráter miliciano” (p. 268 "
+     "impressa). O livro é de junho de 2022 e, naturalmente, não menciona 8 de janeiro: "
+     "zero ocorrências, em busca normalizada"),
 ]:
     PROCEDENCIA["Fontes/14_Livros-brasileiros/" + _arq] = (
         _orig, "literatura", "{} | {} | SERVE A: {}".format(_ref, _desloc, _serve))
+
 
 # Eixo 15 — literatura comparada sobre o 6 de janeiro de 2021, aberto em
 # 08/10/2026. **DUAS PECAS, AS DUAS LIDAS, AS DUAS ANCORANDO PT-08** — que era o

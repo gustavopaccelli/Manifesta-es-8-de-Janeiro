@@ -234,7 +234,13 @@ A lista completa, com a referência de cada peça e o registro a que ela pode se
 
 ### 14 — Literatura brasileira em livro
 
-*Eixo aberto em 08/10/2026, pela tarefa 10, e ampliado no mesmo dia.* **Doze peças, 1.854 páginas** — seis capítulos do volume *Giros à direita: análises e perspectivas sobre o campo líbero-conservador* (Sobral, Editora SertãoCult, 2020) e o livro *O Brasil no inferno global: capitalismo e democracia fora dos trilhos* (São Paulo, FFLCH/USP, 2022). Como os eixos 05, 12 e 13, está **fora da contagem documental**.
+*Eixo aberto em 08/10/2026, pela tarefa 10, e ampliado DUAS vezes no mesmo dia.* **Cinco peças, 1.832 páginas** — o volume integral *Giros à direita: análises e perspectivas sobre o campo líbero-conservador* (Sobral, Editora SertãoCult, 2020, onze capítulos), três livros entregues pelo pesquisador (EdUERJ 2018, Editora UnB 2021, EdUERJ 2022) e *O Brasil no inferno global* (São Paulo, FFLCH/USP, 2022). Como os eixos 05, 12 e 13, está **fora da contagem documental**.
+
+> **O EIXO DIMINUIU DE ARQUIVOS E ISSO É GANHO.** Os oito offprints de *Giros à direita* saíram e entrou o volume inteiro: 8 arquivos a menos, 1 a mais, e **três capítulos a mais de conteúdo** (Torres p. 159, Costa Filho p. 193, Marques p. 241). Com um arquivo só, o deslocamento deixa de variar: **impressa = PDF, de p. 9 a p. 256**. A quinta variante de armadilha de numeração do corpus foi assim **retirada**, e é a única das seis que saiu em vez de ser declarada. O arquivo tem procedência DUPLA e concordante — entrega do pesquisador e coleta no IBICT (`deposita/166`), com SHA-256 idêntico.
+>
+> **OFFSETS MEDIDOS em 08/10/2026:** Gurza Lavalle et al. **−2**, Abers **−2**, Madeira et al. **−2**, Singer et al. **−1**, volume *Giros* **0**. E a lição: **a diferença entre o total impresso da ficha e o total de páginas do PDF NÃO é o offset** — nos três livros entregues ela daria a resposta errada. Só a folha impressa na página decide.
+>
+> **TRÊS LIVROS PASSARAM A LIDOS EM PARTE** (Gurza Lavalle et al., Abers, Madeira et al.), por ordem do pesquisador, e **nenhum ancora registro ainda**: a leitura não recodificou nada. O que cada um de fato serve — e, no caso de Gurza Lavalle et al., o que ele **não** serve, contra a ficha que eu havia escrito — está em `PROCEDENCIA` e em `projeto-pos-doc/14_LIVROS-BRASILEIROS.md` §8.
 
 > **NENHUMA DAS DOZE FOI LIDA, E NENHUMA ANCORA REGISTRO.** Fila de leitura, declarada peça por peça em `PROCEDENCIA`. Um arquivo dentro de `Fontes/` parece lastro; estas doze não são.
 >

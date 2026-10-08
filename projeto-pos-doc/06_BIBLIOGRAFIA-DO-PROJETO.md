@@ -314,7 +314,9 @@ Estas sete entraram no corpus no mesmo dia: **cinco entregues pelo pesquisador**
 4. **ABERS, Rebecca Neaera (org.).** *Ativismo institucional: criatividade e luta na burocracia brasileira*. Brasília: Editora UnB, 2021, 356 p. ISBN 978-65-5846-159-3. DOI [10.7476/9786558461593](https://doi.org/10.7476/9786558461593).
 5. **MADEIRA, Lígia Mori; MARONA, Marjorie Corrêa; DEL RÍO, Andrés (orgs.).** *Democracia e justiça na América Latina: para onde vamos?*. Rio de Janeiro: EdUERJ, 2022, 423 p. ISBN 978-65-87949-55-0. DOI [10.7476/9786587949550](https://doi.org/10.7476/9786587949550).
 
-### Eixo 14 — dois capítulos a mais de *Giros à direita* (coletados, não lidos)
+### Eixo 14 — *Giros à direita*: ~~dois capítulos a mais~~ **o volume inteiro** (coletado, não lido)
+
+> **ATUALIZADO NA NOITE DE 08/10/2026.** Os oito offprints saíram do corpus e entrou o volume integral, com os **onze** capítulos. As referências 6 e 7 abaixo continuam válidas como referências de citação — cada capítulo mantém o seu DOI —, mas o **arquivo** que as sustenta agora é um só, e a paginação impressa é igual à do PDF. Ver [`14_LIVROS-BRASILEIROS.md`](14_LIVROS-BRASILEIROS.md) §8.
 
 6. **RAMÍREZ, Hernán.** "Neoliberalismo e (neo)autoritarismo: uma perspectiva de longo prazo a partir de casos do cone sul da América Latina". In: FARIA, Fabiano Godinho; MARQUES, Mauro Luiz Barbosa (orgs.). *Giros à direita: análises e perspectivas sobre o campo líbero-conservador*. Sobral: SertãoCult, 2020, p. 20-45. DOI [10.35260/87429052p.20-45.2020](https://doi.org/10.35260/87429052p.20-45.2020).
 7. **FARIA, Fabiano Godinho.** "Alguma coisa está fora do tempo: a doutrina da guerra revolucionária e o delírio anticomunista da família Bolsonaro". In: *Giros à direita*. Sobral: SertãoCult, 2020, p. 122-158. DOI [10.35260/87429052p.122-158.2020](https://doi.org/10.35260/87429052p.122-158.2020).
@@ -324,3 +326,25 @@ Estas sete entraram no corpus no mesmo dia: **cinco entregues pelo pesquisador**
 ### Uma referência que NÃO entrou, e por quê
 
 **RICH, Jessica A. J.** *Ativismo patrocinado pelo Estado: burocratas e movimentos sociais no Brasil democrático*. Brasília: Editora UnB, 2021. DOI 10.7476/9786557081044. — O OpenAlex a declara ouro e o SciELO Livros a lista, mas **o pesquisador apurou que não é de acesso aberto: está à venda em livraria.** Há resenha disponível, e ele avaliou que resenha é lastro inconsistente para esta pesquisa. **Fica fora do corpus, e o registro desta decisão vale mais que a peça:** é o terceiro caso em que "ouro no registro" não corresponde a texto livre — depois das três peças de 04/10 e das quatro de 08/10 — e o primeiro em que o erro está no próprio registro de acesso aberto, não no gate do editor.
+
+---
+
+## Terceiro passo de 08/10/2026 — o volume de *Giros à direita*, e três capítulos novos
+
+**FARIA, Fabiano Godinho; MARQUES, Mauro Luiz Barbosa (orgs.).** *Giros à direita: análises e perspectivas sobre o campo líbero-conservador*. Sobral: SertãoCult, 2020, 256 p. — Volume integral, que **substitui no corpus os oito offprints de capítulo**. Procedência dupla e concordante: entregue pelo pesquisador e coletado por mim no depósito do IBICT (`deposita/166`), com SHA-256 idêntico nas duas cópias. **Paginação impressa = PDF, de p. 9 a p. 256.** Os **onze** DOIs de capítulo estão conferidos um a um no texto do arquivo.
+
+> **O ISBN NÃO VAI DECLARADO, e a razão é de método.** A palavra "ISBN" não ocorre nenhuma vez no texto extraído do volume, e a página de ficha catalográfica (PDF p. 6) devolve só o título — o resto não tem camada de texto. O slug `87429052` dos DOIs de capítulo **sugere** o ISBN 978-65-87429-05-2, e eu o havia escrito assim antes de conferir. **Derivar a cifra de um rótulo é o modo de falha deste projeto**, e esta vez foi pega antes do commit, não depois. A organização do volume, ao contrário, está verificada em primeira mão: a PDF p. 4 traz "© 2020 copyright by Fabiano Godinho Faria & Mauro Luiz Barbosa Marques (Orgs.)" — o que confirma, agora pelo arquivo, o que em 08/10 pela manhã se soube só pelo nome do depósito no IBICT.
+
+Com o volume entraram três capítulos que o corpus **não tinha**:
+
+8. **TORRES, Michelangelo.** "Um balanço crítico dos primeiros 18 meses da política educacional do governo Bolsonaro". In: *Giros à direita*. Sobral: SertãoCult, 2020, p. 159-173. DOI [10.35260/87429052p.159-173.2020](https://doi.org/10.35260/87429052p.159-173.2020).
+9. **COSTA FILHO, Cícero João da.** "Armas, literatura 'panfletária' e antissemitismo: a postura conservadora de Gustavo Barroso no Brasil dos anos 1930". In: *Giros à direita*. Sobral: SertãoCult, 2020, p. 193-221. DOI [10.35260/87429052p.193-221.2020](https://doi.org/10.35260/87429052p.193-221.2020).
+10. **MARQUES, Mauro Luiz Barbosa.** "Um fantasma ronda o mundo, o fantasma de Gilead". In: *Giros à direita*. Sobral: SertãoCult, 2020, p. 241-255. DOI [10.35260/87429052p.241-255.2020](https://doi.org/10.35260/87429052p.241-255.2020).
+
+> **O capítulo 10 chegou duas vezes, e a segunda tornou a primeira desnecessária.** O pesquisador anexou o offprint de Marques e, na mesma mensagem, mandou resolver a pendência do volume. O volume contém o capítulo: o offprint não entrou no corpus, porque entrar seria duplicar a peça e reintroduzir a armadilha de offset que a troca acabara de retirar.
+
+### Os três livros entregues passaram a LIDOS EM PARTE
+
+Por ordem do pesquisador, os três livros do segundo passo foram abertos e lidos em parte, e **o offset de cada um deixou de ser "a determinar": é −2 nos três** (e −1 em Singer et al.). A referência de citação não muda; o que muda é que agora há página confiável.
+
+> **E uma atribuição minha caiu.** A ficha de 08/10 pela manhã declarava Gurza Lavalle et al. (2018) como o livro de referência sobre "movimento que entra no Estado, que é o mecanismo que PT-04 afirma". **O livro não cita Bolsonaro nenhuma vez, não usa a palavra "direita" nenhuma vez e não menciona junho de 2013** — zero, em busca normalizada com linha de base provada. "Movimento que entra no Estado" ali significa encaixes institucionais de movimentos de grupos marginalizados na burocracia, 1985-2016; em PT-04 significa um movimento de rua que ganha a eleição. **As mesmas palavras, referentes diferentes, e a ficha era minha.** É a 16ª ocorrência do modo de falha do projeto, e a primeira em que o referente errado é um livro inteiro.

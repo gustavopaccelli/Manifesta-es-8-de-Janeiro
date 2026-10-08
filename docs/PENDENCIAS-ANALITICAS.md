@@ -1727,3 +1727,62 @@ Você delegou a decisão. **Gohn (2019) fecha PARCIALMENTE a tarefa 10, e num n�
 **Quando a redação começar**, os itens 3, 4 e 5 desta agenda vêm primeiro: são antecipação de crítica, os pontos que um parecerista atento levantaria, e os que mais mudam o texto. Os itens 6, 9 e 10 são parágrafos de discussão, resolvidos na escrita.
 
 **A lição das três últimas rodadas, que vale como regra de trabalho.** Em 11/09 o relatório estava quase um mês atrás do codebook; em 25/09 as figuras estavam seis semanas atrás. Nos dois casos o JSON estava certo e a peça derivada, errada — e nos dois casos nada avisou, porque o ciclo só cobria o que é gerado por script. **Toda peça escrita à mão que reproduz números do codebook precisa ou virar gerada, ou ganhar uma checagem no ciclo.** As três que existiam — as duas figuras e o relatório — ganharam a sua em 25/09, e a do relatório achou mais três defasagens no primeiro uso. A regra vale para a próxima peça que nascer: se ela repete um número do codebook e ninguém a gera, ela vai envelhecer.
+
+---
+
+## 39. O volume substitui os offprints, os quatro livros ganham offset, e uma ficha minha cai — 🔶 08/10/2026
+
+**Encaminhamentos do pesquisador:** resolver a pendência do volume de *Giros à direita* (§38.9, primeiro item), **ler** os três livros entregues, e decidir sobre as três peças da camada A lidas só on-line e sobre o `Contextual` no vocabulário.
+
+### 39.1 O que foi executado
+
+| | |
+|:--|:--|
+| **Volume integral no lugar dos oito offprints** | 8 arquivos a menos, 1 a mais; **onze** capítulos contra oito; **offset 0** contra oito offsets distintos. A quinta variante de armadilha de numeração **saiu do corpus**, e é a única das seis que foi retirada em vez de declarada |
+| **Procedência dupla** | SHA-256 da cópia entregue pelo pesquisador e da que eu baixei do IBICT (`deposita/166`) é **idêntico**: `560f5bd9…04c9f67`. Nenhuma outra peça do corpus tem duas procedências independentes concordantes |
+| **Três capítulos novos** | Torres (p. 159), Costa Filho (p. 193), Marques (p. 241) — o corpus não os tinha, e a §5.2 do documento 14 subestimava a lacuna em três |
+| **Offsets medidos** | Gurza Lavalle **−2**, Abers **−2**, Madeira **−2**, Singer **−1**, volume *Giros* **0** |
+| **Três livros lidos em parte** | Sumários, capítulos de abertura de Lavalle e Abers, capítulo 8 de Madeira, e varredura normalizada do texto integral dos três |
+| **Corpus** | 66 PDFs / 12.089 p. → **59 PDFs / 12.067 p.**; documental inalterada em **22 / 6.951** |
+| **Registros recodificados** | **nenhum** |
+
+### 39.2 A diferença da ficha não é o offset — e o caso anterior ensinou errado
+
+Lavalle declara 411 impressas em 414 de PDF (diferença **3**) e o offset é **2**. Abers: diferença 3, offset 2. Madeira: diferença 4, offset 2. **Nos três, derivar o deslocamento da aritmética da ficha daria a resposta errada** — e derivar o offset de um dado declarado foi exatamente o que o caso Araujo e Sales (impressa = PDF + 25, a partir de "p. 26-42" em 17 páginas de PDF) ensinou a fazer.
+
+> A regra não se generaliza porque os dados não são do mesmo tipo: **intervalo declarado de artigo** é informação sobre o recorte do texto; **total de páginas de livro** é informação sobre o miolo, e os pré-textuais não entram na conta do mesmo modo. Quatro livros, três editoras, três offsets — mais o volume com zero. **Só a folha impressa na página decide.**
+
+### 39.3 Zero de probe não provado é silêncio, não ausência
+
+O mapa de pertinência que escrevi devolveu **zero** para "cooptac" no livro de Lavalle. Era falso: **`ç` não é `c`**, e o NFKC não dobra cedilha, de modo que o termo em ASCII nunca casaria o termo acentuado. Só percebi porque um `grep` anterior já havia dito **17**.
+
+> Corrigido para NFKD com remoção de diacríticos, o probe reproduz **17 = 17**, e só então os zeros de "Bolsonaro" e "direita" passaram a valer como ausência. **É a regra da linha de base suja aplicada a probe de busca:** medir com instrumento não provado produz um número, não um fato. A regra nova é: **antes de afirmar ausência, o probe tem de reproduzir uma presença conhecida.**
+
+### 39.4 bis O mesmo modo de falha, pego ANTES do commit: o ISBN que eu ia derivar do DOI
+
+Escrevi a ficha do volume com **ISBN 978-65-87429-05-2**. Não há ISBN no arquivo: a palavra não ocorre nenhuma vez no texto extraído, e a página de ficha catalográfica (PDF p. 6) devolve só o título, sem camada de texto no resto. Eu havia **derivado o ISBN do slug `87429052`** dos DOIs de capítulo.
+
+> O slug provavelmente *é* o ISBN. Isso não autoriza declará-lo: o projeto não afirma o que não leu, e "provavelmente é" é a frase que abre as quinze ocorrências anteriores. Saiu da ficha, com a razão escrita no lugar. **O que ficou foi o que o arquivo diz:** os onze DOIs de capítulo, conferidos um a um, e a organização verificada em primeira mão na PDF p. 4 — "© 2020 copyright by Fabiano Godinho Faria & Mauro Luiz Barbosa Marques (Orgs.)", que confirma pelo arquivo o que de manhã se soube apenas pelo nome do depósito no IBICT.
+
+### 39.4 A 16ª ocorrência do modo de falha, e a ficha era minha
+
+A ficha de 08/10 pela manhã declarava Gurza Lavalle et al. (2018) como "o livro brasileiro de referência sobre **movimento que entra no Estado**, que é o mecanismo que PT-04 afirma". O livro **não cita Bolsonaro, não usa "direita" e não menciona junho de 2013** — zero em busca normalizada e provada.
+
+"Movimento que entra no Estado" ali são **encaixes institucionais de movimentos de grupos marginalizados na burocracia, 1985-2016**; em PT-04 é **um movimento de rua que ganha a eleição presidencial**. As mesmas palavras, referentes diferentes.
+
+> **A forma nova:** nas quinze ocorrências anteriores o referente errado era uma cifra, uma página, uma data, uma frase. Aqui é **um livro inteiro**, e o erro estava numa ficha de procedência escrita **antes de abrir o arquivo** — isto é, no lugar do aparato que existe precisamente para impedir esse erro. A correção está em `PROCEDENCIA` e no documento 14, §8.3.
+
+### 39.5 O que a leitura ofereceu, e não é o que a ficha prometia
+
+**Gurza Lavalle et al. (2018)** mostra que identificar institucionalização com desmobilização e cooptação é defeito da literatura estadunidense de movimentos sociais, nomeando **Tarrow (1997), McAdam, Tarrow e Tilly (2001) e Tilly e Tarrow (2007)** — marco teórico declarado deste projeto (p. 37-38 impressas). Desmobilização e cooptação são "possibilidades e não fatalidades" (p. 41). E abre a abordagem a governos "de cunho regressivo, como o que seguiu ao *impeachment*", com a ressalva de que "as configurações mudam conforme a coalizão governante, cedendo passo a outros atores e outros encaixes" (p. 28). **Licença para a pergunta, não resposta sobre o caso.**
+
+**Abers (2021)** dá ao projeto um pressuposto que ele nunca teve com lastro em livro brasileiro: "a mobilização de atores ideologicamente à direita deve também ser compreendida como ativismo" e "causas contenciosas podem ser conservadoras" (p. 44). E **deixa aberta**, como pergunta de pesquisa, a diferença entre ativismo institucional à direita e ativismo pela inclusão (p. 45) — o projeto não pode tratar como respondido o que a autora declara aberto.
+
+**Madeira, Marona e Del Río (2022)**, capítulo 8, documenta o apelo à intervenção militar **condicionado a uma decisão do STF**, em abril de 2018: "só restará o recurso à reação armada. Aí é dever da Força Armada restaurar a ordem" (p. 254). Mais a Lei 13.491/2017, que levou o homicídio doloso de civis por militares à Justiça Militar (p. 256), e a tese de que "o bolsonarismo é uma ideologia política de caráter miliciano" (p. 268). **Não menciona 8 de janeiro: é de junho de 2022.**
+
+### 39.6 O que precisa de você
+
+1. **Abers (2021, p. 44) em PT-04?** A frase "a mobilização de atores ideologicamente à direita deve também ser compreendida como ativismo" é âncora **conceitual** do pressuposto de PT-04, não âncora empírica do evento. Pôr âncora conceitual em registro cujo `mecanismo_causal` é empírico é decisão de critério, e o critério do codebook até aqui foi cadeia causal ancorada. **Não foi feito.**
+2. **A crítica de Gurza Lavalle et al. ao marco teórico do projeto** (institucionalização ≠ cooptação, em Tarrow e Tilly) toca o aparato conceitual declarado, não um registro. Entra como ressalva na redação, como revisão do marco, ou fica como nota? **É decisão de projeto.**
+3. **Madeira et al. (2022, p. 254) em PT-05 ou no arco judicial?** A frase do general amarra o apelo militar a uma decisão do STF, e o arco judicial hoje se apoia só em acórdãos. É a primeira literatura do corpus a interpretá-lo — mas o registro que ela mais serviria pode ser um dos do arco, não PT-05. **Não foi feito.**
+4. **Os três livros seguem LIDOS EM PARTE**, com 1.189 páginas impressas somadas. O mapa de pertinência por capítulo diz onde há o que ler: em Gurza Lavalle, nenhum capítulo menciona a direita; em Madeira, os capítulos 6, 7, 11, 12 e o posfácio concentram Bolsonaro, Lava Jato e STF.

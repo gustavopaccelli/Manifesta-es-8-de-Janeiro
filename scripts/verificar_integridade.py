@@ -222,7 +222,8 @@ def main():
         # único documento oficial entrasse.
         # Linha de base atualizada em 08/10/2026 pela tarefa 10: entra o eixo 14,
         # com sete peças de literatura brasileira em livro — o volume Giros à
-        # direita (SertãoCult, 2020, seis capítulos) e O Brasil no inferno global
+        # direita (SertãoCult, 2020, seis capítulos — retirados no terceiro passo,
+        # ver abaixo) e O Brasil no inferno global
         # (FFLCH/USP, 2022). A documental continua em 22 / 6.951: é a quarta vez
         # que o corpus cresce sem que um único documento oficial entre.
         # Linha de base atualizada em 08/10/2026, SEGUNDO passo do mesmo dia: o
@@ -231,10 +232,17 @@ def main():
         # mandou coletar dois capítulos a mais de Giros à direita. O eixo 14 vai a
         # 12 peças e nasce o eixo 15. A documental continua em 22 / 6.951: quinta
         # vez que o corpus cresce sem que um documento oficial entre.
-        if (n, total, doc_n, doc_total) != (66, 12089, 22, 6951):
+        # Linha de base atualizada em 08/10/2026, TERCEIRO passo do mesmo dia, e é a
+        # PRIMEIRA VEZ QUE O CORPUS DIMINUI DE ARQUIVOS E ISSO É GANHO: os oito
+        # offprints de Giros à direita saíram e entrou o volume inteiro, com onze
+        # capítulos, offset zero e SHA-256 conferido contra a cópia que eu mesmo
+        # baixei do IBICT. São 8 arquivos a menos e 1 a mais — 59 PDFs —, 22 páginas
+        # a menos no total, e TRÊS capítulos a mais de conteúdo (Torres, Costa Filho
+        # e Marques), que o corpus não tinha. A documental continua em 22 / 6.951.
+        if (n, total, doc_n, doc_total) != (59, 12067, 22, 6951):
             avisos.append("corpus mudou: {} PDFs / {} páginas, {} documentais / {} p. "
-                          "(era 66 / 12089, 22 / 6951)".format(n, total, doc_n, doc_total))
-            print("  ~ corpus difere da linha de base de 08/10/2026 (66 PDFs / 12089 p., "
+                          "(era 59 / 12067, 22 / 6951)".format(n, total, doc_n, doc_total))
+            print("  ~ corpus difere da linha de base de 08/10/2026 (59 PDFs / 12067 p., "
                   "22 documentais / 6951 p.)")
         else:
             print("  OK — bate com o inventário")

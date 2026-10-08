@@ -38,7 +38,9 @@ A busca foi nominal — dezenove autores, um por um, exigindo que o **nome compl
 
 ---
 
-## 2. O que entrou — doze peças, 1.854 páginas
+## 2. O que entrou — cinco peças, 1.832 páginas
+
+> **ATUALIZADO NO FIM DA NOITE DE 08/10/2026, e pela primeira vez o eixo DIMINUI de arquivos.** Os oito offprints de *Giros à direita* saíram e entrou o **volume inteiro**, com onze capítulos e offset zero — ver §8. São 8 arquivos a menos, 1 a mais, 22 páginas a menos **e três capítulos a mais de conteúdo**. E os três livros entregues passaram a **LIDOS EM PARTE**, com offset medido.
 
 > **ATUALIZADO NO FIM DE 08/10/2026.** O eixo passou de sete a **doze peças**: o pesquisador **entregou três dos quatro livros barrados** pelo Bunny Shield e mandou coletar os dois capítulos de *Giros à direita* que a primeira passagem deixou fora. O quarto livro saiu da lista por outra razão — ver §5.1. **Nenhuma das doze foi lida.**
 
@@ -62,7 +64,9 @@ Os seis primeiros são capítulos de um mesmo volume: ***Giros à direita: anál
 
 ---
 
-## 3. A quinta variante de armadilha de numeração, e é a mais perigosa até agora
+## 3. ~~A quinta variante de armadilha de numeração~~ — RETIRADA DO CORPUS em 08/10/2026
+
+> **Esta seção descreve uma armadilha que não existe mais no corpus, e fica aqui por isso mesmo: é a única das seis variantes que foi ELIMINADA em vez de declarada.** O volume inteiro substituiu os oito offprints, e com um arquivo só o deslocamento deixa de variar. Ver §8.1. O texto abaixo é o registro do que havia.
 
 Os seis capítulos de *Giros à direita* são **offprints**, e isso tem uma consequência que nenhuma das quatro variantes anteriores tinha.
 
@@ -81,7 +85,7 @@ Cada um dos seis PDFs traz as **mesmas 12 páginas de pré-textuais do volume** 
 >
 > **Regra operacional: para o eixo 14, só cite PDF p. ≥ 13, e sempre pelo arquivo do capítulo.**
 
-O offset de **SINGER, ARAUJO E RUGITSKY (2022) não está declarado**, de propósito: é livro inteiro, 374 páginas de PDF, e a paginação impressa precisa ser conferida na hora da leitura. **Não assumir PDF = impressa antes de abrir.**
+~~O offset de **SINGER, ARAUJO E RUGITSKY (2022) não está declarado**, de propósito.~~ **MEDIDO em 08/10/2026: impressa = PDF − 1** (PDF p. 9 = impressa 8). A instrução de não assumir PDF = impressa estava certa; o valor agora está medido.
 
 ---
 
@@ -122,7 +126,7 @@ Os quatro estão no **SciELO Livros**, que serve o PDF integral — e o host `bo
 
 ### 5.2 O resto do volume Giros à direita
 
-O sumário do volume traz mais capítulos, e dois são pertinentes e **não foram coletados**: **Hernán Ramírez**, "Neoliberalismo e (neo)autoritarismo: uma perspectiva de longo prazo a partir de casos do cone sul da América Latina" (p. 20-45); e **Fabiano Godinho Faria**, "Alguma coisa está fora do tempo: a doutrina da guerra revolucionária e o delírio anticomunista da família Bolsonaro" (p. 122). O depósito do IBICT passa, de modo que são coletáveis — **não os coletei porque ampliar a coleta sem seu aval é decisão, não execução.**
+~~O sumário do volume traz mais capítulos, e dois são pertinentes e não foram coletados.~~ **RESOLVIDO EM 08/10/2026: o volume inteiro entrou, e com ele os onze capítulos.** A lacuna era maior do que esta seção supunha — faltavam não dois capítulos, mas **cinco**: além de Ramírez (p. 20) e Faria (p. 122), que a primeira ampliação coletou, o corpus não tinha **Torres** (p. 159), **Costa Filho** (p. 193) nem **Marques** (p. 241). Ver §8.
 
 ### 5.3 Uma armadilha de atribuição que a regra dos dois eixos pegou
 
@@ -182,3 +186,110 @@ Os dois confirmam o padrão da §3: o capítulo começa na **PDF p. 13**, depois
 **RICH (2021), *Ativismo patrocinado pelo Estado*** (DOI 10.7476/9786557081044) era a quarta peça barrada. O pesquisador apurou que **não é de acesso aberto: está à venda em livraria**, e avaliou que a resenha disponível é lastro inconsistente para esta pesquisa.
 
 > **O OpenAlex a declara OURO e o SciELO Livros a lista — e ela não é livre.** Nos sete casos anteriores de "ouro no registro, texto inalcançável", o obstáculo era o gate do editor. **Este é o primeiro em que o erro está no próprio registro de acesso aberto.** Ouro no OpenAlex não é só *difícil de baixar*: pode ser *falso*.
+
+---
+
+## 8. Terceiro passo de 08/10/2026 — o volume substitui os offprints, e os livros são lidos
+
+### 8.1 A armadilha de offset saiu do corpus, e a procedência ficou dupla
+
+O pesquisador mandou resolver a pendência da §7.4 e **entregou o volume inteiro**. No mesmo dia eu o havia baixado do depósito do IBICT (`deposita/166`) pela API REST do DSpace 7. **O SHA-256 das duas cópias é idêntico:**
+
+```
+560f5bd947c323249d4018988d151ad292c830a6473bce96f4218ab5104c9f67
+```
+
+Isso não é detalhe de higiene: significa que o arquivo do corpus tem **duas procedências independentes e concordantes** — a entrega do pesquisador e a coleta no repositório oficial. Nenhuma outra peça do corpus tem isso.
+
+| | Antes | Depois |
+|:--|:--|:--|
+| Arquivos de *Giros à direita* | 8 offprints | **1 volume** |
+| Capítulos disponíveis | 8 | **11** |
+| Offsets a controlar | +0, +7, +33, +58, +77, +109, +161, +209 | **0** |
+| Regra operacional | "só cite PDF p. ≥ 13, e pelo arquivo do capítulo" | **impressa = PDF** |
+| Eixo 14 | 12 peças / 1.854 p. | **5 peças / 1.832 p.** |
+
+> **O volume tem offset ZERO, e isso não é sorte: é estrutura.** As oito páginas de pré-textuais não são numeradas, e a numeração impressa começa em **9**, na PDF p. 9, seguindo até a 256. A peça mais limpa do corpus em matéria de paginação é justamente a que substituiu a mais suja.
+
+**A troca não tocou âncora nenhuma:** `SertaoCult` aparece **zero** vezes no JSON. Nenhum registro apontava para os offprints, porque nenhum deles foi lido. Se um tivesse sido, a troca seria outra conversa.
+
+### 8.2 Três capítulos que o corpus não tinha
+
+A §5.2 dizia que faltavam dois capítulos. Faltavam cinco. Entraram com o volume:
+
+| Capítulo | Impressa | Por que interessa |
+|:--|--:|:--|
+| **TORRES**, "Um balanço crítico dos primeiros 18 meses da política educacional do governo Bolsonaro" | 159-173 | política setorial do governo de PT-05, tema que o corpus não cobria |
+| **COSTA FILHO**, "Armas, literatura 'panfletária' e antissemitismo: a postura conservadora de Gustavo Barroso no Brasil dos anos 1930" | 193-221 | genealogia longa da direita armada, par de Cazetta |
+| **MARQUES**, "Um fantasma ronda o mundo, o fantasma de Gilead" | 241-255 | o conservadorismo lido pela distopia; é o capítulo que o pesquisador havia anexado em separado, e o volume o torna redundante |
+
+### 8.3 Os três livros, lidos em parte — e uma ficha minha que a leitura desmentiu
+
+O pesquisador mandou **ler os três livros**. O offset de cada um deixou de ser "a determinar":
+
+| Livro | PDF | Impressa declarada | **Offset medido** |
+|:--|--:|--:|:--:|
+| Gurza Lavalle, Carlos, Dowbor e Szwako (2018) | 414 | 411 | **−2** |
+| Abers (2021) | 359 | 356 | **−2** |
+| Madeira, Marona e Del Río (2022) | 427 | 423 | **−2** |
+| *(Singer, Araujo e Rugitsky, 2022, medido no mesmo passo)* | 374 | — | **−1** |
+
+> **A DIFERENÇA ENTRE O TOTAL DA FICHA E O TOTAL DO PDF NÃO É O OFFSET.** Lavalle: diferença 3, offset 2. Abers: diferença 3, offset 2. Madeira: diferença 4, offset 2. **Nos três, a aritmética da ficha daria a resposta errada** — e era exatamente o que o caso Araujo e Sales (offset derivado de um intervalo declarado) ensinara a fazer. O que vale ali não vale aqui: intervalo declarado de um artigo é informação sobre o recorte; total de páginas de um livro é informação sobre o miolo, e os pré-textuais não entram na conta do mesmo jeito. **Só a folha impressa na página decide.** Quatro livros, três editoras, três offsets diferentes, mais o volume com zero.
+
+**Um canal de conferência que apareceu de graça:** Abers e Madeira saíram do InDesign com o rodapé de diagramação embutido no PDF — `v3 - Miolo - Ativismo institucional.indd 18` —, e esse número **é a folha impressa**. Serve para medir o offset até nas páginas de pré-textual, onde a folha não é impressa.
+
+#### A 16ª ocorrência do modo de falha, e a ficha era minha
+
+A ficha que eu escrevi pela manhã declarava Gurza Lavalle et al. (2018) como *"o livro brasileiro de referência sobre **movimento que entra no Estado**, que é o mecanismo que PT-04 afirma"*. **A leitura desmentiu a ficha.**
+
+| O que medi (busca normalizada, com dobra de diacríticos e união de hifenização, linha de base provada) | |
+|:--|--:|
+| "Bolsonaro" | **0** |
+| "direita" | **0** |
+| "extrema direita" | **0** |
+| "junho de 2013" | **0** |
+| "desmonte" | **0** |
+
+"Movimento que entra no Estado" em Gurza Lavalle et al. quer dizer **encaixes institucionais construídos por movimentos de grupos marginalizados dentro da burocracia, entre 1985 e 2016**. Em PT-04 quer dizer **um movimento de rua que ganha a eleição presidencial**. As mesmas palavras, referentes diferentes — e quem casou as palavras fui eu, numa ficha escrita **antes de abrir o arquivo**.
+
+> **A linha de base do probe teve de ser provada antes de a ausência valer.** A primeira versão do meu mapa de pertinência devolveu **zero** para "cooptac" no livro todo. Era falso: `ç` não é `c`, e o NFKC não dobra cedilha, de modo que o termo ASCII nunca casaria o termo acentuado. Só percebi porque um `grep` anterior já havia dito **17**. Corrigido para NFKD com remoção de diacríticos, o probe reproduz 17, e **aí** os zeros acima passaram a significar algo. Zero de probe não provado não é ausência: é silêncio.
+
+#### O que o livro de fato oferece, e é mais incômodo que a ficha prometia
+
+Gurza Lavalle, Carlos, Dowbor e Szwako mostram que **identificar institucionalização com desmobilização e cooptação é um defeito da literatura**, e nomeiam os responsáveis:
+
+> as principais e mais difundidas ênfases teórico-analíticas das teorias dos movimentos sociais elaboradas pelos autores radicados nos EUA "não permitem descrever e explicar os processos de institucionalização que permeiam as interações dos movimentos sociais com o Estado para além da desmobilização e da cooptação" (p. 38 impressa), por pressuporem "uma separação entre movimentos e a política institucionalizada" e categorias "estanques, como entidades autônomas e dicotômicas (*outsider* vs *insider*, *challenger* vs *authority*)" — com citação de Tarrow (1997), McAdam, Tarrow e Tilly (2001) e Tilly e Tarrow (2007).
+
+**Esses três são marco teórico declarado deste projeto.** As mudanças do movimento — "continuidade, desmobilização, cooptação ou transformação em outro formato de ação coletiva" — são, para eles, "possibilidades e não fatalidades" (p. 41 impressa).
+
+E o livro abre explicitamente a abordagem a governos **"de cunho regressivo, como o que seguiu ao *impeachment* da presidente Dilma Rousseff"**, com a ressalva de que aí "as configurações mudam conforme a coalizão governante, cedendo passo a outros atores e outros encaixes" (p. 28 impressa). **É licença para a pergunta, não resposta sobre o caso.**
+
+### 8.4 Abers dá ao projeto um pressuposto que ele nunca teve com lastro
+
+Abers (2021), na introdução que ela mesma assina, afirma em livro brasileiro o que PT-04 pressupõe:
+
+> "A mobilização de atores ideologicamente à direita deve também ser compreendida como ativismo. Causas contenciosas podem ser conservadoras, envolvendo não somente a defesa de mudança, mas a crítica a mudanças em curso ou propostas que podem reorganizar as relações de poder na sociedade." (p. 44 impressa)
+>
+> "Com a vitória da extrema direita nas urnas, o contexto mudou profundamente." (p. 44 impressa)
+
+E sobre a janela de PT-05: "a partir de 2019, as possibilidades de agir em prol dos direitos sociais e ambientais de dentro das estruturas burocráticas se tornou muito mais difícil" (p. 45 impressa), num livro que sai "com boa parte das políticas públicas estudadas se encontrando hoje em processo de franco desmonte" (p. 45 impressa).
+
+> **E DEIXA ABERTO O QUE O PROJETO PODERIA QUERER FECHADO.** Abers formula como pergunta de pesquisa — não como achado — "em que medida ativismo institucional à direita se diferencia do ativismo em defesa da inclusão política e social" (p. 45 impressa). **O projeto não pode tratar como respondido o que a autora declara aberto.** É a ressalva que acompanha a âncora.
+
+### 8.5 Madeira et al.: o apelo militar amarrado a uma decisão judicial
+
+A escolha do capítulo não foi por impressão: foi por **mapa de pertinência medido capítulo a capítulo**. O capítulo 8, de Andrés del Río e André Rodrigues, concentra 37 ocorrências de "Bolsonaro" e 122 de "militar" em 32 páginas — contra zero em cinco dos doze capítulos.
+
+Lido na íntegra, ele documenta o apelo à intervenção militar **condicionado a uma decisão do STF**, em abril de 2018, pela boca de um general de exército da reserva:
+
+> "Se acontecer tanta rasteira e mudança da lei, aí eu não tenho dúvida de que só restará o recurso à reação armada. Aí é dever da Força Armada restaurar a ordem. Mas não creio que chegaremos lá" (p. 254 impressa)
+
+O capítulo registra ainda a **Lei 13.491/2017**, que levou à Justiça Militar o homicídio doloso de civis por militares das Forças Armadas (p. 256 impressa), e sustenta a tese de que "o bolsonarismo é uma ideologia política de caráter miliciano" (p. 268 impressa).
+
+> **O livro é de junho de 2022 e não menciona 8 de janeiro: zero ocorrências, em busca normalizada.** Isso é esperado e precisa estar escrito, porque a peça entra no arco judicial pela montante — a arquitetura jurídica anterior ao evento —, não pelo evento.
+
+### 8.6 O que esta leitura NÃO fez
+
+**Nenhum registro foi recodificado, e nenhuma âncora foi lançada.** As três peças passaram de `COLETADO, NÃO LIDO` a `LIDO EM PARTE`, com o lido declarado peça por peça. Pôr qualquer uma delas em `fonte_trecho` exige decidir questões que são do pesquisador, e estão listadas em `docs/PENDENCIAS-ANALITICAS.md`.
+
+**E "lido em parte" é estado honesto, não meio-estado:** os três livros somam **1.189 páginas impressas** e o que se leu foram os sumários, os capítulos de abertura de Lavalle e Abers, o capítulo 8 de Madeira e varredura normalizada do texto integral dos três. O mapa de pertinência de cada livro está em `scripts/` e diz onde ainda há o que ler.

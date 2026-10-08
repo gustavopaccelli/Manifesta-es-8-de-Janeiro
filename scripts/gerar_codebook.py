@@ -491,7 +491,13 @@ for _arq, _ref, _desloc, _serve in [
      "'.1.2019.' e o rodapé registra 'Recibido: 3/4/2019 - Aceptado: 17/11/2019'",
      "PT-01 a PT-04, e também a tarefa 10 — é levantamento de cinco décadas de estudos "
      "brasileiros de protesto, com o quinto ciclo definido como 'pós junho de 2013'. É a "
-     "única peça do corpus que faz o balanço da própria literatura brasileira"),
+     "única peça do corpus que faz o balanço da própria literatura brasileira. "
+     "**LIDA EM PARTE em 08/10/2026** — introdução, primeiro ciclo, quinto ciclo e "
+     "conclusões (PDF p. 1-4, 17-18) — para resolver a pendência da tarefa 10 que o "
+     "pesquisador delegou. NÃO ANCORA REGISTRO: a leitura serviu para decidir o escopo "
+     "da tarefa, não para pôr página em campo de codebook. E traz uma cifra que o "
+     "projeto NÃO deve usar sem outra fonte: “após junho de 2013 mais de trinta grupos "
+     "foram criados” (impressa 109), que a autora credita a si mesma (Gohn 2017a)"),
     ("VON-BULOW-ABERS_Denialism-and-populism-two-sides-of-a-coin_Government-and-Opposition-59_2024.pdf",
      "VON BÜLOW, Marisa; ABERS, Rebecca Neaera. 'Denialism and Populism: Two Sides of a Coin "
      "in Jair Bolsonaro’s Brazil'. Government and Opposition, v. 59, p. 998-1016, 2024. "
@@ -616,6 +622,125 @@ for _arq, _ref, _desloc, _serve in [
 ]:
     PROCEDENCIA["Fontes/14_Livros-brasileiros/" + _arq] = (
         _COLETA10, "literatura", "{} | {} | SERVE A: {}".format(_ref, _desloc, _serve))
+
+# Eixo 14, SEGUNDO passo de 08/10/2026. Tres livros entregues pelo pesquisador --
+# os mesmos que o Bunny Shield do books.scielo.org barrava -- e dois capitulos a
+# mais de Giros a direita, coletados por encaminhamento dele.
+#
+# **NENHUM FOI LIDO E NENHUM ANCORA REGISTRO.** Continuam fila de leitura.
+#
+# UMA CORRECAO DE METODO DESTE MESMO DIA: o probe que eu usei para achar o
+# capitulo de Faria nao seguia o redirecionamento http->https do IBICT, e por
+# isso dei o handle como inexistente. Nao era: a falha era do probe. O caminho
+# que funcionou foi a API REST do DSpace 7 (/server/api/discover/search/objects),
+# porque a interface do IBICT e renderizada em JavaScript e nao devolve itens no
+# HTML. **E a mesma API mostrou que o VOLUME INTEIRO esta depositado** em
+# deposita/166, "Faria & Marques - Giros a Direita.pdf", 2,5 MB -- o que torna os
+# oito offprints redundantes e permitiria retirar a armadilha de offset por
+# capitulo. Nao foi feito: trocar peca ja incorporada e decisao do pesquisador.
+_ENTREGA10 = ("Entregue pelo pesquisador em 08/10/2026 — livro de acesso aberto que o "
+              "Bunny Shield do books.scielo.org barrava ao curl. Verificado nos dois "
+              "eixos no TEXTO INTEGRAL. COLETADO, NÃO LIDO: não ancora registro")
+_COLETA10B = ("Coleta da tarefa 10 (08/10/2026), por encaminhamento do pesquisador — "
+              "capítulo de Giros à direita obtido no depósito do IBICT via API REST do "
+              "DSpace 7. COLETADO, NÃO LIDO: não ancora registro")
+for _arq, _orig, _ref, _desloc, _serve in [
+    ("LAVALLE-CARLOS-DOWBOR-SZWAKO_Movimentos-sociais-e-institucionalizacao_EdUERJ_2018.pdf",
+     _ENTREGA10,
+     "GURZA LAVALLE, Adrian; CARLOS, Euzeneia; DOWBOR, Monika; SZWAKO, José (orgs.). "
+     "Movimentos sociais e institucionalização: políticas sociais, raça e gênero no Brasil "
+     "pós-transição. Rio de Janeiro: EdUERJ, 2018, 411 p. ISBN 978-85-7511-479-7. "
+     "DOI 10.7476/9788575114797",
+     "OFFSET A DETERMINAR NA LEITURA: a ficha declara 411 páginas impressas e o PDF tem "
+     "414. Não assumir PDF = impressa antes de abrir",
+     "PT-04 — é o livro brasileiro de referência sobre MOVIMENTO QUE ENTRA NO ESTADO, que "
+     "é o mecanismo que PT-04 afirma (“incorporação do movimento ao Estado”)"),
+    ("ABERS_Ativismo-institucional-criatividade-e-luta-na-burocracia_Editora-UnB_2021.pdf",
+     _ENTREGA10,
+     "ABERS, Rebecca Neaera (org.). Ativismo institucional: criatividade e luta na "
+     "burocracia brasileira. Brasília: Editora UnB, 2021, 356 p. ISBN 978-65-5846-159-3. "
+     "DOI 10.7476/9786558461593",
+     "OFFSET A DETERMINAR NA LEITURA: a ficha declara 356 páginas impressas e o PDF tem 359",
+     "PT-04 e PT-05 — e a autora é a MESMA Rebecca Neaera Abers que co-assina von Bülow e "
+     "Abers (2024), a peça que fechou PT-06. O conceito de ativismo institucional é o par "
+     "brasileiro do argumento de autonomia relativa do movimento"),
+    ("MADEIRA-MARONA-DEL-RIO_Democracia-e-justica-na-America-Latina_EdUERJ_2022.pdf",
+     _ENTREGA10,
+     "MADEIRA, Lígia Mori; MARONA, Marjorie Corrêa; DEL RÍO, Andrés (orgs.). Democracia e "
+     "justiça na América Latina: para onde vamos?. Rio de Janeiro: EdUERJ, 2022, 423 p. "
+     "ISBN 978-65-87949-55-0. DOI 10.7476/9786587949550",
+     "OFFSET A DETERMINAR NA LEITURA: a ficha declara 423 páginas impressas e o PDF tem 427",
+     "ARCO JUDICIAL — PT-03A a PT-06C, PT-02A e PT-05A. É a primeira peça de literatura do "
+     "corpus sobre judicialização da política na América Latina: o arco judicial se apoia "
+     "hoje só em acórdãos, isto é, em fonte primária sem literatura que a interprete"),
+    ("RAMIREZ_Neoliberalismo-e-neoautoritarismo-no-cone-sul_SertaoCult_2020.pdf",
+     _COLETA10B,
+     "RAMÍREZ, Hernán. 'Neoliberalismo e (neo)autoritarismo: uma perspectiva de longo prazo "
+     "a partir de casos do cone sul da América Latina'. In: Giros à direita: análises e "
+     "perspectivas sobre o campo líbero-conservador (org. Fabiano Godinho Faria e Mauro "
+     "Luiz Barbosa Marques). Sobral: SertãoCult, 2020, p. 20-45. "
+     "DOI 10.35260/87429052p.20-45.2020",
+     "PÁGINA IMPRESSA = PDF + 7 (capítulo na PDF p. 13 = impressa 20). Ver a regra do eixo: "
+     "só citar PDF p. >= 13",
+     "PT-05 e PT-08 — perspectiva de longo prazo do (neo)autoritarismo no cone sul; é o "
+     "contexto regional em que o apelo de intervenção militar brasileiro se inscreve"),
+    ("FARIA_Alguma-coisa-esta-fora-do-tempo-guerra-revolucionaria_SertaoCult_2020.pdf",
+     _COLETA10B,
+     "FARIA, Fabiano Godinho. 'Alguma coisa está fora do tempo: a doutrina da guerra "
+     "revolucionária e o delírio anticomunista da família Bolsonaro'. In: Giros à direita. "
+     "Sobral: SertãoCult, 2020, p. 122-158. DOI 10.35260/87429052p.122-158.2020",
+     "PÁGINA IMPRESSA = PDF + 109 (capítulo na PDF p. 13 = impressa 122). O autor é também "
+     "um dos dois ORGANIZADORES do volume, o que explica a sua biografia na p. 2 de todos "
+     "os offprints",
+     "PT-05, PT-06 e PT-12 — a doutrina da guerra revolucionária e o anticomunismo da "
+     "família Bolsonaro: é a genealogia doutrinária do apelo militar que PT-02, PT-05 e "
+     "PT-12 codificam como frame"),
+]:
+    PROCEDENCIA["Fontes/14_Livros-brasileiros/" + _arq] = (
+        _orig, "literatura", "{} | {} | SERVE A: {}".format(_ref, _desloc, _serve))
+
+# Eixo 15 — literatura comparada sobre o 6 de janeiro de 2021, aberto em
+# 08/10/2026. **DUAS PECAS, AS DUAS LIDAS, AS DUAS ANCORANDO PT-08** — que era o
+# ultimo registro contextual do codebook e deixou de ser.
+#
+# O eixo nasce porque a lacuna de PT-08 nunca foi brasileira: era literatura
+# comparada sobre os Estados Unidos, e nenhuma das dezoito pecas do eixo 13 a
+# cobria -- nem Bastos e Recuero (2023), que trata do Congresso brasileiro e nao
+# do Capitolio. As duas foram entregues pelo pesquisador depois que a coleta
+# automatizada falhou: a MDPI por um interstitial do Akamai Bot Manager, a SAGE
+# por nao ter o PDF em deposito algum.
+_COMPARADO = ("Entregue pelo pesquisador em 08/10/2026 e LIDA NA FONTE no mesmo dia — "
+              "artigo revisado por pares, acesso aberto. ANCORA PT-08 com página")
+for _arq, _ref, _desloc, _serve in [
+    ("CASTANEDA-JENKS_January-6th-and-de-democratization_Social-Sciences-12-4_2023.pdf",
+     "CASTAÑEDA, Ernesto; JENKS, Daniel. 'January 6th and De-Democratization in the United "
+     "States'. Social Sciences, v. 12, n. 4, art. 238, 2023. CC-BY. "
+     "DOI 10.3390/socsci12040238",
+     "SEM PAGINAÇÃO IMPRESSA, e a causa é nova no corpus: a MDPI pagina por NÚMERO DE "
+     "ARTIGO (12(4):238), não por intervalo no fascículo, e o cabeçalho corrente é “Soc. "
+     "Sci. 2023, 12, 238”. As páginas citadas são do PDF, e quem conferir pelo fascículo "
+     "não encontra intervalo nenhum. Sexta variante de armadilha de numeração",
+     "PT-08 — ancora o MECANISMO, e é a peça que fechou o registro: “The attack on congress "
+     "to contest an election has now become a contentious performance that was used by the "
+     "equivalent actors in Brazil on January 8, 2023” (PDF p. 10), com Steve Bannon nomeado "
+     "como agente de transmissão. LIMITE DECLARADO NO REGISTRO: é UMA frase, de passagem, "
+     "sem aparato de evidência do lado brasileiro"),
+    ("CHEN-LUKITO-KOO_Comparing-the-StopTheSteal-movement-across-platforms_"
+     "Social-Media-and-Society-9-3_2023.pdf",
+     "CHEN, Bin; LUKITO, Josephine; KOO, Gyo Hyun. 'Comparing the #StopTheSteal Movement "
+     "across Multiple Platforms: Differentiating Discourse on Facebook, Twitter, and "
+     "Parler'. Social Media + Society, v. 9, n. 3, p. 1-13, 2023. CC BY-NC. "
+     "DOI 10.1177/20563051231196879",
+     "PÁGINA IMPRESSA = PDF + 0, offset LIDO no rótulo da própria página (a p. 2 imprime "
+     "“2”, a p. 13 imprime “13”)",
+     "PT-08 — ancora o EVENTO e o ENQUADRAMENTO: comparam 675.336 posts de Facebook, "
+     "Twitter e Parler entre 1/09/2020 e 1/02/2021 aplicando a tipologia de enquadramentos "
+     "de SNOW E BENFORD, que é marco teórico declarado deste projeto. **NÃO tratam do "
+     "Brasil**: zero ocorrências de “Brazil”, “Bolsonaro” e “January 8”. TRÊS AUTORES, e o "
+     "CSV da camada A nomeava zero"),
+]:
+    PROCEDENCIA["Fontes/15_Comparado-6-de-janeiro/" + _arq] = (
+        _COMPARADO, "literatura", "{} | {} | SERVE A: {}".format(_ref, _desloc, _serve))
 
 # O que falta coletar. Alimenta a aba Pendencias_Coleta e o script baixar_fontes.sh.
 PENDENCIAS = [

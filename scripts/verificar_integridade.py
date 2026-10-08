@@ -42,7 +42,8 @@ CLASSES = {"Confirmado em fonte primária", "Confirmado", "Contextual",
 # protege continua a mesma: a contagem documental mede documento oficial, e não
 # pode crescer porque entrou artigo de revista.
 FORA_DA_DOCUMENTAL = {"05_Bibliografia-teorica", "12_Camada-T-1_Literatura",
-                      "13_Bolsonarismo-mobilizacao", "14_Livros-brasileiros"}
+                      "13_Bolsonarismo-mobilizacao", "14_Livros-brasileiros",
+                      "15_Comparado-6-de-janeiro"}
 
 falhas = []
 avisos = []
@@ -224,10 +225,16 @@ def main():
         # direita (SertãoCult, 2020, seis capítulos) e O Brasil no inferno global
         # (FFLCH/USP, 2022). A documental continua em 22 / 6.951: é a quarta vez
         # que o corpus cresce sem que um único documento oficial entre.
-        if (n, total, doc_n, doc_total) != (59, 10774, 22, 6951):
+        # Linha de base atualizada em 08/10/2026, SEGUNDO passo do mesmo dia: o
+        # pesquisador entregou cinco peças que a coleta não alcançara (três livros
+        # do SciELO Livros e os dois artigos comparados sobre o 6 de janeiro) e
+        # mandou coletar dois capítulos a mais de Giros à direita. O eixo 14 vai a
+        # 12 peças e nasce o eixo 15. A documental continua em 22 / 6.951: quinta
+        # vez que o corpus cresce sem que um documento oficial entre.
+        if (n, total, doc_n, doc_total) != (66, 12089, 22, 6951):
             avisos.append("corpus mudou: {} PDFs / {} páginas, {} documentais / {} p. "
-                          "(era 59 / 10774, 22 / 6951)".format(n, total, doc_n, doc_total))
-            print("  ~ corpus difere da linha de base de 08/10/2026 (59 PDFs / 10774 p., "
+                          "(era 66 / 12089, 22 / 6951)".format(n, total, doc_n, doc_total))
+            print("  ~ corpus difere da linha de base de 08/10/2026 (66 PDFs / 12089 p., "
                   "22 documentais / 6951 p.)")
         else:
             print("  OK — bate com o inventário")

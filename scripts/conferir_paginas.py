@@ -303,6 +303,40 @@ def transcricoes(trecho):
     return [p for p in dentro if len(p) >= 45 and not APARATO.search(p[:60])]
 
 
+PAR_CURVO = re.compile("“([^“”]{45,}?)”")
+
+
+def aninhamento(trecho):
+    """Quantas citações o pareamento acha que transcricoes() NÃO vê?
+
+    ACRESCENTADO EM 08/10/2026, depois de a armadilha morder três vezes no mesmo
+    dia. transcricoes() fatia em TODO caractere de aspa e fica com os índices
+    ímpares; qualquer aspa ANINHADA inverte a paridade dali para frente. As duas
+    consequências são simétricas e as duas são silenciosas:
+
+      - uma transcrição real deixa de ser extraída, e **ninguém a confere** — o
+        ciclo passa verde porque não havia o que conferir (foi o caso do kit
+        Covid em PT-06, em 04/10);
+      - e um pedaço de APARATO — prosa do analista entre duas citações — é
+        promovido a transcrição e procurado no PDF, onde naturalmente não está
+        (foi o caso de PT-08, em 08/10: a frase 'não foi o Capitólio, e sim a
+        revolta do Sri Lanka' é minha, não da fonte).
+
+    A detecção é barata: um pareamento simples de aspas curvas acha as citações
+    bem formadas; se transcricoes() não devolve todas elas, há aninhamento. Devolve
+    a lista das perdidas, e main() trata como FALHA — porque transcrição não
+    conferida é pior que transcrição errada: a errada aparece.
+    """
+    vistas = [norm_busca(t) for t in transcricoes(trecho)]
+    perdidas = []
+    for m in PAR_CURVO.finditer(trecho or ""):
+        cit = m.group(1).strip()
+        alvo = norm_busca(cit)
+        if not any(alvo in v or v in alvo for v in vistas):
+            perdidas.append(cit)
+    return perdidas
+
+
 def fragmentos(citacao):
     """Parte a citação nas elisões: '(...)' não existe no PDF, e a janela
     literal que a atravessa nunca casa. Cada pedaço longo vale por si."""
@@ -368,7 +402,12 @@ def main():
     ok = falha = indet = 0
     falhas, ociosas_total, excecoes_usadas = [], 0, 0
 
+    aninhadas = {}
     for e in alvos_reg:
+        perdidas = aninhamento(e.get("fonte_trecho"))
+        if perdidas:
+            aninhadas[e["id"]] = perdidas
+
         pp = pares(e.get("fonte_pagina"))
         if not pp:
             print("  {:<7} ~  sem página estruturada".format(e["id"]))
@@ -454,7 +493,18 @@ def main():
         print("  4. a transcrição é de outra fonte que o registro cita de passagem —")
         print("     manchete, paráfrase —, e não do documento ancorado. Se for o caso,")
         print("     registre em EXCECOES, no alto deste arquivo, com o motivo.")
-    return 1 if falhas else 0
+    if aninhadas:
+        print()
+        print("ASPA ANINHADA — transcrição que NINGUÉM confere: {}".format(
+            ", ".join(sorted(aninhadas))))
+        print("Uma aspa dentro de outra inverte a paridade de transcricoes(), e a")
+        print("consequência é silenciosa nas duas direções: a citação real deixa de ser")
+        print("extraída, ou um pedaço de aparato é promovido a citação e procurado no PDF.")
+        print("A saída é no TEXTO, não no script: reescrever o trecho sem aspa interna.")
+        for rid, perdidas in sorted(aninhadas.items()):
+            for cit in perdidas:
+                print("  {:<7} não extraída: “{}...”".format(rid, cit[:72]))
+    return 1 if (falhas or aninhadas) else 0
 
 
 if __name__ == "__main__":

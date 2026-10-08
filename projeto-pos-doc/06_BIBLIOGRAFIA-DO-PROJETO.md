@@ -285,7 +285,9 @@ Registradas porque o projeto trata cifra e metadado com o mesmo rigor, e porque 
 
 **1. Quantas referências estão confirmadas: 48 ou 50?** `../docs/LEIA-ME_metodologia_verificacao.md` afirma "a esmagadora maioria (48) foi confirmada". A contagem por status na planilha dá outro resultado: **50 confirmadas, 6 não localizadas e 2 localizadas apenas em repositório de autoarquivamento** — soma 58, que fecha. Adotei 50 e registro a divergência para decisão do pesquisador. As duas de autoarquivamento (itens 22 e 39) são provavelmente a origem da diferença, se tiverem sido contadas como não confirmadas.
 
-**2. Alonso (2017) e Gohn (2019) têm metadados divergentes entre a tese e o CrossRef.** A tese registra Alonso em número "Especial" de *Novos Estudos*; o CrossRef retorna **v. 37**, p. 49-58. A tese registra Gohn em 2019; o CrossRef data o registro em **2020**, embora o DOI contenha `2019` e o volume 6, n. 1 corresponda a 2019. Em ambos os casos mantive a paginação e o DOI do CrossRef, que é o dado verificável, e sinalizo a divergência de referência.
+**2. ~~Alonso (2017) e Gohn (2019) têm metadados divergentes entre a tese e o CrossRef.~~ O caso Gohn está RESOLVIDO em 08/10/2026, e pelo arquivo.** A tese registra Alonso em número "Especial" de *Novos Estudos*; o CrossRef retorna **v. 37**, p. 49-58. A tese registra Gohn em 2019; o CrossRef data o registro em **2020**, embora o DOI contenha `2019` e o volume 6, n. 1 corresponda a 2019. Em ambos os casos mantive a paginação e o DOI do CrossRef, que é o dado verificável, e sinalizei a divergência de referência.
+
+> **Gohn: é 2019, e agora com o arquivo na mão.** O PDF entrou no corpus em 04/10/2026 (eixo 13) e traz, no rodapé da primeira página, *"Recibido: 3/4/2019 - Aceptado: 17/11/2019"*, além de *mundosplurales*, v. 6, n. 1, p. 93-119, com o DOI `10.17141/mundosplurales.1.2019.3925`. **A data do CrossRef era a do registro, não a da publicação** — e o projeto chegou a carregar "Gohn 2020" na lista de obras barradas por causa dela. É a mesma classe de armadilha que von Bülow e Abers expôs em sentido inverso: lá o slug do DOI dizia 2022 e o fascículo era de 2024. **Ano de registro, ano do slug e ano de fascículo são três coisas, e só o arquivo decide.** O caso Alonso (2017) continua aberto: a obra nunca entrou no corpus.
 
 **3. Tatagiba & Galvão (2019) tem errata publicada.** O CrossRef registra `10.1590/1807-01912019252472` como *Errata* do artigo. Não foi consultada. Antes de citar dados numéricos desse artigo, verificar o que a errata corrige.
 
@@ -294,3 +296,31 @@ Registradas porque o projeto trata cifra e metadado com o mesmo rigor, e porque 
 ## Defeito de arquivo a corrigir na origem
 
 A segunda aba de `../data/external/levantamento_8_de_janeiro_organizado.xlsx`, chamada `levantamento_8_de_janeiro_verif`, é uma **importação malformada** do CSV: todo o cabeçalho está numa única célula e a acentuação veio corrompida (`NÂº`, `TÃ­tulo`, `PeriÃ³dico`). Só a aba `Levantamento_Organizado` é utilizável, e foi a única usada aqui. A aba defeituosa não foi removida — é decisão do pesquisador.
+
+---
+
+## Incorporado ao corpus em 08/10/2026 — sete referências
+
+Estas sete entraram no corpus no mesmo dia: **cinco entregues pelo pesquisador**, depois que a coleta automatizada falhou em todas, e **duas coletadas** por encaminhamento dele. As referências abaixo são as de citação; a procedência, o deslocamento de paginação e o registro que cada uma serve estão declarados em `PROCEDENCIA`, em `scripts/gerar_codebook.py`, e documentados em [`14_LIVROS-BRASILEIROS.md`](14_LIVROS-BRASILEIROS.md) e [`15_COMPARADO-6-DE-JANEIRO.md`](15_COMPARADO-6-DE-JANEIRO.md).
+
+### Eixo 15 — literatura comparada sobre o 6 de janeiro (as duas LIDAS, as duas ancorando PT-08)
+
+1. **CASTAÑEDA, Ernesto; JENKS, Daniel.** "January 6th and De-Democratization in the United States". *Social Sciences*, v. 12, n. 4, art. 238, 2023. DOI [10.3390/socsci12040238](https://doi.org/10.3390/socsci12040238). CC-BY, 15 p. — **sem paginação impressa**: a MDPI pagina por número de artigo. Ancora o **mecanismo** de PT-08.
+2. **CHEN, Bin; LUKITO, Josephine; KOO, Gyo Hyun.** "Comparing the #StopTheSteal Movement across Multiple Platforms: Differentiating Discourse on Facebook, Twitter, and Parler". *Social Media + Society*, v. 9, n. 3, p. 1-13, 2023. DOI [10.1177/20563051231196879](https://doi.org/10.1177/20563051231196879). CC BY-NC. — Ancora o **evento** e o **enquadramento** de PT-08, pela tipologia de Snow e Benford. **Três autores**, e a planilha da camada A nomeava zero.
+
+### Eixo 14 — livros brasileiros (entregues; coletados, não lidos)
+
+3. **GURZA LAVALLE, Adrian; CARLOS, Euzeneia; DOWBOR, Monika; SZWAKO, José (orgs.).** *Movimentos sociais e institucionalização: políticas sociais, raça e gênero no Brasil pós-transição*. Rio de Janeiro: EdUERJ, 2018, 411 p. ISBN 978-85-7511-479-7. DOI [10.7476/9788575114797](https://doi.org/10.7476/9788575114797).
+4. **ABERS, Rebecca Neaera (org.).** *Ativismo institucional: criatividade e luta na burocracia brasileira*. Brasília: Editora UnB, 2021, 356 p. ISBN 978-65-5846-159-3. DOI [10.7476/9786558461593](https://doi.org/10.7476/9786558461593).
+5. **MADEIRA, Lígia Mori; MARONA, Marjorie Corrêa; DEL RÍO, Andrés (orgs.).** *Democracia e justiça na América Latina: para onde vamos?*. Rio de Janeiro: EdUERJ, 2022, 423 p. ISBN 978-65-87949-55-0. DOI [10.7476/9786587949550](https://doi.org/10.7476/9786587949550).
+
+### Eixo 14 — dois capítulos a mais de *Giros à direita* (coletados, não lidos)
+
+6. **RAMÍREZ, Hernán.** "Neoliberalismo e (neo)autoritarismo: uma perspectiva de longo prazo a partir de casos do cone sul da América Latina". In: FARIA, Fabiano Godinho; MARQUES, Mauro Luiz Barbosa (orgs.). *Giros à direita: análises e perspectivas sobre o campo líbero-conservador*. Sobral: SertãoCult, 2020, p. 20-45. DOI [10.35260/87429052p.20-45.2020](https://doi.org/10.35260/87429052p.20-45.2020).
+7. **FARIA, Fabiano Godinho.** "Alguma coisa está fora do tempo: a doutrina da guerra revolucionária e o delírio anticomunista da família Bolsonaro". In: *Giros à direita*. Sobral: SertãoCult, 2020, p. 122-158. DOI [10.35260/87429052p.122-158.2020](https://doi.org/10.35260/87429052p.122-158.2020).
+
+> **A organização do volume só ficou nominada em 08/10.** A documentação de 08/10 pela manhã descrevia *Giros à direita* sem nomear organizadores; a API REST do IBICT mostrou que o depósito do volume inteiro se chama "Faria & Marques - Giros à Direita.pdf". São **Fabiano Godinho Faria e Mauro Luiz Barbosa Marques** — o que explica por que as biografias dos dois aparecem na p. 2 de todos os offprints.
+
+### Uma referência que NÃO entrou, e por quê
+
+**RICH, Jessica A. J.** *Ativismo patrocinado pelo Estado: burocratas e movimentos sociais no Brasil democrático*. Brasília: Editora UnB, 2021. DOI 10.7476/9786557081044. — O OpenAlex a declara ouro e o SciELO Livros a lista, mas **o pesquisador apurou que não é de acesso aberto: está à venda em livraria.** Há resenha disponível, e ele avaliou que resenha é lastro inconsistente para esta pesquisa. **Fica fora do corpus, e o registro desta decisão vale mais que a peça:** é o terceiro caso em que "ouro no registro" não corresponde a texto livre — depois das três peças de 04/10 e das quatro de 08/10 — e o primeiro em que o erro está no próprio registro de acesso aberto, não no gate do editor.

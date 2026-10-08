@@ -234,9 +234,13 @@ A lista completa, com a referência de cada peça e o registro a que ela pode se
 
 ### 14 — Literatura brasileira em livro
 
-*Eixo aberto em 08/10/2026, pela tarefa 10.* **Sete peças, 567 páginas** — seis capítulos do volume *Giros à direita: análises e perspectivas sobre o campo líbero-conservador* (Sobral, Editora SertãoCult, 2020) e o livro *O Brasil no inferno global: capitalismo e democracia fora dos trilhos* (São Paulo, FFLCH/USP, 2022). Como os eixos 05, 12 e 13, está **fora da contagem documental**.
+*Eixo aberto em 08/10/2026, pela tarefa 10, e ampliado no mesmo dia.* **Doze peças, 1.854 páginas** — seis capítulos do volume *Giros à direita: análises e perspectivas sobre o campo líbero-conservador* (Sobral, Editora SertãoCult, 2020) e o livro *O Brasil no inferno global: capitalismo e democracia fora dos trilhos* (São Paulo, FFLCH/USP, 2022). Como os eixos 05, 12 e 13, está **fora da contagem documental**.
 
-> **NENHUMA DAS SETE FOI LIDA, E NENHUMA ANCORA REGISTRO.** Fila de leitura, declarada peça por peça em `PROCEDENCIA`. Um arquivo dentro de `Fontes/` parece lastro; estas sete não são.
+> **NENHUMA DAS DOZE FOI LIDA, E NENHUMA ANCORA REGISTRO.** Fila de leitura, declarada peça por peça em `PROCEDENCIA`. Um arquivo dentro de `Fontes/` parece lastro; estas doze não são.
+>
+> **Três livros entraram entregues pelo pesquisador** — Gurza Lavalle, Carlos, Dowbor e Szwako (2018, EdUERJ), Abers (2021, Editora UnB) e Madeira, Marona e Del Río (2022, EdUERJ) —, os mesmos que o Bunny Shield barrava. **Os três têm OFFSET A DETERMINAR:** a ficha catalográfica anuncia menos páginas impressas do que o PDF tem (411/414, 356/359, 423/427), de modo que não se pode assumir PDF = impressa. **E dois capítulos a mais de *Giros à direita*** entraram por encaminhamento: Ramírez (offset **+7**) e Faria (offset **+109**), os dois começando na PDF p. 13 como os outros seis.
+>
+> **O volume inteiro de *Giros à direita* está depositado no IBICT** (`deposita/166`, "Faria & Marques - Giros à Direita.pdf"), o que tornaria os oito offprints redundantes e retiraria a armadilha de offset por capítulo. **Não foi trocado: é decisão do pesquisador.** E o quarto livro da lista de barrados, Rich (2021), saiu por outra razão — **não é de acesso aberto, apesar de o OpenAlex o declarar ouro**: está à venda em livraria.
 
 **O que a coleta mostrou, e é resultado antes de qualquer leitura.** O cânone brasileiro de movimentos sociais **não está em acesso aberto como livro**: busca nominal por dezenove autores, exigindo autoria casada, devolveu **zero** para Gohn, Sader, Scherer-Warren, Avritzer, Doimo, Telles, Abranches, Nobre, Solano e Messenberg. São livros de editora comercial e seguem dependendo dos arquivos do pesquisador, como Alonso (2023) dependeu. Detalhe em [`projeto-pos-doc/14_LIVROS-BRASILEIROS.md`](../projeto-pos-doc/14_LIVROS-BRASILEIROS.md).
 
@@ -328,3 +332,26 @@ Duas consequências que este inventário precisa registrar:
 2. **A camada de texto foi reconferida com PyPDF2**, amostrando cinco pontos ao longo de cada documento em vez da primeira página. Os 16 PDFs e as 6.790 páginas se confirmam, e nenhum precisa de OCR — a página 1 de três deles é capa sem texto, o que produz falso alarme em conferências que só olham o início.
 
 **Regra que passa a valer:** um arquivo novo nesta pasta só está incorporado quando (a) tem procedência declarada em `PROCEDENCIA`, dentro de `../scripts/gerar_codebook.py`, e (b) está vinculado a um registro no JSON ou declarado como bibliografia. `../scripts/verificar_integridade.py` falha enquanto isso não for verdade.
+---
+
+### 15 — Literatura comparada sobre o 6 de janeiro
+
+*Eixo aberto em 08/10/2026.* **Duas peças, 28 páginas — as duas LIDAS e as duas ANCORANDO PT-08**, que era o último registro contextual do codebook e deixou de ser. Como os eixos 05, 12, 13 e 14, está **fora da contagem documental**.
+
+O eixo nasce porque a lacuna de PT-08 nunca foi brasileira: era literatura comparada sobre os Estados Unidos, e nenhuma das dezoito peças do eixo 13 a cobria — nem Bastos e Recuero (2023), que trata do Congresso brasileiro e não do Capitólio.
+
+| Peça | Referência | p. | Paginação | Ancora |
+|:--|:--|--:|:--|:--|
+| **CASTAÑEDA E JENKS 2023** | "January 6th and De-Democratization in the United States". *Social Sciences*, 12(4), art. 238 | 15 | **sem paginação impressa** | o **mecanismo** de PT-08 |
+| **CHEN, LUKITO E KOO 2023** | "Comparing the #StopTheSteal Movement across Multiple Platforms". *Social Media + Society*, 9(3):1-13 | 13 | impressa = PDF + 0, **lido** | o **evento** e o **enquadramento** |
+
+> **SEXTA VARIANTE DE ARMADILHA DE NUMERAÇÃO, e a causa é nova.** Castañeda e Jenks não tem paginação impressa — e não por ser edição digital nem por a plataforma numerar parágrafos. É porque **a MDPI pagina por NÚMERO DE ARTIGO**: a referência é 12(4):238, onde 238 é o artigo, e o cabeçalho corrente de toda página é "Soc. Sci. 2023, 12, 238". Quem procurar intervalo de páginas no fascículo não encontra nenhum. As páginas citadas são do PDF.
+
+**Chen, Lukito e Koo aplicam a tipologia de SNOW E BENFORD** — diagnóstico, prognóstico e motivacional, mais um dispositivo próprio, pistas de violência —, que é marco teórico declarado deste projeto, sobre 675.336 posts de Facebook, Twitter e Parler. **E não dizem uma palavra sobre o Brasil:** zero ocorrências de "Brazil", "Bolsonaro" e "January 8".
+
+**Castañeda e Jenks ancoram o mecanismo**, com a frase que o registro precisava e no vocabulário de Tilly: o ataque ao Congresso *"has now become a contentious performance that was used by the equivalent actors in Brazil on January 8, 2023"* (PDF p. 10), com Steve Bannon nomeado como agente de transmissão. **LIMITE DECLARADO NO REGISTRO:** é **uma** frase, de passagem, sem aparato de evidência do lado brasileiro.
+
+> **UM ALERTA DE MÉTODO QUE ESTE EIXO PRODUZIU, e vale mais que as âncoras.** Para decidir se a peça servia, contei termos no texto integral: **"Bolsonaro" 0, "diffusion" 0, "emulation" 0, "transnational" 0, "Brazil" 1.** A medição estava certa e a conclusão que ela sugeria — *a peça não serve* — estava **errada**: a única ocorrência de "Brazil" é exatamente a frase decisiva. **Um autor pode afirmar a proposição inteira sem usar nenhuma das palavras com que você a nomeia.** Contagem de termo é medida de palavra, não de proposição — irmã semântica da armadilha da ligadura ﬁ. A saída prática é ler o contexto de cada ocorrência, não o histograma.
+
+**A ressalva do Sri Lanka fica reforçada, não contrariada.** O Capitólio é referência de **repertório** e o Sri Lanka é referência de **eficácia** (CPMI, p. 614), e dizer que o ataque ao Congresso se tornou uma *performance contenciosa* usada no Brasil é precisamente uma afirmação de repertório.
+

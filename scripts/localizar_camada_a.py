@@ -105,13 +105,36 @@ FICHAS = {
 }
 
 # LIDO NA FONTE: obra aberta e lida, com onde e quando. É o passo 3.
+#
+# TERCEIRO CAMPO ACRESCENTADO EM 08/10/2026, e fecha um buraco que enganou o
+# próprio projeto: **`LIDO` não implicava arquivo no corpus.** A peça de Castañeda
+# e Jenks constava aqui como "MDPI, integral" desde 30/09 e o PDF não estava em
+# `Fontes/` — tinha sido lida on-line. Sem arquivo local, `conferir_paginas.py`
+# não confere página nenhuma, de modo que o estado prometia âncora que não
+# existia. O terceiro campo é o caminho no corpus, ou None quando a leitura foi
+# on-line; `main()` conta e nomeia os lidos sem arquivo.
 LIDOS = {
-    "10.1017/s1049096511001429": ("30/09", "Cambridge Core, integral"),
-    "10.1177/0048393103262552": ("30/09", "MPG.PuRe, integral, 23 p."),
-    "10.1038/srep00197": ("30/09", "PDF aberto da Nature, integral"),
-    "10.3390/socsci12040238": ("30/09", "MDPI, integral"),
-    "10.1017/CBO9780511805431": ("30/09", "corpus, trechos definidores + índice"),
-    "10.1002/9780470674871.wbespm127": ("30/09", "corpus, integral"),
+    "10.1017/s1049096511001429": ("30/09", "Cambridge Core, integral", None),
+    "10.1177/0048393103262552": ("30/09", "MPG.PuRe, integral, 23 p.", None),
+    "10.1038/srep00197": ("30/09", "PDF aberto da Nature, integral", None),
+    "10.3390/socsci12040238": (
+        "30/09 on-line; 08/10 no corpus",
+        "MDPI, integral — entregue pelo pesquisador em 08/10 e arquivada; ancora PT-08",
+        "Fontes/15_Comparado-6-de-janeiro/CASTANEDA-JENKS_January-6th-and-"
+        "de-democratization_Social-Sciences-12-4_2023.pdf"),
+    "10.1177/20563051231196879": (
+        "08/10",
+        "SAGE, integral — entregue pelo pesquisador; ancora PT-08. Três autores",
+        "Fontes/15_Comparado-6-de-janeiro/CHEN-LUKITO-KOO_Comparing-the-StopTheSteal-"
+        "movement-across-platforms_Social-Media-and-Society-9-3_2023.pdf"),
+    "10.1017/CBO9780511805431": (
+        "30/09", "corpus, trechos definidores + índice",
+        "Fontes/05_Bibliografia-teorica/McADAM-TARROW-TILLY_Dynamics-of-Contention_"
+        "Cambridge-2001.pdf"),
+    "10.1002/9780470674871.wbespm127": (
+        "30/09", "corpus, integral",
+        "Fontes/05_Bibliografia-teorica/SNOW-DELLA-PORTA-KLANDERMANS-McADAM_"
+        "Wiley-Blackwell-Encyclopedia-of-Social-and-Political-Movements_2013.pdf"),
 }
 
 # Impedimento declarado, para a conta não sugerir que só falta querer.
@@ -319,6 +342,26 @@ def main():
     print("| IMPEDIDO | {} | sem camada de texto, sem arquivo, ou fora do volume |".format(leitura["IMPEDIDO"]))
     print("| PENDENTE | {} | **é o que falta da tarefa 17** |".format(leitura["PENDENTE"]))
     print("| **Total** | **{}** | |".format(sum(leitura.values())))
+
+    # LIDO nao implica arquivo no corpus, e essa confusao enganou o projeto por
+    # oito dias: ver o comentario de LIDOS. A conta abaixo e a correcao.
+    sem_arquivo, inexistentes = [], []
+    for doi, dados in LIDOS.items():
+        caminho = dados[2] if len(dados) > 2 else None
+        if not caminho:
+            sem_arquivo.append(doi)
+        elif not (RAIZ / caminho).exists():
+            inexistentes.append((doi, caminho))
+    print()
+    print("**Dos {} lidos, {} tem arquivo no corpus e {} foram lidos so on-line.** "
+          "Leitura on-line nao ancora pagina: `conferir_paginas.py` abre o PDF do "
+          "corpus.".format(len(LIDOS), len(LIDOS) - len(sem_arquivo), len(sem_arquivo)))
+    for doi in sem_arquivo:
+        print("  - sem arquivo: {} — {}".format(doi, LIDOS[doi][1][:60]))
+    for doi, caminho in inexistentes:
+        print("  ! DECLARADO E AUSENTE: {} -> {}".format(doi, caminho))
+    if inexistentes:
+        raise SystemExit("caminho declarado em LIDOS nao existe em disco")
     print()
     print("| Rota | Itens | O que autoriza |")
     print("|:--|--:|:--|")

@@ -38,7 +38,9 @@ A busca foi nominal — dezenove autores, um por um, exigindo que o **nome compl
 
 ---
 
-## 2. O que entrou — sete peças, 567 páginas
+## 2. O que entrou — doze peças, 1.854 páginas
+
+> **ATUALIZADO NO FIM DE 08/10/2026.** O eixo passou de sete a **doze peças**: o pesquisador **entregou três dos quatro livros barrados** pelo Bunny Shield e mandou coletar os dois capítulos de *Giros à direita* que a primeira passagem deixou fora. O quarto livro saiu da lista por outra razão — ver §5.1. **Nenhuma das doze foi lida.**
 
 | Peça | Referência | p. | Serve a |
 |:--|:--|--:|:--|
@@ -105,7 +107,7 @@ Os seis são arquivos distintos — SHA-256 distintos, 30 a 88 mil caracteres ca
 
 ## 5. O que não entrou, e por quê
 
-### 5.1 Quatro livros identificados, de acesso aberto, barrados por desafio de bot
+### 5.1 ~~Quatro livros barrados~~ — três entregues, e o quarto não era de acesso aberto
 
 Os quatro estão no **SciELO Livros**, que serve o PDF integral — e o host `books.scielo.org` está atrás do **Bunny Shield**, um desafio JavaScript de detecção de bot. Devolve **HTTP 403** ao curl e ao `urllib`, com ou sem cabeçalhos completos de navegador. **Não escrevi solucionador: contornar detecção de bot está fora do que faço.** E nenhum dos quatro tem cópia em outro depósito — conferido no OpenAlex, no DOAB e nos repositórios da UnB e da UFRGS.
 
@@ -136,3 +138,47 @@ A busca por *Impasses da democracia no Brasil* devolveu um **livro de 2023, verd
 4. **Não coletou os dois capítulos restantes de *Giros à direita*** (§5.2).
 5. **Não decidiu se Gohn (2019)**, já no eixo 13, conta como fechamento parcial desta tarefa. É o único balanço da literatura brasileira de protesto no corpus, e a tarefa existe por essa lacuna. **Continua pendente de você desde 04/10.**
 6. **Não decidiu se Lerner (2020) resolve a ressalva de plataforma de PT-06** (§2.1). Ela dá âncora de primeira mão, mas para o Facebook, não para Telegram e WhatsApp.
+
+---
+
+## 7. Segundo passo de 08/10/2026 — cinco peças a mais, e uma saiu da lista
+
+### 7.1 Os três livros entregues
+
+O pesquisador abriu num navegador comum o que o Bunny Shield barrava ao curl. Verificados nos **dois eixos, no texto integral** — a lição da própria §4.1:
+
+| Peça | p. PDF | Impressa declarada | Serve a |
+|:--|--:|--:|:--|
+| **GURZA LAVALLE, CARLOS, DOWBOR E SZWAKO (2018)**, *Movimentos sociais e institucionalização*, EdUERJ | 414 | 411 | **PT-04** — o livro brasileiro de referência sobre movimento que entra no Estado, que é o mecanismo de PT-04 |
+| **ABERS (org.) (2021)**, *Ativismo institucional*, Editora UnB | 359 | 356 | **PT-04, PT-05** — e a autora é a mesma Rebecca Abers que co-assina a peça que fechou PT-06 |
+| **MADEIRA, MARONA E DEL RÍO (2022)**, *Democracia e justiça na América Latina*, EdUERJ | 427 | 423 | **arco judicial** (PT-02A, PT-03A a PT-06C, PT-05A) — primeira literatura do corpus sobre judicialização na região; o arco se apoia hoje só em acórdãos |
+
+> **Os três têm offset A DETERMINAR, e isso está declarado em `PROCEDENCIA`.** A ficha catalográfica de cada um anuncia menos páginas impressas do que o PDF tem — 411 contra 414, 356 contra 359, 423 contra 427 —, de modo que **não se pode assumir PDF = impressa**. A diferença é de pré-textuais, e qual é o deslocamento se decide abrindo, na hora da leitura.
+
+### 7.2 Os dois capítulos de *Giros à direita*
+
+| Peça | p. PDF | Offset | Serve a |
+|:--|--:|--:|:--|
+| **RAMÍREZ (2020)**, "Neoliberalismo e (neo)autoritarismo… cone sul", p. 20-45 | 38 | **+7** | PT-05 e PT-08 — o contexto regional do (neo)autoritarismo |
+| **FARIA (2020)**, "Alguma coisa está fora do tempo: a doutrina da guerra revolucionária e o delírio anticomunista da família Bolsonaro", p. 122-158 | 49 | **+109** | PT-05, PT-06 e PT-12 — a genealogia doutrinária do apelo militar |
+
+Os dois confirmam o padrão da §3: o capítulo começa na **PDF p. 13**, depois das doze páginas de pré-textuais do volume.
+
+**E a organização do volume ficou nominada:** são **Fabiano Godinho Faria e Mauro Luiz Barbosa Marques**, o que explica as biografias dos dois na p. 2 de todos os offprints. O próprio Faria assina o capítulo da p. 122.
+
+### 7.3 Dois defeitos meus de método na busca do capítulo de Faria
+
+1. **O probe não seguia redirecionamento.** Varri 36 handles do IBICT procurando o arquivo e dei o capítulo como inexistente. O `curl` estava sem `-L`, e o IBICT redireciona `http` para `https`: eu aceitava só HTTP 200 e recebia 302. **A falha era do probe, não do repositório** — o handle existia, é o 168.
+2. **Varri o HTML de um DSpace 7, que não serve itens em HTML.** A interface do IBICT é renderizada em JavaScript; a busca simples devolve 616 bytes sem resultado nenhum. O caminho certo é a **API REST** — `/server/api/discover/search/objects` —, que resolveu em uma chamada.
+
+### 7.4 E a API mostrou algo que muda a recomendação do eixo
+
+**O volume inteiro está depositado**, em `deposita/166`, como "Faria & Marques - Giros à Direita.pdf", 2,5 MB. Isso torna os **oito offprints redundantes** e permitiria **retirar a armadilha de offset por capítulo** descrita na §3 — um arquivo, um offset, sem o risco de a mesma página de PDF significar páginas impressas diferentes.
+
+**Não foi feito.** Trocar peça já incorporada e commitada é decisão sua, não execução minha — e a troca mexeria em oito arquivos do corpus para resolver um problema que hoje está declarado e sob regra operacional. **Fica como item de decisão.**
+
+### 7.5 O quarto livro saiu da lista, e não por bloqueio
+
+**RICH (2021), *Ativismo patrocinado pelo Estado*** (DOI 10.7476/9786557081044) era a quarta peça barrada. O pesquisador apurou que **não é de acesso aberto: está à venda em livraria**, e avaliou que a resenha disponível é lastro inconsistente para esta pesquisa.
+
+> **O OpenAlex a declara OURO e o SciELO Livros a lista — e ela não é livre.** Nos sete casos anteriores de "ouro no registro, texto inalcançável", o obstáculo era o gate do editor. **Este é o primeiro em que o erro está no próprio registro de acesso aberto.** Ouro no OpenAlex não é só *difícil de baixar*: pode ser *falso*.

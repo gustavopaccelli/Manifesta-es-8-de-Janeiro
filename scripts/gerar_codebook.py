@@ -527,6 +527,96 @@ for _arq, _ref, _desloc, _serve in [
     PROCEDENCIA["Fontes/13_Bolsonarismo-mobilizacao/" + _arq] = (
         _ENTREGA25, "literatura", "{} | {} | SERVE A: {}".format(_ref, _desloc, _serve))
 
+# Eixo 14 — literatura brasileira em LIVRO, coletada em 08/10/2026 pela tarefa 10.
+# A tarefa existe porque as sínteses do eixo bibliográfico têm ZERO referências
+# sobre o Brasil, e porque o que falta não tem DOI de artigo: tem ISBN.
+#
+# **NENHUMA DAS SETE FOI LIDA, E NENHUMA ANCORA REGISTRO.** Fila de leitura, como
+# as doze não lidas do eixo 13. Quem for ancorar precisa abrir, ler e pôr página.
+#
+# O QUE A COLETA MOSTROU, e é resultado antes de qualquer leitura: **o cânone
+# brasileiro de movimentos sociais NÃO está em acesso aberto como livro.** Busca
+# nominal no OpenAlex por dezenove autores, exigindo autoria casada, devolveu
+# ZERO para Gohn, Sader, Scherer-Warren, Avritzer, Doimo, Telles, Abranches,
+# Nobre, Solano e Messenberg. Esses são livros de editora comercial (Paz e Terra,
+# Vozes, Companhia das Letras, Todavia) e seguem dependendo dos arquivos do
+# pesquisador, como Alonso (2023) dependeu.
+#
+# ARMADILHA DE NUMERAÇÃO, QUINTA VARIANTE DO CORPUS, e é a mais perigosa até
+# agora. Os seis capítulos do volume *Giros à direita* são offprints: cada PDF
+# traz as MESMAS 12 páginas de pré-textuais do volume (capa sem camada de texto,
+# biografias, folha de rosto, ficha, sumário, apresentação) e só então o
+# capítulo, que começa sempre na **PDF p. 13**. Logo o deslocamento é DIFERENTE
+# em cada arquivo — impressa = PDF + (primeira_impressa − 13) — e **a mesma
+# página de PDF significa páginas impressas diferentes em arquivos distintos do
+# mesmo volume**. Citar PDF p. 1-12 é citar o pré-textual do volume através do
+# arquivo errado.
+_COLETA10 = ("Coleta da tarefa 10 (08/10/2026) — literatura brasileira em livro, "
+             "acesso aberto, verificada nos dois eixos (o arquivo é PDF e o "
+             "título/autoria lidos DENTRO dele casam). COLETADA, NÃO LIDA: não "
+             "ancora registro")
+for _arq, _ref, _desloc, _serve in [
+    ("LOWY_Extrema-direita-e-neofascismo-o-caso-Bolsonaro_SertaoCult_2020.pdf",
+     "LÖWY, Michael. 'Extrema direita e neofascismo: um fenômeno planetário: o caso "
+     "Bolsonaro'. In: Giros à direita: análises e perspectivas sobre o campo "
+     "líbero-conservador. Sobral: SertãoCult, 2020, p. 13-19. "
+     "DOI 10.35260/87429052p.13-19.2020",
+     "PÁGINA IMPRESSA = PDF + 0, e a coincidência é acidente: o capítulo começa na "
+     "PDF p. 13 e na impressa p. 13. Nos outros cinco capítulos do volume o "
+     "deslocamento é outro",
+     "PT-04 e PT-05 — caracterização do bolsonarismo como neofascismo, por um autor "
+     "de fora do campo brasileiro de movimentos sociais"),
+    ("MONTENEGRO_Ultraliberalismo-autoritario-e-dependencia_SertaoCult_2020.pdf",
+     "MONTENEGRO, David Moreno. 'Ultraliberalismo autoritário e o aprofundamento da "
+     "dependência: o governo de extrema direita no Brasil no contexto da crise "
+     "latino-americana'. In: Giros à direita. Sobral: SertãoCult, 2020, p. 46-70. "
+     "DOI 10.35260/87429052p.46-70.2020",
+     "PÁGINA IMPRESSA = PDF + 33 (capítulo na PDF p. 13 = impressa 46)",
+     "PT-05 — o governo de extrema direita no contexto latino-americano"),
+    ("HOEVELER_A-reorganizacao-da-extrema-direita-latino-americana_SertaoCult_2020.pdf",
+     "HOEVELER, Rejane Carolina. 'A reorganização da extrema direita latino-americana "
+     "no ascenso bolsonarista: fóruns e redes organizativas'. In: Giros à direita. "
+     "Sobral: SertãoCult, 2020, p. 71-89. DOI 10.35260/87429052p.71-89.2020",
+     "PÁGINA IMPRESSA = PDF + 58 (capítulo na PDF p. 13 = impressa 71)",
+     "PT-04 e **PT-08** — é a peça do corpus mais próxima do mecanismo que PT-08 "
+     "afirma, a difusão transnacional, e pelo lado brasileiro: fóruns e redes "
+     "organizativas da extrema direita latino-americana"),
+    ("LERNER_A-direita-unida-em-torno-de-Bolsonaro-rede-no-Facebook_SertaoCult_2020.pdf",
+     "LERNER, Celina. 'A direita unida em torno de Bolsonaro: uma análise da rede "
+     "conservadora no Facebook'. In: Giros à direita. Sobral: SertãoCult, 2020, "
+     "p. 90-121. DOI 10.35260/87429052p.90-121.2020",
+     "PÁGINA IMPRESSA = PDF + 77 (capítulo na PDF p. 13 = impressa 90)",
+     "PT-04 e PT-06 — rede conservadora no Facebook. É candidata a dar ÂNCORA DE "
+     "PRIMEIRA MÃO à infraestrutura digital que PT-06 nomeia e que von Bülow e Abers "
+     "(2024) só reportam por citação de segunda mão"),
+    ("CAZETTA_A-revolucao-a-partir-da-extrema-direita-integralismo_SertaoCult_2020.pdf",
+     "CAZETTA, Felipe Azevedo. 'A revolução a partir da extrema direita: análises dos "
+     "projetos da Ação Integralista Brasileira'. In: Giros à direita. Sobral: "
+     "SertãoCult, 2020, p. 174-192. DOI 10.35260/87429052p.174-192.2020",
+     "PÁGINA IMPRESSA = PDF + 161 (capítulo na PDF p. 13 = impressa 174)",
+     "PT-01 e PT-02 — genealogia longa da extrema direita brasileira, anterior ao "
+     "ciclo de 2013; é o capítulo de ajuste mais frouxo entre os seis"),
+    ("GENTILE_Uma-direita-plural-configuracoes-ideologicas_SertaoCult_2020.pdf",
+     "GENTILE, Fábio. 'Uma direita \u201cplural\u201d: configurações ideológicas e "
+     "organizações políticas da direita brasileira'. In: Giros à direita. Sobral: "
+     "SertãoCult, 2020, p. 222-240. DOI 10.35260/87429052p.222-240.2020",
+     "PÁGINA IMPRESSA = PDF + 209 (capítulo na PDF p. 13 = impressa 222)",
+     "PT-02 e PT-04 — a pluralidade do campo da direita, que é o que o codebook "
+     "chama de campo patriota desde a segunda rodada da tarefa 14"),
+    ("SINGER-ARAUJO-RUGITSKY_O-Brasil-no-inferno-global_FFLCH-USP_2022.pdf",
+     "SINGER, André; ARAUJO, Cicero; RUGITSKY, Fernando (orgs.). O Brasil no inferno "
+     "global: capitalismo e democracia fora dos trilhos. São Paulo: FFLCH/USP, 2022. "
+     "ISBN 978-85-7506-408-5. DOI 10.11606/9788575064085",
+     "SEM OFFSET DECLARADO AINDA: é livro inteiro, 374 páginas de PDF, e a paginação "
+     "impressa precisa ser conferida no momento da leitura. NÃO assumir PDF = "
+     "impressa antes de abrir",
+     "PT-01 a PT-05 — cobre o arco 2013-2022 pela economia política. **André Singer é "
+     "o único autor do cânone brasileiro que a coleta alcançou em acesso aberto**, e "
+     "mesmo assim como organizador de coletânea, não em monografia"),
+]:
+    PROCEDENCIA["Fontes/14_Livros-brasileiros/" + _arq] = (
+        _COLETA10, "literatura", "{} | {} | SERVE A: {}".format(_ref, _desloc, _serve))
+
 # O que falta coletar. Alimenta a aba Pendencias_Coleta e o script baixar_fontes.sh.
 PENDENCIAS = [
     ("Decisão de transferência para a Papuda (15/01/2026)", "PT-59",

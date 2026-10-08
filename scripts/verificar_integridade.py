@@ -42,7 +42,7 @@ CLASSES = {"Confirmado em fonte primária", "Confirmado", "Contextual",
 # protege continua a mesma: a contagem documental mede documento oficial, e não
 # pode crescer porque entrou artigo de revista.
 FORA_DA_DOCUMENTAL = {"05_Bibliografia-teorica", "12_Camada-T-1_Literatura",
-                      "13_Bolsonarismo-mobilizacao"}
+                      "13_Bolsonarismo-mobilizacao", "14_Livros-brasileiros"}
 
 falhas = []
 avisos = []
@@ -219,10 +219,15 @@ def main():
         # pesquisador. A documental continua em 22 / 6.951, e é exatamente o que a
         # separação serve para mostrar: o corpus cresceu 816 páginas sem que um
         # único documento oficial entrasse.
-        if (n, total, doc_n, doc_total) != (52, 10207, 22, 6951):
+        # Linha de base atualizada em 08/10/2026 pela tarefa 10: entra o eixo 14,
+        # com sete peças de literatura brasileira em livro — o volume Giros à
+        # direita (SertãoCult, 2020, seis capítulos) e O Brasil no inferno global
+        # (FFLCH/USP, 2022). A documental continua em 22 / 6.951: é a quarta vez
+        # que o corpus cresce sem que um único documento oficial entre.
+        if (n, total, doc_n, doc_total) != (59, 10774, 22, 6951):
             avisos.append("corpus mudou: {} PDFs / {} páginas, {} documentais / {} p. "
-                          "(era 52 / 10207, 22 / 6951)".format(n, total, doc_n, doc_total))
-            print("  ~ corpus difere da linha de base de 04/10/2026 (52 PDFs / 10207 p., "
+                          "(era 59 / 10774, 22 / 6951)".format(n, total, doc_n, doc_total))
+            print("  ~ corpus difere da linha de base de 08/10/2026 (59 PDFs / 10774 p., "
                   "22 documentais / 6951 p.)")
         else:
             print("  OK — bate com o inventário")

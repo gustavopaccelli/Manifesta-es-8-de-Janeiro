@@ -16,7 +16,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Ancoragem documental | **81 registros** com arquivo local vinculado · 75 com página ou seção atribuída · 0 referências quebradas |
 | Classes de verificação | **61 em fonte primária** · 20 confirmados por outra via · **1 contextual** (eram 7 até 04/10) · **0 a verificar** · 1 inferência declarada |
 | Caderno de evidências | **49 registros** com página e transcrição literal |
-| Corpus documental | **22 PDFs / 6.951 p. de fonte documental** + o acórdão do TSE em HTML + 6 matérias arquivadas contra link rot + 7 sínteses. Com a bibliografia teórica do eixo 05, as sete peças da camada $T_{-1}$ do eixo 12 e as dezoito do eixo 13, são **52 PDFs / 10.207 p.** — os eixos 12 e 13 acrescentaram **816 páginas** em 04/10, em três rodadas, **sem que a documental mudasse**, que é o que a separação das duas contagens serve para mostrar. **Quatro peças sem camada de texto, uma com camada de texto errada e uma sem rótulo de página algum**, declaradas |
+| Corpus documental | **22 PDFs / 6.951 p. de fonte documental** + o acórdão do TSE em HTML + 6 matérias arquivadas contra link rot + 7 sínteses. Com a bibliografia teórica do eixo 05, as sete peças da camada $T_{-1}$ do eixo 12, as dezoito do eixo 13 e as sete do eixo 14, são **59 PDFs / 10.774 p.** — os eixos 12, 13 e 14 acrescentaram **1.383 páginas** em 04 e 08/10, **sem que a documental mudasse**, que é o que a separação das duas contagens serve para mostrar. **Quatro peças sem camada de texto, uma com camada de texto errada e uma sem rótulo de página algum**, declaradas |
 | Figuras | SVG da cadeia causal e cronologia navegável — **realinhadas ao codebook em 25/09**, 83 registros cobertos. São a única parte do aparato escrita à mão |
 | Relatório de pesquisa | `reports/process_tracing_8jan_relatorio.md` — §3.2 corrigido em 11/09; §2.1 e a tabela da Etapa 2 em 25/09; "Próximos passos" reescrita na mesma data. Agora tem checagem no ciclo |
 | Verificação | `bash scripts/ciclo.sh` — **oito passos**: dois geradores e seis checagens, todas com código de saída ≠ 0 em caso de falha |
@@ -1482,6 +1482,100 @@ Os dois consertos foram provados **invariantes**: 66 âncoras anteriores idênti
 
 ---
 
+## 36. PT-08 preparado e bloqueado: a peça está lida, o arquivo não está no corpus — 🔶 08/10/2026
+
+**A tarefa era fechar PT-08 com as duas peças da camada A.** Não fechou, e o motivo é de acesso, não de evidência. O que ficou pronto está abaixo, para que a recodificação seja um comando quando os arquivos chegarem.
+
+### 36.1 Uma peça marcada LIDA que nunca entrou no corpus
+
+`data/processed/camada_a_acesso.csv` registra **CASTAÑEDA e JENKS (2023)**, *"January 6th and De-Democratization in the United States"* (*Social Sciences* 12(4):238, MDPI, CC-BY), com `estado :: LIDO` e a nota *"MDPI, integral"*. **O arquivo não está em `Fontes/`.** Foi lida on-line numa sessão anterior, e sem arquivo local **não há como ancorar página** — `conferir_paginas.py` abre o PDF do corpus, não a web.
+
+> **Isto é defeito de aparato, não de leitura:** a camada A tem um estado `LIDO` que não implica arquivo no corpus, e por isso uma peça pode constar como lida e não poder ancorar nada. Vale decidir se o CSV passa a distinguir *lida* de *lida-e-arquivada*.
+
+### 36.2 A âncora que a peça entrega — e por que a coluna `uso` estava errada por excesso
+
+A coluna `uso` do CSV prometia *"o caso de que o 8/1 é emulação, lido como episódio de desdemocratização"*. Medido no texto integral, no navegador: **"Bolsonaro" aparece 0 vezes, "diffusion" 0, "emulation" 0, "transnational" 0, "Brazil" 1.**
+
+**E a medição certa levaria à conclusão errada.** A única ocorrência de "Brazil" é a frase que o projeto precisa, e ela usa o vocabulário de Tilly em vez das palavras que eu contei:
+
+> *"The attack on congress to contest an election has now become a **contentious performance** that was used by the equivalent actors in Brazil on January 8, 2023. Both events occurred with the encouragement of Steve Bannon and similar agents of chaos."*
+
+Isso **é** a afirmação de difusão, enunciada como *performance contenciosa* — e com agente de transmissão nomeado. **Contagem de termos é medida de palavra, não de proposição:** irmã tipográfica da armadilha da ligadura ﬁ, e irmã semântica da décima quarta ocorrência, em que a âncora certa sustentava o enunciado errado.
+
+**Candidatos a âncora, todos localizados no texto e NENHUM escrito no codebook** — falta o arquivo para conferir página:
+
+- *"The attack on congress to contest an election has now become a contentious performance that was used by the equivalent actors in Brazil on January 8, 2023"*
+- *"Both events occurred with the encouragement of Steve Bannon and similar agents of chaos"*
+- *"Trump's rise to power and the riots on January 6th were symptoms of a longer process of de-democratization"*
+- *"De-democratization is not unique to the United States and has been happening in many countries for years"*
+
+**Um limite a declarar quando entrar:** a ligação com o Brasil é feita em **uma frase, de passagem**, sem aparato de evidência do lado brasileiro. É ressalva da mesma natureza que "um estado só, série até 2015" em Fernandes e Silva. E ela **não contradiz** a ressalva do Sri Lanka que PT-08 já carrega: o Capitólio é referência de **repertório**, o Sri Lanka é referência de **eficácia**.
+
+### 36.3 Por que os dois arquivos não vieram
+
+| Peça | Via | O que aconteceu |
+|:--|:--|:--|
+| **CASTAÑEDA e JENKS (2023)**, *Social Sciences* 12(4):238 — [10.3390/socsci12040238](https://doi.org/10.3390/socsci12040238) | MDPI | **HTTP 403** ao curl, com e sem cabeçalhos completos de navegador. O gate é um **interstitial do Akamai Bot Manager** com proof-of-work em JavaScript. O navegador embutido abre a página e busca o PDF (200, 606 KB), mas o cookie de liberação é `httpOnly` e não passa ao curl. **Não escrevi solucionador: contornar detecção de bot está fora do que faço.** Transferir 606 KB por base64 custaria ~800 mil caracteres e não é a saída certa. *A memória do projeto registrava a MDPI como editora que passa — deixou de passar.* |
+| **CHEN, LUKITO e KOO (2023)**, *"Comparing the #StopTheSteal Movement across Multiple Platforms"*, *Social Media + Society* 9(3) — [10.1177/20563051231196879](https://doi.org/10.1177/20563051231196879) | SAGE | Sem PDF em depósito algum: o OpenAlex lista a SAGE, o DOAJ (só página de registro) e o HKU Scholars Hub (não aberto). Mesmo bloqueio da SAGE que Bastos e Recuero sofreram em 04/10 — e que você resolveu entregando o arquivo. **Correção de atribuição, de passagem:** são **três** autores (Bin Chen, Josephine Lukito, Gyo Hyun Koo), e o CSV da camada A não os nomeia. |
+
+**O precedente diz o que fazer:** em 04/10 você entregou quatro peças barradas em poucas horas, e uma delas fechou PT-06. Os dois links acima abrem num navegador comum.
+
+---
+
+## 37. A tarefa 10 executada: sete livros entram, e o cânone brasileiro não está em acesso aberto — 🔶 08/10/2026
+
+**Eixo 14 aberto: sete peças, 567 páginas**, em `Fontes/14_Livros-brasileiros/`. Documento completo em [`projeto-pos-doc/14_LIVROS-BRASILEIROS.md`](../projeto-pos-doc/14_LIVROS-BRASILEIROS.md). Corpus: **52 → 59 PDFs, 10.207 → 10.774 páginas**; documental inalterada em **22 / 6.951**.
+
+**NENHUMA FOI LIDA E NENHUMA ANCORA REGISTRO.**
+
+### 37.1 O achado, que é a resposta da tarefa e não a sua falha
+
+**O cânone brasileiro de movimentos sociais não está em acesso aberto como livro.** Busca nominal por dezenove autores, exigindo autoria casada, tipo `book`/`book-chapter`, acesso aberto: **zero** para Gohn, Sader, Scherer-Warren, Avritzer, Doimo, Telles, Abranches, Nobre, Solano e Messenberg. **André Singer é o único do cânone que a coleta alcançou** — e como organizador de coletânea, não em monografia.
+
+A busca por título confirma pelo outro lado: *Quando novos personagens entraram em cena*, *Teoria dos movimentos sociais*, *A vez e a voz do popular* e *Sociedade civil e espaços públicos no Brasil* devolvem **artigos que resenham os livros**, não os livros. **O cânone é de editora comercial e segue dependendo dos seus arquivos, como Alonso (2023) dependeu.**
+
+### 37.2 As sete que entraram, e duas que valem destaque
+
+Seis são capítulos de ***Giros à direita: análises e perspectivas sobre o campo líbero-conservador*** (Sobral, SertãoCult, 2020) — Löwy, Montenegro, Hoeveler, Lerner, Cazetta e Gentile. A sétima é ***O Brasil no inferno global*** (Singer, Araujo e Rugitsky, FFLCH/USP, 2022, 374 p.).
+
+- **HOEVELER (2020)**, sobre fóruns e redes organizativas da extrema direita latino-americana, é **a peça do corpus mais próxima do mecanismo que PT-08 afirma** — e pelo lado brasileiro, que faltava.
+- **LERNER (2020)**, sobre a rede conservadora no Facebook, é candidata a dar **âncora de primeira mão** à infraestrutura digital que PT-06 nomeia e que von Bülow e Abers (2024) só reportam por citação de segunda mão (item 35.5). **Muda a plataforma; não fecha a ressalva.** Decisão sua.
+
+### 37.3 Quinta variante de armadilha de numeração, e é a mais perigosa do corpus
+
+Os seis capítulos são **offprints**: cada PDF traz as **mesmas 12 páginas de pré-textuais do volume** e o capítulo começa sempre na **PDF p. 13**. O deslocamento é **diferente em cada arquivo** — Löwy +0, Montenegro +33, Hoeveler +58, Lerner +77, Cazetta +161, Gentile +209.
+
+> **A mesma página de PDF significa páginas impressas diferentes em arquivos distintos do mesmo volume.** E citar PDF p. 1-12 é citar o pré-textual **através do arquivo errado**: as doze páginas são idênticas nos seis, de modo que a conferência de transcrição **casaria** e o vínculo estaria errado. **Regra: no eixo 14, só cite PDF p. ≥ 13, e sempre pelo arquivo do capítulo.**
+
+### 37.4 Três defeitos meus na própria coleta
+
+1. **Pontuar por sobrenome.** Dei peso ao cânone por sobrenome, e "Silva", "Souza", "Rocha", "Carvalho" e "Nunes" são comuns: *Pandemia e socioeconomia no Maranhão* tirou a pontuação mais alta da fila por casar seis sobrenomes e nenhum autor. **Sobrenome não identifica autor.**
+2. **Nome completo conferido na lista inteira.** Exigir todas as partes do nome na autoria ainda casou "Camila Rocha" com um volume que tinha *Camila Haus* e *Fabielle Rocha Cruz* — as partes presentes, em pessoas diferentes. **O casamento tem de ser por autor, não por lista.**
+3. **Verificação de dois eixos amostrada nas primeiras páginas.** Reprovou os **seis** capítulos certos, porque nos offprints as duas primeiras páginas são capa sem camada de texto e biografias do volume. Diagnosticado: arquivos distintos, SHA-256 distintos, cada um com o próprio autor e título. Reconferidos no texto integral: **6 de 6**. **Amostrar as primeiras páginas falha em offprint com pré-textual comum.**
+
+### 37.5 O que ficou barrado, e é o padrão de 04/10
+
+Quatro livros identificados, de acesso aberto, no **SciELO Livros** — host `books.scielo.org`, atrás do **Bunny Shield**, desafio JavaScript de detecção de bot: **403** ao curl e ao `urllib`. **Não escrevi solucionador.** Nenhum tem cópia em outro depósito (conferido no OpenAlex, no DOAB e nos repositórios da UnB e da UFRGS):
+
+| Peça | DOI | Por que importa |
+|:--|:--|:--|
+| Gurza Lavalle, Carlos, Dowbor e Szwako (2018), *Movimentos sociais e institucionalização* | 10.7476/9788575114797 | O livro brasileiro de referência sobre **movimento que entra no Estado** — o mecanismo de PT-04 |
+| Abers (org.) (2021), *Ativismo institucional* | 10.7476/9786558461593 | **Mesma Rebecca Abers** que co-assina a peça que fechou PT-06 |
+| Rich (2021), *Ativismo patrocinado pelo Estado* | 10.7476/9786557081044 | Movimento e burocracia; par do anterior |
+| Madeira, Marona e Del Río (2022), *Democracia e justiça na América Latina* | 10.7476/9786587949550 | Serve ao **arco judicial** (PT-03A a PT-06C), que hoje se apoia só em acórdãos |
+
+**Uma armadilha de atribuição que o segundo eixo pegou:** *Impasses da democracia no Brasil* (2023), verde e com PDF integral na USP, **não é o livro de Avritzer** — é de **Maria Hermínia Tavares de Almeida**, mesmo título. Descartado. Mesma forma da sexta ocorrência do modo de falha do projeto.
+
+### 37.6 O que a tarefa 10 NÃO fez
+
+- **Não leu nada.** Sete peças, 567 páginas.
+- **Não fechou a tarefa 10:** o cânone pré-digital continua fora e depende dos seus arquivos.
+- **Não baixou os quatro do SciELO Livros** (item 37.5).
+- **Não coletou dois capítulos pertinentes de *Giros à direita*** — Hernán Ramírez (p. 20-45) e Fabiano Godinho Faria (p. 122) —, porque **ampliar a coleta sem seu aval é decisão, não execução**. O depósito do IBICT passa; são coletáveis.
+- **Não decidiu se Gohn (2019) fecha parcialmente a tarefa**, pendência sua desde 04/10.
+
+---
+
 ## Ordem de ataque — revista em 30/09/2026
 
 **A decisão que ordena tudo continua sendo a de 16/08/2026: a redação é o último item.** A ordem anterior a essa data tratava o aparato como suficiente e punha a escrita como ponto de virada; esta trata o conjunto de dados do processo político como pré-requisito.
@@ -1528,7 +1622,7 @@ Os dois consertos foram provados **invariantes**: 66 âncoras anteriores idênti
 
 | # | Tarefa | Item desta agenda | Depende de |
 |:--|:--|:--|:--|
-| 10 | Acrescentar a literatura clássica brasileira (livros, sem DOI) — as sínteses têm **zero** referências sobre o Brasil | 11.4, 22.4 | — |
+| 10 | Acrescentar a literatura brasileira em livro — 🔶 **primeira coleta em 08/10**: eixo 14 com **7 peças, 567 p.**, nenhuma lida. **O achado é a resposta da tarefa:** o cânone (Gohn, Sader, Scherer-Warren, Avritzer, Doimo, Telles, Abranches, Nobre, Solano, Messenberg) **não está em acesso aberto como livro** — zero com autoria casada —, é de editora comercial e depende dos seus arquivos. Mais 4 livros identificados e barrados pelo Bunny Shield do SciELO Livros | 11.4, 22.4, 37 | seus arquivos |
 | 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **27 pendentes**: 6 lidos, 7 com ficha da 1ª leva, 3 impedidos. Números gerados por `localizar_camada_a.py`, não digitados | 23, 24, 25 | acesso institucional |
 | 19 | **Decidir o nome de `mecanismo_causal`** e aplicar as **sete** cobranças da seção 4 do documento 09. A tarefa 14 acrescentou três e **devolveu as três**: a descontinuidade 2013→2015 (item 32); a "apropriação de repertório que Tilly não detalha", que era conclusão errada — Kunrath Silva (2018, § 15) mostra mecanismo distinto da apropriação social; e **"certificação" em PT-03, que o pesquisador renomeou para *ressignificação do protesto* em 04/10** (item 34.2). Dois nomes de mecanismo saíram daqui decididos — PT-01 e PT-03 | 24.6, 25.1, 25.2, 31.6, 32.1, 34.2 | decisão sua |
 | 25 | **A literatura do bolsonarismo como mobilização** — 🔶 **coleta fechada em 04/10**: **18 peças, 453 p.** em `Fontes/13_Bolsonarismo-mobilizacao/` — 14 por OpenAlex e **as 4 barradas entregues pelo pesquisador** (item 34.6). **Três foram lidas** e ancoram registro: Araujo e Sales (2022), que tirou PT-05 de contextual; Fernandes e Silva (2021), que tirou a "tolerância policial" de PT-02; e von Bülow e Abers (2024), que **fechou PT-06 e retificou o mecanismo dele**. **Faltam 15, 400 p.** — e **nenhuma bloqueia registro**: a leitura restante serve à redação, não à codificação | 23.2, 31.4, 33, 34, 35 | leitura |
@@ -1537,7 +1631,7 @@ Os dois consertos foram provados **invariantes**: 66 âncoras anteriores idênti
 
 **Nenhuma pendência de dado depende de você** — isso valia desde 16/08, deixou de valer em 30/09 com a tarefa 24, e em 04/10 mudou duas vezes: a tarefa **14** fechou a parte que podia fechar e deixou a **25**, bibliográfica; e horas depois, na terceira rodada, **você entregou as quatro peças barradas e mandou ler duas**, o que fechou a coleta da 25 e tirou PT-05 de contextual. **O que resta da 25 é leitura, e a leitura não depende de você.**
 
-**As seis abertas, por natureza:** decisões suas (**15, 19**), leitura bibliográfica (**10, 17, 25**) e a redação (**16**). **A tarefa 14 fechou em 04/10**, em quatro rodadas, e com ela a última tarefa de codificação. **Só a 16 depende das outras — e, desde a quarta rodada, nenhuma leitura pendente bloqueia registro: as quinze peças que restam no eixo 13 servem à redação, não à codificação.**
+**As seis abertas, por natureza:** decisões suas (**15, 19**), leitura ou entrega de arquivo (**10, 17, 25**) e a redação (**16**). **A 10 mudou de natureza em 08/10:** deixou de ser tarefa de busca — a busca foi feita e mostrou que o cânone não está em acesso aberto — e passou a depender dos seus arquivos, como a 17 depende do seu acesso institucional. **A tarefa 14 fechou em 04/10**, em quatro rodadas, e com ela a última tarefa de codificação. **Só a 16 depende das outras — e, desde a quarta rodada, nenhuma leitura pendente bloqueia registro: as quinze peças que restam no eixo 13 servem à redação, não à codificação.**
 
 > **As decisões suas que restam, e nenhuma bloqueia o resto.** (1) **Redatar `data_hora` de PT-02** — a ressalva está redigida como nota, a diferença entre data do evento e data do ator está explicada, mas mudar o campo é seu (item 34.7). (2) ~~Promover ou não PT-06~~ — **resolvido na quarta rodada, e sem mexer no critério:** você mandou ler a peça, o mecanismo ganhou âncora própria, PT-06 passou a `Confirmado` pela cadeia causal, e PT-08 não precisou ser reexaminado (item 35). (3) **Se Gohn (2019) fecha parcialmente a tarefa 10** — é o único balanço da literatura brasileira de protesto no corpus, e a 10 existe por essa lacuna. (4) **NOVO — Telegram e WhatsApp ficam nomeados em PT-06 sem verificação, ou saem do campo?** A peça os reporta por citação de segunda mão, e a regra do projeto não admite lastro nessa forma (item 35.5). (5) **NOVO — o esquema de 16 campos ganha campo para autonomia do movimento em relação ao líder?** É o argumento central de von Bülow e Abers e toca a pergunta desta pesquisa; hoje vive em `fonte_trecho` como achado (item 35.4).
 

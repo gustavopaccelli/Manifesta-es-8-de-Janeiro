@@ -232,6 +232,28 @@ A lista completa, com a referência de cada peça e o registro a que ela pode se
 
 ---
 
+### 14 — Literatura brasileira em livro
+
+*Eixo aberto em 08/10/2026, pela tarefa 10.* **Sete peças, 567 páginas** — seis capítulos do volume *Giros à direita: análises e perspectivas sobre o campo líbero-conservador* (Sobral, Editora SertãoCult, 2020) e o livro *O Brasil no inferno global: capitalismo e democracia fora dos trilhos* (São Paulo, FFLCH/USP, 2022). Como os eixos 05, 12 e 13, está **fora da contagem documental**.
+
+> **NENHUMA DAS SETE FOI LIDA, E NENHUMA ANCORA REGISTRO.** Fila de leitura, declarada peça por peça em `PROCEDENCIA`. Um arquivo dentro de `Fontes/` parece lastro; estas sete não são.
+
+**O que a coleta mostrou, e é resultado antes de qualquer leitura.** O cânone brasileiro de movimentos sociais **não está em acesso aberto como livro**: busca nominal por dezenove autores, exigindo autoria casada, devolveu **zero** para Gohn, Sader, Scherer-Warren, Avritzer, Doimo, Telles, Abranches, Nobre, Solano e Messenberg. São livros de editora comercial e seguem dependendo dos arquivos do pesquisador, como Alonso (2023) dependeu. Detalhe em [`projeto-pos-doc/14_LIVROS-BRASILEIROS.md`](../projeto-pos-doc/14_LIVROS-BRASILEIROS.md).
+
+> **QUINTA VARIANTE DE ARMADILHA DE NUMERAÇÃO, e é a mais perigosa do corpus.** Os seis capítulos de *Giros à direita* são **offprints**: cada PDF traz as **mesmas 12 páginas de pré-textuais do volume** — capa sem camada de texto, biografias de todos os colaboradores, folha de rosto, ficha, sumário, apresentação — e o capítulo só começa na **PDF p. 13**. Logo o deslocamento é **diferente em cada arquivo**: Löwy +0, Montenegro +33, Hoeveler +58, Lerner +77, Cazetta +161, Gentile +209.
+>
+> **A mesma página de PDF significa páginas impressas diferentes em arquivos distintos do mesmo volume.** E citar PDF p. 1-12 em qualquer um deles é citar o pré-textual do volume **através do arquivo errado** — as doze páginas são idênticas nos seis, de modo que a conferência de transcrição casaria e o vínculo estaria errado. **Regra operacional: no eixo 14, só cite PDF p. ≥ 13, e sempre pelo arquivo do capítulo.**
+>
+> O offset de `SINGER, ARAUJO E RUGITSKY 2022` **não está declarado de propósito**: é livro inteiro, 374 páginas de PDF, e a paginação impressa precisa ser conferida na leitura. Não assumir PDF = impressa antes de abrir.
+
+**Duas peças que valem destaque.** `HOEVELER 2020`, sobre fóruns e redes organizativas da extrema direita latino-americana, é a peça do corpus **mais próxima do mecanismo que PT-08 afirma** — difusão transnacional — e pelo lado brasileiro, que faltava. `LERNER 2020`, sobre a rede conservadora no Facebook, é candidata a dar **âncora de primeira mão** à infraestrutura digital que PT-06 nomeia e que von Bülow e Abers (2024) só reportam por citação de segunda mão; muda a plataforma, não fecha a ressalva.
+
+**Um defeito de verificação que vale como armadilha registrada.** A conferência de dois eixos reprovou os seis capítulos na primeira passagem, porque amostrava as **quatro primeiras páginas** — e nos offprints as duas primeiras são capa sem texto e biografias do volume. Os seis são arquivos distintos (SHA-256 distintos, 30 a 88 mil caracteres cada) e cada um contém o próprio autor e título. **Verificação de dois eixos amostrada nas primeiras páginas falha em offprint com pré-textual comum:** conferir no texto inteiro. Reconferidos: 6 de 6.
+
+**O que ficou barrado, e é o padrão já conhecido.** Quatro livros identificados e de acesso aberto estão no **SciELO Livros**, cujo host `books.scielo.org` está atrás do **Bunny Shield**, desafio JavaScript de detecção de bot: HTTP 403 ao curl e ao `urllib`, com ou sem cabeçalhos completos. Nenhum tem cópia em outro depósito — conferido no OpenAlex, no DOAB e nos repositórios da UnB e da UFRGS. São Gurza Lavalle et al. (2018), Abers (2021), Rich (2021) e Madeira, Marona e Del Río (2022). **O limite é da coleta automatizada, não do projeto:** abrem num navegador comum, e os DOIs estão no documento 14.
+
+---
+
 ## Pendências
 
 ### Exigem coleta manual

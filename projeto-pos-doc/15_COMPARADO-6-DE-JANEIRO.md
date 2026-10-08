@@ -84,7 +84,7 @@ Castañeda e Jenks dizem precisamente que o ataque ao Congresso *se tornou uma p
 
 `LIDOS`, em `scripts/localizar_camada_a.py`, ganhou um **terceiro campo** — o caminho no corpus, ou `None` quando a leitura foi on-line — e o relatório passou a contar e nomear os lidos sem arquivo. A conta de hoje:
 
-> **Dos 7 lidos, 4 têm arquivo no corpus e 3 foram lidos só on-line** — Cambridge Core (Collier 2011), MPG.PuRe (Mayntz 2004) e Nature (Borge-Holthoefer et al. 2011). **Nenhum dos três pode ancorar página.** O script agora falha se um caminho declarado não existir em disco.
+> **Dos 7 lidos, 4 têm arquivo no corpus e 3 foram lidos só on-line** — Cambridge Core (Collier 2011), MPG.PuRe (Mayntz 2004) e Nature (**González-Bailón et al.** 2011 — ver a correção de atribuição abaixo). **Nenhum dos três pode ancorar página.** O script agora falha se um caminho declarado não existir em disco.
 
 **A regra: `lida` e `lida-e-arquivada` são estados distintos, e só o segundo autoriza âncora.**
 
@@ -94,5 +94,7 @@ Castañeda e Jenks dizem precisamente que o ataque ao Congresso *se tornou uma p
 
 1. **Não leu as outras peças do eixo 15** — não há outras: o eixo nasceu com duas.
 2. **Não documentou o lado brasileiro da emulação** por literatura comparada. Continua em fonte primária (PT-19, CPMI p. 614).
-3. **Não arquivou as três peças da camada A lidas só on-line** (§6). São Collier (2011), Mayntz (2004) e Borge-Holthoefer et al. (2011), e as três estavam acessíveis em 30/09. Se o projeto quiser poder ancorá-las, precisam entrar no corpus.
+3. **Não arquivou as três peças da camada A lidas só on-line** (§6). São Collier (2011), Mayntz (2004) e **González-Bailón, Borge-Holthoefer, Rivero e Moreno** (2011), e as três estavam acessíveis em 30/09. Se o projeto quiser poder ancorá-las, precisam entrar no corpus.
+
+> **CORREÇÃO DE ATRIBUIÇÃO, 08/10/2026 à noite:** o projeto vinha chamando a terceira peça de "Borge-Holthoefer et al.", que é o **segundo** autor. A folha de título, lida em primeira mão no PDF aberto da Nature, traz **Sandra González-Bailón** à frente, com Borge-Holthoefer, Rivero e Moreno — **quatro** autores, 7 páginas. Quarta atribuição corrigida por abrir o arquivo em 08/10.
 4. **Não reexaminou se `Contextual` deve continuar no vocabulário controlado** de `status_classe` agora que nenhum registro o usa. O vocabulário tem cinco valores e um deles ficou vazio — e isso é informação, não defeito: um registro novo pode nascer contextual.

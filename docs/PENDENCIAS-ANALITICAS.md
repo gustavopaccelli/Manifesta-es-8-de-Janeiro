@@ -1618,7 +1618,9 @@ Rodei a prova negativa **antes** de descobrir a falha, e as três injeções apa
 
 `LIDOS`, em `localizar_camada_a.py`, ganhou um **terceiro campo** — o caminho no corpus, ou `None` — e o relatório passou a contar e nomear os lidos sem arquivo. O script **falha** se um caminho declarado não existir em disco. A conta de hoje:
 
-> **Dos 7 lidos, 4 têm arquivo no corpus e 3 foram lidos só on-line:** Collier (2011, Cambridge Core), Mayntz (2004, MPG.PuRe) e Borge-Holthoefer et al. (2011, Nature). **Nenhum dos três pode ancorar página.**
+> **Dos 7 lidos, 4 têm arquivo no corpus e 3 foram lidos só on-line:** Collier (2011, Cambridge Core), Mayntz (2004, MPG.PuRe) e **González-Bailón et al.** (2011, Nature). **Nenhum dos três pode ancorar página.**
+>
+> **CORREÇÃO DE ATRIBUIÇÃO, 08/10/2026 à noite.** O projeto vinha chamando a terceira peça de "Borge-Holthoefer et al. (2011)", que é o **segundo** autor. A folha de título do PDF, lida em primeira mão, traz **Sandra González-Bailón** (Oxford Internet Institute), Javier Borge-Holthoefer, Alejandro Rivero e Yamir Moreno (Zaragoza) — **quatro** autores, 7 páginas, *Scientific Reports*. É a quarta atribuição que abrir o arquivo corrige em 08/10, depois de Gohn (ano), von Bülow e Abers (fascículo) e Chen, Lukito e Koo (número de autores). **A regra que isso firma: autoria se lê na folha de título, não no nome pelo qual o projeto se acostumou a chamar a peça.**
 
 **A regra: `lida` e `lida-e-arquivada` são estados distintos, e só o segundo autoriza âncora.**
 

@@ -1788,3 +1788,38 @@ A ficha de 08/10 pela manhã declarava Gurza Lavalle et al. (2018) como "o livro
 2. **A crítica de Gurza Lavalle et al. ao marco teórico do projeto** (institucionalização ≠ cooptação, em Tarrow e Tilly) toca o aparato conceitual declarado, não um registro. Entra como ressalva na redação, como revisão do marco, ou fica como nota? **É decisão de projeto.**
 3. **Madeira et al. (2022, p. 254) em PT-05 ou no arco judicial?** A frase do general amarra o apelo militar a uma decisão do STF, e o arco judicial hoje se apoia só em acórdãos. É a primeira literatura do corpus a interpretá-lo — mas o registro que ela mais serviria pode ser um dos do arco, não PT-05. **Não foi feito.**
 4. **Os três livros seguem LIDOS EM PARTE**, com 1.189 páginas impressas somadas. O mapa de pertinência por capítulo diz onde há o que ler: em Gurza Lavalle, nenhum capítulo menciona a direita; em Madeira, os capítulos 6, 7, 11, 12 e o posfácio concentram Bolsonaro, Lava Jato e STF.
+
+---
+
+## 40. `Contextual` sai do vocabulário, as três peças da camada A entram no corpus — 🔶 08/10/2026
+
+### 40.1 Executado
+
+| | |
+|:--|:--|
+| **`Contextual` fora do vocabulário controlado** | Por sua decisão. Retirado dos metadados do JSON (fonte da verdade), de `verificar_integridade.py` (checagem 4), do dicionário em `gerar_codebook.py` e — o ponto que importa — do **ramo de isenção** em `gerar_auditoria.py`. Agora só `Inferência do analista` dispensa âncora local, e dispensa porque declara no próprio nome que não há fonte a localizar. Classes: **61 / 21 / 1**, em **4** valores previstos |
+| **O selo `ctx` ficou no conferidor de figuras** | De propósito: figuras versionadas podem trazê-lo, e o conferidor tem de saber lê-lo para acusar divergência em vez de quebrar |
+| **Uma mensagem que repetia um número** | `verificar_integridade.py` imprimia "só os cinco valores previstos" com o cinco escrito à mão. Passou a derivar de `len(CLASSES)`: contagem escrita à mão é a forma mais barata do modo de falha do projeto |
+| **Três peças da camada A arquivadas** | Collier (2011), Mayntz (2004) e González-Bailón et al. (2011). **Dos 7 lidos, 7 têm arquivo e 0 foram lidos só on-line** — `lida` e `lida-e-arquivada` deixaram de divergir |
+| **Corpus** | **62 PDFs / 12.105 páginas**; documental inalterada em **22 / 6.951** |
+| **Tarefa 19: lista e contagem reconciliadas** | A agenda dizia **sete** cobranças; são **cinco**. A §4 do documento 09 tem oito **linhas**, e duas registram aprovação ("Passam", "Correto") em vez de cobrança. A contagem foi tomada das linhas e decrementada a cada saída. Abertas: **PT-29, PT-34, PT-12A, PT-62** e a atribuição dos quatro testes |
+
+### 40.2 Três rotas de acesso, três lições
+
+- **Collier** saiu da página do **departamento do autor** em Berkeley. A Cambridge Core oferece o PDF de graça (0,13 MB) e o navegador real o alcança, mas devolve **429 a cliente que não é navegador** — e a planilha do projeto guardava um slug de URL que a página não usa mais. Impressa = PDF + 822.
+- **Mayntz** saiu da **API REST do MPG.PuRe**. A página do item está atrás do **Anubis**, o mesmo desafio de prova-de-trabalho da OpenEdition. Impressa = PDF + 236.
+- **González-Bailón et al.** saiu do PDF aberto da Nature em uma chamada. **Sem paginação impressa de fascículo** — *Scientific Reports* pagina por número de artigo (1:197), como a MDPI, e aqui é mais sutil: o rodapé **traz um número**, que parece fólio e é contagem interna.
+
+> **Um defeito meu de método, de graça:** o laço que sondava cópias institucionais escrevia todas as tentativas no **mesmo arquivo de saída**, e a tentativa 404 apagou o download bem-sucedido da anterior. **Sonda em laço precisa de um caminho de saída por candidato**, ou o sucesso é destruído pelo fracasso seguinte.
+
+### 40.3 Dois achados no eixo 13, antes de ler
+
+Medindo o offset das 15 peças não lidas (que é pré-requisito de qualquer citação), apareceram três coisas que não são sobre offset:
+
+1. **TATAGIBA (2018) tem camada de texto CIFRADA.** A extração devolve `(QWUHDVUXDVHDVLQVWLWXL©·HV`, que **não é lixo**: é "Entre as ruas e as instituições" com as letras deslocadas em **+3** no mapa CID→Unicode. Consequências: qualquer busca de termo devolve **zero**, e um leitor apressado declara "sem camada de texto". **Não é.** O deslocamento das letras é recuperável, mas os acentuados seguem outro mapa (`©`→`Ç`, `·`→`Õ`), de modo que **o arquivo não pode ancorar transcrição**: decodificação heurística produziria uma transcrição que não existe no original. Precisa de cópia limpa ou OCR.
+2. **Duas divergências de ano entre nome de arquivo e peça.** `MENDONCA-DOMINGUES_..._RBCP-37_2021.pdf` traz no cabeçalho corrente "Nº 37-**2022**"; `MENDONCA-FREITAS_..._Dados-66-2_2022.pdf` traz "DADOS, vol.66 (2): e20200213, **2023**". É a mesma família das três atribuições corrigidas hoje — e aqui o rótulo errado está **no nome que nós demos ao arquivo**.
+3. **Paginação por localizador eletrônico em quatro peças** (Mendonça e Freitas, Rocha, Kaysel e Bianchi, Bastos e Recuero): e-locator ou numeração interna do artigo, sem fólio de fascículo.
+
+### 40.4 O que NÃO foi feito, por limite de uso
+
+Esta rodada parou aqui. Ficaram pendentes, **todas já encaminhadas por você**: a nota com a crítica de Gurza Lavalle ao marco teórico; a execução da tarefa 19 (características, relações e proposta de nomenclatura); a leitura das 15 peças do eixo 13, de que só se mediram os offsets; o resto da tarefa 10; e a recomendação sobre Madeira et al. (p. 254) para PT-05 ou para o arco judicial.

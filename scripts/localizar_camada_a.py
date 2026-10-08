@@ -114,9 +114,27 @@ FICHAS = {
 # existia. O terceiro campo é o caminho no corpus, ou None quando a leitura foi
 # on-line; `main()` conta e nomeia os lidos sem arquivo.
 LIDOS = {
-    "10.1017/s1049096511001429": ("30/09", "Cambridge Core, integral", None),
-    "10.1177/0048393103262552": ("30/09", "MPG.PuRe, integral, 23 p.", None),
-    "10.1038/srep00197": ("30/09", "PDF aberto da Nature, integral", None),
+    # ARQUIVADAS EM 08/10/2026, por decisão do pesquisador. As três estavam lidas
+    # desde 30/09 SEM arquivo no corpus, e por isso não podiam ancorar página.
+    # Rotas, porque cada uma exigiu uma: Collier saiu da página do DEPARTAMENTO DO
+    # AUTOR em Berkeley, porque a Cambridge Core devolve 429 a cliente que não é
+    # navegador (o PDF é oferecido de graça, 0,13 MB, e o navegador real o alcança);
+    # Mayntz saiu da API REST do MPG.PuRe, porque a página do item está atrás do
+    # Anubis, o mesmo desafio de prova-de-trabalho da OpenEdition; González-Bailón
+    # et al. saiu do PDF aberto da Nature, em uma chamada.
+    "10.1017/s1049096511001429": (
+        "30/09 on-line; 08/10 no corpus",
+        "Berkeley (página do autor), integral, 8 p. — impressa = PDF + 822",
+        "Fontes/05_Bibliografia-teorica/COLLIER_Understanding-process-tracing_PS-44-4_2011.pdf"),
+    "10.1177/0048393103262552": (
+        "30/09 on-line; 08/10 no corpus",
+        "MPG.PuRe via API REST, integral, 23 p. — impressa = PDF + 236",
+        "Fontes/05_Bibliografia-teorica/MAYNTZ_Mechanisms-in-the-analysis-of-social-macro-phenomena_PSS-34-2_2004.pdf"),
+    "10.1038/srep00197": (
+        "30/09 on-line; 08/10 no corpus",
+        "PDF aberto da Nature, integral, 7 p. — SEM paginação impressa de fascículo; "
+        "QUATRO autores, e o primeiro é González-Bailón",
+        "Fontes/05_Bibliografia-teorica/GONZALEZ-BAILON-BORGE-HOLTHOEFER-RIVERO-MORENO_Dynamics-of-protest-recruitment-through-an-online-network_Scientific-Reports-1_2011.pdf"),
     "10.3390/socsci12040238": (
         "30/09 on-line; 08/10 no corpus",
         "MDPI, integral — entregue pelo pesquisador em 08/10 e arquivada; ancora PT-08",

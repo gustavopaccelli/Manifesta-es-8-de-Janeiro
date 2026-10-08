@@ -58,7 +58,11 @@ def main():
     # Registros sem âncora local, separados por motivo.
     legitimos, pendentes = [], []
     for e in sem_local:
-        if e["status_classe"] in ("Contextual", "Inferência do analista"):
+        # Até 08/10/2026 "Contextual" também entrava aqui, e era exatamente isso
+        # que a classe fazia: dispensar o registro de ter âncora local. Com ela
+        # fora do vocabulário, só a inferência declarada é isenta — e a inferência
+        # é isenta porque declara, no próprio nome, que não há fonte a localizar.
+        if e["status_classe"] == "Inferência do analista":
             legitimos.append(e)
         else:
             pendentes.append(e)

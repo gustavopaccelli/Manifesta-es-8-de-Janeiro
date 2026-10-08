@@ -32,7 +32,10 @@ JSON_P = RAIZ / "process_tracing_8jan_eventos.json"
 CSV_P = RAIZ / "data/processed/process_tracing_8jan_eventos.csv"
 XLSX_P = RAIZ / "data/processed/process_tracing_8jan_codebook.xlsx"
 
-CLASSES = {"Confirmado em fonte primária", "Confirmado", "Contextual",
+# "Contextual" SAIU em 08/10/2026, por decisão do pesquisador: era isenção da
+# cobrança de âncora, e com zero registros na classe o que a sua permanência
+# garantia era apenas que um registro futuro pudesse nascer dispensado.
+CLASSES = {"Confirmado em fonte primária", "Confirmado",
            "A verificar", "Inferência do analista"}
 
 # Eixos que NÃO entram na contagem de fonte documental. O eixo 05 está fora desde
@@ -152,7 +155,7 @@ def main():
         print("  ! valores fora do vocabulário: {}".format(fora))
         falhas.append("status_classe fora do vocabulário: {}".format(fora))
     else:
-        print("  OK — só os cinco valores previstos")
+        print("  OK — só os {} valores previstos".format(len(CLASSES)))
 
     # ------------------------------------------------------------------ 5 ---
     cabecalho(5, "COERÊNCIA fonte_pagina x fonte_local")
@@ -239,10 +242,15 @@ def main():
         # baixei do IBICT. São 8 arquivos a menos e 1 a mais — 59 PDFs —, 22 páginas
         # a menos no total, e TRÊS capítulos a mais de conteúdo (Torres, Costa Filho
         # e Marques), que o corpus não tinha. A documental continua em 22 / 6.951.
-        if (n, total, doc_n, doc_total) != (59, 12067, 22, 6951):
+        # Linha de base atualizada em 08/10/2026, QUARTO passo: entram as três peças
+        # da camada A que estavam lidas só on-line (Collier 2011, Mayntz 2004 e
+        # González-Bailón et al. 2011), por decisão do pesquisador. Com elas, as 7
+        # peças lidas da camada A passam a ter arquivo — e `lida` deixa de divergir
+        # de `lida-e-arquivada`. A documental continua em 22 / 6.951.
+        if (n, total, doc_n, doc_total) != (62, 12105, 22, 6951):
             avisos.append("corpus mudou: {} PDFs / {} páginas, {} documentais / {} p. "
-                          "(era 59 / 12067, 22 / 6951)".format(n, total, doc_n, doc_total))
-            print("  ~ corpus difere da linha de base de 08/10/2026 (59 PDFs / 12067 p., "
+                          "(era 62 / 12105, 22 / 6951)".format(n, total, doc_n, doc_total))
+            print("  ~ corpus difere da linha de base de 08/10/2026 (62 PDFs / 12105 p., "
                   "22 documentais / 6951 p.)")
         else:
             print("  OK — bate com o inventário")

@@ -59,7 +59,7 @@ DICIONARIO = [
     ("fonte_local", "Caminho do arquivo em Fontes/, relativo à raiz do projeto. Vários documentos separados por '; '.", "caminho", "ver aba Inventario_Fontes", "auditoria de 16/08/2026"),
     ("fonte_pagina", "Página citada, prefixada pelo código curto do documento — 'CPMI: 646, 711 | Cappelli: 55, 57'. O prefixo existe para que a página nunca fique atribuída ao documento errado.", "texto estruturado", "COD: n[, n] [| COD: n]", "extraído de fonte_trecho, conferido manualmente"),
     ("status_verificacao", "Status em texto livre, com a nuance de cada caso. Preservado integralmente.", "texto", "livre", "pesquisador"),
-    ("status_classe", "Redução do status a vocabulário controlado, para contagem e filtro.", "categórico", "Confirmado em fonte primária · Confirmado · Contextual · A verificar · Inferência do analista", "derivado de status_verificacao"),
+    ("status_classe", "Redução do status a vocabulário controlado, para contagem e filtro.", "categórico", "Confirmado em fonte primária · Confirmado · A verificar · Inferência do analista ('Contextual' saiu em 08/10/2026: era isenção da cobrança de âncora)", "derivado de status_verificacao"),
     ("nota_auditoria", "O que a auditoria de fontes alterou neste registro e por quê. Vazio = registro não tocado.", "texto", "livre", "auditoria de 16/08/2026"),
 ]
 
@@ -243,6 +243,69 @@ PROCEDENCIA["Fontes/05_Bibliografia-teorica/SNOW-DELLA-PORTA-KLANDERMANS-McADAM_
     "ATENÇÃO AO IDENTIFICADOR: o rodapé imprime o prefixo do ISBN impresso "
     "(10.1002/9781405198431.wbespmNNN), que retorna 404 no CrossRef; o registrado é o do "
     "ISBN eletrônico (10.1002/9780470674871.wbespmNNN). Não ancora registro nenhum.",
+)
+
+# ARQUIVADAS EM 08/10/2026 (quinta rodada), por decisão do pesquisador: as três
+# peças da camada A que estavam LIDAS desde 30/09 **sem arquivo no corpus** e por
+# isso não podiam ancorar página. Com elas, as 7 peças lidas da camada A passam a
+# ter arquivo, e o estado `lida` deixa de divergir de `lida-e-arquivada`.
+#
+# TRÊS ROTAS DIFERENTES, e cada uma ensina uma coisa:
+#  - COLLIER saiu da página do DEPARTAMENTO DO AUTOR em Berkeley. A Cambridge Core
+#    oferece o PDF de graça (0,13 MB) e o navegador real o alcança, mas devolve
+#    **429** a cliente que não é navegador — e 429 é limite de taxa, não recusa.
+#    A planilha do projeto guardava um slug de URL que a página não usa mais.
+#  - MAYNTZ saiu da **API REST** do MPG.PuRe. A página do item está atrás do
+#    **Anubis**, o mesmo desafio de prova-de-trabalho da OpenEdition (403 com
+#    "Making sure you're not a bot!"), e a API responde 200 em JSON.
+#  - GONZÁLEZ-BAILÓN et al. saiu do PDF aberto da Nature, em uma chamada.
+#
+# E UMA ARMADILHA DE NUMERAÇÃO QUE SE REPETE COM AUTOR NOVO: *Scientific Reports*
+# pagina por NÚMERO DE ARTIGO (1:197), como a MDPI — não há paginação impressa de
+# fascículo. Aqui é mais sutil que no caso da MDPI, porque o rodapé corrente **traz
+# um número** ("SCIENTIFIC REPORTS | 1 : 197 | DOI: 10.1038/srep00197 3"), que
+# parece fólio e é contagem interna do artigo. Impressa = PDF, 1 a 7.
+PROCEDENCIA["Fontes/05_Bibliografia-teorica/COLLIER_Understanding-process-tracing_PS-44-4_2011.pdf"] = (
+    "Página do Departamento de Ciência Política de Berkeley, do próprio autor — "
+    "arquivada em 08/10/2026. LIDA desde 30/09", "bibliografia",
+    "COLLIER, David. 'Understanding Process Tracing'. PS: Political Science & Politics, "
+    "v. 44, n. 4, p. 823-830, 2011. DOI 10.1017/S1049096511001429 "
+    "| PÁGINA IMPRESSA = PDF + 822 (PDF p. 1 = impressa 823), MEDIDO: o rodapé corrente "
+    "traz 'PS • October 2011' com o fólio, e a p. 1 traz o DOI. 8 páginas "
+    "| SERVE A: PT-28 (hoop test) e à atribuição dos quatro testes, que é cobrança aberta "
+    "da tarefa 19. A nota da tabela 1 diz que os testes são 'adapted from Bennett (2010, "
+    "210), who builds on categories formulated by Van Evera (1997, 31-32)', e o projeto os "
+    "atribui a Beach e Pedersen (2019). ATENÇÃO À LIGADURA ﬁ: o arquivo traz "
+    "'conﬁrmordisconﬁrm' e 'Scientiﬁc' com ligadura e espaços colapsados — normalizar "
+    "antes de afirmar ausência de termo.",
+)
+PROCEDENCIA["Fontes/05_Bibliografia-teorica/MAYNTZ_Mechanisms-in-the-analysis-of-social-macro-phenomena_PSS-34-2_2004.pdf"] = (
+    "API REST do MPG.PuRe (Max Planck), componente de texto integral — arquivada em "
+    "08/10/2026. LIDA desde 30/09", "bibliografia",
+    "MAYNTZ, Renate. 'Mechanisms in the Analysis of Social Macro-Phenomena'. Philosophy of "
+    "the Social Sciences, v. 34, n. 2, p. 237-259, 2004. DOI 10.1177/0048393103262552 "
+    "| PÁGINA IMPRESSA = PDF + 236 (PDF p. 1 = impressa 237), MEDIDO. 23 páginas "
+    "| SERVE A: a objeção metodológica mais séria que o projeto registrou — Mayntz adota "
+    "mecanismo como processo RECORRENTE, e o codebook nomeia mecanismo em episódio único. "
+    "É a peça de que saem as transcrições já citadas na agenda, e agora com arquivo para "
+    "conferir página. Não ancora registro.",
+)
+PROCEDENCIA["Fontes/05_Bibliografia-teorica/GONZALEZ-BAILON-BORGE-HOLTHOEFER-RIVERO-MORENO_Dynamics-of-protest-recruitment-through-an-online-network_Scientific-Reports-1_2011.pdf"] = (
+    "PDF aberto da Nature — arquivada em 08/10/2026. LIDA desde 30/09", "bibliografia",
+    "GONZÁLEZ-BAILÓN, Sandra; BORGE-HOLTHOEFER, Javier; RIVERO, Alejandro; MORENO, Yamir. "
+    "'The Dynamics of Protest Recruitment through an Online Network'. Scientific Reports, "
+    "v. 1, art. 197, 2011. DOI 10.1038/srep00197. CC BY-NC-SA "
+    "| SEM PAGINAÇÃO IMPRESSA DE FASCÍCULO: a revista pagina por número de artigo, e o "
+    "rodapé corrente traz um número que é contagem interna do artigo, não fólio. "
+    "Impressa = PDF, 1 a 7 "
+    "| SERVE A: PT-19 e PT-12A, e toca DUAS cobranças da tarefa 19 — o modelo de limiar de "
+    "PT-29 (o artigo trata de CONTÁGIO COMPLEXO e da posição de rede dos participantes "
+    "iniciais) e a tipificação de PT-12A. LIMITE DURO: o caso é a ESPANHA de maio de 2011, "
+    "não o Brasil — entraria como âncora comparada, na posição de Chen, Lukito e Koo em "
+    "PT-08, nunca como âncora do caso. "
+    "| ATRIBUIÇÃO CORRIGIDA EM 08/10/2026: o projeto chamava a peça de 'Borge-Holthoefer et "
+    "al.', que é o SEGUNDO autor. A folha de título traz González-Bailón à frente, e são "
+    "QUATRO autores.",
 )
 
 # Antecedente teórico do projeto. Não ancora registro nenhum e não é fonte de

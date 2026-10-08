@@ -46,6 +46,9 @@ HTML_P = RAIZ / "reports/figures/cronologia_8jan_interativa.html"
 SVG_P = RAIZ / "reports/figures/figura_cronologia_8jan.svg"
 
 # Vocabulário do codebook -> selo da figura, do mais fraco para o mais forte.
+# "ctx" fica no mapa embora "Contextual" tenha saído do vocabulário em
+# 08/10/2026: as figuras versionadas podem trazer o selo, e o conferidor tem de
+# saber lê-lo para acusar divergência em vez de quebrar.
 CLASSE = {"Inferência do analista": "inf", "Contextual": "ctx",
           "Confirmado": "ok", "Confirmado em fonte primária": "pri"}
 FORCA = {"inf": 0, "ctx": 1, "ok": 2, "pri": 3}

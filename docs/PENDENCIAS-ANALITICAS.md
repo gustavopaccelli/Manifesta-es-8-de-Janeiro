@@ -1972,3 +1972,49 @@ A sétima checagem de `verificar_integridade.py`, criada ontem para nomes de mec
 ### 43.5 O que resta
 
 Da tarefa 19, **nada**. Seguem abertas, das rodadas anteriores: **Cesarino (2019) em PT-29**; **Tatagiba (2018)**, que precisa de cópia limpa ou OCR; a **dissertação do `deposita/434`** sobre "guerra cultural"; os **45 fragmentos que casam só por janela**; e, se preferir, **partir PT-62 em dois registros** em vez de um campo com dois mecanismos.
+
+---
+
+## 44. Pendências 1 e 5 resolvidas — e uma checagem minha estava inerte — 🔶 10/10/2026
+
+**Encaminhamento:** *"Resolva as pendências 1 e 5."*
+
+### 44.1 Pendência 1 — Cesarino (2019) **não** entra em PT-29
+
+Três razões, e a segunda é a que decide.
+
+1. **A renomeação retirou a necessidade.** Cesarino era resgate do nome **velho**: "transposição do limiar" tinha tensão interna com PT-19 (limiar pressupõe ação sem coordenação; PT-19 afirma coordenação), e o contágio não-deliberado dela dissolvia a tensão. **"Demonstração de viabilidade" não tem contágio nenhum** — é efeito de demonstração entre quem já está no lugar. Não há mais o que resgatar.
+2. **Referente diferente.** O contágio dela é **circulação de conteúdo** em WhatsApp e YouTube na campanha de 2018; PT-29 é **imitação de uma ação física por multidão co-presente** em 08/01/2023. Mesma palavra, referentes distintos — e importá-la seria o modo de falha da casa cometido por mim **com a peça já lida**, que é a forma mais difícil de desculpar.
+3. **Redundante onde ela caberia.** O lugar em que a tese serve é PT-06 — circulação, não consistência, sustentando a mobilização —, e PT-06 **já está ancorado em Cesarino (2022)**, da mesma autora e com página conferida.
+
+### 44.2 Pendência 5 — PT-62 **não** se parte, e a razão certa não era a minha
+
+Eu havia mantido um campo com dois mecanismos alegando o **custo** de mexer na contagem de 83 sub-eventos. O custo não era o argumento. O mecanismo (1) — desmobilização por repressão do Estado — **já está em fonte primária em PT-49, PT-52, PT-53 e PT-61**, e o mecanismo de PT-52 **já se chama "destruição da infraestrutura de mobilização"**.
+
+| | |
+|:--|:--|
+| **Partir** | criaria um registro que **duplica** quatro outros, com evidência pior |
+| **Manter como afirmação própria** | deixava um registro de classe `Inferência` afirmando por conta própria o que quatro registros provam |
+| **O que foi feito** | **de-duplicar**: o mecanismo (1) passou a ser **remissão** aos quatro; o que PT-62 afirma por conta própria é a migração de arena, e é só isso que a classe precisa cobrir |
+
+> **PT-52 já havia pensado a distinção:** o campo dele diz que "a diferença é o que separa a desmobilização do repertório da punição de seus agentes". O projeto tinha a distinção, e PT-62 a estava reafirmando sem ver. **A pendência não pedia uma escolha entre as duas formas que eu ofereci: pedia que eu olhasse a camada antes de oferecer.**
+
+83 sub-eventos, classes 61 / 21 / 1, nenhum registro criado.
+
+### 44.3 Uma guarda nova, e ela nasceu morta
+
+A remissão criou um risco que não existia: **se um dos quatro registros citados deixasse de existir ou fosse renumerado, nada acusaria.** O projeto já inseriu identificadores com sufixo em revisão posterior (PT-03A a PT-06C), de modo que o risco é real.
+
+`verificar_integridade.py` ganhou a guarda: **toda remissão `PT-XX` em `mecanismo_causal`, `fonte_trecho` ou `nota_auditoria` tem de apontar para registro existente.**
+
+> **E ela nasceu INERTE, por minha mão.** Escrevi a linha por heredoc, e o heredoc converteu a sequência barra-`b` em **``\x08``, o caractere de controle *backspace***. O regex ficou `r"<BS>PT-\d{2}[A-Z]?<BS>"`, que **nunca casa nada** — e a checagem imprimia *"OK — toda remissão aponta para registro existente"* **testando zero strings**.
+>
+> **Checagem que não pode casar imprime o mesmo que checagem que não achou nada.** É a regra da linha de base suja na sua forma mais pura, e eu a cometi no dia seguinte a tê-la registrado em memória. Consertada fora do heredoc; prova negativa com base limpa: **2 de 2 remissões quebradas detectadas**.
+
+É a terceira vez nesta sequência de rodadas que o heredoc corrompe silenciosamente o que escrevo em script. **A regra passa a ser: patch de regex ou de string com escape vai para arquivo pelo editor, nunca por heredoc.**
+
+### 44.4 O que resta
+
+1. **Tatagiba (2018)** — precisa de cópia limpa ou OCR para poder ancorar transcrição.
+2. **A dissertação do `deposita/434`** sobre "guerra cultural" — dissertação de mestrado, e recorte 2014-2018 contra os 2020-2021 de PT-06.
+3. **Os 45 fragmentos que casam só por janela** — declarados e contados, não resolvidos.

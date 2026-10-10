@@ -308,6 +308,31 @@ def main():
     if not achou_morto:
         print("  OK — nenhum nome retirado reapareceu")
 
+    # Remissao entre registros: quando um campo diz "ver PT-52", esse registro tem
+    # de existir. Guarda criada em 10/10/2026, quando PT-62 passou a REMETER a
+    # PT-49, PT-52, PT-53 e PT-61 em vez de reafirmar o que eles provam. O projeto
+    # ja inseriu identificadores com sufixo em revisao posterior (PT-03A a PT-06C),
+    # de modo que remissao quebrada e risco real, e hoje nada a acusava.
+    import re as _re
+    ids = {ev["id"] for ev in eventos}
+    pendura = 0
+    for ev in eventos:
+        for campo in ("mecanismo_causal", "fonte_trecho", "nota_auditoria"):
+            # Fronteira de palavra dos dois lados. ATENCAO: esta linha ja foi
+            # escrita uma vez por heredoc, que converteu a sequencia barra-b em
+            # BACKSPACE de controle (\x08). O regex ficou inerte e a checagem
+            # imprimia OK testando zero strings. Se editar isto, nao use heredoc.
+            for ref in set(_re.findall(r"\bPT-\d{2}[A-Z]?\b",
+                                       str(ev.get(campo) or ""))):
+                if ref not in ids:
+                    pendura += 1
+                    falhas.append("remissão quebrada: {} cita {} em {}, e {} não existe"
+                                  .format(ev["id"], ref, campo, ref))
+                    print("    X {} cita {} em {} — e {} nao existe"
+                          .format(ev["id"], ref, campo, ref))
+    if not pendura:
+        print("  OK — toda remissão PT-XX entre registros aponta para registro existente")
+
     # --------------------------------------------------------------------- --
     print("\n" + "=" * 72)
     if falhas:

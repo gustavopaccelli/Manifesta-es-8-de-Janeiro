@@ -227,6 +227,25 @@ E das cinco, **uma não é nome de mecanismo**: a atribuição dos quatro testes
 >
 > **Recomendo (a)**, porque a entrada de Carvalho e Tatagiba tornou o problema empírico e não só terminológico: *deslocamento* afirma agência do ator onde a fonte mostra operação do Estado.
 
+#### RESOLVIDO EM 10/10/2026 — e nenhuma das duas formas de (a) era a certa
+
+Você aprovou (a) e delegou a escolha entre as suas duas formas: partir o registro em dois, ou um campo com dois mecanismos. Escolhi a segunda **alegando o custo** de mexer na contagem de 83 sub-eventos. **O custo não era o argumento.**
+
+Ao olhar a camada $T_{+1}$ inteira, o mecanismo (1) de PT-62 — desmobilização por repressão do Estado — **já está documentado em fonte primária por quatro registros**:
+
+| Registro | O que documenta |
+|:--|:--|
+| **PT-49** | decisão de Moraes determinando a desocupação total dos QGs em 24 horas |
+| **PT-52** | desmonte do acampamento do SMU pela Polícia do Exército e PMDF; 2.151 prisões em flagrante no 8 e 9 de janeiro — **e o mecanismo dele já se chama "destruição da infraestrutura de mobilização"** |
+| **PT-53** | inquéritos 4921 e 4922, Operação Lesa Pátria, 1.335 ações penais |
+| **PT-61** | 1.402 réus responsabilizados até abr/2026 |
+
+**Partir PT-62 criaria um registro que duplica esses quatro, com evidência pior que a deles.** E manter os dois mecanismos como afirmação *própria* de PT-62 era o defeito oposto: um registro de classe `Inferência do analista` afirmando por conta própria o que outros quatro provam em fonte primária.
+
+> **A saída é de-duplicar, não partir.** O mecanismo (1) passou a ser **remissão** aos quatro; o que PT-62 afirma por conta própria é o mecanismo (2), a migração de arena — e é só isso que a classe `Inferência do analista` precisa cobrir. **Com a remissão, a classe volta a ser honesta.**
+>
+> E PT-52 já havia pensado a distinção: o campo dele diz que "a diferença é o que separa a desmobilização do repertório da punição de seus agentes". **O projeto tinha a distinção, e PT-62 a estava reafirmando sem ver.**
+
 ### 9.6 A quinta cobrança — a atribuição dos quatro testes ✅ EXECUTADA
 
 **Agora com o arquivo na mão.** Collier (2011) entrou no corpus em 08/10/2026 (p. 823-830; impressa = PDF + 822), e a nota da tabela 1 diz que os testes são **"adapted from Bennett (2010, 210), who builds on categories formulated by Van Evera (1997, 31-32)"**. Cunha e Araújo (2018, p. 92) atribuem a uma lista: "Bennett, 2008; Collier, 2011; Mahoney, 2012; Beach; Pedersen, 2013; Bennett; Checkel, 2015". O projeto atribui a **Beach e Pedersen (2019)**, em `01_PROJETO-PESQUISA_v1-compacto.md` §3.2.

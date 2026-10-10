@@ -4,7 +4,7 @@
 
 O pesquisador especificou o recorte: **o bolsonarismo enquanto fenômeno de mobilização social e política**, com foco nas dinâmicas de mobilização, manifestação e protesto, e em particular nas **formas de repertório específicas do campo das direitas**. Este documento registra a coleta feita sob esse recorte.
 
-> **ATUALIZADO EM 04/10/2026, ao fim do mesmo dia: o eixo passou de catorze a DEZOITO peças, e a declaração de abertura deixou de valer para todas.** **TRÊS** foram lidas na fonte, por encaminhamento do pesquisador, e **ancoram registro com página**: `ARAUJO E SALES 2022`, `FERNANDES E SILVA 2021` e `VON BÜLOW E ABERS 2024` — esta na quarta rodada, e foi ela que **fechou PT-06**, o último contextual da camada brasileira. Quatro entraram porque o pesquisador **entregou as peças barradas**, e uma dessas quatro é justamente a que fechou PT-06. **As quinze restantes continuam coletadas e não lidas.**
+> **ATUALIZADO EM 04/10/2026, ao fim do mesmo dia: o eixo passou de catorze a DEZOITO peças, e a declaração de abertura deixou de valer para todas.** **TRÊS** foram lidas na fonte, por encaminhamento do pesquisador, e **ancoram registro com página**: `ARAUJO E SALES 2022`, `FERNANDES E SILVA 2021` e `VON BÜLOW E ABERS 2024` — esta na quarta rodada, e foi ela que **fechou PT-06**, o último contextual da camada brasileira. Quatro entraram porque o pesquisador **entregou as peças barradas**, e uma dessas quatro é justamente a que fechou PT-06. ~~**As quinze restantes continuam coletadas e não lidas.**~~ **AS QUINZE FORAM LIDAS EM 09-10/10/2026**, por sua ordem. O saldo está na §8, e é modesto de propósito: **cinco produziram conteúdo para o codebook e dez não.**
 >
 > **A DECLARAÇÃO, AGORA COM A DISTINÇÃO QUE ELA PRECISA: das dezoito peças, três foram lidas e ancoram registro; quinze não foram lidas e não ancoram nada.** As quinze estão em `Fontes/13_Bolsonarismo-mobilizacao/` como **fila de leitura**, com proveniência declarada em `PROCEDENCIA` — que é o que `verificar_integridade.py` exige de todo arquivo que não ancora registro. Um arquivo dentro de `Fontes/` parece lastro, e estas quinze não são: quem for ancorar registro em qualquer uma delas precisa abrir, ler e pôr página, como se fez com as sete peças do eixo 12 e com as duas lidas aqui. **`PROCEDENCIA` declara o eixo 13 em três blocos de ORIGEM — doze coletadas, duas lidas que ancoram, quatro entregues — justamente para que a distinção não dependa deste documento. E note-se que origem e leitura são eixos independentes: a terceira peça lida vem do bloco das ENTREGUES, de modo que a contagem de lidas (três) não bate com nenhum bloco isolado.**
 
@@ -114,3 +114,59 @@ O que a coleta mostrou: três das quatro são de editora comercial grande, e as 
 6. **NOVO — três das dezoito peças são de editora comercial grande**, e entraram porque você as entregou. Duas declaram licença Creative Commons na própria peça; a terceira não traz declaração visível no PDF. **Se o repositório ganhar remoto público (tarefa 15), isso precisa ser decidido antes, não depois** — é o mesmo ponto que `ALONSO 2023` abriu no eixo 12.
 7. **Gohn (2019) pode servir à tarefa 10, e não só à 25.** É levantamento de cinco décadas de estudos brasileiros de protesto, com o quinto ciclo definido como "pós junho de 2013". É a única peça do corpus que faz o **balanço da própria literatura brasileira** — exatamente a lacuna que a tarefa 10 registra como "as sínteses têm zero referências sobre o Brasil". Se ela conta como fechamento parcial da 10, é decisão sua.
 8. **NOVO — duas plataformas continuam nomeadas no codebook sem verificação.** O `mecanismo_causal` de PT-06 nomeia Telegram e WhatsApp. Von Bülow e Abers as nomeiam também, mas **por citação de segunda mão** — as 802 mensagens de WhatsApp são de Soares et al. (2021) e as 867 de Telegram são de Nascimento et al. (2020), nenhum dos dois no corpus. A regra deste projeto proíbe lastrear cifra conferida apenas contra outra citação dela, e por isso as duas estão **declaradas como não verificadas** no status do registro. **Se quiser âncora de primeira mão para as plataformas, as peças a ler são Chagas e Carreiro (2022) e Mendonça e Freitas (2022)**, já no corpus. Caso contrário, a saída honesta é tirar as duas do campo.
+
+---
+
+## 8. As quinze lidas — 09-10/10/2026
+
+**Encaminhamento:** *"Leia as 15 peças não lidas do eixo 13."*
+
+> **UMA CORREÇÃO DE CONTAGEM ANTES DO SALDO.** A lista de quinze que eu montei incluía **Fernandes e Silva (2021)**, que **já estava lida e ancorando PT-02** desde 04/10, e deixava de fora **Gohn (2019)**, lida em parte em 08/10 para o mapa bibliográfico. Lidas nesta rodada: **catorze**; a décima quinta é Gohn, cujo estado não mudou.
+
+### 8.1 O saldo
+
+| Peça | Produziu | O quê |
+|:--|:--:|:--|
+| **CESARINO 2022** | ✅ | **Ancora PT-06** e fecha **duas** pendências: a declaração de que o registro a citava sem tê-la lido, aberta desde agosto, e a nomeação de Telegram e WhatsApp sem verificação, item de decisão desde 08/10 |
+| **NUNES 2024** | ✅ | **Ancora PT-12A** — primeira corroboração de literatura da arquitetura de duas camadas. E oferece mecanismo **rival** ao de PT-29 |
+| **CARVALHO E TATAGIBA 2025** | ✅ | **Ancora PT-62** e **qualifica** o nome do mecanismo: os acampamentos foram desmobilizados em operações do exército, não por deslocamento endógeno |
+| **BASTOS E RECUERO 2023** | ✅ | **Um limite, não uma âncora** — e vale mais que uma âncora. Ver §8.2 |
+| **KAYSEL E BIANCHI 2025** | ✅ | Não ancora registro, e é a peça mais pertinente à **tarefa 19**: recusa "populismo" por ser amplo e normativo e propõe conceito espacial e relacional |
+| Cesarino 2019 · Messenberg 2017 · Rocha 2019 · Santos e Tanscheit 2019 · Mendonça e Domingues 2022 · Mendonça et al. 2023 · Chagas et al. 2022 · Farias et al. 2022 · Tatagiba 2018 | — | Lidas, não ancoram. O motivo de cada uma está em `PROCEDENCIA` |
+
+### 8.2 O achado que vale mais que uma âncora: Bastos e Recuero NÃO corrobora o Sri Lanka
+
+Eu quase registrei que corroborava. A peça afirma que a estratégia insurrecional foi *"ostensibly inspired by the coups in Sri Lanka and Thailand that similarly bypassed the press altogether"* (p. 4) — e seria a **segunda fonte** para a referência ao Sri Lanka de PT-19, hoje ancorada só na CPMI (p. 614).
+
+**Não é.** A frase está no parágrafo de **revisão de literatura** e é atribuída a **Keulenaar et al. (2023)**, que a própria peça qualifica como ***Unpublished report***. O estudo de Bastos e Recuero analisa as declarações de Bolsonaro na campanha e a penetração do *playbook* entre parlamentares; o Sri Lanka não é achado deles. **A mesma cadeia desqualifica** a divisão de plataformas que a mesma página afirma — coordenação via Telegram, difusão via Facebook e Instagram —, também de Keulenaar et al.
+
+> **Citar isso seria citar uma citação**, que é o que este projeto proibiu em 30/09. O limite está escrito em PT-19 e registrado em `EXCECOES`, para que a próxima leitura não o redescubra como se fosse âncora.
+
+### 8.3 Quem fechou a pendência do Telegram foi outra peça — e não a candidata
+
+A ficha de 04/10 apontava **Chagas e Carreiro (2022)** como candidata a dar âncora de primeira mão ao Telegram e ao WhatsApp de PT-06. **A leitura desmentiu:** o objeto são guerras de hashtag no **Twitter**, com **zero** ocorrências de Telegram e três de WhatsApp.
+
+Quem fechou foi **Cesarino (2022, p. 181 impressa)**, que descreve um *"ecossistema em camadas múltiplas – que hoje inclui desde grandes plataformas do mainstream como YouTube e Facebook até aplicativos de mensagens fechados como Telegram e WhatsApp"*. **A distinção dela é funcional** — plataforma aberta de massa contra aplicativo de mensagem fechado —, e é isso, não a lista de nomes, que o registro precisava.
+
+### 8.4 Uma armadilha de contagem de termo, agora com a palavra certa no conceito errado
+
+**Cesarino (2022) tem sete ocorrências de "limiar", e nenhuma serve a PT-29.** É *limiar transformacional*, da antiestrutura de Turner e da fórmula canônica de Lévi-Strauss. Sete ocorrências de uma palavra que é exatamente o nome do mecanismo sob cobrança, e referente inteiramente outro.
+
+> Irmã da 15ª ocorrência do modo de falha — lá a palavra **ausente** escondia a proposição presente (Castañeda e Jenks, "Brazil" uma vez); aqui a palavra **abundante** esconde a proposição ausente. **Contagem de termo não decide nem a favor nem contra: só o contexto decide.**
+
+### 8.5 Quatro padrões de paginação num só eixo, e quatro atribuições corrigidas
+
+**Offsets medidos** antes de qualquer citação: fólio de fascículo (Cesarino 2019 **+529**, Messenberg **+620**, Santos e Tanscheit **+149**, Chagas et al. **+41**, Cesarino 2022 **+161**, Gohn **+92**, Fernandes e Silva **+484**); numeração interna do artigo que **parece** fólio (Bastos e Recuero, Farias et al., Kaysel e Bianchi, Mendonça e Domingues); localizador eletrônico sem paginação impressa (Carvalho e Tatagiba, Nunes, Rocha, Mendonça et al.); e PDF da OpenEdition cuja numeração não é a do fascículo (Tatagiba).
+
+**E quatro atribuições caíram ao abrir os arquivos — em três, o rótulo errado era o nome que NÓS demos ao arquivo:**
+
+1. **Chagas e Carreiro são quatro autores:** Chagas, Carreiro, **Nina Santos e Guilherme Popolin**.
+2. **Mendonça e Freitas são quatro autores** — Mendonça, Freitas, **Aggio e Nina Fernandes dos Santos** — e o ano é **2023**, não 2022.
+3. **Mendonça e Domingues é 2022**, não 2021.
+4. **Tatagiba (2018) tem paginação impressa 112-135**, declarada na folha de rosto.
+
+### 8.6 A camada de texto cifrada de Tatagiba (2018), e é a mais perigosa do eixo
+
+O PDF **tem** camada de texto, e ela está **cifrada**. As letras saem deslocadas — e em **duas direções opostas no mesmo arquivo**: o corpo em **−3** (`(QWUHDVUXDV` = "ENTRE AS RUAS") e a folha de rosto em **+3** (`Irplqlmfb` = "Lusotopie"), porque são duas fontes embutidas com mapas CID→Unicode quebrados em sentidos contrários. Os acentuados seguem um terceiro mapa (`©`→`Ç`, `·`→`Õ`).
+
+> **Consequência prática: toda busca de termo devolve zero**, e quem não decifrar conclui "sem camada de texto". **A peça não pode ancorar transcrição:** decodificar por heurística produziria uma transcrição que não existe no original. O argumento foi lido pelo texto decifrado e é pertinente a PT-02 e PT-03, que já estão ancorados em peças legíveis. **Pedir cópia limpa ou OCR é item de decisão.**

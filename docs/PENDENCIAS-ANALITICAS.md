@@ -1823,3 +1823,60 @@ Medindo o offset das 15 peças não lidas (que é pré-requisito de qualquer cit
 ### 40.4 O que NÃO foi feito, por limite de uso
 
 Esta rodada parou aqui. Ficaram pendentes, **todas já encaminhadas por você**: a nota com a crítica de Gurza Lavalle ao marco teórico; a execução da tarefa 19 (características, relações e proposta de nomenclatura); a leitura das 15 peças do eixo 13, de que só se mediram os offsets; o resto da tarefa 10; e a recomendação sobre Madeira et al. (p. 254) para PT-05 ou para o arco judicial.
+
+---
+
+## 41. As quinze lidas, a tarefa 19 executada, e um ponto cego no conferidor — 🔶 09-10/10/2026
+
+### 41.1 Executado
+
+| | |
+|:--|:--|
+| **`Contextual` fora** | já em 40; aqui só a confirmação de que o ciclo passa com **4** valores previstos |
+| **Quinze peças do eixo 13 lidas** | cinco produziram conteúdo, dez não. Ler e não ancorar é resultado, e está dito peça por peça em `PROCEDENCIA` |
+| **Cinco registros ganharam conteúdo** | PT-06, PT-03C, PT-19 (um limite), PT-12A, PT-62. **Nenhum mudou de classe nem de nome de mecanismo** |
+| **Tarefa 19 executada** | características, relações e **proposta de nomenclatura com definição** para os quatro nomes em jogo, mais a cadeia de atribuição dos quatro testes — documento 09, §9 |
+| **Contagem reconciliada** | a agenda dizia sete cobranças; são **cinco**, e só **quatro** são nome de mecanismo |
+| **Nota de Gurza Lavalle** | entrou como **nota**, por sua decisão — documento 09, §8 |
+| **Resto da tarefa 10** | varredura sistemática do IBICT pelos dez autores do cânone: **nenhum está lá**. Ver 41.4 |
+| **Classes** | 61 / 21 / 1, inalteradas |
+
+### 41.2 O ponto cego do conferidor, achado por prova negativa
+
+A prova negativa das âncoras novas rodou contra linha de base **limpa** (`confirmados 69 | falhas 0`) e pegou **2 de 4** injeções:
+
+| Injeção | Resultado |
+|:--|:--:|
+| página de Cesarino trocada de 3 para 4 | **PEGOU** |
+| página de Madeira trocada de 267 para 268 | **PEGOU** |
+| transcrição de Nunes: "menor" → "maior" | **PASSOU** |
+| transcrição de Carvalho e Tatagiba: "três" → "dois" | **PASSOU** |
+
+A causa está em `casa()`: a função devolve sucesso assim que **uma janela de 90 (ou 60, ou 40) caracteres** confere, de propósito, porque hifenização e ligadura quebram o casamento literal. **A garantia real é "existe uma janela desta transcrição nesta página", não "a transcrição é fiel".** Editar a cauda de um trecho longo passa.
+
+**Medido antes de mexer:** dos fragmentos localizados, **176 casam por texto integral e 45 só por janela**. Exigir integral quebraria 45 âncoras legítimas — a tolerância é load-bearing.
+
+> **Então não se endureceu: tornou-se visível.** `conferir_paginas.py` passou a contar e imprimir os fragmentos que casam só por janela, com a prova negativa escrita ao lado. **45 de 221.** Silêncio virou aviso, que é o que se pode fazer quando a tolerância é necessária e o risco é real.
+
+### 41.3 Três defeitos meus nesta rodada
+
+1. **Guarda depois do efeito.** O `assert` da contagem esperada no script de recodificação estava **depois** do `write`: a contagem falhou, o JSON já havia sido gravado, e foi preciso restaurar do backup. **Guarda que dispara depois do efeito não é guarda, é aviso.** Corrigido no próprio script, com o motivo escrito.
+2. **A terceira cópia da mesma função.** A dobra de diacríticos foi corrigida em dois scripts em 08/10 e **o terceiro ficou para trás**: `qualpagina.py` devolveu zero para quatro buscas em ASCII. Lógica duplicada em três lugares, corrigida em dois.
+3. **Aspas curvas no nome do próprio mecanismo.** Em PT-62 escrevi o nome do mecanismo entre aspas curvas, e `transcricoes()` o promoveu a transcrição e foi procurá-lo no PDF de Carvalho e Tatagiba. É a armadilha que PT-08 expôs em 08/10, agora com o analista citando o próprio codebook. **Aspas curvas em `fonte_trecho` são reservadas ao que está na fonte.**
+
+### 41.4 O resto da tarefa 10 — o cânone não está no IBICT
+
+A primeira passagem da tarefa 10 usou o OpenAlex com autoria casada e devolveu zero. Esta usou a rota que **de fato entregou livro** em 08/10: a API REST do DSpace 7 no `deposita.ibict.br`, com os dez autores do cânone mais o volume da Perseu Abramo.
+
+**Resultado: nenhum dos dez está lá.** O que a busca devolve são os capítulos de *Giros à direita* — que já temos, e agora como volume inteiro — e itens não relacionados. A Fundação Perseu Abramo não oferece PDF de *Direita, volver!* na página do livro.
+
+> **UM ACHADO LATERAL, que é decisão sua e não executei.** A varredura trouxe `deposita/434`: **"Agentes do caos": 'guerra cultural', redes sociais e "novas direitas" no Brasil recente (2014-2018)**, acesso aberto, 3,1 MB. Interessa porque **PT-06 declara que a expressão "guerra cultural" permanece sem âncora**. Duas razões para não incorporar sem você: é **dissertação de mestrado** (Unioeste, 2023), e o corpus até hoje só admitiu artigo revisado por pares, livro de editora e fonte primária; e o recorte é **2014-2018**, enquanto PT-06 cobre **2020-2021** — o período não casa. **Padrão de evidência é decisão de pesquisa, não execução minha.**
+
+### 41.5 O que precisa de você
+
+1. **Os quatro nomes de mecanismo** — propostas com definição no documento 09, §9.2 a §9.5. Em PT-62 há **duas** saídas, porque a escolha é de critério, e recomendo a (a).
+2. **A atribuição dos quatro testes** — proposta de citar a cadeia Van Evera → Bennett → Collier, com Beach e Pedersen ficando para o *process tracing* e não para os testes (§9.6).
+3. **Tatagiba (2018)**: pedir cópia limpa ou OCR? Hoje a peça não pode ancorar transcrição.
+4. **A dissertação do `deposita/434`** entra no corpus? Ver 41.4.
+5. **Cesarino (2019) para PT-29?** O contágio no plano do deutero-aprendizado, não necessariamente consciente, dissolve a tensão interna com PT-19 — mas usar isso é parte da decisão de nome de §9.2.
+6. **Os 45 fragmentos que casam só por janela** continuam sendo o ponto cego. Fechá-lo exigiria revisar transcrição por transcrição; está declarado e contado, não resolvido.

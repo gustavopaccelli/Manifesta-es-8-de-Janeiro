@@ -119,3 +119,118 @@ Até aqui, toda divergência entre síntese e fonte tinha a síntese errada. Est
 2. **Não mudei a atribuição dos quatro testes** em `01_PROJETO-PESQUISA_v1-compacto.md`. Duas fontes divergem da redação atual, e a correção depende de qual genealogia você adota.
 3. **Não li Beach & Pedersen (2016) nem Waldner (2015) na fonte.** A saída (a) da seção 3 depende da primeira; o critério de grafo completo, da segunda. `Fontes/05_Bibliografia-teorica/` tem *Process-tracing methods*? **Não** — tem o manual da Enap e o guia de Ricks & Liu (2018). As duas obras de Beach e Pedersen continuam fora do corpus.
 4. **Não incorporei os outros verbetes pertinentes** que a indexação localizou e que a camada A ou o codebook mobilizam: *Demobilization* (Fillieule), *Repertoires of contention* (della Porta), *Policing protest* (della Porta & Reiter), *Diffusion and scale shift* (Soule), *Multiorganizational fields* (Klandermans), *Political opportunity* e *Discursive opportunity structure*. **São sete verbetes lidos-a-ler, todos agora acessíveis sem muro de editor**, e é o melhor retorno por hora de leitura que o corpus oferece.
+
+---
+
+## 8. NOTA — a crítica de Gurza Lavalle et al. ao marco teórico deste projeto
+
+*Entra como **nota**, por decisão do pesquisador em 09/10/2026. Não é revisão do marco e não altera registro: fica registrada aqui para que a redação não seja pega de surpresa por ela, e para que, se um parecerista a levantar, a resposta já exista.*
+
+Gurza Lavalle, Carlos, Dowbor e Szwako (2018), lido em 08/10/2026, sustenta que as ênfases teórico-analíticas das teorias de movimentos sociais produzidas nos Estados Unidos **"não permitem descrever e explicar os processos de institucionalização que permeiam as interações dos movimentos sociais com o Estado para além da desmobilização e da cooptação"** (p. 38 impressa). A razão que dão é dupla: essas abordagens pressupõem "uma separação entre movimentos e a política institucionalizada" e operam com categorias "estanques, como entidades autônomas e dicotômicas (*outsider* vs *insider*, *challenger* vs *authority*)".
+
+**Os autores que eles nomeiam são Tarrow (1997), McAdam, Tarrow e Tilly (2001) e Tilly e Tarrow (2007)** — isto é, o marco teórico declarado deste projeto. E acrescentam que as mudanças de um movimento — "continuidade, desmobilização, cooptação ou transformação em outro formato de ação coletiva" — são **"possibilidades e não fatalidades"** (p. 41 impressa).
+
+### 8.1 Por que a nota não exige mudar nada
+
+Três razões, e vale tê-las escritas:
+
+1. **A crítica é sobre institucionalização, e este projeto não codifica institucionalização.** O objeto é um episódio de confronto que termina em invasão, não a entrada de um movimento no aparato estatal. O defeito que os autores apontam — a dicotomia que impede ver o movimento dentro do Estado — não incide sobre a cadeia que o codebook reconstrói.
+2. **Onde o projeto se aproxima do tema, ele já não comete o erro apontado.** PT-04 afirma conversão de ativismo de rua em governo e PT-12A descreve mediadores concentrando recursos; nenhum dos dois trata movimento e instituição como mundos separados.
+3. **E os próprios autores autorizam a extensão.** Abrem a abordagem a governos "de cunho regressivo, como o que seguiu ao *impeachment* da presidente Dilma Rousseff", com a ressalva de que aí "as configurações mudam conforme a coalizão governante, cedendo passo a outros atores e outros encaixes" (p. 28 impressa).
+
+> **O que a nota preserva é o limite, não a objeção:** quando a redação escrever que um repertório foi apropriado ou que uma base foi desmobilizada, não pode tratar isso como desfecho necessário. É possibilidade, e a fonte do próprio vocabulário diz que é.
+
+---
+
+## 9. TAREFA 19 — as cinco cobranças, e o que proponho para cada nome
+
+*Executada em 09-10/10/2026, por encaminhamento do pesquisador: "Execute a tarefa 19. Liste para mim as características do que você codificou e as relações estabelecidas para que eu possa decidir o tipo de nomenclatura. Sugira a nomenclatura e a definição."*
+
+**Nada foi renomeado.** O que segue é a matéria da decisão: o que cada registro de fato codifica, que relação de fato estabelece, por que o nome atual não fecha, e uma proposta com definição.
+
+### 9.1 A contagem, reconciliada — são CINCO, não sete
+
+A agenda dizia sete. A §4 deste documento tem **oito linhas de tabela**, e **duas não são cobranças**: a de PT-13/PT-06B/PT-50 diz "Passam" e a de PT-28 diz "Correto". A contagem foi tomada do número de *linhas* e depois decrementada a cada saída.
+
+| | |
+|:--|--:|
+| Linhas da §4 | 8 |
+| − linhas que registram aprovação | −2 |
+| = cobranças | **6** |
+| − PT-03, renomeado em 04/10 | −1 |
+| PT-01 e PT-02 entraram pela tarefa 14 e **saíram** | ±0 |
+| **Abertas hoje** | **5** |
+
+E das cinco, **uma não é nome de mecanismo**: a atribuição dos quatro testes é questão bibliográfica. **Nomes de mecanismo em jogo: quatro.**
+
+### 9.2 PT-29 — "Transposição do limiar"
+
+| | |
+|:--|:--|
+| **O que codifica** | 08/01/2023, 15h00. Manifestantes radicalizados sobem a rampa e invadem o Congresso. É a **primeira** invasão bem-sucedida das três |
+| **Relação estabelecida** | sequência (Congresso primeiro; Planalto e STF em seguida) + a primeira invasão como **sinal de viabilidade** |
+| **Por que o nome não fecha** | o modelo de limiar de Granovetter pressupõe ação que **não** vem "from coordination and planning" — e PT-19 afirma coordenação, por criptolinguagem. A tensão é **interna ao codebook**, não entre codebook e fonte |
+| **O que a leitura acrescentou** | Cesarino (2019, p. 530-557) descreve contágio por **replicação espontânea** de usuários comuns, no plano do deutero-aprendizado de Bateson, e explicitamente **não necessariamente consciente para os atores**. Isso **dissolve** a tensão: coordenação na convocação e contágio não deliberado na execução são **níveis distintos**, não afirmações rivais. Nunes (2024, p. 14) oferece um mecanismo **rival**: os agitadores obrigados a dar "válvula de escape à pressão acumulada, sob pena de perder prestígio junto a sua base" — obrigação reputacional, não limiar |
+
+> **PROPOSTA: "Demonstração de viabilidade".**
+> *Definição:* a primeira transposição bem-sucedida converte uma ação de desfecho incerto em ação demonstradamente possível, e com isso reduz o custo percebido da imitação para atores **já reunidos e já convocados** — sem exigir que os imitadores partilhem plano com os primeiros.
+>
+> **Por que é melhor:** guarda o que a evidência mostra (a sequência e o sinal), descarta o que a evidência não mostra (limiares individuais e sua distribuição, que o codebook nunca mediu) e é **compatível com a coordenação a montante** que PT-19 afirma. Alternativa, se você preferir manter o vocabulário do contágio: **"Contágio por demonstração"**, que tem a vantagem de casar com Cesarino e a desvantagem de reintroduzir "contágio", termo que carrega o modelo de limiar na literatura.
+
+### 9.3 PT-34 — "Massa crítica atingida no ponto de máxima densidade simbólica"
+
+| | |
+|:--|:--|
+| **O que codifica** | 15h26. Ocupação da Praça dos Três Poderes. Multidão da ordem de poucos milhares, **sem estimativa oficial para este horário e local** |
+| **Relação estabelecida** | magnitude apoiada em **duas medições oficiais independentes da manhã** (transporte e contagem policial), mais o achado de que a SSP/DF tinha estimativa às 9h e o Congresso estava com 20 policiais às 14h45 |
+| **Por que o nome não fecha** | em Marwell e Oliver a massa crítica são os **organizadores**, não a multidão; Oliver classifica o uso para o "initial group of protesters" como **metafórico e frouxo**. E a varredura das quinze peças do eixo 13 devolveu **zero** ocorrências de "massa crítica" — não há literatura no corpus que sustente o termo para este caso |
+
+> **PROPOSTA: "Concentração simultânea no conjunto simbólico".**
+> *Definição:* por serem contíguas as três sedes, uma única concentração alcança os três alvos sem redeslocamento — de modo que o conjunto simbólico se torna atingível por **uma** concentração, e não por três operações sucessivas.
+>
+> **Por que é melhor:** o que o registro de fato sustenta é **contiguidade e simultaneidade**, não um limiar de massa. O nome atual afirma uma quantidade-limite que o codebook não mediu e que a fonte do conceito diz não se aplicar. A proposta usa a geografia — que é dado primário — em lugar de uma grandeza inferida.
+
+### 9.4 PT-12A — "Mobilização de recursos em rede distribuída com nós centralizadores"
+
+| | |
+|:--|:--|
+| **O que codifica** | nov/2022-jan/2023. Sustentação material dos acampamentos: Pix, vaquinhas, doações de empresas, bens *in natura*. A conta da USA Brasil Informática recebe de várias unidades da federação e **redistribui** a fornecedores em Brasília |
+| **Relação estabelecida** | **duas camadas**: captação pulverizada sem comando único (a inteligência da PCDF registra que "não foi identificada uma coordenação que envolvesse todos os manifestantes") e execução concentrada em *hubs* |
+| **Por que o nome não fecha** | "mobilização de recursos em rede distribuída" não **tipifica**. Edwards e Gillham (2013) oferecem o vocabulário: a conta que recebe de muitas unidades é **agregação**; o empresariado que financia é **patrocínio**; o uso de estrutura preexistente é **cooptação/apropriação**. O nome atual não escolhe |
+| **O que a leitura acrescentou** | Nunes (2024, p. 11 e 13) descreve as ecologias da extrema direita como "um edifício de várias camadas em que cada camada descendente preside sobre um público menor", compara a estrutura à do marketing multinível e **liga explicitamente essa estrutura ao 8 de janeiro**. É a **primeira corroboração de literatura** que este registro tem, e vem de material inteiramente outro |
+
+> **PROPOSTA: "Agregação na base e intermediação concentrada".**
+> *Definição:* recursos são reunidos de muitas unidades sem vínculo entre si e sem comando central — **agregação** —, e convertidos em suprimento por um número pequeno de nós que concentram e redistribuem — **intermediação**. Dispersão na captação e concentração na execução não se contradizem porque operam em camadas distintas.
+>
+> **Por que é melhor:** tipifica nos termos da própria literatura que o projeto adota, e nomeia a arquitetura em vez de descrevê-la. **Não é patrocínio** (o nó não financia: redistribui) **nem cooptação** (nenhuma organização preexistente foi capturada) — e dizer isso é parte do ganho.
+
+### 9.5 PT-62 — "Desarticulação do repertório de rua com deslocamento (não extinção)"
+
+| | |
+|:--|:--|
+| **O que codifica** | 2023-2026. Desmobilização das redes de rua e migração para arenas eleitorais e digitais. Classe: **Inferência do analista** |
+| **Relação estabelecida** | cessação do repertório de rua **sem** cessação da contestação |
+| **Por que o nome não fecha** | no critério de Tarrow isto é **processo**, não mecanismo: contém uma sequência de mecanismos |
+| **O que a leitura acrescentou, e muda o diagnóstico** | Carvalho e Tatagiba (2025, p. 35) registram que os acampamentos perderam volume **até serem desmobilizados em operações do exército**, com centenas de prisões. O nome atual sugere movimento **endógeno**; o que se documenta é **desmobilização por operação estatal**. Deslocamento e desmobilização forçada não são o mesmo mecanismo |
+
+> **PROPOSTA, e aqui são duas saídas, porque a escolha é de critério:**
+>
+> **(a) Partir o nome em seus dois mecanismos** — *"Desmobilização por repressão seletiva"* + *"Migração de arena"*. *Definição do primeiro:* o repertório de rua cessa por ação do Estado (desocupação dos acampamentos e persecução penal), não por exaustão do ator. *Definição do segundo:* a contestação persiste deslocando-se para arenas em que o custo de repressão é menor. **Vantagem:** satisfaz o critério de Tarrow e diz o que a fonte documenta. **Custo:** um registro vira dois, ou o campo passa a conter dois nomes.
+>
+> **(b) Declarar que é processo e manter** — o campo se chama `mecanismo_causal`, e admitir processos nele exige dizê-lo no esquema. **Vantagem:** nenhum registro se parte. **Custo:** o campo passa a abrigar duas coisas de tipo diferente, que é precisamente a objeção que Mayntz faria.
+>
+> **Recomendo (a)**, porque a entrada de Carvalho e Tatagiba tornou o problema empírico e não só terminológico: *deslocamento* afirma agência do ator onde a fonte mostra operação do Estado.
+
+### 9.6 A quinta cobrança — a atribuição dos quatro testes
+
+**Agora com o arquivo na mão.** Collier (2011) entrou no corpus em 08/10/2026 (p. 823-830; impressa = PDF + 822), e a nota da tabela 1 diz que os testes são **"adapted from Bennett (2010, 210), who builds on categories formulated by Van Evera (1997, 31-32)"**. Cunha e Araújo (2018, p. 92) atribuem a uma lista: "Bennett, 2008; Collier, 2011; Mahoney, 2012; Beach; Pedersen, 2013; Bennett; Checkel, 2015". O projeto atribui a **Beach e Pedersen (2019)**, em `01_PROJETO-PESQUISA_v1-compacto.md` §3.2.
+
+> **PROPOSTA: citar a cadeia, e na ordem em que ela é.** As categorias são de **Van Evera (1997)**; a formulação em quatro testes é de **Bennett (2010)**; e a apresentação que **este projeto efetivamente usa** — inclusive o nome *hoop test*, que PT-28 emprega — é a de **Collier (2011)**. Beach e Pedersen permanecem como referência do *process tracing*, não dos testes.
+>
+> **Por que importa:** o projeto usa um nome (*hoop test*) que vem de uma tabela específica, e atribui a tabela a outro autor. É a forma bibliográfica do modo de falha da casa — o dado certo no referente errado.
+
+### 9.7 Uma peça da leitura que é modelo para esta decisão
+
+**Kaysel e Bianchi (2025)**, lida em 09/10, não ancora registro nenhum e é a mais pertinente a esta tarefa: eles **recusam "populismo"** como caracterização do bolsonarismo por o conceito ser "excessivamente amplo e normativo", e propõem tratar a extrema direita como conceito **espacial e relacional**, pelo método da formação conceitual.
+
+> É o mesmo movimento que as quatro propostas acima fazem: **trocar um nome que afirma mais do que se mediu por um nome que diz a relação observada.** Se você quiser um critério geral para decidir os quatro, é este — e tem precedente na própria literatura do corpus.

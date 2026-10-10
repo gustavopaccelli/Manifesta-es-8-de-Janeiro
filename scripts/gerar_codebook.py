@@ -596,6 +596,176 @@ for _arq, _ref, _desloc, _serve in [
     PROCEDENCIA["Fontes/13_Bolsonarismo-mobilizacao/" + _arq] = (
         _ENTREGA25, "literatura", "{} | {} | SERVE A: {}".format(_ref, _desloc, _serve))
 
+# ============================================================================
+# EIXO 13 LIDO — 09-10/10/2026, por ordem do pesquisador ("Leia as 15 peças não
+# lidas do eixo 13"). As atribuições abaixo SOBRESCREVEM as fichas de 04/10 que
+# diziam COLETADA, NÃO LIDA, porque deixaram de ser verdade.
+#
+# O SALDO, e ele é modesto de propósito: das quinze, **cinco produziram conteúdo
+# para o codebook** e dez não. Ler e não lançar âncora é resultado legítimo, e
+# dizer isso peça por peça é o que impede que "está no corpus" seja confundido
+# com "sustenta o registro".
+#
+# OFFSET DE CADA UMA, medido antes de qualquer citação — e **quatro padrões
+# distintos num só eixo**: fólio de fascículo (Cesarino 2019 +529, Messenberg
+# +620, Santos e Tanscheit +149, Chagas et al. +41, Cesarino 2022 +161);
+# numeração interna do artigo, que PARECE fólio (Bastos e Recuero, Farias et al.,
+# Kaysel e Bianchi, Mendonça e Domingues); localizador eletrônico sem paginação
+# impressa (Carvalho e Tatagiba, Nunes, Rocha, Mendonça et al.); e PDF gerado
+# pela OpenEdition, cuja numeração própria não é a do fascículo (Tatagiba 2018).
+#
+# QUATRO CORREÇÕES DE ATRIBUIÇÃO que só apareceram ao abrir os arquivos, e em
+# três delas o rótulo errado estava no nome que NÓS demos ao arquivo:
+#  1. CHAGAS E CARREIRO são **quatro** autores: Viktor Chagas, Rodrigo Carreiro,
+#     Nina Santos e Guilherme Popolin.
+#  2. MENDONÇA E FREITAS são **quatro** autores — Ricardo Fabrino Mendonça,
+#     Viviane Gonçalves Freitas, Camilo de Oliveira Aggio e Nina Fernandes dos
+#     Santos — e o ano é **2023**, não 2022: o cabeçalho corrente traz "DADOS,
+#     vol.66 (2): e20200213, 2023".
+#  3. MENDONÇA E DOMINGUES é de **2022**, não 2021: o cabeçalho traz "Nº 37-2022"
+#     e o DOI é 10.1590/0103-3352.2022.37.246424.
+#  4. TATAGIBA (2018) tem paginação impressa **112-135** em Lusotopie XVII(1), o
+#     que a folha de rosto declara — e o PDF tem 20 páginas com numeração própria.
+#
+# UMA FALHA DE EXTRAÇÃO QUE NÃO É AUSÊNCIA DE TEXTO, e é a mais perigosa do eixo:
+# o PDF de TATAGIBA (2018) tem camada de texto **CIFRADA**. As letras saem
+# deslocadas, e em DUAS DIREÇÕES OPOSTAS no mesmo arquivo: o corpo do texto sai
+# em -3 ("(QWUHDVUXDV" = "ENTRE AS RUAS") e a folha de rosto em +3
+# ("Irplqlmfb" = "Lusotopie"), porque são duas fontes embutidas com mapas
+# CID->Unicode quebrados em sentidos contrários. Consequência prática: **toda
+# busca de termo devolve zero**, e quem não decifrar conclui "sem camada de
+# texto". Os acentuados seguem um terceiro mapa (© -> Ç, · -> Õ). **A PEÇA NÃO
+# PODE ANCORAR TRANSCRIÇÃO:** decodificar por heurística produziria uma
+# transcrição que não existe no original. Precisa de cópia limpa ou de OCR.
+_LIDO13 = ("Coleta da tarefa 25 (04/10/2026) via OpenAlex. **LIDA EM 09-10/10/2026**, "
+           "por ordem do pesquisador. O que a leitura produziu está dito abaixo, "
+           "peça por peça")
+for _arq, _desloc, _leitura in [
+    # ---- as cinco que produziram conteudo para o codebook --------------------
+    ("CESARINO_Bolsonarismo-sem-Bolsonaro-publicos-antiestruturais_Revista-do-IEB-82_2022.pdf",
+     "PÁGINA IMPRESSA = PDF + 161 (PDF p. 1 = impressa 162), MEDIDO; o artigo declara "
+     "p. 162-188",
+     "**ANCORA PT-06, e fecha duas pendências de uma vez.** (a) O registro declarava "
+     "desde agosto que citava esta peça SEM TÊ-LA LIDO; a declaração caiu. (b) A peça "
+     "corrobora o mecanismo retificado em 04/10, de literatura independente: o "
+     "bolsonarismo se define menos por conteúdo que por mobilização performativa "
+     "contínua orientada por métricas em tempo real (p. 164 impressa). (c) E tira "
+     "Telegram e WhatsApp da condição de nomes sem verificação, com a distinção "
+     "FUNCIONAL entre plataforma aberta de massa e aplicativo de mensagem fechado "
+     "(p. 181 impressa). ARMADILHA DECLARADA: a peça tem SETE ocorrências de “limiar” "
+     "e NENHUMA serve a PT-29 — é limiar transformacional, da antiestrutura de Turner, "
+     "não o modelo de limiar de Granovetter"),
+    ("NUNES_A-palavra-e-a-coisa-bolsonarismo-como-infraestrutura_Lua-Nova-122_2024.pdf",
+     "SEM PAGINAÇÃO IMPRESSA DE FASCÍCULO: Lua Nova usa localizador eletrônico "
+     "(e122020rn) e o artigo numera 1 a 20. Impressa = PDF",
+     "**ANCORA PT-12A**, e é a primeira corroboração de literatura que aquele registro "
+     "tem: a arquitetura de duas camadas era achado sobre os dados do COAF, sem "
+     "literatura que a nomeasse. Nunes descreve as ecologias da extrema direita como "
+     "edifício de várias camadas em que cada camada descendente preside sobre um "
+     "público menor (p. 11), compara a estrutura à do marketing multinível, e liga "
+     "explicitamente essa estrutura ao 8 de janeiro (p. 13). **E oferece um mecanismo "
+     "RIVAL ao de PT-29**: os agitadores obrigados a dar válvula de escape à pressão "
+     "acumulada sob pena de perder prestígio (p. 14) — que é obrigação reputacional, "
+     "não transposição de limiar. LIMITE: não analisa o financiamento nem cita o COAF"),
+    ("CARVALHO-TATAGIBA_Quando-o-conflito-eleitoral-extravasa-para-as-ruas_Lua-Nova-124_2025.pdf",
+     "SEM PAGINAÇÃO IMPRESSA DE FASCÍCULO: localizador eletrônico (e124046pd), "
+     "numeração própria 1 a 46. Impressa = PDF",
+     "**ANCORA PT-62**, e QUALIFICA o nome do mecanismo: o acampamento de Brasília foi "
+     "a base da manifestação que terminou na invasão, e depois os acampamentos "
+     "perderam volume até serem desmobilizados em operações do exército (p. 35) — com "
+     "a palavra desmobilizados entre aspas, que é ressalva das autoras. Deslocamento "
+     "endógeno e desmobilização por operação estatal não são o mesmo mecanismo. É "
+     "também a peça mais próxima do argumento geral do projeto: protestos não apenas "
+     "sinalizam eleições contestadas, eles ajudam a produzi-las (resumo, p. 45)"),
+    ("BASTOS-RECUERO_The-insurrectionist-playbook_Social-Media-and-Society-out-dez_2023.pdf",
+     "NUMERAÇÃO INTERNA DO ARTIGO, 1 a 16, que parece fólio e não é: a SAGE pagina "
+     "por artigo. Impressa = PDF",
+     "**NÃO ANCORA, e o motivo é o achado.** A peça parecia corroborar a referência ao "
+     "Sri Lanka de PT-19 com literatura revisada por pares, e NÃO corrobora: a frase "
+     "“ostensibly inspired by the coups in Sri Lanka and Thailand” (p. 4) está no "
+     "parágrafo de revisão e é atribuída a Keulenaar et al. (2023), que a própria peça "
+     "qualifica como relatório NÃO PUBLICADO. A mesma cadeia desqualifica a divisão de "
+     "plataformas que a mesma página afirma. **Citar isso seria citar uma citação.** O "
+     "limite está escrito em PT-19. O que é dos autores — os enquadramentos do "
+     "playbook a partir das declarações de Bolsonaro e a penetração entre "
+     "parlamentares — não foi usado por nenhum registro ainda"),
+    ("MADEIRA-MARONA-DEL-RIO_Democracia-e-justica-na-America-Latina_EdUERJ_2022.pdf",
+     "PÁGINA IMPRESSA = PDF − 2 (ver o bloco do eixo 14)",
+     "**ANCORA PT-03C** — não é peça do eixo 13, está aqui só como remissão. Ver o "
+     "bloco do eixo 14 e a nota de PT-03C: é a primeira literatura a interpretar o "
+     "arco judicial, que até 09/10 se apoiava só em acórdãos"),
+    # ---- as dez que foram lidas e nao produziram ancora ----------------------
+    ("CESARINO_Identidade-e-representacao-no-bolsonarismo_Revista-de-Antropologia-62-3_2019.pdf",
+     "PÁGINA IMPRESSA = PDF + 529 (PDF p. 1 = impressa 530), MEDIDO; p. 530-557",
+     "LIDA, NÃO ANCORA. É a obra que PT-04 citava sem ter, e a leitura mostra por que "
+     "não fecha o registro: o argumento é sobre identidade e representação — corpo "
+     "digital do rei, bivalência conservadorismo-neoliberalismo, pessoa fractal —, não "
+     "sobre a passagem do ciclo de protestos ao bolsonarismo, que é o que PT-04 "
+     "afirma. TEM MATERIAL PERTINENTE A OUTRO REGISTRO: 20 ocorrências de WhatsApp, e "
+     "a tese de que a eficácia da circulação veio da replicação espontânea por "
+     "usuários comuns, via contágio, no plano do deutero-aprendizado de Bateson e sem "
+     "ser necessariamente consciente para os atores. Isso toca PT-29, e é decisão do "
+     "pesquisador se entra"),
+    ("MESSENBERG_A-direita-que-saiu-do-armario_Sociedade-e-Estado-32-3_2017.pdf",
+     "PÁGINA IMPRESSA = PDF + 620 (PDF p. 1 = impressa 621), MEDIDO; p. 621-647",
+     "LIDA, NÃO ANCORA. Cosmovisão dos formadores de opinião dos manifestantes de "
+     "2015, por grupos focais e postagens — serve à caracterização do campo em PT-02, "
+     "que já está ancorada em Alonso (2023) e Kunrath Silva (2023)"),
+    ("ROCHA_Imposto-e-roubo-contrapublico-ultraliberal_Dados-62-3_2019.pdf",
+     "SEM PAGINAÇÃO IMPRESSA: Dados usa localizador eletrônico (e20190076) e o rodapé "
+     "traz contagem interna (3-42). Impressa = PDF",
+     "LIDA, NÃO ANCORA. Formação do contrapúblico ultraliberal em fóruns e comunidades "
+     "virtuais desde mais de dez anos antes de 2019 — converge com a datação do ator "
+     "que PT-02 já declara em nota, sem acrescentar página nova a campo nenhum"),
+    ("SANTOS-TANSCHEIT_Quando-velhos-atores-saem-de-cena-nova-direita_Colombia-Internacional-99_2019.pdf",
+     "PÁGINA IMPRESSA = PDF + 149 (PDF p. 2 = impressa 151), MEDIDO; declara p. 151-186",
+     "LIDA, NÃO ANCORA. Ascensão da nova direita política pela via partidária e "
+     "eleitoral; o codebook codifica mobilização de rua"),
+    ("MENDONCA-DOMINGUES_Protestos-contemporaneos-e-a-crise-da-democracia_RBCP-37_2021.pdf",
+     "NUMERAÇÃO INTERNA DO ARTIGO, 1 a 36. Impressa = PDF. **ANO CORRIGIDO: 2022**, "
+     "não 2021 — o cabeçalho traz Nº 37-2022 e o DOI 10.1590/0103-3352.2022.37.246424",
+     "LIDA, NÃO ANCORA. Relação entre protestos massivos e crise da democracia em "
+     "chave comparada; é moldura teórica, não evidência sobre o caso"),
+    ("MENDONCA-FREITAS_Fake-news-e-o-repertorio-contemporaneo-de-acao-politica_Dados-66-2_2022.pdf",
+     "SEM PAGINAÇÃO IMPRESSA: localizador eletrônico (e20200213). Impressa = PDF. "
+     "**ANO CORRIGIDO: 2023**, e são **QUATRO** autores — Mendonça, Freitas, Aggio e "
+     "Nina Fernandes dos Santos",
+     "LIDA, NÃO ANCORA. Lê as fake news pelas lentes do repertório do confronto "
+     "político, que é vocabulário do projeto, mas o objeto é a noção de fake news e "
+     "seus antídotos, não um elo da cadeia de 8 de janeiro"),
+    ("CHAGAS-CARREIRO_Far-right-digital-activism-in-polarized-contexts_Media-and-Communication-10-4_2022.pdf",
+     "PÁGINA IMPRESSA = PDF + 41 (PDF p. 2 = impressa 43), MEDIDO; p. 42-55. "
+     "**SÃO QUATRO AUTORES:** Chagas, Carreiro, Nina Santos e Guilherme Popolin",
+     "LIDA, NÃO ANCORA — e CONTRARIA a expectativa que a ficha de 04/10 criara. Era "
+     "candidata a dar âncora de primeira mão ao Telegram e ao WhatsApp de PT-06, e o "
+     "objeto é outro: guerras de hashtag no Twitter, com zero ocorrências de Telegram "
+     "e três de WhatsApp. Quem fechou a pendência foi Cesarino (2022)"),
+    ("KAYSEL-BIANCHI_Bolsonarismo-como-coalizao-discursiva-de-extrema-direita_Caderno-CRH-38_2025.pdf",
+     "NUMERAÇÃO INTERNA DO ARTIGO, 1 a 14. Impressa = PDF",
+     "LIDA, NÃO ANCORA REGISTRO, mas é a peça mais pertinente à TAREFA 19: recusa "
+     "“populismo” como caracterização do bolsonarismo por ser ampla e normativa, e "
+     "propõe extrema direita como conceito **espacial e relacional**. É argumento "
+     "sobre nome de conceito, que é exatamente o que a tarefa 19 decide"),
+    ("FARIAS-CASAROES-MAGALHAES_Radical-right-populism-and-the-politics-of-cruelty_Global-Studies-Quarterly-2_2022.pdf",
+     "NUMERAÇÃO INTERNA DO ARTIGO, 1 a 13 (art. ksab048). Impressa = PDF",
+     "LIDA, NÃO ANCORA. Modelo de duas dimensões da crueldade sob populismo de direita "
+     "radical, aplicado à Covid-19 — três tipos ideais: minimizar, culpar, conspirar. "
+     "Serve a PT-06 como caracterização do governo, não como elo causal"),
+    ("TATAGIBA_Entre-as-ruas-e-as-instituicoes-impeachment_Lusotopie-17-1_2018.pdf",
+     "PAGINAÇÃO IMPRESSA 112-135, declarada na folha de rosto; o PDF é gerado pela "
+     "OpenEdition e tem 20 páginas com numeração própria, de modo que **não há "
+     "correspondência utilizável entre PDF e fascículo**",
+     "LIDA PELO TEXTO DECIFRADO, E **NÃO PODE ANCORAR TRANSCRIÇÃO**. Ver a nota sobre "
+     "a camada de texto cifrada no alto deste bloco: letras deslocadas em duas "
+     "direções opostas no mesmo arquivo. O argumento — o nexo entre política "
+     "contestatória e institucional na abordagem do confronto político, e o êxito dos "
+     "protestos pelo impeachment atribuído à conformação laboriosa de uma base social "
+     "antipetista — é pertinente a PT-02 e PT-03, que já estão ancorados em peças "
+     "legíveis. **Pedir cópia limpa ou OCR é item de decisão**"),
+]:
+    PROCEDENCIA["Fontes/13_Bolsonarismo-mobilizacao/" + _arq] = (
+        _LIDO13, "literatura", "{} | {}".format(_desloc, _leitura))
+
 # Eixo 14 — literatura brasileira em LIVRO, coletada em 08/10/2026 pela tarefa 10.
 # A tarefa existe porque as sínteses do eixo bibliográfico têm ZERO referências
 # sobre o Brasil, e porque o que falta não tem DOI de artigo: tem ISBN.

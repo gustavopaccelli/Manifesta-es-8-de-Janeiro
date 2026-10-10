@@ -107,6 +107,22 @@ EXCECOES = {
     ("PT-01", "nao houve a conformacao de um frame capaz de conferir unidade"):
         "Tatagiba (2014, p. 40) — PDF p. 6, peça sem camada de texto, lida por "
         "renderização a 170 dpi",
+    # As duas exceções abaixo entraram em 09/10/2026 e são do MESMO tipo, que é o
+    # caso 4 da lista impressa ao fim deste arquivo: transcrição que está em
+    # `fonte_trecho` DE PROPÓSITO sem ser âncora do registro.
+    ("PT-03C", "o plenario do stf negou, por maioria dos votos, o habeas corpus"):
+        "nota do portal do STF (04/04/2018), que é a fonte_url do registro e não um "
+        "PDF com página; entrou antes de o registro ter fonte_pagina. O que PT-03C "
+        "ancora com página é a pressão militar sobre este julgamento, em Madeira et "
+        "al. (2022), p. 256 e 267 do PDF",
+    ("PT-19", "ostensibly inspired by the coups in sri lanka and thailand"):
+        "DELIBERADAMENTE NÃO É ÂNCORA. A frase é de Bastos e Recuero (2023, p. 4) e "
+        "está citada no registro para declarar que NÃO corrobora o Sri Lanka: os "
+        "autores a atribuem a Keulenaar et al. (2023), relatório não publicado. A "
+        "peça não está em fonte_local nem em fonte_pagina de PT-19, e é por isso que "
+        "o conferidor não a acha — o que está certo. Citar uma citação é o que o "
+        "projeto proibiu em 30/09, e a exceção existe para que a proibição fique "
+        "legível em vez de virar falha silenciosa",
 }
 
 
@@ -399,7 +415,7 @@ def main():
     print("CONFERÊNCIA PÁGINA x TRANSCRIÇÃO — {} registro(s), modo estrito".format(
         len(alvos_reg)))
     print("=" * 78)
-    ok = falha = indet = 0
+    ok = falha = indet = parciais_total = 0
     falhas, ociosas_total, excecoes_usadas = [], 0, 0
 
     aninhadas = {}
@@ -425,7 +441,7 @@ def main():
             indet += 1
             continue
 
-        achados, perdidas, usadas, fracas = [], [], set(), 0
+        achados, perdidas, usadas, fracas, parciais = [], [], set(), 0, 0
         for cit in cits:
             for frag in fragmentos(cit):
                 onde = localizar(frag, pp, docs)
@@ -434,6 +450,22 @@ def main():
                     usadas.add((onde[0], onde[1]))
                     if onde[2] <= 40:
                         fracas += 1
+                    # CASOU POR JANELA, MAS NAO POR TEXTO INTEGRAL — e isso precisa
+                    # aparecer. `casa()` devolve sucesso assim que UMA janela de 90
+                    # (ou 60, ou 40) caracteres confere, de proposito, porque
+                    # hifenizacao e ligadura quebram o casamento literal. O preco,
+                    # descoberto por prova negativa em 09/10/2026: **editar a cauda
+                    # de uma transcricao longa PASSA sem ser notado** — duas
+                    # injecoes de uma palavra trocada no fim (menor->maior,
+                    # tres->dois) nao foram pegas, enquanto as duas injecoes de
+                    # pagina errada foram. A garantia real e "existe uma janela
+                    # desta transcricao nesta pagina", nao "a transcricao e fiel".
+                    # Medido no mesmo dia: 176 fragmentos casam integral e 45 so
+                    # por janela, de modo que EXIGIR integral quebraria 45 ancoras
+                    # legitimas. Entao nao se endurece: torna-se visivel.
+                    _txt = texto_pagina(docs[onde[0]], onde[1]) or ""
+                    if norm_busca(frag) not in _txt:
+                        parciais += 1
                     continue
                 chave = next((k for k in EXCECOES
                               if k[0] == e["id"] and norm(frag).startswith(k[1])), None)
@@ -461,10 +493,13 @@ def main():
             falha += 1
         else:
             marca = "OK" if not fracas else "OK"
-            print("  {:<7} {} {}/{} localizadas · {}{}".format(
+            print("  {:<7} {} {}/{} localizadas · {}{}{}".format(
                 e["id"], marca, len(achados), total, onde_txt,
-                "  ({} por janela curta)".format(fracas) if fracas else ""))
+                "  ({} por janela curta)".format(fracas) if fracas else "",
+                "  ({} só por janela, texto integral não confere)".format(parciais)
+                if parciais else ""))
             ok += 1
+        parciais_total += parciais
 
         if verboso:
             for frag, (c, p, j) in achados:
@@ -476,6 +511,14 @@ def main():
 
     print("=" * 78)
     print("confirmados {} | falhas {} | indeterminados {}".format(ok, falha, indet))
+    if parciais_total:
+        print("{} fragmento(s) localizado(s) SO POR JANELA: a janela confere e o "
+              "texto integral nao.".format(parciais_total))
+        print("Não é falha: hifenização, ligadura e espaçamento quebram o casamento")
+        print("literal. Mas é o PONTO CEGO do conferidor — editar a cauda de uma")
+        print("transcrição longa passa por aqui sem ser notado. Prova negativa de")
+        print("09/10/2026: 2 de 4 injeções escaparam, e as duas eram troca de palavra")
+        print("no fim do trecho; as duas de página errada foram pegas.")
     if ociosas_total:
         print("{} página(s) listada(s) que nenhuma transcrição alcança. Não é falha: a "
               "página pode\nsustentar um fato que o registro não transcreve entre aspas. "

@@ -1880,3 +1880,53 @@ A primeira passagem da tarefa 10 usou o OpenAlex com autoria casada e devolveu z
 4. **A dissertação do `deposita/434`** entra no corpus? Ver 41.4.
 5. **Cesarino (2019) para PT-29?** O contágio no plano do deutero-aprendizado, não necessariamente consciente, dissolve a tensão interna com PT-19 — mas usar isso é parte da decisão de nome de §9.2.
 6. **Os 45 fragmentos que casam só por janela** continuam sendo o ponto cego. Fechá-lo exigiria revisar transcrição por transcrição; está declarado e contado, não resolvido.
+
+---
+
+## 42. Os quatro nomes de mecanismo, atribuídos — e a checagem nova achou nome morto de seis dias — 🔶 10/10/2026
+
+**Encaminhamento:** *"Aprovo as quatro propostas de nomenclatura, execute."*
+
+### 42.1 Os quatro nomes
+
+| Registro | Saiu | Entrou |
+|:--|:--|:--|
+| **PT-29** | transposição do limiar | **Demonstração de viabilidade** |
+| **PT-34** | massa crítica atingida no ponto de máxima densidade simbólica | **Concentração simultânea no conjunto simbólico** |
+| **PT-12A** | mobilização de recursos em rede distribuída com nós centralizadores | **Agregação na base e intermediação concentrada** |
+| **PT-62** | desarticulação do repertório de rua com deslocamento | **Desmobilização por repressão seletiva** + **Migração de arena** |
+
+A razão de cada troca está escrita **dentro do próprio `mecanismo_causal`**, não só no documento 09 — para que a redação não trate a mudança como cosmética. Nenhum campo além de `mecanismo_causal` e `nota_auditoria` mudou; nenhuma classe mudou; 83 sub-eventos; classes 61 / 21 / 1.
+
+### 42.2 Uma decisão de implementação, declarada
+
+A proposta (a) de PT-62 admitia **duas** formas: partir o registro em dois, ou o campo passar a nomear dois mecanismos. **Foi pela segunda.** Partir em dois mudaria a contagem de 83 sub-eventos — conferida pela integridade, pelas duas figuras e pela tabela do relatório —, e isso é mudança estrutural, enquanto o encaminhamento aprovou nomenclatura. **Se preferir dois registros, é uma linha de pedido.**
+
+### 42.3 O que a renomeação revelou, e é o resultado que vale
+
+Renomear tem um risco próprio: o JSON muda e os artefatos **mantidos à mão** ficam para trás. Quatro deles existem — as duas figuras interativas, o relatório de pesquisa e o caderno de evidências —, e **nenhum script os gera**: o ciclo os *confere*.
+
+Testei se a conferência pegava a divergência. Reinjetei o nome velho numa figura e no relatório, com linha de base limpa nos dois conferidores:
+
+| Artefato com nome velho | `conferir_figuras` / `conferir_relatorio` |
+|:--|:--:|
+| figura interativa | **PASSOU** |
+| relatório de pesquisa | **PASSOU** |
+
+> **Zero de duas.** O ciclo **não compara o texto do mecanismo** entre o JSON e os artefatos à mão. Uma renomeação podia deixar nome morto em qualquer um deles indefinidamente.
+
+### 42.4 A checagem 7, e o defeito real que ela achou na primeira execução
+
+`verificar_integridade.py` ganhou uma **sétima checagem**: um registro de **nomes de mecanismo retirados**, com a data, o registro e o nome que passou a valer, conferido contra os quatro artefatos mantidos à mão. Não tenta diferenciar prosa livre — exige apenas que **nenhum nome retirado reapareça**.
+
+**Na primeira execução ela falhou, e com razão:** encontrou **"Certificação de eficácia"** — retirado de **PT-03 em 04/10/2026**, quando você o trocou por *ressignificação do protesto* — ainda vivo nas **duas figuras** e no **relatório**. **Seis dias de nome morto em artefatos que o leitor vê**, e nenhuma checagem o acusava.
+
+Corrigido nos três. A prova negativa, reapontada para o script certo, agora dá **2 de 2**.
+
+> A lição não é sobre nomenclatura: **artefato mantido à mão que o ciclo só confere parcialmente envelhece em silêncio.** O registro de nomes retirados é barato e cresce sozinho a cada renomeação futura.
+
+### 42.5 O que resta da tarefa 19
+
+**Uma cobrança das cinco**, e não é nome de mecanismo: **a atribuição dos quatro testes**. A proposta está no documento 09, §9.6 — citar a cadeia **Van Evera (1997) → Bennett (2010) → Collier (2011)**, ficando Beach e Pedersen para o *process tracing* e não para os testes. Muda `01_PROJETO-PESQUISA_v1-compacto.md` §3.2, que é documento de projeto e não codebook. **Não foi executada: não estava entre as quatro propostas de nomenclatura.**
+
+E segue aberta a decisão sobre **Cesarino (2019) em PT-29** (item 41.5, ponto 5): o argumento dela dissolveria a tensão com PT-19 também no plano teórico, e lançá-la como âncora seria decidir o que está em aberto. O campo diz isso explicitamente.

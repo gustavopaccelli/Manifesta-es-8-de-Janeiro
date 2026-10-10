@@ -3,7 +3,7 @@
 """
 Verificação de integridade do aparato do process tracing.
 
-Roda seis checagens e devolve código de saída != 0 se qualquer uma falhar.
+Roda sete checagens e devolve código de saída != 0 se qualquer uma falhar.
 Pensada para ser executada depois de toda alteração no codebook — é o que
 garante que JSON, CSV e XLSX não voltem a divergir.
 
@@ -255,6 +255,51 @@ def main():
         else:
             print("  OK — bate com o inventário")
 
+    # ------------------------------------------------------------------ 7 ---
+    # Checagem criada em 10/10/2026, e a prova negativa que a motivou vale ser
+    # lida: ao renomear os quatro mecanismos da tarefa 19, reinjetei o nome VELHO
+    # numa figura e no relatório e rodei `conferir_figuras` e `conferir_relatorio`.
+    # **Zero de duas pegaram.** O ciclo não compara o texto do mecanismo entre o
+    # JSON e os artefatos mantidos à mão, de modo que uma renomeação podia deixar
+    # nome morto em qualquer um deles sem um aviso. Não se tenta diferenciar prosa
+    # livre: basta exigir que NENHUM nome retirado reapareça.
+    cabecalho(7, "NOMES DE MECANISMO RETIRADOS NÃO REAPARECEM")
+    ARTEFATOS = [
+        "reports/figures/cronologia_8jan_interativa.html",
+        "projeto-pos-doc/figuras/cronologia-interativa.html",
+        "reports/process_tracing_8jan_relatorio.md",
+        "Caderno-de-evidencias/caderno_CPMI_verbatim.md",
+    ]
+    # nome retirado -> (data, registro, nome que passou a valer)
+    RETIRADOS = {
+        "Transposição do limiar": ("10/10/2026", "PT-29", "Demonstração de viabilidade"),
+        "Massa crítica atingida": ("10/10/2026", "PT-34",
+                                   "Concentração simultânea no conjunto simbólico"),
+        "rede distribuída com nós centralizadores":
+            ("10/10/2026", "PT-12A", "Agregação na base e intermediação concentrada"),
+        "Desarticulação do repertório de rua":
+            ("10/10/2026", "PT-62", "Desmobilização por repressão seletiva"),
+        "Certificação de eficácia": ("04/10/2026", "PT-03", "Ressignificação do protesto"),
+    }
+    achou_morto = 0
+    for rel in ARTEFATOS:
+        cam = RAIZ / rel
+        if not cam.exists():
+            avisos.append("artefato ausente na checagem 7: {}".format(rel))
+            continue
+        txt = cam.read_text(encoding="utf-8")
+        for morto, (quando, pid, vivo) in RETIRADOS.items():
+            if morto in txt:
+                achou_morto += 1
+                falhas.append("nome retirado em {}: '{}' ({}, {} -> {})"
+                              .format(rel, morto, pid, quando, vivo))
+                print("    X {} traz '{}' — retirado em {} de {}, hoje é '{}'"
+                      .format(rel, morto, quando, pid, vivo))
+    print("  {} nome(s) retirado(s) vigiado(s) em {} artefato(s) mantido(s) à mão"
+          .format(len(RETIRADOS), len(ARTEFATOS)))
+    if not achou_morto:
+        print("  OK — nenhum nome retirado reapareceu")
+
     # --------------------------------------------------------------------- --
     print("\n" + "=" * 72)
     if falhas:
@@ -262,7 +307,7 @@ def main():
         for f in falhas:
             print("  X " + f)
     else:
-        print("RESULTADO: APROVADO — as seis checagens passaram")
+        print("RESULTADO: APROVADO — as sete checagens passaram")
     for a in avisos:
         print("  ~ aviso: " + a)
     print("=" * 72)

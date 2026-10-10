@@ -62,6 +62,8 @@ Regra do projeto: nada se afirma sem ter sido lido, e nada se cita contra outra 
 
 ## 4. O que a leitura cobra do codebook, registro por registro
 
+> **RESOLVIDO EM 10/10/2026, nas quatro linhas de nome de mecanismo.** O pesquisador aprovou as quatro propostas da §9 e elas estão no codebook: PT-29 → **demonstração de viabilidade**; PT-34 → **concentração simultânea no conjunto simbólico**; PT-12A → **agregação na base e intermediação concentrada**; PT-62 → **desmobilização por repressão seletiva** seguida de **migração de arena**. A tabela abaixo fica como está, porque é o registro do que se cobrava — e a razão de cada troca está escrita no próprio `mecanismo_causal` de cada registro. **Resta uma cobrança: a atribuição dos quatro testes** (última linha; proposta na §9.6, ainda sem decisão).
+
 | Registro | O que diz hoje | O que a fonte lida cobra |
 |:--|:--|:--|
 | **PT-03** | "Certificação de eficácia: a mobilização de rua é validada como via legítima" | *Certification* exige **autoridade externa** (DoC, p. 145). Aqui não há nenhuma: o que valida é o desfecho. Renomear, ou nomear a autoridade |
@@ -146,7 +148,11 @@ Três razões, e vale tê-las escritas:
 
 *Executada em 09-10/10/2026, por encaminhamento do pesquisador: "Execute a tarefa 19. Liste para mim as características do que você codificou e as relações estabelecidas para que eu possa decidir o tipo de nomenclatura. Sugira a nomenclatura e a definição."*
 
-**Nada foi renomeado.** O que segue é a matéria da decisão: o que cada registro de fato codifica, que relação de fato estabelece, por que o nome atual não fecha, e uma proposta com definição.
+~~**Nada foi renomeado.**~~ **AS QUATRO PROPOSTAS FORAM APROVADAS E EXECUTADAS EM 10/10/2026** — *"Aprovo as quatro propostas de nomenclatura, execute."* Os nomes novos estão no codebook, com a razão da troca escrita dentro de cada registro, e propagados aos quatro artefatos que o ciclo confere mas não gera: as duas figuras interativas, o relatório de pesquisa e o caderno de evidências.
+
+> **UMA DECISÃO DE IMPLEMENTAÇÃO, declarada.** A proposta (a) de PT-62 admitia duas formas: partir o registro em dois, ou o campo passar a nomear dois mecanismos. **Foi pela segunda.** Partir em dois mudaria a contagem de 83 sub-eventos, que é conferida pela integridade, pelas duas figuras e pela tabela do relatório — isso é mudança estrutural, e o encaminhamento aprovou nomenclatura. Se preferir dois registros, é uma linha de pedido.
+
+O que segue é a matéria da decisão, preservada como foi apresentada: o que cada registro de fato codifica, que relação de fato estabelece, por que o nome antigo não fechava, e a definição que passou a valer.
 
 ### 9.1 A contagem, reconciliada — são CINCO, não sete
 
@@ -163,7 +169,7 @@ A agenda dizia sete. A §4 deste documento tem **oito linhas de tabela**, e **du
 
 E das cinco, **uma não é nome de mecanismo**: a atribuição dos quatro testes é questão bibliográfica. **Nomes de mecanismo em jogo: quatro.**
 
-### 9.2 PT-29 — "Transposição do limiar"
+### 9.2 PT-29 — ~~"Transposição do limiar"~~ → **Demonstração de viabilidade** ✅
 
 | | |
 |:--|:--|
@@ -177,7 +183,7 @@ E das cinco, **uma não é nome de mecanismo**: a atribuição dos quatro testes
 >
 > **Por que é melhor:** guarda o que a evidência mostra (a sequência e o sinal), descarta o que a evidência não mostra (limiares individuais e sua distribuição, que o codebook nunca mediu) e é **compatível com a coordenação a montante** que PT-19 afirma. Alternativa, se você preferir manter o vocabulário do contágio: **"Contágio por demonstração"**, que tem a vantagem de casar com Cesarino e a desvantagem de reintroduzir "contágio", termo que carrega o modelo de limiar na literatura.
 
-### 9.3 PT-34 — "Massa crítica atingida no ponto de máxima densidade simbólica"
+### 9.3 PT-34 — ~~"Massa crítica…"~~ → **Concentração simultânea no conjunto simbólico** ✅
 
 | | |
 |:--|:--|
@@ -190,7 +196,7 @@ E das cinco, **uma não é nome de mecanismo**: a atribuição dos quatro testes
 >
 > **Por que é melhor:** o que o registro de fato sustenta é **contiguidade e simultaneidade**, não um limiar de massa. O nome atual afirma uma quantidade-limite que o codebook não mediu e que a fonte do conceito diz não se aplicar. A proposta usa a geografia — que é dado primário — em lugar de uma grandeza inferida.
 
-### 9.4 PT-12A — "Mobilização de recursos em rede distribuída com nós centralizadores"
+### 9.4 PT-12A — ~~"Rede distribuída com nós centralizadores"~~ → **Agregação na base e intermediação concentrada** ✅
 
 | | |
 |:--|:--|
@@ -204,7 +210,7 @@ E das cinco, **uma não é nome de mecanismo**: a atribuição dos quatro testes
 >
 > **Por que é melhor:** tipifica nos termos da própria literatura que o projeto adota, e nomeia a arquitetura em vez de descrevê-la. **Não é patrocínio** (o nó não financia: redistribui) **nem cooptação** (nenhuma organização preexistente foi capturada) — e dizer isso é parte do ganho.
 
-### 9.5 PT-62 — "Desarticulação do repertório de rua com deslocamento (não extinção)"
+### 9.5 PT-62 — ~~"Desarticulação com deslocamento"~~ → **Desmobilização por repressão seletiva** + **Migração de arena** ✅
 
 | | |
 |:--|:--|

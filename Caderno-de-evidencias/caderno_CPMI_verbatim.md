@@ -462,7 +462,7 @@ Subdimensionamento crítico do dispositivo — condição necessária (hoop test
 
 <details><summary>Mecanismo causal atribuído (leitura do analista)</summary>
 
-Transposição do limiar: a primeira invasão bem-sucedida funciona como sinal de viabilidade e dispara o contágio para os demais alvos
+Demonstração de viabilidade: a primeira transposição bem-sucedida converte uma ação de desfecho incerto em ação demonstradamente possível, e com isso reduz o custo percebido da imitação para atores já reunidos e já convocados (nome atribuído em 10/10/2026, pela tarefa 19)
 
 </details>
 
@@ -554,7 +554,7 @@ Escalada de repertório: da transposição de perímetro para a destruição mat
 
 <details><summary>Mecanismo causal atribuído (leitura do analista)</summary>
 
-Massa crítica atingida no ponto de máxima densidade simbólica. A magnitude não repousa em estimativa pontual para as 15h26 — que não existe em fonte primária —, e sim na convergência de duas medições oficiais independentes na manhã do mesmo dia e na caracterização que a própria CPMI faz dos invasores. ACHADO ANALÍTICO: a SSP/DF dispunha de estimativa própria de público às 9h e ainda assim o Congresso estava guarnecido por 20 policiais às 14h45 (PT-28) — o número deixa de ser dado descritivo e passa a ser evidência sobre o conhecimento do Estado, reforçando o hoop test.
+Concentração simultânea no conjunto simbólico — por serem contíguas as três sedes, uma só concentração alcança os três alvos sem redeslocamento (nome atribuído em 10/10/2026, pela tarefa 19). A magnitude não repousa em estimativa pontual para as 15h26 — que não existe em fonte primária —, e sim na convergência de duas medições oficiais independentes na manhã do mesmo dia e na caracterização que a própria CPMI faz dos invasores. ACHADO ANALÍTICO: a SSP/DF dispunha de estimativa própria de público às 9h e ainda assim o Congresso estava guarnecido por 20 policiais às 14h45 (PT-28) — o número deixa de ser dado descritivo e passa a ser evidência sobre o conhecimento do Estado, reforçando o hoop test.
 
 </details>
 

@@ -1930,3 +1930,45 @@ Corrigido nos três. A prova negativa, reapontada para o script certo, agora dá
 **Uma cobrança das cinco**, e não é nome de mecanismo: **a atribuição dos quatro testes**. A proposta está no documento 09, §9.6 — citar a cadeia **Van Evera (1997) → Bennett (2010) → Collier (2011)**, ficando Beach e Pedersen para o *process tracing* e não para os testes. Muda `01_PROJETO-PESQUISA_v1-compacto.md` §3.2, que é documento de projeto e não codebook. **Não foi executada: não estava entre as quatro propostas de nomenclatura.**
 
 E segue aberta a decisão sobre **Cesarino (2019) em PT-29** (item 41.5, ponto 5): o argumento dela dissolveria a tensão com PT-19 também no plano teórico, e lançá-la como âncora seria decidir o que está em aberto. O campo diz isso explicitamente.
+
+---
+
+## 43. A quinta cobrança executada — e a premissa dela estava errada — 🔶 10/10/2026
+
+**Encaminhamento:** *"Execute a quinta cobrança, a atribuição dos quatro testes."*
+
+### 43.1 A cadeia, conferida nas duas peças do corpus
+
+| Elo | Fonte, conferida na página |
+|:--|:--|
+| **Van Evera (1997, p. 31-32)** deriva os quatro testes | Collier (2011), nota da tabela 1, p. **825** impressa (PDF p. 3); e Cunha e Araújo (2018), p. **91** impressa (PDF p. 92) |
+| **Bennett (2010, p. 210)** é a formulação que Collier adapta | Collier, mesma nota |
+| **Collier (2011, p. 825, tabela 1)** é a apresentação que **este projeto usa** — inclusive o nome *hoop test*, que PT-28 emprega | o arquivo está no corpus desde 08/10, com offset medido |
+| **Beach e Pedersen** ficam como referência do *process tracing*, **não dos testes** | — |
+
+Corrigido em **seis** lugares: `01_PROJETO-PESQUISA.md`, `01_PROJETO-PESQUISA_v1-compacto.md` §3.2, `07_REGISTRO-DE-REVISAO.md`, `08_BIBLIOGRAFIA-METODOLOGICA.md` (ficha 11 e §), `02_PROPOSTA-DISCIPLINA.md` (leitura da semana 6) e o relatório de pesquisa. **Com isso a tarefa 19 fecha: as cinco cobranças estão resolvidas.**
+
+### 43.2 A premissa da cobrança estava errada, e isso é o achado
+
+A §4 do documento 09 dizia: *"**Duas fontes independentes divergem**"*. **Não divergem.**
+
+O que parecia atribuição concorrente em Cunha e Araújo é a **lista de referência entre parênteses** que fecha a frase — *"(Bennett, 2008; Collier, 2011; Mahoney, 2012; Beach; Pedersen, 2013; Bennett; Checkel, 2015)"* —, e a frase que a precede diz, em letras: *"**Van Evera (1997) deriva quatro testes de hipóteses**"*. **As duas peças convergem em Van Evera.**
+
+> **Ler lista de referência como reivindicação de autoria é o modo de falha da casa na forma bibliográfica.** A cobrança era legítima — o projeto de fato atribuía a Beach e Pedersen —, mas o *conflito de fontes* que ela alegava não existia. E a página também estava errada: a lista está na impressa **91**, não 92. **Eu havia escrito as duas coisas sem abrir as peças na página.**
+
+### 43.3 Duas armadilhas de extração no arquivo de Collier
+
+1. **Parênteses saem como `~` e `!`** em parte do arquivo: a nota da tabela extrai como `adapted from Bennett ~2010, 210!, who builds on categories formulated by Van Evera ~1997 , 31–32!`. São **16 ocorrências de `~` contra 111 parênteses normais**, concentradas na nota da tabela 1 e em itens alfabéticos — **não é defeito global**. Consequência: quem transcrever com parênteses **não casa na conferência**; quem transcrever da extração escreve o til.
+2. **Ligadura ﬁ e espaços colapsados**, já declarados: `conﬁrmordisconﬁrm`, `UnderstandingProcessTracing`.
+
+Ambas estão na ficha da peça, em `PROCEDENCIA`.
+
+### 43.4 A checagem 7 passou a vigiar atribuição, não só nome de mecanismo
+
+A sétima checagem de `verificar_integridade.py`, criada ontem para nomes de mecanismo retirados, ganhou duas entradas: `testes de Beach e Pedersen` e `testes de Beach & Pedersen`. Vigia **7 itens** em 4 artefatos mantidos à mão. Prova negativa: reinjetada a atribuição retirada no relatório, com base limpa, **PEGOU**.
+
+> A generalização é a lição de ontem levada a sério: **o que acabei de corrigir em seis lugares pode voltar num sétimo**, e o registro de itens retirados é o único lugar onde esse risco fica barato de vigiar.
+
+### 43.5 O que resta
+
+Da tarefa 19, **nada**. Seguem abertas, das rodadas anteriores: **Cesarino (2019) em PT-29**; **Tatagiba (2018)**, que precisa de cópia limpa ou OCR; a **dissertação do `deposita/434`** sobre "guerra cultural"; os **45 fragmentos que casam só por janela**; e, se preferir, **partir PT-62 em dois registros** em vez de um campo com dois mecanismos.

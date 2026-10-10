@@ -275,8 +275,19 @@ PROCEDENCIA["Fontes/05_Bibliografia-teorica/COLLIER_Understanding-process-tracin
     "| SERVE A: PT-28 (hoop test) e à atribuição dos quatro testes, que é cobrança aberta "
     "da tarefa 19. A nota da tabela 1 diz que os testes são 'adapted from Bennett (2010, "
     "210), who builds on categories formulated by Van Evera (1997, 31-32)', e o projeto os "
-    "atribui a Beach e Pedersen (2019). ATENÇÃO À LIGADURA ﬁ: o arquivo traz "
-    "'conﬁrmordisconﬁrm' e 'Scientiﬁc' com ligadura e espaços colapsados — normalizar "
+    "atribuía a Beach e Pedersen (2019) — **ATRIBUIÇÃO CORRIGIDA EM 10/10/2026**, pela "
+    "quinta cobrança da tarefa 19, em seis lugares: os testes são de Van Evera (1997, "
+    "p. 31-32), na formulação de Bennett (2010, p. 210) e na apresentação de Collier "
+    "(2011, p. 825, tabela 1), que é a usada por este projeto, inclusive o nome hoop "
+    "test. Cunha e Araújo (2018, p. 91 impressa) CONVERGEM: dizem que Van Evera deriva "
+    "os quatro testes. O que a agenda lia como divergência entre fontes era uma lista "
+    "de referência entre parênteses tomada por reivindicação de autoria "
+    "| DUAS ARMADILHAS DE EXTRAÇÃO: (1) **parênteses saem como ~ e !** em parte do "
+    "arquivo — a nota da tabela extrai como 'adapted from Bennett ~2010, 210!' —, com "
+    "16 ocorrências de ~ contra 111 parênteses normais, concentradas na nota da tabela "
+    "1 e em itens alfabéticos; quem transcrever com parênteses NÃO casa na conferência, "
+    "e quem transcrever da extração escreve o til. (2) LIGADURA ﬁ e espaços colapsados: "
+    "o arquivo traz 'conﬁrmordisconﬁrm' e 'UnderstandingProcessTracing' — normalizar "
     "antes de afirmar ausência de termo.",
 )
 PROCEDENCIA["Fontes/05_Bibliografia-teorica/MAYNTZ_Mechanisms-in-the-analysis-of-social-macro-phenomena_PSS-34-2_2004.pdf"] = (

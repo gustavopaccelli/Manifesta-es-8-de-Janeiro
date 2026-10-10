@@ -263,7 +263,7 @@ def main():
     # JSON e os artefatos mantidos à mão, de modo que uma renomeação podia deixar
     # nome morto em qualquer um deles sem um aviso. Não se tenta diferenciar prosa
     # livre: basta exigir que NENHUM nome retirado reapareça.
-    cabecalho(7, "NOMES DE MECANISMO RETIRADOS NÃO REAPARECEM")
+    cabecalho(7, "NOMES E ATRIBUIÇÕES RETIRADOS NÃO REAPARECEM")
     ARTEFATOS = [
         "reports/figures/cronologia_8jan_interativa.html",
         "projeto-pos-doc/figuras/cronologia-interativa.html",
@@ -280,6 +280,14 @@ def main():
         "Desarticulação do repertório de rua":
             ("10/10/2026", "PT-62", "Desmobilização por repressão seletiva"),
         "Certificação de eficácia": ("04/10/2026", "PT-03", "Ressignificação do protesto"),
+        # Nao e nome de mecanismo, e a vigilancia e a mesma: atribuicao retirada.
+        # Os quatro testes sao de Van Evera (1997), na formulacao de Bennett
+        # (2010) e na apresentacao de Collier (2011) -- corrigido em 10/10/2026
+        # pela quinta cobranca da tarefa 19, em seis lugares.
+        "testes de Beach e Pedersen": ("10/10/2026", "os quatro testes",
+                                       "Van Evera 1997 / Bennett 2010 / Collier 2011"),
+        "testes de Beach & Pedersen": ("10/10/2026", "os quatro testes",
+                                       "Van Evera 1997 / Bennett 2010 / Collier 2011"),
     }
     achou_morto = 0
     for rel in ARTEFATOS:
@@ -295,7 +303,7 @@ def main():
                               .format(rel, morto, pid, quando, vivo))
                 print("    X {} traz '{}' — retirado em {} de {}, hoje é '{}'"
                       .format(rel, morto, quando, pid, vivo))
-    print("  {} nome(s) retirado(s) vigiado(s) em {} artefato(s) mantido(s) à mão"
+    print("  {} nome(s)/atribuição(ões) retirado(s) vigiado(s) em {} artefato(s) à mão"
           .format(len(RETIRADOS), len(ARTEFATOS)))
     if not achou_morto:
         print("  OK — nenhum nome retirado reapareceu")

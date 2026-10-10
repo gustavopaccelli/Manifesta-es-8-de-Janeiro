@@ -60,7 +60,7 @@ A divergência entre `../docs/LEIA-ME_metodologia_verificacao.md` (48) e a conta
 
 Acrescentado: *"O elo que não sobreviver ao teste será registrado como refutado, não reescrito para acomodar a evidência: o banco é versionado, e a refutação fica auditável."*
 
-Um projeto que anuncia os quatro testes de Beach e Pedersen sem dizer o que conta como refutação deixa em aberto a objeção mais previsível de um avaliador metodologicamente atento.
+Um projeto que anuncia os quatro testes sem dizer o que conta como refutação deixa em aberto a objeção mais previsível de um avaliador metodologicamente atento. *(Registro de 10/10/2026: esta frase dizia “os quatro testes de Beach e Pedersen”. A atribuição estava errada e foi corrigida pela quinta cobrança da tarefa 19 — os testes são de Van Evera (1997), na formulação de Bennett (2010) e na apresentação de Collier (2011). A observação sobre o critério de refutação continua valendo inteira.)*
 
 ### 5. Grafo de financiamento especificado (§3, item 4)
 

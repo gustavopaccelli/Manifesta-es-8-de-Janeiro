@@ -56,7 +56,7 @@ Ao final da disciplina, o(a) estudante será capaz de:
 | Sem. | Tema | Leitura central | Atividade |
 |:--|:--|:--|:--|
 | 5 | Process tracing: fundamentos e desenhos | Beach & Pedersen (2019), cap. 1–3 | — |
-| 6 | Os quatro testes: *straw-in-the-wind*, *hoop*, *smoking gun*, *doubly decisive* | Collier (2011); Beach & Pedersen (2019), cap. 5 | **Laboratório 1:** aplicar os testes a elos causais prontos |
+| 6 | Os quatro testes: *straw-in-the-wind*, *hoop*, *smoking gun*, *doubly decisive* | Collier (2011), tab. 1; Van Evera (1997, p. 31-32), de quem os testes são; Beach & Pedersen (2019), cap. 5 | **Laboratório 1:** aplicar os testes a elos causais prontos |
 | 7 | Análise de eventos de protesto: unidade de registro e codebook | Koopmans & Rucht (2002); Hutter (2014) | **Laboratório 2:** desenho de codebook |
 | 8 | Crítica de fontes: autenticidade, proveniência, representatividade | Bibliografia de método arquivístico | **Laboratório 3:** ficha de proveniência |
 | 9 | O documento oficial como reconstrução causal interessada | Leitura dirigida de relatório parlamentar e de peça judicial sobre o mesmo fato | **Entrega 1** |

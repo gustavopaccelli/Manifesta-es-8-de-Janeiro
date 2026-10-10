@@ -62,7 +62,7 @@ Regra do projeto: nada se afirma sem ter sido lido, e nada se cita contra outra 
 
 ## 4. O que a leitura cobra do codebook, registro por registro
 
-> **RESOLVIDO EM 10/10/2026, nas quatro linhas de nome de mecanismo.** O pesquisador aprovou as quatro propostas da §9 e elas estão no codebook: PT-29 → **demonstração de viabilidade**; PT-34 → **concentração simultânea no conjunto simbólico**; PT-12A → **agregação na base e intermediação concentrada**; PT-62 → **desmobilização por repressão seletiva** seguida de **migração de arena**. A tabela abaixo fica como está, porque é o registro do que se cobrava — e a razão de cada troca está escrita no próprio `mecanismo_causal` de cada registro. **Resta uma cobrança: a atribuição dos quatro testes** (última linha; proposta na §9.6, ainda sem decisão).
+> **RESOLVIDO EM 10/10/2026, nas quatro linhas de nome de mecanismo.** O pesquisador aprovou as quatro propostas da §9 e elas estão no codebook: PT-29 → **demonstração de viabilidade**; PT-34 → **concentração simultânea no conjunto simbólico**; PT-12A → **agregação na base e intermediação concentrada**; PT-62 → **desmobilização por repressão seletiva** seguida de **migração de arena**. A tabela abaixo fica como está, porque é o registro do que se cobrava — e a razão de cada troca está escrita no próprio `mecanismo_causal` de cada registro. **E a quinta cobrança — a atribuição dos quatro testes — foi EXECUTADA em 10/10/2026.** Ver §9.6. Com ela, a tarefa 19 fecha: as cinco cobranças estão resolvidas.
 
 | Registro | O que diz hoje | O que a fonte lida cobra |
 |:--|:--|:--|
@@ -227,13 +227,33 @@ E das cinco, **uma não é nome de mecanismo**: a atribuição dos quatro testes
 >
 > **Recomendo (a)**, porque a entrada de Carvalho e Tatagiba tornou o problema empírico e não só terminológico: *deslocamento* afirma agência do ator onde a fonte mostra operação do Estado.
 
-### 9.6 A quinta cobrança — a atribuição dos quatro testes
+### 9.6 A quinta cobrança — a atribuição dos quatro testes ✅ EXECUTADA
 
 **Agora com o arquivo na mão.** Collier (2011) entrou no corpus em 08/10/2026 (p. 823-830; impressa = PDF + 822), e a nota da tabela 1 diz que os testes são **"adapted from Bennett (2010, 210), who builds on categories formulated by Van Evera (1997, 31-32)"**. Cunha e Araújo (2018, p. 92) atribuem a uma lista: "Bennett, 2008; Collier, 2011; Mahoney, 2012; Beach; Pedersen, 2013; Bennett; Checkel, 2015". O projeto atribui a **Beach e Pedersen (2019)**, em `01_PROJETO-PESQUISA_v1-compacto.md` §3.2.
 
+> **EXECUTADO EM 10/10/2026, e a premissa da cobrança estava errada** — ver o bloco que segue a proposta. A proposta original dizia:
+>
 > **PROPOSTA: citar a cadeia, e na ordem em que ela é.** As categorias são de **Van Evera (1997)**; a formulação em quatro testes é de **Bennett (2010)**; e a apresentação que **este projeto efetivamente usa** — inclusive o nome *hoop test*, que PT-28 emprega — é a de **Collier (2011)**. Beach e Pedersen permanecem como referência do *process tracing*, não dos testes.
 >
 > **Por que importa:** o projeto usa um nome (*hoop test*) que vem de uma tabela específica, e atribui a tabela a outro autor. É a forma bibliográfica do modo de falha da casa — o dado certo no referente errado.
+
+#### A premissa estava errada: as duas fontes NÃO divergem
+
+A §4 deste documento dizia *"Duas fontes independentes divergem"*. **Não divergem — e descobri isso ao abrir as duas peças na página.**
+
+| Fonte | O que diz, conferido na página |
+|:--|:--|
+| **Collier (2011)**, nota da tabela 1, p. **825** impressa (PDF p. 3) | os testes são "adapted from Bennett (2010, 210), **who builds on categories formulated by Van Evera (1997, 31-32)**" |
+| **Cunha e Araújo (2018)**, p. **91** impressa (PDF p. 92) | "**Van Evera (1997) deriva quatro testes de hipóteses** […] straw-in-the-wind test, hoop test, smoking-gun test, doubly-decisive test (Bennett, 2008; Collier, 2011; Mahoney, 2012; Beach; Pedersen, 2013; Bennett; Checkel, 2015)" |
+
+**As duas atribuem a derivação a Van Evera.** O que parecia atribuição concorrente em Cunha e Araújo é a **lista de referência entre parênteses** que fecha a frase — e a frase que a precede nomeia Van Evera como autor dos testes.
+
+> **Ler lista de referência como reivindicação de autoria é o modo de falha da casa na forma bibliográfica.** E a página também estava errada: a lista está na impressa **91**, não 92. A cobrança era legítima — o projeto atribuía a Beach e Pedersen —, mas o *conflito de fontes* que ela alegava não existia: havia convergência, e eu a tinha lido como divergência sem abrir as peças.
+
+#### Duas armadilhas de extração no arquivo de Collier, declaradas
+
+1. **Parênteses saem como `~` e `!`** em parte do arquivo. A nota da tabela extrai como `adapted from Bennett ~2010, 210!, who builds on categories formulated by Van Evera ~1997 , 31–32!`. São **16 ocorrências de `~` contra 111 parênteses normais**, concentradas na nota da tabela 1 e em itens alfabéticos — não é defeito global. Consequência prática: quem transcrever literalmente da extração escreve o til; quem transcrever com parênteses **não casa na conferência**.
+2. **Ligadura ﬁ e espaços colapsados**, já declarados na ficha da peça (`conﬁrmordisconﬁrm`, `UnderstandingProcessTracing`).
 
 ### 9.7 Uma peça da leitura que é modelo para esta decisão
 

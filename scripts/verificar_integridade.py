@@ -247,10 +247,10 @@ def main():
         # González-Bailón et al. 2011), por decisão do pesquisador. Com elas, as 7
         # peças lidas da camada A passam a ter arquivo — e `lida` deixa de divergir
         # de `lida-e-arquivada`. A documental continua em 22 / 6.951.
-        if (n, total, doc_n, doc_total) != (62, 12105, 22, 6951):
+        if (n, total, doc_n, doc_total) != (63, 12125, 22, 6951):
             avisos.append("corpus mudou: {} PDFs / {} páginas, {} documentais / {} p. "
-                          "(era 62 / 12105, 22 / 6951)".format(n, total, doc_n, doc_total))
-            print("  ~ corpus difere da linha de base de 08/10/2026 (62 PDFs / 12105 p., "
+                          "(era 63 / 12125, 22 / 6951)".format(n, total, doc_n, doc_total))
+            print("  ~ corpus difere da linha de base de 13/10/2026 (63 PDFs / 12125 p., "
                   "22 documentais / 6951 p.)")
         else:
             print("  OK — bate com o inventário")

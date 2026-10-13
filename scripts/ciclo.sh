@@ -27,6 +27,12 @@ echo "== 5/8  conferir_relatorio — o relatório de pesquisa x codebook"
 python scripts/conferir_relatorio.py
 
 echo "== 6/8  conferir_paginas — transcrição x página no PDF"
+# --todos por padrao desde 10/10/2026: a linha de base de casamento parcial
+# (PARCIAIS_BASE) so vale no conjunto completo, e e ela que pega transcricao
+# editada na cauda -- a falha que escapou da prova negativa de 09/10. Guarda
+# que nao esta no caminho percorrido todo dia nao guarda nada. Um argumento
+# explicito na linha de comando continua prevalecendo.
+if [ $# -eq 0 ]; then set -- --todos; fi
 python scripts/conferir_paginas.py "$@"
 
 # O campo multiorganizacional declara entidades por fragmento de `ator_grupo` e

@@ -2018,3 +2018,61 @@ A remissão criou um risco que não existia: **se um dos quatro registros citado
 1. **Tatagiba (2018)** — precisa de cópia limpa ou OCR para poder ancorar transcrição.
 2. **A dissertação do `deposita/434`** sobre "guerra cultural" — dissertação de mestrado, e recorte 2014-2018 contra os 2020-2021 de PT-06.
 3. **Os 45 fragmentos que casam só por janela** — declarados e contados, não resolvidos.
+
+---
+
+## 45. As três pendências restantes, resolvidas — e duas delas me desmentiram — 🔶 10/10/2026
+
+**Encaminhamento:** *"Resolva as três pendências restantes."*
+
+### 45.1 Tatagiba (2018) — **podia ancorar desde sempre, e o erro era meu**
+
+Eu havia declarado que a peça **não podia ancorar transcrição**, por "camada de texto cifrada em duas direções opostas". **Falso.**
+
+Eu lera o arquivo com **pypdf**, que o devolve embaralhado, e não com o `texto_pagina()` do próprio conferidor — que concatena **três** leituras (pypdf, PyMuPDF cru e PyMuPDF com conserto de glifo *por span*) e basta uma servir. A fonte quebrada é `Gentium-Book-Basic`, **que já estava em `FONTES_DESLOCADAS` desde 04/10/2026**, posta lá por causa de Kunrath Silva (2018), do mesmo editor.
+
+> **Diagnostiquei como armadilha nova o que o projeto havia resolvido cinco dias antes.** A lição, na forma mais barata que ela tem: **antes de declarar um arquivo ilegível, leia-o com a ferramenta do projeto, não com a primeira que vier à mão.**
+
+Conferido: duas de três frases colhidas na versão limpa da **OpenEdition** — obtida pelo navegador, que resolve o Anubis nativamente — foram localizadas no PDF pelo conferidor. A folha de rosto entrega a paginação impressa, **112-135**. Nenhum OCR, nenhuma cópia nova, nenhum pedido a você.
+
+**E uma hipótese minha que a medição derrubou no caminho:** achei que `FONTES_DESLOCADAS` tinha uma lacuna, por casar nome de fonte exato e deixar de fora `Gentium-Book-Basic-Itali` e `GentiumBookBasic`. Testei: nessas variantes **o texto bruto já está correto**, e aplicar o conserto o **corrompe**. A restrição por nome exato não era lacuna — era proteção, e o autor dela escreveu isso no docstring. **A quebra é propriedade do subconjunto de fonte naquele arquivo, não do nome da família.**
+
+### 45.2 A dissertação do `deposita/434` — **fica fora, e não era necessária**
+
+A pendência era se a dissertação sobre "guerra cultural" entrava no corpus para ancorar a expressão que PT-06 declarava sem lastro. **Não entra, e não precisa:** varrido o corpus **já lido**, a expressão está em peças com página conferida — Cesarino (2019) com três ocorrências, Cesarino (2022) com uma.
+
+Dois motivos para a dissertação ficar fora, e os dois valem registro: é **dissertação de mestrado**, e o corpus só admitiu artigo revisado por pares, livro de editora e fonte primária; e o recorte é **2014-2018** contra os **2020-2021** do registro.
+
+**E a leitura mudou o que se pode afirmar.** Cesarino não só usa a expressão: ela **argumenta contra** reduzir o bolsonarismo a ela. As duas âncoras entraram **em par**, de propósito:
+
+| | |
+|:--|:--|
+| **Proveniência** | "Como o próprio termo guerra cultural, outros como marxismo cultural e globalismo foram tomados **diretamente de empréstimo da alt-right americana**" (p. 540 impressa) |
+| **Limite, da mesma autora** | "**Longe de se resumir a uma guerra cultural** no campo das políticas de identidade, o bolsonarismo tem como pilar constitutivo um eixo neoliberal que é normalmente obscurecido pelo eixo populista-conservador" (p. 539 impressa) |
+
+> Lançar a primeira sem a segunda seria **usar a autora contra o argumento dela**. E a frase de Cesarino (2022, p. 174) que cobre a janela do registro foi citada **por página e sem transcrição**, porque traz aspas curvas internas — aspa aninhada já custou a este projeto cinco âncoras sem conferência em PT-08.
+
+**Um defeito meu, pego pela contagem.** Escrevi as duas transcrições primeiro em `framing_narrativa`, e `transcricoes()` lê **apenas** `fonte_trecho`: ficavam **sem conferência nenhuma**. O sinal foi a contagem de PT-06 **não subir de 22**. Movidas, o registro passou a **24/24 localizadas**. É a âncora-que-parece-âncora, que este projeto passou quatro dias eliminando, reintroduzida por mim num campo errado.
+
+### 45.3 Os 45 fragmentos que casavam só por janela — **são 17, e agora há tripwire**
+
+Classifiquei a causa de cada um, em vez de afrouxar ou endurecer o critério:
+
+| Causa | N | É divergência de conteúdo? |
+|:--|--:|:--|
+| casa o trecho inteiro menos ≤2 caracteres (pontuação terminal) | 6 | não |
+| as duas metades existem na página, a junção não | 10 | não |
+| dígito logo após a ruptura | 4 | não |
+| interpolação do analista entre **colchetes** | 3 | **não, por definição** |
+| a transcrição atravessa a quebra de página | — | não |
+| divergência real, a inspecionar | ~11 | sim |
+
+`confere_integral()` passou a absorver as três que não são conteúdo — **pontuação terminal, colchete e página vizinha** —, cada uma com a razão escrita. Resultado: **45 → 17**. A queda não veio de relaxar nada: veio de medir a causa.
+
+> **E com 17 o número serve de linha de base, o que converte o ponto cego em tripwire.** Uma transcrição editada na cauda tira um fragmento de `ok` e o põe em `parcial`, o total vai a 18 e **o ciclo cai**. Prova negativa: as **duas** edições de cauda que escaparam em 09/10 — *menor→maior* em Nunes e *três→dois* em Carvalho e Tatagiba — agora são **pegas, 2 de 2**. Não se endureceu o casamento, que quebraria 17 âncoras legítimas: vigia-se a **contagem**.
+
+**E a guarda disparou no recorte errado na primeira tentativa:** rodando um registro isolado, `parciais_total` é 0 e ela acusava queda. A linha de base é do conjunto; aplicada a um subconjunto mede outra coisa. Restrita a `--todos` — **guarda que dispara no recorte errado é ruído, e ruído treina a ignorar guarda.**
+
+### 45.4 O que sobra
+
+Da agenda, **nada pendente de decisão sua**. Os 17 fragmentos que ainda casam só por janela estão **contados, com linha de base e tripwire**; reduzi-los exige abrir documento por documento, e cada um é trabalho de verificação, não de decisão.

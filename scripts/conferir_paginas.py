@@ -161,6 +161,60 @@ def norm_busca(s):
 FONTES_DESLOCADAS = {"Gentium-Book-Basic"}
 
 
+def confere_integral(frag, caminho, pg):
+    """O trecho confere POR INTEIRO, e não só por janela?
+
+    Responde ignorando o que não é conteúdo da fonte, e cada exclusão tem razão:
+
+      - **pontuação terminal**: a transcrição costuma fechar com ponto que a
+        extração não traz naquele ponto; 6 dos 42 casos eram só isso;
+      - **interpolação do analista entre COLCHETES**: `[três poderes]`,
+        `[prisões]` são inserções declaradas pelo próprio uso do colchete e,
+        por definição, NÃO estão na fonte — 3 casos;
+      - **páginas vizinhas**: um trecho longo atravessa a quebra de página, e o
+        conferidor localiza numa página só; 33 casos tinham prefixo casando 3 de
+        406, 7 de 349, que é a assinatura disso.
+
+    Devolve "ok", "pagina" (confere ao juntar a vizinha) ou "parcial".
+    """
+    alvo = _sem_apoio(frag)
+    if not alvo:
+        return "ok"
+    if alvo in _sem_apoio(texto_pagina(caminho, pg) or ""):
+        return "ok"
+    for par in ((pg - 1, pg), (pg, pg + 1)):
+        junto = "".join(_sem_apoio(texto_pagina(caminho, p) or "") for p in par)
+        if alvo in junto:
+            return "pagina"
+    return "parcial"
+
+
+COLCHETE = re.compile(r"\[[^\]]{0,120}\]")
+_TERMINAL = " .,;:!?\u2026"
+
+
+def _sem_apoio(s):
+    """norm_busca sem espaço, sem interpolação em colchete e sem pontuação final."""
+    return re.sub(r"\s+", "", norm_busca(COLCHETE.sub(" ", s or ""))).strip(_TERMINAL)
+
+
+def sem_espaco(s):
+    """norm_busca sem espaco algum — só para a pergunta do casamento INTEGRAL.
+
+    Criada em 10/10/2026, depois de classificar a causa dos 45 fragmentos que
+    casavam só por janela: **28 eram artefato de espaço na junção** — 18 casavam
+    o trecho inteiro menos até 2 caracteres, e 10 tinham as duas metades
+    presentes na página e só a junção falhando, que é quebra de linha e
+    hifenização. Comparar sem espaço nenhum absorve esses 28 e deixa à vista os
+    que divergem de verdade.
+
+    **Não substitui `norm_busca` e não entra em `casa()`**: mexer ali mudaria o
+    casamento de todas as âncoras do codebook. Esta função responde uma pergunta
+    de diagnóstico, não de validação.
+    """
+    return re.sub(r"\s+", "", norm_busca(s))
+
+
 def _desloca(t):
     """Desfaz o deslocamento de glifos de um subconjunto de fonte quebrado.
 
@@ -415,7 +469,7 @@ def main():
     print("CONFERÊNCIA PÁGINA x TRANSCRIÇÃO — {} registro(s), modo estrito".format(
         len(alvos_reg)))
     print("=" * 78)
-    ok = falha = indet = parciais_total = 0
+    ok = falha = indet = parciais_total = atravessa_total = 0
     falhas, ociosas_total, excecoes_usadas = [], 0, 0
 
     aninhadas = {}
@@ -442,6 +496,7 @@ def main():
             continue
 
         achados, perdidas, usadas, fracas, parciais = [], [], set(), 0, 0
+        atravessa = 0
         for cit in cits:
             for frag in fragmentos(cit):
                 onde = localizar(frag, pp, docs)
@@ -463,8 +518,10 @@ def main():
                     # Medido no mesmo dia: 176 fragmentos casam integral e 45 so
                     # por janela, de modo que EXIGIR integral quebraria 45 ancoras
                     # legitimas. Entao nao se endurece: torna-se visivel.
-                    _txt = texto_pagina(docs[onde[0]], onde[1]) or ""
-                    if norm_busca(frag) not in _txt:
+                    _est = confere_integral(frag, docs[onde[0]], onde[1])
+                    if _est == "pagina":
+                        atravessa += 1
+                    elif _est == "parcial":
                         parciais += 1
                     continue
                 chave = next((k for k in EXCECOES
@@ -500,6 +557,7 @@ def main():
                 if parciais else ""))
             ok += 1
         parciais_total += parciais
+        atravessa_total += atravessa
 
         if verboso:
             for frag, (c, p, j) in achados:
@@ -511,14 +569,24 @@ def main():
 
     print("=" * 78)
     print("confirmados {} | falhas {} | indeterminados {}".format(ok, falha, indet))
+    if atravessa_total:
+        print("{} fragmento(s) conferem POR INTEIRO ao juntar a página vizinha: a "
+              "transcrição atravessa a quebra de página.".format(atravessa_total))
     if parciais_total:
         print("{} fragmento(s) localizado(s) SO POR JANELA: a janela confere e o "
               "texto integral nao.".format(parciais_total))
-        print("Não é falha: hifenização, ligadura e espaçamento quebram o casamento")
-        print("literal. Mas é o PONTO CEGO do conferidor — editar a cauda de uma")
-        print("transcrição longa passa por aqui sem ser notado. Prova negativa de")
-        print("09/10/2026: 2 de 4 injeções escaparam, e as duas eram troca de palavra")
-        print("no fim do trecho; as duas de página errada foram pegas.")
+        print("Eram 45 em 09/10/2026 e são {} desde 10/10. A queda não veio de"
+              .format(parciais_total))
+        print("afrouxar o critério: veio de classificar a causa de cada um e absorver")
+        print("as três que NÃO são divergência de conteúdo: pontuação terminal,")
+        print("interpolação do analista entre colchetes (que por definição não está")
+        print("na fonte) e transcrição que atravessa a quebra de página. A conta por")
+        print("classe está em docs/PENDENCIAS-ANALITICAS.md, item 45; aqui só se")
+        print("imprime o que o próprio conferidor mede.")
+        print("O que sobra é o PONTO CEGO real: editar a cauda de uma transcrição")
+        print("longa passa sem ser notado. Prova negativa de 09/10: 2 de 4 injeções")
+        print("escaparam, e as duas eram troca de palavra no fim do trecho.")
+        print("Para ver quais, rode com -v e compare casa/total.".format())
     if ociosas_total:
         print("{} página(s) listada(s) que nenhuma transcrição alcança. Não é falha: a "
               "página pode\nsustentar um fato que o registro não transcreve entre aspas. "
@@ -547,6 +615,28 @@ def main():
         for rid, perdidas in sorted(aninhadas.items()):
             for cit in perdidas:
                 print("  {:<7} não extraída: “{}...”".format(rid, cit[:72]))
+    # LINHA DE BASE DO CASAMENTO PARCIAL, fixada em 10/10/2026 com 17.
+    # Enquanto eram 45 o numero nao servia de linha de base; com 17 serve, e isso
+    # converte o ponto cego em tripwire: uma transcricao editada na cauda tira um
+    # fragmento de "ok" e o poe em "parcial", o total vai a 18 e o ciclo cai.
+    # NAO se endurece o casamento nem se mexe nos 17 legitimos -- vigia-se a
+    # CONTAGEM, que e o mesmo padrao do inventario do corpus.
+    # Se um trecho novo e legitimamente parcial, suba o numero aqui E diga por que.
+    PARCIAIS_BASE = 17
+    # SO em --todos: num subconjunto a contagem mede outra coisa, e guarda que
+    # dispara no recorte errado e ruido -- e ruido treina a ignorar guarda.
+    if todos and parciais_total != PARCIAIS_BASE:
+        print("")
+        print("X CONTAGEM DE CASAMENTO PARCIAL MUDOU: {} agora, {} na linha de base "
+              "de 10/10/2026.".format(parciais_total, PARCIAIS_BASE))
+        if parciais_total > PARCIAIS_BASE:
+            print("  Subiu. Uma transcrição que casava por inteiro deixou de casar —")
+            print("  é exatamente a edição de cauda que a prova negativa de 09/10 viu")
+            print("  escapar. Rode com -v, compare casa/total e ache a que mudou.")
+        else:
+            print("  Caiu, o que é bom, e ainda assim precisa de decisão: ajuste")
+            print("  PARCIAIS_BASE neste arquivo e diga no commit por que caiu.")
+        return 1
     return 1 if (falhas or aninhadas) else 0
 
 

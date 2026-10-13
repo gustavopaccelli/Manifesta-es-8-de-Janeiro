@@ -165,7 +165,13 @@ Quem fechou foi **Cesarino (2022, p. 181 impressa)**, que descreve um *"ecossist
 3. **Mendonça e Domingues é 2022**, não 2021.
 4. **Tatagiba (2018) tem paginação impressa 112-135**, declarada na folha de rosto.
 
-### 8.6 A camada de texto cifrada de Tatagiba (2018), e é a mais perigosa do eixo
+### 8.6 ~~A camada de texto cifrada de Tatagiba (2018)~~ — O DIAGNÓSTICO ERA MEU, E ESTAVA ERRADO
+
+> **CORRIGIDO EM 10/10/2026.** Em 09/10 declarei que esta peça **não podia ancorar transcrição**. Podia. Eu havia lido o arquivo com **pypdf**, que o devolve embaralhado, e não pelo `texto_pagina()` do conferidor do projeto — que concatena **três** leituras (pypdf, PyMuPDF cru, PyMuPDF com conserto de glifo *por span*) e basta uma servir. A fonte quebrada é `Gentium-Book-Basic`, **que já estava em `FONTES_DESLOCADAS` desde 04/10**, posta lá por causa de Kunrath Silva (2018), do mesmo editor. **Diagnostiquei como armadilha nova o que o projeto havia resolvido cinco dias antes** — e a lição é a de sempre, na forma mais barata: antes de declarar um arquivo ilegível, leia-o com a ferramenta do projeto, não com a primeira que vier à mão.
+>
+> **Conferido:** duas de três frases colhidas na versão limpa da OpenEdition — obtida pelo navegador, que resolve o Anubis nativamente — foram localizadas no PDF pelo próprio conferidor. E a folha de rosto entrega a paginação impressa, **112-135**.
+>
+> O texto abaixo descreve o que o **pypdf** faz com o arquivo, e fica como registro do diagnóstico errado.
 
 O PDF **tem** camada de texto, e ela está **cifrada**. As letras saem deslocadas — e em **duas direções opostas no mesmo arquivo**: o corpo em **−3** (`(QWUHDVUXDV` = "ENTRE AS RUAS") e a folha de rosto em **+3** (`Irplqlmfb` = "Lusotopie"), porque são duas fontes embutidas com mapas CID→Unicode quebrados em sentidos contrários. Os acentuados seguem um terceiro mapa (`©`→`Ç`, `·`→`Õ`).
 

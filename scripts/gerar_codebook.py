@@ -319,6 +319,24 @@ PROCEDENCIA["Fontes/05_Bibliografia-teorica/GONZALEZ-BAILON-BORGE-HOLTHOEFER-RIV
     "QUATRO autores.",
 )
 
+# O MANIFESTO DO CORPUS, gerado pela tarefa 15 em 13/10/2026. Nao e fonte: e o
+# que torna esta pesquisa verificavel SEM redistribuir o corpus, porque 27 das 40
+# pecas de literatura nao podem ser redistribuidas -- duas declaram todos os
+# direitos reservados no proprio arquivo, e entre as 25 sem declaracao estao
+# livros da Cambridge, da Wiley-Blackwell, da Vozes e da Companhia das Letras.
+PROCEDENCIA["Fontes/MANIFESTO-CORPUS.csv"] = (
+    "Gerado por scripts/gerar_manifesto_corpus.py — não é fonte", "aparato",
+    "Manifesto do corpus: caminho, SHA-256, páginas, bytes, classe de licença lida "
+    "NO arquivo e rota de obtenção, peça por peça. Serve a dois propósitos. (1) "
+    "VERIFICABILIDADE SEM REDISTRIBUIÇÃO: quem quiser conferir uma âncora obtém a "
+    "peça pela rota declarada, compara o SHA-256 e abre a página — o corpus não "
+    "precisa ir a remoto público, e não vai. (2) DETECÇÃO DE CORRUPÇÃO SILENCIOSA: "
+    "um PDF que mude de bytes sem mudar de nome quebraria toda âncora que dependa "
+    "dele, e até 13/10/2026 nada acusava; a checagem 8 de verificar_integridade.py "
+    "compara corpus e manifesto peça por peça. Regere com "
+    "python scripts/gerar_manifesto_corpus.py",
+)
+
 # Antecedente teórico do projeto. Não ancora registro nenhum e não é fonte de
 # evento: é a obra de que a pesquisa parte, incorporada em 19/08/2026.
 PROCEDENCIA["Fontes/11_Tese-doutorado/PACCELLI_Tese-doutorado_UFJF_2024.docx"] = (

@@ -3,7 +3,7 @@
 """
 Verificação de integridade do aparato do process tracing.
 
-Roda sete checagens e devolve código de saída != 0 se qualquer uma falhar.
+Roda oito checagens e devolve código de saída != 0 se qualquer uma falhar.
 Pensada para ser executada depois de toda alteração no codebook — é o que
 garante que JSON, CSV e XLSX não voltem a divergir.
 
@@ -333,6 +333,56 @@ def main():
     if not pendura:
         print("  OK — toda remissão PT-XX entre registros aponta para registro existente")
 
+    # ------------------------------------------------------------------ 8 ---
+    # Criada pela tarefa 15, em 13/10/2026. O manifesto existe porque 27 das 40
+    # pecas de literatura do corpus NAO podem ser redistribuidas -- duas declaram
+    # todos os direitos reservados no proprio arquivo, e entre as 25 sem
+    # declaracao estao livros da Cambridge, da Wiley-Blackwell, da Vozes e da
+    # Companhia das Letras. O corpus nao vai a remoto publico, e o manifesto e o
+    # que mantem a pesquisa VERIFICAVEL sem ser redistribuivel: rota + SHA-256.
+    #
+    # E a checagem serve a um segundo proposito que vale por si: um PDF que mude
+    # de bytes sem mudar de nome quebraria toda ancora que dependa dele, e ate
+    # aqui NADA acusava. Agora acusa.
+    cabecalho(8, "CORPUS x MANIFESTO (presença e SHA-256)")
+    import csv as _csv
+    import hashlib as _hl
+    import io as _io
+    MAN = RAIZ / "Fontes/MANIFESTO-CORPUS.csv"
+    if not MAN.exists():
+        falhas.append("manifesto do corpus ausente: Fontes/MANIFESTO-CORPUS.csv")
+        print("  X manifesto ausente — regere com "
+              "python scripts/gerar_manifesto_corpus.py")
+    else:
+        with _io.open(str(MAN), encoding="utf-8-sig", newline="") as _fh:
+            man = {r["caminho"]: r for r in _csv.DictReader(_fh)}
+        em_disco = {p.relative_to(RAIZ).as_posix()
+                    for p in (RAIZ / "Fontes").rglob("*.pdf")}
+        faltam = sorted(set(man) - em_disco)
+        sobram = sorted(em_disco - set(man))
+        mudou = []
+        for rel in sorted(set(man) & em_disco):
+            h = _hl.sha256()
+            with _io.open(str(RAIZ / rel), "rb") as _f:
+                for bl in iter(lambda: _f.read(1 << 20), b""):
+                    h.update(bl)
+            if h.hexdigest() != man[rel]["sha256"]:
+                mudou.append(rel)
+        print("  %d peça(s) no manifesto, %d em disco" % (len(man), len(em_disco)))
+        for rel in faltam:
+            falhas.append("no manifesto e ausente do disco: {}".format(rel))
+            print("    X no manifesto e ausente do disco: {}".format(rel))
+        for rel in sobram:
+            falhas.append("em disco e fora do manifesto: {}".format(rel))
+            print("    X em disco e fora do manifesto: {} — regere o manifesto"
+                  .format(rel))
+        for rel in mudou:
+            falhas.append("SHA-256 divergente: {}".format(rel))
+            print("    X SHA-256 DIVERGENTE: {} — os bytes mudaram, e toda âncora "
+                  "que dependa desta peça está sob suspeita".format(rel))
+        if not (faltam or sobram or mudou):
+            print("  OK — presença e SHA-256 batem peça por peça")
+
     # --------------------------------------------------------------------- --
     print("\n" + "=" * 72)
     if falhas:
@@ -340,7 +390,7 @@ def main():
         for f in falhas:
             print("  X " + f)
     else:
-        print("RESULTADO: APROVADO — as sete checagens passaram")
+        print("RESULTADO: APROVADO — as oito checagens passaram")
     for a in avisos:
         print("  ~ aviso: " + a)
     print("=" * 72)

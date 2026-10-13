@@ -2076,3 +2076,52 @@ Classifiquei a causa de cada um, em vez de afrouxar ou endurecer o critério:
 ### 45.4 O que sobra
 
 Da agenda, **nada pendente de decisão sua**. Os 17 fragmentos que ainda casam só por janela estão **contados, com linha de base e tripwire**; reduzi-los exige abrir documento por documento, e cada um é trabalho de verificação, não de decisão.
+
+---
+
+## 46. Tarefa 15 — a higiene do repositório, e a decisão estava forçada — 🔶 13/10/2026
+
+**Encaminhamento:** *"Execute a tarefa 15."*
+
+A tarefa estava na agenda como **decisão sua**, de licença e distribuição. Executada, ela se revelou **menos decisão e mais apuração**: o que havia a decidir já estava decidido pelo conteúdo do corpus.
+
+### 46.1 A auditoria, que é o resultado
+
+`scripts/auditar_licencas.py` lê o que **cada arquivo declara sobre si** — não o que o editor diz, nem o que o registro de acesso aberto diz. A razão dessa escolha tem nome: **Rich (2021)**, que o OpenAlex declarava **ouro** e está à venda em livraria.
+
+| | Arquivos | |
+|:--|--:|:--|
+| **Documental** | **22** | 21 atos oficiais + 1 CC |
+| **Literatura** | **40** | 13 CC · **2 com todos os direitos reservados impressos** · 25 sem declaração |
+
+**27 das 40 peças de literatura não podem ser redistribuídas**, 56 MB. Entre elas **Kunrath Silva (2018)** — que **ancora PT-01, PT-02, PT-04 e PT-05** e declara todos os direitos reservados —, Tarrow pela Vozes, *Dynamics of Contention* pela Cambridge, a enciclopédia Wiley-Blackwell e Alonso pela Companhia das Letras.
+
+> **Um erro de agregação meu, corrigido no caminho.** A primeira execução deu "**46 não redistribuíveis**" porque somava documento oficial e peça acadêmica sem declaração. São coisas incomparáveis: a ausência de declaração num acórdão não é lacuna, porque a **Lei 9.610/98, art. 8º, IV**, põe atos oficiais fora do direito autoral. Separado pela linha que o projeto já usa (`FORA_DA_DOCUMENTAL`), o número verdadeiro é **27 de 40**. Era a cifra certa no referente errado, na minha própria auditoria.
+
+### 46.2 E parar de versionar o corpus agora não resolveria
+
+Os PDFs estão **no histórico**: `.git` tem **250 MB** contra **8 MB** de texto e código. Um remoto público distribuiria os arquivos mesmo com a árvore limpa. **A pergunta da agenda — "decidir antes do remoto" — já estava respondida pelo histórico, e a resposta é que o remoto público deste repositório não existe.**
+
+### 46.3 O que foi construído
+
+| | |
+|:--|:--|
+| **`Fontes/MANIFESTO-CORPUS.csv`** | 62 peças: caminho, **SHA-256**, páginas, bytes, classe de licença e **rota de obtenção**. Toda peça tem rota — conferido. É o que mantém a pesquisa **verificável sem ser redistribuível** |
+| **Checagem 8** de `verificar_integridade.py` | corpus × manifesto, presença e SHA-256. Pega o que **nada pegava**: um PDF que mude de bytes sem mudar de nome. Prova negativa: bit virado, peça removida, peça intrusa — **3 de 3** |
+| **`scripts/exportar_aparato.py`** | monta a árvore publicável: **131 arquivos, 8 MB**, contra 294 MB de binário excluído. Confere o resultado contra o manifesto e **apaga o destino** se vazar peça reservada. **Não cria remoto, não faz commit, não publica** |
+| **`LICENCA-E-DISTRIBUICAO.md`** | o regime, com os fatos apurados e a escolha de licença deixada em aberto |
+
+### 46.4 O vazamento que o teste pegou, e por que o default mudou
+
+A primeira versão do exportador excluía `Fontes/**/*.pdf` — **regra de caminho**. O teste **vazou um PDF de 24,7 MB** que estava em `.backup_pre_lula/`, fora de `Fontes/`.
+
+> **Regra de caminho falha no caminho que ninguém lembrou.** O filtro passou a **incluir por autorização**: texto e código entram, binário só por lista. Assim um diretório novo com binário dentro **não vaza por omissão** — ele aparece na lista para você decidir. Para guarda de publicação, o default tem de ser excluir.
+
+### 46.5 Duas higienes relatadas e NÃO executadas
+
+1. **`.backup_pre_lula/` está versionado** — 27 arquivos, 27 MB, com um PDF de 24,7 MB. São os estados anteriores do JSON, isto é, a sua rede de segurança: **tirar backup do controle de versão é decisão sua.** A exportação já o exclui por construção.
+2. **`STF_Democracia-Inabalada_Folder.pdf`: 37,4 MB em 6 páginas** — 6,23 MB por página, o pior índice do corpus. Recomprimir é seguro quanto à licença (ato oficial), mas **mudaria os bytes**, logo o SHA-256 do manifesto e o lastro de qualquer âncora que dependa da peça. **Não se toca em bytes de peça do corpus sem decisão explícita.**
+
+### 46.6 O que resta, e é jurídico
+
+**Sob que licença sai a sua obra** — codebook, scripts, documentos. Não escolhi: licença é decisão de quem assina. E os binários que são seus (tese, projeto, planilhas, os sete fichamentos `.docx` do eixo 05) ficam fora da exportação por padrão, **listados pelo script** para você dizer se entram.

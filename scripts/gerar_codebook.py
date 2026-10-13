@@ -319,6 +319,44 @@ PROCEDENCIA["Fontes/05_Bibliografia-teorica/GONZALEZ-BAILON-BORGE-HOLTHOEFER-RIV
     "QUATRO autores.",
 )
 
+# ARQUIVADA EM 13/10/2026, TAREFA 17 — e e a unica peca que a rodada de leitura na
+# fonte da camada A rendeu: UMA das 26 pendentes. As outras 25 ficaram, e o motivo
+# e de acesso: quatro devolvem 403 (Oxford, SAGE duas vezes, Wiley) e 22 nao tem
+# deposito aberto em lugar algum.
+#
+# A ROTA ENSINA O QUE O PROJETO JA SABIA E NAO HAVIA APLICADO AQUI: a peca aparece
+# no OpenAlex como OURO, com PDF da Wiley que devolve 403 — e o arquivo estava em
+# OUTRO CAMPO do mesmo registro, `locations`, que lista TODOS os depositos e nao so
+# o melhor. Foi assim que Mayntz apareceu no MPG.PuRe em 08/10; a diferenca e que
+# para os PENDENTES esse campo nunca havia sido consultado.
+#
+# QUATRO DIVERGENCIAS QUE SO A ABERTURA DO ARQUIVO MOSTROU, e tres delas repetem
+# padrao do projeto: sao TRES autores e a planilha da camada A nomeava zero (como
+# em Chen, Lukito e Koo e em Gonzalez-Bailon et al.); o volume e a 2a edicao de
+# 2019 e a triagem registrou 2018; o OpenAlex chama o deposito de
+# `submittedVersion` e a folha de capa diz FINAL PUBLISHED VERSION — divergencia
+# que, pela primeira vez, e a FAVOR do projeto; e a licenca nao e CC.
+PROCEDENCIA["Fontes/05_Bibliografia-teorica/SNOW-VLIEGENTHART-KETELAARS_The-framing-perspective-on-social-movements_Wiley-Blackwell-Companion-2ed_2019.pdf"] = (
+    "UvA-DARE / pure.uva.nl — achada pelo campo `locations` do OpenAlex", "bibliografia",
+    "SNOW, David A.; VLIEGENTHART, Rens; KETELAARS, Pauline. 'The Framing Perspective on "
+    "Social Movements: Its Conceptual Roots and Architecture'. In: SNOW, D. A.; SOULE, S. "
+    "A.; KRIESI, H.; McCAMMON, H. J. (Orgs.). 'The Wiley Blackwell Companion to Social "
+    "Movements'. 2. ed. Wiley Blackwell, 2019, cap. 22, p. 392-410. "
+    "DOI 10.1002/9781119168577.ch22. 20 p. no PDF, com camada de texto. Impressa = PDF + 390 "
+    "(a p. 1 do PDF e a folha de capa do deposito). "
+    "| LICENCA, e ela NAO e CC: a folha de capa declara 'Article 25fa Dutch Copyright Act' — "
+    "a emenda Taverne, que autoriza o deposito —, e diz que nao e permitido distribuir o "
+    "texto 'other than for strictly personal, individual use'. Uso pessoal de pesquisa esta "
+    "autorizado; REDISTRIBUIR nao esta, e por isso a peca e RESERVADA no manifesto e a "
+    "exportacao de aparato a exclui por construcao. O OpenAlex declara a peca OURO: segundo "
+    "caso, depois de Rich (2021), em que o erro esta no REGISTRO de acesso aberto, e o "
+    "primeiro em que o texto e alcancavel mas nao redistribuivel. "
+    "| SERVE A: PT-07, e e o que da ao marco teorico declarado do codebook — Framing (Snow e "
+    "Benford, 2000) — a sua primeira leitura na fonte. O balanco de 2000 segue FECHADO e NAO "
+    "LIDO, e ter lido este capitulo nao autoriza cita-lo: citar tese conferida apenas na "
+    "citacao de terceiro e o modo de falha que este projeto nomeia.",
+)
+
 # O MANIFESTO DO CORPUS, gerado pela tarefa 15 em 13/10/2026. Nao e fonte: e o
 # que torna esta pesquisa verificavel SEM redistribuir o corpus, porque 27 das 40
 # pecas de literatura nao podem ser redistribuidas -- duas declaram todos os

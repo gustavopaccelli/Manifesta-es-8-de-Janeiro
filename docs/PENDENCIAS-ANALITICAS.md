@@ -2125,3 +2125,103 @@ A primeira versão do exportador excluía `Fontes/**/*.pdf` — **regra de camin
 ### 46.6 O que resta, e é jurídico
 
 **Sob que licença sai a sua obra** — codebook, scripts, documentos. Não escolhi: licença é decisão de quem assina. E os binários que são seus (tese, projeto, planilhas, os sete fichamentos `.docx` do eixo 05) ficam fora da exportação por padrão, **listados pelo script** para você dizer se entram.
+
+---
+
+## 47. Tarefa 17 — uma peça das 26, e ela desmentiu o meu próprio auditor de licença — 🔶 13/10/2026
+
+**Encaminhamento:** *"Execute a tarefa 17."*
+
+Ler na fonte os 43 da camada A. Estavam **26 pendentes**. A rodada rendeu **uma**, e o número é o resultado, não o resumo de um esforço.
+
+### 47.1 A rota que faltava consultar, e por que ela existia
+
+`localizar_camada_a.py` guardava do OpenAlex apenas o `best_oa_location`. O registro tem outro campo — **`locations`, que lista TODOS os depósitos** —, e foi ele que achou Mayntz no MPG.PuRe em 08/10. **Para os 26 pendentes esse campo nunca havia sido consultado.** Consultado agora:
+
+| | Itens | |
+|:--|--:|:--|
+| Com depósito **aberto** no `locations` | 4 | e 3 já se sabiam barrados no editor |
+| Com depósito de **repositório** marcado fechado | 7 | vale sondar: foi assim que Mayntz apareceu |
+| **Sem depósito algum** | 22 | só a página do editor |
+
+**Rendeu uma peça: SNOW, VLIEGENTHART e KETELAARS (2019)**, capítulo 22 de *The Wiley Blackwell Companion to Social Movements*, 2ª ed., pp. 392-410, integral, no depósito da Universidade de Amsterdam. A rota do editor — Wiley, que o OpenAlex declara **ouro** — devolve 403. **O arquivo estava em outro campo do mesmo registro.**
+
+As sondas dos outros sete repositórios fecharam: **EUI Cadmus e `ricerca.sns.it` devolvem 403 em todo o host** — API REST e OAI-PMH inclusive —, e são **repositórios, não editores**, o que é categoria nova no mapa de acesso do projeto, onde repositório sempre passava. O CiteSeerX hoje **redireciona para a Wayback Machine**, e as duas devolveram 429 em três tentativas, como a Cambridge.
+
+### 47.2 O que a leitura deu, e é mais do que a peça
+
+**O marco teórico declarado do codebook passou a ter leitura na fonte.** `marco_teorico` diz *Framing (Snow & Benford, 2000)* — e esse balanço de 2000 **nunca foi lido**: está FECHADO na camada A, sem depósito em lugar algum. O capítulo lido é o balanço posterior, do mesmo autor principal, escrito para ser o enunciado da arquitetura do campo, com **nove conceitos-pilar**.
+
+> **E o limite fica declarado:** ter lido o capítulo de 2019 **não autoriza citar** Benford e Snow (2000) nem Snow *et al.* (1986). Citar tese conferida apenas na citação de terceiro é o modo de falha que este projeto nomeia. O que a leitura autoriza é citar o capítulo.
+
+**PT-07 ganhou âncora e uma qualificação do nome do seu mecanismo.** O registro chama o mecanismo de *alinhamento de quadros prévio*. Pela fonte, alinhamento é a ligação estratégica a um público — “Frame alignment processes encompass the strategic efforts of social movement actors and organizations to link their interests and goals with those of prospective adherents and resource providers” (p. 400 impressa, PDF p. 10) —, em quatro tipos que o capítulo atribui a Snow *et al.* (1986). O que a denúncia da PGR documenta em 22/03/2021 é o núcleo **deliberando e passando a disseminar um diagnóstico**, que na distinção do capítulo é **articulação e elaboração** de quadro. O alinhamento que corresponderia é o **bridging**, “the linkage of a movement organization with an unmobilized sentiment pool” (p. 400) — e isso é o que **PT-06** documenta em 2020-2021, não o que PT-07 documenta.
+
+> **O nome atual nomeia a família, não o processo.** NÃO renomeei: nomear mecanismo é decisão do pesquisador, pelo precedente da tarefa 19. A proposta está em 47.5.
+
+### 47.3 Quatro divergências que só a abertura do arquivo mostrou
+
+| O que o registro dizia | O que o arquivo diz |
+|:--|:--|
+| autoria não nomeada na planilha da camada A | **três autores**: Snow, Vliegenthart e Ketelaars — o mesmo padrão de Chen, Lukito e Koo e de González-Bailón *et al.* |
+| 2018 | **2019**, 2ª edição, pp. 392-410 |
+| OpenAlex: `submittedVersion` | a folha de capa diz **final published version** — primeira divergência de registro **a favor** do projeto |
+| OpenAlex: **ouro** | licença do **art. 25fa da lei holandesa** (emenda Taverne): uso pessoal autorizado, **redistribuição vedada** |
+
+### 47.4 E o auditor de licença da tarefa 15 me desmentiu — um dia depois de eu o escrever
+
+O manifesto classificou a peça nova como **CC**. Ela não é. O casamento veio de uma frase **contrafactual** da folha de capa: *“other than for strictly personal, individual use, unless the work is under an open content license (like creative commons)”* — a frase afirma que a obra **não** está sob CC, e o classificador a leu como declaração.
+
+> **Menção não é declaração: é a cifra certa no referente errado aplicada à licença**, e dentro de um script que eu escrevi na véspera para ser a base de uma decisão jurídica.
+
+**Um classificador que acabou de errar não se usa sem reler o que ele afirmou antes.** Reauditadas **as 15 peças classificadas CC, uma a uma, com o contexto de cada casamento**: 14 eram declaração real e 1 era esta hipótese. O conserto é estreito de propósito — desqualifica só o casamento que está dentro de uma hipótese (`unless`, `a menos que`, `salvo se`, `caso a obra`), e **não** usa `except`, porque *“except where otherwise noted, is licensed under a Creative Commons…”* é a fórmula de três obras da EdUERJ e da Editora UnB no corpus e é limitação de **escopo** de uma licença real.
+
+E a queda do CC exigiu o segundo conserto, sem o qual a peça cairia em **ABERTA**: `RESERVADA` só reconhecia *todos os direitos reservados*. Agora reconhece também a **proibição explícita de redistribuir** e o **art. 25fa**. Reclassificação medida peça por peça contra o estado anterior: **exatamente uma mudou**, a certa.
+
+**A cifra do regime de distribuição move-se com isso:** eram **27 de 40** peças de literatura não redistribuíveis; são **28 de 41** (57 MB). `LICENCA-E-DISTRIBUICAO.md` está atualizado; o item 46 fica como estava, porque é afirmação datada de 12/10.
+
+### 47.5 O que precisa da sua decisão
+
+1. **O nome do mecanismo de PT-07.** Hoje: *Alinhamento de quadros prévio*. Proposta: **Articulação e elaboração do quadro de fraude**, que é o que a fonte chama o processo documentado, deixando *alinhamento* para PT-06, onde o bridging de fato ocorre. Alternativa mais conservadora: manter o nome e acrescentar a especificação entre parênteses.
+2. **O campo `marco_teorico` do codebook**, que cita *Framing (Snow & Benford, 2000)* — obra não lida e sem rota. Proposta: citar o capítulo de 2019, que está lido e no corpus, mantendo o de 2000 como referência da genealogia. Não executei: é a declaração teórica do projeto, e é sua.
+3. **A sessão 4 de `02_PROPOSTA-DISCIPLINA.md`** indica Snow & Benford (1988) e Benford & Snow (2000) — os dois não lidos. Em programa de disciplina isso é normal; cabe decidir se o capítulo de 2019 entra no lugar ou ao lado.
+
+### 47.6 Os 25 que restam, e o que cada um depende
+
+**Oito dos 25 estão em um único periódico, a *Mobilization*** — mais de um terço do que falta da tarefa 17 depende de **um** acesso. Entre eles, *The Emergence, Development, and Future of the Framing Perspective* (2014), que é o companheiro direto do capítulo lido hoje.
+
+### Os 25 pendentes, por motivo medido em 13/10/2026
+
+**9 têm arquivo em algum servidor e o bloqueio é do cliente automatizado** — é a classe que o navegador comum resolve, e foi assim que nove peças chegaram:
+
+| Obra | DOI | Bloqueio | Serve a |
+|:--|:--|:--|:--|
+| Context and Causal Mechanisms in Political Analysis (2009), *Comparative Political Studies* | `10.1177/0010414009331724` | 429 — CiteSeerX, hoje redirecionado à Wayback | método: mecanismo é sempre situado em contexto; sust |
+| The Diffusion of Revolution: ‘1848’ in Europe and Latin Amer (2009), *International Organization* | `10.1017/s0020818309090146` | 429 em 3 tentativas — Cambridge Core | PT-08: difusão e emulação entre países, com a Améric |
+| Relational Dynamics and Processes of Radicalization: A Compa (2012), *Mobilization: An International Qua* | `10.17813/maiq.17.1.u7rw348t8200174h` | 403 — EUI Cadmus e ricerca.sns.it | PT-06, PT-15 e PT-16: dinâmica relacional da radical |
+| CONTENTIOUS EPISODE ANALYSIS* (2019), *Mobilization: An International Qua* | `10.17813/1086-671x-24-3-251` | 403 — EUI Cadmus | método: a unidade 'episódio contencioso' é a unidade |
+| Subnational State Capacity and the Repression of Protest: Ev (2020), *Political Research Quarterly* | `10.1177/1065912920919494` | 403 — SAGE (Cloudflare) | PT-28: capacidade estatal subnacional e dispositivo  |
+| Social Movement Organizations: Growth, Decay and Change (1966), *Social Forces* | `10.1093/sf/44.3.327` | 403 — Oxford Academic (Cloudflare) | PT-52: crescimento e decadência de organização — a d |
+| Anti-refugee Mobilization in Social Media: The Case of Soldi (2018), *Social Media + Society* | `10.1177/2056305118764431` | 403 — SAGE (Cloudflare) | PT-06: mobilização de extrema-direita em mídia socia |
+| Networks, Diffusion, and Cycles of Collective Action (2003), *Social Movements and Networks* | `10.1093/0199251789.003.0008` | 429 — CiteSeerX, hoje redirecionado à Wayback | PT-29 e PT-30: difusão em rede, contágio e ciclo |
+| The Logic of Process Tracing Tests in the Social Sciences (2012), *Sociological Methods & Research* | `10.1177/0049124112437709` | 429 — CiteSeerX, hoje redirecionado à Wayback | método: formalização dos testes de process tracing |
+
+**16 não têm depósito aberto em nenhum repositório** — nesses o limite é de assinatura, não de coleta:
+
+| Obra | DOI | Serve a |
+|:--|:--|:--|
+| Linking Mobilization Frames and Political Opportunities: Ins (1996), *American Sociological Review* | `10.2307/2096308` | PT-07 com PT-03D: quadro de mobilização acoplado à o |
+| Framing Processes and Social Movements: An Overview and Asse (2000), *Annual Review of Sociology* | `10.1146/annurev.soc.26.1.611` | PT-07 e PT-50A: a referência canônica de enquadramen |
+| Case Study Research (2006), *Cambridge University Press* | `10.1017/cbo9780511803123` | método: desenho de estudo de caso único, que é o des |
+| Contentious Performances (2008), *Cambridge University Press* | `10.1017/cbo9780511804366` | PT-01, PT-02, PT-12 e PT-33: a formulação de repertó |
+| Discursive Opportunities, Feeling Rules, and the Rise of Pro (2009), *Mobilization: An International Qua* | `10.17813/maiq.14.3.kx87723664558jm4` | PT-07 e PT-50A: oportunidades discursivas e regras d |
+| Disentangling Protest Cycles: An Event-History Analysis of N (2010), *Mobilization: An International Qua* | `10.17813/maiq.15.1.86260543m3110705` | PT-62: análise de história de eventos de ciclos de p |
+| Mechanisms of Maidan: The Structure of Contingency in the Ma (2011), *Mobilization: An International Qua* | `10.17813/maiq.16.1.74v41g7nl3722775` | modelo do gênero: explicação por mecanismos de um ún |
+| The Emergence, Development, and Future of the Framing Perspe (2014), *Mobilization: An International Qua* | `10.17813/maiq.19.1.x74278226830m69l` | PT-07: o balanço de 25 anos do alinhamento de quadro |
+| THE UNINTENDED CONSEQUENCES OF ESCALATED REPRESSION* (2021), *Mobilization: An International Qua* | `10.17813/1086-671x-26-1-87` | PT-53 e PT-62: consequências não pretendidas da repr |
+| DETERRENCE OR DEFIANCE? HOW SEVERITY AND SELECTIVITY SHAPE P (2025), *Mobilization: An International Qua* | `10.17813/1086-671x-30-4-387` | PT-53 e PT-61: severidade e seletividade da repressã |
+| E-extremism: A conceptual framework for studying the online  (2022), *New Media & Society* | `10.1177/14614448221098360` | PT-06: quadro conceitual para extrema-direita online |
+| A Tale of Two Cultures (2012), *Princeton University Press* | `10.23943/princeton/9780691149707.001.0001` | método: as duas culturas de inferência, qualitativa  |
+| The Impacts of Repression: The Effect of Police Presence and (2010), *Research in Social Movements, Conf* | `10.1108/s0163-786x(2010)0000030006` | PT-27, PT-31 e PT-32: presença e ação policial como  |
+| Linking consensus to action: does frame alignment amongst sy (2020), *Social Movement Studies* | `10.1080/14742837.2020.1770071` | PT-07: alinhamento de quadros entre simpatizantes e  |
+| Focusing on Focusing Events: Event Selection, Media Coverage (2018), *Sociological Forum* | `10.1111/socf.12442` | método: seleção de evento e viés de cobertura — a re |
+| Event Catalogs as Theories (2002), *Sociological Theory* | `10.1111/1467-9558.00161` | método: catálogo de eventos como teoria — é o que o  |

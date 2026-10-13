@@ -36,8 +36,33 @@ CC = re.compile(r"creative commons|creativecommons\.org|\bcc[ -]?by\b|\bcc[ -]?b
                 r"(nc|sa|nd)\b")
 VARIANTE = re.compile(r"cc[ -]?by(?:[ -]?(?:nc|sa|nd))*", re.I)
 ABERTA = re.compile(r"open access|acesso aberto|acceso abierto|openaccess")
+
+# MENCAO NAO E DECLARACAO — acrescentado em 13/10/2026, e o caso que forcou isto e
+# do proprio projeto: o deposito de Amsterdam de Snow, Vliegenthart e Ketelaars
+# (2019) diz "other than for strictly personal, individual use, UNLESS the work is
+# under an open content license (like creative commons)". A frase afirma que a obra
+# NAO esta sob CC, e o classificador a leu como declaracao de CC. E a cifra certa no
+# referente errado aplicada a licenca.
+#
+# A regra e estreita de proposito: so desqualifica o casamento que esta DENTRO de
+# uma hipotese. Nao usa "except", porque "except where otherwise noted, is licensed
+# under a creative commons..." -- que e a formula das tres obras da EdUERJ e da
+# Editora UnB no corpus -- e limitacao de ESCOPO de uma licenca real, nao negacao
+# dela. Reauditadas as 15 pecas classificadas CC em 13/10/2026, uma a uma, com o
+# contexto de cada casamento: 14 eram declaracao e 1 era esta hipotese.
+CONTRAFACTUAL = re.compile(r"(?:unless|a menos que|salvo se|caso a obra)"
+                           r"[^.]{0,90}$")
+
+# "Todos os direitos reservados" NAO e a unica forma de reservar direitos, e supor
+# que fosse deixaria a peca de 13/10 cair em ABERTA -- porque a folha de capa do
+# deposito cita openaccess.nl. Duas formas novas, as duas lidas no arquivo:
+# a PROIBICAO EXPLICITA de redistribuir, e o art. 25fa da lei holandesa (emenda
+# Taverne), que autoriza o deposito para uso pessoal e veda a redistribuicao.
 RESERVADA = re.compile(r"todos os direitos reservados|all rights reserved|"
-                       r"tous droits reserves|todos los derechos reservados")
+                       r"tous droits reserves|todos los derechos reservados|"
+                       r"not permitted to download|not permitted to forward|"
+                       r"nao e permitido .{0,40}distribuir|"
+                       r"article 25fa|artikel 25fa")
 
 
 def norm(s):
@@ -63,7 +88,12 @@ def classifica(cam):
     n = len(r.pages)
     alvo = list(range(min(6, n))) + list(range(max(0, n - 3), n))
     txt = norm(" ".join((r.pages[i].extract_text() or "") for i in sorted(set(alvo))))
-    if CC.search(txt):
+    # CC vale se HOUVER ao menos um casamento que nao esteja dentro de hipotese.
+    # A varredura e por casamento, nao pelo texto todo: uma peca pode mencionar CC
+    # numa hipotese E declarar CC em outro lugar, e nesse caso a declaracao vence.
+    afirmativo = [m for m in CC.finditer(txt)
+                  if not CONTRAFACTUAL.search(txt[max(0, m.start() - 90):m.start()])]
+    if afirmativo:
         m = VARIANTE.search(txt)
         v = re.sub(r"[ ]+", "-", m.group(0).upper().replace("CC ", "CC-")) if m else "CC"
         return "CC", v, n

@@ -81,6 +81,13 @@ NO_CORPUS = {
     "10.1002/9780470674871.wbespm127":
         "Fontes/05_Bibliografia-teorica/SNOW-DELLA-PORTA-KLANDERMANS-McADAM_"
         "Wiley-Blackwell-Encyclopedia-of-Social-and-Political-Movements_2013.pdf",
+    # Entrou no corpus em 13/10/2026. A rota que o REGISTRO declara para esta peca
+    # e o PDF da Wiley, que devolve 403; a rota que serviu o arquivo foi o deposito
+    # de Amsterdam, no campo `locations`. Declarar CORPUS aqui diz o que e verdade
+    # hoje -- o arquivo esta em Fontes/ -- em vez de repetir a rota do registro.
+    "10.1002/9781119168577.ch22":
+        "Fontes/05_Bibliografia-teorica/SNOW-VLIEGENTHART-KETELAARS_"
+        "The-framing-perspective-on-social-movements_Wiley-Blackwell-Companion-2ed_2019.pdf",
 }
 
 # =============================================================================
@@ -153,6 +160,25 @@ LIDOS = {
         "30/09", "corpus, integral",
         "Fontes/05_Bibliografia-teorica/SNOW-DELLA-PORTA-KLANDERMANS-McADAM_"
         "Wiley-Blackwell-Encyclopedia-of-Social-and-Political-Movements_2013.pdf"),
+    # ACHADA EM 13/10/2026 PELO CAMPO `locations` DA API DO OpenAlex, que lista
+    # TODOS os depositos e nao so o melhor. Este script guardava do OpenAlex
+    # apenas o best_oa_location, e por isso o deposito de Amsterdam nunca havia
+    # aparecido: a rota do editor (Wiley, declarada OURO) devolve 403, e a rota
+    # que serve o arquivo esta em outro campo. Foi assim que Mayntz apareceu no
+    # MPG.PuRe em 08/10, e vale para os pendentes que ainda tenham deposito.
+    # QUATRO divergencias que so a abertura do arquivo mostrou: sao TRES autores
+    # e a planilha nomeava zero; o volume e a 2a edicao, de 2019, pp. 392-410, e
+    # a triagem registrou 2018; o OpenAlex chama o deposito de submittedVersion e
+    # a folha de capa diz FINAL PUBLISHED VERSION; e a licenca e a do art. 25fa
+    # da lei holandesa (emenda Taverne), nao CC -- uso pessoal permitido,
+    # redistribuicao vedada, de modo que a peca e RESERVADA no manifesto.
+    "10.1002/9781119168577.ch22": (
+        "13/10",
+        "UvA-DARE (Pure) via campo `locations`, integral, 20 p. — impressa = "
+        "PDF + 390; TRES autores (Snow, Vliegenthart e Ketelaars); 2a ed. de "
+        "2019, pp. 392-410; licenca Taverne, nao CC",
+        "Fontes/05_Bibliografia-teorica/SNOW-VLIEGENTHART-KETELAARS_"
+        "The-framing-perspective-on-social-movements_Wiley-Blackwell-Companion-2ed_2019.pdf"),
 }
 
 # Impedimento declarado, para a conta não sugerir que só falta querer.

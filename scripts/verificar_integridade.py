@@ -308,6 +308,46 @@ def main():
     if not achou_morto:
         print("  OK — nenhum nome retirado reapareceu")
 
+    # O MESMO VIGIA, APONTADO PARA DENTRO — acrescentado em 13/10/2026, tarefa 17.
+    # A vigilancia acima olha quatro artefatos A MAO e nao olhava o proprio JSON,
+    # por ele ser a fonte de verdade. E a nota metodologica do JSON continuava
+    # ENSINANDO 'Contextual' como valor vigente cinco dias depois de a classe sair
+    # do vocabulario — e omitindo 'Confirmado em fonte primaria', que existe. Fonte
+    # de verdade nao e sinonimo de coerente consigo mesma.
+    #
+    # A regra e de DUAS VIAS, e por isso nao depende de manter lista de nome morto:
+    # toda classe do vocabulario tem de ser citada na nota, e a nota nao pode citar
+    # classe que nao esta no vocabulario. Escopo deliberadamente estreito: so
+    # `aviso_metodologico`. As ocorrencias de 'Contextual' em `revisoes` e nos campos
+    # de prosa dos registros sao narracao DATADA de recodificacao e tem de ficar —
+    # guarda que dispara em narracao historica e ruido, e ruido treina a ignorar guarda.
+    # UMA SEMANTICA SO, e a primeira versao desta guarda tinha duas: a via de ida
+    # testava substring ("a classe e mencionada?") e a de volta testava aspa ("a
+    # classe e ENSINADA como vigente?"). A prova negativa pegou a incoerencia --
+    # tirar as aspas de uma classe vigente nao disparava nada, porque o nome
+    # continuava no texto. Aqui as duas vias leem a MESMA marca: aspa simples no
+    # aviso significa valor vigente. Mencao historica, sem aspas, fica livre -- e e
+    # assim que a nota pode contar que Contextual saiu sem a guarda disparar.
+    import re as _re0
+    aviso = str(dados["metadados"].get("aviso_metodologico") or "")
+    vocab = set(dados["metadados"].get("vocabulario_status_classe") or [])
+    citadas = set(_re0.findall(r"'([^']{4,40})'", aviso))
+    nao_citadas = sorted(c for c in vocab if c not in citadas)
+    # Nome de classe conhecido, entre aspas, e fora do vocabulario: o residuo de
+    # 13/10 era exatamente este — Contextual ensinada como valor vigente.
+    CONHECIDAS = CLASSES | {"Contextual"}
+    intrusas = sorted(c for c in citadas if c in CONHECIDAS and c not in vocab)
+    for c in nao_citadas:
+        falhas.append("aviso_metodologico não cita a classe vigente: {}".format(c))
+        print("    X aviso_metodologico nao cita a classe vigente '{}'".format(c))
+    for c in intrusas:
+        falhas.append("aviso_metodologico cita classe fora do vocabulário: {}".format(c))
+        print("    X aviso_metodologico cita '{}', que nao esta no vocabulario"
+              .format(c))
+    if not nao_citadas and not intrusas:
+        print("  OK — a nota metodológica e o vocabulário controlado dizem o mesmo "
+              "({} classes)".format(len(vocab)))
+
     # Remissao entre registros: quando um campo diz "ver PT-52", esse registro tem
     # de existir. Guarda criada em 10/10/2026, quando PT-62 passou a REMETER a
     # PT-49, PT-52, PT-53 e PT-61 em vez de reafirmar o que eles provam. O projeto

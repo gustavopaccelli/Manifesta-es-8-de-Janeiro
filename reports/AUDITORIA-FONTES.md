@@ -128,6 +128,7 @@ Além disso, **sete registros citavam dois documentos e declaravam apenas um**. 
 | HC 164.493 | 1 | 441 | oficial |
 | HC 193.726-2 | 1 | 182 | oficial |
 | HC 193.726 | 1 | 264 | oficial |
+| SNOW VLIEGENTHART E KETELAARS 2019 | 1 | 20 | bibliografia |
 | CASTANEDA E JENKS 2023 | 1 | 15 | literatura |
 | CHEN LUKITO E KOO 2023 | 1 | 13 | literatura |
 | NUNES 2024 | 1 | 20 | literatura |
@@ -164,7 +165,7 @@ Cada um aponta arquivo e página. A numeração impressa do relatório da CPMI c
 | PT-06A | PGR | PGR: 8 | Confirmado |
 | PT-06B | HC 164.493 + HC 193.726-2 | HC 164.493: inteiro teor | Confirmado |
 | PT-06C | HC 193.726 | — | Confirmado |
-| PT-07 | PGR | PGR: 8, 249 | Confirmado em fonte primária |
+| PT-07 | PGR + SNOW VLIEGENTHART E KETELAARS 2019 | PGR: 8, 249 \| SNOW VLIEGENTHART E KETELAARS 2019: 6, 7, 8, 10 | Confirmado em fonte primária |
 | PT-08 | CPMI + CASTANEDA E JENKS 2023 + CHEN LUKITO E KOO 2023 | CPMI: 614 \| CASTANEDA E JENKS 2023: 4, 10 \| CHEN LUKITO E KOO 2023: 1 | Confirmado |
 | PT-08A | CPMI | CPMI: 465-468, 466, 467, 468 | Confirmado em fonte primária |
 | PT-08B | CPMI | CPMI: 468-469 | Confirmado em fonte primária |

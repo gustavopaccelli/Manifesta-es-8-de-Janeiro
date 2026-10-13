@@ -88,7 +88,10 @@ def main():
              sum(1 for l in linhas if l["documental"] == "nao")))
     print("  %.0f MB no total" % (sum(l["bytes"] for l in linhas) / 1e6))
     if sem_rota:
-        print("  ! %d peça(s) SEM rota declarada em PROCEDENCIA — quem for conferir")
+        # O %d nasceu sem argumento em 13/10/2026 e imprimia o proprio marcador:
+        # o aviso funcionava, a cifra nao existia. Corrigido na rodada seguinte.
+        print("  ! %d peça(s) SEM rota declarada em PROCEDENCIA — quem for conferir"
+              % len(sem_rota))
         print("    esta pesquisa não teria como obtê-las:")
         for l in sem_rota:
             print("      %s" % l["caminho"])

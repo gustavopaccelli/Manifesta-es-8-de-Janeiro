@@ -17,7 +17,7 @@ python scripts/gerar_codebook.py
 echo "== 2/8  gerar_auditoria — JSON -> reports/AUDITORIA-FONTES.md"
 python scripts/gerar_auditoria.py
 
-echo "== 3/8  verificar_integridade — seis checagens estruturais"
+echo "== 3/8  verificar_integridade — oito checagens estruturais"
 python scripts/verificar_integridade.py
 
 echo "== 4/8  conferir_figuras — as figuras de reports/figures/ x codebook"

@@ -13,15 +13,17 @@ Não é preferência de cautela. A auditoria de licença — `python scripts/aud
 | | Arquivos | |
 |:--|--:|:--|
 | **Documental** | **22** | 21 atos oficiais + 1 CC |
-| **Literatura** | **40** | 13 CC · **2 com todos os direitos reservados impressos** · 25 sem declaração |
+| **Literatura** | **41** | 14 CC · **3 que vedam a redistribuição no próprio arquivo** · 24 sem declaração |
 
-**27 das 40 peças de literatura não podem ser redistribuídas** — 56 MB. Entre elas:
+**28 das 41 peças de literatura não podem ser redistribuídas** — 57 MB. Entre elas:
 
 - **KUNRATH SILVA (2018)** e **TATAGIBA (2018)**, as duas pela *Lusotopie*, que declaram **todos os direitos reservados no próprio arquivo**. A primeira **ancora PT-01, PT-02, PT-04 e PT-05**;
 - **TARROW**, *O poder em movimento*, Vozes;
 - **McADAM, TARROW e TILLY**, *Dynamics of Contention*, Cambridge;
 - a **Wiley-Blackwell Encyclopedia of Social and Political Movements**, 1.638 páginas;
 - **ALONSO**, *Treze*, Companhia das Letras.
+
+> **ATUALIZADO EM 13/10/2026, e a correção é do classificador, não da contagem.** A tarefa 17 arquivou uma peça nova e o auditor a classificou **CC** por uma frase **contrafactual** da folha de capa do depósito — *unless the work is under an open content license (like creative commons)* —, que afirma justamente que a obra **não** está sob CC. **Menção não é declaração.** Reauditadas as 15 peças então classificadas CC, uma a uma, com o contexto de cada casamento: 14 eram declaração e 1 era esta hipótese. E `RESERVADA` passou a reconhecer duas formas que faltavam — a **proibição explícita de redistribuir** e o **art. 25fa da lei holandesa** (emenda Taverne) —, sem o que a peça cairia em *ABERTA*. Exatamente uma peça mudou de classe. Ver `docs/PENDENCIAS-ANALITICAS.md`, item 47.4.
 
 > **E "sem declaração" não significa livre:** significa desconhecido, e desconhecido conta como reservado por omissão. A regra tem um caso que a justifica: **Rich (2021)**, que o OpenAlex declarava **ouro** e que está à venda em livraria. **Registro de acesso aberto pode estar errado sobre a licença; o arquivo é o que vale.**
 

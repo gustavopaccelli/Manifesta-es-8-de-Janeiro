@@ -509,7 +509,7 @@ O cabeçalho ganhou um bloco de revisão declarando o que foi e o que **não** f
 
 ### 19.2 O achado que vale como método: a checagem amostral aprovava pelo motivo errado
 
-`scripts/recodificar_paginas_execucao.py` corrigiu `fonte_pagina` de PT-58, PT-59 e PT-60, que apontavam para a **capa e a assinatura** das peças em vez das páginas onde as transcrições estão. E corrigiu `metadados.n_subeventos` de 81 para 82, que estava defasado desde a entrada do 82º registro.
+`scripts/historico/recodificar_paginas_execucao.py` corrigiu `fonte_pagina` de PT-58, PT-59 e PT-60, que apontavam para a **capa e a assinatura** das peças em vez das páginas onde as transcrições estão. E corrigiu `metadados.n_subeventos` de 81 para 82, que estava defasado desde a entrada do 82º registro.
 
 O importante é **por que ninguém tinha visto**. `conferir_paginas.py` dava OK nos três:
 
@@ -609,7 +609,7 @@ Nenhum destes é falta de dado. Todos são escolha.
 | §2.6 | `Fontes/01_` era abreviação de prosa, não caminho — vira `Fontes/01_Arco-judicial_2017-2021/` |
 | PT-10 | a tabela citava "CPMI, p. 999, **1021** e 1023" e o `fonte_pagina` trazia só 999 e 1023 |
 
-**O caso PT-10 inverte a expectativa e por isso vale registro.** Nas duas rodadas anteriores o JSON estava certo e a peça derivada, errada. Aqui foi o contrário: o relatório citava a página certa e o campo estruturado do codebook a havia perdido — o próprio registro nomeia as três páginas em `fonte_trecho` e em `status_verificacao`. A p. 1021 foi lida no PDF antes da correção e sustenta a afirmação: o diretor-geral da PRF declara ali que "essa foi, talvez, a maior manifestação do mundo, com **1,3 mil bloqueios montados**", a mesma cifra que a p. 999 registra como "um total de 1.300 pontos de interdição no País". Corrigido por `scripts/recodificar_pagina_pt10.py`.
+**O caso PT-10 inverte a expectativa e por isso vale registro.** Nas duas rodadas anteriores o JSON estava certo e a peça derivada, errada. Aqui foi o contrário: o relatório citava a página certa e o campo estruturado do codebook a havia perdido — o próprio registro nomeia as três páginas em `fonte_trecho` e em `status_verificacao`. A p. 1021 foi lida no PDF antes da correção e sustenta a afirmação: o diretor-geral da PRF declara ali que "essa foi, talvez, a maior manifestação do mundo, com **1,3 mil bloqueios montados**", a mesma cifra que a p. 999 registra como "um total de 1.300 pontos de interdição no País". Corrigido por `scripts/historico/recodificar_pagina_pt10.py`.
 
 **O limite dos dois verificadores, declarado:** comparam o que a peça *declara* — ids, páginas, selo, cifras mortas, caminhos —, não a prosa. Uma cifra nova e errada passa; uma afirmação causal sem lastro passa. Eles pegam **regressão declarada**, não erro de interpretação.
 
@@ -625,7 +625,7 @@ O caso PT-10 apareceu de raspão: o relatório citava uma página a mais, e por 
 
 **Na estreia, oito candidatos: seis legítimos e dois reais.** Os legítimos ficam registrados porque vão reaparecer a cada execução — PT-12 e PT-34 citam páginas para *refutar* uma cifra, PT-39 remete à página de PT-08A, PT-06C à denúncia que ancora PT-07, e PT-59 é artefato do varredor ("PGR" ali é parte processual, não documento).
 
-**Os dois reais foram corrigidos em 25/09/2026**, por `scripts/recodificar_ancoras_pt15_pt28.py`. Li as quatro páginas no PDF antes de mexer:
+**Os dois reais foram corrigidos em 25/09/2026**, por `scripts/historico/recodificar_ancoras_pt15_pt28.py`. Li as quatro páginas no PDF antes de mexer:
 
 | Registro | A prosa citava | O campo ancorava | O que a página traz |
 |:--|:--|:--|:--|
@@ -655,7 +655,7 @@ Era a decisão mais antiga da lista, aberta desde 11/09. A versão anterior do `
 
 Agora cada transcrição precisa ser localizada, intervalos são expandidos, a elisão parte a citação em fragmentos e a normalização de busca apaga aspas — duas "não localizadas", PT-08A e PT-36, eram só isso: o PDF escreve «o painel "as mulatas", de di cavalcanti» e o codebook transcreve sem as aspas internas.
 
-**Dois erros de página reais na estreia**, corrigidos por `scripts/recodificar_paginas_pt02a_pt03a.py` com as páginas lidas antes:
+**Dois erros de página reais na estreia**, corrigidos por `scripts/historico/recodificar_paginas_pt02a_pt03a.py` com as páginas lidas antes:
 
 - **PT-02A** citava a **p. 3** do acórdão das ADC 43/44/54, que é a **autuação** — folha de rosto com partes e advogados. O trecho está na **p. 6**, onde começa o relatório do min. Marco Aurélio.
 - **PT-03A** ancorava só a p. 395, do dispositivo. A segunda transcrição — "a sentença condenou o ex-presidente por um único ato de corrupção" — está na **p. 348** do mesmo volume.
@@ -678,7 +678,7 @@ Testado por injeção de defeito: página trocada em PT-24 reprova (1/2 localiza
 
 ## 22. Os 411 DOIs das sínteses, verificados — ✅ 29/09/2026
 
-Tarefa 9 da ordem de ataque, aberta desde 14/08/2026 — e **não intocada**: dez itens foram conferidos à mão em **01/09/2026**, quatro divergentes, nas fichas de [`projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md`](../projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md). Os quatro modos de falha que essa leva nomeou orientaram esta. `scripts/verificar_dois_sinteses.py` extrai os DOIs das sete sínteses LeapSpace, consulta cada um no CrossRef — e, se lá não estiver, na DataCite — e emite [`data/processed/dois_sinteses_leapspace.csv`](../data/processed/dois_sinteses_leapspace.csv). Fica **fora do ciclo**, como o varredor de `fonte_pagina`: é instrumento de triagem, não gate.
+Tarefa 9 da ordem de ataque, aberta desde 14/08/2026 — e **não intocada**: dez itens foram conferidos à mão em **01/09/2026**, quatro divergentes, nas fichas de [`analise/08_BIBLIOGRAFIA-METODOLOGICA.md`](analise/08_BIBLIOGRAFIA-METODOLOGICA.md). Os quatro modos de falha que essa leva nomeou orientaram esta. `scripts/verificar_dois_sinteses.py` extrai os DOIs das sete sínteses LeapSpace, consulta cada um no CrossRef — e, se lá não estiver, na DataCite — e emite [`data/processed/dois_sinteses_leapspace.csv`](../data/processed/dois_sinteses_leapspace.csv). Fica **fora do ciclo**, como o varredor de `fonte_pagina`: é instrumento de triagem, não gate.
 
 ### 22.1 A contagem certa é 411, não 325
 
@@ -753,7 +753,7 @@ A pedido seu, os três DOIs quebrados ganharam substituto verificado no CrossRef
 | `10.4324/9781315731377-34` | `10.4324/9781315731377-28` | Chenoweth (2015), *Political mobilization and institutions* |
 | — (par deslocado) | `10.4324/9780203856949-34` | Vaughan (2010), o capítulo a que a síntese deu o `-40` |
 
-Registrados em três lugares: a ficha da **segunda leva** em [`projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md`](../projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md) §1.1, a lista de achados de [`Fontes/LEIA-ME_fontes.md`](../Fontes/LEIA-ME_fontes.md), e os dicionários `NAO_EXISTEM` e `VIZINHOS_TROCADOS` de `scripts/verificar_dois_sinteses.py`. **As sínteses não foram editadas** — `Fontes/` é imutável por princípio, e a correção pertence ao registro bibliográfico, não à fonte.
+Registrados em três lugares: a ficha da **segunda leva** em [`analise/08_BIBLIOGRAFIA-METODOLOGICA.md`](analise/08_BIBLIOGRAFIA-METODOLOGICA.md) §1.1, a lista de achados de [`Fontes/LEIA-ME_fontes.md`](../Fontes/LEIA-ME_fontes.md), e os dicionários `NAO_EXISTEM` e `VIZINHOS_TROCADOS` de `scripts/verificar_dois_sinteses.py`. **As sínteses não foram editadas** — `Fontes/` é imutável por princípio, e a correção pertence ao registro bibliográfico, não à fonte.
 
 **Isto corrige identificadores, não incorpora obras.** Se Vaughan, O'Halloran ou Chenoweth entram na bibliografia do artigo continua sendo juízo seu, e depende da triagem do passo 2.
 
@@ -980,7 +980,7 @@ O codebook faz as duas coisas que essa frase separa: chama de `mecanismo_causal`
 
 O pesquisador acrescentou ao eixo 05 a **Wiley-Blackwell Encyclopedia of Social and Political Movements** (Snow, della Porta, Klandermans e McAdam, orgs., 2013; 1.638 p., com camada de texto). **É a obra-contêiner de boa parte dos 411 DOIs das sínteses** — 434 verbetes com DOI próprio —, e por isso destrava a tarefa 17: sete verbetes da camada A e adjacências deixam de depender de assinatura de editor.
 
-**Quatro verbetes lidos integralmente na fonte:** *Mechanisms* (Tarrow), *Protest cycles and waves* (della Porta), *Resource mobilization theory* (Edwards & Gillham) e *Critical mass theory* (Oliver). O resultado está em [`projeto-pos-doc/09_CONCEITO-MECANISMO.md`](../projeto-pos-doc/09_CONCEITO-MECANISMO.md), com a tabela de **quatorze concepções de mecanismo causal** e o preço de cada saída.
+**Quatro verbetes lidos integralmente na fonte:** *Mechanisms* (Tarrow), *Protest cycles and waves* (della Porta), *Resource mobilization theory* (Edwards & Gillham) e *Critical mass theory* (Oliver). O resultado está em [`analise/09_CONCEITO-MECANISMO.md`](analise/09_CONCEITO-MECANISMO.md), com a tabela de **quatorze concepções de mecanismo causal** e o preço de cada saída.
 
 **Só um dos quatro estava nos 411, e isso confirma o buraco do item 23.2.** *Mechanisms* (`wbespm127`) é o item 39-40 da camada A. Os outros três — **protest cycles, resource mobilization e critical mass** — **não aparecem em nenhuma das sete sínteses**, embora duas delas se chamem `Protest_cycle_LeapSpace.docx` e `Mobilization_structures_LeapSpace.docx`. As sínteses citam 411 DOIs e não citam o verbete de referência do próprio conceito que dá nome ao arquivo. **A leitura na fonte, portanto, subiu de 5 para 6 dos 43** — o `.pub2` de 2022 é revisão posterior e não está neste volume.
 
@@ -1010,7 +1010,7 @@ A enciclopédia imprime no rodapé de cada verbete `10.1002/9781405198431.wbespm
 
 ### 25.6 Os sete verbetes restantes, lidos na fonte — e PT-28 ganha hipótese rival
 
-Onze verbetes lidos integralmente, registro em [`projeto-pos-doc/10_VERBETES-ENCICLOPEDIA.md`](../projeto-pos-doc/10_VERBETES-ENCICLOPEDIA.md). Os sete DOIs foram testados: **todos resolvem, e nos sete o título e a autoria casam** com o que a obra imprime.
+Onze verbetes lidos integralmente, registro em [`analise/10_VERBETES-ENCICLOPEDIA.md`](analise/10_VERBETES-ENCICLOPEDIA.md). Os sete DOIs foram testados: **todos resolvem, e nos sete o título e a autoria casam** com o que a obra imprime.
 
 **O achado de maior consequência é sobre PT-28.** *Policing protest* (della Porta & Reiter) afirma que "a intervenção da polícia em caso de violação da lei **não é automática**: muitas violações menores são toleradas para evitar desordem maior", e que "a polícia goza de **amplas margens de discricionariedade**". E fornece **duas hipóteses rivais em sua melhor versão**: (i) a **seletividade estrutural** — "police repression is more likely to be directed against groups that are **poorer in material resources as well as in political connections**" —, que **prediz policiamento brando** para um acampamento financiado e com aval de autoridade, sem precisar de conivência; e (ii) a **sobrecarga analítica** da inteligência, que a literatura nomeia como falha conhecida. **PT-28 continua correto na forma — condição necessária é *hoop test* —, mas está substantivamente desprotegido enquanto não enfrentar a rival.**
 
@@ -1084,7 +1084,7 @@ A **cúpula da segurança do DF** (SSP-DF, SOI, GSI) entra como `CONTESTADA`, co
 
 ## 27. As hipóteses rivais de PT-28 — uma cai, outra sobrevive e relocaliza o argumento — ✅ 30/09/2026
 
-Tarefa 20, em [`projeto-pos-doc/11_HIPOTESES-RIVAIS-PT-28.md`](../projeto-pos-doc/11_HIPOTESES-RIVAIS-PT-28.md). É também a primeira aplicação do enquadramento de Zaks (2017) que o item 2.1 de `08` registra como "a peça que o projeto mais precisa e não tem".
+Tarefa 20, em [`analise/11_HIPOTESES-RIVAIS-PT-28.md`](analise/11_HIPOTESES-RIVAIS-PT-28.md). É também a primeira aplicação do enquadramento de Zaks (2017) que o item 2.1 de `08` registra como "a peça que o projeto mais precisa e não tem".
 
 ### 27.1 Cinco hipóteses, e a classificação já resolve duas coisas
 
@@ -1232,7 +1232,7 @@ Reformulado para o que a fonte sustenta: **"Balanço do ciclo repressivo-judicia
 
 ## 31. A camada $T_{-1}$ conjuntural, codificada na fonte — e a lacuna de 2018-2022 fica declarada — 🔶 04/10/2026
 
-Tarefa 14. Relatório completo em [`projeto-pos-doc/12_CAMADA-T-1-CONJUNTURAL.md`](../projeto-pos-doc/12_CAMADA-T-1-CONJUNTURAL.md).
+Tarefa 14. Relatório completo em [`analise/12_CAMADA-T-1-CONJUNTURAL.md`](analise/12_CAMADA-T-1-CONJUNTURAL.md).
 
 ### 31.1 Três de sete, e a literatura veio de onde ninguém tinha olhado
 
@@ -1280,7 +1280,7 @@ O painel do alto dizia **60 em fonte primária / 14 confirmados / 7 contextuais*
 
 ## 32. A descontinuidade sai do codebook, e um quarto registro deixa de ser contextual — 🔶 04/10/2026
 
-**Segunda rodada da tarefa 14, no mesmo dia.** O item 31 fechou entregando seis decisões, e a primeira delas era a mais cara: *"o par PT-01 → PT-02, com mecanismo de spin-off, codifica ruptura"*. **O pesquisador decidiu pela continuidade** e indicou a literatura — Marcelo Kunrath Silva. Esta rodada executa a decisão com três peças novas, todas lidas na fonte, e documento completo em [`projeto-pos-doc/12_CAMADA-T-1-CONJUNTURAL.md`](../projeto-pos-doc/12_CAMADA-T-1-CONJUNTURAL.md).
+**Segunda rodada da tarefa 14, no mesmo dia.** O item 31 fechou entregando seis decisões, e a primeira delas era a mais cara: *"o par PT-01 → PT-02, com mecanismo de spin-off, codifica ruptura"*. **O pesquisador decidiu pela continuidade** e indicou a literatura — Marcelo Kunrath Silva. Esta rodada executa a decisão com três peças novas, todas lidas na fonte, e documento completo em [`analise/12_CAMADA-T-1-CONJUNTURAL.md`](analise/12_CAMADA-T-1-CONJUNTURAL.md).
 
 ### 32.1 A peça que nomeia o mecanismo — e desfaz uma cobrança da rodada anterior
 
@@ -1328,7 +1328,7 @@ E uma **terceira variante** de armadilha de numeração no eixo 12: **Alonso (20
 
 > **ATUALIZADO NO MESMO DIA PELO ITEM 34.** O eixo foi a **dezoito** peças: o pesquisador entregou as quatro barradas, e **duas das catorze foram lidas** e ancoram registro. O que está escrito abaixo é o estado da coleta, e vale como registro do que a coleta por si mostrou.
 
-**Tarefa 25, primeira metade.** O pesquisador deu o recorte: o bolsonarismo **como fenômeno de mobilização social e política**, com foco nas dinâmicas de manifestação e protesto e nos **repertórios próprios do campo das direitas**. Documento completo em [`projeto-pos-doc/13_LITERATURA-BOLSONARISMO.md`](../projeto-pos-doc/13_LITERATURA-BOLSONARISMO.md).
+**Tarefa 25, primeira metade.** O pesquisador deu o recorte: o bolsonarismo **como fenômeno de mobilização social e política**, com foco nas dinâmicas de manifestação e protesto e nos **repertórios próprios do campo das direitas**. Documento completo em [`analise/13_LITERATURA-BOLSONARISMO.md`](analise/13_LITERATURA-BOLSONARISMO.md).
 
 Busca no OpenAlex — escolhido porque **responde sem identificação** —, dezessete consultas em português e inglês mais nove por autor. **345 obras distintas** na união das duas rodadas, com apenas 20 em comum, o que diz que nenhuma das duas estratégias bastaria sozinha. Dezoito peças escolhidas, **catorze coletadas** por via automatizada, 378 páginas, em `Fontes/13_Bolsonarismo-mobilizacao/` — e as outras quatro chegaram pelas mãos do pesquisador horas depois (item 34.6).
 
@@ -1356,7 +1356,7 @@ E uma correção dentro do próprio documento 13: a primeira redação dizia **"
 
 ## 34. A terceira rodada da tarefa 14: os oito encaminhamentos, e uma afirmação de dez anos sai do codebook — 🔶 04/10/2026
 
-**Terceira rodada do mesmo dia.** A segunda terminou com oito pontos para o pesquisador. Ele respondeu os oito, e esta rodada executou o que era executável: **sete viraram mudança de campo, um virou entrega de arquivo.** Detalhe completo em [`projeto-pos-doc/12_CAMADA-T-1-CONJUNTURAL.md`](../projeto-pos-doc/12_CAMADA-T-1-CONJUNTURAL.md), §4.
+**Terceira rodada do mesmo dia.** A segunda terminou com oito pontos para o pesquisador. Ele respondeu os oito, e esta rodada executou o que era executável: **sete viraram mudança de campo, um virou entrega de arquivo.** Detalhe completo em [`analise/12_CAMADA-T-1-CONJUNTURAL.md`](analise/12_CAMADA-T-1-CONJUNTURAL.md), §4.
 
 Contextuais: **7 → 4 → 3 → 2**. Classes: **61 primária · 19 confirmado · 2 contextual · 1 inferência.**
 
@@ -1422,7 +1422,7 @@ O encaminhamento 4 pediu os links. O pesquisador os usou e **entregou as quatro 
 
 ## 35. A quarta rodada: PT-06 fecha, e o mecanismo que ele afirmava estava datado errado — 🔶 04/10/2026
 
-**Quarta rodada do mesmo dia, e a camada conjuntural brasileira fecha.** A terceira havia deixado PT-06 contextual por critério, e escrito na nota do próprio registro qual peça o fecharia e que ela estava no corpus sem ter sido lida. O pesquisador mandou ler. Detalhe em [`projeto-pos-doc/12_CAMADA-T-1-CONJUNTURAL.md`](../projeto-pos-doc/12_CAMADA-T-1-CONJUNTURAL.md), §5.
+**Quarta rodada do mesmo dia, e a camada conjuntural brasileira fecha.** A terceira havia deixado PT-06 contextual por critério, e escrito na nota do próprio registro qual peça o fecharia e que ela estava no corpus sem ter sido lida. O pesquisador mandou ler. Detalhe em [`analise/12_CAMADA-T-1-CONJUNTURAL.md`](analise/12_CAMADA-T-1-CONJUNTURAL.md), §5.
 
 **VON BÜLOW E ABERS 2024** — *Government and Opposition* 59:998-1016, página impressa = PDF + 997, lida integral. Cobre **março de 2020 a outubro de 2021**: a janela exata de PT-06.
 
@@ -1524,7 +1524,7 @@ Isso **é** a afirmação de difusão, enunciada como *performance contenciosa* 
 
 ## 37. A tarefa 10 executada: sete livros entram, e o cânone brasileiro não está em acesso aberto — 🔶 08/10/2026
 
-**Eixo 14 aberto: sete peças, 567 páginas**, em `Fontes/14_Livros-brasileiros/`. Documento completo em [`projeto-pos-doc/14_LIVROS-BRASILEIROS.md`](../projeto-pos-doc/14_LIVROS-BRASILEIROS.md). Corpus: **52 → 59 PDFs, 10.207 → 10.774 páginas**; documental inalterada em **22 / 6.951**.
+**Eixo 14 aberto: sete peças, 567 páginas**, em `Fontes/14_Livros-brasileiros/`. Documento completo em [`analise/14_LIVROS-BRASILEIROS.md`](analise/14_LIVROS-BRASILEIROS.md). Corpus: **52 → 59 PDFs, 10.207 → 10.774 páginas**; documental inalterada em **22 / 6.951**.
 
 **NENHUMA FOI LIDA E NENHUMA ANCORA REGISTRO.**
 
@@ -1578,7 +1578,7 @@ Quatro livros identificados, de acesso aberto, no **SciELO Livros** — host `bo
 
 ## 38. PT-08 fecha, e o codebook deixa de ter registro contextual — 🔶 08/10/2026
 
-**Segundo passo de 08/10.** O pesquisador entregou cinco peças e mandou coletar duas. PT-08 era o **último contextual**; fechou. Documentos: [`15_COMPARADO-6-DE-JANEIRO.md`](../projeto-pos-doc/15_COMPARADO-6-DE-JANEIRO.md) e [`14_LIVROS-BRASILEIROS.md`](../projeto-pos-doc/14_LIVROS-BRASILEIROS.md), §7.
+**Segundo passo de 08/10.** O pesquisador entregou cinco peças e mandou coletar duas. PT-08 era o **último contextual**; fechou. Documentos: [`15_COMPARADO-6-DE-JANEIRO.md`](analise/15_COMPARADO-6-DE-JANEIRO.md) e [`14_LIVROS-BRASILEIROS.md`](analise/14_LIVROS-BRASILEIROS.md), §7.
 
 **Classes: 61 em fonte primária · 21 confirmados · ZERO contextuais · 0 a verificar · 1 inferência.** Contextuais: 7 → 4 → 3 → 2 → 1 → **0**. Corpus: **59 → 66 PDFs, 10.774 → 12.089 páginas**; documental inalterada em **22 / 6.951** — quinta vez que o corpus cresce sem documento oficial entrar.
 

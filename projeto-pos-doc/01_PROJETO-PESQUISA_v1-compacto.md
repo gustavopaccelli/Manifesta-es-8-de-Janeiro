@@ -17,9 +17,9 @@ Esta pesquisa parte de onde minha tese de doutorado parou. Nela (PACCELLI, 2024)
 
 A Figura 1 apresenta a arquitetura do processo em cinco faixas de escala própria, e é ela que organiza as seções seguintes.
 
-![Figura 1 — Cronologia causal do 8 de Janeiro de 2023](figuras/figura-1_cronologia-causal.svg)
+![Figura 1 — Cronologia causal do 8 de Janeiro de 2023](../reports/figures/figura_cronologia_8jan.svg)
 
-**Figura 1** — Cronologia causal em escala quebrada: cada faixa tem escala própria. Versão navegável em `figuras/cronologia-interativa.html`.
+**Figura 1** — Cronologia causal em escala quebrada: cada faixa tem escala própria. Versão navegável em `../reports/figures/cronologia_8jan_interativa.html`.
 
 ---
 

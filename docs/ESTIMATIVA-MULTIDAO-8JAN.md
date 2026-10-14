@@ -127,4 +127,4 @@ O documento segue sem versão em domínio oficial — isso não mudou e continua
 
 ---
 
-*Registros afetados: **PT-34** (recodificado) e **PT-21** (acrescentada a contagem ANTT/Abin). Aplicado por `scripts/recodificar_pt34.py`. Verificar com `python scripts/verificar_integridade.py` e `python scripts/conferir_paginas.py PT-34 PT-21`.*
+*Registros afetados: **PT-34** (recodificado) e **PT-21** (acrescentada a contagem ANTT/Abin). Aplicado por `scripts/historico/recodificar_pt34.py`. Verificar com `python scripts/verificar_integridade.py` e `python scripts/conferir_paginas.py PT-34 PT-21`.*

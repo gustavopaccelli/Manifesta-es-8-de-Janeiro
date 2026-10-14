@@ -1,5 +1,11 @@
 # Etapa 1: inventário do repositório "Manifestações 8 de Janeiro"
 
+> **⚠️ REGISTRO DATADO — descreve o repositório como ele era em 25/09/2026, e NÃO foi atualizado.**
+>
+> Este arquivo estava em `Claude outputs/`, pasta que deixou de existir em 14/10/2026, e veio para `docs/historico/` porque é isto que ele é: o retrato de um estado anterior. **Os caminhos que ele cita mudaram** — os nove dossiês de análise saíram de `projeto-pos-doc/` para `docs/analise/`, as 24 migrações de uso único saíram de `scripts/` para `scripts/historico/` e `projeto-pos-doc/figuras/` foi eliminada. **Nada disso foi corrigido aqui de propósito:** reescrever um inventário datado para que ele descreva o presente destrói exatamente o que ele serve para provar. Para o estado atual, veja `README.md`; para o que mudou e por quê, o item 48 de `../PENDENCIAS-ANALITICAS.md`.
+>
+> E uma afirmação dele já era falsa quando foi escrita, o que vale como aviso de leitura: a seção 2 diz que `reports/figures/cronologia_8jan_interativa.html` era "idêntico byte a byte" à cópia do dossiê. **Em 14/10/2026 a medição mostrou que não era** — e que a cópia estava seis semanas atrás.
+
 Leitura feita em 25/09/2026. O terminal no computador do pesquisador não iniciou, então os arquivos foram listados e trazidos para esta sessão pela ponte de arquivos. A seção 6 separa o que foi lido integralmente, o que foi apenas catalogado e o que não foi aberto.
 
 ---

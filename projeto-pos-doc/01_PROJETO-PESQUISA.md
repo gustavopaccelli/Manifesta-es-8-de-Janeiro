@@ -17,9 +17,9 @@ Esta pesquisa parte de onde minha tese parou. Nela (PACCELLI, 2024) analisei tr�
 
 Pretendemos demonstrar que essas camadas são níveis de um mesmo processo, e que é o par oportunidades e estruturas de mobilização que as articula. A pergunta que a operacionaliza é: como se compõem as camadas estrutural, organizacional, discursiva e situacional para produzir aquele evento, e o que se perde ao explicá-lo por uma só delas?
 
-![](figuras/figura-1_cronologia-causal.svg)
+![](../reports/figures/figura_cronologia_8jan.svg)
 
-*Figura 1 — Cronologia causal em escala quebrada. Versão navegável em `figuras/cronologia-interativa.html`.*
+*Figura 1 — Cronologia causal em escala quebrada. Versão navegável em `../reports/figures/cronologia_8jan_interativa.html`.*
 
 ---
 

@@ -62,13 +62,13 @@ de pré-commit.
 | `conferir_relatorio.py` | `reports/process_tracing_8jan_relatorio.md` contra o codebook: cobertura da tabela da Etapa 2, páginas citadas × `fonte_pagina`, cifras retiradas e caminhos citados. Ver a segunda ressalva. |
 | `conferir_paginas.py` | Abre o PDF na página citada e procura a transcrição. **A única checagem que lê a fonte.** |
 | `desenhar_campo.py` | O campo multiorganizacional do episódio: sistemas de aliança e de conflito em relação a um **ator focal declarado**, porque campo é sempre de alguém e o codebook é neutro quanto ao ator. Emite `data/processed/campo_multiorganizacional.csv` e, do mesmo `ENTIDADES`, o desenho em `reports/figures/figura_campo_multiorganizacional.svg` e a página `reports/figures/campo_multiorganizacional.html`. **A figura sai do gerador, não da mão** — é por isso que ela não pode divergir da planilha, e é por isso que `conferir_figuras.py` não a confere: aquele script existe para as duas peças da cronologia, que são feitas à mão. A pasta passou a ter os dois regimes. Cada entidade declara os registros e o campo do codebook que a sustentam, e `--autoteste` exige que o fragmento ocorra literalmente ali — com prova negativa por injeção de defeito. **É o passo 7/7 do ciclo.** |
-| `conferir_hipoteses.py` | `projeto-pos-doc/11_HIPOTESES-RIVAIS-PT-28.md` contra o codebook: cada linha de tabela que cita um registro tem de citar página que aquele registro ancora, **e no documento-fonte certo** — "Cappelli: 679" é reprovado quando a página é do CPMI. Não abre PDF; a pergunta é anterior. **Passo 8/8 do ciclo.** |
+| `conferir_hipoteses.py` | `../docs/analise/11_HIPOTESES-RIVAIS-PT-28.md` contra o codebook: cada linha de tabela que cita um registro tem de citar página que aquele registro ancora, **e no documento-fonte certo** — "Cappelli: 679" é reprovado quando a página é do CPMI. Não abre PDF; a pergunta é anterior. **Passo 8/8 do ciclo.** |
 | `baixar_fontes.sh` | Comandos de coleta do que falta. Não baixa nada sozinho: cada peça é um alvo nomeado. |
-| `migrar_esquema16.py` | Rodada única de 16/08/2026 (12 → 16 campos + correções de auditoria). Idempotente. Mantido como registro da decisão, não faz parte do ciclo. |
+| `historico/migrar_esquema16.py` | Rodada única de 16/08/2026 (12 → 16 campos + correções de auditoria). Idempotente. Mantido como registro da decisão, não faz parte do ciclo. |
 | `varrer_fonte_pagina.py` | **Triagem, fora do ciclo.** Compara as páginas citadas na prosa dos registros (`fonte_trecho`, `mecanismo_causal`, `status_verificacao`, `nota_auditoria`) com o campo estruturado `fonte_pagina`, e imprime o trecho em volta de cada divergência. Nem todo achado é lacuna — ver a terceira ressalva. |
 | `verificar_dois_sinteses.py` | **Triagem, fora do ciclo.** Os DOIs das sínteses LeapSpace no CrossRef e, em 404, na DataCite. Emite `data/processed/dois_sinteses_leapspace.csv` com metadados, e confere se o título registrado casa com o que a síntese declara. **Imprime a contagem por arquivo e cobra as duas contagens escritas à mão** — a de `PROCEDENCIA` e a do inventário de fontes —, saindo com código 1 se divergirem. Ver a quarta ressalva. |
 | `triar_dois.py` | **Triagem, fora do ciclo.** Classifica os DOIs verificados em três camadas contra os mecanismos que o codebook afirma, e emite `data/processed/triagem_dois.csv` com o uso declarado item por item. A chave é fragmento de título com número de correspondências esperado — aborta se divergir, para nenhuma referência ser inventada por engano de digitação. |
-| `recodificar_*.py` | Migrações já executadas, uma por rodada, cada uma idempotente e com o achado que a motivou no cabeçalho. Registro do que foi feito, fora do ciclo. |
+| `historico/recodificar_*.py` · `historico/inserir_*.py` | **As 24 migrações de uso único**, uma por rodada, cada uma com o achado que a motivou no cabeçalho. Registro do que foi feito, fora do ciclo. **Mudaram de lugar em 14/10/2026**: estavam misturadas aos 17 scripts vivos nesta pasta, e quem abria `scripts/` não distinguia o que roda do que já rodou. **Não se reexecutam** — cada uma afirma por `assert` um estado anterior que já não existe, e é isso que as torna seguras de guardar. |
 
 ## Três ressalvas que importam
 
@@ -163,7 +163,7 @@ mesmo manual têm os DOIs deslocados: o que ela atribui a Vaughan
 O'Halloran não existe. **O primeiro responde 200 e passaria como confirmado.** Os identificadores corretos dos
 três DOIs quebrados e do par deslocado estão nos dicionários `NAO_EXISTEM` e
 `VIZINHOS_TROCADOS` do próprio script, e nas fichas de
-`../projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md`.
+`../docs/analise/08_BIBLIOGRAFIA-METODOLOGICA.md`.
 
 A mesma rodada fechou uma **terceira cópia manual de cifra** do projeto, depois
 das figuras e do relatório: a contagem de DOIs por síntese estava digitada em

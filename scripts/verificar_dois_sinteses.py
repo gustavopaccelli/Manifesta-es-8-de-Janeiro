@@ -6,7 +6,7 @@ Verificação dos DOIs das sínteses LeapSpace — existência e atribuição.
 Completa o passo 1 do encaminhamento do item 11.3 da agenda (tarefa 9 da "Ordem
 de ataque"). **Não é a primeira leva:** em 01/09/2026 dez itens foram conferidos
 à mão, quatro divergentes, e as fichas estão em
-`projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md` — leia-as antes de tratar
+`docs/analise/08_BIBLIOGRAFIA-METODOLOGICA.md` — leia-as antes de tratar
 qualquer achado daqui como novo. Este script cobre os 411 de uma vez: extrai os
 DOIs das sínteses de `Fontes/05_Bibliografia-teorica/`,
 consulta cada um no CrossRef — e, se lá não estiver, na DataCite — e emite a
@@ -125,7 +125,7 @@ NAO_EXISTEM = {
         "central para este projeto: BENNETT & CHECKEL (2014, org.), 'Process Tracing: "
         "From Metaphor to Analytic Tool'. DOI correto: 10.1017/CBO9781139858472. "
         "JÁ ERA CONHECIDO: a primeira leva de verificação, de 01/09/2026, achou e "
-        "corrigiu este caso — ficha 8 de projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md.",
+        "corrigiu este caso — ficha 8 de docs/analise/08_BIBLIOGRAFIA-METODOLOGICA.md.",
     "10.4324/9780203856949-48":
         "Este sufixo não existe. O capítulo de O'HALLORAN, 'How to use corpus "
         "linguistics in the study of media discourse', está depositado em "
@@ -257,7 +257,7 @@ def sem_doi():
     Elas não entram no universo desta varredura — que é de DOIs — e por isso
     ficaram invisíveis até 29/09/2026, quando uma delas foi procurada por outro
     motivo: Bröer & Duyvendak (2009), sobre oportunidades discursivas, que
-    `projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md` aponta como de interesse do
+    `docs/analise/08_BIBLIOGRAFIA-METODOLOGICA.md` aponta como de interesse do
     projeto. São 21 links para **18 entradas distintas**, e cinco delas foram para a camada A da triagem. Ficam contadas
     aqui para não voltarem a desaparecer: **um universo definido pelo que a
     ferramenta lê não é o universo.**"""

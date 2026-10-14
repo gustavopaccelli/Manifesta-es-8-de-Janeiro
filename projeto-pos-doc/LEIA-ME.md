@@ -6,7 +6,7 @@
 >
 > - Nenhum arquivo desta pasta ancora registro do codebook, consta do inventário `Fontes/LEIA-ME_fontes.md` ou do dicionário `PROCEDENCIA` em `scripts/gerar_codebook.py`.
 > - Os scripts de verificação varrem apenas `Fontes/` — esta pasta **não** é lida por `verificar_integridade.py`, e não pode alterar o resultado da auditoria.
-> - As figuras em `figuras/` são **cópias byte-idênticas** de artefatos da raiz, não artefatos novos. Os `sha1` estão registrados abaixo, para que a relação cópia→original seja verificável e ninguém confunda uma com a outra.
+> - **Esta pasta não guarda mais cópia de figura.** Até 14/10/2026 havia `figuras/`, com um SVG e um HTML declarados **byte-idênticos** aos de `reports/figures/` — e a identidade tinha deixado de valer. Os documentos do edital apontam agora para `../reports/figures/`, que é o único lugar das figuras.
 > - Os textos daqui são **documentos de candidatura**, não achados de pesquisa. Não devem ser citados como fonte.
 >
 > A única escrita feita no repositório fora desta pasta foi a incorporação da tese de doutorado em `Fontes/11_Tese-doutorado/` — que é adição de **fonte**, autorizada em 19/08/2026, e está declarada no inventário e em `PROCEDENCIA`, com a auditoria reexecutada e aprovada.
@@ -27,8 +27,9 @@ Pasta criada em **19/08/2026**, revista no mesmo dia. Reúne os documentos da ca
 | [`03_CARTA-RECOMENDACAO.md`](03_CARTA-RECOMENDACAO.md) | Minuta de carta de apoio, a assinar por Christiane Jalles de Paula | 22 marcadores a preencher |
 | [`04_ROTEIRO-CV-LATTES.md`](04_ROTEIRO-CV-LATTES.md) | O que conferir no Lattes — **item 1 do edital** | Requer sua ação |
 | [`05_CHECKLIST-SUBMISSAO.md`](05_CHECKLIST-SUBMISSAO.md) | Conferência dos quatro itens, calendário, entrevista | — |
-| [`06_BIBLIOGRAFIA-DO-PROJETO.md`](06_BIBLIOGRAFIA-DO-PROJETO.md) | Aparato completo por camada, com status por item | 78 referências + núcleo teórico |
-| [`figuras/`](figuras/) | Figura 1 (SVG) e cronologia navegável (HTML) | Cópias declaradas |
+| [`07_REGISTRO-DE-REVISAO.md`](07_REGISTRO-DE-REVISAO.md) | O que foi revisto nos documentos acima, e quando | Registro datado |
+
+**Os nove dossiês de análise não estão mais aqui.** `06_BIBLIOGRAFIA-DO-PROJETO.md` e os de `08_` a `15_` foram para [`../docs/analise/`](../docs/analise/) em 14/10/2026: são o caderno de leitura da pesquisa, não peça de candidatura, e estavam nesta pasta por acidente de onde o trabalho começou. O dossiê continua podendo citá-los — do lugar certo.
 
 ---
 
@@ -52,12 +53,24 @@ Pasta criada em **19/08/2026**, revista no mesmo dia. Reúne os documentos da ca
 
 `python scripts/verificar_integridade.py` → **APROVADO, as seis checagens passaram**, depois da incorporação da tese. `gerar_codebook.py` regenera com **zero arquivos órfãos** (41 no inventário). Nada do dossiê tocou o codebook.
 
-### Figuras — cópias conferidas por hash
+### Figuras — a cópia saiu, e a razão é o que a medição mostrou
 
-| Original (raiz) | Cópia (`figuras/`) | sha1 |
-|:--|:--|:--|
-| `reports/figures/figura_cronologia_8jan.svg` | `figura-1_cronologia-causal.svg` | `35ea4fc963475fc2d4c1db934ddfda913fc4dbfd` |
-| `reports/figures/cronologia_8jan_interativa.html` | `cronologia-interativa.html` | `183dc2e9c87547c4a1708083e66d5a0012088df5` |
+**Havia `figuras/`, e esta seção declarava as duas peças byte-idênticas às da raiz, com `sha1` registrado. Em 14/10/2026 a identidade foi medida, e não valia:**
+
+| Peça | `sha1` declarado aqui | Cópia, de fato | Original, de fato |
+|:--|:--|:--|:--|
+| SVG da cronologia | `35ea4fc9…` | `35ea4fc9…` — **igual ao declarado** | `55268888…` — **o original andou** |
+| HTML da cronologia | `183dc2e9…` | `a6885371…` | `1e82599a…` — **nenhum dos dois casa com o declarado** |
+
+**O SVG embutido no projeto de pesquisa estava seis semanas atrás do codebook** (cópia de 19/08, original refeito em 30/09), e nada avisou: `conferir_figuras.py` só olha `reports/figures/`, e a checagem 7 tratava a cópia como artefato independente. **Identidade declarada que ninguém confere não é redundância, é duplicata** — e é o modo de falha desta casa na forma de um hash.
+
+**Resolvido por eliminação, não por ressincronização:** `figuras/` saiu, e `01_PROJETO-PESQUISA.md` e a versão compacta apontam para `../reports/figures/`. Se a pasta precisar ser enviada isolada, a cópia se refaz na hora da submissão, e aí ela é cópia de um estado conhecido:
+
+```bash
+cp reports/figures/figura_cronologia_8jan.svg reports/figures/cronologia_8jan_interativa.html projeto-pos-doc/
+```
+
+> **⚠️ Os números de codebook deste dossiê são de 19/08/2026, e não foram atualizados de propósito.** Esta é peça de candidatura datada: o que vale como estado atual sai de `bash scripts/ciclo.sh`, e hoje o codebook tem **83 registros** (61 em fonte primária · 21 confirmados · 1 inferência · **nenhum contextual**, classe retirada em 08/10), o corpus tem **63 PDFs / 12.125 p.** e a verificação tem **oito** checagens, não seis. Reescrever as cifras aqui apagaria o estado em que o dossiê foi submetido.
 
 ### Números do projeto — rastreados até a fonte
 

@@ -47,8 +47,8 @@ JSON_IN = RAIZ / "process_tracing_8jan_eventos.json"
 # entrou em 04/10/2026 com a tarefa 14, e a checagem valeu de imediato: a mesma
 # ferramenta, o mesmo formato de tabela, zero código novo.
 DOCS = [
-    RAIZ / "projeto-pos-doc/11_HIPOTESES-RIVAIS-PT-28.md",
-    RAIZ / "projeto-pos-doc/12_CAMADA-T-1-CONJUNTURAL.md",
+    RAIZ / "docs/analise/11_HIPOTESES-RIVAIS-PT-28.md",
+    RAIZ / "docs/analise/12_CAMADA-T-1-CONJUNTURAL.md",
 ]
 
 # | PT-xx | ... | Rotulo: 123, 456 |  — a última célula é a das páginas

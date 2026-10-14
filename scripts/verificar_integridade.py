@@ -264,9 +264,17 @@ def main():
     # nome morto em qualquer um deles sem um aviso. Não se tenta diferenciar prosa
     # livre: basta exigir que NENHUM nome retirado reapareça.
     cabecalho(7, "NOMES E ATRIBUIÇÕES RETIRADOS NÃO REAPARECEM")
+    # 14/10/2026: saiu `projeto-pos-doc/figuras/cronologia-interativa.html`, e a
+    # razao e o que a reorganizacao achou. Aquela pasta guardava COPIAS que a
+    # LEIA-ME do dossie declarava "byte-identicas" aos artefatos da raiz, com
+    # sha1 registrado -- e nao eram: o SVG ainda casava com o sha1 DECLARADO e o
+    # original ja tinha mudado (seis semanas de atraso), e no HTML nenhum dos
+    # dois casava com o sha1 declarado, porque os dois andaram por conta propria.
+    # Identidade declarada que ninguem conferia e duplicata, nao redundancia:
+    # `conferir_figuras.py` so olha reports/figures/, e por isso nada avisou. As
+    # copias sairam e os documentos do edital passaram a apontar para a raiz.
     ARTEFATOS = [
         "reports/figures/cronologia_8jan_interativa.html",
-        "projeto-pos-doc/figuras/cronologia-interativa.html",
         "reports/process_tracing_8jan_relatorio.md",
         "Caderno-de-evidencias/caderno_CPMI_verbatim.md",
     ]

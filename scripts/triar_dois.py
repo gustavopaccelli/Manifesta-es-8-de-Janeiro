@@ -49,7 +49,7 @@ procurando, no corpus, cada mecanismo que o codebook afirma.
 O QUE ESTA TRIAGEM NÃO É. Ela lê **título, veículo, ano, autoria e assunto** — o
 que a agência registra. Não lê as obras. Nenhum item de A é citável antes do
 passo 3, e a regra do projeto continua valendo: nada entra em texto sem
-conferência na fonte. Ver `projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md`,
+conferência na fonte. Ver `docs/analise/08_BIBLIOGRAFIA-METODOLOGICA.md`,
 onde as dez primeiras fichas mostram quanto a metadado sobrevive à leitura.
 
 POR QUE A CHAVE É O TÍTULO, E NÃO O DOI. Digitar 100 DOIs à mão é convidar o

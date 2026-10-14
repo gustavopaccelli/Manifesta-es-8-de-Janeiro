@@ -11,7 +11,7 @@ sustentam os mecanismos que o codebook afirma. Ela não disse **onde elas estão
 POR QUE ESTE SCRIPT EXISTE, E POR QUE ELE NÃO É A LEITURA. A camada A saiu de
 metadado de agência: título, veículo, ano, autoria. O projeto já sabe quanto
 disso não sobrevive à leitura — as dez fichas de
-`projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md` nomeiam quatro modos de falha,
+`docs/analise/08_BIBLIOGRAFIA-METODOLOGICA.md` nomeiam quatro modos de falha,
 e a segunda leva de 29/09 nomeou um quinto. Este script não lê nenhuma obra. Ele
 responde a pergunta anterior: **desta lista, o que eu consigo abrir?** A resposta
 divide os 43 em rotas de acesso, e só a primeira delas permite ficha hoje.
@@ -99,7 +99,7 @@ NO_CORPUS = {
 # soma. Aqui eles passam a sair da execução.
 #
 # FICHA: item com ficha da PRIMEIRA leva (01/09/2026), em
-# `projeto-pos-doc/08_BIBLIOGRAFIA-METODOLOGICA.md` §1. Ficha é o padrão do
+# `docs/analise/08_BIBLIOGRAFIA-METODOLOGICA.md` §1. Ficha é o padrão do
 # projeto para "verificado"; nem toda ficha é leitura integral.
 FICHAS = {
     "10.3998/mpub.2556282": "ficha 1 — Beach & Pedersen, divergência de edição",

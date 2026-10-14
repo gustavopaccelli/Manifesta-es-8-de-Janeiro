@@ -219,7 +219,7 @@ def main():
               "página que".format(achados))
         print("falta: pode ser refutação, remissão a outro registro ou menção de passagem.")
         print("Leia o trecho, e só então decida. Correção de fonte_pagina vai por script")
-        print("de migração — veja scripts/recodificar_pagina_pt10.py como modelo.")
+        print("de migração — veja scripts/historico/recodificar_pagina_pt10.py como modelo.")
     else:
         print("OK — nenhuma página citada na prosa ficou fora do fonte_pagina")
     return 1 if (achados and estrito) else 0

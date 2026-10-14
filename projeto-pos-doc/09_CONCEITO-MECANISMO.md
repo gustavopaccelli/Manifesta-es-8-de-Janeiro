@@ -24,6 +24,9 @@ Regra do projeto: nada se afirma sem ter sido lido, e nada se cita contra outra 
 | MACHAMER, DARDEN & CRAVER (2000) | Ficha 2 (metadado) + citação colhida em Mayntz e em Cunha & Araújo |
 | BEACH & PEDERSEN (2013; 2016) | Ficha 1 (metadado) + **citação colhida em Cunha & Araújo, lida na fonte dela** |
 | WALDNER (2015) | Ficha 9 (metadado). **Não lido na fonte** — editor barrado |
+| SNOW, VLIEGENTHART & KETELAARS (2019), cap. 22 do *Wiley Blackwell Companion*, 2. ed. | **Lido na fonte, integral** (20 p.), corpus — camada A, achado em 13/10 pelo campo `locations` do OpenAlex; ver §10 |
+| KETELAARS (2016); SNOW, VLIEGENTHART & CORRIGALL-BROWN (2007); SNOW, TAN & OWENS (2013); GOFFMAN (1974); BENFORD (1993b) | **Citação literal colhida no capítulo de 2019**, lida na fonte dele |
+| BENFORD & SNOW (2000); SNOW *et al.* (1986); SNOW *et al.* (2014) | **Não lidos, e são justamente o que o capítulo de 2019 resume.** Nenhum dos três se cita por ele — os três estão `PENDENTE` na camada A, e o de 2000 é o que o campo `marco_teorico` do codebook declara |
 
 **O que isso implica.** As linhas marcadas "citação colhida" são de segunda mão e estão aqui porque a obra que as colhe foi lida; não substituem ficha, e nenhuma delas entra em texto sem leitura própria. Foi essa disciplina que impediu um erro nesta mesma rodada: a busca por `certification` em *Dynamics of Contention* devolveu zero páginas por causa da ligadura tipográfica **ﬁ**, e a checagem revelou 42.
 
@@ -279,3 +282,50 @@ A §4 deste documento dizia *"Duas fontes independentes divergem"*. **Não diver
 **Kaysel e Bianchi (2025)**, lida em 09/10, não ancora registro nenhum e é a mais pertinente a esta tarefa: eles **recusam "populismo"** como caracterização do bolsonarismo por o conceito ser "excessivamente amplo e normativo", e propõem tratar a extrema direita como conceito **espacial e relacional**, pelo método da formação conceitual.
 
 > É o mesmo movimento que as quatro propostas acima fazem: **trocar um nome que afirma mais do que se mediu por um nome que diz a relação observada.** Se você quiser um critério geral para decidir os quatro, é este — e tem precedente na própria literatura do corpus.
+
+---
+
+## 10. A arquitetura do enquadramento — os nove conceitos, lidos na fonte — 13-14/10/2026
+
+**Por que isto está num documento sobre mecanismo.** O codebook usa vocabulário de enquadramento em dois lugares: no campo `framing_narrativa` dos 83 registros, e em nomes de mecanismo — *alinhamento de quadros prévio* em PT-07 e *ressignificação do protesto* em PT-03, este renomeado em 04/10. **Até 13/10 esse vocabulário não tinha fonte lida.** O campo `marco_teorico` declara *Framing (Snow e Benford, 2000)*, que segue `PENDENTE` e `closed` na camada A, sem depósito em repositório algum. O capítulo 22 do *Wiley Blackwell Companion* (2ª ed., 2019), do mesmo autor principal, é a primeira leitura na fonte dessa camada do referencial — e ele se apresenta como o enunciado da arquitetura: ela "has not been fully elaborated in a single essay. We do so in the remainder of the chapter" (p. 394 impressa, PDF p. 4).
+
+**Os nove conceitos-pilar**, na ordem em que o capítulo os põe (p. 394), com a definição lida e o que cada um faz com este material. Paginação impressa; PDF = impressa − 390.
+
+| # | Conceito | O que o capítulo define | O que faz com o 8 de Janeiro |
+|:--|:--|:--|:--|
+| 1 | **Collective action frames** | "relatively coherent sets of action‐oriented beliefs and meanings that legitimize and inspire social movement campaigns and activities" (p. 395), com três funções de mobilização: *action mobilization*, *consensus mobilization* e **contramobilização** | dá grade ao campo `framing_narrativa`, que hoje **nomeia** quadros sem classificar função |
+| 2 | **Master frames** | os que surgem cedo num **ciclo de protesto** (Tarrow 1994) e passam a "color and constrain" os quadros posteriores do ciclo (p. 395) | é o elo com a §5.1 deste documento: se 2013 abre o ciclo, a pergunta é se há quadro-mestre condicionando 2022-2023 |
+| 3 | **Core framing tasks** | **diagnóstico** — problematização **mais** "the attribution of blame or responsibility" (p. 396) —, **prognóstico** e **motivacional** (p. 396-397) | a "fraude nas urnas" é tarefa **diagnóstica**; a "intervenção federal" é **prognóstica**. São campos distintos, hoje no mesmo campo do codebook |
+| 4 | **Mecanismos discursivos** | **articulação** — "the connection, or splicing together, and coordination of issues, events, experiences, and cultural items" (p. 397) — e **elaboração** — "accenting and highlighting some events, issues, and beliefs or ideas more than others" (p. 398) | é o par que **qualifica o nome do mecanismo de PT-07**; ver 10.1 |
+| 5 | **Campos e estruturas de oportunidade discursiva** | campos discursivos que "evolve during the course of debate" e DOS que tornam a cultura política "more or less receptive to some collective action framings over others" (p. 398) | é a camada que o projeto já usa por Koopmans e Olzak (2004) — **que o capítulo cita exatamente aqui** (p. 399) |
+| 6 | **Frame crystallization** | a ascensão de um quadro sobre os competidores, de Snow, Vliegenthart e Corrigall‐Brown (2007) sobre os motins franceses de 2005 (p. 399-400) | dá conceito à **disputa de nomeação** do projeto; ver 10.2 |
+| 7 | **Frame alignment processes** | "the strategic efforts of social movement actors and organizations to link their interests and goals with those of prospective adherents and resource providers" (p. 400), em quatro tipos atribuídos a Snow *et al.* (1986): *bridging*, *amplification*, *extension*, *transformation* | é o que **PT-06** documenta, não PT-07; ver 10.1 |
+| 8 | **Frame resonance** | atributo **do quadro**, distinto do alinhamento, que é atributo de pessoas (Ketelaars, 2016, p. 344, citada na p. 401) | ver 10.3, e a advertência de circularidade que vem com ele |
+| 9 | **Framing hazards** | quatro: eventos ambíguos; **erros de enquadramento**; disputas de quadro; e deslocamentos de quadro (p. 403-404) | **o caso é um caso do segundo**, e isso tensiona a categoria; ver 10.3 |
+
+### 10.1 O par que qualifica PT-07 — e os dois nomes são encaixados, não opostos
+
+A distinção que o capítulo faz é de **objeto**, não de grau: articulação e elaboração são os mecanismos "through which the generation and modification of collective action frames occur" (p. 397); alinhamento é o esforço **estratégico de ligar interesses a um público**. O que a denúncia da PGR documenta em 22/03/2021 é o núcleo deliberando e passando a disseminar um diagnóstico — geração de quadro. A ligação a um público desmobilizado é outra coisa, e tem nome próprio no capítulo: *bridging*, "the linkage of a movement organization with an unmobilized sentiment pool or public opinion cluster" (p. 400).
+
+> **E há uma precisão que muda o teor da proposta do item 47.5 da agenda.** O capítulo diz que "**frame bridging can be considered a specific form of frame articulation**, with the specific aim of connecting the movement's main frame with one which has a wider resonance in society" (p. 400). Logo *alinhamento* **não é a família errada** — é a forma estratégica e voltada a público de um gênero mais amplo. A razão para preferir *articulação e elaboração* em PT-07 não é que o nome atual seja falso: é que ele **nomeia o gênero quando a fonte permite nomear a espécie**, e a espécie documentada ali não é a que se volta ao público. Isso é o mesmo critério da §9.7 — um nome que diz a relação observada —, e continua sendo decisão do pesquisador.
+
+### 10.2 A cristalização, que dá conceito à disputa de nomeação
+
+O projeto tem uma seção sobre **disputa de nomeação** — "atos golpistas" contra "manifestação" — hoje apoiada no relatório do Manchetômetro e numa dissertação, e a §2.3 de `08_BIBLIOGRAFIA-METODOLOGICA.md` registra Cammaerts (2012) como a referência que lhe falta. **Falta também o conceito, e ele tem nome:** *frame crystallization*, a convergência do sentimento em torno de alguns quadros à medida que o objeto perde novidade ou que o peso da "evidência" se desloca (p. 399-400). O precedente empírico é do próprio coautor: nos motins franceses de 2005, ao longo de três semanas, o diagnóstico por categorias sociais declinou e o estrutural cresceu.
+
+**E o capítulo declara a lacuna na mesma página:** "there has been little comparable research on the factors that account for the crystallization of some frames and the corresponding decline of other frames over time" (p. 400). O eixo 08 do corpus é cobertura de imprensa, e `gerar_catalogo_imprensa.py` já o cataloga — **mas medir cristalização exige codificar quadro por peça ao longo do tempo, e isso não está feito.** Fica como encaminhamento, não como achado.
+
+### 10.3 O caso é um erro de enquadramento que mobilizou — e isso tensiona a categoria do capítulo
+
+O segundo risco da lista é "framing errors or misframings, **as when a diagnostic frame is inappropriately applied or just wrong**" (p. 403). O quadro central deste caso é diagnóstico e é **declarado falso pela fonte primária**: a denúncia da PGR diz que a organização se dedicou a "espalhar a **falsa narrativa** do emprego do sistema eletrônico de votação para prejudicar JAIR BOLSONARO" (p. 249). E o capítulo põe os riscos como aquilo que "undermine the prospect of resonance and/or processes of frame alignment" — isto é, como **obstáculo** à mobilização.
+
+**O caso brasileiro põe um quadro falso produzindo mobilização de massa**, e o capítulo tem a lacuna correspondente escrita: "since work on framing within the context of social movements has focused principally on frame disputes, **we know comparatively little about the degree to which frame ambiguities, errors, and shifts function as mobilization impediments**" (p. 404). A categoria existe, está sub-pesquisada, e este material é um caso dela.
+
+> **A armadilha vem na mesma seção, e é metodológica.** O capítulo registra a crítica de que "resonance inferences are subject to circular‐reasoning in the sense that resonance may be automatically conflated with the occurrence of a protest event" (p. 402). **Inferir que o quadro de fraude ressoou porque o 8 de Janeiro aconteceu é exatamente essa circularidade.** Quem quiser afirmar ressonância tem de medi-la fora do evento — adesão declarada, financiamento, acampamento — e o codebook tem essas três coisas ancoradas em registros próprios. **É antecipação de crítica, e pertence aos itens 3 a 5 da agenda, não a este documento.**
+
+### 10.4 O que o capítulo não dá, e o que ele confirma por ausência
+
+- **Não define mecanismo**, e não entra na tabela das quatorze concepções da §2: enquadramento é perspectiva, e o capítulo usa "mechanism" oito vezes, sempre no sentido estrito de *mecanismo discursivo*. **A §2 deste documento não muda.**
+- **Não dá os quatro tipos de alinhamento na fonte deles**: atribui-os a Snow *et al.* (1986), que **não está lido** e está `PENDENTE` na camada A. Citar os quatro tipos pelo capítulo é citar o resumo; citar como de 1986 seria o modo de falha da casa.
+- **Nenhum caso brasileiro, e isso é medido:** "Brazil" ocorre **uma vez** no arquivo, e na lista de referências (Rothman e Oliver, 1999, sobre barragens no sul do Brasil). É o mesmo padrão das sínteses da camada A, que têm zero referências sobre o Brasil.
+- **E a ausência é precisa onde mais interessa.** A ilustração que o capítulo escolhe para articulação e elaboração é a retórica de "contemporary populist figures such as **Erdogan** of Turkey, **Le Pen** in France, and **Trump** in the US" (p. 398) — os mesmos mecanismos, a mesma família política, **sem o Brasil**. O capítulo também nomeia as "fake news" (Tavernise 2016) entre as fatias de realidade que a articulação costura. **A vaga que o material deste projeto ocupa é essa**, e não a de um caso a mais.

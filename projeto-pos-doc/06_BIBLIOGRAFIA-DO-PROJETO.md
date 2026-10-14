@@ -255,7 +255,12 @@ Estas são as obras que fazem o trabalho de **integração**, e não de cobertur
 ### Enquadramento
 
 - ✅ BENFORD, R. D.; SNOW, D. A. Framing Processes and Social Movements: An Overview and Assessment. *Annual Review of Sociology*, v. 26, p. 611–639, 2000. DOI: `10.1146/annurev.soc.26.1.611`
-- ⚠️ SNOW, D. A.; BENFORD, R. D. Ideology, Frame Resonance, and Participant Mobilization. *International Social Movement Research*, v. 1, p. 197–217, 1988 — **não indexada no CrossRef** (série de livro, JAI Press). Obra real e amplamente citada; conferir paginação em catálogo antes de submeter
+- ⚠️ SNOW, D. A.; BENFORD, R. D. Ideology, Frame Resonance, and Participant Mobilization. *International Social Movement Research*, v. 1, p. 197–217, 1988 — **não indexada no CrossRef** (série de livro, JAI Press). Obra real e amplamente citada; conferir paginação em catálogo antes de submeter. **A paginação está agora conferida numa obra lida:** a lista de referências do capítulo de 2019 abaixo a registra como `1: 197-217`, o mesmo intervalo
+- ✅ **SNOW, D. A.; VLIEGENTHART, R.; KETELAARS, P.** The Framing Perspective on Social Movements: Its Conceptual Roots and Architecture. In: SNOW, D. A.; SOULE, S. A.; KRIESI, H.; McCAMMON, H. J. (orgs.). *The Wiley Blackwell Companion to Social Movements*. 2. ed. Oxford: Wiley Blackwell, 2019, cap. 22, p. 392–410. DOI `10.1002/9781119168577.ch22` — **a única peça deste bloco lida na fonte**, integral, em 13/10/2026, e no corpus. É o balanço posterior ao de 2000, com a arquitetura do campo em nove conceitos; ficha 16 em `08_BIBLIOGRAFIA-METODOLOGICA.md` §1.3 e leitura conceitual em `09_CONCEITO-MECANISMO.md` §10
+
+> ⚠️ **Não copie a citação do capítulo de 2019 do registro.** OpenAlex **e** CrossRef gravam o título **sem o subtítulo** e o ano como **2018**; o arquivo diz 2019, 2ª edição, p. 392-410. O depósito do editor é que está truncado.
+>
+> **E as duas obras acima continuam não lidas.** Benford e Snow (2000) — que é o que o campo `marco_teorico` do codebook declara — está `PENDENTE` e `closed` na camada A, sem depósito em repositório algum; Snow e Benford (1988) não é indexada. **Ter lido o capítulo de 2019 não autoriza citar nenhuma das duas.**
 
 ### Ciclos de protesto no Brasil
 
@@ -348,3 +353,15 @@ Com o volume entraram três capítulos que o corpus **não tinha**:
 Por ordem do pesquisador, os três livros do segundo passo foram abertos e lidos em parte, e **o offset de cada um deixou de ser "a determinar": é −2 nos três** (e −1 em Singer et al.). A referência de citação não muda; o que muda é que agora há página confiável.
 
 > **E uma atribuição minha caiu.** A ficha de 08/10 pela manhã declarava Gurza Lavalle et al. (2018) como o livro de referência sobre "movimento que entra no Estado, que é o mecanismo que PT-04 afirma". **O livro não cita Bolsonaro nenhuma vez, não usa a palavra "direita" nenhuma vez e não menciona junho de 2013** — zero, em busca normalizada com linha de base provada. "Movimento que entra no Estado" ali significa encaixes institucionais de movimentos de grupos marginalizados na burocracia, 1985-2016; em PT-04 significa um movimento de rua que ganha a eleição. **As mesmas palavras, referentes diferentes, e a ficha era minha.** É a 16ª ocorrência do modo de falha do projeto, e a primeira em que o referente errado é um livro inteiro.
+
+---
+
+## Incorporado ao corpus em 13/10/2026 — uma referência, e ela é do núcleo teórico
+
+**Tarefa 17.** Das 26 obras da camada A então pendentes, **uma** foi coletada e lida: o capítulo 22 do *Wiley Blackwell Companion*, já listado acima em **Núcleo teórico → Enquadramento**, porque é ali que ele pertence — não é cobertura empírica, é a obra que enuncia a perspectiva que o codebook declara.
+
+11. **SNOW, David A.; VLIEGENTHART, Rens; KETELAARS, Pauline.** "The Framing Perspective on Social Movements: Its Conceptual Roots and Architecture". In: SNOW, D. A.; SOULE, S. A.; KRIESI, H.; McCAMMON, H. J. (orgs.). *The Wiley Blackwell Companion to Social Movements*. 2. ed. Oxford: Wiley Blackwell, 2019, cap. 22, p. 392-410. DOI [10.1002/9781119168577.ch22](https://doi.org/10.1002/9781119168577.ch22).
+
+**A procedência é o que esta entrada registra de mais útil.** A rota do editor devolve 403, e o OpenAlex declara a peça **ouro**. O arquivo veio do depósito da Universidade de Amsterdam (UvA-DARE), achado no campo **`locations`** do mesmo registro do OpenAlex — o campo que lista *todos* os depósitos, e que até 13/10 não havia sido consultado para as pendentes. **Licença: art. 25fa da lei holandesa (emenda Taverne)** — uso pessoal individual autorizado, redistribuição vedada; a peça entra em `LICENCA-E-DISTRIBUICAO.md` entre as não redistribuíveis, e **não** como CC.
+
+> **O que esta leitura não fez, e precisa ficar escrito aqui.** Ela **não substituiu** Benford e Snow (2000) no campo `marco_teorico` do codebook, que continua declarando obra não lida; a troca é decisão do pesquisador (item 47.5 da agenda). E a sessão 4 de `02_PROPOSTA-DISCIPLINA.md` segue indicando Snow e Benford (1988) e Benford e Snow (2000), **as duas não lidas** — em programa de disciplina isso é normal, e decidir se o capítulo de 2019 entra no lugar ou ao lado é do pesquisador também.

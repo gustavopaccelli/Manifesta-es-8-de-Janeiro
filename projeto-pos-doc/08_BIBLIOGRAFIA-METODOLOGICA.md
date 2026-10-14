@@ -101,6 +101,37 @@ A primeira leva conferiu metadado de dez itens à mão; a segunda, o identificad
 
 **Uma armadilha de extração, registrada porque quase produziu achado falso.** A busca por `certification` em *Dynamics of Contention* devolveu **zero páginas**. O PDF grava a ligadura **ﬁ** (U+FB01), e "certiﬁcation" não casa com "certification"; normalizada, são 42 páginas. **Ausência em busca de PDF não é ausência na obra.**
 
+### 1.3 Quarta leva — a arquitetura do enquadramento, e a rota estava num campo do próprio registro (13-14/10/2026)
+
+A terceira leva abriu cinco das 43 obras da camada A. **Esta abre uma, e é a que o marco teórico declarado do codebook exigia.** O campo `marco_teorico` diz *Framing (Snow e Benford, 2000)* — e esse balanço **nunca foi lido**: segue `PENDENTE`, rota `FECHADO`, `closed` no registro, sem depósito em repositório algum. O que entrou é o balanço posterior, do mesmo autor principal, escrito para enunciar a arquitetura do campo.
+
+**A rota, que vale como método.** `localizar_camada_a.py` guardava do OpenAlex apenas o `best_oa_location`. O registro traz também `locations`, que lista **todos** os depósitos — e foi ele que achou Mayntz no Max Planck em 08/10. A rota do editor, Wiley, que o OpenAlex declara **ouro**, devolve 403; o arquivo estava no depósito da Universidade de Amsterdam, isto é, **em outro campo do mesmo registro**. Consultado para as 26 então pendentes, esse campo rendeu esta peça — e só esta.
+
+| Ficha | Obra | Veredito da leitura |
+|:--|:--|:--|
+| 16 | SNOW, D. A.; VLIEGENTHART, R.; KETELAARS, P. The framing perspective on social movements: its conceptual roots and architecture. In: *The Wiley Blackwell Companion to Social Movements*, 2. ed., cap. 22, p. 392-410, 2019 | **Confirmada e ampliada** — entrega a arquitetura do campo em **nove conceitos-pilar**, e **cinco divergências de registro**, uma delas na própria forma de citar |
+
+**Ficha 16 — Snow, Vliegenthart e Ketelaars (2019).** Lida integral, 20 p., **página impressa = PDF + 390** (PDF p. 1 é a folha de capa do depósito). O capítulo declara o que pretende ser: a arquitetura conceitual do enquadramento "has not been fully elaborated in a single essay. We do so in the remainder of the chapter" (p. 394). A arquitetura, conceito por conceito, e o que cada um faz com este caso, está em [`09_CONCEITO-MECANISMO.md`](09_CONCEITO-MECANISMO.md) §10; aqui ficam o estatuto da peça e as armadilhas.
+
+**As cinco divergências, e a quinta corrige uma precisão da agenda.**
+
+| O que o registro diz | O que o arquivo diz |
+|:--|:--|
+| título *The Framing Perspective on Social Movements* — **assim nos dois registros**, OpenAlex e CrossRef | o título tem subtítulo: *… : Its Conceptual Roots and Architecture*. **O depósito do editor é que está truncado**, e é dele que sai a citação de quem não abre o arquivo |
+| 2018 | **2019**, 2ª edição, p. 392-410 — na folha de rosto do capítulo e na ficha do depósito |
+| `submittedVersion` (OpenAlex) | a folha de capa diz **final published version** — a primeira divergência de registro **a favor** do projeto |
+| **ouro** (OpenAlex) | **art. 25fa da lei holandesa** (emenda Taverne): uso pessoal individual autorizado, **redistribuição vedada** |
+| autoria não nomeada na planilha da camada A | **três autores** — e aqui a precisão importa: **o CrossRef os nomeia** (Snow, Vliegenthart, Ketelaars). A planilha não tem coluna de autoria, logo a lacuna era da planilha, **não do registro**. O item 47.3 da agenda está correto como escrito, mas pode ser lido como se a agência tivesse errado, e ela não errou |
+
+**Duas armadilhas de citação, as duas dentro do arquivo lido.**
+
+1. **A paginação de Snow *et al.* (2014) não fecha dentro do próprio capítulo.** A lista de referências (impressa 409, PDF p. 19) dá *Mobilization* **19: 489-512**; a citação no corpo (impressa 395) remete a "Snow et al. 2014: **33-35**", fora desse intervalo. E o DOI que a camada A registra, `10.17813/maiq.19.1.x74278226830m69l`, diz **fascículo 1** — enquanto 489-512 não cabe num fascículo 1 de paginação contínua, padrão que em Bröer e Duyvendak casa (`maiq.14.3` com 14: 337-356). **Três dados, dois incompatíveis, e não resolvi:** a peça de 2014 é uma das 25 pendentes da tarefa 17, e a decisão espera a leitura dela.
+2. **O nome do periódico sai errado numa entrada da lista.** Snow e Byrd (2007) aparece como *Mobilization: An International **Journal***; o periódico é *An International **Quarterly***, como nas outras seis entradas da mesma lista. **Quem copiar a referência da lista propaga o erro** — e copiar de lista de referência já é o modo de falha que a §9.6 de `09_CONCEITO-MECANISMO.md` registra na forma bibliográfica.
+
+**A lista de referências do capítulo é ela própria um ganho para a tarefa 17.** Duas das 25 pendentes estão em *Mobilization*, e o capítulo dá a citação completa das duas: **Snow, Benford, McCammon, Hewitt e Fitzgerald (2014)**, *The Emergence, Development, and Future of the Framing Perspective: 25+ Years Since "Frame Alignment"*, 19: 489-512 — o companheiro direto deste capítulo —, e **Bröer e Duyvendak (2009)**, *Discursive Opportunities, Feeling Rules, and the Rise of Protests against Aircraft Noise*, 14: 337-356, cujo registro a §2.5 abaixo tinha desde 29/09 apenas por DOI achado em busca por título, porque a síntese o citava por link do Scopus. **A citação das duas está agora conferida em obra lida; o conteúdo das duas, não** — e nenhuma delas se cita antes de ser aberta.
+
+> **O limite desta leitura, declarado.** Ter lido o capítulo de 2019 **não autoriza citar** Benford e Snow (2000) nem Snow *et al.* (1986): citar tese conferida apenas na citação de terceiro é o modo de falha que este projeto nomeia. O que a leitura autoriza é citar o capítulo. **E ela não fecha o campo `marco_teorico` do codebook**, que segue declarando a obra de 2000 — trocar a declaração teórica do projeto é decisão do pesquisador, e está no item 47.5 da agenda.
+
 ---
 
 ## 2. A bibliografia metodológica extraída
@@ -144,7 +175,7 @@ Aparecem nas sínteses e interessam ao projeto, mas **não passaram por verifica
 
 As sínteses trazem, cada uma, uma seção em que a própria literatura declara onde está travada. É aí que o projeto se posiciona melhor — não contra achados, mas contra lacunas que o campo reconhece ter.
 
-### 3.1 Cinco lacunas declaradas pelo campo, e a resposta do projeto
+### 3.1 Seis lacunas declaradas pelo campo, e a resposta do projeto
 
 **Primeira: padrões de reprodutibilidade em rastreamento documental.** A síntese de *process tracing* lista, entre as pesquisas ainda necessárias, "expandir o trabalho sobre análise de casos negativos, evidência ausente e padrões de reprodutibilidade para rastreamento arquivístico e por entrevistas". É uma lacuna de infraestrutura, não de teoria — e é exatamente o que o projeto já construiu antes de começar: 82 sub-eventos em 16 campos, 60 ancorados em fonte primária com página e transcrição literal, estatuto probatório classificado registro a registro, verificação automatizada a cada alteração e depósito previsto em repositório aberto com DOI. **Este é o ponto em que o projeto não acompanha o campo: ele o precede.** Vale dizê-lo assim na entrevista.
 
@@ -157,6 +188,12 @@ As sínteses trazem, cada uma, uma seção em que a própria literatura declara 
 **Quinta, acrescentada em 30/09/2026 — e é a única lida na fonte, não em síntese.** O verbete *Resource mobilization theory* da *Wiley-Blackwell Encyclopedia* (EDWARDS & GILLHAM, 2013), lido integralmente, encerra a seção de direções promissoras assim: "**Resource demobilization or reduction of resources to SMOs also needs further investigation, as it is currently assumed that the processes for mobilizing resources are reversed when SMOs fail.**"
 
 **PT-52 é um caso dessa lacuna, e não do que ela supõe.** A desmobilização de recursos no 8 de Janeiro não foi o inverso da mobilização: foi **remoção coercitiva por autoridade estatal**, com data, decisão judicial e ordem de desocupação — "eliminada a base logística, o ciclo de rua se encerra materialmente, não por convencimento, mas por remoção da capacidade de agir". O campo, em 2013, dizia **presumir** que o processo se inverte quando a organização fracassa; o caso mostra um desfecho em que ele não se inverte, é interrompido de fora. É a contribuição mais nítida que o material oferece à teoria de mobilização de recursos, e a que menos depende de leitura adicional — o verbete está no corpus e a evidência de PT-52 está ancorada.
+
+**Sexta, acrescentada em 14/10/2026 — e é a segunda lida na fonte, não em síntese.** A conclusão de Snow, Vliegenthart e Ketelaars (2019, p. 404 impressa — PDF p. 14) declara: "much research has identified movement‐specific collective action frames and how they function as independent variables, but **comparatively little research has examined systematically the discursive processes through which frames evolve, develop, and change**". E acrescenta que o par articulação/elaboração, com os campos discursivos em que operam, "provide a conceptual edifice for research on frame discursive processes, but to date the actual occurrence of systematic, methods‐based research on framing processes … has not kept pace with calls for more detailed specification".
+
+**O material do projeto é dessa espécie, e com um dado que o capítulo não supõe: datação documental do processo.** O codebook não registra o quadro de fraude como variável independente já formada; registra **quando** ele é articulado, por quem e com que conteúdo — 22/03/2021 na denúncia da PGR (PT-07), com o diagnóstico **anterior à derrota eleitoral**, e a disseminação por múltiplos canais declarada na mesma peça. É sequência discursiva ancorada em ato processual, não reconstruída em entrevista.
+
+> **A resposta é parcial, e a ressalva tem de ir junto.** O projeto tem a **cronologia**, não a análise sistemática de discurso que o capítulo pede — não há codificação de volume discursivo, que é a operacionalização que o próprio capítulo sugere para elaboração ("the amount of discursive space … consumed or devoted to a topic", p. 398). O que o material oferece é a base datada sobre a qual tal análise poderia ser feita. **Dizer mais que isso seria anunciar método que o projeto não executou.**
 
 ### 3.2 Onde o projeto tensiona com a produção
 

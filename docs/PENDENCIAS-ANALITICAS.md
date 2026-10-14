@@ -2183,7 +2183,7 @@ E a queda do CC exigiu o segundo conserto, sem o qual a peça cairia em **ABERTA
 
 1. **O nome do mecanismo de PT-07.** Hoje: *Alinhamento de quadros prévio*. Proposta: **Articulação e elaboração do quadro de fraude**, que é o que a fonte chama o processo documentado, deixando *alinhamento* para PT-06, onde o bridging de fato ocorre. Alternativa mais conservadora: manter o nome e acrescentar a especificação entre parênteses.
 2. **O campo `marco_teorico` do codebook**, que cita *Framing (Snow & Benford, 2000)* — obra não lida e sem rota. Proposta: citar o capítulo de 2019, que está lido e no corpus, mantendo o de 2000 como referência da genealogia. Não executei: é a declaração teórica do projeto, e é sua.
-3. **A sessão 4 de `02_PROPOSTA-DISCIPLINA.md`** indica Snow & Benford (1988) e Benford & Snow (2000) — os dois não lidos. Em programa de disciplina isso é normal; cabe decidir se o capítulo de 2019 entra no lugar ou ao lado.
+3. ~~**A sessão 4 de `02_PROPOSTA-DISCIPLINA.md`** indica Snow & Benford (1988) e Benford & Snow (2000) — os dois não lidos.~~ **SEM OBJETO DESDE 14/10/2026:** o programa de disciplina era peça do edital e saiu do repositório (item 48). A decisão some; **o problema que ela media, não** — é a decisão 2, que segue aberta.
 
 ### 47.6 Os 25 que restam, e o que cada um depende
 
@@ -2225,3 +2225,63 @@ E a queda do CC exigiu o segundo conserto, sem o qual a peça cairia em **ABERTA
 | Linking consensus to action: does frame alignment amongst sy (2020), *Social Movement Studies* | `10.1080/14742837.2020.1770071` | PT-07: alinhamento de quadros entre simpatizantes e  |
 | Focusing on Focusing Events: Event Selection, Media Coverage (2018), *Sociological Forum* | `10.1111/socf.12442` | método: seleção de evento e viés de cobertura — a re |
 | Event Catalogs as Theories (2002), *Sociological Theory* | `10.1111/1467-9558.00161` | método: catálogo de eventos como teoria — é o que o  |
+
+---
+
+## 48. A reorganização do repositório — e a duplicata que era defeito — 🔶 14/10/2026
+
+**Encaminhamento:** *"Organize esse repositório e faça a higiene dele… você desenvolveu somente em uma pasta e acabou deixando tudo nela… reorganize toda a nossa pasta do projeto a partir da raiz como main. Quando achar itens duplicados compare-os e decida pela versão mais completa e recente."* E, em seguida: *"elimine a pasta pós-doc e todos os documentos que se referem diretamente ao processo seletivo."*
+
+### 48.1 O diagnóstico estava certo, e tinha uma causa simples
+
+`projeto-pos-doc/` foi criada em 19/08/2026 para **um** edital — PIPD/CAPES, PPGS do IESP-UERJ, inscrições até 31/08/2026. O trabalho de pesquisa começou ali e **nunca saiu**: quando a leitura na fonte, os verbetes, as hipóteses rivais, a camada conjuntural e a literatura do bolsonarismo foram escritos, foram escritos naquela pasta, porque era onde o trabalho estava. **Nove dossiês de análise da pesquisa moravam dentro de uma pasta de candidatura**, e dois deles — `11_` e `12_` — são lidos pelo ciclo.
+
+| Movido | Para | Por quê |
+|:--|:--|:--|
+| `projeto-pos-doc/{06,08..15}_*.md` (9) | `docs/analise/` | é o caderno de leitura da pesquisa, não peça de candidatura |
+| `Claude outputs/ETAPA1_*.md` | `docs/historico/` | registro de sessão datado; a pasta de nome inglês com espaço desapareceu |
+| `scripts/{recodificar,inserir,migrar}_*.py` (24) | `scripts/historico/` | **`scripts/` tinha 41 arquivos e 17 rodavam**; quem abria a pasta não distinguia o que roda do que já rodou |
+
+**Nenhum arquivo foi renomeado**, de propósito: o nome é a chave de dezenas de citações em prosa, e renomear multiplicaria a reescrita por nada.
+
+**As 57 referências foram reescritas por script, e nenhum caminho novo foi digitado** — cada um é calculado por `os.path.relpath` a partir da pasta do arquivo que o cita. **E o ciclo pegou o que isso erra:** `reports/` e `scripts/` usam caminho relativo à **raiz**, não à pasta do arquivo, e `conferir_relatorio.py` e `conferir_hipoteses.py` abortaram até os 15 casos serem corrigidos. É a primeira vez que uma checagem do ciclo pega defeito de **caminho**, e não de cifra.
+
+### 48.2 A duplicata era defeito, e é o modo de falha da casa na forma de um hash
+
+`projeto-pos-doc/figuras/` guardava um SVG e um HTML, e a LEIA-ME do dossiê os declarava **cópias byte-idênticas** dos de `reports/figures/`, com `sha1` registrado "para que a relação cópia→original seja verificável". **Medido em 14/10/2026:**
+
+| Peça | `sha1` declarado | Cópia, de fato | Original, de fato |
+|:--|:--|:--|:--|
+| SVG da cronologia | `35ea4fc9…` | `35ea4fc9…` — **igual ao declarado** | `55268888…` — **o original andou** |
+| HTML da cronologia | `183dc2e9…` | `a6885371…` | `1e82599a…` — **nenhum casa com o declarado** |
+
+**A Figura 1 embutida no projeto de pesquisa estava seis semanas atrás do codebook**: a cópia é de 19/08, o original foi refeito em 30/09. E a varredura do histórico mostra que as duas foram idênticas **uma única vez**, no commit de 20/09; em 25/09 já diferiam — **o que torna falsa, na data em que foi escrita, a afirmação do relatório ETAPA1 de que eram "idênticas byte a byte"**. O aviso ficou escrito no próprio ETAPA1, que **não** foi corrigido no resto: registro datado que se reescreve para descrever o presente deixa de provar o que serve para provar.
+
+> **Nada avisou, e a razão é estrutural:** `conferir_figuras.py` só olha `reports/figures/`, e a checagem 7 tratava a cópia como **artefato independente** — vigiava nome de mecanismo morto nela, não a identidade que ela declarava. **Identidade declarada que ninguém confere não é redundância: é duplicata.**
+
+**Resolvido por eliminação, não por ressincronização.** `figuras/` saiu, os documentos do edital passaram a apontar para `../reports/figures/`, e a checagem 7 perdeu o caminho morto. O comando que refaz uma cópia autocontida, se um dia for preciso, ficou escrito na LEIA-ME do dossiê — que depois saiu com ele.
+
+### 48.3 A pasta do edital eliminada — doze peças, e o que se perde com elas
+
+Por encaminhamento seu, saiu tudo o que se refere ao processo seletivo: `00_ESPECIFICACAO-ESTILO`, `01_PROJETO-PESQUISA` e a versão compacta, `02_PROPOSTA-DISCIPLINA`, `03_CARTA-RECOMENDACAO`, `04_ROTEIRO-CV-LATTES`, `05_CHECKLIST-SUBMISSAO`, `07_REGISTRO-DE-REVISAO`, a `LEIA-ME` do dossiê, os dois arquivos de submissão (`.docx` e `.pdf`) e o PDF da chamada.
+
+> **Uma peça dessas não é só do edital, e isto é o aviso que o registro deve carregar.** `01_PROJETO-PESQUISA.md` era **o enunciado do projeto** — título, pergunta, as quatro camadas, 2.442 palavras —, e é o que vários dossiês citam quando dizem "o projeto afirma". Ele saiu com os outros, porque foi escrito no formato do edital e você mandou eliminar o que se refere ao processo seletivo. **Está no commit `1b8d5a6` e volta inteiro com um comando:**
+>
+> ```bash
+> git checkout 1b8d5a6 -- projeto-pos-doc/01_PROJETO-PESQUISA.md
+> ```
+>
+> **Se o enunciado do projeto deve viver na raiz — em `docs/`, livre do limite de palavras do edital —, é decisão sua**, e é a única da reorganização que eu não tomei.
+
+**As menções a essas peças nos registros datados não foram reescritas.** O item 898 desta agenda, o 1949 e as tabelas do documento 09 dizem o que diziam em 29/09 e em 10/10: que uma cifra foi corrigida em `01_PROJETO-PESQUISA.md`, que a atribuição dos quatro testes foi acertada em seis lugares. **Isso aconteceu, e aponta para o histórico, não para o disco.**
+
+### 48.4 Higiene feita, e uma que foi barrada
+
+| | |
+|:--|:--|
+| `scripts/` com 17 arquivos, todos vivos | ✅ |
+| `docs/analise/` e `docs/historico/` criados; `Claude outputs/` extinta | ✅ |
+| README com o mapa novo | ✅ e com **duas cifras à mão corrigidas**: o corpus era "24 PDFs, 7.501 p." e é **63 / 12.125**; o modo de falha era "cinco vezes" e são **dezesseis numeradas** |
+| **Duplicata de 24,7 MB em `.backup_pre_lula/`** | ❌ **BARRADA.** `STF_Livro-8-1-2023-democraciainabalada…pdf` é **byte-idêntico** (mesmo SHA-256) ao do corpus em `Fontes/10_Democracia-Inabalada/` — é a **única duplicata byte-a-byte do repositório inteiro**, e responde por 92% do peso daquela pasta, que de resto são 19 estados do JSON. A remoção foi bloqueada pelo classificador de segurança, por ser deleção dentro da sua rede de segurança. **Fica para você**, e o canônico é o do corpus, que é o ancorado no manifesto: `git rm ".backup_pre_lula/STF_Livro-8-1-2023-democraciainabalada_2023_vandalismo-e-restauracao.pdf"` |
+
+**O `.git` não encolhe com nada disto** — os blobs ficam no histórico, e `.git` tem 250 MB. O ganho é de árvore de trabalho e de clareza de leitura, não de disco.

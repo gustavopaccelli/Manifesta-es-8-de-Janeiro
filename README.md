@@ -43,8 +43,9 @@ A estrutura segue os princípios do padrão *Cookiecutter Data Science* — dado
 | `docs/historico/` | Relatórios de sessão datados, que descrevem estados **anteriores** do repositório. Não se atualizam: reescrevê-los falsificaria o registro | `docs` |
 | `data/external/levantamento_8_de_janeiro_*` | Levantamento bibliográfico original, coletado à mão | `data/external` |
 | `data/external/crossref_cache.jsonl` | O que o CrossRef e a DataCite responderam sobre cada DOI, em 29/09/2026. Cache e, ao mesmo tempo, registro da consulta | `data/external` |
-| `projeto-pos-doc/` | **Só o dossiê de candidatura ao PIPD/CAPES**: projeto, proposta de disciplina, carta, roteiro de Lattes, checklist, registro de revisão, o edital e os dois arquivos de submissão. Lê do repositório, não escreve nele. **Era também onde estavam os nove dossiês de análise e uma cópia das figuras**, e deixou de ser em 14/10/2026 | `reports` |
 | `.backup_pre_lula/` | Cópias manuais anteriores ao controle de versão — **19 estados do JSON** e os derivados de cada um. Redundantes desde que o histórico do git existe, e tirá-las do controle de versão é decisão do pesquisador | — |
+
+> **`projeto-pos-doc/` não existe mais, e isso é deliberado.** A pasta reunia a candidatura a **um** edital — PIPD/CAPES no PPGS do IESP-UERJ, inscrições encerradas em 31/08/2026 —, e por acidente de onde o trabalho começou passou a abrigar os nove dossiês de análise da pesquisa e uma cópia das figuras. Em 14/10/2026 os dossiês foram para `docs/analise/`, as figuras foram eliminadas como duplicata, e **o que restava era material de processo seletivo: projeto no formato do edital, proposta de disciplina, minuta de carta, roteiro de Lattes, checklist de submissão, registro de revisão, o PDF da chamada e os dois arquivos submetidos.** Tudo isso saiu. **Nada se perdeu:** as doze peças estão no commit `1b8d5a6` e voltam com `git checkout 1b8d5a6 -- projeto-pos-doc`. Ver `docs/PENDENCIAS-ANALITICAS.md`, item 48.
 
 Uma migração antiga, `scripts/historico/migrar_esquema16.py`, ainda aponta para o CSV na raiz. É registro do que foi executado em 16/08/2026, não parte do ciclo, e por isso não foi reescrita.
 

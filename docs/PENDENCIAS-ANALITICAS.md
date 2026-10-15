@@ -1661,6 +1661,8 @@ Você delegou a decisão. **Gohn (2019) fecha PARCIALMENTE a tarefa 10, e num n�
 
 ---
 
+<!-- ORDEM-DE-ATAQUE: gerado por scripts/gerar_ordem_de_ataque.py a partir de data/ordem_de_ataque.json. Não editar à mão: o ciclo sobrescreve. -->
+
 ## Ordem de ataque — revista em 15/10/2026
 
 **A decisão que ordena tudo continua sendo a de 16/08/2026: a redação é o último item.** A ordem anterior a essa data tratava o aparato como suficiente e punha a escrita como ponto de virada; esta trata o conjunto de dados do processo político como pré-requisito.
@@ -1710,15 +1712,19 @@ Você delegou a decisão. **Gohn (2019) fecha PARCIALMENTE a tarefa 10, e num n�
 
 | # | Tarefa | Item desta agenda | Depende de |
 |:--|:--|:--|:--|
-| 10 | Acrescentar a literatura brasileira em livro — 🔶 **eixo 14 com 12 peças, 1.854 p.** em 08/10, nenhuma lida: 7 coletadas, 3 entregues por você e 2 capítulos a mais por encaminhamento. **A tarefa SE DIVIDIU em duas, e metade está fechada** (item 38.8): o mapa bibliográfico brasileiro que as sínteses não tinham está em Gohn (2019), que mapeia 1970-2019 por ciclo nomeando autores e paradigmas; o que resta é **obter os textos que esse mapa nomeia** — o cânone (Sader, Scherer-Warren, Avritzer, Doimo, Telles, Abranches, Nobre, Solano, Messenberg) é de editora comercial, **zero com autoria casada em acesso aberto**, e depende dos seus arquivos | 11.4, 22.4, 37, 38 | seus arquivos |
-| 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **25 pendentes**: 8 lidos, 7 com ficha da 1ª leva, 3 impedidos. Números gerados por `localizar_camada_a.py`, não digitados — **conferidos contra o script em 15/10**. Das 25, **9 têm arquivo em algum servidor e são barradas no cliente automatizado** e **16 não têm depósito aberto em lugar nenhum**; **8 das 25 estão num só periódico, a *Mobilization*** (item 47.5) | 23, 24, 25 | acesso institucional |
+| 10 | Acrescentar a literatura brasileira em livro — 🔶 **eixo 14 com 5 arquivos, 1.832 p.**, nenhuma lida. A coleta somou **12 peças** — 7 coletadas, 3 entregues por você e 2 capítulos a mais por encaminhamento —, e o manifesto conta menos arquivos do que isso porque **o volume integral substituiu oito offprints em 08/10** (item 39.1): peça coletada e arquivo no corpus deixaram de ser a mesma unidade. **A tarefa SE DIVIDIU em duas, e metade está fechada** (item 38.8): o mapa bibliográfico brasileiro que as sínteses não tinham está em Gohn (2019), que mapeia 1970-2019 por ciclo nomeando autores e paradigmas; o que resta é **obter os textos que esse mapa nomeia** — o cânone (Sader, Scherer-Warren, Avritzer, Doimo, Telles, Abranches, Nobre, Solano, Messenberg) é de editora comercial, **zero com autoria casada em acesso aberto**, e depende dos seus arquivos | 11.4, 22.4, 37, 38 | seus arquivos |
+| 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **25 pendentes**: 8 lidos, 7 com ficha da 1ª leva, 3 impedidos. Números medidos por `localizar_camada_a.py` a cada geração desta linha, nunca digitados. Das 25, **9 têm arquivo em algum servidor e são barradas no cliente automatizado** e **16 não têm depósito aberto em lugar nenhum**; **8 das 25 estão num só periódico, a *Mobilization*** (item 47.5) | 23, 24, 25 | acesso institucional |
 | 19 | **Decidir o nome de `mecanismo_causal`** e aplicar as **sete** cobranças da seção 4 do documento 09. A tarefa 14 acrescentou três e **devolveu as três**: a descontinuidade 2013→2015 (item 32); a "apropriação de repertório que Tilly não detalha", que era conclusão errada — Kunrath Silva (2018, § 15) mostra mecanismo distinto da apropriação social; e **"certificação" em PT-03, que o pesquisador renomeou para *ressignificação do protesto* em 04/10** (item 34.2). Dois nomes de mecanismo saíram daqui decididos — PT-01 e PT-03 | 24.6, 25.1, 25.2, 31.6, 32.1, 34.2 | decisão sua |
 | 25 | **A literatura do bolsonarismo como mobilização** — 🔶 **coleta fechada em 04/10**: **18 peças, 453 p.** em `Fontes/13_Bolsonarismo-mobilizacao/` — 14 por OpenAlex e **as 4 barradas entregues pelo pesquisador** (item 34.6). **Três foram lidas** e ancoram registro: Araujo e Sales (2022), que tirou PT-05 de contextual; Fernandes e Silva (2021), que tirou a "tolerância policial" de PT-02; e von Bülow e Abers (2024), que **fechou PT-06 e retificou o mecanismo dele**. **Faltam 15, 400 p.** — e **nenhuma bloqueia registro**: a leitura restante serve à redação, não à codificação | 23.2, 31.4, 33, 34, 35 | leitura |
 | 16 | **Redação do artigo** | 3, 4, 5, 6, 9, 10 | tudo acima |
 
 **Nenhuma pendência de dado depende de você** — isso valia desde 16/08, deixou de valer em 30/09 com a tarefa 24, e em 04/10 mudou duas vezes: a tarefa **14** fechou a parte que podia fechar e deixou a **25**, bibliográfica; e horas depois, na terceira rodada, **você entregou as quatro peças barradas e mandou ler duas**, o que fechou a coleta da 25 e tirou PT-05 de contextual. **O que resta da 25 é leitura, e a leitura não depende de você.**
 
-**As cinco abertas, por natureza:** decisão sua (**19**), leitura ou entrega de arquivo (**10, 17, 25**) e a redação (**16**). **A 15 saiu da lista em 13/10**, e o que sobrou dela é decisão registrada no item 46, não tarefa aberta. **A 10 mudou de natureza em 08/10:** deixou de ser tarefa de busca — a busca foi feita e mostrou que o cânone não está em acesso aberto — e passou a depender dos seus arquivos, como a 17 depende do seu acesso institucional. **A tarefa 14 fechou em 04/10**, em quatro rodadas, e com ela a última tarefa de codificação. **Só a 16 depende das outras — e, desde a quarta rodada, nenhuma leitura pendente bloqueia registro: as quinze peças que restam no eixo 13 servem à redação, não à codificação.**
+**As cinco abertas, por natureza:** leitura ou entrega de arquivo (**10, 17, 25**), decisão sua (**19**) e a redação (**16**). **A 15 saiu da lista em 13/10**, e o que sobrou dela é decisão registrada no item 46, não tarefa aberta. **A 10 mudou de natureza em 08/10:** deixou de ser tarefa de busca — a busca foi feita e mostrou que o cânone não está em acesso aberto — e passou a depender dos seus arquivos, como a 17 depende do seu acesso institucional. **A tarefa 14 fechou em 04/10**, em quatro rodadas, e com ela a última tarefa de codificação. **Só a 16 depende das outras — e, desde a quarta rodada, nenhuma leitura pendente bloqueia registro: as quinze peças que restam no eixo 13 servem à redação, não à codificação.**
+
+> **Cifras desta seção que não são medidas a cada ciclo:** **9** — das pendentes da camada A têm arquivo em algum servidor e são barradas no cliente automatizado (medido em 13/10/2026, item 47.5 — tentativa de rede, não remedida a cada ciclo); **16** — das pendentes não têm depósito aberto em repositório nenhum (medido em 13/10/2026, item 47.5 — o limite ali é de assinatura, não de coleta). Todo o resto sai de medição na geração.
+
+<!-- /ORDEM-DE-ATAQUE -->
 
 > **As decisões suas que restam, e nenhuma bloqueia o resto.** (1) **Redatar `data_hora` de PT-02** — a ressalva está redigida como nota, a diferença entre data do evento e data do ator está explicada, mas mudar o campo é seu (item 34.7). (2) ~~Promover ou não PT-06~~ — **resolvido na quarta rodada, e sem mexer no critério:** você mandou ler a peça, o mecanismo ganhou âncora própria, PT-06 passou a `Confirmado` pela cadeia causal, e PT-08 não precisou ser reexaminado (item 35). (3) **Se Gohn (2019) fecha parcialmente a tarefa 10** — é o único balanço da literatura brasileira de protesto no corpus, e a 10 existe por essa lacuna. (4) **NOVO — Telegram e WhatsApp ficam nomeados em PT-06 sem verificação, ou saem do campo?** A peça os reporta por citação de segunda mão, e a regra do projeto não admite lastro nessa forma (item 35.5). (5) **NOVO — o esquema de 16 campos ganha campo para autonomia do movimento em relação ao líder?** É o argumento central de von Bülow e Abers e toca a pergunta desta pesquisa; hoje vive em `fonte_trecho` como achado (item 35.4). **(6) Este inventário é de 04/10 e não é a lista inteira:** as decisões nascidas depois estão nos itens que as geraram — a licença da sua obra e as duas higienes não executadas (**46.5**, **46.6**), o `marco_teorico` que cita obra não lida (**47.5**, decisão 2; a 3 ficou sem objeto), e as duas de 14/10 — o enunciado do projeto, que saiu com a pasta do edital, e a duplicata de 24,7 MB que o classificador barrou (**48.3**, **48.4**). **Não foram copiadas para cá de propósito:** lista à mão duplicada é lista que envelhece, e esta seção já é a prova disso.
 
@@ -2287,3 +2293,49 @@ Por encaminhamento seu, saiu tudo o que se refere ao processo seletivo: `00_ESPE
 | **Duplicata de 24,7 MB em `.backup_pre_lula/`** | ❌ **BARRADA.** `STF_Livro-8-1-2023-democraciainabalada…pdf` é **byte-idêntico** (mesmo SHA-256) ao do corpus em `Fontes/10_Democracia-Inabalada/` — é a **única duplicata byte-a-byte do repositório inteiro**, e responde por 92% do peso daquela pasta, que de resto são 19 estados do JSON. A remoção foi bloqueada pelo classificador de segurança, por ser deleção dentro da sua rede de segurança. **Fica para você**, e o canônico é o do corpus, que é o ancorado no manifesto: `git rm ".backup_pre_lula/STF_Livro-8-1-2023-democraciainabalada_2023_vandalismo-e-restauracao.pdf"` |
 
 **O `.git` não encolhe com nada disto** — os blobs ficam no histórico, e `.git` tem 250 MB. O ganho é de árvore de trabalho e de clareza de leitura, não de disco.
+
+---
+
+## 49. A ordem de ataque deixa de ser escrita à mão — 🔶 15/10/2026
+
+**Encaminhamento:** *"Transforme a tabela em script gerado."* A própria peça pedia isso desde 30/09: *"a contagem da 17 já é gerada; o resto desta tabela não é, e é a próxima candidata a virar script"*. Horas antes, o conserto do item 48 fechara a terceira rodada de contabilidade da mesma tabela.
+
+### 49.1 O que passou a existir
+
+| | |
+|:--|:--|
+| **`data/ordem_de_ataque.json`** | A fila como **dado**: 30 tarefas fechadas e 5 abertas, cada uma com número, texto, `estado`, itens desta agenda e — nas abertas — natureza e dependência. É curado à mão, como o codebook, e é a fonte da verdade da seção |
+| **`scripts/gerar_ordem_de_ataque.py`** | Passo **3/9** do ciclo. Escreve a seção entre marcadores HTML e **prova por `assert` que o resto do arquivo não mudou** — é um gerador operando dentro de um documento de 2.300 linhas escritas à mão |
+| **`scripts/historico/migrar_ordem_de_ataque.py`** | A migração de uso único que leu a seção do disco e a depositou no ledger. **Não divide título e nota, não reordena, não reescreve célula**: cada linha entrou como o texto que já era |
+
+### 49.2 A prova da migração é a identidade, e ela veio antes de qualquer melhoria
+
+Antes de trocar um número por medição, a primeira geração foi comparada com a seção que estava no disco: **idêntica, byte a byte**. É o que autoriza dizer que o ledger não perdeu nada no caminho — e é por isso que a migração foi escrita para *não* melhorar o texto que transportava. Só depois disso as cifras viraram chaves.
+
+**E a promessa do "não editar à mão" foi testada por injeção:** plantei `As dezessete abertas` dentro do bloco e rodei o gerador. A frase desapareceu, e o bloco voltou ao que o ledger diz. Edição dentro dos marcadores se perde no ciclo seguinte — **quem edita a seção, edita o JSON**.
+
+### 49.3 O que agora é medido, e o que ficou declarado como não medido
+
+| Cifra | De onde vem |
+|:--|:--|
+| Os quatro estados da camada A — 8 lidos, 7 com ficha, 3 impedidos, 25 pendentes | `localizar_camada_a.py`, pela função `estado()` **importada, não reimplementada**: duas contagens do mesmo universo por dois códigos é como a cifra errada entra |
+| As 8 pendentes na *Mobilization* | o mesmo universo, filtrado por veículo |
+| Peças e páginas dos eixos 13 e 14, e o que falta ler no 13 | `Fontes/MANIFESTO-CORPUS.csv` — o mesmo arquivo que a checagem 8 confere por SHA-256. As três lidas são **nomeadas** no ledger por fragmento, e um fragmento que case com zero ou duas peças aborta |
+| "As **cinco** abertas, por natureza" | derivada da tabela: palavra e agrupamento saem do campo `estado` e do campo `natureza` |
+| **9 barradas no cliente** e **16 sem depósito aberto** | **não se medem a cada ciclo** — exigiriam rede. Ficam em `medidos_a_mao`, e o bloco **imprime a data de cada uma** |
+
+> **A linha das cifras não medidas é o ponto desta rodada.** O defeito de 15/10 não foi um número errado: foi um número **sem idade visível** numa linha que anunciava procedência de script. Número que não se mede ou vira medição, ou carrega a data ao lado — e as duas da camada A agora carregam "medido em 13/10/2026".
+
+### 49.4 A geração corrigiu uma cifra, e a correção tem causa conhecida
+
+A linha da tarefa 10 dizia **"eixo 14 com 12 peças, 1.854 p."**. O manifesto conta **5 arquivos e 1.832 p.** A diferença não é erro de digitação: em 08/10 **o volume integral de *Giros à direita* substituiu oito offprints** (item 39.1), e desde então **peça coletada e arquivo no corpus deixaram de ser a mesma unidade**. A linha nova diz as duas coisas — 12 peças coletadas, 5 arquivos no manifesto — em vez de escolher uma e calar a outra.
+
+**E uma cifra à mão caiu de carona, na documentação dos scripts:** `scripts/LEIA-ME.md` descrevia `verificar_integridade.py` como "**Seis** checagens estruturais" desde antes de 08/10. São **oito** — a 7 pega nome de mecanismo retirado, a 8 confere corpus × manifesto —, e o ciclo imprime "as oito checagens passaram" na mesma execução em que a LEIA-ME dizia seis.
+
+### 49.5 O que o gerador NÃO faz, de propósito
+
+1. **Não abre, não fecha e não ordena tarefa.** Estado é campo do ledger, preenchido por decisão humana. O script só impede que a linha fique na seção errada depois da decisão.
+2. **Não tocou no inventário de decisões** logo abaixo do bloco: ele continua escrito à mão, e desde o item 48 aponta para os itens que geraram cada decisão em vez de copiá-las. **Lista à mão duplicada é lista que envelhece** — e essa é a lição que esta seção provou três vezes.
+3. **Não reescreveu a prosa.** Os quatro parágrafos de histórico e os dois de fechamento foram para o ledger como estavam; mudou só onde havia cifra.
+
+> **Um efeito colateral visível, e é consequência de a frase ser derivada:** a ordem em que as naturezas aparecem agora segue a **ordem da tabela** — "leitura ou entrega de arquivo (10, 17, 25), decisão sua (19) e a redação (16)" —, não a ordem em que a mão as escrevia. Se a ordem importa, ela se muda reordenando as tarefas no ledger, que é onde a tabela também se ordena.

@@ -28,28 +28,32 @@ python scripts/gerar_codebook.py
 # 4. regere o relatório de auditoria
 python scripts/gerar_auditoria.py
 
-# 5. verifique — falha se algo divergir
+# 5. regere a seção "Ordem de ataque" da agenda
+python scripts/gerar_ordem_de_ataque.py
+
+# 6. verifique — falha se algo divergir
 python scripts/verificar_integridade.py
 
-# 6. confira as figuras de reports/figures/ contra o codebook
+# 7. confira as figuras de reports/figures/ contra o codebook
 python scripts/conferir_figuras.py
 
-# 7. confira o relatório de pesquisa contra o codebook
+# 8. confira o relatório de pesquisa contra o codebook
 python scripts/conferir_relatorio.py
 
-# 8. confira a amostra contra o texto dos PDFs
+# 9. confira a amostra contra o texto dos PDFs
 python scripts/conferir_paginas.py
 
-# 9. confira o campo multiorganizacional contra o codebook
+# 10. confira o campo multiorganizacional contra o codebook
 python scripts/desenhar_campo.py --autoteste
 
-# 10. confira as citações do documento 11 contra o codebook
+# 11. confira as citações do documento 11 contra o codebook
 python scripts/conferir_hipoteses.py
 ```
 
-Os passos 3 a 10 são o que `bash scripts/ciclo.sh` roda, nessa ordem. Os passos
-5 a 10 devolvem código de saída != 0 em caso de falha, então servem em gancho
-de pré-commit.
+Os passos 3 a 11 são o que `bash scripts/ciclo.sh` roda, nessa ordem — **nove
+passos desde 15/10/2026**. Os passos 6 a 11 devolvem código de saída != 0 em caso
+de falha, então servem em gancho de pré-commit. Os passos 3 a 5 **geram**: se a
+árvore ficar suja depois do ciclo, foi peça derivada que estava atrasada.
 
 ## Os arquivos
 
@@ -57,18 +61,19 @@ de pré-commit.
 |:--|:--|
 | `gerar_codebook.py` | JSON → `data/processed/`: CSV (UTF-8 com BOM) + XLSX de quatro abas. Guarda `PROCEDENCIA` (procedência de cada arquivo do corpus) e `PENDENCIAS` (fila de coleta). |
 | `gerar_auditoria.py` | JSON → `reports/AUDITORIA-FONTES.md`. A narrativa vive no script; as tabelas saem dos dados. |
-| `verificar_integridade.py` | Seis checagens **estruturais**. Ver a ressalva abaixo. |
+| `gerar_ordem_de_ataque.py` | `data/ordem_de_ataque.json` → a seção **Ordem de ataque** de `../docs/PENDENCIAS-ANALITICAS.md`, entre marcadores HTML. Escreve **só** dentro do bloco e prova por `assert` que o resto do arquivo não mudou. A seção em que cada tarefa aparece sai do campo `estado`, e as cifras saem de medição: as da camada A pela função `estado()` de `localizar_camada_a.py` — importada, não reimplementada —, as de corpus do `MANIFESTO-CORPUS.csv`. Cifra que exigiria rede fica em `medidos_a_mao`, e o bloco **imprime a data em que foi medida**. `--chaves` lista o que se pode citar como `{{chave}}`; `--autoteste` roda três provas negativas. **Nasceu porque aquela tabela envelheceu três vezes em dezesseis dias** — ver `../docs/PENDENCIAS-ANALITICAS.md`, item 49. |
+| `verificar_integridade.py` | **Oito** checagens **estruturais** — eram seis até 08/10/2026; a 7 pega nome de mecanismo retirado e a 8 confere corpus × manifesto por SHA-256. Ver a ressalva abaixo. |
 | `conferir_figuras.py` | As duas peças de `reports/figures/` contra o codebook: cobertura dos registros, selo de status, procedência e cifras já retiradas. Ver a segunda ressalva. |
 | `conferir_relatorio.py` | `reports/process_tracing_8jan_relatorio.md` contra o codebook: cobertura da tabela da Etapa 2, páginas citadas × `fonte_pagina`, cifras retiradas e caminhos citados. Ver a segunda ressalva. |
 | `conferir_paginas.py` | Abre o PDF na página citada e procura a transcrição. **A única checagem que lê a fonte.** |
-| `desenhar_campo.py` | O campo multiorganizacional do episódio: sistemas de aliança e de conflito em relação a um **ator focal declarado**, porque campo é sempre de alguém e o codebook é neutro quanto ao ator. Emite `data/processed/campo_multiorganizacional.csv` e, do mesmo `ENTIDADES`, o desenho em `reports/figures/figura_campo_multiorganizacional.svg` e a página `reports/figures/campo_multiorganizacional.html`. **A figura sai do gerador, não da mão** — é por isso que ela não pode divergir da planilha, e é por isso que `conferir_figuras.py` não a confere: aquele script existe para as duas peças da cronologia, que são feitas à mão. A pasta passou a ter os dois regimes. Cada entidade declara os registros e o campo do codebook que a sustentam, e `--autoteste` exige que o fragmento ocorra literalmente ali — com prova negativa por injeção de defeito. **É o passo 7/7 do ciclo.** |
-| `conferir_hipoteses.py` | `../docs/analise/11_HIPOTESES-RIVAIS-PT-28.md` contra o codebook: cada linha de tabela que cita um registro tem de citar página que aquele registro ancora, **e no documento-fonte certo** — "Cappelli: 679" é reprovado quando a página é do CPMI. Não abre PDF; a pergunta é anterior. **Passo 8/8 do ciclo.** |
+| `desenhar_campo.py` | O campo multiorganizacional do episódio: sistemas de aliança e de conflito em relação a um **ator focal declarado**, porque campo é sempre de alguém e o codebook é neutro quanto ao ator. Emite `data/processed/campo_multiorganizacional.csv` e, do mesmo `ENTIDADES`, o desenho em `reports/figures/figura_campo_multiorganizacional.svg` e a página `reports/figures/campo_multiorganizacional.html`. **A figura sai do gerador, não da mão** — é por isso que ela não pode divergir da planilha, e é por isso que `conferir_figuras.py` não a confere: aquele script existe para as duas peças da cronologia, que são feitas à mão. A pasta passou a ter os dois regimes. Cada entidade declara os registros e o campo do codebook que a sustentam, e `--autoteste` exige que o fragmento ocorra literalmente ali — com prova negativa por injeção de defeito. **É o passo 8/9 do ciclo.** |
+| `conferir_hipoteses.py` | `../docs/analise/11_HIPOTESES-RIVAIS-PT-28.md` contra o codebook: cada linha de tabela que cita um registro tem de citar página que aquele registro ancora, **e no documento-fonte certo** — "Cappelli: 679" é reprovado quando a página é do CPMI. Não abre PDF; a pergunta é anterior. **Passo 9/9 do ciclo.** |
 | `baixar_fontes.sh` | Comandos de coleta do que falta. Não baixa nada sozinho: cada peça é um alvo nomeado. |
 | `historico/migrar_esquema16.py` | Rodada única de 16/08/2026 (12 → 16 campos + correções de auditoria). Idempotente. Mantido como registro da decisão, não faz parte do ciclo. |
 | `varrer_fonte_pagina.py` | **Triagem, fora do ciclo.** Compara as páginas citadas na prosa dos registros (`fonte_trecho`, `mecanismo_causal`, `status_verificacao`, `nota_auditoria`) com o campo estruturado `fonte_pagina`, e imprime o trecho em volta de cada divergência. Nem todo achado é lacuna — ver a terceira ressalva. |
 | `verificar_dois_sinteses.py` | **Triagem, fora do ciclo.** Os DOIs das sínteses LeapSpace no CrossRef e, em 404, na DataCite. Emite `data/processed/dois_sinteses_leapspace.csv` com metadados, e confere se o título registrado casa com o que a síntese declara. **Imprime a contagem por arquivo e cobra as duas contagens escritas à mão** — a de `PROCEDENCIA` e a do inventário de fontes —, saindo com código 1 se divergirem. Ver a quarta ressalva. |
 | `triar_dois.py` | **Triagem, fora do ciclo.** Classifica os DOIs verificados em três camadas contra os mecanismos que o codebook afirma, e emite `data/processed/triagem_dois.csv` com o uso declarado item por item. A chave é fragmento de título com número de correspondências esperado — aborta se divergir, para nenhuma referência ser inventada por engano de digitação. |
-| `historico/recodificar_*.py` · `historico/inserir_*.py` | **As 24 migrações de uso único**, uma por rodada, cada uma com o achado que a motivou no cabeçalho. Registro do que foi feito, fora do ciclo. **Mudaram de lugar em 14/10/2026**: estavam misturadas aos 17 scripts vivos nesta pasta, e quem abria `scripts/` não distinguia o que roda do que já rodou. **Não se reexecutam** — cada uma afirma por `assert` um estado anterior que já não existe, e é isso que as torna seguras de guardar. |
+| `historico/recodificar_*.py` · `historico/inserir_*.py` · `historico/migrar_*.py` | **As 25 migrações de uso único**, uma por rodada, cada uma com o achado que a motivou no cabeçalho. Registro do que foi feito, fora do ciclo. **Mudaram de lugar em 14/10/2026**: estavam misturadas aos scripts vivos nesta pasta, e quem abria `scripts/` não distinguia o que roda do que já rodou. **Não se reexecutam** — cada uma afirma por `assert` um estado anterior que já não existe, e é isso que as torna seguras de guardar. |
 
 ## Três ressalvas que importam
 

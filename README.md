@@ -11,7 +11,7 @@ pip install -r requirements.txt
 bash scripts/ciclo.sh
 ```
 
-O ciclo regenera os formatos derivados, refaz a auditoria e roda as quatro checagens: a estrutural, a das figuras, a do relatório e a amostral contra o texto dos PDFs. Ele falha — com código de saída diferente de zero — se qualquer coisa divergir. Rode-o depois de **toda** alteração no JSON ou no corpus.
+O ciclo tem **nove passos**: três geram — os formatos derivados, a auditoria de fontes e a seção *Ordem de ataque* da agenda — e seis conferem: as oito checagens estruturais, as figuras, o relatório, a amostra contra o texto dos PDFs, o campo multiorganizacional e as citações do documento 11. Ele falha — com código de saída diferente de zero — se qualquer coisa divergir. Rode-o depois de **toda** alteração no JSON ou no corpus.
 
 ## As regras que sustentam o aparato
 
@@ -31,16 +31,17 @@ A estrutura segue os princípios do padrão *Cookiecutter Data Science* — dado
 | `process_tracing_8jan_eventos.json` | Codebook — a fonte única da verdade. Fica na raiz porque é a porta de entrada dos dados e o que todo script lê | `data/interim` (curado à mão) |
 | `data/processed/` | Derivados, **gerados**: o CSV e o XLSX do codebook, o catálogo da imprensa, a planilha dos 411 DOIs das sínteses e a triagem deles por pertinência. Não editar — a próxima execução sobrescreve | `data/processed` |
 | `Caderno-de-evidencias/` | Transcrições literais com página, por registro | `references` |
-| `scripts/` | **Só o que roda hoje**: 17 geradores e verificadores. Ver `scripts/LEIA-ME.md` | `src` |
-| `scripts/historico/` | As **24 migrações de uso único** já executadas — `recodificar_*`, `inserir_*`, `migrar_*`. Não são parte do ciclo e **não se reexecutam**: cada uma afirma, por `assert`, o estado anterior que já não existe. Ficam como registro de o que mudou o codebook, e quando | `src` |
+| `scripts/` | **Só o que roda hoje**: 18 geradores e verificadores. Ver `scripts/LEIA-ME.md` | `src` |
+| `scripts/historico/` | As **25 migrações de uso único** já executadas — `recodificar_*`, `inserir_*`, `migrar_*`. Não são parte do ciclo e **não se reexecutam**: cada uma afirma, por `assert`, o estado anterior que já não existe. Ficam como registro de o que mudou o codebook, e quando | `src` |
 | `reports/` | `AUDITORIA-FONTES.md`, a auditoria de vínculos, **gerada** | `reports` |
 | `reports/figures/` | **O único lugar das figuras**: cadeia causal e campo multiorganizacional, em SVG e HTML. As da cronologia são **escritas à mão** — editar o JSON não as atualiza, e `scripts/conferir_figuras.py` acusa a defasagem; as do campo são geradas por `desenhar_campo.py`. Até 14/10/2026 havia uma cópia em `projeto-pos-doc/figuras/`, declarada byte-idêntica e que **não era** — ver `docs/PENDENCIAS-ANALITICAS.md`, item 48 | `reports/figures` |
 | `reports/process_tracing_8jan_relatorio.md` | Relatório de pesquisa, **escrito à mão** — como as figuras, reproduz números do codebook e já ficou para trás duas vezes; `scripts/conferir_relatorio.py` acusa a defasagem | `reports` |
 | `docs/Pesquisa-sobre-Mobilizações-de-8-de-Janeiro.md` | Documento-base do projeto, anterior ao process tracing | `docs` |
-| `docs/PENDENCIAS-ANALITICAS.md` | **A agenda.** O que está aberto e o que espera decisão sua | `docs` |
+| `docs/PENDENCIAS-ANALITICAS.md` | **A agenda.** O que está aberto e o que espera decisão sua. Escrita à mão, **com uma exceção**: a seção *Ordem de ataque* é gerada no passo 3 do ciclo a partir de `data/ordem_de_ataque.json` e fica entre marcadores — editar dentro deles é perder a edição no ciclo seguinte | `docs` |
 | `docs/ESTIMATIVA-MULTIDAO-8JAN.md`, `docs/LEIA-ME_metodologia_verificacao.md` | Dossiês de método e de decisão sobre cifras | `docs` |
 | `docs/analise/` | **Os nove dossiês de análise da pesquisa** — bibliografia do projeto e metodológica, o conceito de mecanismo, os verbetes, as hipóteses rivais de PT-28, a camada $T_{-1}$, o bolsonarismo, os livros brasileiros e o comparado do 6 de janeiro. **Estavam em `projeto-pos-doc/` até 14/10/2026**, e não é onde pertenciam: são o caderno de leitura desta pesquisa, não peça de candidatura. Dois deles, `11_` e `12_`, são lidos pelo ciclo — `conferir_hipoteses.py` exige que toda página citada neles seja ancorada por registro | `docs` |
 | `docs/historico/` | Relatórios de sessão datados, que descrevem estados **anteriores** do repositório. Não se atualizam: reescrevê-los falsificaria o registro | `docs` |
+| `data/ordem_de_ataque.json` | **Curado à mão**: a fila de tarefas — número, texto, `estado`, itens da agenda e, nas abertas, natureza e dependência. É a fonte da verdade da seção *Ordem de ataque*; em qualquer texto, `{{chave}}` vira número medido na geração | `data/interim` (curado à mão) |
 | `data/external/levantamento_8_de_janeiro_*` | Levantamento bibliográfico original, coletado à mão | `data/external` |
 | `data/external/crossref_cache.jsonl` | O que o CrossRef e a DataCite responderam sobre cada DOI, em 29/09/2026. Cache e, ao mesmo tempo, registro da consulta | `data/external` |
 | `.backup_pre_lula/` | Cópias manuais anteriores ao controle de versão — **19 estados do JSON** e os derivados de cada um. Redundantes desde que o histórico do git existe, e tirá-las do controle de versão é decisão do pesquisador | — |

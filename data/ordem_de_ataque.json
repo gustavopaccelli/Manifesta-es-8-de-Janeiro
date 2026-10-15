@@ -1,0 +1,287 @@
+{
+  "_leia_me": "Fonte da verdade da seção 'Ordem de ataque' de docs/PENDENCIAS-ANALITICAS.md. Edite AQUI; a seção é gerada por scripts/gerar_ordem_de_ataque.py e sobrescrita a cada ciclo. Em qualquer texto, {{chave}} é substituído por número medido — `python scripts/gerar_ordem_de_ataque.py --chaves` lista as disponíveis.",
+  "revisada": "15/10/2026",
+  "antes": [
+    "**A decisão que ordena tudo continua sendo a de 16/08/2026: a redação é o último item.** A ordem anterior a essa data tratava o aparato como suficiente e punha a escrita como ponto de virada; esta trata o conjunto de dados do processo político como pré-requisito.",
+    "**A revisão de 29/09 foi de contabilidade, não de rumo.** A tabela vinha mostrando como abertas quatro tarefas concluídas em 16/08 — o arquivamento web (4), a obtenção do balanço (8) e a reauditoria (11), além da 6. Foram fechadas com a data correta, e entraram as tarefas nascidas das rodadas 19, 20 e 21.",
+    "**A de 30/09 acrescentou três tarefas nascidas da leitura na fonte** — 19, 20 e 21 — e corrigiu a contabilidade da 17, que passou a ser gerada.",
+    "**A de 15/10 é de contabilidade pela terceira vez, e os dois defeitos eram os que esta peça avisa que tem.** A **15** aparecia como aberta desde que foi executada, em 13/10 — dois dias de atraso. E a **17** dizia \"27 pendentes: 6 lidos\" na mesma linha em que afirma que os números são gerados: `localizar_camada_a.py` gera **25 e 8**. A cifra velha entrou em **30/09** (commit `71df6e1`, que foi justamente o que passou essa contagem a ser gerada) e ficou **quinze dias** sem ser reconferida, atravessando as leituras de 08/10 e a de 13/10. **A linha declarava a procedência certa e carregava a cifra velha** — é o modo de falha da casa aplicado à própria contabilidade. Nada de rumo mudou: nenhuma dependência, nenhuma ordem, nenhuma tarefa nova."
+  ],
+  "tarefas": [
+    {
+      "n": "1",
+      "estado": "fechada",
+      "texto": "~~Sincronizar JSON/CSV/XLSX no esquema de 16 campos~~",
+      "itens": "12",
+      "quando": "✅ 16/08"
+    },
+    {
+      "n": "2",
+      "estado": "fechada",
+      "texto": "~~Aplicar as correções de vínculo e status da auditoria~~",
+      "itens": "12",
+      "quando": "✅ 16/08"
+    },
+    {
+      "n": "3",
+      "estado": "fechada",
+      "texto": "~~Publicar `AUDITORIA-FONTES.md`~~",
+      "itens": "12",
+      "quando": "✅ 16/08"
+    },
+    {
+      "n": "4",
+      "estado": "fechada",
+      "texto": "~~Arquivamento web e notícias do STF~~ — seis matérias em `Fontes/09_Arquivamento-web/`",
+      "itens": "18",
+      "quando": "✅ 16/08"
+    },
+    {
+      "n": "5",
+      "estado": "fechada",
+      "texto": "~~Coleta manual: acórdão do TSE (PT-03E)~~ — obtido sem captcha, por rota pública",
+      "itens": "11.1, 17",
+      "quando": "✅ 16/08"
+    },
+    {
+      "n": "6",
+      "estado": "fechada",
+      "texto": "~~Fechar PT-58~~ — e mais que isso: as três decisões da execução penal viraram fonte primária",
+      "itens": "7, 18",
+      "quando": "✅ 16/08"
+    },
+    {
+      "n": "7",
+      "estado": "fechada",
+      "texto": "~~Resolver ou retirar PT-34 — os \"4 mil\" sem lastro~~",
+      "itens": "7, 13",
+      "quando": "✅ 16/08"
+    },
+    {
+      "n": "8",
+      "estado": "fechada",
+      "texto": "~~Obter o PDF do balanço \"Democracia Inabalada\"~~ — chegou pelo pesquisador; PT-53 e PT-61 a fonte primária",
+      "itens": "15.1",
+      "quando": "✅ 16/08"
+    },
+    {
+      "n": "11",
+      "estado": "fechada",
+      "texto": "~~Reincorporar as peças novas ao codebook e reauditar~~ — hoje é `bash scripts/ciclo.sh`",
+      "itens": "12, 20",
+      "quando": "✅ 16/08"
+    },
+    {
+      "n": "—",
+      "estado": "fechada",
+      "texto": "~~Alinhar o relatório de pesquisa ao codebook (§3.2 e cabeçalho)~~",
+      "itens": "19.1",
+      "quando": "✅ 11/09"
+    },
+    {
+      "n": "—",
+      "estado": "fechada",
+      "texto": "~~Corrigir as páginas de PT-58, PT-59 e PT-60 e o `n_subeventos`~~",
+      "itens": "19.2",
+      "quando": "✅ 11/09"
+    },
+    {
+      "n": "—",
+      "estado": "fechada",
+      "texto": "~~Reorganizar o diretório e pôr o projeto sob git~~",
+      "itens": "20",
+      "quando": "✅ 20/09"
+    },
+    {
+      "n": "—",
+      "estado": "fechada",
+      "texto": "~~Realinhar as duas figuras ao codebook~~",
+      "itens": "21.1",
+      "quando": "✅ 25/09"
+    },
+    {
+      "n": "—",
+      "estado": "fechada",
+      "texto": "~~Fechar o buraco: `conferir_figuras.py` no ciclo~~",
+      "itens": "21.3",
+      "quando": "✅ 25/09"
+    },
+    {
+      "n": "—",
+      "estado": "fechada",
+      "texto": "~~Reescrever \"Próximos passos recomendados\" no relatório~~ — parava em 14/08 e contrariava a ordem de 16/08",
+      "itens": "21.4",
+      "quando": "✅ 25/09"
+    },
+    {
+      "n": "—",
+      "estado": "fechada",
+      "texto": "~~Fechar o último buraco: `conferir_relatorio.py` no ciclo~~ — achou quatro divergências na primeira execução",
+      "itens": "21.5",
+      "quando": "✅ 25/09"
+    },
+    {
+      "n": "—",
+      "estado": "fechada",
+      "texto": "~~Varrer `fonte_pagina` contra a prosa dos 82 registros~~ — 8 candidatos, 2 lacunas reais",
+      "itens": "21.6",
+      "quando": "✅ 25/09"
+    },
+    {
+      "n": "—",
+      "estado": "fechada",
+      "texto": "~~Ancorar as páginas e documentos que PT-15 e PT-28 citavam sem vincular~~ — 4 páginas lidas no PDF antes da correção",
+      "itens": "21.6",
+      "quando": "✅ 25/09"
+    },
+    {
+      "n": "—",
+      "estado": "fechada",
+      "texto": "~~Endurecer o `conferir_paginas.py`~~ — toda transcrição precisa ser localizada; 2 erros de página achados",
+      "itens": "21.7",
+      "quando": "✅ 25/09"
+    },
+    {
+      "n": "—",
+      "estado": "fechada",
+      "texto": "~~Verificar os DOIs das sínteses~~ — são **411**, não 325; 3 inexistentes e 1 DOI real no autor errado, **os quatro já com identificador correto**",
+      "itens": "22, 22.6",
+      "quando": "✅ 29/09"
+    },
+    {
+      "n": "9",
+      "estado": "fechada",
+      "texto": "~~Triar por pertinência~~ — 43 na camada A, cobrindo 31 dos 82 registros",
+      "itens": "23",
+      "quando": "✅ 29/09"
+    },
+    {
+      "n": "18",
+      "estado": "fechada",
+      "texto": "~~Acrescentar à mão o cânone de mecanismos~~ — DoC, Tarrow e McCarthy & Zald",
+      "itens": "23.6",
+      "quando": "✅ 29/09"
+    },
+    {
+      "n": "21",
+      "estado": "fechada",
+      "texto": "~~Desenhar o campo multiorganizacional~~ — 22 entidades, e o modelo não acomoda 5 delas; no ciclo como passo 7/7",
+      "itens": "26",
+      "quando": "✅ 30/09"
+    },
+    {
+      "n": "20",
+      "estado": "fechada",
+      "texto": "~~Escrever as hipóteses rivais de PT-28~~ — H3 e H5 refutadas com evidência já ancorada; H2 sobrevive e relocaliza o ônus",
+      "itens": "27",
+      "quando": "✅ 30/09"
+    },
+    {
+      "n": "22",
+      "estado": "fechada",
+      "texto": "~~Datar a posse de Torres na SSP-DF~~ — 02/01/2023, em duas fontes; H2 enfraquece e entra H6",
+      "itens": "28",
+      "quando": "✅ 30/09"
+    },
+    {
+      "n": "23",
+      "estado": "fechada",
+      "texto": "~~Codificar os três fatos novos~~ — **PT-18A**, registro próprio; codebook a 83",
+      "itens": "29",
+      "quando": "✅ 30/09"
+    },
+    {
+      "n": "24",
+      "estado": "fechada",
+      "texto": "~~Obter os atos de 02-03/01/2023~~ — DODF varrido; a troca de \"cargos centrais\" **não se confirma**",
+      "itens": "30.1",
+      "quando": "✅ 30/09"
+    },
+    {
+      "n": "13",
+      "estado": "fechada",
+      "texto": "~~Decidir o \"Conclusão dos julgamentos\" de PT-61~~ — a expressão **não estava no balanço**; reformulada",
+      "itens": "30.2",
+      "quando": "✅ 30/09"
+    },
+    {
+      "n": "14",
+      "estado": "fechada",
+      "texto": "~~Codificar a camada $T_{-1}$ conjuntural~~ — **6 de 7** codificados na fonte com página, em **quatro** rodadas: a camada conjuntural **brasileira inteira**, de junho de 2013 à pandemia. A segunda rodada tirou a descontinuidade 2013→2015 do codebook; a terceira executou os oito encaminhamentos, renomeou dois mecanismos e **tirou de PT-02 a \"tolerância policial\", que a leitura contradisse**; a quarta fechou PT-06 e **retificou o mecanismo dele** — a infraestrutura informacional antecede a pandemia. Resta contextual só **PT-08**, e a lacuna dele é literatura comparada sobre o Capitólio",
+      "itens": "31, 32, 34, 35",
+      "quando": "✅ 04/10"
+    },
+    {
+      "n": "15",
+      "estado": "fechada",
+      "texto": "~~Higiene do repositório: licença, remoto, `.backup_pre_lula/`, ponteiros no JSON~~ — executada, e era **mais apuração que decisão**: o que havia para decidir já estava decidido pelo conteúdo do corpus. **27 das 40 peças de literatura não podem ser redistribuídas**, e os PDFs estão no histórico do git — o remoto público deste repositório não existe. Nasceram daí o `MANIFESTO-CORPUS.csv` com SHA-256 e rota de obtenção, a **checagem 8** do ciclo, `exportar_aparato.py` e `LICENCA-E-DISTRIBUICAO.md`. **O que restou não é tarefa, é decisão sua:** a licença da sua obra (46.6), o backup versionado e o folder de 37,4 MB em 6 páginas (46.5)",
+      "itens": "46",
+      "quando": "✅ 13/10"
+    },
+    {
+      "n": "10",
+      "estado": "aberta",
+      "texto": "Acrescentar a literatura brasileira em livro — 🔶 **eixo 14 com {{eixo14_arquivos}} arquivos, {{eixo14_paginas}} p.**, nenhuma lida. A coleta somou **12 peças** — 7 coletadas, 3 entregues por você e 2 capítulos a mais por encaminhamento —, e o manifesto conta menos arquivos do que isso porque **o volume integral substituiu oito offprints em 08/10** (item 39.1): peça coletada e arquivo no corpus deixaram de ser a mesma unidade. **A tarefa SE DIVIDIU em duas, e metade está fechada** (item 38.8): o mapa bibliográfico brasileiro que as sínteses não tinham está em Gohn (2019), que mapeia 1970-2019 por ciclo nomeando autores e paradigmas; o que resta é **obter os textos que esse mapa nomeia** — o cânone (Sader, Scherer-Warren, Avritzer, Doimo, Telles, Abranches, Nobre, Solano, Messenberg) é de editora comercial, **zero com autoria casada em acesso aberto**, e depende dos seus arquivos",
+      "itens": "11.4, 22.4, 37, 38",
+      "depende": "seus arquivos",
+      "natureza": "leitura ou entrega de arquivo"
+    },
+    {
+      "n": "17",
+      "estado": "aberta",
+      "texto": "**Ler na fonte os {{camada_a_total}} da camada A** (passo 3 do item 11.3) — **{{camada_a_pendentes}} pendentes**: {{camada_a_lidos}} lidos, {{camada_a_fichas}} com ficha da 1ª leva, {{camada_a_impedidos}} impedidos. Números medidos por `localizar_camada_a.py` a cada geração desta linha, nunca digitados. Das {{camada_a_pendentes}}, **{{barradas_no_cliente}} têm arquivo em algum servidor e são barradas no cliente automatizado** e **{{sem_deposito}} não têm depósito aberto em lugar nenhum**; **{{camada_a_mobilization}} das {{camada_a_pendentes}} estão num só periódico, a *Mobilization*** (item 47.5)",
+      "itens": "23, 24, 25",
+      "depende": "acesso institucional",
+      "natureza": "leitura ou entrega de arquivo"
+    },
+    {
+      "n": "19",
+      "estado": "aberta",
+      "texto": "**Decidir o nome de `mecanismo_causal`** e aplicar as **sete** cobranças da seção 4 do documento 09. A tarefa 14 acrescentou três e **devolveu as três**: a descontinuidade 2013→2015 (item 32); a \"apropriação de repertório que Tilly não detalha\", que era conclusão errada — Kunrath Silva (2018, § 15) mostra mecanismo distinto da apropriação social; e **\"certificação\" em PT-03, que o pesquisador renomeou para *ressignificação do protesto* em 04/10** (item 34.2). Dois nomes de mecanismo saíram daqui decididos — PT-01 e PT-03",
+      "itens": "24.6, 25.1, 25.2, 31.6, 32.1, 34.2",
+      "depende": "decisão sua",
+      "natureza": "decisão sua"
+    },
+    {
+      "n": "25",
+      "estado": "aberta",
+      "texto": "**A literatura do bolsonarismo como mobilização** — 🔶 **coleta fechada em 04/10**: **{{eixo13_arquivos}} peças, {{eixo13_paginas}} p.** em `Fontes/13_Bolsonarismo-mobilizacao/` — 14 por OpenAlex e **as 4 barradas entregues pelo pesquisador** (item 34.6). **{{Eixo13_lidas_palavra}} foram lidas** e ancoram registro: Araujo e Sales (2022), que tirou PT-05 de contextual; Fernandes e Silva (2021), que tirou a \"tolerância policial\" de PT-02; e von Bülow e Abers (2024), que **fechou PT-06 e retificou o mecanismo dele**. **Faltam {{eixo13_faltam}}, {{eixo13_faltam_paginas}} p.** — e **nenhuma bloqueia registro**: a leitura restante serve à redação, não à codificação",
+      "itens": "23.2, 31.4, 33, 34, 35",
+      "depende": "leitura",
+      "natureza": "leitura ou entrega de arquivo"
+    },
+    {
+      "n": "16",
+      "estado": "aberta",
+      "texto": "**Redação do artigo**",
+      "itens": "3, 4, 5, 6, 9, 10",
+      "depende": "tudo acima",
+      "natureza": "a redação"
+    }
+  ],
+  "depois": [
+    "**Nenhuma pendência de dado depende de você** — isso valia desde 16/08, deixou de valer em 30/09 com a tarefa 24, e em 04/10 mudou duas vezes: a tarefa **14** fechou a parte que podia fechar e deixou a **25**, bibliográfica; e horas depois, na terceira rodada, **você entregou as quatro peças barradas e mandou ler duas**, o que fechou a coleta da 25 e tirou PT-05 de contextual. **O que resta da 25 é leitura, e a leitura não depende de você.**",
+    "**As {{abertas_palavra}} abertas, por natureza:** {{abertas_natureza}}. **A 15 saiu da lista em 13/10**, e o que sobrou dela é decisão registrada no item 46, não tarefa aberta. **A 10 mudou de natureza em 08/10:** deixou de ser tarefa de busca — a busca foi feita e mostrou que o cânone não está em acesso aberto — e passou a depender dos seus arquivos, como a 17 depende do seu acesso institucional. **A tarefa 14 fechou em 04/10**, em quatro rodadas, e com ela a última tarefa de codificação. **Só a 16 depende das outras — e, desde a quarta rodada, nenhuma leitura pendente bloqueia registro: as {{eixo13_faltam_palavra}} peças que restam no eixo 13 servem à redação, não à codificação.**"
+  ],
+  "medidos_a_mao": {
+    "barradas_no_cliente": {
+      "valor": 9,
+      "o_que": "das pendentes da camada A têm arquivo em algum servidor e são barradas no cliente automatizado",
+      "medido_em": "13/10/2026",
+      "fonte": "item 47.5 — tentativa de rede, não remedida a cada ciclo"
+    },
+    "sem_deposito": {
+      "valor": 16,
+      "o_que": "das pendentes não têm depósito aberto em repositório nenhum",
+      "medido_em": "13/10/2026",
+      "fonte": "item 47.5 — o limite ali é de assinatura, não de coleta"
+    }
+  },
+  "lidas": {
+    "13_Bolsonarismo-mobilizacao": [
+      "ARAUJO-SALES_",
+      "FERNANDES-SILVA_",
+      "VON-BULOW-ABERS_"
+    ]
+  }
+}

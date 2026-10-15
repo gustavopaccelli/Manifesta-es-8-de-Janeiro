@@ -160,18 +160,76 @@ def norm_busca(s):
 # _mupdf() logo abaixo.
 FONTES_DESLOCADAS = {"Gentium-Book-Basic"}
 
-# LINHA DE BASE DO CASAMENTO PARCIAL, fixada em 10/10/2026 com 17.
-# Enquanto eram 45 o numero nao servia de linha de base; com 17 serve, e isso
-# converte o ponto cego em tripwire: uma transcricao editada na cauda tira um
-# fragmento de "ok" e o poe em "parcial", o total vai a 18 e o ciclo cai.
-# NAO se endurece o casamento nem se mexe nos 17 legitimos -- vigia-se a
-# CONTAGEM, que e o mesmo padrao do inventario do corpus.
-# Se um trecho novo e legitimamente parcial, suba o numero aqui E diga por que.
+# LINHA DE BASE DO CASAMENTO PARCIAL SEM CAUSA CLASSIFICADA: ZERO, desde
+# 15/10/2026. Eram 45 em 09/10 e 17 em 10/10, quando se absorveram as tres
+# classes que NAO sao divergencia de conteudo (pontuacao terminal, interpolacao
+# entre colchetes, transcricao atravessando a quebra de pagina). A tarefa 26(b)
+# classificou as duas que faltavam:
+#
+#   * ANCORA ATRIBUIDA AO DOCUMENTO ERRADO -- 4 casos. `localizar()` devolvia a
+#     primeira folha com qualquer janela de 40 caracteres, e as pecas do corpus
+#     se citam entre si. Corrigido no localizador, nao na contagem.
+#   * MARCADOR DE NOTA DE RODAPE -- 11 casos. A extracao cola o numero da nota
+#     na prosa. Classe propria, "nota", contada e impressa em separado.
+#
+# Com o residuo inexplicado em ZERO, a guarda fica no seu ponto mais forte:
+# QUALQUER fragmento que passe a casar so por janela faz o ciclo cair. E o
+# contrario de afrouxar -- 45 ancoras legitimas continuam passando, cada uma
+# por uma causa nomeada.
+# Se um trecho novo for legitimamente parcial, suba o numero aqui E diga por que.
 #
 # Em escopo de MODULO desde 15/10/2026: `gerar_ordem_de_ataque.py` importa este
 # numero para a linha da tarefa 26, em vez de redigita-lo. Quem garante que ele
 # corresponde ao disco e o passo 7 do ciclo, que cai se a contagem mudar.
-PARCIAIS_BASE = 17
+PARCIAIS_BASE = 0
+
+
+def _prefixo_maximo(alvo, folha):
+    """Maior prefixo de `alvo` presente em `folha`, por busca binária."""
+    lo, hi = 0, len(alvo)
+    while lo < hi:
+        meio = (lo + hi + 1) // 2
+        if alvo[:meio] in folha:
+            lo = meio
+        else:
+            hi = meio - 1
+    return lo
+
+
+def casa_ignorando_nota(alvo, folha, max_saltos=6, max_digitos=4):
+    """`alvo` está em `folha` se ignorarmos marcadores de nota de rodapé?
+
+    A extração de PDF cola o número da nota na prosa: a folha traz
+    "…prontidão798. De acordo" onde a transcrição traz "…prontidão. De acordo".
+
+    Esta função pula SÓ dígitos que existem na folha e NÃO na transcrição —
+    nunca o contrário —, até 4 por salto e 6 saltos. Cifra trocada continua
+    reprovando, porque aí o dígito divergente está na transcrição, e o
+    alinhamento para no primeiro caractere que não é dígito da folha.
+    """
+    if len(alvo) < 20:
+        return False
+    ancora, desde = alvo[:20], 0
+    for _ in range(5):
+        i = folha.find(ancora, desde)
+        if i < 0:
+            return False
+        desde = i + 1
+        resto, j, saltos = folha[i:], 0, 0
+        while j < len(alvo):
+            if j < len(resto) and resto[j] == alvo[j]:
+                j += 1
+                continue
+            k = 0
+            while k < max_digitos and j + k < len(resto) and resto[j + k].isdigit():
+                k += 1
+            if k == 0 or saltos >= max_saltos:
+                break
+            resto = resto[:j] + resto[j + k:]
+            saltos += 1
+        if j >= len(alvo):
+            return True
+    return False
 
 
 def confere_integral(frag, caminho, pg):
@@ -199,6 +257,28 @@ def confere_integral(frag, caminho, pg):
         junto = "".join(_sem_apoio(texto_pagina(caminho, p) or "") for p in par)
         if alvo in junto:
             return "pagina"
+    # QUARTA CLASSE DE NAO-DIVERGENCIA, 15/10/2026: o marcador de nota de rodape
+    # que a extracao cola na prosa. Onze dos treze residuos eram isto. Ver
+    # casa_ignorando_nota -- pula digito que esta na FOLHA e nao na transcricao,
+    # nunca o contrario, de modo que cifra trocada continua reprovando.
+    if casa_ignorando_nota(alvo, _sem_apoio(texto_pagina(caminho, pg) or "")):
+        return "nota"
+    # A TRANSCRIÇÃO ATRAVESSA A QUEBRA E O APARATO DA PÁGINA FICA NO MEIO: bloco
+    # de notas no pé da folha, número ou cabeçalho no alto da seguinte. O teste de
+    # par de páginas acima falha justamente por isso — ele concatena as duas
+    # folhas inteiras, e o aparato entra entre as duas metades da citação. Aqui
+    # exige-se que o resto COMECE a página seguinte (primeiros 120 caracteres),
+    # o que não mascara edição de cauda: o resto tem de aparecer literalmente.
+    ta = _sem_apoio(texto_pagina(caminho, pg) or "")
+    tb = _sem_apoio(texto_pagina(caminho, pg + 1) or "")
+    if ta and tb:
+        k = _prefixo_maximo(alvo, ta)
+        if k >= 40 and len(alvo) - k >= 20 and 0 <= tb.find(alvo[k:]) <= 120:
+            return "pagina"
+    for par in ((pg - 1, pg), (pg, pg + 1)):
+        junto = "".join(_sem_apoio(texto_pagina(caminho, p) or "") for p in par)
+        if casa_ignorando_nota(alvo, junto):
+            return "nota"
     return "parcial"
 
 
@@ -446,7 +526,22 @@ def casa(alvo, texto):
 
 
 def localizar(fragmento, alvos, docs):
-    """Onde, entre as páginas listadas, este fragmento aparece? (cod, pg, janela)"""
+    """Onde, entre as páginas listadas, este fragmento aparece? (cod, pg, janela)
+
+    PREFERE A FOLHA QUE CONFERE POR INTEIRO. Até 15/10/2026 devolvia a primeira
+    folha em que qualquer janela de 40 caracteres casasse, na ordem em que os
+    documentos aparecem em `fonte_pagina` — e as peças do corpus se citam entre
+    si: o relatório da CPMI transcreve o do interventor, e ambos repetem a
+    fórmula "Secretaria de Estado de Segurança Pública do Distrito Federal". O
+    resultado era âncora creditada ao DOCUMENTO ERRADO e contada como
+    localizada: uma transcrição do DODF caiu em Cappelli p.35, e a conclusão A
+    de Cappelli caiu em CPMI p.576.
+
+    O critério de localização NÃO mudou — o conjunto de fragmentos localizados é
+    o mesmo. Mudou a ordem de preferência: integral, depois com a página
+    vizinha, e só então janela.
+    """
+    candidatos = []
     for cod, nums in alvos:
         caminho = docs.get(cod)
         if not caminho or not caminho.lower().endswith(".pdf"):
@@ -457,8 +552,17 @@ def localizar(fragmento, alvos, docs):
                 continue
             r = casa(fragmento, txt)
             if r:
-                return cod, pg, r[0]
-    return None
+                candidatos.append((cod, pg, r[0], caminho))
+    if not candidatos:
+        return None
+    # Preferencia entre folhas candidatas: integral, depois a que confere ao
+    # juntar a vizinha, depois a que confere ignorando marcador de nota, e so
+    # em ultimo caso a que casa por janela sem causa classificada.
+    ordem = {"ok": 0, "pagina": 1, "nota": 2, "parcial": 3}
+    i, melhor = min(
+        enumerate(candidatos),
+        key=lambda p: (ordem[confere_integral(fragmento, p[1][3], p[1][1])], p[0]))
+    return melhor[0], melhor[1], melhor[2]
 
 
 def main():
@@ -482,7 +586,7 @@ def main():
     print("CONFERÊNCIA PÁGINA x TRANSCRIÇÃO — {} registro(s), modo estrito".format(
         len(alvos_reg)))
     print("=" * 78)
-    ok = falha = indet = parciais_total = atravessa_total = 0
+    ok = falha = indet = parciais_total = atravessa_total = notas_total = 0
     falhas, ociosas_total, excecoes_usadas = [], 0, 0
 
     aninhadas = {}
@@ -509,7 +613,7 @@ def main():
             continue
 
         achados, perdidas, usadas, fracas, parciais = [], [], set(), 0, 0
-        atravessa = 0
+        atravessa = notas = 0
         for cit in cits:
             for frag in fragmentos(cit):
                 onde = localizar(frag, pp, docs)
@@ -534,6 +638,8 @@ def main():
                     _est = confere_integral(frag, docs[onde[0]], onde[1])
                     if _est == "pagina":
                         atravessa += 1
+                    elif _est == "nota":
+                        notas += 1
                     elif _est == "parcial":
                         parciais += 1
                     continue
@@ -571,6 +677,7 @@ def main():
             ok += 1
         parciais_total += parciais
         atravessa_total += atravessa
+        notas_total += notas
 
         if verboso:
             for frag, (c, p, j) in achados:
@@ -585,20 +692,20 @@ def main():
     if atravessa_total:
         print("{} fragmento(s) conferem POR INTEIRO ao juntar a página vizinha: a "
               "transcrição atravessa a quebra de página.".format(atravessa_total))
+    if notas_total:
+        print("{} fragmento(s) conferem AO IGNORAR MARCADOR DE NOTA DE RODAPÉ: a "
+              "camada de texto do PDF cola o número da nota na prosa."
+              .format(notas_total))
     if parciais_total:
-        print("{} fragmento(s) localizado(s) SO POR JANELA: a janela confere e o "
-              "texto integral nao.".format(parciais_total))
-        print("Eram 45 em 09/10/2026 e são {} desde 10/10. A queda não veio de"
+        print("{} fragmento(s) localizado(s) SO POR JANELA, SEM CAUSA "
+              "CLASSIFICADA: a janela confere e o texto integral nao."
               .format(parciais_total))
-        print("afrouxar o critério: veio de classificar a causa de cada um e absorver")
-        print("as três que NÃO são divergência de conteúdo: pontuação terminal,")
-        print("interpolação do analista entre colchetes (que por definição não está")
-        print("na fonte) e transcrição que atravessa a quebra de página. A conta por")
-        print("classe está em docs/PENDENCIAS-ANALITICAS.md, item 45; aqui só se")
-        print("imprime o que o próprio conferidor mede.")
-        print("O que sobra é o PONTO CEGO real: editar a cauda de uma transcrição")
-        print("longa passa sem ser notado. Prova negativa de 09/10: 2 de 4 injeções")
-        print("escaparam, e as duas eram troca de palavra no fim do trecho.")
+        print("ISTO É O PONTO CEGO REAL — editar a cauda de uma transcrição longa.")
+        print("A linha de base é ZERO desde 15/10/2026: eram 45 em 09/10, 17 em")
+        print("10/10 e 0 depois que a tarefa 26(b) classificou as duas últimas")
+        print("causas — âncora atribuída ao documento errado (4 casos, corrigidos no")
+        print("localizador) e marcador de nota de rodapé (11 casos, classe própria).")
+        print("Rode com -v, compare casa/total e ache a que mudou.")
         print("Para ver quais, rode com -v e compare casa/total.".format())
     if ociosas_total:
         print("{} página(s) listada(s) que nenhuma transcrição alcança. Não é falha: a "
@@ -632,8 +739,8 @@ def main():
     # dispara no recorte errado e ruido -- e ruido treina a ignorar guarda.
     if todos and parciais_total != PARCIAIS_BASE:
         print("")
-        print("X CONTAGEM DE CASAMENTO PARCIAL MUDOU: {} agora, {} na linha de base "
-              "de 10/10/2026.".format(parciais_total, PARCIAIS_BASE))
+        print("X CASAMENTO PARCIAL SEM CAUSA CLASSIFICADA: {} agora, {} na linha "
+              "de base de 15/10/2026.".format(parciais_total, PARCIAIS_BASE))
         if parciais_total > PARCIAIS_BASE:
             print("  Subiu. Uma transcrição que casava por inteiro deixou de casar —")
             print("  é exatamente a edição de cauda que a prova negativa de 09/10 viu")

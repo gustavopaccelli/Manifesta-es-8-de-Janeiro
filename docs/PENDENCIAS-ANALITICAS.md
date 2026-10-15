@@ -1713,7 +1713,7 @@ Você delegou a decisão. **Gohn (2019) fecha PARCIALMENTE a tarefa 10, e num n�
 
 | # | Tarefa | Item desta agenda | Depende de |
 |:--|:--|:--|:--|
-| 26 | **Fechar as âncoras do codebook** — 🔶 **aprovada por você em 15/10/2026.** O banco está construído: **83 registros**, zero `A verificar`, zero `mecanismo_causal` vazio e **nenhuma tarefa de codificação aberta** desde 10/10. **(a) ✅ EXECUTADA em 15/10/2026 — as quatro folhas que faltavam:** PT-03B (TRF-4, **p. 30 e 401**), PT-05A (ADC 43/44/54, **p. 2 e 489**), PT-06C (HC 193.726, **p. 185**) e PT-57 (AP 2668, **p. 19**). As seis transcrições saíram da folha e `conferir_paginas` localizou **6 de 6 por inteiro**; `confirmados` subiu de 69 para **73**. Hoje **nenhuma registro vincula PDF do corpus sem citar folha**, e a **checagem 5 passou a exigir** isso — o ponto cego virou guarda, com prova negativa. Restam **2** sem `fonte_pagina`, os dois **declarados**: PT-19A vincula `.md` e PT-03D ancora em notícia arquivada (item 51). **(b) ABERTA — os 17 fragmentos que casam só por janela** (item 45.3), com linha de base e *tripwire* no passo 7; reduzi-los é abrir documento por documento. **(c) ABERTAS — cinco decisões de campo, suas:** `data_hora` de PT-02 (34.7), Telegram e WhatsApp em PT-06 (35.5), campo para autonomia do movimento (35.4), o `marco_teorico` que cita obra não lida (47.5) e **a nova: a data de PT-57, cuja publicação em 22/10/2025 não está no acórdão** (item 51). **Nada aqui depende de literatura pendente** | 50 | verificação (a e b); decisão sua (c) |
+| 26 | **Fechar as âncoras do codebook** — 🔶 **aprovada por você em 15/10/2026.** O banco está construído: **83 registros**, zero `A verificar`, zero `mecanismo_causal` vazio e **nenhuma tarefa de codificação aberta** desde 10/10. **(a) ✅ EXECUTADA em 15/10/2026 — as quatro folhas que faltavam:** PT-03B (TRF-4, **p. 30 e 401**), PT-05A (ADC 43/44/54, **p. 2 e 489**), PT-06C (HC 193.726, **p. 185**) e PT-57 (AP 2668, **p. 19**). As seis transcrições saíram da folha e `conferir_paginas` localizou **6 de 6 por inteiro**; `confirmados` subiu de 69 para **73**. Hoje **nenhuma registro vincula PDF do corpus sem citar folha**, e a **checagem 5 passou a exigir** isso — o ponto cego virou guarda, com prova negativa. Restam **2** sem `fonte_pagina`, os dois **declarados**: PT-19A vincula `.md` e PT-03D ancora em notícia arquivada (item 51). **(b) ✅ EXECUTADA em 15/10/2026 — os 17 fragmentos que casavam só por janela foram a 0**, e a queda não veio de afrouxar nada: **4 eram âncora creditada ao documento errado** (o localizador devolvia a primeira folha com qualquer janela de 40 caracteres, e as peças do corpus se citam entre si), **2 eram transcrição editada dentro das aspas** em PT-39 — uma sigla abreviando o que a CPMI escreve por extenso e uma vírgula acrescentada —, **8 eram marcador de nota de rodapé** colado na prosa pela extração e **3 eram citação atravessando a quebra de página com o aparato da folha no meio**. Cada classe ganhou nome e contagem própria, e a **linha de base do resíduo inexplicado é ZERO**: prova negativa com duas injeções, inclusive a de cauda que escapou em 09/10 (item 52). **(c) ABERTAS — cinco decisões de campo, suas:** `data_hora` de PT-02 (34.7), Telegram e WhatsApp em PT-06 (35.5), campo para autonomia do movimento (35.4), o `marco_teorico` que cita obra não lida (47.5) e **a nova: a data de PT-57, cuja publicação em 22/10/2025 não está no acórdão** (item 51). **Nada aqui depende de literatura pendente** | 50 | verificação (a e b); decisão sua (c) |
 | 10 | Acrescentar a literatura brasileira em livro — 🔶 **eixo 14 com 5 arquivos, 1.832 p.**, nenhuma lida. A coleta somou **12 peças** — 7 coletadas, 3 entregues por você e 2 capítulos a mais por encaminhamento —, e o manifesto conta menos arquivos do que isso porque **o volume integral substituiu oito offprints em 08/10** (item 39.1): peça coletada e arquivo no corpus deixaram de ser a mesma unidade. **A tarefa SE DIVIDIU em duas, e metade está fechada** (item 38.8): o mapa bibliográfico brasileiro que as sínteses não tinham está em Gohn (2019), que mapeia 1970-2019 por ciclo nomeando autores e paradigmas; o que resta é **obter os textos que esse mapa nomeia** — o cânone (Sader, Scherer-Warren, Avritzer, Doimo, Telles, Abranches, Nobre, Solano, Messenberg) é de editora comercial, **zero com autoria casada em acesso aberto**, e depende dos seus arquivos | 11.4, 22.4, 37, 38 | seus arquivos |
 | 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **25 pendentes**: 8 lidos, 7 com ficha da 1ª leva, 3 impedidos. Números medidos por `localizar_camada_a.py` a cada geração desta linha, nunca digitados. Das 25, **9 têm arquivo em algum servidor e são barradas no cliente automatizado** e **16 não têm depósito aberto em lugar nenhum**; **8 das 25 estão num só periódico, a *Mobilization*** (item 47.5) | 23, 24, 25 | acesso institucional |
 | 25 | **A literatura do bolsonarismo como mobilização** — 🔶 **coleta fechada em 04/10**: **18 peças, 453 p.** em `Fontes/13_Bolsonarismo-mobilizacao/` — 14 por OpenAlex e **as 4 barradas entregues pelo pesquisador** (item 34.6). **Três foram lidas** e ancoram registro: Araujo e Sales (2022), que tirou PT-05 de contextual; Fernandes e Silva (2021), que tirou a "tolerância policial" de PT-02; e von Bülow e Abers (2024), que **fechou PT-06 e retificou o mecanismo dele**. **Faltam 15, 400 p.** — e **nenhuma bloqueia registro**: a leitura restante serve à redação, não à codificação | 23.2, 31.4, 33, 34, 35 | leitura |
@@ -2453,3 +2453,63 @@ A checagem 5 abria com `if not pag: continue` — **conferia quem citava página
 2. **A data de PT-57**, e são três saídas: **(a)** trocar `data_hora` para **15/10/2025**, que é o que a fonte primária data, e reformular o registro como *conclusão* do acórdão; **(b)** manter 22/10/2025 e declarar a limitação no registro; **(c)** incorporar o **DJe** ao corpus, e aí a publicação ganha âncora própria. Não alterei a data — é a mesma classe de decisão do `data_hora` de PT-02 (item 34.7).
 
 **O que resta da tarefa 26 é (b) e (c):** os 17 fragmentos por janela, que é verificação minha, e as cinco decisões de campo, que são suas.
+
+---
+
+## 52. Os 17 fragmentos por janela, resolvidos — e quatro deles eram âncora no documento errado — 🔶 15/10/2026
+
+**Encaminhamento:** *"Siga com os 17 fragmentos."* É a parte (b) da tarefa 26.
+
+**O resultado:** os 17 foram a **zero resíduo inexplicado**, e a queda não veio de afrouxar o critério — veio de **classificar a causa de cada um**, como em 10/10. Duas das cinco classes são defeito real, e uma delas é grave.
+
+| Causa | Quantos | É defeito? |
+|:--|--:|:--|
+| **Âncora creditada ao documento errado** | **4** | **Sim — e no localizador, não na transcrição** |
+| **Transcrição editada dentro das aspas** (PT-39) | **2** | **Sim — na transcrição** |
+| Marcador de nota de rodapé colado na prosa pela extração | 8 | Não |
+| Citação atravessando a quebra de página com o aparato da folha no meio | 3 | Não |
+| **Resíduo inexplicado** | **0** | — |
+
+### 52.1 O defeito grave: o conferidor creditava a âncora ao documento errado
+
+`localizar()` devolvia **a primeira folha em que qualquer janela de 40 caracteres casasse**, na ordem em que os documentos aparecem em `fonte_pagina`. E as peças deste corpus **se citam entre si**: o relatório da CPMI transcreve o do interventor, e os dois repetem a fórmula *"Secretaria de Estado de Segurança Pública do Distrito Federal"*, que tem mais de 40 caracteres.
+
+> **Resultado medido:** uma transcrição do **DODF nº 001** foi creditada a **Cappelli p. 35** por uma janela de texto administrativo; a **conclusão A do relatório do interventor** foi creditada a **CPMI p. 576**. O conferidor dizia "localizada", e a divergência aparecia na lista de casamento parcial — **onde parecia infidelidade de transcrição e era erro de atribuição**. É a cifra certa no referente errado na forma de uma âncora, dentro do script que existe para impedir exatamente isso.
+
+**A correção não endurece nada:** o conjunto de fragmentos localizados é o mesmo. Mudou a **ordem de preferência** entre folhas candidatas — primeiro a que contém o texto integral, depois a que confere ao juntar a vizinha, depois a que confere ignorando o marcador de nota, e só em último caso a janela. **Sozinha, essa correção tirou 4 dos 17.**
+
+### 52.2 As duas transcrições de PT-39, e nenhuma era erro de fato
+
+| O que o registro escrevia, entre aspas | O que a folha diz |
+|:--|:--|
+| "subsecretária da Secretaria de Inteligência **da SSP-DF**" | "subsecretária da Secretaria de Inteligência **da Secretaria de Segurança Pública do Distrito Federal**" (CPMI, p. 677) |
+| "no Grupo Difusão**,** afirmando que" | "no Grupo "Difusão" afirmando que" (AP 2668, p. 496) |
+
+**O conteúdo estava certo nas duas.** Uma abreviava a sigla do órgão **dentro das aspas**; a outra acrescentava uma vírgula. **Abreviar e pontuar dentro de aspas é editar a fonte** — e é o tipo de edição que ninguém chamaria de erro, razão pela qual atravessa. Restaurada a letra das duas folhas, com a correção registrada na `nota_auditoria` do registro.
+
+### 52.3 As duas classes que não são divergência
+
+**Marcador de nota de rodapé — 8 casos.** A camada de texto do PDF cola o número da nota na prosa: a folha traz *"…prontidão**798**. De acordo com o depoimento"* onde a transcrição traz *"…prontidão. De acordo com o depoimento"*. A classe ganhou teste próprio, e **o alinhamento é deliberadamente assimétrico**: pula dígito que está **na folha e não na transcrição**, nunca o contrário, até 4 dígitos por salto e 6 saltos.
+
+> **Por que a assimetria importa num projeto cujo modo de falha é a cifra no referente errado:** se a fonte diz "2.451" e a transcrição diz "2.151", o dígito divergente está **na transcrição** — o alinhamento para ali e o fragmento continua reprovando. Absorção cega de dígitos mascararia justamente o defeito que este projeto persegue.
+
+**Quebra de página com o aparato da folha no meio — 3 casos.** A citação atravessa a quebra, e entre as duas metades ficam o **bloco de notas no pé** da folha (com URLs) ou o **rodapé de assinatura digital** e o número da página seguinte. O teste de par de páginas que já existia falhava porque concatena as duas folhas inteiras. O teste novo exige que o resto **comece a página seguinte** — nos primeiros 120 caracteres —, e por isso não mascara edição de cauda: o resto tem de aparecer literalmente.
+
+### 52.4 A linha de base agora é ZERO, e é a guarda no seu ponto mais forte
+
+Eram **45** em 09/10, **17** em 10/10 e o resíduo inexplicado é **0** desde hoje. Com zero, **qualquer** fragmento que passe a casar só por janela faz o ciclo cair — não há mais um número de base dentro do qual um defeito novo possa se esconder.
+
+**Prova negativa, duas injeções:**
+
+| Injeção | Resultado |
+|:--|:--|
+| PT-31, troca de palavra **no meio** ("insurgentes" → "invasores") | `1 fragmento SEM CAUSA CLASSIFICADA`, saída **1** |
+| PT-26, troca de palavra **na cauda** ("uma parcela" → "duas parcelas") | `1 fragmento SEM CAUSA CLASSIFICADA`, saída **1** |
+
+> **A segunda é a que importa.** Em 09/10/2026 a prova negativa mostrou que **2 de 4 injeções escapavam, e as duas eram troca de palavra no fim do trecho**. Era o ponto cego declarado do conferidor, e a razão de existir a linha de base de 17. **Hoje ele não escapa** — e o que o fechou não foi endurecer o casamento por janela, que continua aceitando as 45 âncoras legítimas, mas nomear as causas até sobrar zero.
+
+### 52.5 O que isto fecha, e o que não
+
+**A tarefa 26 perde a parte (b).** Resta a **(c)**: as cinco decisões de campo, todas suas — `data_hora` de PT-02 (34.7), Telegram e WhatsApp em PT-06 (35.5), o campo para autonomia do movimento (35.4), o `marco_teorico` que cita obra não lida (47.5) e a data de PT-57 (51.5).
+
+**E resta uma pergunta que esta rodada abriu e não respondeu:** as **4 âncoras mal atribuídas** passaram dois meses contadas como localizadas. O localizador foi corrigido, mas **nada garante que não haja fragmento hoje localizado na folha certa por coincidência de fórmula burocrática** — a preferência por texto integral torna isso improvável, não impossível. Medir seria comparar, para cada fragmento, quantas folhas candidatas casam por janela: se mais de uma casa, a escolha é frágil por construção. **Não executei; fica como pendência de verificação, não de decisão.**

@@ -1713,7 +1713,7 @@ Você delegou a decisão. **Gohn (2019) fecha PARCIALMENTE a tarefa 10, e num n�
 
 | # | Tarefa | Item desta agenda | Depende de |
 |:--|:--|:--|:--|
-| 26 | **Fechar as âncoras do codebook** — 🔶 **aprovada por você em 15/10/2026.** O banco está construído: **83 registros**, zero `A verificar`, zero `mecanismo_causal` vazio e **nenhuma tarefa de codificação aberta** desde 10/10. **(a) ✅ EXECUTADA em 15/10/2026 — as quatro folhas que faltavam:** PT-03B (TRF-4, **p. 30 e 401**), PT-05A (ADC 43/44/54, **p. 2 e 489**), PT-06C (HC 193.726, **p. 185**) e PT-57 (AP 2668, **p. 19**). As seis transcrições saíram da folha e `conferir_paginas` localizou **6 de 6 por inteiro**; `confirmados` subiu de 69 para **73**. Hoje **nenhuma registro vincula PDF do corpus sem citar folha**, e a **checagem 5 passou a exigir** isso — o ponto cego virou guarda, com prova negativa. Restam **2** sem `fonte_pagina`, os dois **declarados**: PT-19A vincula `.md` e PT-03D ancora em notícia arquivada (item 51). **(b) ✅ EXECUTADA em 15/10/2026 — os 17 fragmentos que casavam só por janela foram a 0**, e a queda não veio de afrouxar nada: **4 eram âncora creditada ao documento errado** (o localizador devolvia a primeira folha com qualquer janela de 40 caracteres, e as peças do corpus se citam entre si), **2 eram transcrição editada dentro das aspas** em PT-39 — uma sigla abreviando o que a CPMI escreve por extenso e uma vírgula acrescentada —, **8 eram marcador de nota de rodapé** colado na prosa pela extração e **3 eram citação atravessando a quebra de página com o aparato da folha no meio**. Cada classe ganhou nome e contagem própria, e a **linha de base do resíduo inexplicado é ZERO**: prova negativa com duas injeções, inclusive a de cauda que escapou em 09/10 (item 52). **(c) ABERTAS — cinco decisões de campo, suas:** `data_hora` de PT-02 (34.7), Telegram e WhatsApp em PT-06 (35.5), campo para autonomia do movimento (35.4), o `marco_teorico` que cita obra não lida (47.5) e **a nova: a data de PT-57, cuja publicação em 22/10/2025 não está no acórdão** (item 51). **Nada aqui depende de literatura pendente** | 50 | verificação (a e b); decisão sua (c) |
+| 26 | **Fechar as âncoras do codebook** — 🔶 **aprovada por você em 15/10/2026.** O banco está construído: **83 registros**, zero `A verificar`, zero `mecanismo_causal` vazio e **nenhuma tarefa de codificação aberta** desde 10/10. **(a) ✅ EXECUTADA em 15/10/2026 — as quatro folhas que faltavam:** PT-03B (TRF-4, **p. 30 e 401**), PT-05A (ADC 43/44/54, **p. 2 e 489**), PT-06C (HC 193.726, **p. 185**) e PT-57 (AP 2668, **p. 19**). As seis transcrições saíram da folha e `conferir_paginas` localizou **6 de 6 por inteiro**; `confirmados` subiu de 69 para **73**. Hoje **nenhuma registro vincula PDF do corpus sem citar folha**, e a **checagem 5 passou a exigir** isso — o ponto cego virou guarda, com prova negativa. Restam **2** sem `fonte_pagina`, os dois **declarados**: PT-19A vincula `.md` e PT-03D ancora em notícia arquivada (item 51). **(b) ✅ EXECUTADA em 15/10/2026 — os 17 fragmentos que casavam só por janela foram a 0**, e a queda não veio de afrouxar nada: **4 eram âncora creditada à folha errada** — 3 ao documento errado e 1 à página errada dentro do mesmo documento, contagem corrigida em 15/10/2026 pela medição do item 53, que desfez o "4 ao documento errado" que eu havia relatado (o localizador devolvia a primeira folha com qualquer janela de 40 caracteres, e as peças do corpus se citam entre si), **2 eram transcrição editada dentro das aspas** em PT-39 — uma sigla abreviando o que a CPMI escreve por extenso e uma vírgula acrescentada —, **8 eram marcador de nota de rodapé** colado na prosa pela extração e **3 eram citação atravessando a quebra de página com o aparato da folha no meio**. Cada classe ganhou nome e contagem própria, e a **linha de base do resíduo inexplicado é ZERO**: prova negativa com duas injeções, inclusive a de cauda que escapou em 09/10 (item 52). E a pergunta que a parte (b) deixou aberta está **respondida em 15/10/2026**: nenhuma âncora do codebook depende da ordem de `fonte_pagina` para escolher entre documentos — **234 fragmentos localizados, 17 com mais de uma folha candidata, 15 decididos pelo texto e 2 empatados entre páginas do mesmo documento citado**, o que deixa a âncora certa das duas maneiras. **Zero empate entre documentos**, e o zero virou guarda com prova negativa (item 53). **(c) ABERTAS — cinco decisões de campo, suas:** `data_hora` de PT-02 (34.7), Telegram e WhatsApp em PT-06 (35.5), campo para autonomia do movimento (35.4), o `marco_teorico` que cita obra não lida (47.5) e **a nova: a data de PT-57, cuja publicação em 22/10/2025 não está no acórdão** (item 51). **Nada aqui depende de literatura pendente** | 50 | verificação (a e b); decisão sua (c) |
 | 10 | Acrescentar a literatura brasileira em livro — 🔶 **eixo 14 com 5 arquivos, 1.832 p.**, nenhuma lida. A coleta somou **12 peças** — 7 coletadas, 3 entregues por você e 2 capítulos a mais por encaminhamento —, e o manifesto conta menos arquivos do que isso porque **o volume integral substituiu oito offprints em 08/10** (item 39.1): peça coletada e arquivo no corpus deixaram de ser a mesma unidade. **A tarefa SE DIVIDIU em duas, e metade está fechada** (item 38.8): o mapa bibliográfico brasileiro que as sínteses não tinham está em Gohn (2019), que mapeia 1970-2019 por ciclo nomeando autores e paradigmas; o que resta é **obter os textos que esse mapa nomeia** — o cânone (Sader, Scherer-Warren, Avritzer, Doimo, Telles, Abranches, Nobre, Solano, Messenberg) é de editora comercial, **zero com autoria casada em acesso aberto**, e depende dos seus arquivos | 11.4, 22.4, 37, 38 | seus arquivos |
 | 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **25 pendentes**: 8 lidos, 7 com ficha da 1ª leva, 3 impedidos. Números medidos por `localizar_camada_a.py` a cada geração desta linha, nunca digitados. Das 25, **9 têm arquivo em algum servidor e são barradas no cliente automatizado** e **16 não têm depósito aberto em lugar nenhum**; **8 das 25 estão num só periódico, a *Mobilization*** (item 47.5) | 23, 24, 25 | acesso institucional |
 | 25 | **A literatura do bolsonarismo como mobilização** — 🔶 **coleta fechada em 04/10**: **18 peças, 453 p.** em `Fontes/13_Bolsonarismo-mobilizacao/` — 14 por OpenAlex e **as 4 barradas entregues pelo pesquisador** (item 34.6). **Três foram lidas** e ancoram registro: Araujo e Sales (2022), que tirou PT-05 de contextual; Fernandes e Silva (2021), que tirou a "tolerância policial" de PT-02; e von Bülow e Abers (2024), que **fechou PT-06 e retificou o mecanismo dele**. **Faltam 15, 400 p.** — e **nenhuma bloqueia registro**: a leitura restante serve à redação, não à codificação | 23.2, 31.4, 33, 34, 35 | leitura |
@@ -2456,7 +2456,9 @@ A checagem 5 abria com `if not pag: continue` — **conferia quem citava página
 
 ---
 
-## 52. Os 17 fragmentos por janela, resolvidos — e quatro deles eram âncora no documento errado — 🔶 15/10/2026
+## 52. Os 17 fragmentos por janela, resolvidos — e quatro deles eram âncora na folha errada — 🔶 15/10/2026
+
+> **Correção de contagem, 15/10/2026, pela medição do item 53.** Este item foi escrito dizendo **"quatro eram âncora no documento errado"**. Medido com o próprio localizador: os quatro saem do casamento parcial pela correção, mas são **três de documento errado e um de página errada dentro do mesmo documento**. O número 4 está certo; a caracterização estava errada, e a diferença importa justamente aqui — errar o documento é creditar a frase a outra peça, e errar a página é creditá-la à folha vizinha da peça certa. Os dois são defeito, e só um é o defeito grave que dá nome à seção 52.1. Corrigido no título, na tabela, em `conferir_paginas.py` e no ledger.
 
 **Encaminhamento:** *"Siga com os 17 fragmentos."* É a parte (b) da tarefa 26.
 
@@ -2464,7 +2466,7 @@ A checagem 5 abria com `if not pag: continue` — **conferia quem citava página
 
 | Causa | Quantos | É defeito? |
 |:--|--:|:--|
-| **Âncora creditada ao documento errado** | **4** | **Sim — e no localizador, não na transcrição** |
+| **Âncora creditada à folha errada** — 3 ao documento errado, 1 à página errada do mesmo documento | **4** | **Sim — e no localizador, não na transcrição** |
 | **Transcrição editada dentro das aspas** (PT-39) | **2** | **Sim — na transcrição** |
 | Marcador de nota de rodapé colado na prosa pela extração | 8 | Não |
 | Citação atravessando a quebra de página com o aparato da folha no meio | 3 | Não |
@@ -2476,7 +2478,7 @@ A checagem 5 abria com `if not pag: continue` — **conferia quem citava página
 
 > **Resultado medido:** uma transcrição do **DODF nº 001** foi creditada a **Cappelli p. 35** por uma janela de texto administrativo; a **conclusão A do relatório do interventor** foi creditada a **CPMI p. 576**. O conferidor dizia "localizada", e a divergência aparecia na lista de casamento parcial — **onde parecia infidelidade de transcrição e era erro de atribuição**. É a cifra certa no referente errado na forma de uma âncora, dentro do script que existe para impedir exatamente isso.
 
-**A correção não endurece nada:** o conjunto de fragmentos localizados é o mesmo. Mudou a **ordem de preferência** entre folhas candidatas — primeiro a que contém o texto integral, depois a que confere ao juntar a vizinha, depois a que confere ignorando o marcador de nota, e só em último caso a janela. **Sozinha, essa correção tirou 4 dos 17.**
+**A correção não endurece nada:** o conjunto de fragmentos localizados é o mesmo. Mudou a **ordem de preferência** entre folhas candidatas — primeiro a que contém o texto integral, depois a que confere ao juntar a vizinha, depois a que confere ignorando o marcador de nota, e só em último caso a janela. **Sozinha, essa correção tirou 4 dos 17** — e são estes quatro, medidos no item 53: `Cappelli p.35 → Cappelli p.58` (página errada, mesmo documento), `Cappelli p.35 → DODF 001 p.16`, `Cappelli p.35 → DODF 003 p.35` e `CPMI p.576 → Cappelli p.53`.
 
 ### 52.2 As duas transcrições de PT-39, e nenhuma era erro de fato
 
@@ -2512,4 +2514,63 @@ Eram **45** em 09/10, **17** em 10/10 e o resíduo inexplicado é **0** desde ho
 
 **A tarefa 26 perde a parte (b).** Resta a **(c)**: as cinco decisões de campo, todas suas — `data_hora` de PT-02 (34.7), Telegram e WhatsApp em PT-06 (35.5), o campo para autonomia do movimento (35.4), o `marco_teorico` que cita obra não lida (47.5) e a data de PT-57 (51.5).
 
-**E resta uma pergunta que esta rodada abriu e não respondeu:** as **4 âncoras mal atribuídas** passaram dois meses contadas como localizadas. O localizador foi corrigido, mas **nada garante que não haja fragmento hoje localizado na folha certa por coincidência de fórmula burocrática** — a preferência por texto integral torna isso improvável, não impossível. Medir seria comparar, para cada fragmento, quantas folhas candidatas casam por janela: se mais de uma casa, a escolha é frágil por construção. **Não executei; fica como pendência de verificação, não de decisão.**
+**E restava uma pergunta que esta rodada abriu e não respondeu** — as **4 âncoras mal atribuídas** passaram dois meses contadas como localizadas, e a preferência por texto integral torna improvável, não impossível, que outra esteja na folha certa por coincidência de fórmula burocrática. **Respondida no item 53, em 15/10/2026, a seu pedido:** medidas as folhas candidatas de todos os 234 fragmentos, **nenhuma âncora depende da ordem de `fonte_pagina` para escolher entre documentos**, e o zero virou guarda.
+
+---
+
+## 53. As folhas candidatas, medidas: a âncora é escolhida pelo texto, e o zero virou guarda — 🔶 15/10/2026
+
+**Encaminhamento:** *"Meça as folhas candidatas do item 52.5."*
+
+**A pergunta.** Desde 15/10/2026 `localizar()` **prefere a folha que confere por inteiro**, em vez da primeira que casasse por janela. Mas preferência só decide quando há diferença: se duas folhas conferem na **mesma classe**, quem escolhe é a **ordem de `fonte_pagina`** — e isso é exatamente a fragilidade que manteve quatro âncoras mal atribuídas por dois meses. A pergunta não é se o localizador melhorou; é **de quantas âncoras ele é o único fiador**.
+
+**A medição**, feita reusando o próprio conferidor — duas normalizações do mesmo texto por dois códigos é como a divergência entra:
+
+| Folhas candidatas que casam por janela | Fragmentos |
+|:--|--:|
+| **1** — não há escolha a fazer | **217** |
+| 2 | 13 |
+| 3 ou mais | 4 |
+| **total de fragmentos localizados** | **234** |
+
+E a pergunta que importa, dos **17** fragmentos com mais de uma candidata:
+
+| | Fragmentos |
+|:--|--:|
+| **Decididos pelo TEXTO** — a folha escolhida confere numa classe estritamente melhor que todas as rivais | **15** |
+| Empate entre **páginas do mesmo documento citado** | 2 |
+| **Empate entre DOCUMENTOS** — a ordem de `fonte_pagina` decidindo | **0** |
+
+> **Nenhuma âncora do codebook depende da ordem de `fonte_pagina` para escolher entre documentos.** Em todos os 15 casos disputados a folha vencedora confere **por inteiro** e as rivais **só por janela** — a escolha é do texto, não do arranjo do campo. E só **4 fragmentos** têm candidata em mais de um documento, todos os quatro com vencedora de classe `ok` contra rivais `parcial`: três transcrições de PT-18A, que o relatório do interventor, o da CPMI e dois DODF repetem, e a de PT-52.
+
+**Os 2 empates são entre páginas da mesma peça, e a âncora está certa das duas maneiras:** PT-53 confere por inteiro nas p. 4 **e** 6 do Balanço do STF, PT-58 nas p. 8 **e** 10 da Pet 14.129 — fórmula que a própria peça repete. As duas folhas estão em `fonte_pagina`, as duas pertencem ao documento que o registro cita, e por isso **não contam como defeito**: o efeito colateral é apenas uma folha aparecendo na lista de *páginas que nenhuma transcrição alcança*, que é sinal e não falha. Fazê-las derrubar o ciclo seria ruído, e **ruído treina a ignorar guarda**.
+
+### 53.1 O número que eu havia relatado errado
+
+A medição derrubou uma cifra minha, de ontem. Eu relatei — aqui, no ledger, em `conferir_paginas.py` e no commit `a462204` — que **"4 eram âncora creditada ao documento errado"**. Medido com o localizador, fragmento por fragmento:
+
+| A regra velha dizia | A nova diz | O que era |
+|:--|:--|:--|
+| Cappelli p. 35 `[parcial]` | Cappelli **p. 58** `[ok]` | **página errada, mesmo documento** |
+| Cappelli p. 35 `[parcial]` | **DODF 001** p. 16 `[ok]` | documento errado |
+| Cappelli p. 35 `[parcial]` | **DODF 003** p. 35 `[ok]` | documento errado |
+| CPMI p. 576 `[parcial]` | **Cappelli** p. 53 `[ok]` | documento errado |
+
+**São 4, e três são de documento errado — o quarto é de página errada dentro da peça certa.** O total que eu dei estava certo; a caracterização, não. É o modo de falha desta casa na sua forma mais barata de produzir: **a cifra correta no referente errado**, aqui com o referente sendo a própria classe do defeito. Corrigido no título do item 52, na tabela de causas, no comentário e na saída de `conferir_paginas.py` e no texto da tarefa 26 no ledger. O commit `a462204` fica como está — **histórico não se reescreve para parecer melhor**; esta é a errata.
+
+### 53.2 O zero virou guarda, com prova negativa
+
+`localizar()` já calculava todas as candidatas e a classe de cada uma, então detectar o empate custou uma linha de conjunto. Passou a devolver um quarto valor — **os documentos empatados na classe vencedora** —, `EMPATES_BASE = 0` entrou ao lado de `PARCIAIS_BASE`, e **o primeiro empate entre documentos que aparecer derruba o ciclo**, com os dois códigos e o trecho impressos para você abrir as duas folhas.
+
+**Prova negativa, duas injeções:**
+
+| Injeção | Resultado |
+|:--|:--|
+| `confere_integral` cegado em `"parcial"` — que é literalmente a cegueira de antes de 15/10 | os **4** fragmentos multi-documento viram empate e o detector aponta os 4; com a visão restaurada, **0** |
+| Fragmento de texto **real** presente por inteiro em duas peças citadas | o detector devolve `('ADC 43/44/54', 'AP 2668')` |
+
+> **E a segunda injeção achou algo que não procurava.** O trecho de 70 caracteres que está por inteiro em duas peças distintas é o **rodapé de assinatura digital do STF** — *"assinado digitalmente conforme MP nº 2.200-2/2001…"* —, presente em toda folha de todo acórdão. **Casamento por janela entre documentos é inseguro por construção neste corpus**, e não só porque as peças se citam: o aparato é compartilhado de fábrica. O que protege o codebook não é a janela ser longa, é a transcrição vir **de dentro das aspas** de `fonte_trecho` — ninguém transcreve rodapé. A guarda agora cobre a hipótese de alguém transcrever.
+
+### 53.3 O que isto fecha
+
+**A tarefa 26 fica só com a parte (c)** — as cinco decisões de campo, todas suas. A pendência de verificação aberta em 52.5 está **respondida e fechada**, e não gerou pendência nova.

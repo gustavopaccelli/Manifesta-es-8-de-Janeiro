@@ -166,9 +166,12 @@ FONTES_DESLOCADAS = {"Gentium-Book-Basic"}
 # entre colchetes, transcricao atravessando a quebra de pagina). A tarefa 26(b)
 # classificou as duas que faltavam:
 #
-#   * ANCORA ATRIBUIDA AO DOCUMENTO ERRADO -- 4 casos. `localizar()` devolvia a
-#     primeira folha com qualquer janela de 40 caracteres, e as pecas do corpus
-#     se citam entre si. Corrigido no localizador, nao na contagem.
+#   * ANCORA ATRIBUIDA A FOLHA ERRADA -- 4 casos, e CORRIGIDO em 15/10/2026 o
+#     numero que esta linha trazia antes: eram 3 de DOCUMENTO errado e 1 de
+#     PAGINA errada dentro do mesmo documento, nao 4 de documento errado.
+#     Medido no item 53. `localizar()` devolvia a primeira folha com qualquer
+#     janela de 40 caracteres, e as pecas do corpus se citam entre si.
+#     Corrigido no localizador, nao na contagem.
 #   * MARCADOR DE NOTA DE RODAPE -- 11 casos. A extracao cola o numero da nota
 #     na prosa. Classe propria, "nota", contada e impressa em separado.
 #
@@ -182,6 +185,19 @@ FONTES_DESLOCADAS = {"Gentium-Book-Basic"}
 # numero para a linha da tarefa 26, em vez de redigita-lo. Quem garante que ele
 # corresponde ao disco e o passo 7 do ciclo, que cai se a contagem mudar.
 PARCIAIS_BASE = 0
+
+# LINHA DE BASE DO EMPATE ENTRE DOCUMENTOS: ZERO, medida em 15/10/2026 ao
+# responder o item 52.5. A pergunta era se a preferencia nova de `localizar()`
+# escolhe por TEXTO ou por ORDEM de `fonte_pagina`: 234 fragmentos localizados,
+# 217 com uma unica folha candidata, 17 com mais de uma, e nos 15 que tem
+# candidata disputada a folha escolhida confere numa classe ESTRITAMENTE melhor
+# que as rivais. Os 2 empates que existem sao entre paginas do MESMO documento
+# citado -- PT-53 no Balanco do STF e PT-58 na Pet 14.129, formula repetida duas
+# vezes na mesma peca --, e por isso nao contam: a ancora esta certa das duas
+# maneiras. Empate entre DOCUMENTOS e outra coisa, e e a forma exata do defeito
+# que passou dois meses invisivel. Com a base em zero, o primeiro que aparecer
+# faz o ciclo cair.
+EMPATES_BASE = 0
 
 
 def _prefixo_maximo(alvo, folha):
@@ -526,7 +542,7 @@ def casa(alvo, texto):
 
 
 def localizar(fragmento, alvos, docs):
-    """Onde, entre as páginas listadas, este fragmento aparece? (cod, pg, janela)
+    """Onde aparece? (cod, pg, janela, documentos_empatados)
 
     PREFERE A FOLHA QUE CONFERE POR INTEIRO. Até 15/10/2026 devolvia a primeira
     folha em que qualquer janela de 40 caracteres casasse, na ordem em que os
@@ -540,6 +556,14 @@ def localizar(fragmento, alvos, docs):
     O critério de localização NÃO mudou — o conjunto de fragmentos localizados é
     o mesmo. Mudou a ordem de preferência: integral, depois com a página
     vizinha, e só então janela.
+
+    DEVOLVE TAMBÉM O EMPATE, desde 15/10/2026 (item 53): a lista de documentos
+    distintos que conferem na MESMA classe da folha escolhida. Com mais de um, a
+    preferência não decide nada e quem decide é a ordem de `fonte_pagina` — que
+    é exatamente a fragilidade que produziu o defeito acima. Medido no codebook
+    inteiro: 234 fragmentos localizados, 17 com mais de uma folha candidata, 15
+    decididos pelo texto e **zero empate entre documentos**. É por isso que
+    EMPATES_BASE é zero e vale como guarda.
     """
     candidatos = []
     for cod, nums in alvos:
@@ -559,10 +583,17 @@ def localizar(fragmento, alvos, docs):
     # juntar a vizinha, depois a que confere ignorando marcador de nota, e so
     # em ultimo caso a que casa por janela sem causa classificada.
     ordem = {"ok": 0, "pagina": 1, "nota": 2, "parcial": 3}
-    i, melhor = min(
-        enumerate(candidatos),
-        key=lambda p: (ordem[confere_integral(fragmento, p[1][3], p[1][1])], p[0]))
-    return melhor[0], melhor[1], melhor[2]
+    classes = [confere_integral(fragmento, c[3], c[1]) for c in candidatos]
+    melhor = min(ordem[k] for k in classes)
+    cod, pg, janela, _ = candidatos[next(
+        i for i, k in enumerate(classes) if ordem[k] == melhor)]
+    # EMPATE: outros DOCUMENTOS conferem na mesma classe? Empate entre paginas
+    # do mesmo documento nao entra -- as duas folhas pertencem a peca que o
+    # registro cita, e o dano possivel e o da pagina ociosa, nao o da ancora
+    # falsa. Sao duas hoje, PT-53 e PT-58, e estao no item 53.
+    empatados = sorted({candidatos[i][0] for i, k in enumerate(classes)
+                        if ordem[k] == melhor})
+    return cod, pg, janela, tuple(empatados) if len(empatados) > 1 else ()
 
 
 def main():
@@ -588,6 +619,7 @@ def main():
     print("=" * 78)
     ok = falha = indet = parciais_total = atravessa_total = notas_total = 0
     falhas, ociosas_total, excecoes_usadas = [], 0, 0
+    empatados = []
 
     aninhadas = {}
     for e in alvos_reg:
@@ -622,6 +654,8 @@ def main():
                     usadas.add((onde[0], onde[1]))
                     if onde[2] <= 40:
                         fracas += 1
+                    if onde[3]:
+                        empatados.append((e["id"], onde[3], frag))
                     # CASOU POR JANELA, MAS NAO POR TEXTO INTEGRAL — e isso precisa
                     # aparecer. `casa()` devolve sucesso assim que UMA janela de 90
                     # (ou 60, ou 40) caracteres confere, de proposito, porque
@@ -680,7 +714,7 @@ def main():
         notas_total += notas
 
         if verboso:
-            for frag, (c, p, j) in achados:
+            for frag, (c, p, j, _) in achados:
                 print("          · {} p.{} (janela {}) «{}…»".format(
                     c, p, j, norm(frag)[:52]))
         if ociosas:
@@ -703,7 +737,8 @@ def main():
         print("ISTO É O PONTO CEGO REAL — editar a cauda de uma transcrição longa.")
         print("A linha de base é ZERO desde 15/10/2026: eram 45 em 09/10, 17 em")
         print("10/10 e 0 depois que a tarefa 26(b) classificou as duas últimas")
-        print("causas — âncora atribuída ao documento errado (4 casos, corrigidos no")
+        print("causas — âncora atribuída à folha errada (4 casos: 3 de documento")
+        print("errado e 1 de página errada no mesmo documento, corrigidos no")
         print("localizador) e marcador de nota de rodapé (11 casos, classe própria).")
         print("Rode com -v, compare casa/total e ache a que mudou.")
         print("Para ver quais, rode com -v e compare casa/total.".format())
@@ -735,8 +770,25 @@ def main():
         for rid, perdidas in sorted(aninhadas.items()):
             for cit in perdidas:
                 print("  {:<7} não extraída: “{}...”".format(rid, cit[:72]))
+    if empatados:
+        print()
+        print("EMPATE ENTRE DOCUMENTOS — a âncora foi escolhida pela ORDEM de")
+        print("fonte_pagina, não pelo texto: mais de um documento confere na mesma")
+        print("classe. É a forma exata do defeito que passou dois meses invisível —")
+        print("as peças deste corpus se citam entre si, e janela de N caracteres mede")
+        print("semelhança de texto, não procedência. Abra as duas folhas e decida.")
+        for rid, codigos, frag in empatados:
+            print("  {:<7} {}  «{}…»".format(
+                rid, " = ".join(codigos), norm(frag)[:52]))
+
     # SO em --todos: num subconjunto a contagem mede outra coisa, e guarda que
     # dispara no recorte errado e ruido -- e ruido treina a ignorar guarda.
+    if todos and len(empatados) != EMPATES_BASE:
+        print("")
+        print("X EMPATE ENTRE DOCUMENTOS: {} agora, {} na linha de base de "
+              "15/10/2026.".format(len(empatados), EMPATES_BASE))
+        print("  Ver o item 53: a medição que fixou esta base em zero.")
+        return 1
     if todos and parciais_total != PARCIAIS_BASE:
         print("")
         print("X CASAMENTO PARCIAL SEM CAUSA CLASSIFICADA: {} agora, {} na linha "

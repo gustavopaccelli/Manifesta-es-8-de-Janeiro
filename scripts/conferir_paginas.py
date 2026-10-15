@@ -160,6 +160,19 @@ def norm_busca(s):
 # _mupdf() logo abaixo.
 FONTES_DESLOCADAS = {"Gentium-Book-Basic"}
 
+# LINHA DE BASE DO CASAMENTO PARCIAL, fixada em 10/10/2026 com 17.
+# Enquanto eram 45 o numero nao servia de linha de base; com 17 serve, e isso
+# converte o ponto cego em tripwire: uma transcricao editada na cauda tira um
+# fragmento de "ok" e o poe em "parcial", o total vai a 18 e o ciclo cai.
+# NAO se endurece o casamento nem se mexe nos 17 legitimos -- vigia-se a
+# CONTAGEM, que e o mesmo padrao do inventario do corpus.
+# Se um trecho novo e legitimamente parcial, suba o numero aqui E diga por que.
+#
+# Em escopo de MODULO desde 15/10/2026: `gerar_ordem_de_ataque.py` importa este
+# numero para a linha da tarefa 26, em vez de redigita-lo. Quem garante que ele
+# corresponde ao disco e o passo 7 do ciclo, que cai se a contagem mudar.
+PARCIAIS_BASE = 17
+
 
 def confere_integral(frag, caminho, pg):
     """O trecho confere POR INTEIRO, e não só por janela?
@@ -615,14 +628,6 @@ def main():
         for rid, perdidas in sorted(aninhadas.items()):
             for cit in perdidas:
                 print("  {:<7} não extraída: “{}...”".format(rid, cit[:72]))
-    # LINHA DE BASE DO CASAMENTO PARCIAL, fixada em 10/10/2026 com 17.
-    # Enquanto eram 45 o numero nao servia de linha de base; com 17 serve, e isso
-    # converte o ponto cego em tripwire: uma transcricao editada na cauda tira um
-    # fragmento de "ok" e o poe em "parcial", o total vai a 18 e o ciclo cai.
-    # NAO se endurece o casamento nem se mexe nos 17 legitimos -- vigia-se a
-    # CONTAGEM, que e o mesmo padrao do inventario do corpus.
-    # Se um trecho novo e legitimamente parcial, suba o numero aqui E diga por que.
-    PARCIAIS_BASE = 17
     # SO em --todos: num subconjunto a contagem mede outra coisa, e guarda que
     # dispara no recorte errado e ruido -- e ruido treina a ignorar guarda.
     if todos and parciais_total != PARCIAIS_BASE:

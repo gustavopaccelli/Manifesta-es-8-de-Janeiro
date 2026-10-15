@@ -183,6 +183,27 @@ def main():
     else:
         print("  OK — toda página citada pertence a um documento vinculado")
 
+    # A PERGUNTA INVERSA, acrescentada em 15/10/2026 (item 51). O laço acima
+    # começa com `if not pag: continue` — ele confere quem cita página, e quem
+    # não cita passava. Foi assim que PT-03B, PT-05A, PT-06C e PT-57 ficaram
+    # dois meses vinculando PDF do corpus sem apontar folha, com transcrição de
+    # imprensa no lugar da transcrição da fonte. Registro que vincula PDF tem de
+    # citar página: é o que separa âncora de referência.
+    sem_folha = []
+    for ev in eventos:
+        if (ev.get("fonte_pagina") or "").strip():
+            continue
+        pdfs = [p.strip() for p in (ev.get("fonte_local") or "").split(";")
+                if p.strip().lower().endswith(".pdf")]
+        if any((_R / p).exists() for p in pdfs):
+            sem_folha.append(ev["id"])
+    print("  PDF vinculado sem página citada: {}".format(len(sem_folha) or "nenhum"))
+    if sem_folha:
+        for i in sem_folha:
+            print("    ! {} vincula PDF do corpus e não aponta folha".format(i))
+        falhas.append("{} registro(s) com PDF vinculado e sem página".format(
+            len(sem_folha)))
+
     # ------------------------------------------------------------------ 6 ---
     cabecalho(6, "PAGINAÇÃO REAL DOS PDFs (PyPDF2)")
     try:

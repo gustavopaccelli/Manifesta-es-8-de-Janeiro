@@ -1713,6 +1713,7 @@ Você delegou a decisão. **Gohn (2019) fecha PARCIALMENTE a tarefa 10, e num n�
 
 | # | Tarefa | Item desta agenda | Depende de |
 |:--|:--|:--|:--|
+| 26 | **Fechar as âncoras do codebook** — 🔶 **aprovada por você em 15/10/2026.** O banco está construído: **83 registros**, zero `A verificar`, zero `mecanismo_causal` vazio e **nenhuma tarefa de codificação aberta** desde 10/10. **(a) ✅ EXECUTADA em 15/10/2026 — as quatro folhas que faltavam:** PT-03B (TRF-4, **p. 30 e 401**), PT-05A (ADC 43/44/54, **p. 2 e 489**), PT-06C (HC 193.726, **p. 185**) e PT-57 (AP 2668, **p. 19**). As seis transcrições saíram da folha e `conferir_paginas` localizou **6 de 6 por inteiro**; `confirmados` subiu de 69 para **73**. Hoje **nenhuma registro vincula PDF do corpus sem citar folha**, e a **checagem 5 passou a exigir** isso — o ponto cego virou guarda, com prova negativa. Restam **2** sem `fonte_pagina`, os dois **declarados**: PT-19A vincula `.md` e PT-03D ancora em notícia arquivada (item 51). **(b) ABERTA — os 17 fragmentos que casam só por janela** (item 45.3), com linha de base e *tripwire* no passo 7; reduzi-los é abrir documento por documento. **(c) ABERTAS — cinco decisões de campo, suas:** `data_hora` de PT-02 (34.7), Telegram e WhatsApp em PT-06 (35.5), campo para autonomia do movimento (35.4), o `marco_teorico` que cita obra não lida (47.5) e **a nova: a data de PT-57, cuja publicação em 22/10/2025 não está no acórdão** (item 51). **Nada aqui depende de literatura pendente** | 50 | verificação (a e b); decisão sua (c) |
 | 10 | Acrescentar a literatura brasileira em livro — 🔶 **eixo 14 com 5 arquivos, 1.832 p.**, nenhuma lida. A coleta somou **12 peças** — 7 coletadas, 3 entregues por você e 2 capítulos a mais por encaminhamento —, e o manifesto conta menos arquivos do que isso porque **o volume integral substituiu oito offprints em 08/10** (item 39.1): peça coletada e arquivo no corpus deixaram de ser a mesma unidade. **A tarefa SE DIVIDIU em duas, e metade está fechada** (item 38.8): o mapa bibliográfico brasileiro que as sínteses não tinham está em Gohn (2019), que mapeia 1970-2019 por ciclo nomeando autores e paradigmas; o que resta é **obter os textos que esse mapa nomeia** — o cânone (Sader, Scherer-Warren, Avritzer, Doimo, Telles, Abranches, Nobre, Solano, Messenberg) é de editora comercial, **zero com autoria casada em acesso aberto**, e depende dos seus arquivos | 11.4, 22.4, 37, 38 | seus arquivos |
 | 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **25 pendentes**: 8 lidos, 7 com ficha da 1ª leva, 3 impedidos. Números medidos por `localizar_camada_a.py` a cada geração desta linha, nunca digitados. Das 25, **9 têm arquivo em algum servidor e são barradas no cliente automatizado** e **16 não têm depósito aberto em lugar nenhum**; **8 das 25 estão num só periódico, a *Mobilization*** (item 47.5) | 23, 24, 25 | acesso institucional |
 | 25 | **A literatura do bolsonarismo como mobilização** — 🔶 **coleta fechada em 04/10**: **18 peças, 453 p.** em `Fontes/13_Bolsonarismo-mobilizacao/` — 14 por OpenAlex e **as 4 barradas entregues pelo pesquisador** (item 34.6). **Três foram lidas** e ancoram registro: Araujo e Sales (2022), que tirou PT-05 de contextual; Fernandes e Silva (2021), que tirou a "tolerância policial" de PT-02; e von Bülow e Abers (2024), que **fechou PT-06 e retificou o mecanismo dele**. **Faltam 15, 400 p.** — e **nenhuma bloqueia registro**: a leitura restante serve à redação, não à codificação | 23.2, 31.4, 33, 34, 35 | leitura |
@@ -1720,7 +1721,7 @@ Você delegou a decisão. **Gohn (2019) fecha PARCIALMENTE a tarefa 10, e num n�
 
 **Nenhuma pendência de dado depende de você** — isso valia desde 16/08, deixou de valer em 30/09 com a tarefa 24, e em 04/10 mudou duas vezes: a tarefa **14** fechou a parte que podia fechar e deixou a **25**, bibliográfica; e horas depois, na terceira rodada, **você entregou as quatro peças barradas e mandou ler duas**, o que fechou a coleta da 25 e tirou PT-05 de contextual. **O que resta da 25 é leitura, e a leitura não depende de você.**
 
-**As quatro abertas, por natureza:** leitura ou entrega de arquivo (**10, 17, 25**) e a redação (**16**). **A 15 saiu da lista em 13/10**, e o que sobrou dela é decisão registrada no item 46, não tarefa aberta. **A 10 mudou de natureza em 08/10:** deixou de ser tarefa de busca — a busca foi feita e mostrou que o cânone não está em acesso aberto — e passou a depender dos seus arquivos, como a 17 depende do seu acesso institucional. **A tarefa 14 fechou em 04/10**, em quatro rodadas, e com ela a última tarefa de codificação. **Só a 16 depende das outras — e, desde a quarta rodada, nenhuma leitura pendente bloqueia registro: as quinze peças que restam no eixo 13 servem à redação, não à codificação.**
+**As cinco abertas, por natureza:** fechar o banco (**26**), leitura ou entrega de arquivo (**10, 17, 25**) e a redação (**16**). **A 15 saiu da lista em 13/10**, e o que sobrou dela é decisão registrada no item 46, não tarefa aberta. **A 10 mudou de natureza em 08/10:** deixou de ser tarefa de busca — a busca foi feita e mostrou que o cânone não está em acesso aberto — e passou a depender dos seus arquivos, como a 17 depende do seu acesso institucional. **A tarefa 14 fechou em 04/10**, em quatro rodadas, e com ela a última tarefa de codificação. **Só a 16 depende das outras — e, desde a quarta rodada, nenhuma leitura pendente bloqueia registro: as quinze peças que restam no eixo 13 servem à redação, não à codificação.**
 
 > **Cifras desta seção que não são medidas a cada ciclo:** **9** — das pendentes da camada A têm arquivo em algum servidor e são barradas no cliente automatizado (medido em 13/10/2026, item 47.5 — tentativa de rede, não remedida a cada ciclo); **16** — das pendentes não têm depósito aberto em repositório nenhum (medido em 13/10/2026, item 47.5 — o limite ali é de assinatura, não de coleta). Todo o resto sai de medição na geração.
 
@@ -2405,3 +2406,50 @@ Medidos a cada ciclo pelo passo 7, com linha de base e *tripwire* desde 10/10 (i
 As quatro tarefas abertas da ordem de ataque. **A 10, a 17 e a 25 são literatura** — serviam à codificação até 04/10 e desde então servem à **redação**: a própria tabela declara que "nenhuma leitura pendente bloqueia registro". **A 16 é a redação.** Nenhuma delas precisa andar para o banco fechar, e é por isso que listá-las primeiro estava errado.
 
 > **O que falta para a tabela espelhar isso:** a ordem de ataque **não tem linha para o fechamento do banco** — porque, quando foi escrita, fechar o banco *era* o conjunto das tarefas de codificação, e todas fecharam. O que sobrou migrou para prosa espalhada (45.3, 34.7, 35.4, 35.5, 47.5) e, hoje, para 50.2. **Proponho uma tarefa nova no ledger — "fechar as âncoras do codebook": as quatro páginas, os 17 fragmentos e as quatro decisões —, e a proposta é sua para aceitar**, porque criar tarefa na sua agenda é decisão de rumo, não contabilidade.
+
+---
+
+## 51. As quatro folhas, ancoradas — e o ponto cego virou guarda — 🔶 15/10/2026
+
+**Encaminhamento:** *"Aprovado, crie a tarefa e comece pelas quatro páginas."*
+
+### 51.1 O que entrou no codebook
+
+| Registro | Folha, no PDF | O que a folha diz, em fonte primária |
+|:--|:--|:--|
+| **PT-03B** | TRF-4, **p. 30** e **p. 401** | *"decide a egrégia 8ª Turma do Tribunal Regional Federal da 4ª Região, por unanimidade, rejeitar as preliminares"*; e a dosimetria: *"as sanções resultam em 12 (doze) anos e 01 (um) mês de reclusão e 280 (duzentos e oitenta) dias-multa"* |
+| **PT-05A** | ADC 43/44/54, **p. 2** e **p. 489** | a ementa — *"Surge constitucional o artigo 283 do Código de Processo Penal, a condicionar o início do cumprimento da pena ao trânsito em julgado"* — e o extrato de ata de 07/11/2019, que **nomeia os cinco vencidos** |
+| **PT-06C** | HC 193.726, **p. 185** | *"por oito votos a três, este Plenário negou provimento ao Agravo Regimental para manter a decisão do eminente relator Ministro Edson Fachin no ponto em que declarava a incompetência do Juízo da 13ª Subseção Judiciária Federal de Curitiba/PR"* |
+| **PT-57** | AP 2668, **p. 19** | o encerramento do acórdão e a sua data: *"Brasília, 15 de outubro de 2025"* |
+
+**Seis transcrições, seis localizadas por inteiro na primeira execução** do passo 7, e `confirmados` subiu de **69 para 73**. A contagem de casamento parcial **não se moveu**: segue em 17, o que significa que nenhuma das novas entrou como fragmento frouxo.
+
+**A transcrição de imprensa saiu das aspas nos quatro.** Ela não está na folha, e aspa que o conferidor não localiza é aspa que falha no ciclo — ou, pior, que é dispensada por exceção e passa a parecer lastro. O fato noticiado continua no registro, em prosa, marcado como *"contexto de imprensa, sem valor de âncora"*, e a URL segue onde estava.
+
+### 51.2 Duas armadilhas achadas na leitura, e as duas são do tipo da casa
+
+> **A primeira está em PT-05A, e eu quase a pisei.** O registro afirma **6 votos a 5**, e a busca por "6 votos a 5" no acórdão **casa** — na p. 31, na voz do relator. Mas lá a expressão se refere ao **julgamento virtual de outro caso**, e em hipótese: *"o seria, presumo, por 6 votos a 5, houvesse votado a ministra Rosa Weber"*. **Citar aquela folha como placar desta decisão seria a cifra certa no referente errado, com aspas e página** — a forma mais convincente do erro que este projeto persegue. O que o documento dá de fato está na p. 489: cinco vencidos nomeados, onze ministros presentes nomeados. **O "6" é aritmética sobre dado primário, não citação, e está declarado como tal na `nota_auditoria`.**
+
+> **A segunda está em PT-57, e não se resolve por leitura.** O registro afirma a **publicação do acórdão em 22/10/2025**. Varri as **1.991 páginas** por `22/10/2025`, `outubro de 2025`, `DJe-N` e `PUBLIC`: **a data não está no documento**. O que o acórdão data é a si mesmo — *"Brasília, 15 de outubro de 2025"*, assinatura do relator, sendo a sessão de julgamento de 11/09/2025. Os carimbos `ACÓRDÃO ELETRÔNICO DJe-N DIVULG … PUBLIC …` que aparecem no corpo são de **precedentes citados nos votos**, não deste acórdão. **A publicação em 22/10/2025 não tem âncora no corpus, porque o DJe não está entre as fontes.**
+
+### 51.3 O ponto cego virou guarda, dentro da checagem 5
+
+A checagem 5 abria com `if not pag: continue` — **conferia quem citava página, e quem não citava passava**. Foi por aí que quatro registros atravessaram dois meses de ciclo vinculando PDF do corpus sem apontar folha. A **pergunta inversa** entrou na mesma checagem: *vinculou PDF e não citou página?*
+
+**Prova negativa:** apaguei o `fonte_pagina` de PT-06C e rodei — `! PT-06C vincula PDF do corpus e não aponta folha`, `RESULTADO: 2 FALHA(S)`, código de saída 1. Restaurado em seguida.
+
+> **Entrou na 5 em vez de virar checagem 9 de propósito:** é a mesma pergunta — coerência entre `fonte_pagina` e `fonte_local` — vista do outro lado, e o ciclo continua com **oito** checagens, sem renomear a contagem em seis documentos. **E a guarda nasce com lista de dispensa vazia:** os dois registros sem página que restam não vinculam PDF, então não precisam de exceção. Lista de dispensa vazia é a melhor que existe — exceção registrada é dívida que ninguém revisita.
+
+### 51.4 Os dois sem página, declarados
+
+| Registro | Por que não tem folha |
+|:--|:--|
+| **PT-19A** | o documento é a síntese do NetLab-UFRJ em **`.md`**, não PDF: não há folha a citar, e a âncora é o arquivo inteiro, cujo SHA-256 a checagem 8 vigia |
+| **PT-03D** | **não tem documento**: ancora em notícia da Agência Brasil arquivada contra *link rot* (item 18), que preserva a evidência de que a notícia existiu — não é fonte primária. O ato que ela noticia executa decisão do TRF-4 **já ancorada em PT-03B** |
+
+### 51.5 O que isto deixa para você — e é decisão, não trabalho
+
+1. **A promoção de classe de três registros.** PT-03B, PT-05A e PT-06C passaram a ter transcrição de fonte primária com folha. **Não promovi**: pelo precedente da tarefa 19, mudar a classe de um registro é sua. A evidência está na `nota_auditoria` de cada um, e **PT-06C é o caso mais limpo** — uma só folha cobre data, placar, objeto e fundamento.
+2. **A data de PT-57**, e são três saídas: **(a)** trocar `data_hora` para **15/10/2025**, que é o que a fonte primária data, e reformular o registro como *conclusão* do acórdão; **(b)** manter 22/10/2025 e declarar a limitação no registro; **(c)** incorporar o **DJe** ao corpus, e aí a publicação ganha âncora própria. Não alterei a data — é a mesma classe de decisão do `data_hora` de PT-02 (item 34.7).
+
+**O que resta da tarefa 26 é (b) e (c):** os 17 fragmentos por janela, que é verificação minha, e as cinco decisões de campo, que são suas.

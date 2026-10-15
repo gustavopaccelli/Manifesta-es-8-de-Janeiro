@@ -83,6 +83,36 @@ def medir_camada_a():
     }
 
 
+def medir_codebook():
+    """O que falta ancorar no codebook, medido no JSON — a tarefa 26.
+
+    `sem_pagina_pdf` é o subconjunto que dá trabalho de leitura: registro sem
+    `fonte_pagina` cujo documento vinculado é PDF que existe no corpus. Quem
+    não tem documento, ou cujo documento é `.md`, não se resolve por leitura e
+    não entra nessa conta."""
+    import conferir_paginas  # a linha de base dos parciais vive lá, e o passo 7 a vigia
+
+    dados = json.loads(io.open(RAIZ / "process_tracing_8jan_eventos.json",
+                               encoding="utf-8").read())
+    eventos = dados["eventos"]
+    sem_pagina = [e for e in eventos if not (e.get("fonte_pagina") or "").strip()]
+    com_pdf = []
+    for e in sem_pagina:
+        for p in (e.get("fonte_local") or "").split(";"):
+            p = p.strip()
+            if p.lower().endswith(".pdf") and (RAIZ / p).exists():
+                com_pdf.append(e)
+                break
+    return {
+        "registros": len(eventos),
+        "registros_sem_pagina": len(sem_pagina),
+        "registros_sem_pagina_palavra": PALAVRA.get(len(sem_pagina), str(len(sem_pagina))),
+        "registros_sem_pagina_pdf": len(com_pdf),
+        "registros_sem_pagina_pdf_palavra": PALAVRA.get(len(com_pdf), str(len(com_pdf))),
+        "fragmentos_por_janela": conferir_paginas.PARCIAIS_BASE,
+    }
+
+
 def medir_corpus(lidas_por_eixo):
     """Peças e páginas por eixo, do manifesto — que é o que a checagem 8 confere.
 
@@ -150,6 +180,7 @@ def medir(d):
         "fechadas_palavra": PALAVRA.get(len(fechadas), str(len(fechadas))),
         "abertas_natureza": frase,
     }
+    chaves.update(medir_codebook())
     chaves.update(medir_camada_a())
     chaves.update(medir_corpus(d.get("lidas", {})))
     for k, v in d.get("medidos_a_mao", {}).items():

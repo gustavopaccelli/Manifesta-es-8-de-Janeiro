@@ -225,13 +225,13 @@
       "framing_narrativa": "'Confirmação da Justiça'; contraframe da defesa: 'lawfare'",
       "resposta_estatal": "Acórdão condenatório de órgão colegiado",
       "mecanismo_causal": "Acionamento do gatilho de inelegibilidade. A confirmação por órgão colegiado é exatamente o fato jurídico que a Lei da Ficha Limpa (LC 135/2010, sobre a LC 64/90) exige para gerar inelegibilidade. A decisão não apenas amplia a pena: transporta o caso do domínio penal para o domínio eleitoral, tornando a candidatura de 2018 juridicamente vulnerável.",
-      "fonte_trecho": "TRF-4 (24/01/2018): 'A 8ª Turma do Tribunal Regional Federal da 4ª Região (TRF4) confirmou hoje (24/1), por unanimidade, a condenação do ex-presidente Luiz Inácio Lula da Silva pelos crimes de corrupção passiva e lavagem de dinheiro, passando a pena de nove anos e seis meses para 12 anos e um mês de reclusão em regime fechado'",
+      "fonte_trecho": "Acórdão do TRF-4, p. 30: 'decide a egrégia 8ª Turma do Tribunal Regional Federal da 4ª Região, por unanimidade, rejeitar as preliminares'. A pena, na dosimetria do voto do relator, p. 401: 'Diante do concurso material entre as condutas, as sanções resultam em 12 (doze) anos e 01 (um) mês de reclusão e 280 (duzentos e oitenta) dias-multa'. A sentença de primeiro grau havia fixado 9 anos e 6 meses (p. 37). Contexto de imprensa, sem valor de âncora: a nota do TRF-4 de 24/01/2018 anunciou a confirmação unânime e a majoração da pena no mesmo dia do julgamento.",
       "fonte_url": "https://www.trf4.jus.br/trf4/controlador.php?acao=noticia_visualizar&id_noticia=13418",
       "fonte_local": "Fontes/01_Arco-judicial_2017-2021/TRF4_Revista-97_Acordao-ACr-5046512-94_2018-01-24.pdf",
-      "fonte_pagina": null,
+      "fonte_pagina": "TRF-4: 30, 401",
       "status_verificacao": "Confirmado — inteiro teor obtido",
       "status_classe": "Confirmado",
-      "nota_auditoria": null
+      "nota_auditoria": "ÂNCORA DE PÁGINA EM 15/10/2026, tarefa 26(a). O registro vinculava o acórdão do TRF-4 e não citava página alguma: a transcrição era a NOTA DE IMPRENSA do tribunal, que não está no acórdão. As duas folhas foram localizadas e transcritas — p. 30 (dispositivo, unanimidade) e p. 401 (a pena de 12 anos e 1 mês em regime fechado). PROPOSTA, não executada: com transcrição de fonte primária em duas folhas, o registro cabe em 'Confirmado em fonte primária' — a promoção de classe é decisão do pesquisador."
     },
     {
       "id": "PT-03C",
@@ -267,7 +267,7 @@
       "fonte_pagina": null,
       "status_verificacao": "Confirmado",
       "status_classe": "Confirmado",
-      "nota_auditoria": null
+      "nota_auditoria": "SEM DOCUMENTO E SEM PÁGINA, declarado em 15/10/2026, tarefa 26(a). O registro ancora em notícia da Agência Brasil, arquivada contra link rot em `Fontes/09_Arquivamento-web/` (item 18). Notícia arquivada NÃO É FONTE PRIMÁRIA: preserva a evidência de que a notícia existiu e do que dizia. A prisão em si é ato de execução de decisão do TRF-4 já ancorada em PT-03B. Não é lacuna a preencher por leitura; se vier a ser, o que falta é a peça processual da execução, que não está no corpus."
     },
     {
       "id": "PT-03E",
@@ -333,13 +333,13 @@
       "framing_narrativa": "'Presunção de inocência' x 'impunidade'",
       "resposta_estatal": "Reversão jurisprudencial; alvarás de soltura em série",
       "mecanismo_causal": "Reversão jurisprudencial e reabertura parcial da oportunidade. A mesma arena que fechou a competição em 2018 começa a reabri-la — e o faz alterando a regra, não absolvendo o réu. Analiticamente, aqui se constitui o reservatório de deslegitimação recíproca do Judiciário: cada campo passa a dispor de um episódio em que o STF, decidindo por margem mínima, alterou o resultado do jogo político. É esse reservatório que o enquadramento 'STF ditador' (PT-05) explora a partir de 2019.",
-      "fonte_trecho": "Agência Brasil (08/11/2019): 'Lula estava preso desde 7 de abril do ano passado pela condenação no caso do triplex do Guarujá (SP)'; a soltura seguiu-se à decisão do STF 'que derrubou a validade da execução provisória de condenações criminais, conhecida como prisão após a segunda instância'. Total: 580 dias preso.",
+      "fonte_trecho": "Ementa do acórdão, p. 2: 'Surge constitucional o artigo 283 do Código de Processo Penal, a condicionar o início do cumprimento da pena ao trânsito em julgado da sentença penal condenatória'. Extrato de ata da sessão de 07/11/2019, p. 489: 'vencidos o Ministro Edson Fachin, que julgava improcedente a ação, e os Ministros Alexandre de Moraes, Roberto Barroso, Luiz Fux e Cármen Lúcia, que a julgavam parcialmente procedente para dar interpretação conforme'. Contexto de imprensa, sem valor de âncora: Lula estava preso desde 07/04/2018 e foi solto em 08/11/2019, totalizando 580 dias.",
       "fonte_url": "https://agenciabrasil.ebc.com.br/justica/noticia/2019-11/lula-deixa-carceragem-da-pf-em-curitiba",
       "fonte_local": "Fontes/01_Arco-judicial_2017-2021/STF_ADC-43-44-54_Acordao_2019-11-07.pdf",
-      "fonte_pagina": null,
+      "fonte_pagina": "ADC 43/44/54: 2, 489",
       "status_verificacao": "Confirmado — inteiro teor obtido",
       "status_classe": "Confirmado",
-      "nota_auditoria": null
+      "nota_auditoria": "ÂNCORA DE PÁGINA EM 15/10/2026, tarefa 26(a). O placar de 6×5 NÃO ESTÁ ESCRITO no acórdão: a p. 2 diz 'por maioria', e a p. 489 nomeia os CINCO vencidos e os ONZE ministros presentes (os dez listados mais o presidente Dias Toffoli) — o 6 é aritmética sobre dado primário, não citação, e fica declarado como tal. ARMADILHA REGISTRADA: a p. 31 contém '6 votos a 5' na voz do relator, mas referido ao JULGAMENTO VIRTUAL de outro caso e em hipótese ('o seria, presumo, por 6 votos a 5, houvesse votado a ministra Rosa Weber') — citá-la como placar desta decisão seria a cifra certa no referente errado. PROPOSTA, não executada: promoção a 'Confirmado em fonte primária'."
     },
     {
       "id": "PT-06",
@@ -405,13 +405,13 @@
       "framing_narrativa": "'Restauração de direitos políticos' x 'volta do condenado'",
       "resposta_estatal": "Anulação confirmada; direitos políticos restabelecidos",
       "mecanismo_causal": "Reabertura da estrutura de oportunidade eleitoral: o competidor removido em 2018 retorna definitivamente à disputa, com a anulação confirmada por 8×3 e as restrições eleitorais cessadas. RETIFICAÇÃO IMPORTANTE: a versão anterior atribuía a este registro o papel de antecedente imediato do plano de ruptura. A denúncia da PGR situa a primeira deliberação em 22/03/2021, três semanas antes desta sessão — o gatilho documentado é a decisão de Fachin (PT-06A). Este registro consolida juridicamente a elegibilidade, mas não é o que a acusação aponta como estopim.",
-      "fonte_trecho": "STF (15/04/2021): 'STF confirma anulação de condenações do ex-presidente Lula na Lava Jato'. Agência Brasil: 'STF mantém anulação das condenações de Lula' (8x3) — https://agenciabrasil.ebc.com.br/justica/noticia/2021-04/stf-mantem-anulacao-das-condenacoes-de-lula. Vínculo com PT-07 conforme Agência Brasil (08/01/2026).",
+      "fonte_trecho": "Complementação ao voto do Min. Gilmar Mendes, p. 185: 'por oito votos a três, este Plenário negou provimento ao Agravo Regimental para manter a decisão do eminente relator Ministro Edson Fachin no ponto em que declarava a incompetência do Juízo da 13ª Subseção Judiciária Federal de Curitiba/PR'. Contexto de imprensa, sem valor de âncora: as notícias do STF e da Agência Brasil de 15/04/2021 noticiaram a manutenção da anulação por 8×3.",
       "fonte_url": "https://noticias.stf.jus.br/postsnoticias/stf-confirma-anulacao-de-condenacoes-do-ex-presidente-lula-na-lava-jato/",
       "fonte_local": "Fontes/01_Arco-judicial_2017-2021/STF_HC-193726-AgR_Acordao_2021-04-15.pdf",
-      "fonte_pagina": null,
+      "fonte_pagina": "HC 193.726: 185",
       "status_verificacao": "Confirmado — inteiro teor obtido. RETIFICAÇÃO: a versão anterior tratava esta decisão como o antecedente imediato de PT-07. A denúncia da PGR (p. 8) data a primeira movimentação do grupo em 22/03/2021, portanto ANTES desta confirmação plenária — o marco relevante é PT-06A (Fachin, 08/03/2021).",
       "status_classe": "Confirmado",
-      "nota_auditoria": null
+      "nota_auditoria": "ÂNCORA DE PÁGINA EM 15/10/2026, tarefa 26(a). É o único dos quatro em que uma só folha cobre o enunciado inteiro do registro: a data da sessão, o placar de 8×3, o objeto (manter a decisão de Fachin) e o fundamento (incompetência da 13ª Vara) estão na mesma frase, em fonte primária. PROPOSTA, não executada: promoção a 'Confirmado em fonte primária'."
     },
     {
       "id": "PT-07",
@@ -771,7 +771,7 @@
       "fonte_pagina": null,
       "status_verificacao": "Confirmado quanto à existência e ao número, em relatório de laboratório universitário — NÃO revisado por pares. Três ressalvas: a categoria 'golpista' é operacionalização dos próprios autores (critério registrado na transcrição); a janela de coleta é de três dias POSTERIORES ao evento, medindo o que permanecia disponível e não o volume veiculado durante a mobilização; e a fonte é transcrição de publicação web, não PDF.",
       "status_classe": "Confirmado",
-      "nota_auditoria": null
+      "nota_auditoria": "SEM PÁGINA POR NATUREZA DO DOCUMENTO, declarado em 15/10/2026, tarefa 26(a). O documento vinculado é a síntese do NetLab-UFRJ em `.md`, não PDF: não há folha a citar, e `conferir_paginas.py` abre PDF. A âncora é o arquivo inteiro, cujo SHA-256 a checagem 8 do ciclo vigia. Não é lacuna a preencher."
     },
     {
       "id": "PT-19B",
@@ -1521,13 +1521,13 @@
       "framing_narrativa": "—",
       "resposta_estatal": "Marco processual para recursos",
       "mecanismo_causal": "Consolidação documental da narrativa causal oficial — peça-chave para process tracing baseado em fonte primária",
-      "fonte_trecho": "Publicação do acórdão da AP 2668 (out/2025)",
+      "fonte_trecho": "Encerramento do acórdão, p. 19: 'A Turma condenou os denunciados ao pagamento das custas processuais, nos termos do art. 804 do Código de Processo Penal. Brasília, 15 de outubro de 2025'. A folha traz também a suspensão dos direitos políticos dos réus e o ofício ao STM sobre perda de posto e patente.",
       "fonte_url": "https://pt.wikipedia.org/wiki/A%C3%A7%C3%A3o_Penal_2668",
       "fonte_local": "Fontes/04_T+1_Resposta-institucional/STF_AP-2668_Acordao_Condenacao_2025-09-11.pdf",
-      "fonte_pagina": null,
+      "fonte_pagina": "AP 2668: 19",
       "status_verificacao": "Confirmado — inteiro teor obtido (1.991 páginas)",
       "status_classe": "Confirmado",
-      "nota_auditoria": null
+      "nota_auditoria": "ÂNCORA DE PÁGINA EM 15/10/2026, tarefa 26(a) — E UMA DIVERGÊNCIA DE DATA QUE FICA PARA O PESQUISADOR. O acórdão inteiro (1.991 páginas) foi varrido por '22/10/2025', 'outubro de 2025', 'DJe-N' e 'PUBLIC': a data de publicação que este registro afirma em `data_hora` NÃO ESTÁ NO DOCUMENTO. O que o documento data é a si mesmo: 'Brasília, 15 de outubro de 2025', assinatura do relator na p. 19 (a sessão de julgamento foi em 11/09/2025). Os carimbos 'ACÓRDÃO ELETRÔNICO DJe-N DIVULG … PUBLIC …' que ocorrem no corpo são de PRECEDENTES CITADOS nos votos, não deste acórdão. Logo: a publicação em 22/10/2025 não tem âncora no corpus — o DJe não está entre as fontes. DECISÃO SUA: (a) trocar `data_hora` para 15/10/2025, que é o que a fonte primária data, e reformular o registro como conclusão do acórdão; (b) manter 22/10/2025 e declarar a limitação; ou (c) incorporar o DJe ao corpus. Não alterei a data: é a mesma classe de decisão do `data_hora` de PT-02 (item 34.7)."
     },
     {
       "id": "PT-58",

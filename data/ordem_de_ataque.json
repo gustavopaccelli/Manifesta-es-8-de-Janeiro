@@ -219,6 +219,13 @@
       "quando": "✅ 13/10"
     },
     {
+      "n": "19",
+      "estado": "fechada",
+      "texto": "~~Decidir o nome de `mecanismo_causal` e aplicar as cobranças da seção 4 do documento 09~~ — **executada em 09-10/10**: você aprovou os quatro nomes (PT-29 **demonstração de viabilidade**; PT-34 **concentração simultânea no conjunto simbólico**; PT-12A **agregação na base e intermediação concentrada**; PT-62 **desmobilização por repressão seletiva** seguida de **migração de arena**) e a atribuição dos quatro testes foi corrigida para **Van Evera (1997) → Bennett (2010) → Collier (2011)**. **As \"sete cobranças\" eram cinco:** duas linhas da §4 eram *passam* e *correto*, não cobrança, e a de PT-03 saíra em 04/10. Com a quinta, **a tarefa fechou — e esta linha ficou aberta na tabela por cinco dias**",
+      "itens": "41, 42, 43, 44",
+      "quando": "✅ 10/10"
+    },
+    {
       "n": "10",
       "estado": "aberta",
       "texto": "Acrescentar a literatura brasileira em livro — 🔶 **eixo 14 com {{eixo14_arquivos}} arquivos, {{eixo14_paginas}} p.**, nenhuma lida. A coleta somou **12 peças** — 7 coletadas, 3 entregues por você e 2 capítulos a mais por encaminhamento —, e o manifesto conta menos arquivos do que isso porque **o volume integral substituiu oito offprints em 08/10** (item 39.1): peça coletada e arquivo no corpus deixaram de ser a mesma unidade. **A tarefa SE DIVIDIU em duas, e metade está fechada** (item 38.8): o mapa bibliográfico brasileiro que as sínteses não tinham está em Gohn (2019), que mapeia 1970-2019 por ciclo nomeando autores e paradigmas; o que resta é **obter os textos que esse mapa nomeia** — o cânone (Sader, Scherer-Warren, Avritzer, Doimo, Telles, Abranches, Nobre, Solano, Messenberg) é de editora comercial, **zero com autoria casada em acesso aberto**, e depende dos seus arquivos",
@@ -233,14 +240,6 @@
       "itens": "23, 24, 25",
       "depende": "acesso institucional",
       "natureza": "leitura ou entrega de arquivo"
-    },
-    {
-      "n": "19",
-      "estado": "aberta",
-      "texto": "**Decidir o nome de `mecanismo_causal`** e aplicar as **sete** cobranças da seção 4 do documento 09. A tarefa 14 acrescentou três e **devolveu as três**: a descontinuidade 2013→2015 (item 32); a \"apropriação de repertório que Tilly não detalha\", que era conclusão errada — Kunrath Silva (2018, § 15) mostra mecanismo distinto da apropriação social; e **\"certificação\" em PT-03, que o pesquisador renomeou para *ressignificação do protesto* em 04/10** (item 34.2). Dois nomes de mecanismo saíram daqui decididos — PT-01 e PT-03",
-      "itens": "24.6, 25.1, 25.2, 31.6, 32.1, 34.2",
-      "depende": "decisão sua",
-      "natureza": "decisão sua"
     },
     {
       "n": "25",

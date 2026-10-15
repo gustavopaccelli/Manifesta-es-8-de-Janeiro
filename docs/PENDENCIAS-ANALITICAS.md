@@ -1707,6 +1707,7 @@ Você delegou a decisão. **Gohn (2019) fecha PARCIALMENTE a tarefa 10, e num n�
 | 13 | ~~Decidir o "Conclusão dos julgamentos" de PT-61~~ — a expressão **não estava no balanço**; reformulada | 30.2 | ✅ 30/09 |
 | 14 | ~~Codificar a camada $T_{-1}$ conjuntural~~ — **6 de 7** codificados na fonte com página, em **quatro** rodadas: a camada conjuntural **brasileira inteira**, de junho de 2013 à pandemia. A segunda rodada tirou a descontinuidade 2013→2015 do codebook; a terceira executou os oito encaminhamentos, renomeou dois mecanismos e **tirou de PT-02 a "tolerância policial", que a leitura contradisse**; a quarta fechou PT-06 e **retificou o mecanismo dele** — a infraestrutura informacional antecede a pandemia. Resta contextual só **PT-08**, e a lacuna dele é literatura comparada sobre o Capitólio | 31, 32, 34, 35 | ✅ 04/10 |
 | 15 | ~~Higiene do repositório: licença, remoto, `.backup_pre_lula/`, ponteiros no JSON~~ — executada, e era **mais apuração que decisão**: o que havia para decidir já estava decidido pelo conteúdo do corpus. **27 das 40 peças de literatura não podem ser redistribuídas**, e os PDFs estão no histórico do git — o remoto público deste repositório não existe. Nasceram daí o `MANIFESTO-CORPUS.csv` com SHA-256 e rota de obtenção, a **checagem 8** do ciclo, `exportar_aparato.py` e `LICENCA-E-DISTRIBUICAO.md`. **O que restou não é tarefa, é decisão sua:** a licença da sua obra (46.6), o backup versionado e o folder de 37,4 MB em 6 páginas (46.5) | 46 | ✅ 13/10 |
+| 19 | ~~Decidir o nome de `mecanismo_causal` e aplicar as cobranças da seção 4 do documento 09~~ — **executada em 09-10/10**: você aprovou os quatro nomes (PT-29 **demonstração de viabilidade**; PT-34 **concentração simultânea no conjunto simbólico**; PT-12A **agregação na base e intermediação concentrada**; PT-62 **desmobilização por repressão seletiva** seguida de **migração de arena**) e a atribuição dos quatro testes foi corrigida para **Van Evera (1997) → Bennett (2010) → Collier (2011)**. **As "sete cobranças" eram cinco:** duas linhas da §4 eram *passam* e *correto*, não cobrança, e a de PT-03 saíra em 04/10. Com a quinta, **a tarefa fechou — e esta linha ficou aberta na tabela por cinco dias** | 41, 42, 43, 44 | ✅ 10/10 |
 
 ### Abertas
 
@@ -1714,13 +1715,12 @@ Você delegou a decisão. **Gohn (2019) fecha PARCIALMENTE a tarefa 10, e num n�
 |:--|:--|:--|:--|
 | 10 | Acrescentar a literatura brasileira em livro — 🔶 **eixo 14 com 5 arquivos, 1.832 p.**, nenhuma lida. A coleta somou **12 peças** — 7 coletadas, 3 entregues por você e 2 capítulos a mais por encaminhamento —, e o manifesto conta menos arquivos do que isso porque **o volume integral substituiu oito offprints em 08/10** (item 39.1): peça coletada e arquivo no corpus deixaram de ser a mesma unidade. **A tarefa SE DIVIDIU em duas, e metade está fechada** (item 38.8): o mapa bibliográfico brasileiro que as sínteses não tinham está em Gohn (2019), que mapeia 1970-2019 por ciclo nomeando autores e paradigmas; o que resta é **obter os textos que esse mapa nomeia** — o cânone (Sader, Scherer-Warren, Avritzer, Doimo, Telles, Abranches, Nobre, Solano, Messenberg) é de editora comercial, **zero com autoria casada em acesso aberto**, e depende dos seus arquivos | 11.4, 22.4, 37, 38 | seus arquivos |
 | 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **25 pendentes**: 8 lidos, 7 com ficha da 1ª leva, 3 impedidos. Números medidos por `localizar_camada_a.py` a cada geração desta linha, nunca digitados. Das 25, **9 têm arquivo em algum servidor e são barradas no cliente automatizado** e **16 não têm depósito aberto em lugar nenhum**; **8 das 25 estão num só periódico, a *Mobilization*** (item 47.5) | 23, 24, 25 | acesso institucional |
-| 19 | **Decidir o nome de `mecanismo_causal`** e aplicar as **sete** cobranças da seção 4 do documento 09. A tarefa 14 acrescentou três e **devolveu as três**: a descontinuidade 2013→2015 (item 32); a "apropriação de repertório que Tilly não detalha", que era conclusão errada — Kunrath Silva (2018, § 15) mostra mecanismo distinto da apropriação social; e **"certificação" em PT-03, que o pesquisador renomeou para *ressignificação do protesto* em 04/10** (item 34.2). Dois nomes de mecanismo saíram daqui decididos — PT-01 e PT-03 | 24.6, 25.1, 25.2, 31.6, 32.1, 34.2 | decisão sua |
 | 25 | **A literatura do bolsonarismo como mobilização** — 🔶 **coleta fechada em 04/10**: **18 peças, 453 p.** em `Fontes/13_Bolsonarismo-mobilizacao/` — 14 por OpenAlex e **as 4 barradas entregues pelo pesquisador** (item 34.6). **Três foram lidas** e ancoram registro: Araujo e Sales (2022), que tirou PT-05 de contextual; Fernandes e Silva (2021), que tirou a "tolerância policial" de PT-02; e von Bülow e Abers (2024), que **fechou PT-06 e retificou o mecanismo dele**. **Faltam 15, 400 p.** — e **nenhuma bloqueia registro**: a leitura restante serve à redação, não à codificação | 23.2, 31.4, 33, 34, 35 | leitura |
 | 16 | **Redação do artigo** | 3, 4, 5, 6, 9, 10 | tudo acima |
 
 **Nenhuma pendência de dado depende de você** — isso valia desde 16/08, deixou de valer em 30/09 com a tarefa 24, e em 04/10 mudou duas vezes: a tarefa **14** fechou a parte que podia fechar e deixou a **25**, bibliográfica; e horas depois, na terceira rodada, **você entregou as quatro peças barradas e mandou ler duas**, o que fechou a coleta da 25 e tirou PT-05 de contextual. **O que resta da 25 é leitura, e a leitura não depende de você.**
 
-**As cinco abertas, por natureza:** leitura ou entrega de arquivo (**10, 17, 25**), decisão sua (**19**) e a redação (**16**). **A 15 saiu da lista em 13/10**, e o que sobrou dela é decisão registrada no item 46, não tarefa aberta. **A 10 mudou de natureza em 08/10:** deixou de ser tarefa de busca — a busca foi feita e mostrou que o cânone não está em acesso aberto — e passou a depender dos seus arquivos, como a 17 depende do seu acesso institucional. **A tarefa 14 fechou em 04/10**, em quatro rodadas, e com ela a última tarefa de codificação. **Só a 16 depende das outras — e, desde a quarta rodada, nenhuma leitura pendente bloqueia registro: as quinze peças que restam no eixo 13 servem à redação, não à codificação.**
+**As quatro abertas, por natureza:** leitura ou entrega de arquivo (**10, 17, 25**) e a redação (**16**). **A 15 saiu da lista em 13/10**, e o que sobrou dela é decisão registrada no item 46, não tarefa aberta. **A 10 mudou de natureza em 08/10:** deixou de ser tarefa de busca — a busca foi feita e mostrou que o cânone não está em acesso aberto — e passou a depender dos seus arquivos, como a 17 depende do seu acesso institucional. **A tarefa 14 fechou em 04/10**, em quatro rodadas, e com ela a última tarefa de codificação. **Só a 16 depende das outras — e, desde a quarta rodada, nenhuma leitura pendente bloqueia registro: as quinze peças que restam no eixo 13 servem à redação, não à codificação.**
 
 > **Cifras desta seção que não são medidas a cada ciclo:** **9** — das pendentes da camada A têm arquivo em algum servidor e são barradas no cliente automatizado (medido em 13/10/2026, item 47.5 — tentativa de rede, não remedida a cada ciclo); **16** — das pendentes não têm depósito aberto em repositório nenhum (medido em 13/10/2026, item 47.5 — o limite ali é de assinatura, não de coleta). Todo o resto sai de medição na geração.
 
@@ -2338,4 +2338,70 @@ A linha da tarefa 10 dizia **"eixo 14 com 12 peças, 1.854 p."**. O manifesto co
 2. **Não tocou no inventário de decisões** logo abaixo do bloco: ele continua escrito à mão, e desde o item 48 aponta para os itens que geraram cada decisão em vez de copiá-las. **Lista à mão duplicada é lista que envelhece** — e essa é a lição que esta seção provou três vezes.
 3. **Não reescreveu a prosa.** Os quatro parágrafos de histórico e os dois de fechamento foram para o ledger como estavam; mudou só onde havia cifra.
 
+### 49.6 O primeiro uso do gerador pegou a quarta falha da tabela — e era a que mais importava
+
+**A tarefa 19 estava listada como aberta, "decisão sua", e fechou em 10/10/2026.** Quem o diz são duas peças, com a mesma frase: o item 43.5 — *"Da tarefa 19, **nada**"* — e o cabeçalho da §4 do documento 09, *"com ela, a tarefa 19 fecha: as cinco cobranças estão resolvidas"*. A linha ficou aberta **cinco dias**, e com ela a aparência de que o codebook esperava uma decisão de nomenclatura que você já havia tomado.
+
+> **E essa era a linha com consequência.** As outras três falhas da tabela eram de contabilidade — a 18 duplicada, a 15 atrasada dois dias, a cifra de 30/09 na 17. Esta mudava a resposta à pergunta *"o que falta para o banco de dados fechar?"*: com a 19 aberta, a resposta parecia incluir uma decisão de mecanismo; sem ela, **nenhuma tarefa da tabela pertence ao fechamento do banco** — as quatro abertas são literatura (10, 17, 25) e redação (16).
+
+**O conserto foi do ledger, não do texto:** mudei `estado` para `fechada` e o gerador fez o resto — tirou a linha das abertas, pôs nas fechadas e **reescreveu sozinho "As cinco abertas" como "As quatro abertas"**. É o mecanismo do item 49 funcionando no primeiro uso real: a contagem seguiu o estado sem ninguém lembrar dela.
+
+**E a cifra "sete cobranças" era falsa de outro modo: eram cinco.** A §4 do documento 09 tem oito linhas, mas duas delas dizem *passam* e *correto* — não eram cobrança —, e a de PT-03 saíra em 04/10. Contar linhas de tabela como cobranças é, mais uma vez, a cifra certa no referente errado.
+
 > **Um efeito colateral visível, e é consequência de a frase ser derivada:** a ordem em que as naturezas aparecem agora segue a **ordem da tabela** — "leitura ou entrega de arquivo (10, 17, 25), decisão sua (19) e a redação (16)" —, não a ordem em que a mão as escrevia. Se a ordem importa, ela se muda reordenando as tarefas no ledger, que é onde a tabela também se ordena.
+
+---
+
+## 50. O que falta para o banco de dados fechar — medido no JSON — 🔶 15/10/2026
+
+**Encaminhamento:** *"Meu primeiro interesse é fechar a construção do process tracing e, consequentemente, o banco de dados desse evento. As demais pendências colocamos em ordem subsequente."*
+
+**A crítica estava certa e o diagnóstico é este:** as listas que eu vinha apresentando ordenavam por data de abertura e punham a tarefa 17 — 25 leituras de literatura — no topo, embora **ela não bloqueie nenhum registro**. Pior: traziam a tarefa 19 como aberta (ver 49.6). Este item responde à pergunta certa, e **mede no `process_tracing_8jan_eventos.json`**, não na prosa desta agenda.
+
+### 50.1 O estado medido do codebook
+
+| | Medido em 15/10/2026 |
+|:--|:--|
+| Registros | **83** |
+| `status_classe` | **61** em fonte primária · **21** confirmados · **1** inferência (PT-62, por desenho: a âncora cobre 2023 e o registro projeta a 2026) |
+| `A verificar` | **zero** — a classe existe no vocabulário e não é usada por nenhum registro |
+| `mecanismo_causal` vazio | **zero** |
+| Tarefas de **codificação** abertas | **nenhuma** — a última fechou em 04/10 (tarefa 14), e a de nomenclatura em 10/10 (tarefa 19) |
+
+**O banco está construído.** O que falta não é codificar: é **fechar âncora** em seis registros e tomar quatro decisões de campo.
+
+### 50.2 Seis registros não têm página — e nenhuma checagem do ciclo exige que tenham
+
+| Registro | Documento vinculado | Por que não tem página |
+|:--|:--|:--|
+| **PT-03B** | TRF-4, acórdão da ACr 5046512-94 (no corpus) | o `fonte_trecho` é a **nota de imprensa** do TRF-4 — "a 8ª Turma confirmou hoje" —, e essa frase não está no acórdão |
+| **PT-05A** | STF, ADC 43/44/54 (no corpus) | o trecho é da **Agência Brasil**; o acórdão é o documento, não a transcrição |
+| **PT-06C** | STF, HC 193726-AgR (no corpus) | idem — notícia do STF e Agência Brasil |
+| **PT-57** | STF, AP 2668, acórdão da condenação (no corpus) | o trecho é a **ementa do fato** ("publicação do acórdão, out/2025"), não citação de página |
+| **PT-19A** | NetLab-UFRJ, `.md` (no corpus) | **não é PDF**: página não se aplica |
+| **PT-03D** | **nenhum** | ancora só em URL da Agência Brasil, arquivada em `Fontes/09_Arquivamento-web/` (item 18) |
+
+> **Por que nada avisou, e é o mesmo tipo de ponto cego de sempre.** A **checagem 5** confere coerência entre `fonte_pagina` e `fonte_local` — mas começa com `if not pag: continue`. **Ela confere quem cita página; quem não cita, passa.** Não há, em nenhum dos nove passos do ciclo, uma checagem que exija âncora de página para registro cujo documento vinculado é PDF do corpus. **Quatro registros estão nessa situação** (PT-03B, PT-05A, PT-06C, PT-57): o documento está no corpus, é PDF, e a página nunca foi apontada.
+
+**O trabalho é de verificação, não de decisão:** abrir os quatro acórdãos, localizar a folha que sustenta o fato e transcrever dela — o que, nos quatro casos, **troca uma transcrição de imprensa por uma transcrição de fonte primária** e pode promover o registro de `Confirmado` para `Confirmado em fonte primária`. **PT-19A e PT-03D não são desse tipo** e se resolvem por declaração: um não tem página porque não é PDF, o outro porque sua fonte é notícia arquivada.
+
+### 50.3 Os 17 fragmentos que casam só por janela
+
+Medidos a cada ciclo pelo passo 7, com linha de base e *tripwire* desde 10/10 (item 45.3). Eram 45. **Reduzi-los é abrir documento por documento** — verificação, não decisão. É o segundo item do fechamento, e o único cuja contagem o ciclo já vigia.
+
+### 50.4 As quatro decisões de campo que restam, e são suas
+
+| | Decisão | Onde |
+|:--|:--|:--|
+| 1 | **`data_hora` de PT-02** — a ressalva está escrita como nota e a diferença entre data do evento e data do ator está explicada; mudar o campo é seu | 34.7 |
+| 2 | **Telegram e WhatsApp em PT-06** ficam nomeados sem verificação, ou saem do campo? A peça os reporta por citação de segunda mão | 35.5 |
+| 3 | **O esquema de 16 campos ganha campo para autonomia do movimento em relação ao líder?** É o argumento de von Bülow e Abers e toca a pergunta da pesquisa; hoje vive em `fonte_trecho` | 35.4 |
+| 4 | **`marco_teorico` dos metadados cita Benford e Snow (2000), não lido** — e o capítulo de 2019, lido na fonte em 13/10, está no corpus. Entra no lugar, ou ao lado? | 47.5, decisão 2 |
+
+**As três primeiras mudam campo de registro; a quarta muda metadado.** Nenhuma depende de leitura nova: as quatro estão instruídas.
+
+### 50.5 O que NÃO pertence ao fechamento do banco
+
+As quatro tarefas abertas da ordem de ataque. **A 10, a 17 e a 25 são literatura** — serviam à codificação até 04/10 e desde então servem à **redação**: a própria tabela declara que "nenhuma leitura pendente bloqueia registro". **A 16 é a redação.** Nenhuma delas precisa andar para o banco fechar, e é por isso que listá-las primeiro estava errado.
+
+> **O que falta para a tabela espelhar isso:** a ordem de ataque **não tem linha para o fechamento do banco** — porque, quando foi escrita, fechar o banco *era* o conjunto das tarefas de codificação, e todas fecharam. O que sobrou migrou para prosa espalhada (45.3, 34.7, 35.4, 35.5, 47.5) e, hoje, para 50.2. **Proponho uma tarefa nova no ledger — "fechar as âncoras do codebook": as quatro páginas, os 17 fragmentos e as quatro decisões —, e a proposta é sua para aceitar**, porque criar tarefa na sua agenda é decisão de rumo, não contabilidade.

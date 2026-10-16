@@ -37,7 +37,7 @@ Os PDFs estão **no histórico**. O `.git` tem **250 MB** por causa deles, contr
 
 ## 3. Como a pesquisa fica verificável sem ser redistribuída
 
-Pelo **manifesto**: `Fontes/MANIFESTO-CORPUS.csv`, gerado por `scripts/gerar_manifesto_corpus.py`. Para cada uma das 62 peças: caminho, **SHA-256**, páginas, bytes, classe de licença lida no arquivo e **rota de obtenção**. Toda peça tem rota declarada — conferido.
+Pelo **manifesto**: `Fontes/MANIFESTO-CORPUS.csv`, gerado por `scripts/gerar_manifesto_corpus.py`. Para cada uma das **65 peças, medidas em 16/10/2026** — 63 PDFs e **2 âncoras não-PDF**, que entraram em 16/10 quando se descobriu que o `.md` e o `.html` que ancoram registro não eram vigiados por nada (item 62 da agenda): caminho, **SHA-256**, páginas, bytes, classe de licença lida no arquivo e **rota de obtenção**. Toda peça tem rota declarada — conferido.
 
 Quem quiser checar uma âncora obtém a peça pela rota, compara o SHA-256 e abre a página. **A verificabilidade não depende da redistribuição.**
 

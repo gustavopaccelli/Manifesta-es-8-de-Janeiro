@@ -259,6 +259,50 @@ def main():
         falhas.append("{} registro(s) com PDF vinculado e sem página".format(
             len(sem_folha)))
 
+    # LOCALIZADOR ESTRUTURAL RESOLVIDO — acrescentado em 16/10/2026 (item 62),
+    # ao resolver a guarda de PT-19A. Fonte nao paginada se cita por estrutura
+    # interna, e isso nao e desenho novo: a rota do acordao do TSE declara em
+    # PROCEDENCIA, desde 15/10, "citar por estrutura interna (item da ementa,
+    # dispositivo), nao por pagina", e PT-03E pratica desde entao.
+    #
+    # O QUE FALTAVA ERA A RESOLUCAO. `conferir_paginas.py` abre PDF, de modo que
+    # um titulo de secao citado com nome errado -- ou uma secao renomeada no
+    # arquivo depois da citacao -- passaria para sempre. A folha de um PDF e
+    # conferida contra o texto; a secao nao era conferida contra nada. Aqui ela
+    # e: todo `§Titulo` em `fonte_pagina` tem de existir como CABECALHO em algum
+    # dos arquivos nao-PDF vinculados ao registro.
+    #
+    # So o `§` entra. O localizador de PT-03E ("ementa itens 2-4 e 12;
+    # dispositivo") fica de fora de proposito: "itens" nao sao cabecalhos, e
+    # guarda que reprova registro legitimo treina a ignorar guarda.
+    SECAO = re.compile(r"§\s*([^;,|()]+)")
+    nao_resolvidos = []
+    com_secao = 0
+    for ev in eventos:
+        titulos = [t.strip() for t in SECAO.findall(ev.get("fonte_pagina") or "")]
+        if not titulos:
+            continue
+        com_secao += 1
+        textos = []
+        for p in (ev.get("fonte_local") or "").split(";"):
+            p = p.strip()
+            if p and not p.lower().endswith(".pdf") and (RAIZ / p).exists():
+                textos.append((RAIZ / p).read_text(encoding="utf-8"))
+        for t in titulos:
+            md = r"(^|\n)[ \t]*#{1,6}[ \t]*" + re.escape(t) + r"[ \t]*(\n|$)"
+            ht = r"<h[1-6][^>]*>\s*" + re.escape(t) + r"\s*</h[1-6]>"
+            if not any(re.search(md, x) or re.search(ht, x, re.I) for x in textos):
+                nao_resolvidos.append((ev["id"], t))
+    print("  registros com localizador estrutural (§): {}".format(com_secao))
+    for i, t in nao_resolvidos:
+        print("    ! {} cita §{} e esse cabeçalho não existe no arquivo vinculado"
+              .format(i, t))
+    if nao_resolvidos:
+        falhas.append("{} localizador(es) estrutural(is) não resolvido(s)".format(
+            len(nao_resolvidos)))
+    elif com_secao:
+        print("  OK — todo §seção citado existe como cabeçalho na fonte vinculada")
+
     # ------------------------------------------------------------------ 6 ---
     cabecalho(6, "PAGINAÇÃO REAL DOS PDFs (PyPDF2)")
     try:
@@ -482,6 +526,14 @@ def main():
             man = {r["caminho"]: r for r in _csv.DictReader(_fh)}
         em_disco = {p.relative_to(RAIZ).as_posix()
                     for p in (RAIZ / "Fontes").rglob("*.pdf")}
+        # OS ANEXOS NAO-PDF QUE ANCORAM REGISTRO, desde 16/10/2026 (item 62). A
+        # regra vem IMPORTADA do gerador, nao reimplementada aqui: se as duas
+        # divergissem, uma diria "falta no manifesto" e a outra "sobra em
+        # disco", para sempre. Ate 16/10 este conjunto era vazio por construcao
+        # -- a varredura era so de PDF -- e dois arquivos ancoravam registro sem
+        # vigilancia de bytes, um deles declarando na propria nota que a tinha.
+        from gerar_manifesto_corpus import ancoras_nao_pdf
+        em_disco |= set(ancoras_nao_pdf())
         faltam = sorted(set(man) - em_disco)
         sobram = sorted(em_disco - set(man))
         mudou = []

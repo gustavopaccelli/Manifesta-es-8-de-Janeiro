@@ -12,7 +12,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 
 | Frente | Estado |
 |:--|:--|
-| Codebook | **83 sub-eventos × 17 campos** — JSON, CSV e XLSX gerados de uma fonte única, com zero divergências. O campo 17, `autonomia_movimento`, entrou em 16/10/2026 por decisão sua, e o campo **está codificado em 82 dos 83** — a tarefa 27 foi aberta e executada em 16/10, em cinco rodadas; o único vazio é PT-19A, que depende de uma decisão sua (itens 55 a 60) |
+| Codebook | **83 sub-eventos × 17 campos** — JSON, CSV e XLSX gerados de uma fonte única, com zero divergências. O campo 17, `autonomia_movimento`, entrou em 16/10/2026 por decisão sua, e o campo **está codificado nos 83** — a tarefa 27 foi aberta e executada em 16/10, em cinco rodadas, e o último vazio (PT-19A) foi resolvido no mesmo dia **sem afrouxar guarda nenhuma**, por localizador estrutural em vez de folha (itens 55 a 62) |
 | Ancoragem documental | **81 registros** com arquivo local vinculado · 75 com página ou seção atribuída · 0 referências quebradas |
 | Classes de verificação | **61 em fonte primária** · 21 confirmados por outra via · **0 contextuais** (eram 7 até 04/10) · **0 a verificar** · 1 inferência declarada |
 | Caderno de evidências | **49 registros** com página e transcrição literal |
@@ -1708,13 +1708,13 @@ Você delegou a decisão. **Gohn (2019) fecha PARCIALMENTE a tarefa 10, e num n�
 | 14 | ~~Codificar a camada $T_{-1}$ conjuntural~~ — **6 de 7** codificados na fonte com página, em **quatro** rodadas: a camada conjuntural **brasileira inteira**, de junho de 2013 à pandemia. A segunda rodada tirou a descontinuidade 2013→2015 do codebook; a terceira executou os oito encaminhamentos, renomeou dois mecanismos e **tirou de PT-02 a "tolerância policial", que a leitura contradisse**; a quarta fechou PT-06 e **retificou o mecanismo dele** — a infraestrutura informacional antecede a pandemia. Resta contextual só **PT-08**, e a lacuna dele é literatura comparada sobre o Capitólio | 31, 32, 34, 35 | ✅ 04/10 |
 | 15 | ~~Higiene do repositório: licença, remoto, `.backup_pre_lula/`, ponteiros no JSON~~ — executada, e era **mais apuração que decisão**: o que havia para decidir já estava decidido pelo conteúdo do corpus. **27 das 40 peças de literatura não podem ser redistribuídas**, e os PDFs estão no histórico do git — o remoto público deste repositório não existe. Nasceram daí o `MANIFESTO-CORPUS.csv` com SHA-256 e rota de obtenção, a **checagem 8** do ciclo, `exportar_aparato.py` e `LICENCA-E-DISTRIBUICAO.md`. **O que restou não é tarefa, é decisão sua:** a licença da sua obra (46.6), o backup versionado e o folder de 37,4 MB em 6 páginas (46.5) | 46 | ✅ 13/10 |
 | 19 | ~~Decidir o nome de `mecanismo_causal` e aplicar as cobranças da seção 4 do documento 09~~ — **executada em 09-10/10**: você aprovou os quatro nomes (PT-29 **demonstração de viabilidade**; PT-34 **concentração simultânea no conjunto simbólico**; PT-12A **agregação na base e intermediação concentrada**; PT-62 **desmobilização por repressão seletiva** seguida de **migração de arena**) e a atribuição dos quatro testes foi corrigida para **Van Evera (1997) → Bennett (2010) → Collier (2011)**. **As "sete cobranças" eram cinco:** duas linhas da §4 eram *passam* e *correto*, não cobrança, e a de PT-03 saíra em 04/10. Com a quinta, **a tarefa fechou — e esta linha ficou aberta na tabela por cinco dias** | 41, 42, 43, 44 | ✅ 10/10 |
-| 27 | ~~**Codificar `autonomia_movimento` nos registros que faltam**~~ — ✅ **EXECUTADA em 16/10/2026, em cinco rodadas, no mesmo dia em que você a abriu.** O campo fecha em **82 de 83** registros com valor e **1 vazio declarado** — PT-19A, que não ficou por falta de leitura: a peça foi lida, mas a guarda exige `fonte_pagina` e a fonte é `.md` sem paginação, de modo que codificá-lo **exige afrouxar a guarda, e isso é decisão sua** (item 57.4, decisão 1). As rodadas: `T0 Mobilização` (5), `T-1 Operacional` (25), `T-1 Conjuntural` (17), `T0 Execução` (11) e o fechamento (26). **Distribuição, depois do quinto valor que você criou horas mais tarde: 52 `Não se aplica`, 15 `Lido, não documentado`, 9 `Autonomia relativa`, 5 `Autonomia com encorajamento de cima` e 1 `Conduzido de cima`** — e esse um é econômico, não político (o MBVA no envio dos caminhões). **O quinto valor obrigou a reexaminar os 14 que estavam em `Autonomia relativa`**, porque criar valor muda o critério para todos: cinco mudaram, nove ficaram com a razão escrita (item 61). **Sete folhas novas** entraram no codebook pelo caminho, nenhuma achada por busca de página: achadas porque a pergunta mudou. **Três decisões suas seguem abertas** (57.4) e uma delas é a que mantém o último vazio. O resultado e os seus limites estão no item 60. | 55, 56, 57, 58, 59, 60 | ✅ 16/10 |
+| 27 | ~~**Codificar `autonomia_movimento` nos registros que faltam**~~ — ✅ **EXECUTADA em 16/10/2026, em cinco rodadas, no mesmo dia em que você a abriu.** O campo fecha em **83 de 83** registros com valor e **0 vazio**. O último vazio era PT-19A e **você o resolveu no mesmo dia** — e a resolução **não afrouxou guarda nenhuma**: a convenção do localizador estrutural para fonte não paginada já existia no projeto e era praticada por PT-03E desde 15/10, declarada na rota do acórdão do TSE em `PROCEDENCIA`. O registro passou a citar seção, não folha, e **duas guardas novas entraram com ele**, porque a nota que justificava a exceção declarava uma vigilância de SHA-256 que não existia (item 62). As rodadas: `T0 Mobilização` (5), `T-1 Operacional` (25), `T-1 Conjuntural` (17), `T0 Execução` (11) e o fechamento (26). **Distribuição, depois do quinto valor que você criou horas mais tarde: 52 `Não se aplica`, 15 `Lido, não documentado`, 9 `Autonomia relativa`, 5 `Autonomia com encorajamento de cima` e 1 `Conduzido de cima`** — e esse um é econômico, não político (o MBVA no envio dos caminhões). **O quinto valor obrigou a reexaminar os 14 que estavam em `Autonomia relativa`**, porque criar valor muda o critério para todos: cinco mudaram, nove ficaram com a razão escrita (item 61). **Sete folhas novas** entraram no codebook pelo caminho, nenhuma achada por busca de página: achadas porque a pergunta mudou. **Das três decisões de 57.4, duas você resolveu no mesmo dia** — o quinto valor (item 61) e a guarda do último vazio (item 62) — e **segue uma**: o nome `Conduzido de cima`, que hoje junta três *cimas* diferentes. O resultado e os seus limites estão nos itens 60 e 62. | 55, 56, 57, 58, 59, 60 | ✅ 16/10 |
 
 ### Abertas
 
 | # | Tarefa | Item desta agenda | Depende de |
 |:--|:--|:--|:--|
-| 26 | **Fechar as âncoras do codebook** — 🔶 **aprovada por você em 15/10/2026.** O banco está construído: **83 registros**, zero `A verificar`, zero `mecanismo_causal` vazio e **nenhuma tarefa de codificação aberta** entre 10/10 e 16/10/2026 — quando o campo 17 abriu a **27**, que é de codificação e nasce do próprio fechamento (item 55). **(a) ✅ EXECUTADA em 15/10/2026 — as quatro folhas que faltavam:** PT-03B (TRF-4, **p. 30 e 401**), PT-05A (ADC 43/44/54, **p. 2 e 489**), PT-06C (HC 193.726, **p. 185**) e PT-57 (AP 2668, **p. 19**). As seis transcrições saíram da folha e `conferir_paginas` localizou **6 de 6 por inteiro**; `confirmados` subiu de 69 para **73**. Hoje **nenhuma registro vincula PDF do corpus sem citar folha**, e a **checagem 5 passou a exigir** isso — o ponto cego virou guarda, com prova negativa. Restam **2** sem `fonte_pagina`, os dois **declarados**: PT-19A vincula `.md` e PT-03D ancora em notícia arquivada (item 51). **(b) ✅ EXECUTADA em 15/10/2026 — os 17 fragmentos que casavam só por janela foram a 0**, e a queda não veio de afrouxar nada: **4 eram âncora creditada à folha errada** — 3 ao documento errado e 1 à página errada dentro do mesmo documento, contagem corrigida em 15/10/2026 pela medição do item 53, que desfez o "4 ao documento errado" que eu havia relatado (o localizador devolvia a primeira folha com qualquer janela de 40 caracteres, e as peças do corpus se citam entre si), **2 eram transcrição editada dentro das aspas** em PT-39 — uma sigla abreviando o que a CPMI escreve por extenso e uma vírgula acrescentada —, **8 eram marcador de nota de rodapé** colado na prosa pela extração e **3 eram citação atravessando a quebra de página com o aparato da folha no meio**. Cada classe ganhou nome e contagem própria, e a **linha de base do resíduo inexplicado é ZERO**: prova negativa com duas injeções, inclusive a de cauda que escapou em 09/10 (item 52). E a pergunta que a parte (b) deixou aberta está **respondida em 15/10/2026**: nenhuma âncora do codebook depende da ordem de `fonte_pagina` para escolher entre documentos — **234 fragmentos localizados, 17 com mais de uma folha candidata, 15 decididos pelo texto e 2 empatados entre páginas do mesmo documento citado**, o que deixa a âncora certa das duas maneiras. **Zero empate entre documentos**, e o zero virou guarda com prova negativa (item 53). **(c) ABERTAS — seis decisões de campo, suas:** `data_hora` de PT-02 (34.7), Telegram e WhatsApp em PT-06 (35.5), o `marco_teorico` que cita obra não lida (47.5, decisão 2), a data de PT-57, cuja publicação em 22/10/2025 não está no acórdão (item 51), **o nome do mecanismo de PT-07** — hoje *Alinhamento de quadros prévio*, que pela fonte nomeia o *bridging* de PT-06 e não o que a denúncia da PGR documenta em 22/03/2021 (47.5, decisão 1) e **a promoção de classe de PT-03B, PT-05A e PT-06C** — os três ganharam transcrição de fonte primária com folha em 15/10 e seguem `Confirmado`, não `Confirmado em fonte primária`; **PT-06C é o caso mais limpo**, uma só folha cobre data, placar, objeto e fundamento (51.5, decisão 1). E ~~o campo para autonomia do movimento (35.4)~~ — **DECIDIDA E EXECUTADA em 16/10/2026, a primeira das sete a sair:** você mandou o esquema ganhar o campo, e ele ganhou — `autonomia_movimento`, o 17º, com vocabulário controlado de três valores, **PT-06 codificado** a partir de transcrição que o ciclo já conferia e **82 registros por codificar**, que é leitura e não migração. Três guardas novas, com prova negativa (item 55). **Eram cinco até 16/10/2026:** a recontagem que você pediu achou a sexta — o inventário de 50.4 foi copiado à mão e deixou a decisão 1 de 47.5 de fora — e **você mandou trazer a sétima no mesmo dia**, porque `status_classe` é campo de registro como os outros e não pendência solta (item 54). **Nada aqui depende de literatura pendente** | 50 | verificação (a e b); decisão sua (c) |
+| 26 | **Fechar as âncoras do codebook** — 🔶 **aprovada por você em 15/10/2026.** O banco está construído: **83 registros**, zero `A verificar`, zero `mecanismo_causal` vazio e **nenhuma tarefa de codificação aberta** entre 10/10 e 16/10/2026 — quando o campo 17 abriu a **27**, que é de codificação e nasce do próprio fechamento (item 55). **(a) ✅ EXECUTADA em 15/10/2026 — as quatro folhas que faltavam:** PT-03B (TRF-4, **p. 30 e 401**), PT-05A (ADC 43/44/54, **p. 2 e 489**), PT-06C (HC 193.726, **p. 185**) e PT-57 (AP 2668, **p. 19**). As seis transcrições saíram da folha e `conferir_paginas` localizou **6 de 6 por inteiro**; `confirmados` subiu de 69 para **73**. Hoje **nenhuma registro vincula PDF do corpus sem citar folha**, e a **checagem 5 passou a exigir** isso — o ponto cego virou guarda, com prova negativa. Resta **1** sem `fonte_pagina`, **declarado**: PT-03D, que ancora em notícia arquivada (item 51). PT-19A era o outro e **saiu em 16/10**, por localizador estrutural em vez de folha — a mesma convenção que PT-03E já praticava (item 62). **(b) ✅ EXECUTADA em 15/10/2026 — os 17 fragmentos que casavam só por janela foram a 0**, e a queda não veio de afrouxar nada: **4 eram âncora creditada à folha errada** — 3 ao documento errado e 1 à página errada dentro do mesmo documento, contagem corrigida em 15/10/2026 pela medição do item 53, que desfez o "4 ao documento errado" que eu havia relatado (o localizador devolvia a primeira folha com qualquer janela de 40 caracteres, e as peças do corpus se citam entre si), **2 eram transcrição editada dentro das aspas** em PT-39 — uma sigla abreviando o que a CPMI escreve por extenso e uma vírgula acrescentada —, **8 eram marcador de nota de rodapé** colado na prosa pela extração e **3 eram citação atravessando a quebra de página com o aparato da folha no meio**. Cada classe ganhou nome e contagem própria, e a **linha de base do resíduo inexplicado é ZERO**: prova negativa com duas injeções, inclusive a de cauda que escapou em 09/10 (item 52). E a pergunta que a parte (b) deixou aberta está **respondida em 15/10/2026**: nenhuma âncora do codebook depende da ordem de `fonte_pagina` para escolher entre documentos — **234 fragmentos localizados, 17 com mais de uma folha candidata, 15 decididos pelo texto e 2 empatados entre páginas do mesmo documento citado**, o que deixa a âncora certa das duas maneiras. **Zero empate entre documentos**, e o zero virou guarda com prova negativa (item 53). **(c) ABERTAS — seis decisões de campo, suas:** `data_hora` de PT-02 (34.7), Telegram e WhatsApp em PT-06 (35.5), o `marco_teorico` que cita obra não lida (47.5, decisão 2), a data de PT-57, cuja publicação em 22/10/2025 não está no acórdão (item 51), **o nome do mecanismo de PT-07** — hoje *Alinhamento de quadros prévio*, que pela fonte nomeia o *bridging* de PT-06 e não o que a denúncia da PGR documenta em 22/03/2021 (47.5, decisão 1) e **a promoção de classe de PT-03B, PT-05A e PT-06C** — os três ganharam transcrição de fonte primária com folha em 15/10 e seguem `Confirmado`, não `Confirmado em fonte primária`; **PT-06C é o caso mais limpo**, uma só folha cobre data, placar, objeto e fundamento (51.5, decisão 1). E ~~o campo para autonomia do movimento (35.4)~~ — **DECIDIDA E EXECUTADA em 16/10/2026, a primeira das sete a sair:** você mandou o esquema ganhar o campo, e ele ganhou — `autonomia_movimento`, o 17º, com vocabulário controlado de três valores, **PT-06 codificado** a partir de transcrição que o ciclo já conferia e **82 registros por codificar**, que é leitura e não migração. Três guardas novas, com prova negativa (item 55). **Eram cinco até 16/10/2026:** a recontagem que você pediu achou a sexta — o inventário de 50.4 foi copiado à mão e deixou a decisão 1 de 47.5 de fora — e **você mandou trazer a sétima no mesmo dia**, porque `status_classe` é campo de registro como os outros e não pendência solta (item 54). **Nada aqui depende de literatura pendente** | 50 | verificação (a e b); decisão sua (c) |
 | 10 | Acrescentar a literatura brasileira em livro — 🔶 **eixo 14 com 5 arquivos, 1.832 p.**, nenhuma lida. A coleta somou **12 peças** — 7 coletadas, 3 entregues por você e 2 capítulos a mais por encaminhamento —, e o manifesto conta menos arquivos do que isso porque **o volume integral substituiu oito offprints em 08/10** (item 39.1): peça coletada e arquivo no corpus deixaram de ser a mesma unidade. **A tarefa SE DIVIDIU em duas, e metade está fechada** (item 38.8): o mapa bibliográfico brasileiro que as sínteses não tinham está em Gohn (2019), que mapeia 1970-2019 por ciclo nomeando autores e paradigmas; o que resta é **obter os textos que esse mapa nomeia** — o cânone (Sader, Scherer-Warren, Avritzer, Doimo, Telles, Abranches, Nobre, Solano, Messenberg) é de editora comercial, **zero com autoria casada em acesso aberto**, e depende dos seus arquivos | 11.4, 22.4, 37, 38 | seus arquivos |
 | 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **25 pendentes**: 8 lidos, 7 com ficha da 1ª leva, 3 impedidos. Números medidos por `localizar_camada_a.py` a cada geração desta linha, nunca digitados. Das 25, **9 têm arquivo em algum servidor e são barradas no cliente automatizado** e **16 não têm depósito aberto em lugar nenhum**; **8 das 25 estão num só periódico, a *Mobilization*** (item 47.5) | 23, 24, 25 | acesso institucional |
 | 25 | **A literatura do bolsonarismo como mobilização** — 🔶 **coleta fechada em 04/10**: **18 peças, 453 p.** em `Fontes/13_Bolsonarismo-mobilizacao/` — 14 por OpenAlex e **as 4 barradas entregues pelo pesquisador** (item 34.6). **Três foram lidas** e ancoram registro: Araujo e Sales (2022), que tirou PT-05 de contextual; Fernandes e Silva (2021), que tirou a "tolerância policial" de PT-02; e von Bülow e Abers (2024), que **fechou PT-06 e retificou o mecanismo dele**. **Faltam 15, 400 p.** — e **nenhuma bloqueia registro**: a leitura restante serve à redação, não à codificação | 23.2, 31.4, 33, 34, 35 | leitura |
@@ -2116,7 +2116,7 @@ Os PDFs estão **no histórico**: `.git` tem **250 MB** contra **8 MB** de texto
 
 | | |
 |:--|:--|
-| **`Fontes/MANIFESTO-CORPUS.csv`** | 62 peças: caminho, **SHA-256**, páginas, bytes, classe de licença e **rota de obtenção**. Toda peça tem rota — conferido. É o que mantém a pesquisa **verificável sem ser redistribuível** |
+| **`Fontes/MANIFESTO-CORPUS.csv`** | **65 peças, medidas em 16/10/2026** — 63 PDFs e **2 âncoras não-PDF**: caminho, **SHA-256**, páginas, bytes, classe de licença e **rota de obtenção**. Toda peça tem rota — conferido. É o que mantém a pesquisa **verificável sem ser redistribuível**. A linha dizia *62 peças* e estava velha em três; as âncoras não-PDF entraram em 16/10, quando se descobriu que **o `.md` e o `.html` que ancoram registro não eram vigiados por nada** (item 62) |
 | **Checagem 8** de `verificar_integridade.py` | corpus × manifesto, presença e SHA-256. Pega o que **nada pegava**: um PDF que mude de bytes sem mudar de nome. Prova negativa: bit virado, peça removida, peça intrusa — **3 de 3** |
 | **`scripts/exportar_aparato.py`** | monta a árvore publicável: **131 arquivos, 8 MB**, contra 294 MB de binário excluído. Confere o resultado contra o manifesto e **apaga o destino** se vazar peça reservada. **Não cria remoto, não faz commit, não publica** |
 | **`LICENCA-E-DISTRIBUICAO.md`** | o regime, com os fatos apurados e a escolha de licença deixada em aberto |
@@ -2441,12 +2441,14 @@ A checagem 5 abria com `if not pag: continue` — **conferia quem citava página
 
 > **Entrou na 5 em vez de virar checagem 9 de propósito:** é a mesma pergunta — coerência entre `fonte_pagina` e `fonte_local` — vista do outro lado, e o ciclo continua com **oito** checagens, sem renomear a contagem em seis documentos. **E a guarda nasce com lista de dispensa vazia:** os dois registros sem página que restam não vinculam PDF, então não precisam de exceção. Lista de dispensa vazia é a melhor que existe — exceção registrada é dívida que ninguém revisita.
 
-### 51.4 Os dois sem página, declarados
+### 51.4 Os dois sem página, declarados — **hoje é um só**
 
 | Registro | Por que não tem folha |
 |:--|:--|
-| **PT-19A** | o documento é a síntese do NetLab-UFRJ em **`.md`**, não PDF: não há folha a citar, e a âncora é o arquivo inteiro, cujo SHA-256 a checagem 8 vigia |
+| **PT-19A** | o documento é a síntese do NetLab-UFRJ em **`.md`**, não PDF: não há folha a citar, e a âncora é o arquivo inteiro, cujo SHA-256 a checagem 8 vigia — **ver a errata abaixo** |
 | **PT-03D** | **não tem documento**: ancora em notícia da Agência Brasil arquivada contra *link rot* (item 18), que preserva a evidência de que a notícia existiu — não é fonte primária. O ato que ela noticia executa decisão do TRF-4 **já ancorada em PT-03B** |
+
+> **ERRATA, 16/10/2026 — duas, e a segunda é grave.** (1) PT-19A **deixou de ser caso de isenção**: desde 16/10 ele cita `NetLab: inteiro teor — §Achado principal, §Relevância para o codebook, §Ressalvas de uso`, pela mesma convenção de localizador estrutural que PT-03E já praticava — de modo que o único registro sem `fonte_pagina` hoje é PT-03D. (2) **A frase "cujo SHA-256 a checagem 8 vigia" era FALSA quando foi escrita.** O manifesto era gerado varrendo `Fontes/**/*.pdf` e tinha 63 peças, todas PDF: este `.md` — e o `.html` do acórdão do TSE que ancora PT-03E — não eram vigiados por nada. **A garantia que justificava a exceção não existia**, e a asserção sobreviveu um dia inteiro porque ninguém a conferiu. Corrigida em 16/10: o manifesto passou a incluir os arquivos não-PDF que ancoram registro, lidos do `fonte_local` e não de lista à mão (item 62).
 
 ### 51.5 O que isto deixa para você — e é decisão, não trabalho
 
@@ -2629,7 +2631,7 @@ A mesma recontagem levanta uma pergunta que não é de contagem: **a promoção 
 | **Não se aplica** | o registro não codifica ação de movimento — ato de Estado, decisão judicial, medida administrativa |
 | **(vazio)** | **NÃO CODIFICADO** — registro que ainda não foi lido sob esta pergunta |
 
-> **O vazio não é valor, e essa é a decisão de desenho que importa.** Fundir *"não se aplica"* com *"ninguém olhou ainda"* num único vazio tornaria a pendência invisível no dia em que ela nascesse — e invisível é o estado em que as quatro âncoras mal atribuídas passaram dois meses. Por isso o vazio é **contado e impresso** no passo 4 do ciclo: **82 dos 83**. Zero medido é guarda; zero suposto é silêncio.
+> **O vazio não é valor, e essa é a decisão de desenho que importa.** Fundir *"não se aplica"* com *"ninguém olhou ainda"* num único vazio tornaria a pendência invisível no dia em que ela nascesse — e invisível é o estado em que as quatro âncoras mal atribuídas passaram dois meses. Por isso o vazio é **contado e impresso** no passo 4 do ciclo: **82 dos 83** — medição daquele dia; o campo fechou nos **83** em 16/10, com o último vazio resolvido no item 62. Zero medido é guarda; zero suposto é silêncio.
 
 ### 55.2 Um registro codificado, e 82 não — de propósito
 
@@ -2648,7 +2650,7 @@ A mesma recontagem levanta uma pergunta que não é de contagem: **a promoção 
 | Injeção | Resultado |
 |:--|:--|
 | PT-06 com `"Autonomia media"` | reprova — `! valores fora do vocabulário: ['Autonomia media']` |
-| PT-19A codificado `Conduzido de cima` (é um dos dois registros sem `fonte_pagina`) | reprova — `! codificado sem fonte_pagina: ['PT-19A']` |
+| PT-19A codificado `Conduzido de cima` (é um dos dois registros sem `fonte_pagina`) | reprova — `! codificado sem fonte_pagina: ['PT-19A']` · **esta injeção deixou de ser reproduzível em 16/10**, quando PT-19A ganhou localizador; a cobrança foi **reancorada em PT-03D**, hoje o único sem `fonte_pagina`, e reprovou igual: `! codificado sem fonte_pagina: ['PT-03D']` (item 62) |
 | `colunas_codebook` sem o campo 17 | reprova — `! metadados.colunas_codebook divergem dos cabeçalhos do gerador` |
 
 > **A terceira guarda nasceu de um achado da própria migração.** `metadados.colunas_codebook` estava escrito desde 16/08/2026 pela migração de então e **nenhuma checagem o lia** — era esquema declarado que ninguém conferia, a mesma família do `sha1` que declarava identidade já desfeita (item 48) e da menção lida como declaração de licença (47.4). Hoje ele é conferido contra `CABECALHOS`, que é o que o gerador usa de fato. **O campo novo pagou por uma guarda que faltava ao esquema velho.**
@@ -2735,7 +2737,7 @@ PT-27 recebeu o valor na mesma rodada, e **o vazio do campo voltou a significar 
 | **Autonomia relativa** | **5** | PT-12, PT-12A, PT-16, PT-19 e PT-20 |
 | **Conduzido de cima** | **1** | PT-10A — **o primeiro do codebook** |
 | **Lido, não documentado** | **3** | PT-10, PT-15, PT-21 |
-| **(sem valor)** | **1** | PT-19A, bloqueado pela guarda — ver 57.4 |
+| **(sem valor)** | **1** | PT-19A, bloqueado pela guarda — ver 57.4; **desbloqueado em 16/10, item 62** |
 
 **O que a camada entregou, e é resultado de pesquisa, não de contagem:** nos registros onde a pergunta tem objeto, **a autonomia predomina — e ela não é ausência de organização.** O financiamento é *crowdfunding* com nós concentradores, a convocação é por influenciador e por difusão em grupos, a coordenação tática é planejada pelos próprios manifestantes, e o acampamento tem carro de som próprio para coordenar. **O único `Conduzido de cima` é econômico, não político:** o MBVA, grupo informal de empresários do agronegócio, que a Abin aponta como responsável pelo envio de 272 caminhões e pelos bloqueios.
 
@@ -2753,7 +2755,9 @@ PT-27 recebeu o valor na mesma rodada, e **o vazio do campo voltou a significar 
 
 ### 57.4 Três coisas que a rodada deixou para você
 
-1. **PT-19A está bloqueado pela guarda, e a guarda está certa.** O registro ancora no `.md` do NetLab — transcrição de página web, sem paginação, a exceção declarada do item 51 —, e o valor exige `fonte_pagina`. **Li a peça:** documenta 185 anúncios golpistas **pagos** nas plataformas da Meta, com os **anunciantes não identificados**, de modo que ela abre a pergunta do financiamento sem respondê-la. A decisão é: **a guarda passa a admitir `fonte_local` sem folha quando a fonte não é paginada, ou o registro fica vazio?** Não mexi: afrouxar guarda é decisão sua, e esta guarda tem um dia de vida.
+1. ~~**PT-19A está bloqueado pela guarda, e a guarda está certa.**~~ **RESOLVIDA em 16/10/2026, a seu pedido — e a resposta foi NÃO AFROUXAR** (item 62): a convenção que desbloqueia o registro já existia e era praticada por PT-03E. O texto abaixo é o da proposta.
+
+   **PT-19A está bloqueado pela guarda, e a guarda está certa.** O registro ancora no `.md` do NetLab — transcrição de página web, sem paginação, a exceção declarada do item 51 —, e o valor exige `fonte_pagina`. **Li a peça:** documenta 185 anúncios golpistas **pagos** nas plataformas da Meta, com os **anunciantes não identificados**, de modo que ela abre a pergunta do financiamento sem respondê-la. A decisão é: **a guarda passa a admitir `fonte_local` sem folha quando a fonte não é paginada, ou o registro fica vazio?** Não mexi: afrouxar guarda é decisão sua, e esta guarda tem um dia de vida.
 2. **`Conduzido de cima` junta dois *cimas* distintos.** O do corpus é **setor patronal organizado** — dirigentes do agronegócio —, não o líder populista de que fala von Bülow e Abers, que é o *cima* que o campo nasceu para medir. O nome do valor não separa os dois. Proponho, se quiser separar: `Conduzido por liderança política` e `Conduzido por financiador organizado`. **Não renomeei.**
 3. ~~**PT-12 justificaria um quinto valor.**~~ **CRIADO em 16/10/2026, a seu pedido** — `Autonomia com encorajamento de cima`, com reexame dos 14 registros afetados (item 61). O texto abaixo é o da proposta.
 
@@ -2862,7 +2866,7 @@ Li as oito folhas da execução no relatório da CPMI — **657, 667, 670, 671, 
 
 ---
 
-## 60. O campo fechado: 82 de 83, em cinco rodadas e um dia — 🔶 16/10/2026
+## 60. O campo fechado: 82 de 83, em cinco rodadas e um dia — 🔶 16/10/2026 · *e os 83 vieram no mesmo dia: item 62*
 
 **Encaminhamento:** *"Feche o campo."*
 
@@ -2874,7 +2878,7 @@ Li as oito folhas da execução no relatório da CPMI — **657, 667, 670, 671, 
 | **Conduzido de cima** | **1** | PT-10A — e é **econômico**, não político |
 | **(vazio) declarado** | **1** | PT-19A — ver 60.3 |
 
-> **Esta tabela durou poucas horas, e a correção é do mesmo dia.** Você criou o **quinto valor** depois do fechamento, e com ele **cinco dos 14 `Autonomia relativa` mudaram**: a distribuição válida está no **item 61**. O que não mudou foi o total — 82 de 83 com valor —, nem a leitura de 60.1: onde a fonte documenta a relação, ela documenta autonomia, agora separando a autonomia simples da autonomia encorajada.
+> **Esta tabela durou poucas horas, e a correção é do mesmo dia.** Você criou o **quinto valor** depois do fechamento, e com ele **cinco dos 14 `Autonomia relativa` mudaram**: a distribuição válida está no **item 61**. O que não mudou foi o total — 82 de 83 com valor — **até você resolver a guarda do PT-19A, horas depois: o campo fechou nos 83, e `Lido, não documentado` foi a 16 (item 62)** —, nem a leitura de 60.1: onde a fonte documenta a relação, ela documenta autonomia, agora separando a autonomia simples da autonomia encorajada.
 
 **Cinco rodadas, num dia:** `T0 Mobilização` (5), `T-1 Operacional` (25), `T-1 Conjuntural` (17), `T0 Execução` (11) e o fechamento (26).
 
@@ -2902,7 +2906,7 @@ Li as oito folhas da execução no relatório da CPMI — **657, 667, 670, 671, 
 
 **PT-19A é o único dos 83 sem valor, e não por falta de leitura.** A peça foi lida na segunda rodada: 185 anúncios golpistas **pagos** nas plataformas da Meta, **anunciantes não identificados**. A guarda da checagem 4 exige `fonte_pagina` para todo valor que não seja *Não se aplica*, e a fonte é `.md` sem paginação — a exceção declarada do item 51.
 
-**Codificá-lo exige afrouxar a guarda, e afrouxar guarda é decisão sua** (57.4, decisão 1). Enquanto não houver decisão, **o campo fica fechado em 82 de 83 e o vazio tem razão escrita na `nota_auditoria` do registro.**
+~~**Codificá-lo exige afrouxar a guarda, e afrouxar guarda é decisão sua**~~ (57.4, decisão 1). **E a premissa estava errada: não exigia.** Você mandou resolver a guarda horas depois, e a resolução não afrouxou nada — a convenção do localizador estrutural já existia no projeto. **O campo fechou nos 83 de 83** (item 62).
 
 ### 60.4 O que o campo custou e o que deixou
 
@@ -2959,8 +2963,105 @@ Então esta rodada reexaminou **os quatorze** registros que estavam em `Autonomi
 | **Conduzido de cima** | **1** |
 | (vazio) declarado — PT-19A | 1 |
 
+> **E esta linha também durou horas:** PT-19A foi resolvido no mesmo 16/10, sem afrouxar guarda, e o campo fechou nos **83**, com `Lido, não documentado` em **16** (item 62).
+
 **Prova negativa, duas injeções:** o valor novo em PT-19A, que não tem folha, reprova com `! codificado sem fonte_pagina`; e o nome truncado — `Autonomia com encorajamento` — reprova com `! valores fora do vocabulário`. **A guarda cobre o valor novo exatamente como os outros.**
 
 **O que isto muda na leitura do campo:** o placar deixa de ser *14 a 1* e passa a ser **9 de autonomia simples, 5 de autonomia encorajada e 1 de condução** — e é uma leitura melhor, porque **a autonomia encorajada era o caso mais interessante do corpus e estava escondido dentro do valor mais forte.** Dos cinco, três são de liderança política (PT-12, PT-16, PT-05), um de agente externo nomeado (PT-08) e um de elite midiática e parlamentar (PT-50A).
 
-**Restam duas decisões suas** (57.4): a guarda que mantém PT-19A vazio e o nome `Conduzido de cima`, que junta setor patronal e líder político — e que o valor novo torna **mais** urgente, porque agora há três rótulos usando a palavra *cima* para coisas diferentes.
+~~**Restam duas decisões suas**~~ **— restou uma** (57.4): a guarda que mantinha PT-19A vazio foi resolvida horas depois, no item 62, e **segue aberto o nome `Conduzido de cima`**, que junta setor patronal e líder político — e que o valor novo torna **mais** urgente, porque agora há três rótulos usando a palavra *cima* para coisas diferentes.
+
+---
+
+## 62. A guarda do PT-19A: resolvida sem ser afrouxada — 🔶 16/10/2026
+
+**Encaminhamento:** *"Resolva a guarda do PT-19A."*
+
+A decisão 1 do item 57.4 perguntava se a checagem 4 passaria a **admitir `fonte_local` sem folha** para fonte não paginada. **Respondi que não, porque a pergunta tinha premissa falsa:** a convenção que desbloqueia o registro já existia no projeto, e era praticada havia um dia.
+
+### 62.1 `fonte_pagina` nunca foi só *"CÓDIGO: n, m"* — e a casa já sabia disso
+
+Antes de desenhar exceção, medi o campo — **e a primeira cifra que escrevi aqui estava errada.** Eu havia contado *"26 registros fora do formato numérico"*, por uma expressão regular grosseira que reprovava código com barra e com acento (`ADC 43/44/54`, `Manchetômetro`). Medido como se deve, pelo `pares()` do próprio conferidor:
+
+| | |
+|:--|--:|
+| registros com `fonte_pagina` | 82 |
+| com ao menos um segmento **sem numeral** | **5** — PT-06B, PT-13, PT-19A, PT-38, PT-56 |
+| dos quais **nenhuma** página é extraível | 4 — PT-06B, PT-19A, PT-38, PT-56 |
+
+As formas em uso: `HC 164.493: inteiro teor`, `AP 2668: inteiro teor`, `Livro STF 2023: inteiro teor`, `PGR: peça integral` — e, em PT-03E, `TSE RCand: ementa itens 2-4 e 12; dispositivo`, **ancorado em `.html` sem paginação.**
+
+**E o caso de PT-03E não é acidente: está declarado por escrito.** A rota daquela peça em `PROCEDENCIA`, registrada em 15/10/2026, diz:
+
+> *"SERVIDO EM HTML, não em PDF: o parâmetro `extensaoArquivo` do endpoint só muda o Content-Type. **Citar por estrutura interna (item da ementa, dispositivo), não por página.**"*
+
+Logo **PT-19A nunca esteve bloqueado pela guarda.** Estava bloqueado por um `fonte_pagina` **vazio** num caso em que o projeto já tinha convenção para preenchê-lo. A guarda não precisava de exceção; o registro precisava de localizador.
+
+| | |
+|:--|:--|
+| **antes** | `fonte_pagina` vazio · `autonomia_movimento` vazio · bloqueado |
+| **agora** | `NetLab: inteiro teor — §Achado principal, §Relevância para o codebook, §Ressalvas de uso` · `Lido, não documentado` |
+
+**O valor sai da leitura, que já estava feita e registrada desde a segunda rodada.** A peça tem 51 linhas e sete seções, e eu as li: documenta **185 anúncios golpistas pagos** nas plataformas da Meta e **não identifica os anunciantes**. A §Relevância para o codebook diz que *"um anúncio tem anunciante, valor pago e decisão de moderação"* — isto é, **declara documentável exatamente aquilo que não documenta**. A pergunta da autonomia **tem objeto** aqui (circulação paga que promove a mobilização é ação do lado do movimento, e se foi paga de cima é a própria pergunta) e a fonte não a responde. É `Lido, não documentado` no sentido mais estrito do valor.
+
+### 62.2 A nota que justificava a exceção afirmava uma vigilância que não existia
+
+Esta é a parte que importa mais do que o registro desbloqueado. A `nota_auditoria` de PT-19A dizia, desde 15/10:
+
+> *"A âncora é o arquivo inteiro, **cujo SHA-256 a checagem 8 do ciclo vigia**. Não é lacuna a preencher."*
+
+**Era falso.** `gerar_manifesto_corpus.py` gerava o manifesto varrendo `Fontes/**/*.pdf`, e o manifesto tinha **63 peças, todas PDF**. Os dois arquivos não-PDF que ancoram registro — o `.md` do NetLab (PT-19A) e o `.html` do acórdão do TSE (PT-03E) — **não eram vigiados por nada.**
+
+| | |
+|:--|--:|
+| peças no manifesto, antes | 63 |
+| arquivos não-PDF em `fonte_local` | 2 |
+| desses, vigiados por SHA-256 | **0** |
+
+**E a asserção falsa era justamente a que sustentava a isenção.** O argumento para dispensar folha era "a âncora é o arquivo inteiro, e o arquivo inteiro está vigiado" — com a segunda metade inexistente. É o modo de falha batizado do projeto, **dentro da nota que se apoiava nele**, e ninguém o teria achado sem a pergunta de hoje: foi preciso ir *usar* a garantia para descobrir que ela não estava lá.
+
+**Corrigido:** o gerador passou a incluir os arquivos não-PDF que ancoram registro, e o conjunto sai do **`fonte_local` do codebook, não de lista à mão** — anexo novo entra no primeiro ciclo, ou a checagem 8 acusa. O manifesto tem **65 peças**. LEIA-ME, bibliografia e `.docx` de teoria ficam de fora de propósito: não ancoram registro nenhum, e vigiar byte deles seria ruído.
+
+> **Uma cifra se desencontrou de outra, e isso aqui é defeito.** O manifesto agora conta **24 documentais**, e a linha de base da checagem 6 continua **22 documentais / 6.951 p.** — porque a checagem 6 varre o disco **só por PDF**. Duas medidas de nome parecido e recorte diferente é exatamente *a cifra correta no referente errado*, então a impressão do gerador passou a **dizer o recorte na própria linha**.
+
+### 62.3 Localizador declarado não é localizador resolvido
+
+Com o `§` entrando no campo, apareceu um segundo buraco. `conferir_paginas.py` — a única checagem que lê a fonte — **abre PDF**. Uma folha de PDF é conferida contra o texto da folha; **uma seção não era conferida contra nada.** Seção citada com nome errado, ou renomeada no arquivo depois da citação, passaria para sempre.
+
+A checagem 5 passou a **resolver** o localizador: todo `§Título` em `fonte_pagina` tem de existir **como cabeçalho** (markdown ou HTML, qualquer nível) em algum dos arquivos não-PDF vinculados ao registro.
+
+**Só o `§` entra, e isso é deliberado.** O localizador de PT-03E — *"ementa itens 2-4 e 12; dispositivo"* — fica de fora: "itens" não são cabeçalhos, e guarda que reprova registro legítimo **treina a ignorar guarda**.
+
+### 62.4 Quatro provas negativas, e uma delas reprovou a prova
+
+| Injeção | Resultado |
+|:--|:--|
+| `§Achado principal` → `§Achado principais` | reprova — `! PT-19A cita §Achado principais e esse cabeçalho não existe no arquivo vinculado` **e** `X sincronia entre formatos (1 células)` |
+| âncora não-PDF removida do manifesto | reprova — `64 peça(s) no manifesto, 65 em disco` · `X em disco e fora do manifesto` |
+| SHA-256 da âncora não-PDF trocado por zeros | reprova — `X SHA-256 DIVERGENTE ... toda âncora que dependa desta peça está sob suspeita` |
+| valor afirmativo em PT-03D, sem `fonte_pagina` | reprova — `! codificado sem fonte_pagina: ['PT-03D']` |
+
+**A primeira dessas provas falhou na primeira tentativa, e a culpa era da prova.** Eu injetei por `texto.replace("§Achado principal", "§Achado principais", 1)` e **o ciclo passou**. A razão não era a guarda: `metadados` vem antes de `eventos` no arquivo, e a injeção caiu dentro de uma string de `revisoes` — que nenhuma checagem lê. **O ciclo passou com razão, e o "passou" não media nada.** É *a operação certa no referente errado*, reaparecendo dentro do instrumento que existe para pegá-lo. Prova negativa tem de mutar o **campo**, pelo parser, nunca o texto do arquivo.
+
+**E a quarta prova existe porque a terceira envelheceu.** O item 55 documentou a cobrança de folha injetando valor em PT-19A, *"um dos dois registros sem `fonte_pagina`"*. Resolvida a guarda, **PT-19A tem localizador e aquela injeção deixou de ser reproduzível** — guarda cuja prova não roda mais é guarda sem prova. A cobrança foi reancorada em **PT-03D**, hoje o único dos 83 sem `fonte_pagina`, e reprovou igual.
+
+### 62.5 O campo, fechado nos 83
+
+| | |
+|:--|--:|
+| Não se aplica | 52 |
+| **Lido, não documentado** | **16** |
+| Autonomia relativa | 9 |
+| Autonomia com encorajamento de cima | 5 |
+| Conduzido de cima | 1 |
+| (vazio) | **0** |
+
+**O ciclo passa em nove passos, com `confirmados 73 | falhas 0 | indeterminados 5` — os mesmos de antes.** PT-19A não entrou na conferência de páginas e não devia: `pares()` não extrai numeral do localizador novo, de modo que o registro não é candidato — como PT-38 e PT-56, que citam *inteiro teor*. **Conferi isso antes de escrever o campo**, porque um numeral no localizador (eu havia pensado em `inteiro teor (51 linhas)`) teria mandado o registro para a fila de PDFs e mexido na linha de base dos indeterminados.
+
+**O que isto muda na leitura — e muda uma coisa, pequena e vale dizer.** Dos **31** registros em que a pergunta tem objeto, agora são **15 com resposta documentada contra 16 silenciosos**: antes de PT-19A era 15 a 15, e **o silêncio passou a ser maioria, por um.** Não é achado sobre o mundo e não deve ser escrito como tal — é mais uma medida do corpus, no sentido do item 60.1. Mas desfaz a possibilidade de escrever *"na maioria dos casos em que a pergunta cabe, as fontes respondem"*, que o empate ainda tolerava e hoje seria falso.
+
+### 62.6 O que fica aberto
+
+**Uma decisão de 57.4, e é a do nome:** `Conduzido de cima` junta hoje **três *cimas* diferentes** — setor patronal organizado (PT-10A), liderança política (PT-12, PT-16) e elite midiática e parlamentar (PT-50A). A proposta na mesa é `Conduzido por financiador organizado` para PT-10A. **Não renomeei.**
+
+**E a medição de 62.1 levantou um risco latente que é decisão sua, não tarefa minha.** O localizador de PT-03E é `TSE RCand: ementa itens 2-4 e 12; dispositivo`, e **`pares()` o lê como as páginas 2, 3, 4 e 12** — porque extrai todo numeral depois dos dois-pontos. Hoje isso não produz erro nenhum: o que salva é o teste seguinte, *"o documento citado não é PDF"*, que manda o registro para `indeterminados`. **Mas o que o salva é a extensão do arquivo, não o localizador.** Se aquele acórdão algum dia entrar no corpus **também em PDF** — e a rota declara que o endpoint serve o mesmo conteúdo —, PT-03E passaria a ser conferido contra as **folhas** 2, 3, 4 e 12 de um acórdão cujas transcrições estão em outro lugar, e um casamento acidental ali seria *a cifra correta no referente errado* com aprovação do ciclo. Há duas saídas e a escolha é sua: **reescrever o localizador de PT-03E em `§`**, que a checagem 5 agora resolve, ou **ensinar `pares()` a não extrair numeral de segmento que diga `item`, `ementa` ou `dispositivo`**. A primeira é menor e usa guarda que já existe; a segunda protege quem escrever o próximo. **Não mexi em nenhuma das duas.**

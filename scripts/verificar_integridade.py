@@ -43,7 +43,8 @@ CLASSES = {"Confirmado em fonte primária", "Confirmado",
 # pesquisador (decisão 3 da tarefa 26(c), aberta no item 35.4). O VAZIO não
 # está aqui de propósito: ele não é valor, é a declaração de que o registro
 # ainda não foi lido sob esta pergunta -- 82 dos 83 hoje.
-AUTONOMIA = {"Autonomia relativa", "Conduzido de cima", "Não se aplica",
+AUTONOMIA = {"Autonomia relativa", "Autonomia com encorajamento de cima",
+             "Conduzido de cima", "Não se aplica",
              "Lido, não documentado"}
 
 # Eixos que NÃO entram na contagem de fonte documental. O eixo 05 está fora desde

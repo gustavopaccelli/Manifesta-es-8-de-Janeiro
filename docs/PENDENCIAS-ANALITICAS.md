@@ -1708,7 +1708,7 @@ Você delegou a decisão. **Gohn (2019) fecha PARCIALMENTE a tarefa 10, e num n�
 | 14 | ~~Codificar a camada $T_{-1}$ conjuntural~~ — **6 de 7** codificados na fonte com página, em **quatro** rodadas: a camada conjuntural **brasileira inteira**, de junho de 2013 à pandemia. A segunda rodada tirou a descontinuidade 2013→2015 do codebook; a terceira executou os oito encaminhamentos, renomeou dois mecanismos e **tirou de PT-02 a "tolerância policial", que a leitura contradisse**; a quarta fechou PT-06 e **retificou o mecanismo dele** — a infraestrutura informacional antecede a pandemia. Resta contextual só **PT-08**, e a lacuna dele é literatura comparada sobre o Capitólio | 31, 32, 34, 35 | ✅ 04/10 |
 | 15 | ~~Higiene do repositório: licença, remoto, `.backup_pre_lula/`, ponteiros no JSON~~ — executada, e era **mais apuração que decisão**: o que havia para decidir já estava decidido pelo conteúdo do corpus. **27 das 40 peças de literatura não podem ser redistribuídas**, e os PDFs estão no histórico do git — o remoto público deste repositório não existe. Nasceram daí o `MANIFESTO-CORPUS.csv` com SHA-256 e rota de obtenção, a **checagem 8** do ciclo, `exportar_aparato.py` e `LICENCA-E-DISTRIBUICAO.md`. **O que restou não é tarefa, é decisão sua:** a licença da sua obra (46.6), o backup versionado e o folder de 37,4 MB em 6 páginas (46.5) | 46 | ✅ 13/10 |
 | 19 | ~~Decidir o nome de `mecanismo_causal` e aplicar as cobranças da seção 4 do documento 09~~ — **executada em 09-10/10**: você aprovou os quatro nomes (PT-29 **demonstração de viabilidade**; PT-34 **concentração simultânea no conjunto simbólico**; PT-12A **agregação na base e intermediação concentrada**; PT-62 **desmobilização por repressão seletiva** seguida de **migração de arena**) e a atribuição dos quatro testes foi corrigida para **Van Evera (1997) → Bennett (2010) → Collier (2011)**. **As "sete cobranças" eram cinco:** duas linhas da §4 eram *passam* e *correto*, não cobrança, e a de PT-03 saíra em 04/10. Com a quinta, **a tarefa fechou — e esta linha ficou aberta na tabela por cinco dias** | 41, 42, 43, 44 | ✅ 10/10 |
-| 27 | ~~**Codificar `autonomia_movimento` nos registros que faltam**~~ — ✅ **EXECUTADA em 16/10/2026, em cinco rodadas, no mesmo dia em que você a abriu.** O campo fecha em **82 de 83** registros com valor e **1 vazio declarado** — PT-19A, que não ficou por falta de leitura: a peça foi lida, mas a guarda exige `fonte_pagina` e a fonte é `.md` sem paginação, de modo que codificá-lo **exige afrouxar a guarda, e isso é decisão sua** (item 57.4, decisão 1). As rodadas: `T0 Mobilização` (5), `T-1 Operacional` (25), `T-1 Conjuntural` (17), `T0 Execução` (11) e o fechamento (26). **Distribuição: 52 `Não se aplica`, 15 `Lido, não documentado`, 14 `Autonomia relativa` e 1 `Conduzido de cima`** — e esse um é econômico, não político (o MBVA no envio dos caminhões). **Sete folhas novas** entraram no codebook pelo caminho, nenhuma achada por busca de página: achadas porque a pergunta mudou. **Três decisões suas seguem abertas** (57.4) e uma delas é a que mantém o último vazio. O resultado e os seus limites estão no item 60. | 55, 56, 57, 58, 59, 60 | ✅ 16/10 |
+| 27 | ~~**Codificar `autonomia_movimento` nos registros que faltam**~~ — ✅ **EXECUTADA em 16/10/2026, em cinco rodadas, no mesmo dia em que você a abriu.** O campo fecha em **82 de 83** registros com valor e **1 vazio declarado** — PT-19A, que não ficou por falta de leitura: a peça foi lida, mas a guarda exige `fonte_pagina` e a fonte é `.md` sem paginação, de modo que codificá-lo **exige afrouxar a guarda, e isso é decisão sua** (item 57.4, decisão 1). As rodadas: `T0 Mobilização` (5), `T-1 Operacional` (25), `T-1 Conjuntural` (17), `T0 Execução` (11) e o fechamento (26). **Distribuição, depois do quinto valor que você criou horas mais tarde: 52 `Não se aplica`, 15 `Lido, não documentado`, 9 `Autonomia relativa`, 5 `Autonomia com encorajamento de cima` e 1 `Conduzido de cima`** — e esse um é econômico, não político (o MBVA no envio dos caminhões). **O quinto valor obrigou a reexaminar os 14 que estavam em `Autonomia relativa`**, porque criar valor muda o critério para todos: cinco mudaram, nove ficaram com a razão escrita (item 61). **Sete folhas novas** entraram no codebook pelo caminho, nenhuma achada por busca de página: achadas porque a pergunta mudou. **Três decisões suas seguem abertas** (57.4) e uma delas é a que mantém o último vazio. O resultado e os seus limites estão no item 60. | 55, 56, 57, 58, 59, 60 | ✅ 16/10 |
 
 ### Abertas
 
@@ -2755,7 +2755,9 @@ PT-27 recebeu o valor na mesma rodada, e **o vazio do campo voltou a significar 
 
 1. **PT-19A está bloqueado pela guarda, e a guarda está certa.** O registro ancora no `.md` do NetLab — transcrição de página web, sem paginação, a exceção declarada do item 51 —, e o valor exige `fonte_pagina`. **Li a peça:** documenta 185 anúncios golpistas **pagos** nas plataformas da Meta, com os **anunciantes não identificados**, de modo que ela abre a pergunta do financiamento sem respondê-la. A decisão é: **a guarda passa a admitir `fonte_local` sem folha quando a fonte não é paginada, ou o registro fica vazio?** Não mexi: afrouxar guarda é decisão sua, e esta guarda tem um dia de vida.
 2. **`Conduzido de cima` junta dois *cimas* distintos.** O do corpus é **setor patronal organizado** — dirigentes do agronegócio —, não o líder populista de que fala von Bülow e Abers, que é o *cima* que o campo nasceu para medir. O nome do valor não separa os dois. Proponho, se quiser separar: `Conduzido por liderança política` e `Conduzido por financiador organizado`. **Não renomeei.**
-3. **PT-12 justificaria um quinto valor.** É o registro em que as duas direções estão na mesma seção: o frame antecede o líder em quase uma década (Araujo e Sales, 2022) e o financiamento é coletivo sem coordenação central (PT-12A), **mas** a seção 5.5 da CPMI abre com Braga Netto e Valdemar Costa Neto pedindo permanência, e PT-11 traz o líder licenciando a ocupação de praça com *"Fiquem à vontade"*. Codifiquei `Autonomia relativa`, que é o que o vocabulário tem para *encorajado de cima e não comandado de cima* — e registrei a contraevidência na nota. **Um quinto valor — coordenação e autonomia coexistindo — é seu para criar.**
+3. ~~**PT-12 justificaria um quinto valor.**~~ **CRIADO em 16/10/2026, a seu pedido** — `Autonomia com encorajamento de cima`, com reexame dos 14 registros afetados (item 61). O texto abaixo é o da proposta.
+
+   **PT-12 justificaria um quinto valor.** É o registro em que as duas direções estão na mesma seção: o frame antecede o líder em quase uma década (Araujo e Sales, 2022) e o financiamento é coletivo sem coordenação central (PT-12A), **mas** a seção 5.5 da CPMI abre com Braga Netto e Valdemar Costa Neto pedindo permanência, e PT-11 traz o líder licenciando a ocupação de praça com *"Fiquem à vontade"*. Codifiquei `Autonomia relativa`, que é o que o vocabulário tem para *encorajado de cima e não comandado de cima* — e registrei a contraevidência na nota. **Um quinto valor — coordenação e autonomia coexistindo — é seu para criar.**
 
 ### 57.5 Onde está o campo
 
@@ -2872,6 +2874,8 @@ Li as oito folhas da execução no relatório da CPMI — **657, 667, 670, 671, 
 | **Conduzido de cima** | **1** | PT-10A — e é **econômico**, não político |
 | **(vazio) declarado** | **1** | PT-19A — ver 60.3 |
 
+> **Esta tabela durou poucas horas, e a correção é do mesmo dia.** Você criou o **quinto valor** depois do fechamento, e com ele **cinco dos 14 `Autonomia relativa` mudaram**: a distribuição válida está no **item 61**. O que não mudou foi o total — 82 de 83 com valor —, nem a leitura de 60.1: onde a fonte documenta a relação, ela documenta autonomia, agora separando a autonomia simples da autonomia encorajada.
+
 **Cinco rodadas, num dia:** `T0 Mobilização` (5), `T-1 Operacional` (25), `T-1 Conjuntural` (17), `T0 Execução` (11) e o fechamento (26).
 
 ### 60.1 O que o campo mostra, e a forma importa mais que o placar
@@ -2905,3 +2909,58 @@ Li as oito folhas da execução no relatório da CPMI — **657, 667, 670, 671, 
 **Sete folhas novas entraram no codebook** — CPMI 644 (PT-24), 615 e 621 (PT-19), 584 (PT-16), 999 (PT-10), 25 (PT-15), 576 (PT-20) —, **nenhuma achada por busca de página.** Todas apareceram porque a pergunta mudou: um corpus ancorado para responder *o que aconteceu* devolve folha nova quando se lhe pergunta *quem dirigia*.
 
 **E o vocabulário mudou duas vezes no primeiro dia de uso:** nasceu com três valores, ganhou o quarto em PT-27 — *Lido, não documentado*, que acabou levando **15 registros**, 18% do codebook — e **dois casos pedem um quinto** (PT-12 e PT-05, coordenação e autonomia coexistindo). **As três decisões de 57.4 seguem suas**, e a terceira é esta.
+
+---
+
+## 61. O quinto valor, e o reexame que ele obrigou — 🔶 16/10/2026
+
+**Encaminhamento:** *"Crie o quinto valor."*
+
+**O valor:** `Autonomia com encorajamento de cima` — *a fonte documenta, no mesmo registro, iniciativa ou organização da base **E** um ato determinado de encorajamento, licenciamento, delegação ou instrumentalização por liderança ou elite nomeada, sem documentar comando.* Exige `fonte_pagina`, como todos os valores afirmativos.
+
+### 61.1 Criar valor muda o critério para todos — e o precedente estava escrito
+
+**Não bastava aplicá-lo aos dois casos que o pediram.** O item 34.7, de 04/10, já havia formulado a regra para outra decisão: promover PT-06 era *"reversível em um comando, mas muda o critério para todos"*, e **PT-08 precisaria ser reexaminado junto**. É literalmente o que aconteceu agora: **PT-08 foi um dos cinco que mudaram.**
+
+Então esta rodada reexaminou **os quatorze** registros que estavam em `Autonomia relativa`, sob um teste declarado para ser revisável:
+
+| | |
+|:--|:--|
+| **(a)** | as folhas **do próprio registro** documentam iniciativa ou organização da base |
+| **(b)** | e um **ato determinado** de encorajamento, licenciamento, delegação ou instrumentalização por liderança ou elite **nomeada**, dirigido àquela mobilização |
+| | faltando **(b)**, fica `Autonomia relativa`; havendo **direção**, é `Conduzido de cima` |
+
+### 61.2 Os cinco que mudaram, com o ato de cima citado da folha do registro
+
+| Registro | O ato de cima, na folha do próprio registro |
+|:--|:--|
+| **PT-12** | *"Vocês não percam a fé"* (Braga Netto, 19/11/2022) e *"Continuem na luta, o Bolsonaro não vai decepcionar ninguém"* (Valdemar Costa Neto, 16/12/2022) — CPMI, folha 524, que abre a seção dos acampamentos |
+| **PT-05** | as mobilizações *"foram instrumentalizadas por segmentos autoritários para pleitear a intervenção militar"* (Araujo e Sales, 2022, p. 31 impressa) |
+| **PT-08** | *"Both events occurred with the encouragement of Steve Bannon and similar agents of chaos"* (Castañeda e Jenks, 2023, PDF p. 10) |
+| **PT-16** | **delegação:** *"Quem decide o meu futuro, para onde eu vou são vocês"* (Bolsonaro, 09/11/2022), na folha que a CPMI intitula *A radicalização do movimento* |
+| **PT-50A** | *"especialmente figuras de políticos e mídia alinhados ao bolsonarismo utilizaram-se do fato"* (Manchetômetro, p. 14), depois de a narrativa nascer na rede às 17h40 |
+
+> **PT-16 é a reclassificação menos óbvia, e vale explicitar por quê.** *"Quem decide o meu futuro... são vocês"* é **o oposto de uma ordem** — é o líder abdicando de decidir. Mas é **ato determinado de liderança dirigido à base**, numa folha cujo título é a radicalização do movimento, e o teste (b) pergunta por ato, não por ordem. **Delegação alimenta a mobilização sem comandá-la**, e é exatamente essa a zona que o valor novo existe para nomear. Se você quiser que delegação fique fora do critério, é um comando — e aí PT-16 volta a `Autonomia relativa`.
+
+### 61.3 Os nove que ficaram, e a razão de cada um está na nota
+
+**Reexame não é omissão:** os nove receberam nota com o motivo. Em resumo — **PT-01** (não há hierarquia de quem ser autônomo), **PT-02** (a convocação é de organizações **do próprio movimento**), **PT-04** (a direção causal documentada vai da rua ao governo), **PT-19** (influenciador é **intermediação dentro** do movimento, da natureza dos nós de PT-12A), **PT-20** (a coordenação é do próprio acampamento), **PT-12A** (a folha afirma o contrário de (b): *"não foi identificada uma coordenação que envolvesse todos os manifestantes"*), **PT-24** (a marcha foi decidida em **votação** entre acampados), **PT-26** (o incentivo é **horizontal**, entre pares).
+
+> **E a chamada mais difícil foi PT-06 — o registro que originou o campo. Ele ficou.** A folha traz *"both the president and bolsonaristas radicalized their rhetoric"*, que é **paralelismo**, não ato dirigido à base; e a frase central do registro puxa com força no sentido oposto: o líder *"does not fully control"* o processo. Onde o governo aparece alimentando o conflito, isso está em **PT-05** — e foi PT-05 que mudou de valor. **A fronteira entre os dois registros é o que carrega a distinção**, e por isso ela está escrita nas duas notas.
+
+### 61.4 O campo, com cinco valores
+
+| | |
+|:--|--:|
+| Não se aplica | **52** |
+| Lido, não documentado | **15** |
+| **Autonomia relativa** | **9** |
+| **Autonomia com encorajamento de cima** | **5** |
+| **Conduzido de cima** | **1** |
+| (vazio) declarado — PT-19A | 1 |
+
+**Prova negativa, duas injeções:** o valor novo em PT-19A, que não tem folha, reprova com `! codificado sem fonte_pagina`; e o nome truncado — `Autonomia com encorajamento` — reprova com `! valores fora do vocabulário`. **A guarda cobre o valor novo exatamente como os outros.**
+
+**O que isto muda na leitura do campo:** o placar deixa de ser *14 a 1* e passa a ser **9 de autonomia simples, 5 de autonomia encorajada e 1 de condução** — e é uma leitura melhor, porque **a autonomia encorajada era o caso mais interessante do corpus e estava escondido dentro do valor mais forte.** Dos cinco, três são de liderança política (PT-12, PT-16, PT-05), um de agente externo nomeado (PT-08) e um de elite midiática e parlamentar (PT-50A).
+
+**Restam duas decisões suas** (57.4): a guarda que mantém PT-19A vazio e o nome `Conduzido de cima`, que junta setor patronal e líder político — e que o valor novo torna **mais** urgente, porque agora há três rótulos usando a palavra *cima* para coisas diferentes.

@@ -527,7 +527,7 @@ A primeira é de **datação**: a tentativa de alterar o resultado precede o res
 
 # ETAPA 3 — Exportação
 
-*Revisto em 16/08/2026.* Os dados estão em **três formatos**, com **16 campos** por registro — os dez do codebook mais seis de rigor: `fonte_trecho`, `fonte_url`, `fonte_local`, `fonte_pagina`, `status_verificacao`, `status_classe` e `nota_auditoria`.
+*Revisto em 16/08/2026.* Os dados estão em **três formatos**, com **17 campos** por registro — os dez do codebook mais seis de rigor (`fonte_trecho`, `fonte_url`, `fonte_local`, `fonte_pagina`, `status_verificacao`, `status_classe` e `nota_auditoria`) e, desde 16/10/2026, `autonomia_movimento`, que codifica o grau de autonomia do movimento em relação à liderança — a pergunta central desta pesquisa, que até então vivia na prosa de `fonte_trecho`.
 
 > **O JSON é a única fonte da verdade.** CSV e XLSX são **gerados** a partir dele por `scripts/gerar_codebook.py`. Não os edite à mão: a próxima execução sobrescreve. Até 16/08/2026 os formatos tinham esquemas diferentes — o CSV carregava um campo `Fonte_Local` que o JSON não tinha, embora o próprio `metadados.colunas_codebook` já o declarasse. O gerador único existe para que isso não se repita.
 

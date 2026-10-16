@@ -36,6 +36,7 @@ CABECALHOS = OrderedDict([
     ("ator_grupo", "Ator_Grupo"), ("repertorio_acao", "Repertorio_Acao"),
     ("target_alvo", "Target_Alvo"), ("framing_narrativa", "Framing_Narrativa"),
     ("resposta_estatal", "Resposta_Estatal"), ("mecanismo_causal", "Mecanismo_Causal"),
+    ("autonomia_movimento", "Autonomia_Movimento"),
     ("fonte_trecho", "Fonte_Trecho"), ("fonte_url", "Fonte_URL"),
     ("fonte_local", "Fonte_Local"), ("fonte_pagina", "Fonte_Pagina"),
     ("status_verificacao", "Status_Verificacao"), ("status_classe", "Status_Classe"),
@@ -54,6 +55,7 @@ DICIONARIO = [
     ("framing_narrativa", "Enquadramento invocado pelos atores, preferencialmente em suas próprias palavras.", "texto", "livre", "fonte"),
     ("resposta_estatal", "Reação do Estado ao sub-evento, inclusive a omissão.", "texto", "livre", "fonte"),
     ("mecanismo_causal", "ATRIBUIÇÃO ANALÍTICA do pesquisador, derivada de Dynamics of Contention. NÃO é citação da fonte e não deve ser lido como achado estabelecido.", "texto", "livre", "pesquisador"),
+    ("autonomia_movimento", "ATRIBUIÇÃO ANALÍTICA do pesquisador, e a única que exige âncora: grau de autonomia do movimento em relação à liderança — a pergunta central da pesquisa. Entrou em 16/10/2026, decisão 3 da tarefa 26(c). VAZIO = NÃO CODIFICADO, e não 'não se aplica': é registro que ninguém leu ainda sob esta pergunta. A contagem do vazio sai no passo 4 do ciclo.", "categórico", "Autonomia relativa · Conduzido de cima · Não se aplica · (vazio) = não codificado", "fonte lida, com página — valor diferente de 'Não se aplica' sem fonte_pagina derruba o ciclo"),
     ("fonte_trecho", "Referência e, quando há, transcrição literal do trecho que sustenta o registro.", "texto", "livre", "fonte"),
     ("fonte_url", "URL da fonte, quando pública.", "url", "livre", "fonte"),
     ("fonte_local", "Caminho do arquivo em Fontes/, relativo à raiz do projeto. Vários documentos separados por '; '.", "caminho", "ver aba Inventario_Fontes", "auditoria de 16/08/2026"),
@@ -1170,7 +1172,7 @@ def main():
     escrever_aba(
         ws, list(CABECALHOS.values()),
         [[ev.get(c) or "" for c in campos] for ev in eventos],
-        [9, 16, 17, 26, 34, 26, 32, 28, 40, 60, 34, 40, 22, 34, 20, 40],
+        [9, 16, 17, 26, 34, 26, 32, 28, 40, 22, 60, 34, 40, 22, 34, 20, 40],
         congelar="B2",
     )
 

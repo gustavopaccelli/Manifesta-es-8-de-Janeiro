@@ -1,6 +1,6 @@
 # Manifestações 8 de Janeiro
 
-Reconstrução cronológico-causal do 8 de janeiro de 2023 por *process tracing*, com marco na Teoria do Processo Político (McAdam, Tarrow, Tilly). O produto central é um codebook de **82 sub-eventos × 16 campos**, ancorado documento a documento e página a página em um corpus de fontes primárias — relatório da CPMI, relatório do interventor federal, denúncia da PGR, acórdãos do STF, TRF-4 e TSE, decisões de execução penal e o balanço do Gabinete do Min. Moraes.
+Reconstrução cronológico-causal do 8 de janeiro de 2023 por *process tracing*, com marco na Teoria do Processo Político (McAdam, Tarrow, Tilly). O produto central é um codebook de **83 sub-eventos × 17 campos**, ancorado documento a documento e página a página em um corpus de fontes primárias — relatório da CPMI, relatório do interventor federal, denúncia da PGR, acórdãos do STF, TRF-4 e TSE, decisões de execução penal e o balanço do Gabinete do Min. Moraes.
 
 O artigo ainda não foi escrito: por decisão de 16/08/2026, a redação é o último item da fila.
 

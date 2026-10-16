@@ -7,10 +7,11 @@ Roda oito checagens e devolve código de saída != 0 se qualquer uma falhar.
 Pensada para ser executada depois de toda alteração no codebook — é o que
 garante que JSON, CSV e XLSX não voltem a divergir.
 
-  1. Sincronia dos três formatos, célula a célula (82 IDs x 16 campos)
+  1. Sincronia dos três formatos, célula a célula — e o esquema declarado em
+     `metadados.colunas_codebook` conferido contra os cabeçalhos do gerador
   2. Integridade referencial: todo fonte_local existe em disco
   3. Cobertura do inventário: todo arquivo de Fontes/ está declarado
-  4. Vocabulário controlado de status_classe
+  4. Vocabulário controlado de status_classe e de autonomia_movimento
   5. Coerência entre fonte_pagina e fonte_local (documento citado x documento vinculado)
   6. Paginação real dos PDFs via PyPDF2 (nunca pdfinfo, que subconta)
 
@@ -37,6 +38,12 @@ XLSX_P = RAIZ / "data/processed/process_tracing_8jan_codebook.xlsx"
 # garantia era apenas que um registro futuro pudesse nascer dispensado.
 CLASSES = {"Confirmado em fonte primária", "Confirmado",
            "A verificar", "Inferência do analista"}
+
+# `autonomia_movimento` entrou em 16/10/2026 como campo 17, por decisão do
+# pesquisador (decisão 3 da tarefa 26(c), aberta no item 35.4). O VAZIO não
+# está aqui de propósito: ele não é valor, é a declaração de que o registro
+# ainda não foi lido sob esta pergunta -- 82 dos 83 hoje.
+AUTONOMIA = {"Autonomia relativa", "Conduzido de cima", "Não se aplica"}
 
 # Eixos que NÃO entram na contagem de fonte documental. O eixo 05 está fora desde
 # sempre: livro de método não é documento oficial. O eixo 12 entrou em 04/10/2026,
@@ -98,7 +105,23 @@ def main():
     if div or not (len(eventos) == len(csv_rows) == len(xlsx_rows)):
         falhas.append("sincronia entre formatos ({} células)".format(div))
     else:
-        print("  OK — os três formatos são idênticos nos {} x 16".format(len(eventos)))
+        print("  OK — os três formatos são idênticos nos {} x {}".format(
+            len(eventos), len(campos)))
+
+    # O esquema que os metadados DECLARAM é o que o gerador usa? A pergunta
+    # existe porque `colunas_codebook` foi escrito pela migração de 16/08 e
+    # ninguém o conferia desde então: declaração de esquema que nenhuma
+    # checagem lê é da mesma família do `sha1` que declarava identidade já
+    # desfeita (item 48). Entrou em 16/10/2026, com o campo 17.
+    declarado = dados["metadados"].get("colunas_codebook") or []
+    if list(declarado) != campos:
+        print("  ! metadados.colunas_codebook divergem dos cabeçalhos do gerador")
+        print("    declarado: {}".format(declarado))
+        print("    gerador  : {}".format(campos))
+        falhas.append("colunas_codebook x CABECALHOS")
+    else:
+        print("  OK — metadados.colunas_codebook declara os mesmos {} campos".format(
+            len(campos)))
 
     # ------------------------------------------------------------------ 2 ---
     cabecalho(2, "INTEGRIDADE REFERENCIAL DOS CAMINHOS")
@@ -145,7 +168,7 @@ def main():
         print("  OK — todo arquivo ou ancora um registro ou tem procedência declarada")
 
     # ------------------------------------------------------------------ 4 ---
-    cabecalho(4, "VOCABULÁRIO CONTROLADO DE status_classe")
+    cabecalho(4, "VOCABULÁRIO CONTROLADO — status_classe e autonomia_movimento")
     from collections import Counter
     cont = Counter(ev.get("status_classe") for ev in eventos)
     fora = [k for k in cont if k not in CLASSES]
@@ -156,6 +179,33 @@ def main():
         falhas.append("status_classe fora do vocabulário: {}".format(fora))
     else:
         print("  OK — só os {} valores previstos".format(len(CLASSES)))
+
+    # autonomia_movimento, desde 16/10/2026 (campo 17, decisão 3 da tarefa
+    # 26(c)). Duas guardas e uma contagem:
+    #   - valor fora do vocabulário derruba, como em status_classe;
+    #   - valor que AFIRMA autonomia ou condução exige `fonte_pagina`, porque
+    #     a pergunta que este campo responde é a central da pesquisa e
+    #     codificação sem folha é exatamente a âncora-que-parece-âncora;
+    #     "Não se aplica" está de fora da cobrança -- negar pertinência não
+    #     precisa de folha, e cobrá-la seria ruído;
+    #   - o vazio é CONTADO e impresso, nunca somado aos valores: vazio é
+    #     "ninguém leu ainda sob esta pergunta", e zero suposto é silêncio.
+    print("")
+    cont_a = Counter(ev.get("autonomia_movimento") for ev in eventos)
+    fora_a = [k for k in cont_a if k and k not in AUTONOMIA]
+    sem_folha = [ev["id"] for ev in eventos
+                 if (ev.get("autonomia_movimento") or "") not in ("", "Não se aplica")
+                 and not (ev.get("fonte_pagina") or "").strip()]
+    for k, v in cont_a.most_common():
+        print("  {:3d}  autonomia_movimento: {}".format(v, k or "(vazio) — NÃO CODIFICADO"))
+    if fora_a:
+        print("  ! valores fora do vocabulário: {}".format(fora_a))
+        falhas.append("autonomia_movimento fora do vocabulário: {}".format(fora_a))
+    if sem_folha:
+        print("  ! codificado sem fonte_pagina: {}".format(sem_folha))
+        falhas.append("autonomia_movimento sem folha: {}".format(sem_folha))
+    if not fora_a and not sem_folha:
+        print("  OK — vocabulário respeitado e todo valor afirmativo tem folha")
 
     # ------------------------------------------------------------------ 5 ---
     cabecalho(5, "COERÊNCIA fonte_pagina x fonte_local")

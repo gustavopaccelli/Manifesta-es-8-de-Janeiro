@@ -40,7 +40,7 @@ A coluna **serve a** diz qual registro a peça tem condições de ancorar **depo
 
 **O que a leitura dessas três produziu está no documento 12, §4 e §5.** Em duas linhas: uma afirmação de dez anos saiu do codebook porque a leitura a contradisse; e dois registros deixaram de ser contextuais, o segundo deles com o mecanismo **retificado** — a pandemia carrega uma infraestrutura anterior, em vez de consolidá-la.
 
-**E um achado que não é de registro nenhum.** Von Bülow e Abers sustentam que o bolsonarismo é **movimento social com autonomia relativa**, um processo que *precedes his rise to power* e que o líder *does not fully control* (p. 1000 e 1009 impressas). Nenhum dos 16 campos do esquema codifica grau de autonomia, e por isso entrou como achado em `fonte_trecho`. É material de argumento para a redação, e está anotado como pendência de decisão no documento 12, §8, item 10.
+**E um achado que não é de registro nenhum.** Von Bülow e Abers sustentam que o bolsonarismo é **movimento social com autonomia relativa**, um processo que *precedes his rise to power* e que o líder *does not fully control* (p. 1000 e 1009 impressas). Nenhum dos 16 campos do esquema codificava grau de autonomia, e por isso entrou como achado em `fonte_trecho`. **DEIXOU DE SER VERDADE EM 16/10/2026:** o esquema ganhou `autonomia_movimento` por decisão do pesquisador, e é esta peça que o estreia — PT-06 codificado como *Autonomia relativa*, com as duas páginas já conferidas (item 55). É material de argumento para a redação, e está anotado como pendência de decisão no documento 12, §8, item 10.
 
 ### 2.2 As quinze não lidas
 

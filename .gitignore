@@ -9,7 +9,7 @@ __pycache__/
 # docProps/core.xml e nos timestamps do zip, então o arquivo muda de bytes sem
 # mudar de conteúdo — versioná-lo enche o histórico de diferença fantasma.
 # Nada se perde: sai de process_tracing_8jan_eventos.json por
-# scripts/gerar_codebook.py, ambos versionados, e o CSV com os mesmos 83 x 16
+# scripts/gerar_codebook.py, ambos versionados, e o CSV com os mesmos 83 x 17
 # está no histórico. Regere com:  bash scripts/ciclo.sh
 data/processed/process_tracing_8jan_codebook.xlsx
 

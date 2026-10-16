@@ -76,7 +76,8 @@
       "2026-10-16 (tarefa 27, primeira rodada — camada T0 Mobilização) — codificado `autonomia_movimento` nos cinco registros da fase T0 Mobilização, por encaminhamento do pesquisador de começar pela camada de mobilização. PT-24 e PT-26 como Autonomia relativa, PT-25 e PT-28 como Não se aplica (ator de Estado), e PT-27 LIDO E NÃO CODIFICADO, com a razão na nota: a folha 651 documenta a barreira, não quem dirigia a marcha. PT-24 GANHOU FOLHA E TRANSCRIÇÃO: a CPMI p. 644 reproduz o alerta da Abin que documenta a decisão da marcha por discussão e votação entre os acampados, e essa folha não estava citada — o valor exige folha por construção, e a folha que o sustenta passou a estar no registro e a ser conferida pelo passo 7. Nenhum outro campo analítico foi alterado.",
       "2026-10-16 (quarto valor de autonomia_movimento) — por decisão do pesquisador, entra `Lido, não documentado`: a fonte do registro foi lida sob a pergunta da autonomia e não a documenta. Nasceu de PT-27, cuja folha 651 da CPMI documenta a barreira de gradis e não quem dirigia a marcha, e sem ele a contagem de registros vazios somava trabalho feito com trabalho não feito. A guarda da checagem 4 vale para o valor novo: só 'Não se aplica' é isento de `fonte_pagina`, porque dizer que se leu e a fonte não documenta é afirmação sobre uma folha determinada. PT-27 recebeu o valor na mesma rodada.",
       "2026-10-16 (tarefa 27, segunda rodada — camada T-1 Operacional) — codificado `autonomia_movimento` nos 25 registros da fase T-1 Operacional, por encaminhamento do pesquisador. Dez são ação de movimento: cinco `Autonomia relativa` (PT-12, PT-12A, PT-16, PT-19 e PT-20), um `Conduzido de cima` — o primeiro do codebook (PT-10A, o MBVA responsável pelo envio dos caminhões e pelos bloqueios) —, três `Lido, não documentado` (PT-10, PT-15, PT-21) e um SEM VALOR (PT-19A), porque a guarda exige folha e a peça é `.md` sem paginação. Quinze são ato de Estado ou de elite institucional e receberam `Não se aplica`, três deles com ponteiro na nota para o registro cujo valor a sua evidência afeta. CINCO REGISTROS GANHARAM TRANSCRIÇÃO NOVA, porque o valor sai da folha e a folha dizia mais do que o registro transcrevia: PT-10 (p. 999, as lideranças internas identificadas), PT-15 (p. 25, a fonte declarando a lacuna), PT-16 (p. 584, o líder transferindo a decisão à base), PT-19 (p. 615 e 621, a autoria da convocação — duas folhas novas no registro) e PT-20 (p. 576, o carro de som do acampamento). Nenhum outro campo analítico foi alterado.",
-      "2026-10-16 (tarefa 27, terceira rodada — camada T-1 Conjuntural) — codificado `autonomia_movimento` nos 17 registros restantes da fase T-1 Conjuntural (PT-06 já estava). Cinco são ação de movimento e os cinco receberam `Autonomia relativa`: PT-01 (horizontalidade declarada contra hierarquia, Tatagiba e Galvão 2019), PT-02 (convocação por organizações do próprio movimento, e grupos antipetistas já em protestos de 2011 — a âncora brasileira da tese de que a base antecede o líder), PT-04 (a presidência como resultado do processo de rua, Alonso 2023), PT-05 (atos com propósito próprio alinhado ao líder, com a instrumentalização registrada como contraevidência) e PT-08 (a literatura argumentando que 6 de janeiro não foi 'purely the result of Trump's ego'). Doze são ato de Estado, de tribunal ou de instituição política e receberam `Não se aplica`, dois com ponteiro. NENHUMA FOLHA NOVA FOI NECESSÁRIA nesta camada, ao contrário das duas anteriores: as transcrições da tarefa 14 já respondiam à pergunta, porque vêm de literatura cujo tema é a relação entre base e liderança. Nenhum outro campo analítico foi alterado."
+      "2026-10-16 (tarefa 27, terceira rodada — camada T-1 Conjuntural) — codificado `autonomia_movimento` nos 17 registros restantes da fase T-1 Conjuntural (PT-06 já estava). Cinco são ação de movimento e os cinco receberam `Autonomia relativa`: PT-01 (horizontalidade declarada contra hierarquia, Tatagiba e Galvão 2019), PT-02 (convocação por organizações do próprio movimento, e grupos antipetistas já em protestos de 2011 — a âncora brasileira da tese de que a base antecede o líder), PT-04 (a presidência como resultado do processo de rua, Alonso 2023), PT-05 (atos com propósito próprio alinhado ao líder, com a instrumentalização registrada como contraevidência) e PT-08 (a literatura argumentando que 6 de janeiro não foi 'purely the result of Trump's ego'). Doze são ato de Estado, de tribunal ou de instituição política e receberam `Não se aplica`, dois com ponteiro. NENHUMA FOLHA NOVA FOI NECESSÁRIA nesta camada, ao contrário das duas anteriores: as transcrições da tarefa 14 já respondiam à pergunta, porque vêm de literatura cujo tema é a relação entre base e liderança. Nenhum outro campo analítico foi alterado.",
+      "2026-10-16 (tarefa 27, quarta rodada — camada T0 Execução) — codificado `autonomia_movimento` nos 11 registros da fase T0 Execução. OITO receberam `Lido, não documentado` (PT-29, PT-30, PT-33, PT-34, PT-35, PT-36, PT-37, PT-46): as folhas da execução na CPMI documentam o ato da multidão e a falha da contenção, não quem dirigia os invasores — o capítulo do relatório sobre a execução é sobre a omissão do aparato de segurança, e a p. 695 chega a afirmar que integrantes de órgãos de segurança 'se omitiram deliberadamente e mesmo contribuíram ativamente'. DOIS receberam `Não se aplica` por codificarem ato de Estado (PT-31, PT-32). E PT-38 FICOU VAZIO: a âncora dele é 'inteiro teor' de um livro oficial de 210 páginas, não lido sob esta pergunta, e `Lido, não documentado` seria afirmação falsa. A camada que podia virar o placar não o virou, e não por achado contrário: por ausência medida. Nenhum outro campo analítico foi alterado."
     ],
     "nota_numeracao": "Os identificadores com sufixo alfabético (PT-03A…PT-06C) foram inseridos em revisão posterior e mantêm a ordem cronológica. A numeração base (PT-01…PT-62) não foi alterada.",
     "vocabulario_status_classe": [
@@ -1060,14 +1061,14 @@
       "framing_narrativa": "'Retomada do poder pelo povo'",
       "resposta_estatal": "Ausência de repressão efetiva",
       "mecanismo_causal": "Demonstração de viabilidade: a primeira transposição bem-sucedida converte uma ação de desfecho incerto em ação demonstradamente possível, e com isso reduz o custo percebido da imitação para atores JÁ REUNIDOS E JÁ CONVOCADOS — sem exigir que os imitadores partilhem plano com os primeiros. NOME ATRIBUÍDO PELO PESQUISADOR EM 10/10/2026, em substituição a “transposição do limiar”. A RAZÃO DA TROCA, que era cobrança da tarefa 19 aberta desde 30/09: o modelo de limiar de Granovetter pressupõe ação que NÃO vem de coordenação e planejamento, e PT-19 afirma coordenação por criptolinguagem — a tensão era interna ao codebook, não entre codebook e fonte. O nome novo guarda o que a evidência mostra, que é a sequência das três invasões e o sinal de viabilidade, e descarta o que o codebook nunca mediu, que são limiares individuais e a sua distribuição. E é compatível com a coordenação a montante, porque situa o efeito entre quem já está no lugar. DECIDIDO EM 10/10/2026, por delegação do pesquisador: CESARINO (2019) NÃO ENTRA NESTE REGISTRO. Três razões. (a) A renomeação retirou a necessidade: Cesarino era resgate do nome VELHO, porque o contágio não-deliberado dela dissolvia a tensão entre limiar e coordenação; demonstração de viabilidade não tem contágio nenhum, e não há mais o que resgatar. (b) E a razão dura é de REFERENTE: o contágio dela é circulação de CONTEÚDO em WhatsApp e YouTube na campanha de 2018, e este registro é imitação de uma AÇÃO FÍSICA por multidão co-presente em 08/01/2023 — mesma palavra, referentes distintos, e importá-la seria o modo de falha deste projeto cometido com a peça já lida. (c) Onde a tese dela serve é PT-06, a circulação e não a consistência sustentando a mobilização, e PT-06 já está ancorado em Cesarino (2022), da mesma autora e com página conferida",
-      "autonomia_movimento": null,
+      "autonomia_movimento": "Lido, não documentado",
       "fonte_trecho": "Relatório Final da CPMI, p. 657, seção '15h, A Invasão do Congresso Nacional': após o subdimensionamento das 14h45, 'os policiais tentaram conter a multidão com gases de efeito moral e balas de borracha, mas foram repelidos e, pouco antes das 15 horas', a invasão se consumou.",
       "fonte_url": "https://www12.senado.leg.br/noticias/arquivos/2023/10/17/relatorio-cpmi-versao-consolidada_231017_100010.pdf",
       "fonte_local": "Fontes/04_T+1_Resposta-institucional/CPMI-8-de-Janeiro_Relatorio-Final_2023-10-17.pdf",
       "fonte_pagina": "CPMI: 657",
       "status_verificacao": "Confirmado em fonte primária — CPMI, p. 657",
       "status_classe": "Confirmado em fonte primária",
-      "nota_auditoria": " TAREFA 19, 10/10/2026 — nome do mecanismo atribuído pelo pesquisador, sobre a proposta do documento 09. A mudança NÃO é de campo nem de classe: é de NOME, e a razão está escrita no próprio mecanismo_causal para que a redação não a trate como troca cosmética. 10/10/2026 — pendência resolvida por delegação: Cesarino (2019) não entra. A razão que decide não é de mérito da peça, é de referente: contágio de conteúdo não é imitação de ação física por multidão co-presente. Nenhum campo mudou além desta declaração, que antes dizia que a questão estava aberta."
+      "nota_auditoria": "TAREFA 19, 10/10/2026 — nome do mecanismo atribuído pelo pesquisador, sobre a proposta do documento 09. A mudança NÃO é de campo nem de classe: é de NOME, e a razão está escrita no próprio mecanismo_causal para que a redação não a trate como troca cosmética. 10/10/2026 — pendência resolvida por delegação: Cesarino (2019) não entra. A razão que decide não é de mérito da peça, é de referente: contágio de conteúdo não é imitação de ação física por multidão co-presente. Nenhum campo mudou além desta declaração, que antes dizia que a questão estava aberta. || codificado `autonomia_movimento` = Lido, não documentado em tarefa 27, quarta rodada (camada T0 Execução), 16/10/2026 — a folha 657 registra que os policiais 'tentaram conter a multidão com gases de efeito moral e balas de borracha, mas foram repelidos', e que a facilidade da subida da rampa causou estranheza ao próprio coronel Jorge Naime. A folha documenta o ato e, quando é o caso, a falha da contenção; não documenta quem dirigia os invasores. **Não importei o valor de registro vizinho:** a divisão por alvo planejada em grupos está ancorada em PT-19 (CPMI p. 621) e a coordenação por rádio em PT-26 (p. 650), e são elas que sustentam valor afirmativo — nesta folha, não. Ler ausência de comando documentado como autonomia documentada seria inferir de silêncio."
     },
     {
       "id": "PT-30",
@@ -1079,14 +1080,14 @@
       "framing_narrativa": "'Casa do povo'",
       "resposta_estatal": "Sem contenção efetiva",
       "mecanismo_causal": "Contágio e difusão simultânea de alvos (multiplicação de frentes) — a multidão se fraciona e satura a capacidade de resposta",
-      "autonomia_movimento": null,
+      "autonomia_movimento": "Lido, não documentado",
       "fonte_trecho": "Relatório Final da CPMI, p. 670: 'Às 15h10, rompida a barreira em frente ao Ministério da Justiça, os manifestantes invadiram o estacionamento e a parte de trás do Palácio do Planalto', havendo 'cerca de duas dezenas de oficiais nas linhas de controle que protegeriam o Palácio, número insuficiente para conter a turba'.",
       "fonte_url": "https://www12.senado.leg.br/noticias/arquivos/2023/10/17/relatorio-cpmi-versao-consolidada_231017_100010.pdf",
       "fonte_local": "Fontes/04_T+1_Resposta-institucional/CPMI-8-de-Janeiro_Relatorio-Final_2023-10-17.pdf",
       "fonte_pagina": "CPMI: 670",
       "status_verificacao": "Confirmado em fonte primária — CPMI, p. 670. ACRÉSCIMO: o subdimensionamento do Planalto (≈20 oficiais) espelha o do Congresso (20 PMs).",
       "status_classe": "Confirmado em fonte primária",
-      "nota_auditoria": null
+      "nota_auditoria": "codificado `autonomia_movimento` = Lido, não documentado em tarefa 27, quarta rodada (camada T0 Execução), 16/10/2026 — a folha 670 registra que 'parte dos manifestantes se dirigiu para o Palácio do Planalto' e que havia 'cerca de duas dezenas de oficiais' na linha de controle — fracionamento da multidão sem atribuição de quem o decidiu. A folha documenta o ato e, quando é o caso, a falha da contenção; não documenta quem dirigia os invasores. **Não importei o valor de registro vizinho:** a divisão por alvo planejada em grupos está ancorada em PT-19 (CPMI p. 621) e a coordenação por rádio em PT-26 (p. 650), e são elas que sustentam valor afirmativo — nesta folha, não. Ler ausência de comando documentado como autonomia documentada seria inferir de silêncio."
     },
     {
       "id": "PT-31",
@@ -1098,14 +1099,14 @@
       "framing_narrativa": "—",
       "resposta_estatal": "Não repressão; conivência registrada pela CPMI",
       "mecanismo_causal": "Defecção do agente de contenção: a força incumbida da repressão sinaliza permissividade, elevando a percepção de legitimidade da ação",
-      "autonomia_movimento": null,
+      "autonomia_movimento": "Não se aplica",
       "fonte_trecho": "Relatório Final da CPMI, p. 667: 'Em lugar, porém, de reprimir os invasores, os policiais militares chegaram a sinalizar para que os presentes prosseguissem com a invasão: posicionaram-se lateralmente, desobstruindo a passagem; cumprimentaram os insurgentes; e abandonaram, à própria sorte, a Polícia Legislativa.' A mesma página registra que os reforços pedidos chegaram apenas às 17 horas.",
       "fonte_url": "https://www12.senado.leg.br/noticias/arquivos/2023/10/17/relatorio-cpmi-versao-consolidada_231017_100010.pdf",
       "fonte_local": "Fontes/04_T+1_Resposta-institucional/CPMI-8-de-Janeiro_Relatorio-Final_2023-10-17.pdf",
       "fonte_pagina": "CPMI: 667",
       "status_verificacao": "Confirmado em fonte primária — CPMI, p. 667. A descrição primária é substancialmente mais forte que a paráfrase jornalística antes utilizada.",
       "status_classe": "Confirmado em fonte primária",
-      "nota_auditoria": null
+      "nota_auditoria": "codificado `autonomia_movimento` = Não se aplica em tarefa 27, quarta rodada (camada T0 Execução), 16/10/2026 — o registro codifica a chegada do 2º Pelotão de Choque da PMDF e o seu posicionamento lateral desobstruindo a passagem, ato de Estado e não ação de movimento: a pergunta da autonomia não tem objeto aqui. É impertinência afirmada depois de ler, e por isso não é o vazio."
     },
     {
       "id": "PT-32",
@@ -1117,14 +1118,14 @@
       "framing_narrativa": "—",
       "resposta_estatal": "Retirada da contenção, sem justificativa registrada",
       "mecanismo_causal": "Abertura de corredor. A CPMI é enfática em dois pontos: a tropa AINDA BLOQUEAVA efetivamente o avanço, e a ordem de recolhimento foi dada 'sem justificativa' (p. 674) — o que desloca o registro de omissão para ato comissivo. ARBITRAGEM BUSCADA NA AP 2668 — RESULTADO NEGATIVO E INFORMATIVO. A versão anterior deste registro propunha que o acórdão decidiria entre insubordinação do comandante em campo e mensagem performática do secretário. Conferido o inteiro teor (1.991 p.) e a denúncia da PGR (272 p.), verifica-se que NENHUM DOS DOIS MENCIONA a mensagem das 14h56, o horário 15h16 ou o tenente Rafael Pereira Martins. O STF não escolheu entre as duas leituras: adotou uma terceira moldura, a da OMISSÃO DOLOSA da cúpula da SSP-DF, e condenou Anderson Torres por conduta omissiva (art. 359-M). Sob essa moldura, uma ordem isolada de proteção é irrelevante — o que se imputa é o conjunto do não agir. CONSEQUÊNCIA PARA A PESQUISA: a mensagem 'Não deixem chegar ao Supremo' é achado EXCLUSIVO DA CPMI, sem validação judicial. Pode ser citada como tal, jamais como fato assentado pelo STF. E a contradição que ela cria permanece analiticamente aberta, com a informação adicional de que a mais alta corte, com acesso integral à prova, não julgou necessário explicá-la.",
-      "autonomia_movimento": null,
+      "autonomia_movimento": "Não se aplica",
       "fonte_trecho": "Relatório Final da CPMI, p. 674: 'Embora reduzida a 28 soldados, a presença ostensiva da tropa continuava a bloquear o avanço dos manifestantes pela via S1 em direção ao STF. No entanto, às 15h16, sem justificativa, Rafael Martins determinou o recolhimento dos soldados aos veículos, liberando aos manifestantes a via de acesso ao Supremo.' Antecedente (p. 658): às 14h56, Anderson Torres, secretário de Segurança Pública do DF, em férias nos EUA, enviou ao grupo Difusão a mensagem 'Não deixem chegar ao Supremo'.",
       "fonte_url": "https://www12.senado.leg.br/noticias/arquivos/2023/10/17/relatorio-cpmi-versao-consolidada_231017_100010.pdf",
       "fonte_local": "Fontes/04_T+1_Resposta-institucional/CPMI-8-de-Janeiro_Relatorio-Final_2023-10-17.pdf",
       "fonte_pagina": "CPMI: 674, 658",
       "status_verificacao": "Confirmado em fonte primária — CPMI, p. 674 (e p. 658 para o antecedente das 14h56). RESSALVA DE PESO PROBATÓRIO: verificado em 12/08/2026 que nem o acórdão da AP 2668 nem a denúncia da PGR mencionam a mensagem das 14h56, o horário 15h16 ou o tenente Rafael Pereira Martins. Achado exclusivo da CPMI, sem validação judicial.",
       "status_classe": "Confirmado em fonte primária",
-      "nota_auditoria": null
+      "nota_auditoria": "codificado `autonomia_movimento` = Não se aplica em tarefa 27, quarta rodada (camada T0 Execução), 16/10/2026 — o registro codifica a ordem de recolhimento dos soldados aos veículos, dada por oficial da PMDF, ato de Estado e não ação de movimento: a pergunta da autonomia não tem objeto aqui. É impertinência afirmada depois de ler, e por isso não é o vazio."
     },
     {
       "id": "PT-33",
@@ -1136,14 +1137,14 @@
       "framing_narrativa": "'Ocupação do Poder Central'",
       "resposta_estatal": "Sem contenção efetiva",
       "mecanismo_causal": "Escalada de repertório: da transposição de perímetro para a destruição material da fronteira do edifício",
-      "autonomia_movimento": null,
+      "autonomia_movimento": "Lido, não documentado",
       "fonte_trecho": "Relatório Final da CPMI, p. 670-671, seção '15h20, A Invasão do Palácio do Planalto'.",
       "fonte_url": "https://www12.senado.leg.br/noticias/arquivos/2023/10/17/relatorio-cpmi-versao-consolidada_231017_100010.pdf",
       "fonte_local": "Fontes/04_T+1_Resposta-institucional/CPMI-8-de-Janeiro_Relatorio-Final_2023-10-17.pdf",
       "fonte_pagina": "CPMI: 670-671",
       "status_verificacao": "Confirmado em fonte primária — CPMI, p. 670-671",
       "status_classe": "Confirmado em fonte primária",
-      "nota_auditoria": null
+      "nota_auditoria": "codificado `autonomia_movimento` = Lido, não documentado em tarefa 27, quarta rodada (camada T0 Execução), 16/10/2026 — as folhas 670-671 narram a derrubada das grades e a entrada no Planalto 'sem muita dificuldade', sem nomear comando. A folha documenta o ato e, quando é o caso, a falha da contenção; não documenta quem dirigia os invasores. **Não importei o valor de registro vizinho:** a divisão por alvo planejada em grupos está ancorada em PT-19 (CPMI p. 621) e a coordenação por rádio em PT-26 (p. 650), e são elas que sustentam valor afirmativo — nesta folha, não. Ler ausência de comando documentado como autonomia documentada seria inferir de silêncio."
     },
     {
       "id": "PT-34",
@@ -1155,14 +1156,14 @@
       "framing_narrativa": "'Praça do povo'",
       "resposta_estatal": "Estimativa policial sem capacidade de dispersão",
       "mecanismo_causal": "Concentração simultânea no conjunto simbólico: por serem CONTÍGUAS as três sedes, uma única concentração alcança os três alvos sem redeslocamento — de modo que o conjunto simbólico se torna atingível por UMA concentração, e não por três operações sucessivas. NOME ATRIBUÍDO PELO PESQUISADOR EM 10/10/2026, em substituição a “massa crítica atingida no ponto de máxima densidade simbólica”. A RAZÃO DA TROCA: em Marwell e Oliver a massa crítica são os ORGANIZADORES e não a multidão, e Oliver classifica o uso para o grupo inicial de manifestantes como metafórico e frouxo. A varredura das quinze peças do eixo 13, lidas em 09-10/10, devolveu ZERO ocorrências de massa crítica: não há no corpus literatura que sustente o termo para este caso. O nome velho afirmava uma quantidade-limite que o codebook não mediu; o novo usa a contiguidade das sedes, que é dado primário. A magnitude não repousa em estimativa pontual para as 15h26 — que não existe em fonte primária —, e sim na convergência de duas medições oficiais independentes na manhã do mesmo dia (contagem de transporte e contagem policial de público) e na caracterização que a própria CPMI faz dos invasores. ACHADO ANALÍTICO: a SSP/DF dispunha de estimativa própria de público às 9h e ainda assim o Congresso estava guarnecido por 20 policiais às 14h45 (PT-28) — o número deixa de ser dado descritivo e passa a ser evidência sobre o conhecimento do Estado, reforçando o hoop test.",
-      "autonomia_movimento": null,
+      "autonomia_movimento": "Lido, não documentado",
       "fonte_trecho": "Relatório Final da CPMI, p. 674: 'Os insurgentes avançaram pela via S1, ultrapassaram as tropas sem serem importunados e, por volta das 15h26, chegaram à Praça dos Três Poderes em altura muito próxima ao prédio do STF.' O relatório NÃO atribui número de manifestantes a esta passagem. MAGNITUDE, por convergência de fontes oficiais: (a) contagem de transporte — 'Conforme a ANTT (...) há um total de 105 ônibus, com cerca de 3900 passageiros', alerta da Abin de 07/01 às 12h (p. 374 e 637); (b) contagem policial de público — 'Público estimado pela SSP/DF de 3.000 pessoas na área próxima do SMU', mensagem ao CIISP-DF de 08/01 às 9h (p. 643); (c) caracterização da própria CPMI — 'um grupo de poucos milhares de manifestantes invadissem, depredassem e saqueassem prédios públicos' (p. 695). Pool mobilizado a montante: 300 acampados em 05/01 e 5.500 em 07/01 (p. 576). Piso a jusante: 2.151 presos na desocupação de 09/01 (p. 688). RETIRADA EM 16/08/2026 — a cifra de 'cerca de 4 mil pessoas na Praça às 15h26' provinha da cronologia retrospectiva da Agência Brasil (jan/2024), atribuída apenas a 'policiais', sem órgão nomeado. Não foi localizada em fonte primária; não aparece nas cronologias contemporâneas (Poder360, 15/01/2023) nem na própria cronologia posterior da Agência Brasil (jan/2026); e a Wikipédia lusófona aplica o mesmo número a referente DIVERSO — os que deixaram o QG. Na CPMI, '4 mil' aparece em p. 532 (pico do acampamento em 15/11/2022) e em p. 1324 (depoimento do gen. Augusto Heleno, que se recusou a dizer se houve golpe).",
       "fonte_url": "https://www12.senado.leg.br/noticias/arquivos/2023/10/17/relatorio-cpmi-versao-consolidada_231017_100010.pdf",
       "fonte_local": "Fontes/04_T+1_Resposta-institucional/CPMI-8-de-Janeiro_Relatorio-Final_2023-10-17.pdf",
       "fonte_pagina": "CPMI: 674, 695, 643, 637, 374, 576, 688",
       "status_verificacao": "Confirmado em fonte primária quanto ao horário, ao local e à ordem de grandeza — CPMI, p. 674 (chegada à Praça às 15h26) e p. 695 ('poucos milhares'). A MAGNITUDE é faixa construída, não medição: 3.000 a 5.500 no conjunto mobilizado, com duas contagens oficiais independentes convergindo em ~3.000-3.900 na manhã de 08/01. NÃO existe estimativa oficial para a Praça às 15h26, e nenhuma deve ser apresentada como tal. A cifra de 4 mil foi retirada em 16/08/2026.",
       "status_classe": "Confirmado em fonte primária",
-      "nota_auditoria": "PT-34 RESOLVIDO em 16/08/2026, após busca em veículos de escala nacional. Retirada a cifra pontual de 'cerca de 4 mil pessoas na Praça às 15h26': sem lastro primário e sem corroboração independente — fonte única (Agência Brasil, jan/2024, 'policiais' sem órgão nomeado), ausente das cronologias contemporâneas, e aplicada a referente diverso pela Wikipédia. Substituída por faixa de 3.000 a 5.500 no conjunto mobilizado, ancorada em duas medições oficiais independentes (ANTT/Abin: 105 ônibus e ~3.900 passageiros; SSP/DF: 3.000 de público às 9h) mais a caracterização da CPMI ('poucos milhares'). Ver o dossiê em ESTIMATIVA-MULTIDAO-8JAN.md. TAREFA 19, 10/10/2026 — nome do mecanismo atribuído pelo pesquisador, sobre a proposta do documento 09. A mudança NÃO é de campo nem de classe: é de NOME, e a razão está escrita no próprio mecanismo_causal para que a redação não a trate como troca cosmética."
+      "nota_auditoria": "PT-34 RESOLVIDO em 16/08/2026, após busca em veículos de escala nacional. Retirada a cifra pontual de 'cerca de 4 mil pessoas na Praça às 15h26': sem lastro primário e sem corroboração independente — fonte única (Agência Brasil, jan/2024, 'policiais' sem órgão nomeado), ausente das cronologias contemporâneas, e aplicada a referente diverso pela Wikipédia. Substituída por faixa de 3.000 a 5.500 no conjunto mobilizado, ancorada em duas medições oficiais independentes (ANTT/Abin: 105 ônibus e ~3.900 passageiros; SSP/DF: 3.000 de público às 9h) mais a caracterização da CPMI ('poucos milhares'). Ver o dossiê em ESTIMATIVA-MULTIDAO-8JAN.md. TAREFA 19, 10/10/2026 — nome do mecanismo atribuído pelo pesquisador, sobre a proposta do documento 09. A mudança NÃO é de campo nem de classe: é de NOME, e a razão está escrita no próprio mecanismo_causal para que a redação não a trate como troca cosmética. || codificado `autonomia_movimento` = Lido, não documentado em tarefa 27, quarta rodada (camada T0 Execução), 16/10/2026 — as folhas 674 e 695 dão o avanço pela via S1 e a caracterização da própria CPMI — 'um grupo de poucos milhares de manifestantes' —, e nenhuma delas trata de direção. A folha documenta o ato e, quando é o caso, a falha da contenção; não documenta quem dirigia os invasores. **Não importei o valor de registro vizinho:** a divisão por alvo planejada em grupos está ancorada em PT-19 (CPMI p. 621) e a coordenação por rádio em PT-26 (p. 650), e são elas que sustentam valor afirmativo — nesta folha, não. Ler ausência de comando documentado como autonomia documentada seria inferir de silêncio."
     },
     {
       "id": "PT-35",
@@ -1174,14 +1175,14 @@
       "framing_narrativa": "'STF ditador'",
       "resposta_estatal": "Sem contenção efetiva",
       "mecanismo_causal": "Fechamento do ciclo de alvos em 37 minutos. O acréscimo da fonte primária é decisivo para PT-32: a tropa que bloqueava o acesso ao STF dispunha de seis viaturas, veículo blindado de grande porte e canhão de água — e conseguia bloquear. Não se tratava de força simbólica incapaz de conter, mas de dispositivo com meios de dispersão, recolhido por ordem sem justificativa registrada.",
-      "autonomia_movimento": null,
+      "autonomia_movimento": "Lido, não documentado",
       "fonte_trecho": "Relatório Final da CPMI, p. 673, seção '15h37, A Invasão do Supremo Tribunal Federal': 'o 1º Pelotão de Choque da Polícia Militar do Distrito Federal, sob o comando do tenente Rafael Pereira Martins, conseguia bloquear o acesso ao Supremo Tribunal Federal. O pelotão estava posicionado na via S1 e contava com seis viaturas, um veículo de grande porte com blindagem e canhão de água.'",
       "fonte_url": "https://www12.senado.leg.br/noticias/arquivos/2023/10/17/relatorio-cpmi-versao-consolidada_231017_100010.pdf",
       "fonte_local": "Fontes/04_T+1_Resposta-institucional/CPMI-8-de-Janeiro_Relatorio-Final_2023-10-17.pdf",
       "fonte_pagina": "CPMI: 673",
       "status_verificacao": "Confirmado em fonte primária — CPMI, p. 673. ACRÉSCIMO DECISIVO: descrição dos meios disponíveis à tropa que seria recolhida em PT-32.",
       "status_classe": "Confirmado em fonte primária",
-      "nota_auditoria": null
+      "nota_auditoria": "codificado `autonomia_movimento` = Lido, não documentado em tarefa 27, quarta rodada (camada T0 Execução), 16/10/2026 — a folha 673 descreve o dispositivo que bloqueava o acesso ao STF, e o que explica a invasão é o recolhimento da tropa (PT-32), não uma ordem dada aos invasores. A folha documenta o ato e, quando é o caso, a falha da contenção; não documenta quem dirigia os invasores. **Não importei o valor de registro vizinho:** a divisão por alvo planejada em grupos está ancorada em PT-19 (CPMI p. 621) e a coordenação por rádio em PT-26 (p. 650), e são elas que sustentam valor afirmativo — nesta folha, não. Ler ausência de comando documentado como autonomia documentada seria inferir de silêncio."
     },
     {
       "id": "PT-36",
@@ -1193,14 +1194,14 @@
       "framing_narrativa": "'Tomada do poder'",
       "resposta_estatal": "Nenhuma barreira interna eficaz",
       "mecanismo_causal": "Penetração do núcleo simbólico: a chegada ao gabinete presidencial é o ponto de máxima profundidade da ofensiva",
-      "autonomia_movimento": null,
+      "autonomia_movimento": "Lido, não documentado",
       "fonte_trecho": "Relatório Final da CPMI, p. 671: os invasores 'subiram as escadas internas e, por volta das 15h45, conseguiram chegar até o terceiro andar, local do gabinete presidencial. No percurso, destruíram tudo o que estivesse ao alcance, inclusive um relógio de Balthazar Martinot, do século XVII'; antes, na Praça, 'esfaquearam o painel As Mulatas, de Di Cavalcanti'.",
       "fonte_url": "https://www12.senado.leg.br/noticias/arquivos/2023/10/17/relatorio-cpmi-versao-consolidada_231017_100010.pdf",
       "fonte_local": "Fontes/04_T+1_Resposta-institucional/CPMI-8-de-Janeiro_Relatorio-Final_2023-10-17.pdf",
       "fonte_pagina": "CPMI: 671",
       "status_verificacao": "Confirmado em fonte primária — CPMI, p. 671",
       "status_classe": "Confirmado em fonte primária",
-      "nota_auditoria": null
+      "nota_auditoria": "codificado `autonomia_movimento` = Lido, não documentado em tarefa 27, quarta rodada (camada T0 Execução), 16/10/2026 — a folha 671 narra a chegada ao terceiro andar e a destruição no percurso, sem nomear comando. A folha documenta o ato e, quando é o caso, a falha da contenção; não documenta quem dirigia os invasores. **Não importei o valor de registro vizinho:** a divisão por alvo planejada em grupos está ancorada em PT-19 (CPMI p. 621) e a coordenação por rádio em PT-26 (p. 650), e são elas que sustentam valor afirmativo — nesta folha, não. Ler ausência de comando documentado como autonomia documentada seria inferir de silêncio."
     },
     {
       "id": "PT-37",
@@ -1212,14 +1213,14 @@
       "framing_narrativa": "—",
       "resposta_estatal": "Retirada da força de segurança",
       "mecanismo_causal": "Colapso da contenção e inversão da relação de força: o próprio agente estatal torna-se alvo",
-      "autonomia_movimento": null,
+      "autonomia_movimento": "Lido, não documentado",
       "fonte_trecho": "Relatório Final da CPMI, p. 667: 'Às 15h53, quando o processo de destruição se disseminava, os policiais militares simplesmente abandonaram o prédio.'",
       "fonte_url": "https://www12.senado.leg.br/noticias/arquivos/2023/10/17/relatorio-cpmi-versao-consolidada_231017_100010.pdf",
       "fonte_local": "Fontes/04_T+1_Resposta-institucional/CPMI-8-de-Janeiro_Relatorio-Final_2023-10-17.pdf",
       "fonte_pagina": "CPMI: 667",
       "status_verificacao": "Confirmado em fonte primária — CPMI, p. 667",
       "status_classe": "Confirmado em fonte primária",
-      "nota_auditoria": null
+      "nota_auditoria": "codificado `autonomia_movimento` = Lido, não documentado em tarefa 27, quarta rodada (camada T0 Execução), 16/10/2026 — a folha 667 registra que 'os policiais militares simplesmente abandonaram o prédio' — é a decisão do agente estatal que a folha documenta, não a do movimento. A folha documenta o ato e, quando é o caso, a falha da contenção; não documenta quem dirigia os invasores. **Não importei o valor de registro vizinho:** a divisão por alvo planejada em grupos está ancorada em PT-19 (CPMI p. 621) e a coordenação por rádio em PT-26 (p. 650), e são elas que sustentam valor afirmativo — nesta folha, não. Ler ausência de comando documentado como autonomia documentada seria inferir de silêncio."
     },
     {
       "id": "PT-38",
@@ -1238,7 +1239,7 @@
       "fonte_pagina": "Livro STF 2023: inteiro teor",
       "status_verificacao": "Confirmado em linha geral quanto ao vandalismo e à restauração — livro oficial do STF. Detalhamento por peça segue dependendo do laudo do Instituto de Criminalística/PF, não obtido. VALORAÇÃO DO DANO acrescentada em 16/08/2026 como série datada (R$ 11,4 mi em ago/2023 → ~R$ 12 mi em jan/2025), apoiada em imprensa com atribuição ao STF e SEM lastro em documento primário do corpus. Não citar valor único sem a data.",
       "status_classe": "Confirmado",
-      "nota_auditoria": "PT-38, 16/08/2026: (a) repontado para a cópia consolidada do livro em 10_Democracia-Inabalada/, após a remoção da duplicata byte-idêntica que estava em 03_T0_8-de-janeiro/; (b) acrescentada a valoração do dano como série datada. O valor de R$ 11,4 mi, que vinha da sinopse do documentário, NÃO foi adotado como cifra final — foi superado pelo levantamento de ~R$ 12 mi. Nenhum documento primário do corpus carrega esses números; a busca no livro, no balanço e na CPMI foi exaustiva e negativa."
+      "nota_auditoria": "PT-38, 16/08/2026: (a) repontado para a cópia consolidada do livro em 10_Democracia-Inabalada/, após a remoção da duplicata byte-idêntica que estava em 03_T0_8-de-janeiro/; (b) acrescentada a valoração do dano como série datada. O valor de R$ 11,4 mi, que vinha da sinopse do documentário, NÃO foi adotado como cifra final — foi superado pelo levantamento de ~R$ 12 mi. Nenhum documento primário do corpus carrega esses números; a busca no livro, no balanço e na CPMI foi exaustiva e negativa. || LIDO? NÃO — e por isso NÃO CODIFICADO em tarefa 27, quarta rodada (camada T0 Execução), 16/10/2026, com a razão escrita. Este é o único registro da camada cuja âncora não é folha: `fonte_pagina` traz 'Livro STF 2023: inteiro teor', um volume oficial de 210 páginas. **Não o li sob a pergunta da autonomia**, e `Lido, não documentado` seria afirmação falsa — o valor novo exige leitura de folha determinada, e é essa exigência que o torna útil. O campo fica vazio, e aqui o vazio significa exatamente o que deve significar: ninguém leu ainda. Codificá-lo é uma rodada de leitura, não de migração."
     },
     {
       "id": "PT-39",
@@ -1383,14 +1384,14 @@
       "framing_narrativa": "Manutenção do confronto",
       "resposta_estatal": "Contenção em curso",
       "mecanismo_causal": "Repertório residual de confronto após a perda do território interno — sinal de desorganização, não de coordenação",
-      "autonomia_movimento": null,
+      "autonomia_movimento": "Lido, não documentado",
       "fonte_trecho": "Relatório Final da CPMI, p. 681: 'Às 18h20, os extremistas colocaram fogo no gramado do Congresso Nacional. A Polícia Militar do Distrito Federal começou a retomar os prédios públicos e a prender radicais de direita.'",
       "fonte_url": "https://www12.senado.leg.br/noticias/arquivos/2023/10/17/relatorio-cpmi-versao-consolidada_231017_100010.pdf",
       "fonte_local": "Fontes/04_T+1_Resposta-institucional/CPMI-8-de-Janeiro_Relatorio-Final_2023-10-17.pdf",
       "fonte_pagina": "CPMI: 681",
       "status_verificacao": "Confirmado em fonte primária — CPMI, p. 681",
       "status_classe": "Confirmado em fonte primária",
-      "nota_auditoria": null
+      "nota_auditoria": "codificado `autonomia_movimento` = Lido, não documentado em tarefa 27, quarta rodada (camada T0 Execução), 16/10/2026 — a folha 681 registra o incêndio no gramado e o início da retomada; o campo `mecanismo_causal` deste registro lê o ato como sinal de desorganização, e é leitura do pesquisador, não documentação da folha. A folha documenta o ato e, quando é o caso, a falha da contenção; não documenta quem dirigia os invasores. **Não importei o valor de registro vizinho:** a divisão por alvo planejada em grupos está ancorada em PT-19 (CPMI p. 621) e a coordenação por rádio em PT-26 (p. 650), e são elas que sustentam valor afirmativo — nesta folha, não. Ler ausência de comando documentado como autonomia documentada seria inferir de silêncio."
     },
     {
       "id": "PT-47",

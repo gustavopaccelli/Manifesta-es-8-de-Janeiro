@@ -43,7 +43,8 @@ CLASSES = {"Confirmado em fonte primária", "Confirmado",
 # pesquisador (decisão 3 da tarefa 26(c), aberta no item 35.4). O VAZIO não
 # está aqui de propósito: ele não é valor, é a declaração de que o registro
 # ainda não foi lido sob esta pergunta -- 82 dos 83 hoje.
-AUTONOMIA = {"Autonomia relativa", "Conduzido de cima", "Não se aplica"}
+AUTONOMIA = {"Autonomia relativa", "Conduzido de cima", "Não se aplica",
+             "Lido, não documentado"}
 
 # Eixos que NÃO entram na contagem de fonte documental. O eixo 05 está fora desde
 # sempre: livro de método não é documento oficial. O eixo 12 entrou em 04/10/2026,
@@ -186,8 +187,11 @@ def main():
     #   - valor que AFIRMA autonomia ou condução exige `fonte_pagina`, porque
     #     a pergunta que este campo responde é a central da pesquisa e
     #     codificação sem folha é exatamente a âncora-que-parece-âncora;
-    #     "Não se aplica" está de fora da cobrança -- negar pertinência não
-    #     precisa de folha, e cobrá-la seria ruído;
+    #     só "Não se aplica" fica de fora da cobrança -- negar pertinência
+    #     não precisa de folha, e cobrá-la seria ruído. "Lido, não
+    #     documentado", que entrou em 16/10/2026, PRECISA: dizer que se leu
+    #     e a fonte não documenta é afirmação sobre uma folha determinada,
+    #     e sem folha citada a afirmação não tem objeto;
     #   - o vazio é CONTADO e impresso, nunca somado aos valores: vazio é
     #     "ninguém leu ainda sob esta pergunta", e zero suposto é silêncio.
     print("")

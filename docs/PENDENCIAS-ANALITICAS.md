@@ -1717,7 +1717,7 @@ Você delegou a decisão. **Gohn (2019) fecha PARCIALMENTE a tarefa 10, e num n�
 | 10 | Acrescentar a literatura brasileira em livro — 🔶 **eixo 14 com 5 arquivos, 1.832 p.**, nenhuma lida. A coleta somou **12 peças** — 7 coletadas, 3 entregues por você e 2 capítulos a mais por encaminhamento —, e o manifesto conta menos arquivos do que isso porque **o volume integral substituiu oito offprints em 08/10** (item 39.1): peça coletada e arquivo no corpus deixaram de ser a mesma unidade. **A tarefa SE DIVIDIU em duas, e metade está fechada** (item 38.8): o mapa bibliográfico brasileiro que as sínteses não tinham está em Gohn (2019), que mapeia 1970-2019 por ciclo nomeando autores e paradigmas; o que resta é **obter os textos que esse mapa nomeia** — o cânone (Sader, Scherer-Warren, Avritzer, Doimo, Telles, Abranches, Nobre, Solano, Messenberg) é de editora comercial, **zero com autoria casada em acesso aberto**, e depende dos seus arquivos | 11.4, 22.4, 37, 38 | seus arquivos |
 | 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **25 pendentes**: 8 lidos, 7 com ficha da 1ª leva, 3 impedidos. Números medidos por `localizar_camada_a.py` a cada geração desta linha, nunca digitados. Das 25, **9 têm arquivo em algum servidor e são barradas no cliente automatizado** e **16 não têm depósito aberto em lugar nenhum**; **8 das 25 estão num só periódico, a *Mobilization*** (item 47.5) | 23, 24, 25 | acesso institucional |
 | 25 | **A literatura do bolsonarismo como mobilização** — 🔶 **coleta fechada em 04/10**: **18 peças, 453 p.** em `Fontes/13_Bolsonarismo-mobilizacao/` — 14 por OpenAlex e **as 4 barradas entregues pelo pesquisador** (item 34.6). **Três foram lidas** e ancoram registro: Araujo e Sales (2022), que tirou PT-05 de contextual; Fernandes e Silva (2021), que tirou a "tolerância policial" de PT-02; e von Bülow e Abers (2024), que **fechou PT-06 e retificou o mecanismo dele**. **Faltam 15, 400 p.** — e **nenhuma bloqueia registro**: a leitura restante serve à redação, não à codificação | 23.2, 31.4, 33, 34, 35 | leitura |
-| 27 | **Codificar `autonomia_movimento` nos registros que faltam** — 🔶 **aberta em 16/10/2026, a seu pedido**, e é a tarefa que o campo 17 criou. O esquema ganhou o campo por sua decisão e ele nasceu com **1 de 83 registros codificados** — só PT-06, cujo lastro já estava transcrito em `fonte_trecho` e conferido pelo ciclo. **Faltam 82**, e vazio ali significa **não codificado**, não *não se aplica*: a contagem sai do passo 4 do ciclo e encolhe a cada registro, nunca é digitada. **O trabalho é leitura, registro por registro** — abrir a fonte que o registro já cita e decidir entre *Autonomia relativa*, *Conduzido de cima* e *Não se aplica*. **Codificar por inferência está impedido por construção:** a guarda da checagem 4 exige `fonte_pagina` para os dois primeiros valores, de modo que valor afirmativo sem folha derruba o ciclo. **Duas perguntas de escopo, suas, e nenhuma bloqueia o começo:** se o campo se codifica em todas as camadas ou só na de mobilização — boa parte dos 83 é ato de Estado e decisão judicial, e para esses o valor tende a ser *Não se aplica* —, e se o nome do campo e os três valores ficam como propostos (item 55.4). **Pelo registro: é a primeira tarefa de codificação aberta desde que a 14 fechou, em 04/10/2026.** | 55 | leitura, registro por registro |
+| 27 | **Codificar `autonomia_movimento` nos registros que faltam** — 🔶 **aberta em 16/10/2026, a seu pedido**, e é a tarefa que o campo 17 criou. O esquema ganhou o campo por sua decisão e ele nasceu com **um** registro codificado, PT-06, cujo lastro já estava transcrito em `fonte_trecho`. **Hoje: 5 de 83, e faltam 78** — a contagem sai do passo 4 do ciclo e encolhe a cada registro, nunca é digitada. **PRIMEIRA RODADA EXECUTADA em 16/10/2026, por seu encaminhamento de começar pela camada de mobilização:** os cinco registros da fase `T0 Mobilização` — PT-24 e PT-26 como *Autonomia relativa*, PT-25 e PT-28 como *Não se aplica* (ator de Estado) e **PT-27 lido e NÃO codificado**, porque a folha dele documenta a barreira de gradis e não quem dirigia a marcha. **PT-24 ganhou folha e três transcrições:** a CPMI p. 644 documenta a decisão da marcha por discussão e **votação** entre os acampados, e essa folha não estava citada — o registro foi de 2 para **5 de 5** transcrições localizadas (item 56). Vazio ali significa **não codificado**, não *não se aplica* — e **um dos 78 já foi lido**: enquanto o vocabulário não tiver valor para *lido e a fonte não documenta*, que é a sua pergunta 2 do item 55.4, a contagem não distingue lido-e-silencioso de não-lido. **O trabalho é leitura, registro por registro** — abrir a fonte que o registro já cita e decidir entre *Autonomia relativa*, *Conduzido de cima* e *Não se aplica*. **Codificar por inferência está impedido por construção:** a guarda da checagem 4 exige `fonte_pagina` para os dois primeiros valores, de modo que valor afirmativo sem folha derruba o ciclo. **Duas perguntas de escopo, suas, e nenhuma bloqueia o começo:** se o campo se codifica em todas as camadas ou só na de mobilização — boa parte dos 83 é ato de Estado e decisão judicial, e para esses o valor tende a ser *Não se aplica* —, e se o nome do campo e os três valores ficam como propostos (item 55.4). **Pelo registro: é a primeira tarefa de codificação aberta desde que a 14 fechou, em 04/10/2026.** | 55 | leitura, registro por registro |
 | 16 | **Redação do artigo** | 3, 4, 5, 6, 9, 10 | tudo acima |
 
 **Nenhuma pendência de dado depende de você** — isso valia desde 16/08, deixou de valer em 30/09 com a tarefa 24, e em 04/10 mudou duas vezes: a tarefa **14** fechou a parte que podia fechar e deixou a **25**, bibliográfica; e horas depois, na terceira rodada, **você entregou as quatro peças barradas e mandou ler duas**, o que fechou a coleta da 25 e tirou PT-05 de contextual. **O que resta da 25 é leitura, e a leitura não depende de você.**
@@ -2659,3 +2659,56 @@ A mesma recontagem levanta uma pergunta que não é de contagem: **a promoção 
 2. **Nome e vocabulário são seus.** Propus `autonomia_movimento` e os três valores; trocar qualquer um é um comando. Pelo precedente da tarefa 19, nomear é do pesquisador — eu nomeio para que o campo exista, não para fechar a questão.
 3. **A outra metade de uma correção de 30/09, dezesseis dias depois.** O item 29.1 registra que acrescentar PT-18A quebrou o ciclo em quatro pontos, um deles a mensagem de `verificar_integridade.py` com **"82 x 16" fixo no texto** — *"passava na checagem e mentia na saída"*. Aquela rodada trocou o **82** por medição e **deixou o 16**, porque o 16 ainda estava certo. Hoje a mensagem dizia "83 x 16" sobre um codebook de 17 campos: **corrigiu-se a metade que já estava errada e manteve-se a que só estava certa por enquanto.** Agora os dois números saem de `len()`. A lição é estreita e vale escrita: **ao substituir uma cifra fixa por medição, meça as outras da mesma linha** — a que não mudou hoje é a que vai mentir sozinha depois.
 4. **Achado de passagem, e é cifra sem lastro:** o `README.md` dizia **"82 sub-eventos"** desde que PT-18A entrou e o codebook foi a 83, em 30/09/2026 — dezesseis dias. Corrigido junto, porque a linha estava sendo editada de todo modo — e é da mesma família de sempre, a cifra que envelhece sem idade visível. **Não numerei a ocorrência:** a contagem da família está em duas formas na agenda (as dezesseis numeradas e as acrescentadas em 13, 14 e 15/10), e somar de cabeça é o próprio defeito.
+
+---
+
+## 56. Tarefa 27, primeira rodada: a camada de mobilização, e a folha que faltava — 🔶 16/10/2026
+
+**Encaminhamento:** *"Comece pela camada de mobilização."*
+
+**O recorte, e ele é do próprio esquema.** *Camada de mobilização* é a fase que o campo `fase` nomeia: **`T0 Mobilização`, cinco registros**, PT-24 a PT-28 — a marcha que sai do Setor Militar Urbano às 13h e chega à linha de contenção às 14h43. Não ampliei o recorte: as camadas vizinhas, onde a pergunta também discrimina, estão contadas em 56.3.
+
+| | Valor | O que o sustenta |
+|:--|:--|:--|
+| **PT-24** | **Autonomia relativa** | CPMI **p. 644**, folha nova neste registro |
+| **PT-25** | **Não se aplica** | ator de Estado — o áudio do secretário em exercício ao governador |
+| **PT-26** | **Autonomia relativa** | CPMI p. 650, folha já citada |
+| **PT-27** | **(vazio)** — lido e não codificado | a folha 651 documenta a barreira, não quem dirigia |
+| **PT-28** | **Não se aplica** | ator de Estado — a postura do batalhão da PMDF |
+
+### 56.1 A folha 644, que o registro não citava, e é ela que responde
+
+**A pergunta da autonomia tinha resposta documental, e ela estava a uma folha de distância.** PT-24 citava as folhas 645 e 648 da CPMI — o horário da marcha e a escolta da PMDF. Quem responde *quem decidiu a marcha* é a **644**, onde o relatório reproduz os alertas da Abin das 8h30 e das 10h:
+
+> *"os acampados aparentam estar divididos em grupos, com sua própria organização cada"*
+>
+> *"após discussão acalorada entre acampados às 8h50, ficou decidido que os manifestantes partirão em marcha para a esplanada às 13h"*
+>
+> *"em votação, decidiram que a marcha só iniciará quando todas as caravanas chegarem e estão evitando divulgar um horário para o início"*
+
+**Deliberação horizontal documentada em fonte primária, e com o método da decisão nomeado: discussão e voto.** Não é inferência sobre ausência de liderança — é registro positivo de como a decisão foi tomada, feito por quem monitorava o acampamento naquela manhã.
+
+As três transcrições entraram em `fonte_trecho` e a folha em `fonte_pagina`, de modo que **o passo 7 do ciclo passou a conferi-las contra o PDF**: PT-24 foi de **2/2** para **5/5 transcrições localizadas**. Codificação cujo lastro ninguém confere é a âncora que parece âncora, e aqui o lastro é conferido a cada execução.
+
+> **PT-26 não precisou de folha nova, e o que ele documenta é outra coisa.** A folha 650 registra que a estratégia dos rádios comunicadores *"havia sido incentivada em grupos de telegram e confirma o nível de organização da mobilização"*, e a instrução transcrita manda *"organizem entre grupos de subgrupos lá em Brasília"*. **Organização não é condução:** a folha documenta coordenação distribuída, circulando por incentivo em aplicativo, sem liderança nomeada dirigindo o avanço. O valor afirma vida própria, não desorganização — e essa distinção é o que o campo existe para carregar.
+
+### 56.2 PT-27 não recebeu valor, e a razão ficou no registro
+
+A folha de PT-27 é a 651, e ela documenta a barreira: duas linhas de gradil sem travamento, a ausência de tropa de contenção de distúrbios, a revista individualizada que o comandante-geral dizia necessária. **Nada ali diz quem dirigia a marcha.**
+
+Codificar a partir dessa folha seria transportar para PT-27 o valor que a **644** sustenta para PT-24 — **a cifra correta no referente errado**, que é o modo de falha desta casa — e aqui na forma mais barata de produzir, porque as duas folhas estão a dez páginas uma da outra e pertencem ao mesmo documento. Não fiz. A leitura ficou escrita na `nota_auditoria` do registro, para que não se perca.
+
+> **E isto expõe um buraco no vocabulário que eu mesmo propus.** Os três valores cobrem *tem autonomia*, *é conduzido* e *não se aplica* — e **não cobrem *lido, e a fonte não documenta***. É estado distinto dos três e distinto do vazio: *não se aplica* é impertinência afirmada, o vazio é ninguém leu, e PT-27 é leitura que não encontrou resposta. **Não acrescentei o quarto valor:** vocabulário é seu, é a sua pergunta 2 do item 55.4, e o campo tem um dia de vida. Mas **o buraco já custou visibilidade**: a contagem de 78 vazios inclui um registro lido, e o ciclo não os distingue.
+
+### 56.3 O que falta, e quanto custa cada fatia
+
+| Camada (`fase`) | Registros | Por que importa à pergunta |
+|:--|--:|:--|
+| **T-1 Operacional** | **25** | é onde a pergunta é de fato disputada: acampamentos, caravanas, financiamento, grupos |
+| **T-1 Conjuntural** | **18** | a base que antecede o líder — a camada de PT-06, já codificado |
+| T0 Execução | 11 | a invasão |
+| T0 Resposta tática / política | 6 | ato de Estado, tende a *Não se aplica* |
+| T+1 (todas as subfases, com o registro `T0/T+1`) | 18 | resposta institucional, tende a *Não se aplica* |
+| **T0 Mobilização** | **5** | ✅ **esta rodada** |
+
+**A fatia de maior retorno é a `T-1 Operacional`, e não é a próxima por acaso:** 25 registros, e é ali que *conduzido de cima* tem chance real de aparecer — a denúncia da PGR documenta núcleos, e o relatório da CPMI documenta financiamento de caravanas. **Uma camada em que o valor pode virar é a que testa o campo**; esta rodada mostrou o campo funcionando onde ele já tendia a um lado.

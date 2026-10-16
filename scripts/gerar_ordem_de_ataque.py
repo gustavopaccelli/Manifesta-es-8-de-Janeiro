@@ -103,6 +103,11 @@ def medir_codebook():
             if p.lower().endswith(".pdf") and (RAIZ / p).exists():
                 com_pdf.append(e)
                 break
+    # O campo 17 entrou em 16/10/2026 com 82 dos 83 registros vazios, e vazio
+    # ali significa NÃO CODIFICADO. A conta sai daqui para que a linha da
+    # tarefa 27 encolha sozinha a cada registro codificado: "faltam 82" escrito
+    # à mão envelheceria no primeiro, que é como a linha da 17 envelheceu.
+    sem_autonomia = [e for e in eventos if not (e.get("autonomia_movimento") or "").strip()]
     return {
         "registros": len(eventos),
         "registros_sem_pagina": len(sem_pagina),
@@ -110,6 +115,8 @@ def medir_codebook():
         "registros_sem_pagina_pdf": len(com_pdf),
         "registros_sem_pagina_pdf_palavra": PALAVRA.get(len(com_pdf), str(len(com_pdf))),
         "fragmentos_por_janela": conferir_paginas.PARCIAIS_BASE,
+        "autonomia_codificados": len(eventos) - len(sem_autonomia),
+        "autonomia_sem_codificar": len(sem_autonomia),
     }
 
 

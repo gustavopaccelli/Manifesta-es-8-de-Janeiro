@@ -314,7 +314,7 @@ Desmobilização preventiva do dispositivo — o elo que faltava entre a intelig
 
 <details><summary>Mecanismo causal atribuído (leitura do analista)</summary>
 
-Concentração de recursos: o acampamento multiplica-se por quase 20 vezes (5.500 pessoas em 07/01), atingindo a massa crítica necessária para romper barreiras
+Concentração de contingente no acampamento: de 300 pessoas em 05/01 a 5.500 estimadas em 07/01 (p. 576), pela chegada de ônibus e manifestantes — é o que torna disponível no dia 8 um contingente que três dias antes não existia. A segunda cifra é declaradamente estimativa
 
 </details>
 

@@ -445,6 +445,26 @@ def main():
         # vocabulario retirado.
         "Conduzido de cima": ("18/10/2026", "PT-10A (autonomia_movimento)",
                               "Conduzido por patrocínio de setor organizado"),
+        # 18/10/2026, frente F5 (item 66): PT-21. E AQUI A ENTRADA NAO E O NOME,
+        # E O CONCEITO -- e essa e a licao da rodada.
+        #
+        # A tarefa 19 retirou "massa critica" de PT-34 em 10/10 e registrou aqui
+        # a STRING retirada ("Massa critica atingida no ponto de maxima densidade
+        # simbolica"). O conceito continuou vivo em PT-21, que afirmava "a massa
+        # critica NECESSARIA para romper barreiras", e em CINCO ocorrencias em
+        # tres dos quatro artefatos -- nenhuma acusada, porque a guarda vigiava a
+        # frase de um registro e nao o termo. **Nome retirado de um registro nao
+        # retira o conceito do codebook.** Com estas duas entradas, retira.
+        #
+        # Medido em 18/10, depois da limpeza: zero ocorrencias nos quatro
+        # artefatos. Discussao legitima do conceito -- o verbete de Oliver, por
+        # exemplo -- vive em docs/analise/, que nao e artefato vigiado.
+        "massa crítica": ("18/10/2026", "PT-21 e PT-34",
+                          "o que a folha mede: 300 → 5.500 pessoas"),
+        "Massa crítica": ("18/10/2026", "PT-21 e PT-34",
+                          "o que a folha mede: 300 → 5.500 pessoas"),
+        "Concentração de recursos": ("18/10/2026", "PT-21",
+                                     "Concentração de contingente no acampamento"),
     }
     achou_morto = 0
     for rel in ARTEFATOS:

@@ -199,6 +199,19 @@ PARCIAIS_BASE = 0
 # faz o ciclo cair.
 EMPATES_BASE = 0
 
+# LINHA DE BASE DOS REGISTROS COM `fonte_pagina` E SEM PAGINA EXTRAIVEL: CINCO,
+# medida em 18/10/2026. Sao os que citam a fonte por LOCALIZADOR ESTRUTURAL e nao
+# por folha -- `inteiro teor`, `peca integral`, secao -- e por isso ficam fora do
+# alcance deste conferidor, que abre PDF numa pagina.
+#
+# ELES ERAM INVISIVEIS ATE AQUI, e e isso que a base conserta. `pares()` nao
+# devolvia par nenhum para eles, de modo que nao entravam em `cands` e nao
+# apareciam em lugar algum da saida: nem como conferidos, nem como
+# indeterminados. Quatro registros sumiam em silencio da unica checagem que le a
+# fonte. Com a base, o sexto que aparecer faz o ciclo cair -- porque registro que
+# deixa de ser conferivel tem de ser uma decisao, nao um efeito colateral.
+SEM_PAGINA_EXTRAIVEL_BASE = 5
+
 
 def _prefixo_maximo(alvo, folha):
     """Maior prefixo de `alvo` presente em `folha`, por busca binária."""
@@ -408,6 +421,25 @@ def texto_pagina(caminho, n):
 
 INTERVALO = re.compile(r"\b(\d{1,4})\s*[-–—]\s*(\d{1,4})\b")
 
+# LOCALIZADOR ESTRUTURAL, acrescentado em 18/10/2026 (item 64). Segmento que
+# localiza por ESTRUTURA INTERNA nao cede numeral nenhum a `pares()`.
+#
+# O caso que motivou: `fonte_pagina` de PT-03E e
+#   TSE RCand: ementa itens 2-4 e 12; dispositivo
+# e `pares()` devolvia [('TSE RCand', [2, 3, 4, 12])] -- ITENS DE EMENTA LIDOS
+# COMO PAGINAS. Nao produzia erro porque o teste seguinte, em main(), descarta o
+# que nao aponta para PDF; mas **o que salvava era a extensao do arquivo, nao o
+# localizador**, e a rota daquela peca em PROCEDENCIA declara que o endpoint do
+# TSE serve o MESMO conteudo. No dia em que o acordao entrasse tambem em PDF, o
+# registro passaria a ser conferido contra as FOLHAS 2, 3, 4 e 12 de uma peca
+# cujas transcricoes estao noutro lugar -- e um casamento acidental ali seria a
+# cifra certa no referente errado, com aprovacao do ciclo.
+#
+# Falha FECHADA: o registro deixa de ser candidato em vez de ser conferido
+# errado, e passa a ser contado pela SEM_PAGINA_EXTRAIVEL_BASE. Medido em
+# 18/10/2026: destes termos, so PT-03E casa em todo o codebook.
+ESTRUTURAL = re.compile(r"\bitem\b|\bitens\b|ementa|disposit", re.I)
+
 
 def pares(fonte_pagina):
     """'CPMI: 646, 711 | Cappelli: 55, 57' -> [('CPMI',[646,711]),('Cappelli',[55,57])]
@@ -422,6 +454,8 @@ def pares(fonte_pagina):
         if ":" not in seg:
             continue
         cod, resto = seg.split(":", 1)
+        if ESTRUTURAL.search(resto):
+            continue
         nums = set()
         for a, b in INTERVALO.findall(resto):
             a, b = int(a), int(b)
@@ -723,6 +757,26 @@ def main():
 
     print("=" * 78)
     print("confirmados {} | falhas {} | indeterminados {}".format(ok, falha, indet))
+
+    # OS QUE ESTE CONFERIDOR NAO ALCANCA, nomeados desde 18/10/2026 (item 64).
+    # Citam a fonte por localizador estrutural e nao por folha, de modo que
+    # `pares()` nao devolve par e eles nunca entram em `cands`. Antes disto eles
+    # simplesmente NAO APARECIAM -- e contagem que nao imprime o que exclui
+    # ensina a confiar no total errado.
+    sem_extraivel = sorted(e["id"] for e in dados["eventos"]
+                           if (e.get("fonte_pagina") or "").strip()
+                           and not pares(e.get("fonte_pagina")))
+    print("fora do alcance deste conferidor: {} registro(s) com `fonte_pagina` e "
+          "sem página extraível — {}".format(len(sem_extraivel),
+                                             ", ".join(sem_extraivel)))
+    print("  citam por localizador estrutural (inteiro teor, peça integral, seção);")
+    print("  a folha deles não existe, e por isso não há o que abrir.")
+    if len(sem_extraivel) != SEM_PAGINA_EXTRAIVEL_BASE:
+        print("  ~ ATENÇÃO: a linha de base de 18/10/2026 é {}. Um registro deixou "
+              "de ser conferível,".format(SEM_PAGINA_EXTRAIVEL_BASE))
+        print("    ou voltou a ser: confira qual e por quê, e atualize "
+              "SEM_PAGINA_EXTRAIVEL_BASE")
+        print("    neste arquivo dizendo no commit a razão.")
     if atravessa_total:
         print("{} fragmento(s) conferem POR INTEIRO ao juntar a página vizinha: a "
               "transcrição atravessa a quebra de página.".format(atravessa_total))

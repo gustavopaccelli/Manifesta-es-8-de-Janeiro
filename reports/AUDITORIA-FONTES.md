@@ -128,15 +128,11 @@ Nenhum dado analítico foi tocado — nenhum fato, mecanismo causal ou enquadram
 
 ### Conferência integral contra o texto dos PDFs
 
-Rodada sobre os **58 registros com página estruturada em documento PDF**, abrindo cada arquivo na página citada e procurando a transcrição literal:
+São **77** os registros com página estruturada apontando para documento PDF: os que o passo 7 do ciclo abre, folha por folha, procurando a transcrição literal. **O resultado da conferência não é transcrito para cá** — ele sai de `conferir_paginas.py --todos`, que o mede a cada execução, e uma segunda cópia da cifra é uma cópia para envelhecer.
 
-| Resultado | N |
-|:--|--:|
-| Transcrição localizada na página citada | **53** |
-| Divergência | **0** |
-| Sem transcrição literal para conferir | 5 |
+**4 deles trazem referência de página sem citação entre aspas** — PT-13, PT-23, PT-33, PT-55 —, então não há o que casar contra o PDF, e aparecem como indeterminados naquele passo. Não são falhas: são candidatos naturais a ganhar transcrição literal na próxima passagem pelo `Caderno-de-evidencias/`.
 
-Os cinco indeterminados — PT-08, PT-13, PT-23, PT-33 e PT-55 — não são falhas: seu `fonte_trecho` traz referência de página sem citação entre aspas, então não há o que casar contra o PDF. São candidatos naturais a ganhar transcrição literal na próxima passagem pelo `Caderno-de-evidencias/`.
+**E 5 registros citam a fonte por localizador estrutural**, ficando fora do alcance daquele conferidor: PT-03E, PT-06B, PT-19A, PT-38, PT-56. Dizem *inteiro teor*, *peça integral* ou seção — a folha deles não existe, e por isso não há o que abrir. Não é lacuna: é outra forma de âncora, e quem a resolve é a **checagem 5** da integridade, que confere cada `§seção` citada contra os cabeçalhos do arquivo vinculado.
 
 > **Dois falsos positivos do próprio verificador, corrigidos e registrados.** PT-31 falhou porque o casamento estava ancorado no início da citação, e hifenização no PDF costuma atingir justamente as primeiras palavras — passou a procurar janelas ao longo do texto. PT-16 falhou porque seu `fonte_trecho` usa aspas simples para **títulos de seção** (*'A radicalização do movimento'*) e não só para transcrições; a extração casava o intervalo entre dois títulos, que é aparato de referência. Ambos conferidos manualmente contra o PDF e **corretos no codebook**. Fica o registro de que a falha era do instrumento, não do dado.
 

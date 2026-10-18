@@ -150,19 +150,45 @@ def main():
     w("")
     w("### Conferência integral contra o texto dos PDFs")
     w("")
-    w("Rodada sobre os **58 registros com página estruturada em documento PDF**, abrindo cada "
-      "arquivo na página citada e procurando a transcrição literal:")
+    # AS CIFRAS DESTE BLOCO ERAM DIGITADAS, E EM 18/10/2026 ESTAVAM ERRADAS.
+    # Diziam "58 registros com página estruturada", "53 localizadas" e nomeavam
+    # os indeterminados como "PT-08, PT-13, PT-23, PT-33 e PT-55" — e **PT-08
+    # não era um deles**. Era narrativa de setembro sobrevivendo dentro de um
+    # GERADOR, que é o último lugar onde alguém procura cifra velha: o cabeçalho
+    # deste arquivo promete que "as tabelas saem dos dados", e estas não saíam.
+    # Medido: 77 candidatos, não 58; 4 sem transcrição, não 5.
+    #
+    # O que dá para medir aqui SEM ABRIR PDF passa a ser medido. O resto — quantas
+    # transcrições casaram e quantas divergiram — deixa de ser afirmado neste
+    # relatório, porque só o passo 7 do ciclo sabe, e repetir a cifra aqui seria
+    # criar a segunda cópia que envelhece sozinha.
+    from conferir_paginas import pares, transcricoes  # noqa: E402
+    cands = [e for e in eventos
+             if any((reg_docs.get(c) or "").lower().endswith(".pdf")
+                    for c, _ in pares(e.get("fonte_pagina")))]
+    fora = sorted(e["id"] for e in eventos
+                  if (e.get("fonte_pagina") or "").strip()
+                  and not pares(e.get("fonte_pagina")))
+    sem_transcricao = sorted(e["id"] for e in cands
+                             if not transcricoes(e.get("fonte_trecho")))
+    w("São **{}** os registros com página estruturada apontando para documento PDF: "
+      "os que o passo 7 do ciclo abre, folha por folha, procurando a transcrição "
+      "literal. **O resultado da conferência não é transcrito para cá** — ele sai de "
+      "`conferir_paginas.py --todos`, que o mede a cada execução, e uma segunda "
+      "cópia da cifra é uma cópia para envelhecer.".format(len(cands)))
     w("")
-    w("| Resultado | N |")
-    w("|:--|--:|")
-    w("| Transcrição localizada na página citada | **53** |")
-    w("| Divergência | **0** |")
-    w("| Sem transcrição literal para conferir | 5 |")
+    w("**{} deles trazem referência de página sem citação entre aspas** — {} —, então "
+      "não há o que casar contra o PDF, e aparecem como indeterminados naquele passo. "
+      "Não são falhas: são candidatos naturais a ganhar transcrição literal na próxima "
+      "passagem pelo `Caderno-de-evidencias/`.".format(
+          len(sem_transcricao), ", ".join(sem_transcricao)))
     w("")
-    w("Os cinco indeterminados — PT-08, PT-13, PT-23, PT-33 e PT-55 — não são falhas: seu "
-      "`fonte_trecho` traz referência de página sem citação entre aspas, então não há o que "
-      "casar contra o PDF. São candidatos naturais a ganhar transcrição literal na próxima "
-      "passagem pelo `Caderno-de-evidencias/`.")
+    w("**E {} registros citam a fonte por localizador estrutural**, ficando fora do "
+      "alcance daquele conferidor: {}. Dizem *inteiro teor*, *peça integral* ou seção — "
+      "a folha deles não existe, e por isso não há o que abrir. Não é lacuna: é outra "
+      "forma de âncora, e quem a resolve é a **checagem 5** da integridade, que confere "
+      "cada `§seção` citada contra os cabeçalhos do arquivo vinculado.".format(
+          len(fora), ", ".join(fora)))
     w("")
     w("> **Dois falsos positivos do próprio verificador, corrigidos e registrados.** PT-31 falhou "
       "porque o casamento estava ancorado no início da citação, e hifenização no PDF costuma "

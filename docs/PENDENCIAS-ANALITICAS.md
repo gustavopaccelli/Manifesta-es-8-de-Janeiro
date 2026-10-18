@@ -3058,7 +3058,7 @@ A checagem 5 passou a **resolver** o localizador: todo `§Título` em `fonte_pag
 | Conduzido de cima | 1 |
 | (vazio) | **0** |
 
-**O ciclo passa em nove passos, com `confirmados 73 | falhas 0 | indeterminados 5` — os mesmos de antes.** PT-19A não entrou na conferência de páginas e não devia: `pares()` não extrai numeral do localizador novo, de modo que o registro não é candidato — como PT-38 e PT-56, que citam *inteiro teor*. **Conferi isso antes de escrever o campo**, porque um numeral no localizador (eu havia pensado em `inteiro teor (51 linhas)`) teria mandado o registro para a fila de PDFs e mexido na linha de base dos indeterminados.
+**O ciclo passa em nove passos, com `confirmados 73 | falhas 0 | indeterminados 5` — os mesmos de antes.** *(Em 18/10/2026 os indeterminados passaram a **4**, e por razão escrita: PT-03E saiu da fila quando a guarda do localizador estrutural entrou — item 64.)* PT-19A não entrou na conferência de páginas e não devia: `pares()` não extrai numeral do localizador novo, de modo que o registro não é candidato — como PT-38 e PT-56, que citam *inteiro teor*. **Conferi isso antes de escrever o campo**, porque um numeral no localizador (eu havia pensado em `inteiro teor (51 linhas)`) teria mandado o registro para a fila de PDFs e mexido na linha de base dos indeterminados.
 
 **O que isto muda na leitura — e muda uma coisa, pequena e vale dizer.** Dos **31** registros em que a pergunta tem objeto, agora são **15 com resposta documentada contra 16 silenciosos**: antes de PT-19A era 15 a 15, e **o silêncio passou a ser maioria, por um.** Não é achado sobre o mundo e não deve ser escrito como tal — é mais uma medida do corpus, no sentido do item 60.1. Mas desfaz a possibilidade de escrever *"na maioria dos casos em que a pergunta cabe, as fontes respondem"*, que o empate ainda tolerava e hoje seria falso.
 
@@ -3121,3 +3121,58 @@ Varri o repositório por `01_PROJETO-PESQUISA`, `02_PROPOSTA-DISCIPLINA` e `proj
 | `scripts/verificar_integridade.py` | 1 | comentário histórico ✅ |
 
 **Nenhuma menção restante afirma no presente.** A varredura é o passo 6 da verificação do plano, e repeti-la é o que prova a limpeza.
+
+---
+
+## 64. A guarda do localizador estrutural — e a cifra que mentia dentro do gerador — 🔶 18/10/2026
+
+**Encaminhamento:** *"Execute o plano."* Esta é a frente F2, e ela rendeu mais do que o plano previa.
+
+### 64.1 O risco que o plano descrevia, fechado
+
+`fonte_pagina` de PT-03E é `TSE RCand: ementa itens 2-4 e 12; dispositivo`, e `pares()` devolvia `[('TSE RCand', [2, 3, 4, 12])]` — **itens de ementa lidos como páginas.** Não produzia erro, porque o teste seguinte descarta o que não aponta para PDF; mas **o que salvava era a extensão do arquivo, não o localizador**, e a rota daquela peça em `PROCEDENCIA` declara que o endpoint do TSE serve o mesmo conteúdo. No dia em que o acórdão entrasse também em PDF, o registro passaria a ser conferido contra as folhas 2, 3, 4 e 12 de uma peça cujas transcrições estão noutro lugar.
+
+**A saída que o plano previa — reescrever o localizador em `§` — foi descartada por medição, e vale registrar por quê:** o `.html` do TSE tem **zero cabeçalhos** (`<h1>`–`<h6>`), porque é exportação de Word com 2.881 `<span>` e 1.552 `<p>`. A guarda da checagem 5, criada em 16/10, resolve `§` contra cabeçalho — logo **não alcança este arquivo**. A saída executada foi a outra: **endurecer `pares()`**, com `ESTRUTURAL = item | itens | ementa | disposit`, falha fechada. Medido antes de aplicar: desses termos, **só PT-03E casa em todo o codebook** — zero colateral.
+
+### 64.2 E quatro registros eram invisíveis na única checagem que lê a fonte
+
+Endurecer `pares()` tirava PT-03E da fila e baixava `indeterminados` de 5 para 4. Ao conferir o que isso significava, apareceu o problema maior: **os registros sem página extraível nunca apareciam em lugar nenhum da saída** — nem conferidos, nem indeterminados. `pares()` não devolvia par, eles não entravam em `cands`, e sumiam.
+
+| | |
+|:--|--:|
+| registros com `fonte_pagina` | 82 |
+| com página extraível apontando para PDF | **77** |
+| **fora do alcance, por localizador estrutural** | **5** — PT-03E, PT-06B, PT-19A, PT-38, PT-56 |
+| dos 77, sem transcrição literal para casar | 4 — PT-13, PT-23, PT-33, PT-55 |
+
+E as contas fecham nos dois sentidos: 77 + 5 = 82, e 73 confirmados + 4 indeterminados = 77.
+
+> **Contagem que não imprime o que exclui ensina a confiar no total errado.** `conferir_paginas.py` passou a **nomear e contar** os cinco, com linha de base `SEM_PAGINA_EXTRAIVEL_BASE = 5`: o sexto que aparecer derruba, porque **registro que deixa de ser conferível tem de ser uma decisão, não um efeito colateral**.
+
+### 64.3 O achado que o plano não previa: a cifra digitada dentro do gerador
+
+`reports/AUDITORIA-FONTES.md` é **gerado**, e o cabeçalho de `gerar_auditoria.py` promete em letras: *"A narrativa fica neste arquivo; as tabelas saem dos dados."* Um bloco não saía.
+
+| O que o relatório afirmava | O que a medição devolve |
+|:--|:--|
+| *"os **58 registros** com página estruturada em documento PDF"* | **77** |
+| *"Transcrição localizada na página citada: **53**"* | só o passo 7 sabe — **deixou de ser afirmado aqui** |
+| *"Sem transcrição literal para conferir: **5**"* | **4** |
+| *"Os cinco indeterminados — **PT-08**, PT-13, PT-23, PT-33 e PT-55"* | PT-13, PT-23, PT-33, PT-55 — **PT-08 não é um deles** |
+
+**Era narrativa de setembro sobrevivendo dentro de um gerador, que é o último lugar onde alguém procura cifra velha** — exatamente porque o arquivo se apresenta como gerado. É a mesma família do *"82 x 16"* do item 29.1 e da identidade declarada das figuras do item 48.2: **o rótulo de "automático" é o que desliga a desconfiança.**
+
+**Corrigido por medição, não por atualização:** o bloco passou a importar `pares` e `transcricoes` de `conferir_paginas.py` — importadas, não reimplementadas — e a contar. E a cifra que **só o passo 7 pode saber** (quantas transcrições casaram) deixou de ser repetida no relatório, com a razão escrita: *uma segunda cópia da cifra é uma cópia para envelhecer.*
+
+### 64.4 Duas provas negativas
+
+| Injeção | Resultado |
+|:--|:--|
+| `TSE RCand: ementa itens 2-4 e 12; dispositivo` direto em `pares()` | devolve `[]` — e `TSE RCand: 2, 3, 4`, `CPMI: 644, 615` e `PGR: peça integral | CPMI: 230, 566` continuam devolvendo o que devem |
+| localizador de PT-03E trocado por **numeral puro** no campo | volta a ser candidato, os fora-do-alcance caem para 4 e o tripwire **dispara**: `~ ATENÇÃO: a linha de base de 18/10/2026 é 5` |
+
+A injeção mutou **o campo, pelo parser** — a lição de 16/10, quando um `replace` de texto caiu numa string de `metadados.revisoes` e o "passou" não mediu nada.
+
+### 64.5 O que muda na linha do ciclo
+
+`confirmados 73 | falhas 0 | **indeterminados 4**` — era 5, e a razão está escrita aqui. Mais a linha nova, que não existia: *fora do alcance deste conferidor: 5 registro(s)*. **Nenhum registro perdeu âncora; um deixou de ser conferido contra folha que não existe, e quatro deixaram de ser invisíveis.**

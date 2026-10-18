@@ -2281,7 +2281,9 @@ Por encaminhamento seu, saiu tudo o que se refere ao processo seletivo: `00_ESPE
 > git checkout 1b8d5a6 -- projeto-pos-doc/01_PROJETO-PESQUISA.md
 > ```
 >
-> **Se o enunciado do projeto deve viver na raiz — em `docs/`, livre do limite de palavras do edital —, é decisão sua**, e é a única da reorganização que eu não tomei.
+> ~~**Se o enunciado do projeto deve viver na raiz — em `docs/`, livre do limite de palavras do edital —, é decisão sua**, e é a única da reorganização que eu não tomei.~~
+>
+> **DECIDIDA EM 18/10/2026: NÃO VOLTA.** Palavras suas: *"Deletei o projeto de pesquisa e movi os documentos que faziam parte do repositório que não tinham relação com o projeto de pesquisa. Não irei retomar o projeto de pesquisa, pois o mesmo não faz mais sentido agora. Ele estava somente acumulando material desnecessário ao repositório e fazendo com que você lesse de forma errônea todo o repositório."* O comando acima fica como registro de que a peça existe no histórico, **não como oferta**. Ver o item 63.
 
 **As menções a essas peças nos registros datados não foram reescritas.** O item 898 desta agenda, o 1949 e as tabelas do documento 09 dizem o que diziam em 29/09 e em 10/10: que uma cifra foi corrigida em `01_PROJETO-PESQUISA.md`, que a atribuição dos quatro testes foi acertada em seis lugares. **Isso aconteceu, e aponta para o histórico, não para o disco.**
 
@@ -3065,3 +3067,57 @@ A checagem 5 passou a **resolver** o localizador: todo `§Título` em `fonte_pag
 **Uma decisão de 57.4, e é a do nome:** `Conduzido de cima` junta hoje **três *cimas* diferentes** — setor patronal organizado (PT-10A), liderança política (PT-12, PT-16) e elite midiática e parlamentar (PT-50A). A proposta na mesa é `Conduzido por financiador organizado` para PT-10A. **Não renomeei.**
 
 **E a medição de 62.1 levantou um risco latente que é decisão sua, não tarefa minha.** O localizador de PT-03E é `TSE RCand: ementa itens 2-4 e 12; dispositivo`, e **`pares()` o lê como as páginas 2, 3, 4 e 12** — porque extrai todo numeral depois dos dois-pontos. Hoje isso não produz erro nenhum: o que salva é o teste seguinte, *"o documento citado não é PDF"*, que manda o registro para `indeterminados`. **Mas o que o salva é a extensão do arquivo, não o localizador.** Se aquele acórdão algum dia entrar no corpus **também em PDF** — e a rota declara que o endpoint serve o mesmo conteúdo —, PT-03E passaria a ser conferido contra as **folhas** 2, 3, 4 e 12 de um acórdão cujas transcrições estão em outro lugar, e um casamento acidental ali seria *a cifra correta no referente errado* com aprovação do ciclo. Há duas saídas e a escolha é sua: **reescrever o localizador de PT-03E em `§`**, que a checagem 5 agora resolve, ou **ensinar `pares()` a não extrair numeral de segmento que diga `item`, `ementa` ou `dispositivo`**. A primeira é menor e usa guarda que já existe; a segunda protege quem escrever o próximo. **Não mexi em nenhuma das duas.**
+
+---
+
+## 63. O projeto do edital não retorna, e as referências limpas — 🔶 18/10/2026
+
+**Encaminhamento:** *"Deletei o projeto de pesquisa e movi os documentos que faziam parte do repositório que não tinham relação com o projeto de pesquisa. Não irei retomar o projeto de pesquisa, pois o mesmo não faz mais sentido agora. Ele estava somente acumulando material desnecessário ao repositório e fazendo com que você lesse de forma errônea todo o repositório."* E, sobre as referências que ainda o citavam: *"Limpe essas referências."*
+
+**A decisão que estava aberta desde 14/10 fechou:** `01_PROJETO-PESQUISA.md` **não volta**. A pendência do item 48.3 — se o enunciado do projeto deveria viver em `docs/`, livre do limite de palavras do edital — recebeu resposta, e o comando de restauração fica ali como registro de que a peça existe no histórico, **não como oferta**.
+
+### 63.1 Três asserções no presente sobre um arquivo que não existe — e a do meio era falsa duas vezes
+
+Varri o repositório por `01_PROJETO-PESQUISA`, `02_PROPOSTA-DISCIPLINA` e `projeto-pos-doc`. As menções que **afirmavam no presente** eram três, **todas em `docs/analise/09_CONCEITO-MECANISMO.md`** — e isso importa, porque aquele documento é a fonte das definições de mecanismo que vão para a redação.
+
+| Onde | O que dizia | O que havia de errado |
+|:--|:--|:--|
+| **l. 124** | *"Não mudei a atribuição dos quatro testes em `01_PROJETO-PESQUISA_v1-compacto.md`. Duas fontes divergem…"* | **Falsa por dois motivos acumulados.** A atribuição **foi** mudada em 10/10/2026 — pela §9.6 **do próprio documento**, três telas abaixo, marcada *EXECUTADA* —, e as **duas fontes não divergiam** (item 43.2: a lista entre parênteses de Cunha e Araújo é referência, não autoria). Além disso o arquivo saiu em 14/10 |
+| **l. 254** | *"O projeto atribui a Beach e Pedersen (2019), em `01_PROJETO-PESQUISA_v1-compacto.md` §3.2"* | Presente contra o **título da sua própria seção**, que diz *"✅ EXECUTADA"*. Passou a `atribuía`, com as duas datas |
+| **l. 79** | célula da tabela da §4, com a mesma atribuição | **Não reescrita, de propósito** — o documento já a declara mantida como registro histórico do que se cobrava. Recebeu o ponteiro para a §9.6 |
+
+> **O defeito não é de arquivo apagado; é de asserção que envelhece em sentido contrário.** A linha 124 dizia *"não mudei"* a coisa que o mesmo documento, mais abaixo, registra como mudada. Quem lê de cima para baixo encontra a negação antes da execução. **É o modo de falha batizado do projeto na forma mais barata de produzir: correta quando escrita, falsa quando lida**, e nenhuma checagem a alcança, porque o ciclo confere cifra e âncora, não tempo verbal.
+
+### 63.2 O que NÃO foi tocado, e a razão de cada um
+
+| Arquivo | Por que fica |
+|:--|:--|
+| `docs/historico/ETAPA1_inventario_repositorio.md` (9 menções) | declara em cabeçalho que seus caminhos mudaram **de propósito**: reescrever um inventário datado destrói o que ele serve para provar |
+| `README.md` (3 menções) | **conferidas uma a uma:** todas no passado — *"Até 14/10/2026 havia"*, *"Estavam em `projeto-pos-doc/` até 14/10/2026"*, *"não existe mais, e isso é deliberado"* |
+| `docs/analise/06_BIBLIOGRAFIA-DO-PROJETO.md` (2) | já dizem no passado que a pasta saiu, e a segunda registra que a decisão 3 do item 47.5 **ficou sem objeto** — mas que o problema que ela media, não |
+| `scripts/verificar_integridade.py` l. 387 | comentário que explica a remoção de 14/10, no passado, e é o que impede a cópia morta de voltar |
+| as 12 menções desta agenda | registros datados. O item 43.1 lista os seis lugares corrigidos **naquele dia**, e dois deles saíram depois — a correção é este item, não uma reescrita dele |
+| `.backup_pre_lula/` | é backup, e está na higiene pendente (46.5) |
+
+**E um caso que recebeu tratamento diferente porque não é asserção:** `scripts/historico/recodificar_tarefa19_nomes.py` apontava para `projeto-pos-doc/09_CONCEITO-MECANISMO.md`, caminho morto desde 14/10. **Endereço não é achado** — foi atualizado para `docs/analise/`, sem ferir a regra dos registros datados.
+
+### 63.3 Os quatro scripts fora do índice — e eu descrevi um deles errado
+
+`scripts/LEIA-ME.md` ganhou as quatro linhas que faltavam: `auditar_licencas.py`, `exportar_aparato.py`, `gerar_catalogo_imprensa.py` e `rotas_camada_a.py`. Dezessete scripts rodam e o índice documentava treze.
+
+> **E aqui eu cometi, no rascunho, exatamente o erro que o índice existe para evitar.** Escrevi as quatro linhas **a partir dos nomes dos arquivos**, e descrevi `gerar_catalogo_imprensa.py` como *"catálogo do eixo 08, a cobertura de imprensa, a partir do inventário"*. **Não é isso.** Ao abrir o arquivo antes de gravar: ele cataloga as **atribuições de número de manifestantes na imprensa**, declara-se *"instrumento SEPARADO do codebook"* que *"não alimenta o process tracing nem a cronologia"*, e serve a analisar **como os veículos disputam o processo político pela via do número** — enquanto o codebook mantém apenas os números do documento legal. Emite `CATALOGO-IMPRENSA-MULTIDAO-8JAN.xlsx`.
+>
+> **Nome de arquivo não é descrição de arquivo.** As quatro linhas foram reescritas a partir do cabeçalho de cada script, e as outras três ganharam com isso: a de `auditar_licencas.py` passou a carregar a razão da regra (*"`SEM` não é livre: é desconhecido, e desconhecido conta como reservado por omissão"*, e o caso Rich (2021), que o OpenAlex declarava OURO e está à venda), e a de `rotas_camada_a.py` passou a dizer o que ela descobriu: que o campo `locations` do OpenAlex lista **todos** os depósitos, e foi ele que achou Mayntz (2004) integral no MPG.PuRe depois de a peça ter sido dada como sem arquivo.
+
+### 63.4 A varredura, depois da limpeza
+
+| Arquivo | Menções | Estado |
+|:--|--:|:--|
+| `docs/PENDENCIAS-ANALITICAS.md` | 12 | registros datados ✅ |
+| `docs/historico/ETAPA1_inventario_repositorio.md` | 9 | registro datado, declarado ✅ |
+| `docs/analise/09_CONCEITO-MECANISMO.md` | 3 | **corrigidas** ✅ |
+| `README.md` | 3 | passado, conferidas ✅ |
+| `docs/analise/06_BIBLIOGRAFIA-DO-PROJETO.md` | 2 | passado ✅ |
+| `scripts/verificar_integridade.py` | 1 | comentário histórico ✅ |
+
+**Nenhuma menção restante afirma no presente.** A varredura é o passo 6 da verificação do plano, e repeti-la é o que prova a limpeza.

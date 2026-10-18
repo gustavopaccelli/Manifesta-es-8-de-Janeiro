@@ -3,7 +3,7 @@
 
 ENCAMINHAMENTO: "Aprovo as quatro propostas de nomenclatura, execute."
 
-As propostas, com definicao, estao em projeto-pos-doc/09_CONCEITO-MECANISMO.md
+As propostas, com definicao, estao em docs/analise/09_CONCEITO-MECANISMO.md
 secoes 9.2 a 9.5. Este script as aplica ao JSON, que e a fonte da verdade, e
 escreve DENTRO de cada registro a razao da troca -- porque a regra da casa e que
 mudanca de nome de mecanismo se explica no proprio registro, nao so no documento.

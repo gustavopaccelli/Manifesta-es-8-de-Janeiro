@@ -76,7 +76,7 @@ Regra do projeto: nada se afirma sem ter sido lido, e nada se cita contra outra 
 | **PT-12A** | "mobilização de recursos em rede distribuída com nós centralizadores" | Tipificável: a conta que recebe de várias unidades é **agregação**; o empresariado é **patrocínio**; o uso de estrutura preexistente é **cooptação/apropriação** (Edwards & Gillham 2013) |
 | **PT-28** | "condição necessária (hoop test)" | **Correto**, e agora com âncora em português: condição necessária "tem que estar presente para um resultado ocorrer... mas ela não produz tal resultado quando isolada" (Cunha & Araújo 2018, p. 97) |
 | **PT-62** | "desarticulação do repertório de rua com deslocamento" | É **processo**, não mecanismo, no critério de Tarrow — contém sequência de mecanismos |
-| **Os quatro testes** | atribuídos a "Beach e Pedersen (2019)" em `01_PROJETO-PESQUISA_v1-compacto.md` §3.2 | **Duas fontes independentes divergem:** Collier (2011, tab. 1) diz "adapted from Bennett (2010), who builds on categories formulated by **Van Evera (1997)**"; Cunha & Araújo (2018, p. 92) atribuem a "Bennett, 2008; Collier, 2011; Mahoney, 2012; Beach; Pedersen, 2013; Bennett; Checkel, 2015" |
+| **Os quatro testes** | atribuídos a "Beach e Pedersen (2019)" em `01_PROJETO-PESQUISA_v1-compacto.md` §3.2 — **ver §9.6: a divergência não existia, e o arquivo citado saiu em 14/10/2026** | **Duas fontes independentes divergem:** Collier (2011, tab. 1) diz "adapted from Bennett (2010), who builds on categories formulated by **Van Evera (1997)**"; Cunha & Araújo (2018, p. 92) atribuem a "Bennett, 2008; Collier, 2011; Mahoney, 2012; Beach; Pedersen, 2013; Bennett; Checkel, 2015" |
 
 ## 5. Os três verbetes incorporados
 
@@ -121,7 +121,7 @@ Até aqui, toda divergência entre síntese e fonte tinha a síntese errada. Est
 ## 7. O que não executei, e por quê
 
 1. **Não alterei nenhum dos 82 registros.** As sete cobranças da seção 4 são decisões de conteúdo analítico — renomear PT-03, resolver a tensão PT-19/PT-29, reclassificar PT-34, tipificar PT-12A, marcar PT-62 como processo. Nenhuma se faz por inferência.
-2. **Não mudei a atribuição dos quatro testes** em `01_PROJETO-PESQUISA_v1-compacto.md`. Duas fontes divergem da redação atual, e a correção depende de qual genealogia você adota.
+2. ~~**Não mudei a atribuição dos quatro testes** em `01_PROJETO-PESQUISA_v1-compacto.md`. Duas fontes divergem da redação atual, e a correção depende de qual genealogia você adota.~~ **SUPERADO DUAS VEZES, e a data de cada uma importa.** A atribuição foi corrigida em **10/10/2026** — ver §9.6 deste documento, que está marcada *EXECUTADA*, e o item 43.1 da agenda. E as **duas fontes não divergiam**: a lista entre parênteses de Cunha e Araújo é referência, não reivindicação de autoria, e as duas peças convergem em Van Evera. O arquivo que esta linha cita **deixou de existir em 14/10/2026**, com a pasta do edital (item 48 da agenda), e em **18/10/2026** o pesquisador confirmou que o projeto de pesquisa **não retorna** (item 63).
 3. **Não li Beach & Pedersen (2016) nem Waldner (2015) na fonte.** A saída (a) da seção 3 depende da primeira; o critério de grafo completo, da segunda. `Fontes/05_Bibliografia-teorica/` tem *Process-tracing methods*? **Não** — tem o manual da Enap e o guia de Ricks & Liu (2018). As duas obras de Beach e Pedersen continuam fora do corpus.
 4. **Não incorporei os outros verbetes pertinentes** que a indexação localizou e que a camada A ou o codebook mobilizam: *Demobilization* (Fillieule), *Repertoires of contention* (della Porta), *Policing protest* (della Porta & Reiter), *Diffusion and scale shift* (Soule), *Multiorganizational fields* (Klandermans), *Political opportunity* e *Discursive opportunity structure*. **São sete verbetes lidos-a-ler, todos agora acessíveis sem muro de editor**, e é o melhor retorno por hora de leitura que o corpus oferece.
 
@@ -251,7 +251,7 @@ Ao olhar a camada $T_{+1}$ inteira, o mecanismo (1) de PT-62 — desmobilizaçã
 
 ### 9.6 A quinta cobrança — a atribuição dos quatro testes ✅ EXECUTADA
 
-**Agora com o arquivo na mão.** Collier (2011) entrou no corpus em 08/10/2026 (p. 823-830; impressa = PDF + 822), e a nota da tabela 1 diz que os testes são **"adapted from Bennett (2010, 210), who builds on categories formulated by Van Evera (1997, 31-32)"**. Cunha e Araújo (2018, p. 92) atribuem a uma lista: "Bennett, 2008; Collier, 2011; Mahoney, 2012; Beach; Pedersen, 2013; Bennett; Checkel, 2015". O projeto atribui a **Beach e Pedersen (2019)**, em `01_PROJETO-PESQUISA_v1-compacto.md` §3.2.
+**Agora com o arquivo na mão.** Collier (2011) entrou no corpus em 08/10/2026 (p. 823-830; impressa = PDF + 822), e a nota da tabela 1 diz que os testes são **"adapted from Bennett (2010, 210), who builds on categories formulated by Van Evera (1997, 31-32)"**. Cunha e Araújo (2018, p. 92) atribuem a uma lista: "Bennett, 2008; Collier, 2011; Mahoney, 2012; Beach; Pedersen, 2013; Bennett; Checkel, 2015". O projeto **atribuía** a **Beach e Pedersen (2019)**, em `01_PROJETO-PESQUISA_v1-compacto.md` §3.2 — **e as duas coisas mudaram**: a atribuição foi corrigida em 10/10/2026 nos seis lugares em que aparecia, e aquele arquivo saiu do repositório em 14/10/2026.
 
 > **EXECUTADO EM 10/10/2026, e a premissa da cobrança estava errada** — ver o bloco que segue a proposta. A proposta original dizia:
 >

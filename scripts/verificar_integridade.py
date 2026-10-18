@@ -44,7 +44,7 @@ CLASSES = {"Confirmado em fonte primária", "Confirmado",
 # está aqui de propósito: ele não é valor, é a declaração de que o registro
 # ainda não foi lido sob esta pergunta -- 82 dos 83 hoje.
 AUTONOMIA = {"Autonomia relativa", "Autonomia com encorajamento de cima",
-             "Conduzido de cima", "Não se aplica",
+             "Conduzido por patrocínio de setor organizado", "Não se aplica",
              "Lido, não documentado"}
 
 # Eixos que NÃO entram na contagem de fonte documental. O eixo 05 está fora desde
@@ -393,8 +393,18 @@ def main():
     # Identidade declarada que ninguem conferia e duplicata, nao redundancia:
     # `conferir_figuras.py` so olha reports/figures/, e por isso nada avisou. As
     # copias sairam e os documentos do edital passaram a apontar para a raiz.
+    # 18/10/2026: ENTRA O SVG, e a lacuna estava na propria contagem da checagem.
+    # O item 42.3 dizia que quatro artefatos sao mantidos a mao -- "as duas
+    # figuras interativas, o relatorio de pesquisa e o caderno de evidencias" --
+    # e esta lista tinha TRES: o SVG da cadeia causal nunca entrou. Ele carrega
+    # texto de mecanismo (`>mecanismo: ... + alinhamento de quadros previo`) e
+    # `conferir_figuras.py` nao compara esse texto com o JSON, de modo que um
+    # nome retirado podia viver ali indefinidamente. Medido em 18/10 antes de
+    # acrescentar: o SVG nao continha nenhum dos nomes ja retirados -- a lacuna
+    # existia e ainda nao havia mordido.
     ARTEFATOS = [
         "reports/figures/cronologia_8jan_interativa.html",
+        "reports/figures/figura_cronologia_8jan.svg",
         "reports/process_tracing_8jan_relatorio.md",
         "Caderno-de-evidencias/caderno_CPMI_verbatim.md",
     ]
@@ -416,6 +426,25 @@ def main():
                                        "Van Evera 1997 / Bennett 2010 / Collier 2011"),
         "testes de Beach & Pedersen": ("10/10/2026", "os quatro testes",
                                        "Van Evera 1997 / Bennett 2010 / Collier 2011"),
+        # 18/10/2026, decisao 1 do item 47.5: o nome de PT-07. TRES variantes,
+        # porque os artefatos a mao o escreviam de tres formas -- o SVG em
+        # minuscula dentro de uma cadeia, o HTML capitalizado, e o relatorio com
+        # o termo ingles no meio. Guarda de substring exige a forma exata, e uma
+        # so entrada teria deixado duas passar.
+        "Alinhamento de quadros prévio": ("18/10/2026", "PT-07",
+                                          "Deliberação de ruptura e articulação "
+                                          "do quadro de fraude"),
+        "alinhamento de quadros prévio": ("18/10/2026", "PT-07",
+                                          "Deliberação de ruptura e articulação "
+                                          "do quadro de fraude"),
+        "Alinhamento de quadros (frame alignment) prévio":
+            ("18/10/2026", "PT-07",
+             "Deliberação de ruptura e articulação do quadro de fraude"),
+        # 18/10/2026, decisao 2 do item 57.4: o valor de autonomia de PT-10A.
+        # Nao e nome de mecanismo, e a vigilancia e a mesma -- valor de
+        # vocabulario retirado.
+        "Conduzido de cima": ("18/10/2026", "PT-10A (autonomia_movimento)",
+                              "Conduzido por patrocínio de setor organizado"),
     }
     achou_morto = 0
     for rel in ARTEFATOS:

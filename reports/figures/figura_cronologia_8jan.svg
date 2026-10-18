@@ -24,7 +24,7 @@
 <!-- ================= FAIXA 1 — T-1 CONJUNTURAL ================= -->
 <text class="rt" x="90" y="100" fill="#8a8a8a">T−1 · Conjuntural</text>
 <text class="rs" x="238" y="100">jun/2013 – set/2022 · gestação (≈9 anos)</text>
-<text class="mech" x="1050" y="100" text-anchor="end">mecanismo: apropriação de repertório + arco judicial (remoção e retorno do competidor) + alinhamento de quadros prévio</text>
+<text class="mech" x="1050" y="100" text-anchor="end">mecanismo: apropriação de repertório + arco judicial (remoção e retorno do competidor) + deliberação de ruptura e articulação do quadro de fraude</text>
 
 <line class="ax" x1="90" y1="170" x2="1050" y2="170" stroke="#9a9a9a"/>
 <line class="tick" x1="90"  y1="170" x2="90"  y2="176"/><text class="tk" x="90"  y="188" text-anchor="middle">2013</text>

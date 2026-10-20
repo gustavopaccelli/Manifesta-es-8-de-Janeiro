@@ -3442,3 +3442,101 @@ As duas peças do TSE são **sem paginação** — o portal serve notícia, não
 2. **A classe dos dois.** Entraram em `Confirmado`. PT-01A sobe a `Confirmado em fonte primária` se `AE 157804` ou `Pet 185520` entrarem no corpus; PT-01B, se entrar uma peça que **atribua** o documento ao PMDB em fonte oficial.
 3. **Se PT-01B deve afirmar a função de articulação do impeachment** — e, se sim, com que fonte.
 4. **A ordem dos identificadores.** PT-01B é de 29/10/2015 e PT-02 cobre *2015–2016*: o sufixo mantém a ordem de inserção e a data correta, mas o intervalo de PT-02 começa antes. Se preferir outra numeração, é uma linha de pedido — e eu **não** renomeio identificador por conta própria, porque há remissões a eles.
+
+---
+
+## 69. A tabela-espelho, e a figura do artigo afirma o que o codebook corrigiu — 🔶 20/10/2026
+
+**Encaminhamento:** *"Sobre ele eu queria sugerir a criação de uma tabela de espelho de todos os eventos e suas características de acordo com o que está disposto no html e no SVG."*
+
+A sugestão era de instrumento. Ao construí-lo, ele achou na primeira execução **três registros em que a cronologia interativa afirma o que o codebook já retirou** — e a figura é a peça que vai para o artigo.
+
+### 69.1 O que o ciclo não conferia, e por quanto tempo
+
+`conferir_figuras.py` confere **cobertura, selo de status, procedência e cifras retiradas**. O próprio cabeçalho dele diz: *"Nada disto lê o conteúdo dos rótulos."* E o **item 42.3, de 10/10/2026**, registrou a lacuna com uma prova: reinjetei o nome velho de um mecanismo na figura e no relatório, e **zero de duas pegaram**. A conclusão de então foi criar a checagem 7 — que vigia **nomes formalmente registrados como retirados**, e só eles.
+
+> **A checagem 7 cobre a reincidência; não cobre a defasagem.** Um registro renomeado cujo nome antigo nunca entrou naquele registro deixa a figura desatualizada em silêncio — e foi exatamente o que aconteceu com as retificações de 04/10/2026, que não eram "nomes retirados" e sim reformulações do campo.
+
+### 69.2 Os três casos, e o pior deles afirma o contrário do codebook
+
+| Registro | A figura diz | O codebook diz |
+|:--|:--|:--|
+| **PT-02** | *"Apropriação de repertório **(spin-off)**"* | *"Apropriação parcial do repertório de protesto por contramovimentos conservadores (…) **Não é ciclo novo nem spin-off**: é continuidade dentro de um mesmo processo de confronto"* |
+| **PT-01** | *"**Abertura de estrutura de oportunidade política** e difusão de um repertório de rua massivo"* | *"**Janela de oportunidades políticas** aberta no ciclo de 2013 (…) — formulação do pesquisador, adotada em 04/10/2026 **no lugar de** 'abertura de estrutura de oportunidade política'"* |
+| **PT-06** | *"consolidação de um ecossistema informacional paralelo (Telegram/WhatsApp) — **a infraestrutura comunicacional que tornará viável** a convocação de dezembro de 2022"* | *"Mobilização permanente da base por circulação de enquadramentos negacionistas (…) RETIFICAÇÃO DE 04/10/2026"* — as redes **cresciam desde o início dos anos 2000**, e a pandemia carrega infraestrutura anterior |
+
+> **PT-02 é o caso duro: a figura afirma literalmente o que o campo nega**, e nomeia o conceito — *spin-off* — que o registro recusa em letras. PT-01 e PT-06 carregam formulações que o próprio campo declara substituídas: **o codebook sabe que aquele texto saiu, e a figura não.**
+>
+> Para uma peça de publicação isto é o defeito mais caro possível, porque **a figura tem a aparência de ser gerada da base**. O leitor não tem como saber que não é.
+
+### 69.3 Um achado estrutural: ponto composto não pode ter um nome só
+
+A cronologia tem **80 pontos para 85 registros**, porque três são **compostos** — e o mapa que declara isso vive **só dentro de `conferir_figuras.py`**, na constante `COMPOSTOS`. A figura não diz ao leitor que um ponto representa três registros.
+
+| Ponto | Cobre | E os mecanismos do codebook são |
+|:--|:--|:--|
+| `PT-06A/B/C` | 3 registros | *anulação por vício de competência* · *descertificação do agente judicial* · *reabertura da estrutura de oportunidade eleitoral* |
+| `PT-08A / PT-08B / PT-08C` | 3 registros | *captura de aparato estatal para fim eleitoral* · *tentativa de contenção institucional preventiva* · *supressão seletiva de participação eleitoral* |
+| `PT-03C/D` | 2 registros | *fechamento da via recursal* · *remoção do competidor e reconfiguração da estrutura de oportunidade eleitoral* |
+
+**O rótulo do ponto `PT-06A/B/C` diz *"dois mecanismos em conjunto"* — e o ponto cobre três registros, com três mecanismos distintos.** Não é texto velho: é agregação que perde informação, e ela só aparece quando se põe a figura ao lado do codebook linha por linha.
+
+### 69.4 O desenho, e a medição que o decidiu
+
+Comparados os seis campos de prosa da figura com os do codebook, nos 85 registros:
+
+| campo | idêntico | contido | parafraseado |
+|:--|--:|--:|--:|
+| `tgt` → `target_alvo` | 67 | 2 | 7 |
+| `res` → `resposta_estatal` | 58 | 4 | 14 |
+| `ator` → `ator_grupo` | 50 | 7 | 19 |
+| `rep` → `repertorio_acao` | 43 | 4 | 29 |
+| `frm` → `framing_narrativa` | 29 | 1 | 46 |
+| `mec` → `mecanismo_causal` | **0** | **0** | **todos** |
+
+> **`mec` parafraseado em toda parte é desenho, não defeito**, e por isso a tabela **não cobra igualdade de prosa**. A figura precisa de uma frase legível; o campo carrega a prosa de auditoria — a razão de cada troca de nome, os limites declarados, as remissões. Uma guarda que exigisse igualdade reprovaria tudo **e ensinaria a ignorar a guarda**, que é o erro que este repositório já cometeu e registrou.
+
+**O que é conferível é o NOME** — a frase até o primeiro `:`, travessão ou ponto. É a coluna `espelho_nome_mecanismo`, e a linha de base é **17 divergências**.
+
+### 69.5 E a linha de base corrige uma cifra que eu havia estimado
+
+Ao levantar o problema para você, **eu anunciei 23 divergências**. O gerador mede **17**, e a diferença não é detalhe de arredondamento:
+
+| | |
+|:--|:--|
+| **minha medição** | regex própria, que leu **79** entradas e não resolvia pontos compostos; recorte de nome só em `:` e travessão |
+| **o gerador** | `BLOCO`, `campo`, `CLASSE` e `COMPOSTOS` **importados** de `conferir_figuras.py`, alcançando os **85** registros; recorte também no ponto final; e toda aspa normalizada para a mesma, o que tirou PT-56 da lista — ali a diferença era o **caractere**, não o nome |
+
+> **Cifra estimada à mão não vale como linha de base**, e esta é a quarta vez que a lição aparece neste repositório. A regra que fica: **medir com o instrumento do projeto, não com regex de ocasião** — e, quando o instrumento existe, importar dele em vez de reimplementar, que é o que o gerador faz com as quatro constantes.
+
+### 69.6 A prova negativa, e ela mostra complementaridade
+
+Injetado na figura, no lugar do nome de PT-07, o texto **`Alinhamento de quadros`** — sem a palavra *prévio*:
+
+| Guarda | Resultado |
+|:--|:--|
+| **checagem 7** (nomes retirados) | **passa** — ela casa substring exata, e o registro vigia `Alinhamento de quadros prévio`, com a palavra final |
+| **tabela-espelho** | **reprova** — `divergências de nome: 18 (base 17)`, saída 1, ciclo derrubado |
+
+**As duas guardas não se substituem.** A checagem 7 pega o nome morto **exato** voltando a qualquer um dos quatro artefatos; a tabela-espelho pega **qualquer** nome que não seja o do codebook, inclusive um que nunca foi formalmente retirado. Era essa a metade que faltava.
+
+### 69.7 O que a tabela entrega para o artigo
+
+| Peça | O que é |
+|:--|:--|
+| `reports/TABELA-ESPELHO-EVENTOS.md` | forma scanável: um registro por linha, com data, evento, fase, classe, nome do mecanismo, ponto composto e o selo do espelho |
+| `data/processed/tabela_espelho_eventos.csv` | **32 colunas**: os seis campos da figura ao lado dos seis do codebook, mais o estado do espelho de cada um, a âncora e o valor de autonomia |
+
+**Gerada, nunca escrita à mão** — e isto é a razão de ela existir como script e não como arquivo: uma tabela-espelho mantida à mão seria a **quinta** cópia dos mesmos dados, e este repositório tem o histórico de quatro cópias envelhecendo em silêncio. O ciclo passou a dez passos, com ela no quarto.
+
+### 69.8 O que isto deixa aberto
+
+**As 17 divergências, por classe** — e a frente seguinte do plano é zerá-las:
+
+| Classe | Quantas | O que fazer |
+|:--|--:|:--|
+| **a figura carrega o que o codebook corrigiu** | 3 | PT-01, PT-02, PT-06 — a figura passa a dizer o que o registro diz, e as formulações substituídas entram no registro da checagem 7 |
+| **ponto composto com um nome só** | 5 | PT-03D, PT-06A/B/C, PT-08B/C — o rótulo precisa enumerar, e *"dois mecanismos"* para três registros precisa de correção |
+| **abreviação da figura** | 9 | PT-01A, PT-01B, PT-15, PT-30, PT-42, PT-48, PT-53, PT-58 e PT-03D — alinhar o nome ao do codebook, mantendo a paráfrase do corpo |
+
+**E duas cifras do cabeçalho do HTML seguem velhas:** *"Última revisão: 25/09/2026"*, quatro edições atrás, e *"83 sub-eventos, 60 deles em fonte primária"*, quando são 85 e 61.

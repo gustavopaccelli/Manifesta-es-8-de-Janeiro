@@ -98,6 +98,38 @@ PROCEDENCIA = {
         ("Agência Brasil (EBC), assinada por Paulo Gustavo Gonet Branco", "oficial", "Chave de validação verificável em transparencia.mpf.mp.br/validacaodocumento."),
     "Fontes/01_Arco-judicial_2017-2021/TRF4_Revista-97_Acordao-ACr-5046512-94_2018-01-24.pdf":
         ("TRF-4 — trf4.jus.br/trf4/revistatrf4", "oficial", "Revista nº 97. Traz o dispositivo da sentença de Moro transcrito, p. 395."),
+    # EIXO 16, criado em 20/10/2026 por encaminhamento do pesquisador: os dois
+    # antecedentes do processo de impeachment que ele mandou catalogar.
+    "Fontes/16_Antecedentes-impeachment_2014-2015/PMDB-FUG_Uma-Ponte-para-o-Futuro_2015-10-29.pdf":
+        ("MDB-RS — mdb-rs.org.br/fl_adm/uploads/documentos", "oficial",
+         "Documento programatico do PMDB, 19 folhas, que abre com 'UMA PONTE PARA O "
+         "FUTURO / Brasilia, 29 de outubro de 2015' na folha 1 — conferido. Ancora "
+         "PT-01B. PROVENIENCIA COM RESSALVA DECLARADA: a peca foi publicada pela "
+         "Fundacao Ulysses Guimaraes, vinculada ao PMDB, e o caminho dela no sitio da "
+         "fundacao (wp-content/uploads/2016/11/UMA-PONTE-PARA-O-FUTURO.pdf) devolve 404 "
+         "em 20/10/2026 — devolve o HTML da pagina de erro, nao o PDF. A copia obtida e "
+         "a hospedada pelo DIRETORIO ESTADUAL do partido no Rio Grande do Sul, que e "
+         "o mesmo partido e nao o editor original. Nao e peca de Estado: e documento de "
+         "partido, e a classe do registro diz isso."),
+    "Fontes/16_Antecedentes-impeachment_2014-2015/TSE-noticias_2014-11-04_Auditoria-PSDB-Eleicoes-2014.md":
+        ("TSE — tse.jus.br/comunicacao/noticias, capturado em navegador", "oficial",
+         "Transcricao da noticia institucional do TSE sobre a sessao de 04/11/2014 que "
+         "acolheu o pedido de auditoria do PSDB. Ancora PT-01A. NAO E O ACORDAO: o "
+         "processo e AE 157804, declarado pelo proprio TSE no pe da pagina, e nao foi "
+         "obtido. O portal BARRA CLIENTE AUTOMATIZADO NA BORDA — curl e WebFetch "
+         "devolvem 403 Access Denied da Akamai (errors.edgesuite.net) e o arquivamento "
+         "web devolveu 429 —, de modo que a captura foi em navegador comum, por "
+         "extracao de texto. Nenhum captcha foi encontrado nem contornado. Sem "
+         "paginacao: citar por estrutura interna (secao), como PT-19A e PT-03E."),
+    "Fontes/16_Antecedentes-impeachment_2014-2015/TSE-noticias_2015-11-05_PSDB-nao-encontra-fraude.md":
+        ("TSE — tse.jus.br/comunicacao/noticias, capturado em navegador", "oficial",
+         "Transcricao da noticia institucional do TSE sobre a sessao de 05/11/2015, em "
+         "que a Corte se manifesta sobre o relatorio final da auditoria do PSDB. Ancora "
+         "PT-01A, e e a peca que fecha o evento: o Tribunal afirma que o documento do "
+         "partido confirma que nenhuma evidencia de adulteracao foi encontrada. NAO E O "
+         "RELATORIO: o processo e Pet 185520, declarado no pe da pagina, e o relatorio "
+         "do PSDB nao esta no corpus. Mesma rota e mesmas ressalvas do arquivo irmao de "
+         "2014."),
     "Fontes/01_Arco-judicial_2017-2021/TSE_RCand-0600903-50_Acordao_2018-09-01.html":
         ("TSE — Consulta Unificada PJe, consultaunificadapje.tse.jus.br", "oficial",
          "Inteiro teor do acórdão que indeferiu o registro de candidatura de Lula "

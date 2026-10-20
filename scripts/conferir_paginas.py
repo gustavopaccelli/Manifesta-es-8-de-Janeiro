@@ -210,7 +210,13 @@ EMPATES_BASE = 0
 # indeterminados. Quatro registros sumiam em silencio da unica checagem que le a
 # fonte. Com a base, o sexto que aparecer faz o ciclo cair -- porque registro que
 # deixa de ser conferivel tem de ser uma decisao, nao um efeito colateral.
-SEM_PAGINA_EXTRAIVEL_BASE = 5
+#
+# 20/10/2026: passa de CINCO para SEIS, e a razao e entrada de registro, nao
+# afrouxamento. PT-01A ancora nas duas transcricoes das noticias institucionais
+# do TSE sobre a auditoria do PSDB de 2014 -- peca sem paginacao, citada por
+# `§secao`, e e o segundo uso da convencao criada em 16/10. A checagem 5 resolve
+# os cinco localizadores dele contra os cabecalhos dos arquivos vinculados.
+SEM_PAGINA_EXTRAIVEL_BASE = 6
 
 
 def _prefixo_maximo(alvo, folha):

@@ -1,6 +1,6 @@
 # Manifestações 8 de Janeiro
 
-Reconstrução cronológico-causal do 8 de janeiro de 2023 por *process tracing*, com marco na Teoria do Processo Político (McAdam, Tarrow, Tilly). O produto central é um codebook de **83 sub-eventos × 17 campos**, ancorado documento a documento e página a página em um corpus de fontes primárias — relatório da CPMI, relatório do interventor federal, denúncia da PGR, acórdãos do STF, TRF-4 e TSE, decisões de execução penal e o balanço do Gabinete do Min. Moraes.
+Reconstrução cronológico-causal do 8 de janeiro de 2023 por *process tracing*, com marco na Teoria do Processo Político (McAdam, Tarrow, Tilly). O produto central é um codebook de **85 sub-eventos × 17 campos**, ancorado documento a documento e página a página em um corpus de fontes primárias — relatório da CPMI, relatório do interventor federal, denúncia da PGR, acórdãos do STF, TRF-4 e TSE, decisões de execução penal e o balanço do Gabinete do Min. Moraes.
 
 O artigo ainda não foi escrito: por decisão de 16/08/2026, a redação é o último item da fila.
 
@@ -27,7 +27,7 @@ A estrutura segue os princípios do padrão *Cookiecutter Data Science* — dado
 
 | Aqui | Papel | Equivalente CCDS |
 |:--|:--|:--|
-| `Fontes/` | Corpus, **imutável**. **63 PDFs, 12.125 p.** — dos quais **22 PDFs / 6.951 p. são fonte documental**, e o resto é bibliografia teórica e literatura —, mais HTML, arquivamento web e sínteses. Inventário em `Fontes/LEIA-ME_fontes.md`, manifesto gerado em `Fontes/MANIFESTO-CORPUS.csv`. **Estes dois números são a linha de base de 13/10/2026 da checagem 6**, que avisa quando o corpus se move | `data/raw` |
+| `Fontes/` | Corpus, **imutável**. **64 PDFs, 12.144 p.** — dos quais **23 PDFs / 6.970 p. são fonte documental**, e o resto é bibliografia teórica e literatura —, mais HTML, arquivamento web e sínteses. Inventário em `Fontes/LEIA-ME_fontes.md`, manifesto gerado em `Fontes/MANIFESTO-CORPUS.csv`. **Estes dois números são a linha de base de 13/10/2026 da checagem 6**, que avisa quando o corpus se move | `data/raw` |
 | `process_tracing_8jan_eventos.json` | Codebook — a fonte única da verdade. Fica na raiz porque é a porta de entrada dos dados e o que todo script lê | `data/interim` (curado à mão) |
 | `data/processed/` | Derivados, **gerados**: o CSV e o XLSX do codebook, o catálogo da imprensa, a planilha dos 411 DOIs das sínteses e a triagem deles por pertinência. Não editar — a próxima execução sobrescreve | `data/processed` |
 | `Caderno-de-evidencias/` | Transcrições literais com página, por registro | `references` |

@@ -147,7 +147,7 @@ def main():
     # ancoras nao-PDF. Duas medidas de nomes parecidos e recortes diferentes e o
     # modo de falha batizado deste projeto -- por isso a linha diz o recorte.
     print("  %d documentais (dos quais %d não-PDF — a linha de base da checagem 6"
-          " é de PDF: 22 / 6.951 p.), %d de literatura"
+          " é de PDF: 23 / 6.970 p.), %d de literatura"
           % (sum(1 for l in linhas if l["documental"] == "sim"),
              sum(1 for l in linhas if l["documental"] == "sim" and not l["paginas"]),
              sum(1 for l in linhas if l["documental"] == "nao")))

@@ -374,3 +374,21 @@ O eixo nasce porque a lacuna de PT-08 nunca foi brasileira: era literatura compa
 
 **A ressalva do Sri Lanka fica reforçada, não contrariada.** O Capitólio é referência de **repertório** e o Sri Lanka é referência de **eficácia** (CPMI, p. 614), e dizer que o ataque ao Congresso se tornou uma *performance contenciosa* usada no Brasil é precisamente uma afirmação de repertório.
 
+### 16 — Antecedentes do processo de impeachment (2014–2015) · registros PT-01A e PT-01B
+
+*Eixo aberto em 20/10/2026, por encaminhamento do pesquisador:* **"Solicito a entrada de dois eventos no processo como antecedentes, que influenciam o processo de impeachment e ajudam a construir esse cenário conjuntural anterior. faça a varredura desses eventos em fontes oficiais e catalogue-os no corpus."**
+
+| Arquivo | Natureza | Ancora |
+|:--|:--|:--|
+| `PMDB-FUG_Uma-Ponte-para-o-Futuro_2015-10-29.pdf` | documento programático, **19 folhas**, abre com *"UMA PONTE PARA O FUTURO / Brasília, 29 de outubro de 2015"* na folha 1 | PT-01B |
+| `TSE-noticias_2014-11-04_Auditoria-PSDB-Eleicoes-2014.md` | transcrição de notícia institucional do TSE, sem paginação, citada por `§seção` | PT-01A |
+| `TSE-noticias_2015-11-05_PSDB-nao-encontra-fraude.md` | idem, a sessão que fecha o evento | PT-01A |
+
+**As três ressalvas de proveniência, medidas na coleta e não herdadas de ficha:**
+
+1. **O portal do TSE barra cliente automatizado na borda.** `curl` e `WebFetch` devolvem `403 Access Denied` da Akamai (`errors.edgesuite.net`) e o arquivamento web devolveu `429`. A captura foi em **navegador comum**, por extração de texto. **Nenhum CAPTCHA foi encontrado nem contornado** — e a regra do projeto sobre isso não foi tocada.
+2. **As peças processuais não foram obtidas.** O próprio TSE declara no pé de cada página o processo relacionado — **`AE 157804`** para a sessão de 04/11/2014 e **`Pet 185520`** para a de 05/11/2015. Nenhum dos dois está no corpus: o que está é a comunicação institucional do Tribunal sobre a própria sessão. A rota do PJe que trouxe o acórdão de PT-03E sem captcha exige número no formato do PJe, que estas duas siglas antigas não fornecem, e o buscador de jurisprudência exige hCaptcha (item 51).
+3. **O documento da Ponte é internamente anônimo, e a cópia não é do editor.** Medido nas 19 folhas: **zero** ocorrências de *Temer*, *PMDB*, *Ulysses*, *Fundação*, *impeachment* e *Dilma*; a palavra *partido* aparece **uma** vez, genérica, na folha 5. O caminho do PDF no sítio da Fundação Ulysses Guimarães devolve **404** em 20/10/2026 — devolve o HTML da página de erro, não o PDF —, e a cópia obtida é a hospedada pelo **diretório estadual do próprio partido no Rio Grande do Sul**: mesmo partido, não o editor original.
+
+**Efeito no corpus:** 63 → **64 PDFs**, 12.125 → **12.144 páginas**, e a **documental move-se pela primeira vez desde 29/09/2026** — 22 → **23 PDFs / 6.951 → 6.970 p. —, porque entrou documento que ancora registro, e não literatura. O manifesto vai a **68 peças**.
+

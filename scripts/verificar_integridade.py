@@ -367,11 +367,19 @@ def main():
         # González-Bailón et al. 2011), por decisão do pesquisador. Com elas, as 7
         # peças lidas da camada A passam a ter arquivo — e `lida` deixa de divergir
         # de `lida-e-arquivada`. A documental continua em 22 / 6.951.
-        if (n, total, doc_n, doc_total) != (63, 12125, 22, 6951):
+        # Linha de base atualizada em 20/10/2026, e e a PRIMEIRA VEZ QUE A
+        # DOCUMENTAL SE MOVE desde 29/09: entra o eixo 16, criado por
+        # encaminhamento do pesquisador para os dois antecedentes do impeachment,
+        # com o documento `Uma Ponte para o Futuro` (19 folhas). As seis
+        # atualizacoes anteriores desta linha diziam, uma a uma, que a documental
+        # NAO mudava quando entrava literatura -- e e isso que a separacao serve
+        # para mostrar. Agora ela muda, porque entrou documento que ancora
+        # registro: 22 -> 23 PDFs documentais, 6.951 -> 6.970 paginas.
+        if (n, total, doc_n, doc_total) != (64, 12144, 23, 6970):
             avisos.append("corpus mudou: {} PDFs / {} páginas, {} documentais / {} p. "
-                          "(era 63 / 12125, 22 / 6951)".format(n, total, doc_n, doc_total))
-            print("  ~ corpus difere da linha de base de 13/10/2026 (63 PDFs / 12125 p., "
-                  "22 documentais / 6951 p.)")
+                          "(era 64 / 12144, 23 / 6970)".format(n, total, doc_n, doc_total))
+            print("  ~ corpus difere da linha de base de 20/10/2026 (64 PDFs / 12144 p., "
+                  "23 documentais / 6970 p.)")
         else:
             print("  OK — bate com o inventário")
 

@@ -23,10 +23,11 @@ Regra do projeto: nada se afirma sem ter sido lido, e nada se cita contra outra 
 | GRANOVETTER (1978); MARWELL & OLIVER (1993) | **Citação colhida no verbete de Oliver** |
 | MACHAMER, DARDEN & CRAVER (2000) | Ficha 2 (metadado) + citação colhida em Mayntz e em Cunha & Araújo |
 | BEACH & PEDERSEN (2013; 2016) | Ficha 1 (metadado) + **citação colhida em Cunha & Araújo, lida na fonte dela** |
+| RICKS & LIU (2018), *Process-Tracing Research Designs: A Practical Guide*, **PS** 51(4) | **Lido na fonte, integral** (5 p., impressa = PDF + 841), corpus — **lido em 21/10/2026, na frente F12**. Estava em `Fontes/05_Bibliografia-teorica/` desde antes e **fora deste inventário**: achado ao medir se alguma edição de Beach e Pedersen estava no corpus. Ver §11.5 |
 | WALDNER (2015) | Ficha 9 (metadado). **Não lido na fonte** — editor barrado |
 | SNOW, VLIEGENTHART & KETELAARS (2019), cap. 22 do *Wiley Blackwell Companion*, 2. ed. | **Lido na fonte, integral** (20 p.), corpus — camada A, achado em 13/10 pelo campo `locations` do OpenAlex; ver §10 |
 | KETELAARS (2016); SNOW, VLIEGENTHART & CORRIGALL-BROWN (2007); SNOW, TAN & OWENS (2013); GOFFMAN (1974); BENFORD (1993b) | **Citação literal colhida no capítulo de 2019**, lida na fonte dele |
-| BENFORD & SNOW (2000); SNOW *et al.* (1986); SNOW *et al.* (2014) | **Não lidos, e são justamente o que o capítulo de 2019 resume.** Nenhum dos três se cita por ele — os três estão `PENDENTE` na camada A, e o de 2000 é o que o campo `marco_teorico` do codebook declara |
+| BENFORD & SNOW (2000); SNOW *et al.* (1986); SNOW *et al.* (2014) | **Não lidos, e são justamente o que o capítulo de 2019 resume.** Nenhum dos três se cita por ele — os três estão `PENDENTE` na camada A, e o de 2000 é o que o campo `marco_teorico` do codebook declarava até 20/10/2026 — **saiu em 21/10, item 72** |
 
 **O que isso implica.** As linhas marcadas "citação colhida" são de segunda mão e estão aqui porque a obra que as colhe foi lida; não substituem ficha, e nenhuma delas entra em texto sem leitura própria. Foi essa disciplina que impediu um erro nesta mesma rodada: a busca por `certification` em *Dynamics of Contention* devolveu zero páginas por causa da ligadura tipográfica **ﬁ**, e a checagem revelou 42.
 
@@ -287,7 +288,7 @@ A §4 deste documento dizia *"Duas fontes independentes divergem"*. **Não diver
 
 ## 10. A arquitetura do enquadramento — os nove conceitos, lidos na fonte — 13-14/10/2026
 
-**Por que isto está num documento sobre mecanismo.** O codebook usa vocabulário de enquadramento em dois lugares: no campo `framing_narrativa` dos 83 registros, e em nomes de mecanismo — *alinhamento de quadros prévio* em PT-07 e *ressignificação do protesto* em PT-03, este renomeado em 04/10. **Até 13/10 esse vocabulário não tinha fonte lida.** O campo `marco_teorico` declara *Framing (Snow e Benford, 2000)*, que segue `PENDENTE` e `closed` na camada A, sem depósito em repositório algum. O capítulo 22 do *Wiley Blackwell Companion* (2ª ed., 2019), do mesmo autor principal, é a primeira leitura na fonte dessa camada do referencial — e ele se apresenta como o enunciado da arquitetura: ela "has not been fully elaborated in a single essay. We do so in the remainder of the chapter" (p. 394 impressa, PDF p. 4).
+**Por que isto está num documento sobre mecanismo.** O codebook usa vocabulário de enquadramento em dois lugares: no campo `framing_narrativa` dos 83 registros, e em nomes de mecanismo — *alinhamento de quadros prévio* em PT-07 e *ressignificação do protesto* em PT-03, este renomeado em 04/10. **Até 13/10 esse vocabulário não tinha fonte lida.** O campo `marco_teorico` declarava *Framing (Snow e Benford, 2000)*, que segue `PENDENTE` e `closed` na camada A, sem depósito em repositório algum — **e deixou de declará-la em 21/10/2026, frente F12: ver §11**. O capítulo 22 do *Wiley Blackwell Companion* (2ª ed., 2019), do mesmo autor principal, é a primeira leitura na fonte dessa camada do referencial — e ele se apresenta como o enunciado da arquitetura: ela "has not been fully elaborated in a single essay. We do so in the remainder of the chapter" (p. 394 impressa, PDF p. 4).
 
 **Os nove conceitos-pilar**, na ordem em que o capítulo os põe (p. 394), com a definição lida e o que cada um faz com este material. Paginação impressa; PDF = impressa − 390.
 
@@ -329,3 +330,100 @@ O segundo risco da lista é "framing errors or misframings, **as when a diagnost
 - **Não dá os quatro tipos de alinhamento na fonte deles**: atribui-os a Snow *et al.* (1986), que **não está lido** e está `PENDENTE` na camada A. Citar os quatro tipos pelo capítulo é citar o resumo; citar como de 1986 seria o modo de falha da casa.
 - **Nenhum caso brasileiro, e isso é medido:** "Brazil" ocorre **uma vez** no arquivo, e na lista de referências (Rothman e Oliver, 1999, sobre barragens no sul do Brasil). É o mesmo padrão das sínteses da camada A, que têm zero referências sobre o Brasil.
 - **E a ausência é precisa onde mais interessa.** A ilustração que o capítulo escolhe para articulação e elaboração é a retórica de "contemporary populist figures such as **Erdogan** of Turkey, **Le Pen** in France, and **Trump** in the US" (p. 398) — os mesmos mecanismos, a mesma família política, **sem o Brasil**. O capítulo também nomeia as "fake news" (Tavernise 2016) entre as fatias de realidade que a articulação costura. **A vaga que o material deste projeto ocupa é essa**, e não a de um caso a mais.
+
+---
+
+## 11. Marco, âncoras e interseções — a estrutura do pesquisador, executada — 21/10/2026
+
+**O encaminhamento, em duas falas.** *"Marco Teórico é a Teoria do Processo Político. Os conceitos de Framing e Ciclo de protesto, Mechanisms são âncoras teóricos. Beach and Pedersen (2019) é âncora metodológico."* E depois: *"Os conceitos não são excludentes. Eles se complementam. vamos estabelecer a diferenciação entre eles, mas construir os pontos de complementariedade e interseção."*
+
+Esta seção faz as duas coisas, nessa ordem, e **cada afirmação carrega a folha lida**. O campo `marco_teorico` do codebook foi reestruturado no mesmo dia.
+
+### 11.1 A distinção é de TIPO, e é isso que o campo não dizia
+
+O campo declarava três itens numa lista: *"Teoria do Processo Político (McAdam, Tarrow, Tilly); Process Tracing (Beach & Pedersen, 2019); Framing (Snow & Benford, 2000)"*. **Os três não são da mesma espécie** — e é esse o defeito que a distinção do pesquisador corrige:
+
+| Nível | O que é | O que responde |
+|:--|:--|:--|
+| **Marco** | Teoria do Processo Político | *por que* o confronto se produz: oportunidade, estrutura de mobilização, enquadramento, repertório |
+| **Âncoras teóricas** | Mechanisms · Framing · Ciclo de protesto | *com que vocabulário* cada elo é nomeado |
+| **Âncora metodológica** | process tracing | *como* se testa a cadeia, elo por elo |
+
+> **E há um ganho que não é de arrumação.** Enquanto os três estavam na mesma lista, *Framing* aparecia como rival do marco — uma teoria ao lado de outra. Posto como âncora **dentro** do marco, ele volta ao lugar que a própria Teoria do Processo Político lhe dá: enquadramento é um dos quatro componentes do programa, não uma alternativa a ele.
+
+### 11.2 A diferenciação — o que cada âncora explica, e o que ela não explica
+
+| Âncora | Unidade | O que explica | O que NÃO explica | Peça lida |
+|:--|:--|:--|:--|:--|
+| **Mechanisms** | o elo | como um estado de coisas produz o seguinte: corretagem, certificação, difusão, mudança de escala | por que o episódio tem a forma temporal que tem | *Dynamics of Contention* (2001), por folha; verbete *Mechanisms* de Tarrow (2013), integral |
+| **Framing** | o significado | como um problema é diagnosticado, a quem se atribui culpa, que prognóstico se oferece | se o quadro corresponde ao mundo — e **neste caso não corresponde** | Snow, Vliegenthart e Ketelaars (2019), cap. 22, integral |
+| **Ciclo de protesto** | a fase | onde o episódio está numa onda mais longa: difusão, inovação de repertório, institucionalização e radicalização | por que *este* ciclo radicalizou, já que a radicalização **não é consequência inevitável** | verbete *Protest cycles and waves* de della Porta (2013), integral |
+
+**As três lacunas da coluna da direita não são defeitos das âncoras: são onde o caso trabalha.** E a terceira é explícita na fonte — *"radicalization in a violent form does not seem to be an unavoidable consequence"* de dinâmica cíclica.
+
+### 11.3 As interseções, e são quatro, cada uma com a página
+
+**(a) Framing × Ciclo — os quadros-mestres.** O capítulo de 2019 define *master frames* como os que surgem cedo num **ciclo de protesto**, citando Tarrow (1994), e que passam a *"color and constrain"* os quadros posteriores do mesmo ciclo (p. 395 impressa). **A ponte está escrita na fonte do framing, usando o conceito da outra âncora** — não é costura do analista.
+
+**(b) Framing × Mechanisms — o enquadramento FORNECE mecanismos.** O mesmo capítulo chama *articulação* — *"the connection, or splicing together, and coordination of issues, events, experiences, and cultural items"* (p. 397) — e *elaboração* — *"accenting and highlighting some events, issues, and beliefs or ideas more than others"* (p. 398) — de **mecanismos discursivos**. E §10.4 deste documento mediu: o capítulo usa a palavra *mechanism* oito vezes, **sempre** nesse sentido estrito. Logo o framing não concorre com a âncora de mecanismo: contribui itens ao inventário dela.
+
+**(c) Ciclo × Mechanisms — o ciclo é feito de mecanismos.** A definição que o verbete de della Porta adota inclui *"a rapid diffusion of collective action from more mobilized to less mobilized sectors"* e *"a quickened pace of innovation in the forms of contention"* (Tarrow, 1994, p. 153, citado no verbete). **Difusão e mudança de escala são mecanismos, e estão lidos por folha em *Dynamics of Contention*** — difusão e *attribution of similarity* na p. 333, *scale shift* na p. 332. O ciclo é a forma agregada; os mecanismos são o que a produz.
+
+**(d) E a interseção que o próprio marco impõe, que é a mais forte.** O verbete *Political opportunity* de della Porta (2013, p. 478-483) registra que mudanças na estrutura de oportunidade *"do not have any effect on a social movement unless they are **perceived** as being important by the movement itself"* — e cita a **retratação dos próprios proponentes**, conferida na p. 45 impressa de *Dynamics of Contention*:
+
+> *"Opportunities and threats are **not objective categories**, but depend on the kind of **collective attribution** that the classical agenda limited to framing of movement goals."*
+
+**Isto é o marco declarando que a sua categoria central depende da âncora de enquadramento.** A complementaridade não é uma escolha de desenho deste projeto: é uma correção que a própria Teoria do Processo Político fez em si mesma, e está na obra lida. **É o fundamento mais forte disponível para a arquitetura que o pesquisador fixou.**
+
+**E há uma quinta, já lida, que sintetiza duas âncoras num conceito só:** a *estrutura de oportunidade discursiva*, que o verbete correspondente apresenta como algo que *"synthesizes theories of social movement framing and political opportunity structure"*, porque *"framing theory by itself is limited in its ability to explain why some collective action frames are more successful than others"* (Koopmans e Statham, 1999, p. 228, citados no verbete). Ver `10_VERBETES-ENCICLOPEDIA.md`.
+
+### 11.4 O modelo da articulação: gênero e espécie, não exclusão
+
+A pergunta *"como conceitos que se complementam se diferenciam sem se excluir?"* tem resposta dentro da peça lida, e ela é um caso exemplar:
+
+> *"**frame bridging can be considered a specific form of frame articulation**, with the specific aim of connecting the movement's main frame with one which has a wider resonance in society"* (p. 400 impressa).
+
+**A literatura de enquadramento opera por gênero e espécie.** *Bridging* não é o oposto de *articulação*: é a espécie estratégica, voltada a público, de um gênero mais amplo. Foi esse achado que mudou o teor da decisão sobre o nome de PT-07 — o nome antigo **não era da família errada**, nomeava o gênero quando a fonte permitia nomear a espécie (§10.1).
+
+> **E é esse o modelo para as três âncoras.** Elas não são três teorias disputando o mesmo objeto: são três **níveis de descrição** do mesmo processo — o elo, o significado e a fase. Quando duas parecem competir, a pergunta certa não é *"qual está certa?"*, é *"qual nomeia o gênero e qual nomeia a espécie?"*. Esse critério é operacional: foi o que resolveu PT-07, e é o que o codebook passa a aplicar quando dois nomes disputam um registro.
+
+### 11.5 A adaptabilidade da âncora metodológica, com o preço de cada rota
+
+**O que a medição desta frente achou, e ela corrige duas crenças do próprio repositório.**
+
+| Medição de 21/10/2026 | Resultado |
+|:--|:--|
+| alguma edição de Beach e Pedersen no corpus? | **Nenhuma** — nem 2013, nem 2016, nem 2019. Os dois PDFs cujo nome diz *process tracing* foram abertos: `Livro_Process tracing.pdf` é **Cunha e Araújo** (Enap, 104 folhas) e `process-tracing-research-designs-a-practical-guide.pdf` é **Ricks e Liu** (2018, *PS*, 5 folhas). Confirma por medição o que a §7.3 afirmava |
+| *"political opportunity structure"* em *Dynamics of Contention* | **zero** ocorrências em 411 folhas; *exogenous*, uma (p. 120 impressa) |
+| Ricks e Liu (2018) estava lida? | **Não estava no inventário** — e está no corpus. **Lida integral nesta frente** |
+
+**O que Ricks e Liu entregam, e é diretamente aplicável.** Um checklist de sete passos: (1) identificar hipóteses; (2) **estabelecer linhas de tempo**; (3) **construir o grafo causal**; (4) identificar a escolha ou evento alternativo em cada momento; (5) identificar o **desfecho contrafactual** de cada alternativa; (6) achar evidência para a hipótese primária; (7) repetir para a rival.
+
+> **Os passos 2 e 3 são o que este codebook é** — 85 sub-eventos sequenciados com cadeia causal. **Os passos 4 e 5 são o que ele não tem de forma sistemática**, e os autores são explícitos sobre o custo: *"Counterfactuals are vital to process-tracing, **especially when no alternative cases are considered**"*, e *"if a researcher is primarily focused on one single case (…) then this counterfactual exercise is important"*. Hoje o projeto faz isso em **um** nó — PT-28, em `11_HIPOTESES-RIVAIS-PT-28.md`.
+>
+> **E eles declaram o limite da própria peça:** o texto cobre **uma** variante de process tracing, a de **teoria-teste**, que atribuem a Beach e Pedersen (2013). É exatamente a variante que este projeto usa — e a atribuição vem, de novo, por citação.
+
+**O julgamento de adaptabilidade, então, é este.** A ontologia que o pesquisador quer é a que ancora a relação causal no **caso singular** e indica o process tracing como o método próprio dela — o que é precisamente o que 85 sub-eventos de um episódio fazem, sem reivindicar recorrência. **Ela é adaptável, e o aparato em uso já é dessa família.** O problema não é de adequação: é de **procedência**. O que se sabe de Beach e Pedersen vem de citação colhida em Cunha e Araújo e em Ricks e Liu, as duas lidas na fonte — e citar tese conferida apenas na citação de terceiro é o modo de falha que este projeto nomeia.
+
+**As duas rotas, com o preço escrito — e a escolha é sua:**
+
+| | **(A) Declarar a âncora como não lida** | **(B) Obter e ler a obra** |
+|:--|:--|:--|
+| **o que se faz** | o campo mantém Beach e Pedersen como âncora metodológica declarada, com a nota de que nenhuma edição está no corpus, e o **aparato operante** segue creditado à cadeia lida: Van Evera (1997) → Bennett (2010) → Collier (2011), mais Mayntz, Cunha e Araújo e Ricks e Liu | obter *Process-Tracing Methods* (2. ed., 2016/2019) e ler na fonte; a âncora passa a ser citável por folha |
+| **preço** | o projeto declara uma âncora que não abriu. **É honesto porque está declarado, mas um parecerista vai perguntar** — e a pergunta é legítima, já que a âncora metodológica é a que justifica o desenho inteiro | tempo de leitura, e a rota é incerta: a obra é da Cambridge/Michigan e as editoras barradas estão medidas no corpus. Pode exigir pedir o arquivo, via pela qual nove peças já chegaram |
+| **o que NÃO muda em nenhuma das duas** | os quatro testes continuam de Van Evera, Bennett e Collier — corrigido em 10/10/2026, e nenhuma rota reabre isso | idem |
+
+> **Recomendação, se quiser uma: (A) agora, (B) quando houver folga de leitura.** A razão é que (A) **já é verdade** — basta escrevê-la — e (B) não altera nenhum dado do codebook: altera o que o projeto pode **citar**. E há um terceiro caminho que não é rota, é consequência: se (B) acontecer, os **passos 4 e 5 de Ricks e Liu** passam a ser exigência explícita, e aí a conta é de pesquisa, não de leitura — construir contrafactual por nó.
+
+**Uma nota que não é rota.** Haveria a opção de trocar a âncora por uma peça lida — Collier, ou Mayntz — e dispensar Beach e Pedersen. **Não está sobre a mesa porque o pesquisador fixou a âncora**, e trocá-la seria decidir no lugar dele. Fica registrada apenas para que a omissão não pareça esquecimento.
+
+### 11.6 O que isto cobra do codebook, e o que já foi feito
+
+| | |
+|:--|:--|
+| ✅ **`marco_teorico` reestruturado** | marco, três âncoras e método, cada âncora citando a peça lida com folha |
+| ✅ **Snow e Benford (2000) saiu da declaração** | `PENDENTE` e `closed` na camada A, sem depósito em repositório algum, nunca lida. Fica como referência de **genealogia** |
+| ✅ **PT-03D deixou de atribuir a obra não lida** | *"em vocabulário de Tilly e Tarrow"* saiu do campo, da figura e do relatório; entrou o verbete de della Porta, lido, **e a leitura qualificou o mecanismo** |
+| 🔶 **a rota da âncora metodológica** | decisão sua: (A) ou (B) acima |
+| 🔶 **os passos 4 e 5 de Ricks e Liu** | contrafactual por nó existe em **um** nó, PT-28. Estendê-lo é trabalho de pesquisa, não de leitura, e não foi aberto aqui |
+| 🔶 **`framing_narrativa` sem grade funcional** | o capítulo de 2019 dá três tarefas centrais — diagnóstico, prognóstico, motivacional — e o campo hoje **nomeia** quadros sem classificar função. É a mesma cobrança da §10, ainda aberta |

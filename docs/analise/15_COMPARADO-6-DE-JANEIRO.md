@@ -25,7 +25,7 @@ As duas peças foram entregues pelo pesquisador depois que a coleta automatizada
 
 Comparam **675.336 posts** de Facebook, Twitter e Parler entre 1/09/2020 e 1/02/2021, aplicando a tipologia de enquadramentos de ação coletiva de **Snow e Benford** — diagnóstico, prognóstico e motivacional — mais um dispositivo próprio, *pistas de violência*.
 
-> **Snow e Benford são marco teórico declarado deste projeto** (`marco_teorico` do codebook). É a primeira peça do corpus sobre o 6 de janeiro que fala a mesma língua analítica do codebook.
+> **Snow e Benford eram marco teórico declarado deste projeto** (`marco_teorico` do codebook) **até 21/10/2026**, quando o campo passou a citar a peça lida de 2019 e a de 2000 ficou como genealogia — item 72. É a primeira peça do corpus sobre o 6 de janeiro que fala a mesma língua analítica do codebook.
 
 Âncoras, todas na PDF p. 1: os esforços para reverter o resultado *"culminated in the storming of Capitol Hill on 6 January 2021, endangering the democratic process"*; o desenho da comparação; e a infraestrutura da mobilização — *"their use of different social media platforms to disseminate election-related disinformation, mobilize supporters, and reinforce their in-group members' political identities and nationalism"*.
 

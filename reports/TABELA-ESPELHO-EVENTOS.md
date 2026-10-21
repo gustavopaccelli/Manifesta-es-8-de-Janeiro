@@ -108,7 +108,7 @@ A versão completa — com os seis campos da figura ao lado dos seis do codebook
 | `PT-54` | 2023 | Instalação da CPMI | T+1 Resposta legislativa | Confirmado em fonte primária | abertura de arena institucional de atribuicao de responsabi… | — | ✅ |
 | `PT-55` | 17–18/10/2023 | Relatório da CPMI: 61 indiciamentos | T+1 Resposta legislativa | Confirmado em fonte primária | certificacao parlamentar da cadeia causal | — | ✅ |
 | `PT-56` | 11/09/2025 | Condenação do núcleo crucial | T+1 Resposta judicial | Confirmado | fechamento causal "de cima" | — | ✅ |
-| `PT-57` | 22/10/2025 | Acórdão da AP 2668 | T+1 Resposta judicial | Confirmado | consolidacao documental da narrativa causal oficial | — | ✅ |
+| `PT-57` | 15/10/2025 | Acórdão da AP 2668 concluído | T+1 Resposta judicial | Confirmado | consolidacao documental da narrativa causal oficial | — | ✅ |
 | `PT-58` | 22/11/2025 (preventiva) — 25/11/2025 (início do cumprimento da pena) | Prisão de Bolsonaro | T+1 Resposta judicial | Confirmado em fonte primária | responsabilizacao do topo da cadeia | — | ✅ |
 | `PT-59` | 15/01/2026 | Sala de Estado Maior na Papuda | T+1 Resposta judicial | Confirmado em fonte primária | normalizacao da execucao penal do ex-chefe do executivo | — | ✅ |
 | `PT-60` | 24/03/2026 | Prisão domiciliar humanitária | T+1 Resposta judicial | Confirmado em fonte primária | modulacao humanitaria da sancao | — | ✅ |

@@ -3540,3 +3540,87 @@ Injetado na figura, no lugar do nome de PT-07, o texto **`Alinhamento de quadros
 | **abreviação da figura** | 9 | PT-01A, PT-01B, PT-15, PT-30, PT-42, PT-48, PT-53, PT-58 e PT-03D — alinhar o nome ao do codebook, mantendo a paráfrase do corpo |
 
 **E duas cifras do cabeçalho do HTML seguem velhas:** *"Última revisão: 25/09/2026"*, quatro edições atrás, e *"83 sub-eventos, 60 deles em fonte primária"*, quando são 85 e 61.
+
+---
+
+## 70. As 17 divergências caíram a zero — e a guarda de nome retirado era cega à caixa — ✅ 21/10/2026
+
+**Encaminhamento:** *"e enumere os três mecanismos no rótulo, sem desdobrar o ponto"* — a decisão de forma que a frente F10 esperava.
+
+A frente era de execução: zerar as 17 divergências que a tabela-espelho mediu em 20/10. Ao executá-la, a varredura das três formulações retiradas achou **um defeito maior do que a frente**: elas não estavam só na figura, e a checagem 7 — a guarda criada em 10/10 exatamente para impedir que nome retirado voltasse — deixava passar **dois usos vivos** por ser sensível à caixa.
+
+### 70.1 As 17, por classe, e o que cada uma exigiu
+
+| Classe | Quantas | O que se fez |
+|:--|--:|:--|
+| **a figura afirmava o que o codebook corrigiu** | 3 | PT-01, PT-02 e PT-06: o rótulo passou a dizer o que o registro diz, e as formulações substituídas entraram na checagem 7 |
+| **ponto composto com um nome só** | 6 | PT-03C/D, PT-06A/B/C e PT-08A/B/C: o rótulo **enumera um mecanismo por registro**, e o ponto não se desdobra |
+| **abreviação do nome** | 8 | PT-01A, PT-01B, PT-15, PT-30, PT-42, PT-48, PT-53 e PT-58: nome alinhado, paráfrase do corpo mantida |
+
+**O rótulo de `PT-06A/B/C` dizia *"Dois mecanismos em conjunto"* para um ponto que cobre TRÊS registros** — e nomeava dois deles, calando `PT-06A`, que é justamente o que a denúncia da PGR aponta como marco inicial. Não era texto velho: era agregação que perdia o registro analiticamente decisivo.
+
+### 70.2 A cobrança no ponto composto mudou de forma, e tinha de mudar
+
+Um ponto composto tem **um** campo `mec` para dois ou três registros. Cobrado por prefixo — a regra dos pontos simples —, o rótulo correto seria reprovado em dois registros, e o rótulo que nomeia um irmão e cala os outros seria aprovado num. Então:
+
+> **Em ponto composto a cobrança é de CONTINÊNCIA:** o nome de cada registro tem de aparecer no rótulo. A guarda passa a cobrar a **enumeração completa** em vez de uma escolha entre irmãos.
+
+### 70.3 O achado que a frente não ia procurar: a checagem 7 é cega à caixa
+
+Varridas as três formulações retiradas nos quatro artefatos vigiados, **com a caixa ignorada**, apareceram 13 ocorrências — e duas delas eram **nome formalmente retirado, em uso, que a guarda deixava passar**:
+
+| O que estava vivo | Onde | Por que passou |
+|:--|:--|:--|
+| `certificação de eficácia` | relatório, mecanismo do bloco 2013–2016 **e** elo da cadeia ASCII | a entrada vigiada é `Certificação de eficácia`, com maiúscula |
+| `Rede distribuída com nós centralizadores` | relatório, linha de PT-12A na tabela de síntese | a entrada vigiada é minúscula |
+
+> **A lição de 18/10 foi escrita e não foi retroaplicada.** Naquele dia o nome de PT-07 entrou com **três variantes** no registro, com o comentário explícito de que "guarda de substring exige a forma exata, e uma só entrada teria deixado duas passar". As cinco entradas anteriores ficaram como estavam — e duas delas tinham o buraco.
+>
+> **Correção estrutural, não entrada nova:** a comparação passou a **ignorar a caixa**, o que resolve a classe inteira e dispensa manter variantes. As duas entradas que existiam só por diferença de caixa saíram na mesma rodada; 14 strings vigiadas viraram 17, com três a mais de conteúdo novo e duas a menos de redundância.
+
+**O preço foi pago no texto, não na guarda.** A comparação não distingue **menção** de **uso** — e isso é desenho, porque distinguir exigiria frases-moldura declaradas, que é lista a manter. Então os cinco lugares que *narravam* a troca deixaram de **grafar** o nome morto e passaram a nomear a **afirmação** que saiu: *"em substituição ao nome anterior, que era o do modelo de limiar"*. É o padrão que a própria guarda impôs em 18/10, quando reprovou um texto novo meu que escrevia o nome morto para dizer que ele havia saído. O registro do nome antigo continua em `metadados.revisoes` e em `docs/analise/`, que não são artefatos vigiados.
+
+### 70.4 E o relatório carregava o mesmo defeito da figura, em sete lugares
+
+| Onde | O que afirmava |
+|:--|:--|
+| mecanismo do bloco 2013–2016 | os **dois** nomes retirados, lado a lado |
+| cadeia ASCII, elo de PT-03 | o nome retirado de PT-03 |
+| cadeia ASCII, elo de PT-06 | *ecossistema digital paralelo* |
+| fato do bloco PT-05/PT-06 | que a pandemia **consolidou** a infraestrutura |
+| mecanismo do bloco PT-05/PT-06 | *construção de infraestrutura comunicacional autônoma* — exatamente o que a retificação nega |
+| tabela de síntese, linha de PT-01 | a formulação canônica substituída em 04/10 |
+| tabela de síntese, linha de PT-12A | o nome retirado em 10/10 |
+
+> **A tabela de síntese do relatório é uma TERCEIRA cópia manual dos nomes de mecanismo**, e a tabela-espelho não a compara — ela compara o HTML e o SVG. Dois de seus 85 registros carregavam nome retirado, e só apareceram porque a varredura por string os alcançou. **Medir a tabela de síntese inteira contra o codebook está listado como pendência, não feito nesta frente.**
+
+### 70.5 Presença não é ausência de outra
+
+O cabeçalho do HTML dizia, no mesmo parágrafo, *"85 sub-eventos"* numa frase e *"83 sub-eventos, 60 deles em fonte primária"* na seguinte — por quatro edições. E `conferir_figuras.py` **passava**, porque a guarda era `if "85 sub-eventos" not in html`: a cifra certa a satisfazia e a velha convivia ao lado dela.
+
+> **Guarda de substring só prova que a frase certa existe.** Para provar que a errada não existe, tem de varrer **todas** as ocorrências do padrão. As duas cifras do cabeçalho passaram a ser varridas por regex nas duas figuras, e qualquer número diferente do medido no codebook derruba o ciclo.
+
+**E a data digitada saiu.** *"Última revisão: 25/09/2026"* não é conferível por nada e estava quatro edições atrasada. No lugar dela, o cabeçalho declara **onde** a figura é conferida — `conferir_figuras.py` para cobertura, selo, procedência e cifras; a tabela-espelho para o nome do mecanismo — e diz que três pontos são compostos, informação que até aqui vivia **só** dentro de uma constante do verificador.
+
+### 70.6 Quatro provas negativas, uma por guarda
+
+Cada uma registra o SHA-256 do artefato, injeta o defeito, roda o verificador, reverte pela troca inversa e **confere o SHA-256** — prova que deixa resíduo é pior que prova nenhuma.
+
+| Injeção | Guarda | Resultado |
+|:--|:--|:--|
+| nome trocado em ponto simples (PT-15) | tabela-espelho, base 0 | `1 (base 0)`, saída 1 |
+| um dos três nomes sai do rótulo composto (PT-08B) | continência no ponto composto | `1 (base 0)`, saída 1 |
+| nome retirado volta em **caixa diferente** | checagem 7 | acusou — **e antes de 21/10 isto passava** |
+| cifra velha de sub-eventos ao lado da certa | `conferir_figuras.py` | acusou |
+
+### 70.7 A cobrança do nome NÃO migrou para `conferir_figuras.py`
+
+O plano da frente dizia que, zerada a base, a comparação de nome entraria naquele script. **Não entrou, e a razão é a regra da casa:** a tabela-espelho já **importa** `BLOCO`, `campo`, `CLASSE` e `COMPOSTOS` de lá, e reimplementar o recorte de nome no verificador seria a **quinta cópia** da mesma lógica num repositório cujo modo de falha batizado é a cópia que envelhece em silêncio. A guarda fica onde o dado está — passo 4 do ciclo, que roda a cada alteração — e o *docstring* de `conferir_figuras.py` aponta para lá, para quem venha procurar no lugar errado.
+
+### 70.8 O que isto deixa aberto
+
+| | |
+|:--|:--|
+| **a tabela de síntese do relatório** | terceira cópia manual dos nomes de mecanismo, nunca medida contra o codebook; dois registros carregavam nome retirado |
+| **`mecanismo_causal` de PT-03D** | atribui *"Em vocabulário de Tilly e Tarrow"* a obra não lida. **Saiu da figura** nesta frente; o campo do JSON é de F12 |
+| **o `mec` do SVG** | resume por **faixa**, não por registro, e a tabela-espelho não o compara — só confere se o id aparece. A faixa conjuntural recuperou a palavra *parcial* nesta frente; as outras compressões são legítimas |

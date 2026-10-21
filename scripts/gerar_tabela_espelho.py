@@ -69,11 +69,20 @@ MAPA = [("ator", "ator_grupo"), ("rep", "repertorio_acao"),
 # **Cifra estimada a mao nao vale como linha de base**, e esta e a quarta vez
 # que isso aparece neste repositorio.
 #
-# A base existe para CAIR. Enquanto nao for zero, esta tabela CONTA e NOMEIA, e
-# `conferir_figuras.py` nao reprova: guarda que derruba o ciclo em 17 casos
-# conhecidos no dia em que nasce ensina a ignorar guarda. Quando chegar a zero,
-# a cobranca do nome entra la, com prova negativa.
-DIVERGENCIAS_BASE = 17
+# A base existe para CAIR, e CAIU A ZERO em 21/10/2026, frente F10 (item 70).
+# Dezessete corrigidas em tres classes: tres em que a figura afirmava o que o
+# codebook ja retirara (PT-01, PT-02, PT-06), seis de ponto composto e oito de
+# nome abreviado. **Com a base em zero esta linha deixou de ser tolerancia e
+# passou a ser proibicao**: qualquer nome de mecanismo que a figura escreva
+# diferente do codebook derruba o ciclo no passo 4, sem lista a manter.
+#
+# E ela NAO migrou para `conferir_figuras.py`, embora o plano da frente dissesse
+# que migraria. A razao e a regra da casa: aqui a comparacao ja importa `BLOCO`,
+# `campo`, `CLASSE` e `COMPOSTOS` daquele script, e reimplementar o recorte de
+# nome la seria a quinta copia da mesma logica num repositorio cujo modo de
+# falha batizado e exatamente a copia que envelhece em silencio. A guarda fica
+# onde o dado esta; o docstring de `conferir_figuras.py` aponta para ca.
+DIVERGENCIAS_BASE = 0
 
 
 def norma(s):
@@ -159,9 +168,29 @@ def main():
 
         esperado = CLASSE.get(e["status_classe"], "?")
         nome_cod = nome_mecanismo(e.get("mecanismo_causal"))
-        nome_fig = nome_mecanismo(campo(bloco, "mec")) if bloco else ""
+        mec_fig = campo(bloco, "mec") if bloco else ""
+        nome_fig = nome_mecanismo(mec_fig) if bloco else ""
+        composto = bool(bloco) and hid != pid
         if not bloco:
             espelho_nome = "sem figura"
+        elif composto:
+            # PONTO COMPOSTO: a cobranca e de CONTINENCIA, nao de prefixo, e a
+            # razao e uma decisao do pesquisador de 21/10/2026 -- "enumere os
+            # tres mecanismos no rotulo, sem desdobrar o ponto". Um ponto que
+            # cobre tres registros tem um `mec` so, logo o prefixo dele pode
+            # casar com no maximo um dos tres: cobrado por prefixo, o rotulo
+            # correto seria reprovado em dois registros, e o rotulo que nomeia
+            # um mecanismo e cala os outros dois seria aprovado num. Era esse o
+            # defeito que a primeira execucao achou -- `PT-06A/B/C` dizia "dois
+            # mecanismos em conjunto" para TRES registros, com tres mecanismos
+            # distintos no codebook. Aqui o nome de CADA registro tem de
+            # aparecer no rotulo, e a guarda passa a cobrar a enumeracao
+            # completa em vez de uma escolha entre irmaos.
+            espelho_nome = ("casa (enumerado)"
+                            if nome_cod and nome_cod in norma(mec_fig)
+                            else "DIVERGENTE")
+            if espelho_nome == "DIVERGENTE":
+                divergentes.append((pid, nome_fig, nome_cod))
         elif nome_fig == nome_cod or nome_fig.startswith(nome_cod) \
                 or nome_cod.startswith(nome_fig):
             espelho_nome = "casa"
@@ -271,7 +300,7 @@ def main():
             l["id"], l["data_hora"], curto(l["evento"], 40), l["fase"],
             l["status_classe"], curto(l["nome_mecanismo_codebook"], 60),
             l["ponto_na_figura"] or "—",
-            "✅" if l["espelho_nome_mecanismo"] == "casa"
+            "✅" if l["espelho_nome_mecanismo"].startswith("casa")
             else ("—" if l["espelho_nome_mecanismo"] == "sem figura" else "⚠️")))
     w("")
     MD_P.write_text("\n".join(out) + "\n", encoding="utf-8")

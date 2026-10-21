@@ -442,9 +442,6 @@ def main():
         "Alinhamento de quadros prévio": ("18/10/2026", "PT-07",
                                           "Deliberação de ruptura e articulação "
                                           "do quadro de fraude"),
-        "alinhamento de quadros prévio": ("18/10/2026", "PT-07",
-                                          "Deliberação de ruptura e articulação "
-                                          "do quadro de fraude"),
         "Alinhamento de quadros (frame alignment) prévio":
             ("18/10/2026", "PT-07",
              "Deliberação de ruptura e articulação do quadro de fraude"),
@@ -469,10 +466,43 @@ def main():
         # exemplo -- vive em docs/analise/, que nao e artefato vigiado.
         "massa crítica": ("18/10/2026", "PT-21 e PT-34",
                           "o que a folha mede: 300 → 5.500 pessoas"),
-        "Massa crítica": ("18/10/2026", "PT-21 e PT-34",
-                          "o que a folha mede: 300 → 5.500 pessoas"),
         "Concentração de recursos": ("18/10/2026", "PT-21",
                                      "Concentração de contingente no acampamento"),
+        # 21/10/2026, frente F10 (item 70): as TRES formulacoes que a tabela-
+        # espelho achou vivas nas figuras. Nao eram "nomes retirados" no sentido
+        # do registro acima -- eram REFORMULACOES de campo, de 04/10/2026, e e
+        # por isso que nunca entraram aqui e a figura envelheceu dezessete dias
+        # em silencio. **Esta e a licao da rodada: reformulacao de campo tambem
+        # retira enunciado, e enunciado retirado tambem volta.**
+        "Abertura de estrutura de oportunidade": (
+            "04/10/2026", "PT-01",
+            "Janela de oportunidades políticas aberta no ciclo de 2013"),
+        # LIMITE DECLARADO, e e de recorte: o termo NU -- spin-off -- fica livre,
+        # porque o codebook o usa em NEGACAO ("nao e ciclo novo nem spin-off") e
+        # o relatorio o discute. O que se vigia e a glosa entre parenteses, que
+        # so aparece quando o termo e usado como NOME de mecanismo. Guarda que
+        # disparasse na negacao treinaria a ignorar a guarda.
+        "(spin-off)": ("04/10/2026", "PT-02",
+                       "Apropriação parcial do repertório de protesto por "
+                       "contramovimentos conservadores"),
+        # TRES strings para a mesma retificacao, e cada uma foi medida num lugar
+        # diferente: a figura dizia "ecossistema informacional paralelo", a
+        # cadeia ASCII do relatorio dizia "ecossistema digital paralelo", e o
+        # campo de mecanismo do relatorio dizia "infraestrutura comunicacional
+        # autonoma". Uma entrada so teria deixado duas passar -- a mesma forma
+        # da licao das tres variantes de PT-07.
+        "ecossistema informacional paralelo": (
+            "04/10/2026", "PT-06",
+            "Mobilização permanente da base por circulação de enquadramentos "
+            "negacionistas"),
+        "ecossistema digital paralelo": (
+            "04/10/2026", "PT-06",
+            "Mobilização permanente da base por circulação de enquadramentos "
+            "negacionistas"),
+        "infraestrutura comunicacional autônoma": (
+            "04/10/2026", "PT-06",
+            "Mobilização permanente da base por circulação de enquadramentos "
+            "negacionistas"),
     }
     achou_morto = 0
     for rel in ARTEFATOS:
@@ -480,9 +510,31 @@ def main():
         if not cam.exists():
             avisos.append("artefato ausente na checagem 7: {}".format(rel))
             continue
-        txt = cam.read_text(encoding="utf-8")
+        # CAIXA IGNORADA desde 21/10/2026, frente F10 — e a medição que motivou
+        # a mudança achou DOIS USOS VIVOS de nome retirado que esta guarda havia
+        # deixado passar por onze dias:
+        #   `certificação de eficácia` (minúscula) no mecanismo do bloco
+        #      2013–2016 do relatório e no elo da cadeia ASCII, enquanto a
+        #      entrada vigiada era `Certificação de eficácia`;
+        #   `Rede distribuída com nós centralizadores` (maiúscula) na linha de
+        #      PT-12A da tabela de síntese, enquanto a entrada era minúscula.
+        # A lição de 18/10 — três variantes para o nome de PT-07, porque a
+        # guarda casa substring exata — foi escrita e NÃO foi retroaplicada às
+        # cinco entradas anteriores. Ignorar a caixa resolve a classe inteira e
+        # dispensa a lista de variantes: as duas entradas que existiam só por
+        # diferença de caixa saíram na mesma rodada.
+        #
+        # O PREÇO, e ele foi pago no texto, não na guarda: a comparação não
+        # distingue MENÇÃO de USO, então os artefatos deixaram de GRAFAR o nome
+        # morto ao narrar a troca — passaram a nomear a afirmação que saiu ("em
+        # substituição ao nome anterior, que era o do modelo de limiar"). É o
+        # padrão que a própria guarda impôs em 18/10, quando reprovou um texto
+        # novo que escrevia o nome morto para dizer que ele saíra. O registro do
+        # nome antigo vive em `metadados.revisoes` e em `docs/analise/`, que não
+        # são artefatos vigiados.
+        txt = cam.read_text(encoding="utf-8").lower()
         for morto, (quando, pid, vivo) in RETIRADOS.items():
-            if morto in txt:
+            if morto.lower() in txt:
                 achou_morto += 1
                 falhas.append("nome retirado em {}: '{}' ({}, {} -> {})"
                               .format(rel, morto, pid, quando, vivo))

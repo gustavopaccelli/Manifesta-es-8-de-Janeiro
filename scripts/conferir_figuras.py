@@ -32,6 +32,15 @@ Quatro checagens:
 Nada disto lê o *conteúdo* dos rótulos: uma cifra nova e errada passa. Isto pega
 divergência declarada, não erro de transcrição.
 
+ONDE O NOME DO MECANISMO É CONFERIDO — e não é aqui, de propósito. Desde
+20/10/2026 `scripts/gerar_tabela_espelho.py` (passo 4 do ciclo) compara o NOME
+do mecanismo de cada registro com o que a figura exibe, e desde 21/10 a linha de
+base é **zero**: qualquer divergência derruba o ciclo. Ele importa `BLOCO`,
+`campo`, `CLASSE` e `COMPOSTOS` *deste* arquivo em vez de reimplementá-los, e é
+por isso que a cobrança mora lá: trazê-la para cá seria a quinta cópia da mesma
+lógica. Se você vem procurar aqui a checagem de nome, ela está em
+`reports/TABELA-ESPELHO-EVENTOS.md`.
+
 Uso:  python scripts/conferir_figuras.py
 """
 
@@ -138,6 +147,26 @@ def main():
         falhas.append("HTML não declara os {} sub-eventos do codebook".format(n_json))
     if "({} sub-eventos)".format(n_json) not in svg:
         falhas.append("SVG não declara os {} sub-eventos do codebook".format(n_json))
+    # PRESENÇA NÃO É AUSÊNCIA DE OUTRA, e isto foi medido em 21/10/2026, na
+    # frente F10. As duas linhas acima existiam e passavam, e o cabeçalho do
+    # HTML dizia, no mesmo parágrafo, "85 sub-eventos" numa frase e "83
+    # sub-eventos, 60 deles em fonte primária" na seguinte — a cifra certa
+    # satisfazia a guarda e a velha convivia ao lado dela, por quatro edições.
+    # Guarda de substring só prova que a frase certa existe; para provar que a
+    # errada não existe, tem de varrer TODAS as ocorrências do padrão.
+    PADROES = [
+        (r"(\d+)\s+sub-eventos", n_json, "sub-eventos"),
+        (r"(\d+)\s+deles em fonte primária",
+         sum(1 for e in J.values()
+             if e["status_classe"] == "Confirmado em fonte primária"),
+         "registros em fonte primária"),
+    ]
+    for pad, certo, rotulo in PADROES:
+        for rel, txt in (("HTML", html), ("SVG", svg)):
+            for achado in set(re.findall(pad, txt)):
+                if int(achado) != certo:
+                    falhas.append("{} declara {} {} — o codebook tem {}"
+                                  .format(rel, achado, rotulo, certo))
 
     print("=" * 78)
     if falhas:

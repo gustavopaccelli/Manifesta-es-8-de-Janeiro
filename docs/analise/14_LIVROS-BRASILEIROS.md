@@ -232,7 +232,7 @@ O pesquisador mandou **ler os três livros**. O offset de cada um deixou de ser 
 | Gurza Lavalle, Carlos, Dowbor e Szwako (2018) | 414 | 411 | **−2** |
 | Abers (2021) | 359 | 356 | **−2** |
 | Madeira, Marona e Del Río (2022) | 427 | 423 | **−2** |
-| *(Singer, Araujo e Rugitsky, 2022, medido no mesmo passo)* | 374 | — | ~~**−1**~~ **ERRADO — ver §9** |
+| *(Singer, Araujo e Rugitsky, 2022, medido no mesmo passo)* | 374 | — | ~~**−1**~~ **ERRADO: o offset DERIVA em sete faixas, de −1 a +5 — ver §9.1. Os outros quatro da tabela foram reconferidos em 22/10/2026 e sustentam-se — §9.6** |
 
 > **A DIFERENÇA ENTRE O TOTAL DA FICHA E O TOTAL DO PDF NÃO É O OFFSET.** Lavalle: diferença 3, offset 2. Abers: diferença 3, offset 2. Madeira: diferença 4, offset 2. **Nos três, a aritmética da ficha daria a resposta errada** — e era exatamente o que o caso Araujo e Sales (offset derivado de um intervalo declarado) ensinara a fazer. O que vale ali não vale aqui: intervalo declarado de um artigo é informação sobre o recorte; total de páginas de um livro é informação sobre o miolo, e os pré-textuais não entram na conta do mesmo jeito. **Só a folha impressa na página decide.** Quatro livros, três editoras, três offsets diferentes, mais o volume com zero.
 
@@ -342,7 +342,21 @@ A tabela da §8.3 declarava `impressa = PDF − 1`, medido no mesmo passo dos tr
 
 **O que isto é, analiticamente:** **atribuição de eficácia ao precedente por ator brasileiro nomeado, em janeiro de 2021** — isto é, exatamente o mecanismo que PT-08 codifica, e **dois anos antes** do evento. Não é leitura retrospectiva: é invocação de precedente registrada em tempo real, e a crítica embutida — *"não tivesse sido mais estruturada"* — é avaliação de **falha de execução**, que é a forma mais forte de atribuição de eficácia.
 
-> **O LIMITE DESTA PEÇA, e ele é da regra da casa.** Lacerda cita a declaração **via imprensa** (SCAPA, 2021). É **citação colhida em obra lida**: autoriza afirmar que a declaração circula e que a literatura acadêmica a registra, **não** vale como âncora primária do que foi dito. A rota primária seria a própria matéria, que não está no corpus. **Citar Lacerda para o conteúdo da fala seria citar o resumo de terceiro — o modo de falha que este projeto nomeia.**
+> **O LIMITE DESTA PEÇA, e ele é da regra da casa.** Lacerda cita a declaração **via imprensa** (SCAPA, 2021). É **citação colhida em obra lida**: autoriza afirmar que a declaração circula e que a literatura acadêmica a registra, **não** vale como âncora primária do que foi dito.
+>
+> ### ✅ RESOLVIDO EM 22/10/2026 — e a ida à fonte achou DOIS defeitos na citação intermediária
+>
+> O pesquisador escolheu a saída **(b)**: obter a matéria. Ela está transcrita em `../../Fontes/09_Arquivamento-web/Estadao_2021-03-08_Eduardo-Bolsonaro-nega-atuacao-Capitolio.md`, e **PT-08 passou a ancorar nela**. O que a leitura da fonte mostrou:
+>
+> | | Lacerda (2022, p. 355) | A matéria (Estadão, 08/03/2021) |
+> |:--|:--|:--|
+> | **data da fala** | *"à véspera da posse de Biden"* — isto é, por volta de **19/01/2021** | **08/03/2021**, em **Jerusalém**, em viagem a Israel. A página se data a si mesma no JSON-LD: `2021-03-08T20:29:25-03:00` |
+> | **a aspa** | *"poder bélico mínimo para **[…]** matar todos os policiais lá dentro"* | *"poder bélico mínimo para **não morrer ninguém, matar** todos os policiais lá dentro"* |
+> | **o enquadramento** | a fala aparece como lamento de que o ato *"não tivesse sido mais estruturada"* | a matéria é de **NEGATIVA**: ele nega participação em reunião de 05/01/2021 e chama o ato de *"desorganizado"* e *"lamentável"*, dizendo que *"ninguém desejava que isso ocorresse"* |
+>
+> **A elisão é o defeito grave.** A frase original é internamente contraditória — é transcrição de fala —, e retirar *"não morrer ninguém,"* **converte-a em endosso unívoco**. É o modo de falha batizado deste projeto, a citação conferida apenas contra a citação de terceiro, e **foi a ida à fonte que o pegou**.
+>
+> **E o achado analítico é melhor do que o que a citação intermediária prometia:** o lado brasileiro da difusão **não é adesão ao precedente** — é **crítica tática da execução somada a distanciamento público**, que é a mesma ambivalência que o codebook já codifica em PT-11 e PT-50, agora documentada dois anos antes do evento.
 
 ### 9.4 O que ela corrobora sem acrescentar, e o que acrescenta
 
@@ -360,3 +374,19 @@ A tabela da §8.3 declarava `impressa = PDF − 1`, medido no mesmo passo dos tr
 - **O *interregno*** de Streeck (2016), adotado pela coletânea como a sua terceira hipótese — *"um período de declínio sem perspectiva de superação, de capitalismo descoordenado e instabilidade política"* (p. 12 impressa). Dá ao 8 de Janeiro um lugar numa conjuntura mundial **sem exigir a comparação sistemática** que o corpus não sustenta.
 - **A Constituição como pacto social tácito**, de Araujo e Belinelli: ela *"não é apenas um texto jurídico… é também um acordo tácito entre os grupos e classes sociais"* (p. 165-166 impressas), e a crise é a **perda de aderência** desse pacto. É uma leitura institucional do arco 1988-2016 que dá a PT-03 um registro que a literatura de movimentos não dá.
 - **A tese do título**, que é uma reivindicação de posição: o Brasil *"na vanguarda do inferno global"* — o caso como **antecipação**, não como réplica tardia. Isso **tensiona** a leitura de PT-08, em que Brasília é adotante tardio do precedente estadunidense, e a tensão vale escrita.
+
+### 9.6 Os outros três livros NÃO derivam — e a conferência de 08/10 se sustenta
+
+**Encaminhamento, em 22/10/2026:** achada a deriva em Singer, o pesquisador mandou verificar se os outros da leva também derivam. Varridos folha a folha pelo mesmo método:
+
+| Livro | Folhas | Fólio legível em | Offset | Faixas |
+|:--|--:|--:|:--:|--:|
+| Gurza Lavalle, Carlos, Dowbor e Szwako (2018) | 414 | 380 | **−2** | **1** |
+| Abers (2021) | 359 | 176 | **−2** | **1** |
+| Madeira, Marona e Del Río (2022) | 427 | 393 | **−2** | **1** |
+| Faria e Marques (2020), volume | 258 | 131 | **0** | **1** |
+| *Singer, Araujo e Rugitsky (2022)* | *374* | *352* | *−1 a +5* | ***7*** |
+
+> **Os quatro offsets declarados em 08/10 e no item sobre o volume se sustentam sob varredura completa.** Em Madeira há **quatro** folhas discordantes entre 393 — cifras de tabela lidas como fólio, não deriva.
+>
+> **Singer é a exceção, e a razão é exatamente a que o item 76 aponta: foi o único da leva que não foi lido.** Os três que foram lidos tiveram o offset conferido na leitura; o quarto recebeu o número por extensão dos vizinhos. **A regra fica: offset derivado de vizinho é offset suposto — e vale conferi-lo folha a folha antes de citar, porque há obra em que ele não é um número.**

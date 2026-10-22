@@ -4104,3 +4104,83 @@ A folha 4 declara **acesso aberto, Creative Commons**: *"É permitida a reprodu�
 | **PT-02 e a coordenação sem hegemonia** | proposta de precisão do campo; nomear é sua decisão |
 | **seis peças da coletânea não abertas** | Rugitsky, Ayers e Saad-Filho, a entrevista com Streeck, Loureiro, Lavinas *et al.* e Braga e Santos — todas de economia política, nenhuma necessária ao desenho atual |
 | **o offset como função** | corrigido para esta obra. **Os outros três livros da leva tiveram o offset conferido folha a folha em 08/10** — mas vale perguntar se algum deles também deriva, porque a conferência de então foi em amostra |
+
+---
+
+## 77. A rota (b) pagou-se na primeira leitura — e a citação intermediária tinha dois defeitos — ✅ 22/10/2026
+
+Quatro decisões suas sobre o item 76, executadas. **E a primeira delas achou, na ida à fonte, exatamente o modo de falha que este projeto persegue.**
+
+### 77.1 Decisão (1) — PT-08 ganhou âncora própria, e a fonte desmentiu quem a citava
+
+Você escolheu a saída **(b)**: obter a matéria em vez de citá-la por Lacerda. A matéria está acessível sem muro de assinatura — HTTP 200, 565.759 bytes — e foi **transcrita** no eixo 09.
+
+**Os dois defeitos da citação intermediária:**
+
+| | Lacerda (2022, p. 355 impressa) | A matéria (Estadão, 08/03/2021) |
+|:--|:--|:--|
+| **data da fala** | *"à véspera da posse de Biden"* — por volta de **19/01/2021** | **08/03/2021**, em **Jerusalém**, em viagem a Israel. A página se data a si mesma no JSON-LD: `2021-03-08T20:29:25-03:00` |
+| **a aspa** | *"poder bélico mínimo para **[…]** matar todos os policiais lá dentro"* | *"poder bélico mínimo para **não morrer ninguém, matar** todos os policiais lá dentro"* |
+| **o enquadramento** | lamento de que o ato *"não tivesse sido mais estruturada"* | **NEGATIVA**: ele nega participação em reunião de 05/01/2021 e chama o ato de *"desorganizado"* e *"lamentável"*, dizendo que *"ninguém desejava que isso ocorresse"* |
+
+> **A elisão é o defeito grave.** A frase original é internamente contraditória — é transcrição de fala —, e retirar *"não morrer ninguém,"* **converte-a em endosso unívoco**. É a citação conferida apenas contra a citação de terceiro, que é o modo de falha batizado daqui, **e foi a ida à fonte que o pegou**. Se a saída (a) tivesse sido escolhida, o codebook teria incorporado a data errada e a aspa mutilada.
+
+**E o achado analítico é melhor do que a citação intermediária prometia.** O lado brasileiro da difusão do precedente **não é adesão**: é **crítica tática da execução somada a distanciamento público** — a mesma ambivalência que o codebook já codifica em **PT-11** (sinalização ambígua da liderança) e **PT-50** (descertificação tardia), agora documentada **dois anos antes** do evento e a respeito do precedente estrangeiro. **O que o registro pode afirmar é que o precedente foi publicamente AVALIADO por ator brasileiro de primeiro plano, e avaliado como fracasso de execução.**
+
+**O limite (1) de PT-08 foi revisto, não apagado.** Ele dizia que a ligação com o Brasil era *"uma frase de passagem, sem aparato do lado brasileiro"*. Agora há fonte brasileira, datada e citada por localizador estrutural. **O que permanece é mais estreito:** a fonte é jornalística, não documental; e a alegação de participação em reunião de 05/01/2021 — atribuída pela matéria ao site *Proof*, que **não está no corpus** — não está conferida e **não é afirmada pelo registro**.
+
+**Uma escolha de forma que declaro, porque é a primeira do gênero no eixo 09.** As outras sete peças daquele eixo são **Agência Brasil** e **notícias do STF** — setor público. Esta é de **jornal comercial**, e o remoto deste repositório é **público**: versionar o HTML seria redistribuição de jornalismo protegido. **Entrou transcrição dos trechos citados, com a referência completa**, e o HTML recuperado **não** foi versionado. O SHA-256 do que foi lido está registrado no próprio arquivo, com a nota de que **não serve como âncora** — página de jornal muda de bytes sem mudar de conteúdo.
+
+### 77.2 Decisão (2) — PT-02 recebeu a precisão, e a âncora é de segunda leitura no resto
+
+`mecanismo_causal` de PT-02 ganhou **coordenação sem hegemonia**, ancorada em Lacerda, **folha 316 do PDF, p. 321 impressa**:
+
+> *"os atores conservadores já estavam mais coordenados, mas **ainda não havia tendência que os hegemonizasse**"*
+
+**Por que importa para a cadeia:** o campo de 2022 **tem centro** — a liderança no Executivo, PT-11 e PT-13 — e o de 2015 **não tinha**. A apropriação do repertório acontece **antes** de haver quem o comande.
+
+**Declarado no registro:** no resto, a âncora é de **segunda leitura** — Lacerda apoia a tese da apropriação em Singer (2018) e em Tatagiba, Trindade e Teixeira (2018), e **Tatagiba já é âncora lida deste registro**. O que entra como novo é só a formulação da coordenação sem hegemonia, que é dela.
+
+### 77.3 Decisão (4) — os outros três livros NÃO derivam
+
+| Livro | Folhas | Fólio legível em | Offset | Faixas |
+|:--|--:|--:|:--:|--:|
+| Gurza Lavalle *et al.* (2018) | 414 | 380 | **−2** | **1** |
+| Abers (2021) | 359 | 176 | **−2** | **1** |
+| Madeira, Marona e Del Río (2022) | 427 | 393 | **−2** | **1** |
+| Faria e Marques (2020), volume | 258 | 131 | **0** | **1** |
+| *Singer, Araujo e Rugitsky (2022)* | *374* | *352* | *−1 a +5* | ***7*** |
+
+> **Os quatro offsets declarados sustentam-se sob varredura completa**, e em Madeira as quatro folhas discordantes entre 393 são cifras de tabela lidas como fólio, não deriva.
+>
+> **Singer é a exceção, e a razão é a que o item 76 aponta: foi o único da leva que não foi lido.** Os três lidos tiveram o offset conferido na leitura; o quarto recebeu o número **por extensão dos vizinhos**. **A regra fica: offset derivado de vizinho é offset suposto.**
+
+### 77.4 Três guardas acusaram o meu trabalho enquanto eu o fazia
+
+| Guarda | O que pegou |
+|:--|:--|
+| **manifesto** | a peça nova entrou **sem rota declarada em `PROCEDENCIA`** — *"quem for conferir esta pesquisa não teria como obtê-la"*. Declarada |
+| **checagem 5** | o localizador estrutural não resolvia: eu havia posto o `§` **dentro** do cabeçalho do markdown, e a convenção — do arquivo do NetLab, que PT-19A usa — é o `§` **só** no `fonte_pagina`. E uma seção tinha **vírgula** no nome, que o recorte do localizador corta |
+| **checagem 5, via chave** | `fonte_pagina` citava `SINGER ARAUJO E RUGITSKY 2022` em maiúscula e eu registrara a chave em caixa mista. A convenção da literatura é maiúscula |
+
+### 77.5 O que isto deixa aberto
+
+| | |
+|:--|:--|
+| **a alegação do site *Proof*** | a matéria atribui a ele a notícia de uma reunião em 05/01/2021 nos EUA. **Não está no corpus e não é afirmada.** Se entrar, é registro novo, não acréscimo a PT-08 |
+| **as seis peças da coletânea** | Rugitsky, Ayers e Saad-Filho, entrevista com Streeck, Loureiro, Lavinas *et al.* e Braga e Santos seguem não abertas |
+| **a licença CC de Singer** | a obra é de acesso aberto e **poderia voltar ao git sem problema de licença**; não voltou, e a recomendação está na §77.6 |
+
+### 77.6 Decisão (3) — o que eu recomendo sobre devolver a peça CC ao git
+
+**Recomendo não devolver, e a razão não é a licença — é a forma da regra.**
+
+| | |
+|:--|:--|
+| **o que se ganharia** | um leitor do repositório abriria o PDF sem sair dele. **Marginal:** a obra é de acesso aberto com DOI `10.11606/9788575064085`, baixável em um clique |
+| **o que se perderia** | a regra `Fontes/**/*.pdf` deixa de ser **uma linha** e passa a ser *"todos menos estes"*. **Lista de exceção é dívida que ninguém revisita** — é a lição que este repositório já escreveu ao preferir lista de dispensa vazia na checagem 5 |
+| **e o risco concreto** | quem acrescentar a próxima peça CC terá de saber que existe uma exceção, e descobrir isso **lendo o `.gitignore`**. A próxima peça RESERVADA entraria por engano pelo mesmo caminho |
+
+> **A alternativa que recomendo no lugar, e é mais útil que devolver o arquivo:** que a coluna `procedencia` do manifesto carregue **DOI ou URL de acesso direto** para toda peça de acesso aberto. Hoje ela carrega a **rota** em prosa — *"Coleta da tarefa 10 (08/10/2026) — literatura brasileira em livro, acesso aberto"* —, que diz onde se procurou, não onde se acha. **Com o DOI na linha, o leitor obtém a peça em um clique sem que o repositório a redistribua** — que é exatamente o que o manifesto existe para fazer.
+>
+> **Não executei:** é alteração de `PROCEDENCIA` em até 42 entradas de literatura, e exige conferir cada DOI no CrossRef antes de escrever — pela regra de 30/09, **identificador se testa, seja qual for a origem**. Fica proposto, com o custo declarado.

@@ -214,6 +214,27 @@ for _arq in ["AgenciaBrasil_2018-04-07_Prisao-Curitiba_PT-03D.html",
         "Cópia preservada contra link rot. NÃO é fonte primária: serve como evidência de que a "
         "notícia existiu e do que dizia.")
 
+# ACRESCENTADA EM 22/10/2026, rota (b) do item 76, por decisao do pesquisador. E
+# a PRIMEIRA peca do eixo 09 que NAO e do setor publico -- as outras sete sao
+# Agencia Brasil e noticias do STF -- e por isso entra de forma diferente: aqui
+# nao ha copia do arquivo publicado, ha TRANSCRICAO dos trechos citados. A razao
+# e de licenca: jornal comercial, e o remoto deste repositorio e publico.
+PROCEDENCIA["Fontes/09_Arquivamento-web/"
+            "Estadao_2021-03-08_Eduardo-Bolsonaro-nega-atuacao-Capitolio.md"] = (
+    "Estadão — estadao.com.br, matéria de acesso livre em 22/10/2026 "
+    "(HTTP 200, sem muro de assinatura)", "transcrição",
+    "SCAPA, Raquel. 'Eduardo Bolsonaro nega atuação em ataque ao Congresso dos "
+    "EUA'. Estadão, Internacional, 08/03/2021, de Jerusalém. URL citada por "
+    "Lacerda (2022): internacional.estadao.com.br/noticias/geral,eduardo-"
+    "bolsonaro-nega-atuacao-em-ataque-ao-congresso-dos-eua,70003641042 — "
+    "redireciona para estadao.com.br/internacional/eduardo-bolsonaro-nega-"
+    "atuacao-em-ataque-ao-congresso-dos-eua/. TRANSCRIÇÃO, não cópia: o HTML "
+    "recuperado NÃO foi versionado, porque é jornal comercial e o remoto é "
+    "público; o que entra são os trechos citados, com a referência completa. "
+    "Ancora PT-08 por localizador estrutural. NÃO é fonte primária no sentido "
+    "documental.",
+)
+
 # Sínteses geradas por sistema automatizado. Não são citáveis e não ancoram
 # registro nenhum — servem como mapa de leitura e lista de DOIs a verificar.
 # As contagens abaixo são DOIs distintos por arquivo, no critério de

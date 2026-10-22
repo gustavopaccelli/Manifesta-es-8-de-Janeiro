@@ -123,6 +123,28 @@ EXCECOES = {
         "o conferidor não a acha — o que está certo. Citar uma citação é o que o "
         "projeto proibiu em 30/09, e a exceção existe para que a proibição fique "
         "legível em vez de virar falha silenciosa",
+    # AS TRES ABAIXO entraram em 22/10/2026, rota (b) do item 76, e sao de um
+    # tipo NOVO: PT-08 e o PRIMEIRO registro do codebook a misturar ancora PDF e
+    # ancora NAO-PDF. As transcricoes sao da materia do Estadao, citada por
+    # LOCALIZADOR ESTRUTURAL num `.md`, e `localizar()` so abre PDF -- de modo
+    # que ela as procura nas folhas de Castaneda, Chen e CPMI, onde nao estao.
+    #
+    # NAO E O MESMO CASO DAS ANTERIORES: aqui a peca ESTA em `fonte_local` e em
+    # `fonte_pagina`, com as secoes que a checagem 5 resolve contra os cabecalhos
+    # do arquivo. A transcricao e ancora de verdade; o que falta e o conferidor
+    # saber abrir texto que nao e PDF. **A correcao certa nao e esta excecao: e
+    # ensinar `localizar()` a ler ancora nao-PDF**, o que tornaria verificaveis
+    # tambem os seis registros hoje "fora do alcance" -- e mudaria
+    # SEM_PAGINA_EXTRAIVEL_BASE e a linha de base do passo 10, que sao decisao
+    # do pesquisador. Fica proposto no item 77.5.
+    ("PT-08", "foi um movimento desorganizado"):
+        "Estadão (08/03/2021), transcrito em Fontes/09_Arquivamento-web/ e citado "
+        "por localizador estrutural; o conferidor só abre PDF",
+    ("PT-08", "a invasao nao serviu de nada"):
+        "idem — §A critica ao ato de 6 de janeiro",
+    ("PT-08", "se fosse organizada, teriam tomado o capitolio"):
+        "idem — §A fala inteira e sem elisao. É a fala que a rota (b) foi buscar "
+        "na fonte, e cuja elisão em Lacerda (2022) a ida à matéria desfez",
 }
 
 

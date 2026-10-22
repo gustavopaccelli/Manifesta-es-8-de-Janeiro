@@ -2,20 +2,20 @@
 
 > **Peça gerada por `scripts/gerar_registro_leitura.py`. Não edite à mão.** É a resposta a um defeito com data: em 21/10/2026 eu relatei seis verbetes como *"lidos-a-ler"* e **os seis estavam lidos**, porque copiei uma lista de 30/09 do documento que **pedia** a leitura em vez de abrir o que a **registrava**. O estado de leitura vivia em prosa espalhada por sete documentos, e nada no ciclo conferia.
 
-**69 peças no corpus. 43 com estado MEDIDO, 26 com estado DECLARADO.**
+**70 peças no corpus. 45 com estado MEDIDO, 25 com estado DECLARADO.**
 
 ## 1. Como o estado é estabelecido — e a maior parte não é declarada
 
 | Origem | Quantas | Como |
 |:--|--:|:--|
-| **MEDIDO** | 43 | a peça **ancora registro** com `fonte_pagina`, e o passo 9 do ciclo confere a transcrição contra a folha do PDF. Leitura parcial **demonstrável**, não afirmada |
-| **DECLARADO** | 26 | a peça **não ancora registro**: informa o desenho sem sustentar dado. O estado vive em `data/estado_de_leitura.json`, que é dado e não prosa |
+| **MEDIDO** | 45 | a peça **ancora registro** com `fonte_pagina`, e o passo 9 do ciclo confere a transcrição contra a folha do PDF. Leitura parcial **demonstrável**, não afirmada |
+| **DECLARADO** | 25 | a peça **não ancora registro**: informa o desenho sem sustentar dado. O estado vive em `data/estado_de_leitura.json`, que é dado e não prosa |
 
 | Estado | Peças |
 |:--|--:|
 | `ILEGIVEL` | 1 |
 | `LIDO_INTEGRAL` | 13 |
-| `LIDO_PARCIAL` | 53 |
+| `LIDO_PARCIAL` | 54 |
 | `NAO_LIDO` | 2 |
 
 **Vocabulário.** `LIDO_INTEGRAL` · `LIDO_PARCIAL`, com o que foi lido · `NAO_LIDO` · `ILEGIVEL`, no corpus e sem camada de texto · `NAO_DECLARADO`, quando **nenhum documento do repositório registra o estado** — é confissão, não suposição.
@@ -46,7 +46,7 @@
 | `DODF-003_Decreto-03-01-2023_Ajudancia-de-Ordens-SSPDF_2023-01-04.pdf` | 66 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 7 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `PGR_Denuncia_PET-12100_Nucleo-1_2025-02-18.pdf` | 272 | **LIDO_PARCIAL** | MEDIDO | ancora 3 registro(s) com 8 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `GDF-SSP_Relatorio-Interventor-Federal_Cappelli_2023-01-27.pdf` | 62 | **LIDO_PARCIAL** | MEDIDO | ancora 6 registro(s) com 26 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
-| `CPMI-8-de-Janeiro_Relatorio-Final_2023-10-17.pdf` | 1333 | **LIDO_PARCIAL** | MEDIDO | ancora 53 registro(s) com 101 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `CPMI-8-de-Janeiro_Relatorio-Final_2023-10-17.pdf` | 1333 | **LIDO_PARCIAL** | MEDIDO | ancora 53 registro(s) com 102 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `STF_AP-2668-QO_Acordao_2025-05-14.pdf` | 50 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 1 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `STF_AP-2668_Acordao_Condenacao_2025-09-11.pdf` | 1991 | **LIDO_PARCIAL** | MEDIDO | ancora 5 registro(s) com 8 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `STF_EP-169_Decisao-Prisao-Domiciliar_2026-03-24.pdf` | 40 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 7 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
@@ -65,24 +65,25 @@
 | `Doxa-IESP-UERJ_Manchetometro_Atos-golpistas-8-jan_2023-03.pdf` | 16 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 7 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `NetLab-UFRJ_Anuncios-golpistas-Meta-Ads_2023-02-07.md` | 0 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 0 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `SciELO-Preprints_Drummond-Manginelli_Editoriais-8-jan_2023-10-09.pdf` | 24 | **NAO_LIDO** | DECLARADO | catalogada no LEIA-ME do eixo 08 como OBJETO DE ANÁLISE, não como fonte de dado. Nenhum documento registra leitura | — |
+| `Estadao_2021-03-08_Eduardo-Bolsonaro-nega-atuacao-Capitolio.md` | 0 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 7 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `STF_Democracia-Inabalada_Ebook_28x28cm.pdf` | 210 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 1 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `STF_Democracia-Inabalada_Folder.pdf` | 6 | **NAO_LIDO** | DECLARADO | folder de 6 páginas e 37,4 MB — o pior índice de bytes por página do corpus (item 46.5 da agenda). O conteúdo lido do mesmo título está no Ebook, que ancora registro | — |
 | `STF_Gabinete-Moraes_Balanco-8-de-Janeiro_2026-04-29.pdf` | 15 | **LIDO_PARCIAL** | MEDIDO | ancora 3 registro(s) com 15 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
-| `ALONSO_Repertorio-segundo-Charles-Tilly_Sociologia-e-Antropologia-2-3_2012.pdf` | 21 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 26 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
-| `ALONSO_Treze-a-politica-de-rua-de-Lula-a-Dilma_Companhia-das-Letras_2023.pdf` | 309 | **LIDO_PARCIAL** | MEDIDO | ancora 4 registro(s) com 39 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
-| `KUNRATH-SILVA_Apropriacao-conservadora-do-ciclo-de-protestos_Lusotopie-17-1_2018.pdf` | 20 | **LIDO_PARCIAL** | MEDIDO | ancora 2 registro(s) com 33 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
-| `KUNRATH-SILVA_Ciclo-de-protestos-de-2013-objeto-de-disputa_Desigualdade-e-Diversidade-23_2023.pdf` | 34 | **LIDO_PARCIAL** | MEDIDO | ancora 4 registro(s) com 39 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
-| `PINTO_Trajetoria-discursiva-das-manifestacoes-de-rua_Lua-Nova-100_2017.pdf` | 37 | **LIDO_PARCIAL** | MEDIDO | ancora 2 registro(s) com 33 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
-| `TATAGIBA-GALVAO_Protestos-no-Brasil-em-tempos-de-crise_Opiniao-Publica-25-1_2019.pdf` | 34 | **LIDO_PARCIAL** | MEDIDO | ancora 3 registro(s) com 38 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `ALONSO_Repertorio-segundo-Charles-Tilly_Sociologia-e-Antropologia-2-3_2012.pdf` | 21 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 27 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `ALONSO_Treze-a-politica-de-rua-de-Lula-a-Dilma_Companhia-das-Letras_2023.pdf` | 309 | **LIDO_PARCIAL** | MEDIDO | ancora 4 registro(s) com 40 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `KUNRATH-SILVA_Apropriacao-conservadora-do-ciclo-de-protestos_Lusotopie-17-1_2018.pdf` | 20 | **LIDO_PARCIAL** | MEDIDO | ancora 2 registro(s) com 34 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `KUNRATH-SILVA_Ciclo-de-protestos-de-2013-objeto-de-disputa_Desigualdade-e-Diversidade-23_2023.pdf` | 34 | **LIDO_PARCIAL** | MEDIDO | ancora 4 registro(s) com 40 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `PINTO_Trajetoria-discursiva-das-manifestacoes-de-rua_Lua-Nova-100_2017.pdf` | 37 | **LIDO_PARCIAL** | MEDIDO | ancora 2 registro(s) com 34 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `TATAGIBA-GALVAO_Protestos-no-Brasil-em-tempos-de-crise_Opiniao-Publica-25-1_2019.pdf` | 34 | **LIDO_PARCIAL** | MEDIDO | ancora 3 registro(s) com 39 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `TATAGIBA_Ciclos-de-protestos-e-democracia_Politica-e-Sociedade-28_2014.pdf` | 28 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 16 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
-| `ARAUJO-SALES_Atuacao-politica-das-Forcas-Armadas-e-bolsonarismo_Cadernos-do-Tempo-Presente-13-1_2022.pdf` | 17 | **LIDO_PARCIAL** | MEDIDO | ancora 5 registro(s) com 40 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `ARAUJO-SALES_Atuacao-politica-das-Forcas-Armadas-e-bolsonarismo_Cadernos-do-Tempo-Presente-13-1_2022.pdf` | 17 | **LIDO_PARCIAL** | MEDIDO | ancora 5 registro(s) com 41 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `BASTOS-RECUERO_The-insurrectionist-playbook_Social-Media-and-Society-out-dez_2023.pdf` | 16 | **LIDO_INTEGRAL** | DECLARADO | lida em 09-10/10/2026. Produziu um LIMITE e não uma âncora: não corrobora o Sri Lanka | docs/analise/13_LITERATURA-BOLSONARISMO.md |
 | `CARVALHO-TATAGIBA_Quando-o-conflito-eleitoral-extravasa-para-as-ruas_Lua-Nova-124_2025.pdf` | 46 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 2 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `CESARINO_Bolsonarismo-sem-Bolsonaro-publicos-antiestruturais_Revista-do-IEB-82_2022.pdf` | 27 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 14 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `CESARINO_Identidade-e-representacao-no-bolsonarismo_Revista-de-Antropologia-62-3_2019.pdf` | 28 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 14 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `CHAGAS-CARREIRO_Far-right-digital-activism-in-polarized-contexts_Media-and-Communication-10-4_2022.pdf` | 14 | **LIDO_INTEGRAL** | DECLARADO | lida em 09-10/10/2026; não ancora registro | docs/analise/13_LITERATURA-BOLSONARISMO.md |
 | `FARIAS-CASAROES-MAGALHAES_Radical-right-populism-and-the-politics-of-cruelty_Global-Studies-Quarterly-2_2022.pdf` | 13 | **LIDO_INTEGRAL** | DECLARADO | lida em 09-10/10/2026; não ancora registro | docs/analise/13_LITERATURA-BOLSONARISMO.md |
-| `FERNANDES-SILVA_Dinamicas-do-controle-a-acao-coletiva-policiamento_Mediacoes-26-3_2021.pdf` | 17 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 26 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `FERNANDES-SILVA_Dinamicas-do-controle-a-acao-coletiva-policiamento_Mediacoes-26-3_2021.pdf` | 17 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 27 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `GOHN_Ciclos-de-protestos-no-Brasil-1970-2019_Mundos-Plurales-6-1_2019.pdf` | 27 | **LIDO_PARCIAL** | DECLARADO | lida em parte em 08/10/2026, para o mapa bibliográfico | docs/analise/13_LITERATURA-BOLSONARISMO.md |
 | `KAYSEL-BIANCHI_Bolsonarismo-como-coalizao-discursiva-de-extrema-direita_Caderno-CRH-38_2025.pdf` | 14 | **LIDO_INTEGRAL** | DECLARADO | lida em 09-10/10/2026. Não ancora registro; recusa 'populismo' por amplo e normativo e propõe conceito espacial e relacional | docs/analise/13_LITERATURA-BOLSONARISMO.md |
 | `MENDONCA-DOMINGUES_Protestos-contemporaneos-e-a-crise-da-democracia_RBCP-37_2021.pdf` | 36 | **LIDO_INTEGRAL** | DECLARADO | lida em 09-10/10/2026; não ancora registro | docs/analise/13_LITERATURA-BOLSONARISMO.md |
@@ -97,9 +98,9 @@
 | `FARIA-MARQUES_Giros-a-direita-volume-integral_SertaoCult_2020.pdf` | 258 | **LIDO_PARCIAL** | DECLARADO | capítulo de Marques, p. 241-255, identificado na leitura de 08/10/2026. O volume substituiu os oito offprints, e nenhum registro aponta para ele | docs/analise/14_LIVROS-BRASILEIROS.md |
 | `LAVALLE-CARLOS-DOWBOR-SZWAKO_Movimentos-sociais-e-institucionalizacao_EdUERJ_2018.pdf` | 414 | **LIDO_PARCIAL** | DECLARADO | lido em parte em 08/10/2026; offset medido impressa = PDF − 2. Traz a crítica ao marco teórico declarado do projeto | docs/analise/14_LIVROS-BRASILEIROS.md |
 | `MADEIRA-MARONA-DEL-RIO_Democracia-e-justica-na-America-Latina_EdUERJ_2022.pdf` | 427 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 3 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
-| `SINGER-ARAUJO-RUGITSKY_O-Brasil-no-inferno-global_FFLCH-USP_2022.pdf` | 374 | **LIDO_PARCIAL** | DECLARADO | lida em 22/10/2026. INTEGRAL: a Introdução de Singer, Araujo e Rugitsky (p. 7-30 impressas). NA FONTE, por trecho: a abertura e a p. 355 do capítulo de Marina Basso Lacerda, 'Paleoconservadorismo de Bolsonaro'; a abertura e trechos de Araujo e Belinelli, 'A crise constitucional brasileira (1988-2016)'; e a abertura de Singer e Fanton sobre a pandemia. NÃO LIDAS: as peças de Rugitsky, Ayers e Saad-Filho, a entrevista com Streeck, Loureiro, Lavinas et al. e Braga e Santos. OFFSET: não é um número — DERIVA em sete faixas, de −1 a +5, com salto em cada quebra de capítulo, e a declaração anterior de impressa = PDF − 1 só vale na pré-textual | docs/analise/14_LIVROS-BRASILEIROS.md |
-| `CASTANEDA-JENKS_January-6th-and-de-democratization_Social-Sciences-12-4_2023.pdf` | 15 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 5 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
-| `CHEN-LUKITO-KOO_Comparing-the-StopTheSteal-movement-across-platforms_Social-Media-and-Society-9-3_2023.pdf` | 13 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 5 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `SINGER-ARAUJO-RUGITSKY_O-Brasil-no-inferno-global_FFLCH-USP_2022.pdf` | 374 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 27 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `CASTANEDA-JENKS_January-6th-and-de-democratization_Social-Sciences-12-4_2023.pdf` | 15 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 7 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `CHEN-LUKITO-KOO_Comparing-the-StopTheSteal-movement-across-platforms_Social-Media-and-Society-9-3_2023.pdf` | 13 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 7 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `PMDB-FUG_Uma-Ponte-para-o-Futuro_2015-10-29.pdf` | 19 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 5 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `TSE-noticias_2014-11-04_Auditoria-PSDB-Eleicoes-2014.md` | 0 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 2 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `TSE-noticias_2015-11-05_PSDB-nao-encontra-fraude.md` | 0 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 2 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |

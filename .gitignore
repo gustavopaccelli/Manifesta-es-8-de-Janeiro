@@ -19,3 +19,29 @@ Thumbs.db
 
 # Permissões locais do Claude Code, específicas desta máquina
 .claude/settings.local.json
+
+# ============================================================================
+# O CORPUS DOCUMENTAL E BIBLIOGRÁFICO — 21/10/2026, por decisão do pesquisador
+# ============================================================================
+# Os 65 PDFs de Fontes/ saíram do rastreamento do git. A razão é de licença, e
+# foi medida: o remoto deste repositório é PÚBLICO (visibility `public`, 244 MB,
+# API do GitHub, 21/10/2026), e entre as peças havia 4 de licença RESERVADA lida
+# no arquivo — incluindo duas monografias de editora universitária — e 25 sem
+# declaração de licença, entre elas livros da Cambridge, da Companhia das Letras,
+# da Vozes e da EdUERJ. Versioná-las num remoto público é redistribuição.
+#
+# NADA SE PERDE DE VERIFICABILIDADE, e é para isto que o manifesto existe:
+# `Fontes/MANIFESTO-CORPUS.csv` — que SEGUE versionado — traz, peça por peça,
+# caminho, SHA-256, páginas, bytes, classe de licença lida no arquivo e a ROTA DE
+# OBTENÇÃO declarada em PROCEDENCIA. Quem quiser conferir uma âncora obtém a peça
+# pela rota, compara o SHA-256 e abre a página. A checagem 8 do ciclo compara o
+# disco com o manifesto a cada execução.
+#
+# LIMITE DECLARADO: isto impede novas publicações, e NÃO remove o que já está no
+# histórico público — os 64 PDFs anteriores foram empurrados antes de 21/10/2026.
+# Removê-los exigiria reescrever o histórico inteiro e forçar o push, que é
+# decisão separada e não foi tomada.
+#
+# Seguem versionados, de propósito: o manifesto, os LEIA-ME de cada eixo, as
+# transcrições em `.md` que eu mesmo produzi e o `.html` de ato judicial público.
+Fontes/**/*.pdf

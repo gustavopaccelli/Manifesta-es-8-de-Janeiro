@@ -1714,7 +1714,7 @@ Você delegou a decisão. **Gohn (2019) fecha PARCIALMENTE a tarefa 10, e num n�
 
 | # | Tarefa | Item desta agenda | Depende de |
 |:--|:--|:--|:--|
-| 26 | **Fechar as âncoras do codebook** — 🔶 **aprovada por você em 15/10/2026.** O banco está construído: **85 registros** — eram 83 até 20/10/2026, quando você mandou entrar dois antecedentes do impeachment e o codebook cresceu pela primeira vez desde 10/10 (item 68), zero `A verificar`, zero `mecanismo_causal` vazio e **nenhuma tarefa de codificação aberta** entre 10/10 e 16/10/2026 — quando o campo 17 abriu a **27**, que é de codificação e nasce do próprio fechamento (item 55). **(a) ✅ EXECUTADA em 15/10/2026 — as quatro folhas que faltavam:** PT-03B (TRF-4, **p. 30 e 401**), PT-05A (ADC 43/44/54, **p. 2 e 489**), PT-06C (HC 193.726, **p. 185**) e PT-57 (AP 2668, **p. 19**). As seis transcrições saíram da folha e `conferir_paginas` localizou **6 de 6 por inteiro**; `confirmados` subiu de 69 para **73**. Hoje **nenhuma registro vincula PDF do corpus sem citar folha**, e a **checagem 5 passou a exigir** isso — o ponto cego virou guarda, com prova negativa. Resta **1** sem `fonte_pagina`, **declarado**: PT-03D, que ancora em notícia arquivada (item 51). PT-19A era o outro e **saiu em 16/10**, por localizador estrutural em vez de folha — a mesma convenção que PT-03E já praticava (item 62). **(b) ✅ EXECUTADA em 15/10/2026 — os 17 fragmentos que casavam só por janela foram a 0**, e a queda não veio de afrouxar nada: **4 eram âncora creditada à folha errada** — 3 ao documento errado e 1 à página errada dentro do mesmo documento, contagem corrigida em 15/10/2026 pela medição do item 53, que desfez o "4 ao documento errado" que eu havia relatado (o localizador devolvia a primeira folha com qualquer janela de 40 caracteres, e as peças do corpus se citam entre si), **2 eram transcrição editada dentro das aspas** em PT-39 — uma sigla abreviando o que a CPMI escreve por extenso e uma vírgula acrescentada —, **8 eram marcador de nota de rodapé** colado na prosa pela extração e **3 eram citação atravessando a quebra de página com o aparato da folha no meio**. Cada classe ganhou nome e contagem própria, e a **linha de base do resíduo inexplicado é ZERO**: prova negativa com duas injeções, inclusive a de cauda que escapou em 09/10 (item 52). E a pergunta que a parte (b) deixou aberta está **respondida em 15/10/2026**: nenhuma âncora do codebook depende da ordem de `fonte_pagina` para escolher entre documentos — **234 fragmentos localizados, 17 com mais de uma folha candidata, 15 decididos pelo texto e 2 empatados entre páginas do mesmo documento citado**, o que deixa a âncora certa das duas maneiras. **Zero empate entre documentos**, e o zero virou guarda com prova negativa (item 53). **(c) ABERTAS — quatro decisões de campo, suas, e a lista abaixo é que manda no número** (eram seis até 18/10/2026, quando você nomeou o mecanismo de PT-07 — item 65; cinco até 20/10, quando a varredura achou que uma delas estava resolvida havia onze dias — item 67; e a composição mudou em 21/10, item 71: **a data de PT-57 fechou** e **os nomes de PT-01A e PT-01B entraram**, porque chegaram com o item 68 e nunca tinham sido acrescentados aqui — contagem copiada de outro lugar perde item, pela segunda vez)**:** **(i)** `data_hora` de PT-02 (34.7); **(ii)** a promoção de classe de PT-03B, PT-05A e PT-06C (51.5, decisão 1); **(iii)** o nome do mecanismo de **PT-01A**; **(iv)** o nome do mecanismo de **PT-01B** — os dois nasceram em 20/10 como `PROPOSTA DE MECANISMO, NÃO ATRIBUÍDA`, pelo precedente da tarefa 19 (item 68). ~~**DECIDIDA, execução pendente:** o `marco_teorico` (47.5, decisão 2)~~ — ✅ **EXECUTADA em 21/10/2026, frente F12 (item 72):** o campo passou a declarar a estrutura que você fixou — marco, três âncoras teóricas, uma âncora metodológica —, cada âncora citando a **peça lida** com folha, e **Snow e Benford (2000) saiu**. **UMA DECISÃO NOVA NASCEU DAÍ, e é sua:** nenhuma edição de Beach e Pedersen está no corpus — medido, abrindo os dois PDFs cujo nome diz *process tracing* —, e a rota é **(A)** declarar a âncora como não lida ou **(B)** obter a obra. O preço de cada uma está escrito na §11.5 de `docs/analise/09_CONCEITO-MECANISMO.md`. O detalhe de cada uma: `data_hora` de PT-02 (34.7), ~~Telegram e WhatsApp em PT-06 (35.5)~~ — ✅ **RESOLVIDA EM 09/10/2026 e listada como aberta até 20/10**, por Cesarino (2022, p. 181 impressa), que descreve de primeira mão o ecossistema em camadas incluindo os aplicativos fechados; o que permanece declarado são as CIFRAS de segunda mão, que o registro não afirma (item 67), o `marco_teorico` que cita obra não lida (47.5, decisão 2), ~~a data de PT-57, cuja publicação em 22/10/2025 não está no acórdão (item 51)~~ — ✅ **DECIDIDA E EXECUTADA em 21/10/2026**, pela saída (a) das três: `data_hora` passou a **15/10/2025**, a data que a própria peça traz na folha 19, e o registro passou a codificar a **conclusão** do acórdão em vez da publicação. Remedido antes de mexer: `22/10/2025` e `22 de outubro de 2025` têm **zero** ocorrências nas 1.991 folhas. Saiu uma data sem lastro e nada a jusante mudou, pelo seu critério — sendo constatação de resultado, a peça não alimenta elo causal (item 71), ~~**o nome do mecanismo de PT-07**~~ — ✅ **DECIDIDO por você em 18/10/2026**, pela saída (c) das três apresentadas: o campo passou a chamar-se *Deliberação de ruptura e articulação do quadro de fraude*, e a razão está escrita dentro do próprio registro (47.5, decisão 1, item 65) — e **a promoção de classe de PT-03B, PT-05A e PT-06C** — os três ganharam transcrição de fonte primária com folha em 15/10 e seguem `Confirmado`, não `Confirmado em fonte primária`; **PT-06C é o caso mais limpo**, uma só folha cobre data, placar, objeto e fundamento (51.5, decisão 1). E ~~o campo para autonomia do movimento (35.4)~~ — **DECIDIDA E EXECUTADA em 16/10/2026, a primeira das sete a sair:** você mandou o esquema ganhar o campo, e ele ganhou — `autonomia_movimento`, o 17º, com vocabulário controlado de três valores, **PT-06 codificado** a partir de transcrição que o ciclo já conferia e **82 registros por codificar**, que é leitura e não migração. Três guardas novas, com prova negativa (item 55). **Eram cinco até 16/10/2026:** a recontagem que você pediu achou a sexta — o inventário de 50.4 foi copiado à mão e deixou a decisão 1 de 47.5 de fora — e **você mandou trazer a sétima no mesmo dia**, porque `status_classe` é campo de registro como os outros e não pendência solta (item 54). **E uma SÉTIMA apareceu em 18/10/2026, achada por varredura e resolvida no mesmo dia:** PT-21 ainda afirmava *a massa crítica necessária para romper barreiras* — o termo que a tarefa 19 retirou de PT-34 em 10/10, intacto no registro ao lado por oito dias, porque a guarda vigiava a **frase** de PT-34 e não o **conceito**. Você mandou executar, e o campo passou a `Concentração de contingente no acampamento` (item 66). **Nada aqui depende de literatura pendente** | 50 | verificação (a e b); decisão sua (c) |
+| 26 | **Fechar as âncoras do codebook** — 🔶 **aprovada por você em 15/10/2026.** O banco está construído: **85 registros** — eram 83 até 20/10/2026, quando você mandou entrar dois antecedentes do impeachment e o codebook cresceu pela primeira vez desde 10/10 (item 68), zero `A verificar`, zero `mecanismo_causal` vazio e **nenhuma tarefa de codificação aberta** entre 10/10 e 16/10/2026 — quando o campo 17 abriu a **27**, que é de codificação e nasce do próprio fechamento (item 55). **(a) ✅ EXECUTADA em 15/10/2026 — as quatro folhas que faltavam:** PT-03B (TRF-4, **p. 30 e 401**), PT-05A (ADC 43/44/54, **p. 2 e 489**), PT-06C (HC 193.726, **p. 185**) e PT-57 (AP 2668, **p. 19**). As seis transcrições saíram da folha e `conferir_paginas` localizou **6 de 6 por inteiro**; `confirmados` subiu de 69 para **73**. Hoje **nenhuma registro vincula PDF do corpus sem citar folha**, e a **checagem 5 passou a exigir** isso — o ponto cego virou guarda, com prova negativa. Resta **1** sem `fonte_pagina`, **declarado**: PT-03D, que ancora em notícia arquivada (item 51). PT-19A era o outro e **saiu em 16/10**, por localizador estrutural em vez de folha — a mesma convenção que PT-03E já praticava (item 62). **(b) ✅ EXECUTADA em 15/10/2026 — os 17 fragmentos que casavam só por janela foram a 0**, e a queda não veio de afrouxar nada: **4 eram âncora creditada à folha errada** — 3 ao documento errado e 1 à página errada dentro do mesmo documento, contagem corrigida em 15/10/2026 pela medição do item 53, que desfez o "4 ao documento errado" que eu havia relatado (o localizador devolvia a primeira folha com qualquer janela de 40 caracteres, e as peças do corpus se citam entre si), **2 eram transcrição editada dentro das aspas** em PT-39 — uma sigla abreviando o que a CPMI escreve por extenso e uma vírgula acrescentada —, **8 eram marcador de nota de rodapé** colado na prosa pela extração e **3 eram citação atravessando a quebra de página com o aparato da folha no meio**. Cada classe ganhou nome e contagem própria, e a **linha de base do resíduo inexplicado é ZERO**: prova negativa com duas injeções, inclusive a de cauda que escapou em 09/10 (item 52). E a pergunta que a parte (b) deixou aberta está **respondida em 15/10/2026**: nenhuma âncora do codebook depende da ordem de `fonte_pagina` para escolher entre documentos — **234 fragmentos localizados, 17 com mais de uma folha candidata, 15 decididos pelo texto e 2 empatados entre páginas do mesmo documento citado**, o que deixa a âncora certa das duas maneiras. **Zero empate entre documentos**, e o zero virou guarda com prova negativa (item 53). **(c) ABERTAS — quatro decisões de campo, suas, e a lista abaixo é que manda no número** (eram seis até 18/10/2026, quando você nomeou o mecanismo de PT-07 — item 65; cinco até 20/10, quando a varredura achou que uma delas estava resolvida havia onze dias — item 67; e a composição mudou em 21/10, item 71: **a data de PT-57 fechou** e **os nomes de PT-01A e PT-01B entraram**, porque chegaram com o item 68 e nunca tinham sido acrescentados aqui — contagem copiada de outro lugar perde item, pela segunda vez)**:** **(i)** `data_hora` de PT-02 (34.7); **(ii)** a promoção de classe de PT-03B, PT-05A e PT-06C (51.5, decisão 1); **(iii)** o nome do mecanismo de **PT-01A**; **(iv)** o nome do mecanismo de **PT-01B** — os dois nasceram em 20/10 como `PROPOSTA DE MECANISMO, NÃO ATRIBUÍDA`, pelo precedente da tarefa 19 (item 68). ~~**DECIDIDA, execução pendente:** o `marco_teorico` (47.5, decisão 2)~~ — ✅ **EXECUTADA em 21/10/2026, frente F12 (item 72):** o campo passou a declarar a estrutura que você fixou — marco, três âncoras teóricas, uma âncora metodológica —, cada âncora citando a **peça lida** com folha, e **Snow e Benford (2000) saiu**. **UMA DECISÃO NOVA NASCEU DAÍ, e é sua:** nenhuma edição de Beach e Pedersen está no corpus — medido, abrindo os dois PDFs cujo nome diz *process tracing* —, e a rota é **(A)** declarar a âncora como não lida ou **(B)** obter a obra. O preço de cada uma está escrito na §11.5 de `docs/analise/09_CONCEITO-MECANISMO.md`. **ATUALIZADO EM 21/10/2026, horas depois:** você forneceu a obra — a edição de 2013 do livro inteiro, 208 folhas — e ela está no corpus. **A rota (B) deixou de ser 'obter e ler' e passou a ser só LER**, e a (A) ficou mais frágil, porque passou a significar 'declaramos uma âncora que temos e não lemos'. Recomendação revista para **(B), capítulos 1 a 3** — ver 11.5.1 e o item 73. O detalhe de cada uma: `data_hora` de PT-02 (34.7), ~~Telegram e WhatsApp em PT-06 (35.5)~~ — ✅ **RESOLVIDA EM 09/10/2026 e listada como aberta até 20/10**, por Cesarino (2022, p. 181 impressa), que descreve de primeira mão o ecossistema em camadas incluindo os aplicativos fechados; o que permanece declarado são as CIFRAS de segunda mão, que o registro não afirma (item 67), o `marco_teorico` que cita obra não lida (47.5, decisão 2), ~~a data de PT-57, cuja publicação em 22/10/2025 não está no acórdão (item 51)~~ — ✅ **DECIDIDA E EXECUTADA em 21/10/2026**, pela saída (a) das três: `data_hora` passou a **15/10/2025**, a data que a própria peça traz na folha 19, e o registro passou a codificar a **conclusão** do acórdão em vez da publicação. Remedido antes de mexer: `22/10/2025` e `22 de outubro de 2025` têm **zero** ocorrências nas 1.991 folhas. Saiu uma data sem lastro e nada a jusante mudou, pelo seu critério — sendo constatação de resultado, a peça não alimenta elo causal (item 71), ~~**o nome do mecanismo de PT-07**~~ — ✅ **DECIDIDO por você em 18/10/2026**, pela saída (c) das três apresentadas: o campo passou a chamar-se *Deliberação de ruptura e articulação do quadro de fraude*, e a razão está escrita dentro do próprio registro (47.5, decisão 1, item 65) — e **a promoção de classe de PT-03B, PT-05A e PT-06C** — os três ganharam transcrição de fonte primária com folha em 15/10 e seguem `Confirmado`, não `Confirmado em fonte primária`; **PT-06C é o caso mais limpo**, uma só folha cobre data, placar, objeto e fundamento (51.5, decisão 1). E ~~o campo para autonomia do movimento (35.4)~~ — **DECIDIDA E EXECUTADA em 16/10/2026, a primeira das sete a sair:** você mandou o esquema ganhar o campo, e ele ganhou — `autonomia_movimento`, o 17º, com vocabulário controlado de três valores, **PT-06 codificado** a partir de transcrição que o ciclo já conferia e **82 registros por codificar**, que é leitura e não migração. Três guardas novas, com prova negativa (item 55). **Eram cinco até 16/10/2026:** a recontagem que você pediu achou a sexta — o inventário de 50.4 foi copiado à mão e deixou a decisão 1 de 47.5 de fora — e **você mandou trazer a sétima no mesmo dia**, porque `status_classe` é campo de registro como os outros e não pendência solta (item 54). **E uma SÉTIMA apareceu em 18/10/2026, achada por varredura e resolvida no mesmo dia:** PT-21 ainda afirmava *a massa crítica necessária para romper barreiras* — o termo que a tarefa 19 retirou de PT-34 em 10/10, intacto no registro ao lado por oito dias, porque a guarda vigiava a **frase** de PT-34 e não o **conceito**. Você mandou executar, e o campo passou a `Concentração de contingente no acampamento` (item 66). **Nada aqui depende de literatura pendente** | 50 | verificação (a e b); decisão sua (c) |
 | 10 | Acrescentar a literatura brasileira em livro — 🔶 **eixo 14 com 5 arquivos, 1.832 p.**, nenhuma lida. A coleta somou **12 peças** — 7 coletadas, 3 entregues por você e 2 capítulos a mais por encaminhamento —, e o manifesto conta menos arquivos do que isso porque **o volume integral substituiu oito offprints em 08/10** (item 39.1): peça coletada e arquivo no corpus deixaram de ser a mesma unidade. **A tarefa SE DIVIDIU em duas, e metade está fechada** (item 38.8): o mapa bibliográfico brasileiro que as sínteses não tinham está em Gohn (2019), que mapeia 1970-2019 por ciclo nomeando autores e paradigmas; o que resta é **obter os textos que esse mapa nomeia** — o cânone (Sader, Scherer-Warren, Avritzer, Doimo, Telles, Abranches, Nobre, Solano, Messenberg) é de editora comercial, **zero com autoria casada em acesso aberto**, e depende dos seus arquivos | 11.4, 22.4, 37, 38 | seus arquivos |
 | 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **25 pendentes**: 8 lidos, 7 com ficha da 1ª leva, 3 impedidos. Números medidos por `localizar_camada_a.py` a cada geração desta linha, nunca digitados. Das 25, **9 têm arquivo em algum servidor e são barradas no cliente automatizado** e **16 não têm depósito aberto em lugar nenhum**; **8 das 25 estão num só periódico, a *Mobilization*** (item 47.5) | 23, 24, 25 | acesso institucional |
 | 25 | **A literatura do bolsonarismo como mobilização** — 🔶 **coleta fechada em 04/10**: **18 peças, 453 p.** em `Fontes/13_Bolsonarismo-mobilizacao/` — 14 por OpenAlex e **as 4 barradas entregues pelo pesquisador** (item 34.6). **Três foram lidas** e ancoram registro: Araujo e Sales (2022), que tirou PT-05 de contextual; Fernandes e Silva (2021), que tirou a "tolerância policial" de PT-02; e von Bülow e Abers (2024), que **fechou PT-06 e retificou o mecanismo dele**. **Faltam 15, 400 p.** — e **nenhuma bloqueia registro**: a leitura restante serve à redação, não à codificação | 23.2, 31.4, 33, 34, 35 | leitura |
@@ -3777,3 +3777,214 @@ O campo dizia *"em vocabulário de Tilly e Tarrow"*, e **Tilly e Tarrow (2007) n
 | **os passos 4 e 5 de Ricks e Liu** | contrafactual por nó existe em **um** nó. Estendê-lo é pesquisa, não leitura, e não foi aberto aqui |
 | **`framing_narrativa` sem grade funcional** | o capítulo de 2019 dá três tarefas centrais — diagnóstico, prognóstico, motivacional — e o campo **nomeia** quadros sem classificar função. Cobrança da §10, ainda aberta |
 | **os sete verbetes lidos-a-ler** | *Demobilization*, *Repertoires of contention*, *Policing protest*, *Diffusion and scale shift*, *Multiorganizational fields*, *Political opportunity* (✅ **este saiu hoje**) e *Discursive opportunity structure* — todos acessíveis, e o melhor retorno por hora que o corpus oferece |
+
+---
+
+## 73. A âncora metodológica entra no corpus, a grade do enquadramento é inferida, e eu declarei não lido o que estava lido — ✅ 21/10/2026
+
+Três encaminhamentos seus, na mesma mensagem. **E o terceiro expôs um erro meu que vale mais do que os três entregáveis juntos.**
+
+### 73.1 Beach e Pedersen entra no corpus — e muda uma rota, não as duas
+
+**Encaminhamento:** *"Coloquei o artigo em anexo na conversa. copie para o repositório para ficar como referência."*
+
+**Não é um artigo: é o livro inteiro.** BEACH, D.; PEDERSEN, R. B., *Process-Tracing Methods: Foundations and Guidelines*, Ann Arbor: The University of Michigan Press, **2013**.
+
+| | |
+|:--|:--|
+| **onde** | `Fontes/05_Bibliografia-teorica/BEACH-PEDERSEN_Process-Tracing-Methods_Michigan-2013.pdf` |
+| **integridade** | `sha256 f08efa82…`, **cópia conferida byte a byte** contra o anexo |
+| **paginação** | medida pelo rodapé de composição do próprio arquivo: **viii** de pré-textual em romano, corpo árabe da **p. 1 à 200**, offset **único** de `impressa = PDF − 8`, conferido folha a folha |
+| **licença** | lida no arquivo: **RESERVADA** — não redistribuível, e é exatamente para isso que o manifesto do corpus existe |
+| **efeito no corpus** | 64 → **65** PDFs, 12.144 → **12.352** páginas. A **documental não se move** (23 / 6.970), porque é literatura — e a linha de base da checagem 6 acompanhou. Manifesto: 68 → **69** peças |
+
+> **A edição é a de 2013, e o campo `marco_teorico` declarava 2019.** A declaração passou a dizer a edição que **existe no corpus**.
+>
+> **E está no corpus SEM estar lida** — a distinção que este projeto existe para manter. Tudo o que o aparato afirma de Beach e Pedersen continua vindo de **citação colhida** em Cunha e Araújo (2018) e em Ricks e Liu (2018), as duas lidas na fonte delas.
+
+**A consequência sobre as rotas do item 72 é assimétrica.** A rota (B) tinha dois custos — **obter** e **ler** —, e o de obter era de resultado incerto. **Caiu o de obtenção; o de leitura não.** A rota (A) não desapareceu: **mudou de conteúdo**, de *"declaramos uma âncora que não temos"* para *"declaramos uma âncora que temos e não lemos"*, que é posição **mais frágil**.
+
+> **Recomendação revista, e digo o que mudou nela:** eu havia recomendado **(A) agora, (B) com folga**, porque (A) já era verdade e (B) tinha custo de obtenção incerto. **Com a obra em mão, inverte para (B)**, com um recorte que a torna barata — **os capítulos 1 a 3**, onde estão a definição de mecanismo, as três variantes de *process tracing* e a lógica bayesiana, que é precisamente o que o projeto cita de segunda mão. O resto é guia de etapas, e para isso há Ricks e Liu lido. Ver §11.5.1 de `09_CONCEITO-MECANISMO.md`.
+>
+> **E o que não muda em hipótese nenhuma:** os quatro testes continuam de Van Evera (1997), na formulação de Bennett (2010) e na apresentação de Collier (2011). A entrada da obra **não reabre** a atribuição corrigida em 10/10/2026.
+
+### 73.2 A grade funcional do enquadramento, inferida a seu pedido
+
+**Encaminhamento:** *"Classificarei essa função na escrita. Por enquanto, pode inferir as possíveis funções que julgar importantes analiticamente."*
+
+Feita em `09_CONCEITO-MECANISMO.md`, **§12**, com o critério da peça lida — as três tarefas centrais de Snow, Vliegenthart e Ketelaars (2019, p. 396-397) — mais duas categorias que o próprio campo obriga a acrescentar: **contraquadro** (que o capítulo lista como contramobilização, p. 395) e **não é quadro de ação coletiva**.
+
+| | |
+|:--|--:|
+| registros classificados | **85** |
+| com quadro de ação coletiva | **62** — dos quais **15 acumulam** mais de uma função |
+| campo vazio no codebook | **18** |
+| **não** é quadro de ação coletiva | **4** — PT-20A, PT-20B, PT-25, PT-47 |
+| **ausência medida**, distinta de vazio | **1** — PT-01 |
+
+| Função | Registros |
+|:--|--:|
+| **D** diagnóstico | **24** |
+| **P** prognóstico | **23** |
+| **M** motivacional | **22** |
+| **C** contraquadro / disputa | **11** |
+
+**Três leituras que o campo em prosa não mostrava:**
+
+1. **O diagnóstico é de anos; a convocação é de semanas.** O motivacional concentra-se em T−1 operacional e T0 — *"festa da Selma"*, *"marcha patriótica"*, *"o povo no poder"*, *"casa do povo"*, *"praça do povo"*, *"tomada do poder"*.
+2. **O contraquadro é quase todo judicial.** Das 11 ocorrências de **C**, a maioria é **díade de arena** — *"presunção de inocência"* × *"efetividade da jurisdição"* e variantes —, e só três são de ator político: PT-03B (*lawfare*), PT-50 (negação de vínculo) e PT-50A (*"infiltrados"*).
+3. **O prognóstico tem dois donos opostos**, e o campo guarda os dois sem distinguir: *"intervenção militar"* e *"anistia"* de um lado; *"defesa do Estado Democrático de Direito"*, *"restabelecimento da ordem"*, *"apuração de responsabilidades"* e *"cumprimento de ordem judicial"* do outro.
+
+> **É inferência, e a marca não é formalidade:** a classificação é juízo meu, registro por registro, e **não entrou no codebook** — criar campo é decisão sua, e você disse que classifica na escrita. O critério está escrito para que você possa discordar de casos sem rediscutir o método. **A extensão frágil está declarada:** as três tarefas foram formuladas para quadros **de movimento**, e **25 dos 62** quadros são de **ator estatal**.
+>
+> **E uma cifra minha foi corrigida dentro do próprio script que a emite.** A primeira versão imprimiu *"28 dos 62 são de ator estatal"* — e 28 **não era subconjunto de 62**: incluía os 4 registros `N`, e dois rótulos de ator tinham caído fora das duas listas. Com `assert desafiante + estatal + misto == com_quadro`, a conta fechou em **36 + 25 + 1 = 62**. *A cifra certa no referente errado, dentro do gerador — e agora com guarda.*
+
+### 73.3 Os seis verbetes — e o erro que eu cometi ao listá-los
+
+**Encaminhamento:** *"Faça isso, enumere-os e construa a tabela comparativa-descritiva."*
+
+> **ERRATA, E É MINHA.** No fechamento da frente F12 listei seis verbetes como *"lidos-a-ler"* — *Demobilization*, *Repertoires of contention*, *Policing protest*, *Diffusion and scale shift*, *Multiorganizational fields* e *Discursive opportunity structure*. **Os seis estavam lidos**, e as seções 1 a 7 de `10_VERBETES-ENCICLOPEDIA.md` são a leitura deles. O título daquele documento diz *"os onze verbetes **lidos na fonte**"*.
+>
+> **Eu copiei a lista da §7.4 de `09_CONCEITO-MECANISMO.md`, escrita em 30/09/2026** — isto é, **antes** de o documento 10 existir — e a relatei como estado atual.
+>
+> **É a terceira vez na mesma semana que uma contagem copiada de outro lugar erra, e esta foi a pior:** as outras duas perdiam item; **esta declarou não lido o que estava lido**, o que é o inverso exato do defeito que o projeto persegue — e teria mandado você gastar horas relendo onze verbetes já fichados. A regra que já estava escrita — *reconte na fonte que gerou cada uma* — vale também para *"isto foi lido?"*: **a fonte é o documento da leitura, não o documento que pedia a leitura.** As duas passagens que eu copiei ganharam errata datada.
+
+**Logo não houve leitura nova aqui.** O que faltava — e é o que foi entregue — era a **tabela comparativa-descritiva**, em `10_VERBETES-ENCICLOPEDIA.md`, **§11**, em quatro quadros: identificação e pertença às âncoras; o que cada verbete **entrega** e a quais registros; o que cada um **cobra** do projeto, com o estado de cada cobrança; e as lacunas que o campo declara.
+
+**Três achados que só aparecem com os onze lado a lado:**
+
+| | |
+|:--|:--|
+| **a cobertura das âncoras é desigual** | *Mechanisms* tem três verbetes lidos e a obra inteira de DoC; *Ciclo de protesto* tem dois; **Framing não tem verbete nenhum** — sustenta-se **só** no capítulo de 2019. É a âncora com **uma perna só** |
+| **cinco dos onze são de della Porta** | sozinha ou com Reiter, mais a coorganização do volume. Quem lê este referencial lê, em boa medida, **uma autora** — e isso vale declarar no artigo |
+| **três verbetes convergem na mesma cobrança** | *Policing protest*, *Diffusion and scale shift* e *Mechanisms* pedem, cada um por sua via, **hipótese rival explícita**. O projeto a tem em **um** nó, PT-28 — e é a mesma exigência dos passos 4 e 5 de Ricks e Liu. **Quatro fontes lidas, uma só cobrança** |
+
+**O balanço das cobranças:** cinco endereçadas ou executadas, **seis abertas** — e as seis são de **escrita**, não de dado: nenhuma exige recodificar registro.
+
+### 73.4 O que isto deixa aberto
+
+| | |
+|:--|:--|
+| **ler Beach e Pedersen** | a rota (B) virou só *ler*; recomendação: capítulos 1 a 3. **Decisão sua** |
+| **a grade funcional entra no esquema?** | criar um 18º campo é **decisão sua**. Hoje a classificação vive só na §12, como inferência declarada |
+| **os 4 registros `N`** | PT-20A, PT-20B, PT-25 e PT-47 têm texto no campo que **não é quadro de ação coletiva**. Se a grade entrar, precisam de valor próprio |
+| **as seis cobranças abertas dos verbetes** | a mais dura é a do verbete 9: *declarar quais dimensões de oportunidade política o projeto usa e o que exatamente elas explicam*, sob pena de herdar as duas críticas que o verbete cita — o conceito como *"trash can"* e a *"lack of clarity concerning the explanandum"* |
+| **três lacunas do campo que exigem trabalho novo** | cristalização de quadro por peça ao longo do tempo; clivagem social do campo multiorganizacional; e a tipologia de rotas de desmobilização em que situar PT-62 |
+
+---
+
+## 74. Nasce `docs/referencial/` — o aparato teórico consolidado, Beach e Pedersen lido, e duas das três lacunas resolvidas — ✅ 21/10/2026
+
+Seis encaminhamentos seus na mesma mensagem. **E um deles — o do repositório na nuvem — virou o achado mais sério da rodada, e está na §74.6.**
+
+### 74.1 A pasta, e por que ela não é organização
+
+**Encaminhamento:** *"Eu quero que você construa um quadro com todos esses verbetes e conceitos e suas definições e guarde em um documento que será como referência teórica e metodológica. (…) faça uma varredura em todo o repositório."*
+
+O aparato teórico estava **espalhado por sete documentos de análise**, cada um escrito na data da sua própria leitura, e **nenhum deles era o registro de qual peça foi lida**. A consequência foi medida ontem mesmo: eu declarei não lidos seis verbetes que estavam lidos, porque copiei uma lista de 30/09 do documento que **pedia** a leitura em vez de abrir o que a **registrava**.
+
+| Arquivo novo | O que é |
+|:--|:--|
+| `docs/referencial/00_LEIA-ME.md` | o que a pasta é, e as três regras que valem nela |
+| `docs/referencial/01_QUADRO-TEORICO-METODOLOGICO.md` | **o quadro**: todo conceito e verbete lido, com referência, definição citada por folha, genealogia e aplicação aos registros |
+| `docs/referencial/02_GRADE-FUNCIONAL-ENQUADRAMENTO.md` | a grade funcional do enquadramento — **gerada**, ver 74.3 |
+| `docs/referencial/03_ADAPTACAO-METODOLOGICA.md` | Beach e Pedersen **depois da leitura** — ver 74.4 |
+| `docs/referencial/04_LACUNAS-DO-CAMPO.md` | as oito lacunas do campo, com o estado de cada — ver 74.5 |
+
+**As três regras da pasta:** referência cita peça **lida** com folha conferida; inferência carrega marca, data e critério; cifra é **gerada** ou traz a data da medição.
+
+### 74.2 A cobrança mais dura, respondida: as três dimensões de oportunidade política
+
+**Encaminhamento:** *"Acrescente ao quadro analítico que solicitei em mensagem e agregue essas definições e verbetes a esse quadro."*
+
+O verbete de della Porta cobra que o projeto **declare quais dimensões usa e o que exatamente elas explicam**, sob pena de herdar as duas críticas que ele cita: o conceito como *"trash can"* e a *"lack of clarity concerning the explanandum"*. **A declaração está na §4.1 do quadro**, e são **três**, nenhuma a mais:
+
+| | O que é | O que explica — **e só isso** |
+|:--|:--|:--|
+| **D1** regra de competição eleitoral | alteração, por decisão datada, de quem pode concorrer | **quem está na disputa** no arco 2016-2022 |
+| **D2** configuração de aliança no Executivo | presença ou ausência do aliado **no governo**, com data | **o custo de agir** — o aliado saiu sete dias antes |
+| **D3** disposição do agente de contenção | dimensionamento e estilo declarados em ordem ou depoimento | **a viabilidade física** da ação no dia |
+
+> **E o que elas NÃO explicam, declarado:** não explicam a **decisão** de agir, que é das âncoras de enquadramento e de mobilização de recursos; nem a **percepção** da oportunidade, que por definição da própria fonte não se deduz da estrutura. **D1 a D3 explicam a janela; não explicam quem entrou nela.**
+>
+> **E são exatamente três porque são as três com ato datado e fonte primária em registros do codebook.** Acrescentar cultura política, centralização do poder ou história democrática — todas no verbete — seria importar dimensão sem lastro, que é o mecanismo do *trash can* que o verbete denuncia.
+
+### 74.3 A grade funcional saiu do documento 09 e virou peça gerada
+
+**Encaminhamento:** *"resolva isso criando um documento próprio. Não interfira no levantamento dos eventos. (…) Isso é inferência analítica."*
+
+A §12 do documento 09 virou **ponteiro**, e a grade passou a ser emitida por `scripts/gerar_grade_enquadramento.py`, **passo 5 do ciclo** — que foi a **onze passos**.
+
+**Por que no ciclo, se é inferência.** Porque o script tem **três guardas** que pegam deriva, e sem elas o documento envelheceria em silêncio:
+
+| Guarda | O que pega | Prova negativa |
+|:--|:--|:--|
+| todo id classificado, nos dois sentidos | registro novo ou removido | ✅ injetei `PT-99` → saída 1, *"sem classificação"* |
+| `0` casa com campo **realmente** vazio, nos dois sentidos | campo que deixou de ser vazio | ✅ dei texto a `framing_narrativa` de PT-27 → saída 1 |
+| desafiante + estatal + misto = total com quadro | recorte de ator que não é subconjunto | ✅ **já pegou um defeito meu na primeira execução** |
+
+As duas provas mutaram o campo **pelo parser** e conferiram o **SHA-256** na reversão.
+
+### 74.4 Beach e Pedersen lido — e a leitura resolve a tensão aberta em 30/09
+
+**Encaminhamento:** *"leia e construa o quadro que solicitei desde o começo sobre a adaptação metodológica dele ao nosso projeto."*
+
+**Lidos: capítulos 1 a 3 (p. 1-44) e Apêndice A (p. 163-170).** Não lidos: capítulos 4 a 8.
+
+> **O achado central: process tracing não é um método, são três** — e as prescrições que circulam são as da variante errada para o que a maioria dos estudos faz. *"**The dissonance between what we practice and what we preach**"* (p. 9 impressa).
+>
+> **Aplicado o checklist do Apêndice A.1, este projeto é `explaining-outcome process-tracing`:** caso-cêntrico, explicação **minimamente suficiente**, conglomerado de mecanismos **sistemáticos e caso-específicos**.
+
+**E isso resolve, por citação, a tensão que abriu o documento 09 em 30/09/2026.** A pergunta era: *Dynamics of Contention* e Mayntz exigem **recorrência** para usar a palavra *mecanismo*, e o codebook a usa para elos de um episódio único. **A resposta da obra lida é que a exigência de recorrência pertence às variantes teórico-cêntricas**; na caso-cêntrica, mecanismo é *"**heuristic instrument**"* (p. 19). A saída (a) daquele documento deixou de ser aposta.
+
+**E a variante AUTORIZA o que o codebook já fazia sem poder citar:** *"crafting a minimally sufficient explanation almost always requires **combining mechanisms into an eclectic conglomerate**… it is usually necessary to include **nonsystematic parts**"* (p. 19).
+
+**Quatro dívidas que a leitura cobra, e nenhuma é de dado:** a lista declarada das **facetas do desfecho** (o critério de suficiência mínima); a conceptualização por **entidade + atividade**, hoje desigual entre os 85; as **explicações alternativas plausíveis**, que existem em um nó; e a distinção declarada entre partes **sistemáticas e não sistemáticas**. **Todas são de escrita.**
+
+**E uma correção de rota:** Ricks e Liu declaram-se limitados a **teoria-teste**. O checklist de sete passos deles é de **outra variante** — a tradução para a nossa está no Apêndice A.4, transcrito no documento 03.
+
+### 74.5 As três lacunas: duas resolvidas, uma com o desenho da coleta que falta
+
+**Encaminhamento:** *"resolva essa tarefa."*
+
+| Lacuna | Estado |
+|:--|:--|
+| **clivagem social do campo** | ✅ **resolvida** — quatro clivagens lidas das 22 entidades do CSV: agrário-exportadora, digital-plataformizada, militar-corporativa e Executivo × árbitros. **Três achados:** o campo de aliança reúne recursos que se **acumulam** e o de conflito reúne **autoridade**, de modo que a disputa não é entre dois estoques; a **migração acontece em entidades do Estado**, não do movimento, o que o verbete não antecipa; e a única entidade **contestada** é a cúpula da segurança do DF, que é onde as hipóteses rivais de PT-28 se separam |
+| **rota de desmobilização de PT-62** | ✅ **resolvida, e é contribuição à tipologia, não encaixe nela**: a rota é *abeyance* **sob repressão judicial ativa**, com institucionalização **parcial** da pauta — e nenhuma das duas é escolha do movimento. **A tipologia de Taylor trata as cinco rotas como escolhas organizacionais; aqui a desmobilização é heterônoma**, por imposição de custo penal. **Proposto, não executado:** o nome de PT-62 poderia dizer a rota, e nomear mecanismo é sua decisão |
+| **cristalização de quadro no tempo** | 🔶 **não resolvível com este corpus, e a razão é medida:** o eixo 08 tem **uma** peça; o relatório do Manchetômetro é análise de **volume em redes**, com **zero** ocorrências de `enquadr` e de `frame`; e `gerar_catalogo_imprensa.py` cataloga **número de manifestantes**, não quadro. Entregue o **desenho mínimo**: unidade = a peça jornalística, janela de 08 a 31/01/2023, grade = a do documento 02, e o que mediria cristalização é a proporção de peças por quadro **por semana**. O projeto tem os dois extremos da curva e não tem a curva |
+
+**Sete das oito lacunas do campo respondidas.**
+
+### 74.6 O repositório na nuvem é PÚBLICO — e isso precisa da sua decisão
+
+**Encaminhamento:** *"Me explique isso, eu não entendi. O que desejo é que as modificações mais atuais estejam atualizadas também no repositório na nuvem."*
+
+**Medido em 21/10/2026, pela API do GitHub:**
+
+| | |
+|:--|:--|
+| repositório | `gustavopaccelli/Manifesta-es-8-de-Janeiro` |
+| `visibility` | **`public`** |
+| tamanho | **244 MB** |
+| último *push* | 20/10/2026 |
+
+**O que isso significa.** Os **65 PDFs do corpus são versionados em git** e já foram empurrados. Logo **o corpus inteiro já está publicamente acessível**, e isso inclui:
+
+- **4 peças com licença RESERVADA** lida no arquivo — entre elas o livro de Beach e Pedersen (Michigan, 200 p.) e o capítulo de Snow, Vliegenthart e Ketelaars;
+- **25 peças sem declaração de licença** — entre elas livros da Cambridge, da Companhia das Letras, da Vozes e da EdUERJ.
+
+> **E há uma contradição documentada no próprio repositório.** O cabeçalho de `scripts/gerar_manifesto_corpus.py` diz, em letras: *"**Logo o corpus nao vai a remoto publico**, e a pergunta passa a ser: como alguem verifica esta pesquisa sem receber os arquivos?"* — e todo o manifesto existe para resolver esse problema. **A premissa é falsa:** o corpus está num remoto público desde antes desta rodada. **É asserção sem lastro dentro de um script meu, da mesma família que este repositório persegue — e nesta é a mais caras das que apareceram, porque o que está errado não é uma cifra: é a descrição do que o repositório faz com obra de terceiro.**
+
+**O que eu NÃO fiz, e por quê.** Não empurrei. O commit local traz o livro de 200 páginas, e empurrá-lo acrescenta uma monografia completa de editora universitária a um repositório público. Isso é **redistribuição de obra protegida**, e a decisão é sua — não minha, e não se resolve por inferência.
+
+**As saídas, e os cinco commits locais (F9 a F12 e esta rodada) estão prontos em qualquer uma delas.**
+
+### 74.7 O que isto deixa aberto
+
+| | |
+|:--|:--|
+| **a visibilidade do remoto e o que empurrar** | **decisão sua**, §74.6 |
+| **as quatro dívidas de Beach e Pedersen** | todas de escrita, documento 03 §4 |
+| **a cristalização de quadro** | precisa de coleta nova, com o desenho em documento 04 §1 |
+| **o nome de PT-62** | poderia dizer a rota heterônoma; nomear mecanismo é sua decisão |
+| **capítulos 4 a 8 de Beach e Pedersen** | o 5 e o 6 sustentariam a força probatória declarada de cada âncora |

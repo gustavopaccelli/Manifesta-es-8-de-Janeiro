@@ -162,3 +162,90 @@ Oito, agora, das quais **cinco foram lidas na fonte** e não colhidas em síntes
 3. **Não desenhei o campo multiorganizacional**, que Klandermans cobra. Os atores estão no codebook; o campo, com sistemas de aliança e de conflito, não existe como peça.
 4. **Não segui as referências internas dos verbetes.** Cada um aponta obras que o corpus não tem — Osa (2003) sobre a Polônia de 1956, Taylor (1989) sobre *abeyance*, Ferree (2003) sobre construtos jurídicos, Vitale (2005) e Noakes & Gillham (2006) sobre os estilos novos de policiamento, Givan, Roberts & Soule (2010) sobre difusão. **Ferree (2003) e Taylor (1989) são as duas de melhor retorno**, pela judicialização e pela desmobilização.
 5. **Os oito verbetes fora dos 411 não entraram na triagem.** `data/processed/triagem_dois.csv` cobre o universo das sínteses; estes são acréscimos do pesquisador e vivem neste documento e na `PROCEDENCIA` da obra. **Não movi *Repertoires of contention* de B para A**, embora a leitura o justifique: a planilha registra o juízo feito sobre metadado, e reescrevê-la apagaria a evidência de que a triagem por metadado tem esse limite. A promoção é sua, e o lugar dela é a linha da planilha, não este documento.
+
+---
+
+## 11. A tabela comparativa-descritiva dos onze verbetes — 21/10/2026
+
+**Encaminhamento:** *"Faça isso, enumere-os e construa a tabela comparativa-descritiva."*
+
+> **ERRATA, E ELA É MINHA.** No fechamento da frente F12, em 21/10/2026, listei seis verbetes como *"lidos-a-ler"*: *Demobilization*, *Repertoires of contention*, *Policing protest*, *Diffusion and scale shift*, *Multiorganizational fields* e *Discursive opportunity structure*. **Os seis estavam lidos, e as seções 1 a 7 deste documento são a leitura deles.** Eu copiei a lista da §7.4 de `09_CONCEITO-MECANISMO.md`, escrita em **30/09/2026** — isto é, **antes** deste documento existir —, sem conferir aqui. O título desta peça diz *"os onze verbetes lidos na fonte"* desde que ela foi criada.
+>
+> **É a terceira vez na mesma semana que uma contagem copiada de outro lugar erra**, e a desta foi a pior das três: as outras duas perdiam item, esta declarou **não lido o que estava lido**. A regra que já estava escrita — *reconte na fonte que gerou cada uma* — vale também para a pergunta *"isto foi lido?"*: a fonte é o documento da leitura, não o documento que pedia a leitura.
+>
+> **Logo não houve leitura nova nesta rodada.** O que faltava, e é o que esta seção entrega, era a **tabela comparativa**.
+
+### 11.1 Os seis que você enumerou — e os onze, porque a lista tem de fechar
+
+| # | Verbete | Autoria | p. impressas | Âncora teórica a que serve | Unidade de análise |
+|--:|:--|:--|:--|:--|:--|
+| 1 | ***Demobilization*** | FILLIEULE, O. | 177-180 | Ciclo de protesto | a saída: campo, campanha, organização, indivíduo |
+| 2 | ***Repertoires of contention*** | DELLA PORTA, D. | 547-549 | Mechanisms (repertório) | a forma de ação |
+| 3 | ***Policing protest*** | DELLA PORTA, D.; REITER, H. | 452-458 | marco — interação desafiante/autoridade | a estratégia do agente de contenção |
+| 4 | ***Diffusion and scale shift*** | SOULE, S. A. | 1338-1342 | Mechanisms | o laço entre atores e níveis |
+| 5 | ***Multiorganizational fields*** | KLANDERMANS, B. | 407-408 | marco — estrutura de mobilização | o campo de organizações |
+| 6 | ***Discursive opportunity structure*** | McCAMMON, H. | 211-213 | Framing × marco (síntese declarada) | a receptividade do discurso público |
+| 7 | *Mechanisms* | TARROW, S. | 368-371 | **Mechanisms** (verbete de referência) | o elo |
+| 8 | *Protest cycles and waves* | DELLA PORTA, D. | 513-518 | **Ciclo de protesto** (verbete de referência) | a fase |
+| 9 | *Political opportunity / p. o. structure* | DELLA PORTA, D. | 478-483 | **marco** (verbete de referência) | a configuração de poder |
+| 10 | *Resource mobilization theory* | EDWARDS, B.; GILLHAM, P. F. | 1418-1423 | marco — mobilização de recursos | o recurso e a troca |
+| 11 | *Critical mass theory* | OLIVER, P. | 163-166 | Mechanisms | o agregado de contribuintes |
+
+**Onze lidos na fonte, integrais, todos no exemplar do corpus** — `SNOW-DELLA-PORTA-KLANDERMANS-McADAM_Wiley-Blackwell-Encyclopedia…_2013.pdf`, que é a obra-contêiner de 434 verbetes. **Os três verbetes de referência das três âncoras teóricas estão entre eles** (7, 8 e 11 para *Mechanisms*; 8 para o ciclo), e o do conceito central do marco também (9).
+
+> **E a distribuição de autoria é um dado sobre o campo, não sobre o corpus:** **cinco dos onze são de della Porta**, sozinha ou com Reiter — *Policing protest*, *Political opportunity*, *Protest cycles and waves*, *Repertoires of contention* e a coorganização do volume. Quem lê este referencial lê, em boa medida, uma autora. Vale declarar no artigo.
+
+### 11.2 O que cada um ENTREGA, e a quais registros
+
+| # | Verbete | O achado utilizável | Registros que ele toca |
+|--:|:--|:--|:--|
+| 1 | *Demobilization* | **quatro tipos de desmobilização**, e o caso tem três deles datados: campo inteiro, liderança e indivíduo. E diz que a desmobilização individual *"is **not always voluntary**"*, podendo vir de *"a prison sentence"* | PT-52, PT-58, PT-59, PT-61, PT-62 |
+| 2 | *Repertoires of contention* | **a invasão de corpos legislativos é forma catalogada do repertório moderno**, com genealogia em Tilly — *"the invasion of legislative bodies"*. Responde se o 8/1 é inovação: **é forma conhecida** | PT-29, PT-35, PT-36, PT-08 |
+| 3 | *Policing protest* | **duas hipóteses rivais, ambas em sua melhor versão**, e a seletividade estrutural **prediz policiamento brando** para grupo rico em recursos e conexão — sem precisar de conivência | PT-28, PT-20A, PT-22, PT-23, PT-31, PT-37 |
+| 4 | *Diffusion and scale shift* | separa **laço direto** de **laço indireto** e dá a tipologia de adotantes. O Sri Lanka invocado pela CPMI é **atribuição de similaridade por laço indireto**; o laço direto **não está demonstrado** | PT-08, PT-19 |
+| 5 | *Multiorganizational fields* | *alliance system* × *conflict system*, com fronteiras **fluidas**: *"former allies can become opponents"* — e a proporção do campo em cada sistema **varia com a fase do ciclo** | PT-50, PT-13, PT-10A, PT-12A |
+| 6 | *Discursive opportunity structure* | a **ponte para a judicialização**: Ferree (2003) sobre *"public debates over law and legal rights"* e a necessidade de *"invoke legal constructs"*. E a **volatilidade** das oportunidades discursivas | PT-50A, e o eixo de disputa de nomeação |
+| 7 | *Mechanisms* | os **quatro quadrantes** metodológicos, e este desenho está no primeiro — medição direta por *"systematic events data"* | o desenho inteiro |
+| 8 | *Protest cycles and waves* | a definição de **cinco componentes** e a posição do caso: *"the final stages of the cycle thus see **both** processes of institutionalization **and** of radicalization"* | PT-01, PT-02, PT-62, PT-29, PT-34 |
+| 9 | *Political opportunity* | *"**closed opportunities might be perceived as open** by the activists"* — e a retratação dos proponentes em DoC, p. 45: oportunidades **não são categorias objetivas** | PT-01, PT-03D, PT-05A, PT-06C |
+| 10 | *Resource mobilization theory* | quatro mecanismos de acesso × cinco tipos de recurso = **20 relações de troca**, que tipificam PT-12A e PT-10A | PT-12A, PT-10A, PT-13 |
+| 11 | *Critical mass theory* | massa crítica são **os organizadores**, não a multidão — e usar o termo para *"initial group of protesters"* é **metafórico e frouxo** | PT-21, PT-34 (o termo **saiu** dos dois) |
+
+### 11.3 O que cada um COBRA do projeto — e é a coluna que importa
+
+| # | Verbete | A cobrança | Estado |
+|--:|:--|:--|:--|
+| 1 | *Demobilization* | que se diga **qual rota** de desmobilização o caso percorre, entre burocratização, institucionalização, assimilação, radicalização e *abeyance* | 🔶 aberta — PT-62 nomeia duas (repressão seletiva + migração de arena) sem situá-las na tipologia |
+| 2 | *Repertoires of contention* | *"people tend to act within known limits, to **innovate at the margins**"* — se o projeto afirma inovação, tem de dizer **qual é a margem** | 🔶 aberta |
+| 3 | *Policing protest* | que **PT-28 declare a hipótese rival e a enfrente**. Sem isso, o *hoop test* está formalmente correto e substantivamente desprotegido | ✅ endereçada em `11_HIPOTESES-RIVAIS-PT-28.md` — o **único** nó do codebook com contrafactual explícito |
+| 4 | *Diffusion and scale shift* | que se diga **o que exatamente difundiu** — comportamento, ideia ou campanha? — e se foi transplantado inteiro ou **adaptado**; e quem estava *"at risk"* de adotar | 🔶 aberta — PT-08 hoje diz "modelo de contestação violenta de resultado eleitoral", que é as três coisas |
+| 5 | *Multiorganizational fields* | que se **mapeie o campo**: *"the composition of a movement's organizational field is **not random**"* | 🔶 parcial — `desenhar_campo.py` e `campo_multiorganizacional.svg` existem, com 22 entidades com lastro; o campo **não está lido contra a clivagem social** |
+| 6 | *Discursive opportunity structure* | que a disputa de nomeação seja tratada como **terreno jurídico**, e não só midiático | 🔶 aberta, e é a ponte com a tarefa 10 (parqueada) |
+| 7 | *Mechanisms* | quatro problemas como lista de verificação, e **a objeção de seleção de caso**: *"by **selecting on the dependent variable**… analysts inevitably focus on the exceptional cases"* | 🔶 aberta — a defesa disponível é que o desfecho estudado é o **fracasso**, e precisa ser escrita antes que o parecerista a escreva |
+| 8 | *Protest cycles and waves* | que a radicalização **não seja apresentada como fase esperada**: ela *"does not seem to be an unavoidable consequence"* de dinâmica cíclica | ✅ incorporada — está declarada no `marco_teorico` desde 21/10/2026 |
+| 9 | *Political opportunity* | que o projeto **declare quais dimensões usa e o que exatamente elas explicam**, ou herda as duas críticas: o conceito como *"**trash can**"* e a *"lack of clarity concerning the **explanandum**"* | 🔶 aberta — e é a cobrança mais dura das onze |
+| 10 | *Resource mobilization theory* | implícita na lacuna que ele declara (ver 11.4) | — |
+| 11 | *Critical mass theory* | que não se use o termo para a multidão | ✅ **executada** — o termo saiu de PT-34 em 10/10 e de PT-21 em 18/10, e a checagem 7 passou a vigiar o **conceito**, não a frase |
+
+**Cinco cobranças endereçadas ou executadas, seis abertas.** As seis abertas são de **escrita**, não de dado: nenhuma exige recodificar registro.
+
+### 11.4 As lacunas que o próprio campo declara — e cinco delas este material responde
+
+| Verbete | A lacuna, na voz da fonte | O que o caso tem |
+|:--|:--|:--|
+| *Demobilization* | *"we know **little about the mechanisms governing the decline** of social movements"* | T+1 inteira — 20 registros datados de declínio |
+| *Demobilization* | *"explore **the effects across time and space of the failure** of a movement"* | PT-62, e o caso é um fracasso com desfecho medido |
+| *Resource mobilization theory* | *"**resource demobilization** or reduction of resources to SMOs also needs further investigation"* | PT-52 — e a destruição da base logística **não é** o inverso da mobilização: é remoção coercitiva, com data e decisão judicial |
+| *Diffusion and scale shift* | *"how the **opportunity structure at one level may drive scale shift**… if activists are **thwarted at one level**, they may strategically move to another"* | o caso é isso: barrado na urna, barrado no quartel, desloca-se para a sede dos três poderes |
+| *Framing* (cap. 2019) | *"we know comparatively little about the degree to which frame **ambiguities, errors, and shifts** function as mobilization impediments"* | um **quadro falso** que produziu mobilização de massa |
+| *Framing* (cap. 2019) | *"little comparable research on the factors that account for the **crystallization** of some frames"* | o eixo 08 é cobertura de imprensa — **mas medir cristalização exige codificar quadro por peça ao longo do tempo, e isso não está feito** |
+| *Multiorganizational fields* | implícita: a composição do campo relaciona-se a clivagens existentes | o campo está desenhado, não lido contra clivagem |
+| *Demobilization* (meso) | *"we still **lack a reliable typology** of the diversity of routes"* | o caso oferece uma rota — repressão seletiva seguida de migração de arena — **ainda não situada na tipologia** |
+
+> **Cinco das oito o material responde com dado ancorado.** Três exigem trabalho que não está feito, e as três estão nomeadas acima — cristalização por peça, clivagem do campo, e a tipologia de rotas de desmobilização.
+
+### 11.5 O que esta tabela mostra que as seções individuais não mostravam
+
+1. **A cobertura das âncoras é desigual, e isso é mensurável.** *Mechanisms* tem três verbetes lidos (7, 10, 11) e a obra inteira de DoC; *Ciclo de protesto* tem dois (1, 8); **Framing não tem verbete lido nenhum** — a âncora de enquadramento sustenta-se **só** no capítulo de Snow, Vliegenthart e Ketelaars (2019). É a âncora com **uma única perna**.
+2. **A cobrança mais dura é a do verbete 9**, e ela não é sobre o caso: é sobre o **conceito** que o marco usa. *"Declare quais dimensões usa e o que exatamente elas explicam"* — e hoje o codebook usa estrutura de oportunidade em PT-01, PT-03D, PT-05A e PT-06C sem dizer isso em nenhum lugar.
+3. **Três verbetes convergem num mesmo ponto que o codebook não tem:** 3, 4 e 7 pedem, cada um por sua via, **hipótese rival explícita**. O projeto a tem em **um** nó. É a mesma cobrança que Ricks e Liu fazem pelos passos 4 e 5 — quatro fontes lidas, uma exigência só.

@@ -375,10 +375,15 @@ def main():
         # NAO mudava quando entrava literatura -- e e isso que a separacao serve
         # para mostrar. Agora ela muda, porque entrou documento que ancora
         # registro: 22 -> 23 PDFs documentais, 6.951 -> 6.970 paginas.
-        if (n, total, doc_n, doc_total) != (64, 12144, 23, 6970):
+        # 21/10/2026: entra BEACH-PEDERSEN, 'Process-Tracing Methods' (Michigan,
+        # 2013), 208 folhas, fornecida pelo pesquisador. 64 -> 65 PDFs e 12.144 ->
+        # 12.352 paginas; a DOCUMENTAL nao se move, porque e literatura, e e isso
+        # que a separacao desta linha serve para mostrar. Licenca lida no arquivo:
+        # RESERVADA -- nao redistribuivel, e por isso o manifesto existe.
+        if (n, total, doc_n, doc_total) != (65, 12352, 23, 6970):
             avisos.append("corpus mudou: {} PDFs / {} páginas, {} documentais / {} p. "
-                          "(era 64 / 12144, 23 / 6970)".format(n, total, doc_n, doc_total))
-            print("  ~ corpus difere da linha de base de 20/10/2026 (64 PDFs / 12144 p., "
+                          "(era 65 / 12352, 23 / 6970)".format(n, total, doc_n, doc_total))
+            print("  ~ corpus difere da linha de base de 21/10/2026 (65 PDFs / 12352 p., "
                   "23 documentais / 6970 p.)")
         else:
             print("  OK — bate com o inventário")

@@ -259,6 +259,26 @@ PROCEDENCIA["Fontes/05_Bibliografia-teorica/McADAM-TARROW-TILLY_Dynamics-of-Cont
     "ISBN 0-521-80588-0. DOI 10.1017/CBO9780511805431. 411 p. no PDF, com camada de texto. "
     "É a obra do vocabulário causal que o codebook usa; não ancora registro nenhum.",
 )
+# Acrescentada em 21/10/2026 PELO PESQUISADOR, que anexou o arquivo a conversa com
+# a instrucao de copia-lo para o repositorio "para ficar como referencia". Fecha a
+# lacuna que a frente F12 havia MEDIDO no dia anterior: nenhuma edicao de Beach e
+# Pedersen estava no corpus, e a ancora metodologica declarada do projeto era a
+# unica que nao se podia citar por folha. O obstaculo de OBTENCAO da rota (B) do
+# item 72 deixa de existir; o de LEITURA permanece, e esta declarado.
+PROCEDENCIA["Fontes/05_Bibliografia-teorica/BEACH-PEDERSEN_Process-Tracing-Methods_Michigan-2013.pdf"] = (
+    "Arquivo fornecido pelo pesquisador, anexado à conversa em 21/10/2026",
+    "bibliografia",
+    "BEACH, D.; PEDERSEN, R. B. 'Process-Tracing Methods: Foundations and Guidelines'. "
+    "Ann Arbor: The University of Michigan Press, 2013. 208 folhas de PDF, com camada "
+    "de texto. PAGINAÇÃO MEDIDA EM 21/10/2026 pelo rodapé de composição do próprio "
+    "arquivo: viii folhas de pré-textual em romano e o corpo em árabe da p. 1 à p. 200, "
+    "com offset ÚNICO de impressa = PDF − 8 em todo o corpo — conferido folha a folha, "
+    "sem exceção. É a ÂNCORA METODOLÓGICA declarada do projeto, e até 21/10/2026 era a "
+    "única peça do referencial que não estava no corpus em nenhuma edição. ESTÁ NO "
+    "CORPUS E NÃO ESTÁ LIDA: o que o codebook afirma dela continua vindo de citação "
+    "colhida em Cunha e Araújo (2018) e em Ricks e Liu (2018), as duas lidas na fonte. "
+    "Não ancora registro nenhum.",
+)
 PROCEDENCIA["Fontes/05_Bibliografia-teorica/TARROW_O-poder-em-movimento_Vozes-2009.pdf"] = (
     "Sidney Tarrow — tradução brasileira, Editora Vozes", "bibliografia",
     "TARROW, S. 'O poder em movimento: movimentos sociais e confronto político'. Trad. Ana "

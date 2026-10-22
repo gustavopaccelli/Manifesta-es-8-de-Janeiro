@@ -8,6 +8,17 @@ estao livros da Cambridge, da Wiley-Blackwell, da Vozes e da Companhia das
 Letras. Logo o corpus nao vai a remoto publico, e a pergunta passa a ser: **como
 alguem verifica esta pesquisa sem receber os arquivos?**
 
+ERRATA DE 21/10/2026, E ELA DESMENTE O PARAGRAFO ACIMA. Medido pela API do
+GitHub: o remoto deste repositorio -- gustavopaccelli/Manifesta-es-8-de-Janeiro
+-- e PUBLICO, tem 244 MB e foi empurrado em 20/10/2026, e os 65 PDFs do corpus
+sao versionados em git. **O corpus ESTA num remoto publico**, e a frase "logo o
+corpus nao vai a remoto publico" era asserção sem lastro, escrita aqui e nunca
+conferida. Entre as pecas publicamente acessiveis estao 4 de licenca RESERVADA e
+25 sem declaracao. O manifesto segue valendo como instrumento de
+verificabilidade sem redistribuicao -- mas a premissa de que a redistribuicao
+nao acontece e falsa, e a decisao sobre o que fazer com isso e do pesquisador
+(item 74.6 da agenda).
+
 Com o manifesto. Para cada peca: caminho, SHA-256, paginas, bytes, classe de
 licenca lida NO arquivo, e a rota de obtencao declarada em PROCEDENCIA. Quem
 quiser conferir uma ancora obtem a peca pela rota, compara o SHA-256 e abre a

@@ -22,7 +22,7 @@ Regra do projeto: nada se afirma sem ter sido lido, e nada se cita contra outra 
 | SEWELL (1996); McADAM & SEWELL (2001) | **Citação literal colhida no verbete de della Porta** |
 | GRANOVETTER (1978); MARWELL & OLIVER (1993) | **Citação colhida no verbete de Oliver** |
 | MACHAMER, DARDEN & CRAVER (2000) | Ficha 2 (metadado) + citação colhida em Mayntz e em Cunha & Araújo |
-| BEACH & PEDERSEN (2013; 2016) | Ficha 1 (metadado) + **citação colhida em Cunha & Araújo, lida na fonte dela** |
+| BEACH & PEDERSEN (2013), *Process-Tracing Methods: Foundations and Guidelines*, Michigan | **NO CORPUS desde 21/10/2026**, fornecida pelo pesquisador — 208 folhas, impressa = PDF − 8, licença RESERVADA. **E NÃO LIDA:** o que o aparato afirma dela segue vindo de **citação colhida** em Cunha & Araújo (2018) e em Ricks & Liu (2018), as duas lidas na fonte. Ver §11.5 |
 | RICKS & LIU (2018), *Process-Tracing Research Designs: A Practical Guide*, **PS** 51(4) | **Lido na fonte, integral** (5 p., impressa = PDF + 841), corpus — **lido em 21/10/2026, na frente F12**. Estava em `Fontes/05_Bibliografia-teorica/` desde antes e **fora deste inventário**: achado ao medir se alguma edição de Beach e Pedersen estava no corpus. Ver §11.5 |
 | WALDNER (2015) | Ficha 9 (metadado). **Não lido na fonte** — editor barrado |
 | SNOW, VLIEGENTHART & KETELAARS (2019), cap. 22 do *Wiley Blackwell Companion*, 2. ed. | **Lido na fonte, integral** (20 p.), corpus — camada A, achado em 13/10 pelo campo `locations` do OpenAlex; ver §10 |
@@ -123,8 +123,8 @@ Até aqui, toda divergência entre síntese e fonte tinha a síntese errada. Est
 
 1. **Não alterei nenhum dos 82 registros.** As sete cobranças da seção 4 são decisões de conteúdo analítico — renomear PT-03, resolver a tensão PT-19/PT-29, reclassificar PT-34, tipificar PT-12A, marcar PT-62 como processo. Nenhuma se faz por inferência.
 2. ~~**Não mudei a atribuição dos quatro testes** em `01_PROJETO-PESQUISA_v1-compacto.md`. Duas fontes divergem da redação atual, e a correção depende de qual genealogia você adota.~~ **SUPERADO DUAS VEZES, e a data de cada uma importa.** A atribuição foi corrigida em **10/10/2026** — ver §9.6 deste documento, que está marcada *EXECUTADA*, e o item 43.1 da agenda. E as **duas fontes não divergiam**: a lista entre parênteses de Cunha e Araújo é referência, não reivindicação de autoria, e as duas peças convergem em Van Evera. O arquivo que esta linha cita **deixou de existir em 14/10/2026**, com a pasta do edital (item 48 da agenda), e em **18/10/2026** o pesquisador confirmou que o projeto de pesquisa **não retorna** (item 63).
-3. **Não li Beach & Pedersen (2016) nem Waldner (2015) na fonte.** A saída (a) da seção 3 depende da primeira; o critério de grafo completo, da segunda. `Fontes/05_Bibliografia-teorica/` tem *Process-tracing methods*? **Não** — tem o manual da Enap e o guia de Ricks & Liu (2018). As duas obras de Beach e Pedersen continuam fora do corpus.
-4. **Não incorporei os outros verbetes pertinentes** que a indexação localizou e que a camada A ou o codebook mobilizam: *Demobilization* (Fillieule), *Repertoires of contention* (della Porta), *Policing protest* (della Porta & Reiter), *Diffusion and scale shift* (Soule), *Multiorganizational fields* (Klandermans), *Political opportunity* e *Discursive opportunity structure*. **São sete verbetes lidos-a-ler, todos agora acessíveis sem muro de editor**, e é o melhor retorno por hora de leitura que o corpus oferece.
+3. **Não li Beach & Pedersen (2016) nem Waldner (2015) na fonte.** A saída (a) da seção 3 depende da primeira; o critério de grafo completo, da segunda. `Fontes/05_Bibliografia-teorica/` tem *Process-tracing methods*? **Não** — tem o manual da Enap e o guia de Ricks & Liu (2018). As duas obras de Beach e Pedersen continuam fora do corpus. **ERRATA DE 21/10/2026: esta frase foi MEDIDA e confirmada na manhã daquele dia — abri os dois PDFs cujo nome diz *process tracing* — e deixou de valer no mesmo dia, porque o pesquisador forneceu a obra.** A edição de 2013 está hoje no corpus, com 208 folhas e offset conferido; **e segue não lida**, de modo que a segunda metade da frase — a saída (a) da §3 depende da primeira — continua valendo. Ver §11.5 e o item 73 da agenda.
+4. **Não incorporei os outros verbetes pertinentes** que a indexação localizou e que a camada A ou o codebook mobilizam: *Demobilization* (Fillieule), *Repertoires of contention* (della Porta), *Policing protest* (della Porta & Reiter), *Diffusion and scale shift* (Soule), *Multiorganizational fields* (Klandermans), *Political opportunity* e *Discursive opportunity structure*. **São sete verbetes lidos-a-ler, todos agora acessíveis sem muro de editor**, e é o melhor retorno por hora de leitura que o corpus oferece. **ERRATA DE 21/10/2026: os sete FORAM LIDOS**, entre 29/09 e 14/10/2026, e a leitura está em `10_VERBETES-ENCICLOPEDIA.md`, cujo título diz *os onze verbetes lidos na fonte*. Esta frase é de 30/09, anterior àquele documento — e eu a copiei como se fosse estado atual no fechamento da frente F12, declarando não lido o que estava lido. Ver §11 daquele documento.
 
 ---
 
@@ -393,7 +393,7 @@ A pergunta *"como conceitos que se complementam se diferenciam sem se excluir?"*
 
 | Medição de 21/10/2026 | Resultado |
 |:--|:--|
-| alguma edição de Beach e Pedersen no corpus? | **Nenhuma** — nem 2013, nem 2016, nem 2019. Os dois PDFs cujo nome diz *process tracing* foram abertos: `Livro_Process tracing.pdf` é **Cunha e Araújo** (Enap, 104 folhas) e `process-tracing-research-designs-a-practical-guide.pdf` é **Ricks e Liu** (2018, *PS*, 5 folhas). Confirma por medição o que a §7.3 afirmava |
+| alguma edição de Beach e Pedersen no corpus? | **Nenhuma** — nem 2013, nem 2016, nem 2019. **E ISTO CADUCOU NO MESMO DIA:** horas depois desta medição o pesquisador forneceu a obra, e a edição de 2013 entrou no corpus. Ver 11.5.1. Os dois PDFs cujo nome diz *process tracing* foram abertos: `Livro_Process tracing.pdf` é **Cunha e Araújo** (Enap, 104 folhas) e `process-tracing-research-designs-a-practical-guide.pdf` é **Ricks e Liu** (2018, *PS*, 5 folhas). Confirma por medição o que a §7.3 afirmava |
 | *"political opportunity structure"* em *Dynamics of Contention* | **zero** ocorrências em 411 folhas; *exogenous*, uma (p. 120 impressa) |
 | Ricks e Liu (2018) estava lida? | **Não estava no inventário** — e está no corpus. **Lida integral nesta frente** |
 
@@ -415,6 +415,29 @@ A pergunta *"como conceitos que se complementam se diferenciam sem se excluir?"*
 
 > **Recomendação, se quiser uma: (A) agora, (B) quando houver folga de leitura.** A razão é que (A) **já é verdade** — basta escrevê-la — e (B) não altera nenhum dado do codebook: altera o que o projeto pode **citar**. E há um terceiro caminho que não é rota, é consequência: se (B) acontecer, os **passos 4 e 5 de Ricks e Liu** passam a ser exigência explícita, e aí a conta é de pesquisa, não de leitura — construir contrafactual por nó.
 
+#### 11.5.1 A obra entrou no corpus no mesmo dia — e isso muda uma rota, não as duas
+
+**O que aconteceu.** Horas depois de a medição acima concluir que nenhuma edição de Beach e Pedersen estava no corpus, o pesquisador anexou o arquivo à conversa e mandou copiá-lo para o repositório *"para ficar como referência"*.
+
+**O que é, medido.** Não é um artigo: é **o livro inteiro** — BEACH, D.; PEDERSEN, R. B., *Process-Tracing Methods: Foundations and Guidelines*, Ann Arbor: The University of Michigan Press, **2013**. 208 folhas de PDF com camada de texto, `sha256 f08efa82…`, cópia conferida **byte a byte** contra o anexo.
+
+| | |
+|:--|:--|
+| **paginação** | medida pelo rodapé de composição do próprio arquivo: **viii** folhas de pré-textual em romano, corpo árabe da **p. 1 à p. 200**, com offset **único** de `impressa = PDF − 8` — conferido folha a folha, sem exceção |
+| **edição** | **2013**, não a de 2019 que o campo `marco_teorico` declarava. A declaração passou a dizer a edição que **existe no corpus** |
+| **licença** | lida no arquivo: **RESERVADA**. Não redistribuível — e é precisamente para isso que o manifesto do corpus existe |
+| **corpus** | 64 → **65** PDFs, 12.144 → **12.352** páginas; a documental **não se move** (23 / 6.970), porque é literatura. Manifesto: 68 → **69** peças |
+
+> **Está no corpus e NÃO está lida, e essa distinção é a que este projeto existe para manter.** Ter o arquivo não é ter lido a obra. Tudo o que o aparato afirma de Beach e Pedersen continua vindo de **citação colhida** em Cunha e Araújo (2018) e em Ricks e Liu (2018), as duas lidas na fonte delas.
+
+**A consequência sobre as rotas é assimétrica, e vale escrever por quê.** A rota **(B)** tinha dois custos — **obter** e **ler** — e um deles era de resultado incerto, porque as editoras barradas estão medidas no corpus. **O obstáculo de obtenção caiu**; o de leitura não. A rota (B) deixou de ser *"obter e ler"* e passou a ser **só ler**: 200 páginas impressas, com offset já conferido, o que é a parte caríssima de qualquer ficha.
+
+E a rota **(A)** não desapareceu — **mudou de conteúdo**. Antes ela dizia *"declaramos uma âncora que não temos"*; agora diria *"declaramos uma âncora que temos e não lemos"*, que é uma posição **mais frágil**, não mais forte: o parecerista que perguntaria pela obra agora pode ver que ela está ali.
+
+> **Recomendação revista, e a revisão é honesta sobre o que mudou:** antes eu recomendei **(A) agora, (B) quando houver folga**, e a razão era que (A) já era verdade e (B) tinha custo de obtenção incerto. **Com a obra em mão, a recomendação inverte-se para (B)** — ler o que sustenta o desenho —, com um recorte que a torna barata: **os capítulos 1 a 3**, que são onde a definição de mecanismo, as três variantes de process tracing e a lógica bayesiana estão enunciadas, e que são exatamente o que o projeto cita de segunda mão. O resto do livro é guia de etapas, e para ele o projeto já tem Ricks e Liu lido.
+>
+> **O que NÃO muda em nenhuma hipótese:** os quatro testes continuam de Van Evera (1997), na formulação de Bennett (2010) e na apresentação de Collier (2011). A entrada da obra **não reabre** a atribuição corrigida em 10/10/2026 — e é bom que não reabra, porque foi a quinta cobrança da tarefa 19 a ser fechada.
+
 **Uma nota que não é rota.** Haveria a opção de trocar a âncora por uma peça lida — Collier, ou Mayntz — e dispensar Beach e Pedersen. **Não está sobre a mesa porque o pesquisador fixou a âncora**, e trocá-la seria decidir no lugar dele. Fica registrada apenas para que a omissão não pareça esquecimento.
 
 ### 11.6 O que isto cobra do codebook, e o que já foi feito
@@ -427,3 +450,13 @@ A pergunta *"como conceitos que se complementam se diferenciam sem se excluir?"*
 | 🔶 **a rota da âncora metodológica** | decisão sua: (A) ou (B) acima |
 | 🔶 **os passos 4 e 5 de Ricks e Liu** | contrafactual por nó existe em **um** nó, PT-28. Estendê-lo é trabalho de pesquisa, não de leitura, e não foi aberto aqui |
 | 🔶 **`framing_narrativa` sem grade funcional** | o capítulo de 2019 dá três tarefas centrais — diagnóstico, prognóstico, motivacional — e o campo hoje **nomeia** quadros sem classificar função. É a mesma cobrança da §10, ainda aberta |
+
+---
+
+## 12. A grade funcional de `framing_narrativa` — **mudou de lugar**
+
+**21/10/2026.** A classificação funcional dos 85 campos `framing_narrativa` foi escrita aqui e, no mesmo dia, **movida para documento próprio** por encaminhamento do pesquisador: *"resolva isso criando um documento próprio. (…) Isso é inferência analítica. Criar um documento a parte é melhor para depois eles serem evocados e utilizados no processo de escrita."*
+
+**Está em [`../referencial/02_GRADE-FUNCIONAL-ENQUADRAMENTO.md`](../referencial/02_GRADE-FUNCIONAL-ENQUADRAMENTO.md)**, e é peça **gerada** — não se edita à mão.
+
+**O critério continua sendo o deste documento:** as três tarefas centrais de enquadramento do capítulo de Snow, Vliegenthart e Ketelaars (2019, p. 396-397 impressas), lidas na fonte e expostas na §10.

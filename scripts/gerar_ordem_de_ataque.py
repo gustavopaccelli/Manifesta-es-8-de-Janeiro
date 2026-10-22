@@ -59,6 +59,60 @@ def ledger():
     return json.loads(io.open(LEDGER, encoding="utf-8").read())
 
 
+def registro_leitura():
+    """O modulo do censo de leitura, importado em vez de reimplementado.
+
+    Mesma razao de `medir_camada_a` importar `localizar_camada_a`: uma lista de
+    marcas, uma janela, um censo. Ele resolve caminhos relativos ao argumento,
+    entao nao depende do diretorio de trabalho."""
+    sys.path.insert(0, str(RAIZ / "scripts"))
+    import gerar_registro_leitura as R
+    return R
+
+
+def censo():
+    """As linhas do censo de estado de leitura (uma por peca do manifesto)."""
+    linhas, _, _, _ = registro_leitura().censo(str(RAIZ))
+    return linhas
+
+
+LIDOS = ("LIDO_INTEGRAL", "LIDO_PARCIAL")
+
+
+# ------------------------------------------------------------------- G4 ---
+def guarda_g4(d):
+    """G4: nenhum texto do LEDGER afirma nao-leitura de peca cujo estado e de
+    leitura.
+
+    NASCIDA EM 22/10/2026 (item 78), e a razao tem data: duas linhas desta
+    secao estavam falsas havia catorze dias -- a tarefa 10 dizia "nenhuma lida"
+    com as cinco peças do eixo lidas, e a tarefa 26 listava como decisao aberta
+    a rota de Beach e Pedersen depois de ela ter sido EXECUTADA.
+
+    **O pressuposto que eu dei para pedir esta guarda estava errado.** Eu disse
+    que o ledger nao era vigiado porque nao esta em `docs/`. Mas a secao gerada
+    E GRAVADA dentro de docs/PENDENCIAS-ANALITICAS.md, que a G2 vigia desde
+    21/10. A G2 nao falhou por falta de cobertura -- falhou por tres defeitos
+    de mecanica, e dois deles foram corrigidos nela mesma (vocabulario coletivo
+    e janela de ressalva). O terceiro e a razao de esta guarda existir apesar
+    disso: **a G2 ve a RENDERIZACAO e esta ve a FONTE.** Quem edita o ledger ve
+    o erro apontado no texto que ele edita, com o numero da tarefa, em vez de
+    num numero de linha de um arquivo gerado que ele nao deve editar a mao.
+    """
+    R = registro_leitura()
+    linhas, _, decl, _ = R.censo(str(RAIZ))
+    lidas = R.pecas_lidas(linhas, decl)
+
+    unidades = []
+    for i, par in enumerate(d.get("antes", []), 1):
+        unidades.append(("ledger/antes[%d]" % i, par))
+    for x in d["tarefas"]:
+        unidades.append(("ledger/tarefa %s" % x["n"], x["texto"]))
+    for i, par in enumerate(d.get("depois", []), 1):
+        unidades.append(("ledger/depois[%d]" % i, par))
+    return R.exame_de_prosa(unidades, lidas)
+
+
 # --------------------------------------------------------------- medidas ---
 def medir_camada_a():
     """Conta os 43 da camada A por estado de leitura, sem rede.
@@ -120,11 +174,23 @@ def medir_codebook():
     }
 
 
-def medir_corpus(lidas_por_eixo):
+def medir_corpus(censo_linhas):
     """Peças e páginas por eixo, do manifesto — que é o que a checagem 8 confere.
 
-    Onde o ledger nomeia as peças já lidas, mede também o que falta: contar
-    "faltam quinze" à mão é como a linha da 17 envelheceu."""
+    REESCRITA EM 22/10/2026 (item 78). Antes recebia `lidas_por_eixo`, lido
+    da chave `lidas` do ledger: um SEGUNDO censo de estado de leitura,
+    declarado à mão ao lado do censo medido de `gerar_registro_leitura`. Os
+    dois divergiram em silêncio nos dois eixos que a chave cobria — o 14
+    constava "nenhuma lida" com as cinco lidas, o 13 constava três lidas
+    com as dezoito lidas. **Duas contagens do mesmo universo por dois
+    códigos diferentes é como a cifra errada entra**, que é a regra que
+    `medir_camada_a` já seguia e esta não seguia.
+
+    E mede DOIS predicados, porque a chave antiga confundia os dois: a
+    lista nomeava peças que ANCORAM REGISTRO e a prosa gerada dizia "Três
+    foram LIDAS". São referentes diferentes — no eixo 13, seis ancoram e
+    dezoito estão lidas — e `faltam` subtraía ancoragem do total para
+    chamar o resto de não lido. **A cifra correta no referente errado.**"""
     with io.open(MANIFESTO, encoding="utf-8-sig") as f:
         linhas = list(csv.DictReader(f))
     assert linhas, "manifesto vazio: rode gerar_manifesto_corpus.py"
@@ -143,20 +209,20 @@ def medir_corpus(lidas_por_eixo):
         # Cada fragmento declarado tem de casar com UMA peça. Fragmento que não
         # casa é peça renomeada — e aí a conta do que falta estaria errada em
         # silêncio, que é o defeito que este script existe para matar.
-        lidas = []
-        for frag in lidas_por_eixo.get(eixo, []):
-            casa = [x for x in peças if frag in x["caminho"]]
-            assert len(casa) == 1, \
-                "o fragmento {!r} casa com {} peças do eixo {}".format(
-                    frag, len(casa), eixo)
-            lidas.append(casa[0])
-        if lidas_por_eixo.get(eixo) is not None:
-            restam = [x for x in peças if x not in lidas]
-            out[chave + "_lidas"] = len(lidas)
-            out[chave + "_lidas_palavra"] = PALAVRA.get(len(lidas), str(len(lidas)))
-            out[chave + "_faltam"] = len(restam)
-            out[chave + "_faltam_palavra"] = PALAVRA.get(len(restam), str(len(restam)))
-            out[chave + "_faltam_paginas"] = mil(paginas(restam))
+        # Os dois predicados, cada um no seu referente, e os dois MEDIDOS.
+        do_eixo = [x for x in censo_linhas if x["eixo"] == eixo]
+        assert len(do_eixo) == len(peças), \
+            "o censo vê {} peças no eixo {} e o manifesto vê {}".format(
+                len(do_eixo), eixo, len(peças))
+        lidas = [x for x in do_eixo if x["estado"] in LIDOS]
+        ancoram = [x for x in do_eixo if x["origem_do_estado"] == "MEDIDO"]
+        restam = [x for x in peças
+                  if x["caminho"] not in {y["caminho"] for y in lidas}]
+        for nome, n in (("_lidas", len(lidas)), ("_ancoram", len(ancoram)),
+                        ("_faltam", len(restam))):
+            out[chave + nome] = n
+            out[chave + nome + "_palavra"] = PALAVRA.get(n, str(n))
+        out[chave + "_faltam_paginas"] = mil(paginas(restam))
     return out
 
 
@@ -189,7 +255,7 @@ def medir(d):
     }
     chaves.update(medir_codebook())
     chaves.update(medir_camada_a())
-    chaves.update(medir_corpus(d.get("lidas", {})))
+    chaves.update(medir_corpus(censo()))
     for k, v in d.get("medidos_a_mao", {}).items():
         chaves[k] = str(v["valor"])
     return {k: str(v) for k, v in chaves.items()}
@@ -325,12 +391,58 @@ def autoteste():
     ns = [x["n"] for x in d["tarefas"] if x["n"] != "—"] + [d["tarefas"][0]["n"]]
     assert len(ns) != len(set(ns)), "a duplicata plantada não foi detectada"
 
+    # G4, e as tres provas negativas dela. Mutam a COPIA pelo parser: o
+    # arquivo nao e tocado, entao nao ha o que reverter.
+    g4 = guarda_g4(d)
+    if g4:
+        print("G4 — %d afirmação(ões) de não-leitura de peça lida no ledger:" % len(g4))
+        for rotulo, termo, trecho in g4:
+            print("  X %s afirma não-leitura de «%s»" % (rotulo, termo))
+            print("    %s" % trecho[:150])
+        raise AssertionError("G4: o ledger afirma não-leitura de peça lida")
+
+    R = registro_leitura()
+    alvo = "Beach e Pedersen"
+
+    def com_texto(txt):
+        """A prova SUBSTITUI o texto da tarefa, nunca o estende.
+
+        A primeira versão anexava, e a tarefa 1 tem `~~` no próprio título:
+        a janela liberou a injeção — corretamente — e a prova culpou a guarda
+        por um defeito que era da prova. **Prova negativa tem de controlar a
+        própria vizinhança**, ou mede o vizinho em vez da guarda."""
+        copia = json.loads(json.dumps(d))
+        copia["tarefas"][0]["texto"] = txt
+        return guarda_g4(copia)
+
+    crua = "Prova negativa. " + alvo + " não está lida."
+    # (a) afirmação CRUA ao lado do nome: tem de cair.
+    assert com_texto(crua), "G4 não pegou afirmação crua de não-leitura"
+
+    # (b) a MESMA afirmação com a ressalva ENCOSTADA: tem de passar, porque
+    # errata bem escrita mora na frase seguinte e barrá-la ensinaria a não
+    # escrever errata. Foi medido: a errata da linha 126 de docs/analise/09
+    # está a zero caracteres da frase que corrige.
+    assert not com_texto(
+        crua + " **ERRATA DE 22/10/2026:** deixou de valer no mesmo dia."), \
+        "G4 reprovou afirmação com errata encostada — a liberação quebrou"
+
+    # (c) a MESMA afirmação com a MESMA ressalva ALÉM DA JANELA: tem de cair.
+    # É o defeito de 21-22/10 em estado puro: na linha de 7.268 caracteres da
+    # tarefa 26, um `~~` a 262 caracteres dava anistia ao parágrafo inteiro.
+    assert com_texto(crua + (" palavra" * 60)
+                     + " **ERRATA:** deixou de valer."), \
+        ("G4 liberou afirmação cuja ressalva está além de %d caracteres — o "
+         "escopo do perdão voltou a ser maior que o do exame"
+         % R.JANELA_RESSALVA)
+
     bloco = montar(d)
     assert bloco.startswith("## Ordem de ataque — revista em ")
     assert "### Fechadas" in bloco and "### Abertas" in bloco
     assert "{{" not in bloco, "sobrou chave não substituída no bloco"
     assert bloco.count("\n| ") >= len(d["tarefas"]), "linha de tarefa perdida"
-    print("autoteste OK — ledger íntegro, 43 na camada A, três provas negativas")
+    print("autoteste OK — ledger íntegro, 43 na camada A, G4 limpa, "
+          "seis provas negativas")
 
 
 if __name__ == "__main__":

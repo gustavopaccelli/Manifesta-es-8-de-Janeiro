@@ -71,6 +71,18 @@ MARCAS_NAO_LEITURA = [
     "lidos-a-ler", "lidas-a-ler", "não está lida", "não está lido",
     "coletado, não lido", "sem ter tê-la lido", "sem tê-la lido",
     "continuam fora do corpus", "continua fora do corpus",
+    # ACRESCENTADAS EM 22/10/2026 (item 78): a forma COLETIVA da negacao,
+    # que a lista nao tinha. A linha da tarefa 10 do ledger afirmava
+    # "nenhuma lida" sobre CINCO pecas lidas e sobreviveu 14 dias dentro de
+    # um arquivo que esta guarda vigia. Ela nao reprovou a linha: nao a
+    # EXAMINOU, porque nenhuma marca casava. O vocabulario da negacao e
+    # maior que a lista, e a lista cresce por medicao, nao por intuicao.
+    "nenhuma lida", "nenhum lido", "nenhuma foi lida", "nenhum foi lido",
+    "nenhuma delas lida", "nenhum deles lido",
+    "nenhuma delas foi lida", "nenhum deles foi lido",
+    # DELIBERADAMENTE FORA: "nenhuma das", que casa com "nenhuma das
+    # catorze da coleta tratava de PT-08" -- afirmacao sobre CONTEUDO, nao
+    # sobre leitura. Medido: ela sozinha produzia 10 falsos positivos.
 ]
 
 # A MARCA QUE LIBERA A MENCAO HISTORICA, e e deliberadamente estreita. Uma linha
@@ -97,15 +109,143 @@ MARCAS_LEITURA_POSITIVA = [
     "lido_parcial", "lido_integral",
 ]
 
-DOCS_VIGIADOS = sorted(glob.glob("docs/analise/*.md")) + \
-    sorted(glob.glob("docs/referencial/*.md")) + ["docs/PENDENCIAS-ANALITICAS.md"]
+def _mesmo(a, b):
+    """Compara caminhos sem depender do separador.
+
+    `glob` devolve `docs/referencial\\05_...` no Windows e `SAIDA` tem barra
+    normal. Comparar as cadeias cruas deixaria a exclusao abaixo inerte --
+    e guarda com exclusao inerte e pior que guarda sem exclusao, porque
+    declara uma intencao que nao cumpre."""
+    return (os.path.normcase(os.path.normpath(a))
+            == os.path.normcase(os.path.normpath(b)))
 
 
-def main():
-    man = list(csv.DictReader(io.open(MANIFESTO, encoding="utf-8-sig")))
+# A G2 NAO VIGIA A PROPRIA SAIDA, e a razao e de 22/10/2026 (item 78).
+# `emite()` grava a tabela de incoerencias dentro de SAIDA, que este glob
+# inclui. Na primeira vez que a G2 acusou algo de verdade, ela publicou o
+# trecho defeituoso no arquivo vigiado e a rodada seguinte acusou o RELATORIO
+# -- com o defeito ja corrigido na fonte. **Guarda que publica o defeito no
+# arquivo que ela vigia acusa-se a si mesma na rodada seguinte.** Defeito
+# latente desde 21/10: o laco so nasce com a primeira acusacao verdadeira.
+#
+# Exclui-se so a propria saida. A grade funcional (02) tambem e gerada, mas a
+# prosa dela vem de um dicionario escrito a mao no script: afirmacao de
+# nao-leitura ali e defeito de verdade, e segue vigiada.
+DOCS_VIGIADOS = [x for x in
+                 sorted(glob.glob("docs/analise/*.md"))
+                 + sorted(glob.glob("docs/referencial/*.md"))
+                 + ["docs/PENDENCIAS-ANALITICAS.md"]
+                 if not _mesmo(x, SAIDA)]
+assert not any(_mesmo(x, SAIDA) for x in DOCS_VIGIADOS), \
+    "a exclusão da própria saída ficou inerte — confira o separador"
+
+# A JANELA DA RESSALVA, em caracteres, e ela foi MEDIDA em 22/10/2026 (item 78).
+#
+# O problema: a liberacao era avaliada na LINHA. Numa linha de 7.268 caracteres
+# -- o texto da tarefa 26 do ledger -- um `~~` em qualquer ponto liberava
+# qualquer afirmacao. Quatro liberacoes disparavam ali, nenhuma delas perto da
+# afirmacao sobre Beach e Pedersen, e a decisao ficou listada como aberta
+# depois de executada. **O escopo do perdao era maior que o escopo do exame.**
+#
+# Cortar por oracao nao serve, e a medicao mostrou por que: ERRATA BEM ESCRITA
+# MORA NA FRASE SEGUINTE. A linha 126 de docs/analise/09 diz "continuam fora do
+# corpus" e logo depois "ERRATA DE 21/10/2026: esta frase (...) deixou de
+# valer". Cortar por oracao separa a errata da frase que ela corrige e reprova
+# a pratica correta.
+#
+# Entao o escopo certo nao e unidade estrutural nenhuma: e PROXIMIDADE. Medida
+# a distancia de cada uma das 119 afirmacoes de nao-leitura do repositorio ate
+# a sua ressalva mais proxima, as legitimas chegam a 193 caracteres e a
+# seguinte esta a 262 -- um vao de 69. O resultado e estavel de 150 a 250 e cai
+# a zero em 300, quando um "deixou de" remoto volta a liberar o que nao devia.
+# 200 e o meio do plato.
+JANELA_RESSALVA = 200
+
+
+def _ocorrencias(baixo, agulhas):
+    """Todas as posicoes de todas as agulhas, em minusculas."""
+    out = []
+    for a in agulhas:
+        i = baixo.find(a)
+        while i >= 0:
+            out.append((i, i + len(a), a))
+            i = baixo.find(a, i + 1)
+    return out
+
+
+def _vizinha(pos, outras, janela):
+    """A primeira ocorrencia a `janela` caracteres ou menos de `pos`."""
+    a, b = pos
+    for c, d, agulha in outras:
+        if c < b and a < d:
+            dist = 0
+        elif d <= a:
+            dist = a - d
+        else:
+            dist = c - b
+        if dist <= janela:
+            return agulha
+    return None
+
+
+def exame_de_prosa(unidades, lidas, janela=JANELA_RESSALVA):
+    """Afirmacoes de nao-leitura de peca cujo estado e de leitura.
+
+    `unidades` e um iteravel de (rotulo, texto) -- uma linha de documento, ou o
+    texto de uma tarefa do ledger. `lidas` e {caminho: [termos]}.
+
+    Devolve [(rotulo, termo, trecho)]. Uma afirmacao e acusada quando:
+      - a marca de nao-leitura aparece no texto, E
+      - NENHUMA ressalva -- historica ou de leitura positiva -- esta a `janela`
+        caracteres ou menos dela, E
+      - o nome de uma peca lida esta a `janela` caracteres ou menos dela.
+
+    As tres distancias usam a mesma janela porque e o mesmo princípio: o que
+    qualifica uma afirmacao tem de estar onde quem le a afirmacao o leia.
+    """
+    ressalvas = MARCAS_HISTORICAS + MARCAS_LEITURA_POSITIVA
+    achados = []
+    for rotulo, texto in unidades:
+        baixo = texto.lower()
+        marcas = _ocorrencias(baixo, MARCAS_NAO_LEITURA)
+        if not marcas:
+            continue
+        rs = _ocorrencias(baixo, ressalvas)
+        for cam, termos in sorted(lidas.items()):
+            ts = _ocorrencias(baixo, [x.lower() for x in termos])
+            if not ts:
+                continue
+            for a, z, marca in marcas:
+                if _vizinha((a, z), rs, janela):
+                    continue
+                if _vizinha((a, z), ts, janela):
+                    achados.append((rotulo, termos[0],
+                                    texto[max(0, a - 70):z + 70].strip()))
+                    break
+    return achados
+
+
+
+def censo(raiz="."):
+    """O ESTADO DE LEITURA de cada peca do manifesto -- o censo UNICO.
+
+    Extraido de main() em 22/10/2026 (item 78) para que
+    gerar_ordem_de_ataque.py conte pelas MESMAS regras. Ate aqui o ledger
+    dele mantinha um SEGUNDO censo, declarado a mao na chave `lidas`, e os
+    dois divergiram: o eixo 14 constava "nenhuma lida" com as cinco lidas,
+    e o eixo 13 constava tres lidas com dezoito lidas. Duas contagens do
+    mesmo universo por dois codigos diferentes e como a cifra errada entra
+    -- a regra que medir_camada_a() ja seguia e esta nao seguia.
+
+    Devolve (linhas, falhas, decl, por_caminho).
+    """
+    man = list(csv.DictReader(io.open(os.path.join(raiz, MANIFESTO),
+                                      encoding="utf-8-sig")))
     por_caminho = {x["caminho"]: x for x in man}
-    dados = json.loads(io.open(CODEBOOK, encoding="utf-8").read())
-    decl = json.loads(io.open(DECLARACAO, encoding="utf-8").read())
+    dados = json.loads(io.open(os.path.join(raiz, CODEBOOK),
+                               encoding="utf-8").read())
+    decl = json.loads(io.open(os.path.join(raiz, DECLARACAO),
+                              encoding="utf-8").read())
     pecas = decl["pecas"]
 
     # ------------------------------------------- camada 1: o que se MEDE
@@ -157,6 +297,24 @@ def main():
             falhas.append("G1 cobertura: {} é declarado e NÃO está no manifesto"
                           .format(cam))
 
+    return linhas, falhas, decl, por_caminho
+
+
+def pecas_lidas(linhas, decl):
+    """{caminho: [termos]} das pecas cujo estado EFETIVO e de leitura.
+
+    O estado efetivo vem do censo, nao da declaracao: peca que ancora
+    registro e MEDIDO e vence o que a declaracao dela disser. Os `termos`
+    seguem vindo da declaracao, que e onde eles vivem."""
+    efetivo = {x["caminho"]: x["estado"] for x in linhas}
+    return {c: p.get("termos", []) for c, p in decl["pecas"].items()
+            if efetivo.get(c, p["estado"]) in LIDOS}
+
+
+def main():
+    linhas, falhas, decl, por_caminho = censo()
+    pecas = decl["pecas"]
+
     # ------------------------------------- G3: procedencia da leitura
     for d in linhas:
         if d["origem_do_estado"] != "DECLARADO" or d["estado"] not in LIDOS:
@@ -171,29 +329,15 @@ def main():
                           "existe".format(d["caminho"], ref))
 
     # ----------------- G2: nenhum documento afirma nao-leitura de peca lida
-    lidas = {cam: pecas[cam] for cam in pecas
-             if pecas[cam]["estado"] in LIDOS}
-    incoerencias = []
+    lidas = pecas_lidas(linhas, decl)
+    unidades = []
     for doc in DOCS_VIGIADOS:
         if not os.path.exists(doc):
             continue
         for i, linha in enumerate(io.open(doc, encoding="utf-8").read()
                                   .split("\n"), 1):
-            baixo = linha.lower()
-            if not any(m in baixo for m in MARCAS_NAO_LEITURA):
-                continue
-            if any(h in baixo for h in MARCAS_HISTORICAS):
-                continue
-            if any(h in baixo for h in MARCAS_LEITURA_POSITIVA):
-                continue
-            for cam, p in lidas.items():
-                for termo in p.get("termos", []):
-                    if termo.lower() in baixo:
-                        incoerencias.append((doc, i, termo, linha.strip()))
-                        break
-                else:
-                    continue
-                break
+            unidades.append(("%s:%d" % (doc, i), linha))
+    incoerencias = exame_de_prosa(unidades, lidas)
 
     # ------------------------------------------------------------- relatorio
     medidos = [d for d in linhas if d["origem_do_estado"] == "MEDIDO"]
@@ -209,8 +353,8 @@ def main():
     for k in sorted(conta):
         print("    %-16s %d" % (k, conta[k]))
     print("  G2 incoerências de prosa: %d" % len(incoerencias))
-    for doc, i, termo, txt in incoerencias:
-        print("    X %s:%d afirma não-leitura de «%s»" % (doc, i, termo))
+    for rotulo, termo, txt in incoerencias:
+        print("    X %s afirma não-leitura de «%s»" % (rotulo, termo))
         print("      %s" % txt[:150])
 
     if incoerencias:
@@ -284,10 +428,11 @@ def emite(linhas, medidos, declarados, conta, incoerencias, decl):
     w("**G2 hoje: {} incoerência(s).**".format(len(incoerencias)))
     if incoerencias:
         w("")
-        w("| Documento | Linha | Termo |")
-        w("|:--|--:|:--|")
-        for doc, i, termo, _ in incoerencias:
-            w("| `{}` | {} | {} |".format(doc, i, termo))
+        w("| Onde | Termo | Trecho |")
+        w("|:--|:--|:--|")
+        for rotulo, termo, trecho in incoerencias:
+            w("| `{}` | {} | {} |".format(rotulo, termo,
+                                          trecho[:120].replace("|", "\\|")))
     w("")
     w("## 3. O registro, peça por peça")
     w("")

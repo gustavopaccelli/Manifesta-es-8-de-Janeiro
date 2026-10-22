@@ -15,8 +15,7 @@
 |:--|--:|
 | `ILEGIVEL` | 1 |
 | `LIDO_INTEGRAL` | 13 |
-| `LIDO_PARCIAL` | 52 |
-| `NAO_DECLARADO` | 1 |
+| `LIDO_PARCIAL` | 53 |
 | `NAO_LIDO` | 2 |
 
 **Vocabulário.** `LIDO_INTEGRAL` · `LIDO_PARCIAL`, com o que foi lido · `NAO_LIDO` · `ILEGIVEL`, no corpus e sem camada de texto · `NAO_DECLARADO`, quando **nenhum documento do repositório registra o estado** — é confissão, não suposição.
@@ -98,7 +97,7 @@
 | `FARIA-MARQUES_Giros-a-direita-volume-integral_SertaoCult_2020.pdf` | 258 | **LIDO_PARCIAL** | DECLARADO | capítulo de Marques, p. 241-255, identificado na leitura de 08/10/2026. O volume substituiu os oito offprints, e nenhum registro aponta para ele | docs/analise/14_LIVROS-BRASILEIROS.md |
 | `LAVALLE-CARLOS-DOWBOR-SZWAKO_Movimentos-sociais-e-institucionalizacao_EdUERJ_2018.pdf` | 414 | **LIDO_PARCIAL** | DECLARADO | lido em parte em 08/10/2026; offset medido impressa = PDF − 2. Traz a crítica ao marco teórico declarado do projeto | docs/analise/14_LIVROS-BRASILEIROS.md |
 | `MADEIRA-MARONA-DEL-RIO_Democracia-e-justica-na-America-Latina_EdUERJ_2022.pdf` | 427 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 3 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
-| `SINGER-ARAUJO-RUGITSKY_O-Brasil-no-inferno-global_FFLCH-USP_2022.pdf` | 374 | **NAO_DECLARADO** | DECLARADO | o offset foi medido no mesmo passo dos três livros lidos (impressa = PDF − 1), mas NENHUM documento do repositório registra leitura desta peça. Medir offset não é ler | — |
+| `SINGER-ARAUJO-RUGITSKY_O-Brasil-no-inferno-global_FFLCH-USP_2022.pdf` | 374 | **LIDO_PARCIAL** | DECLARADO | lida em 22/10/2026. INTEGRAL: a Introdução de Singer, Araujo e Rugitsky (p. 7-30 impressas). NA FONTE, por trecho: a abertura e a p. 355 do capítulo de Marina Basso Lacerda, 'Paleoconservadorismo de Bolsonaro'; a abertura e trechos de Araujo e Belinelli, 'A crise constitucional brasileira (1988-2016)'; e a abertura de Singer e Fanton sobre a pandemia. NÃO LIDAS: as peças de Rugitsky, Ayers e Saad-Filho, a entrevista com Streeck, Loureiro, Lavinas et al. e Braga e Santos. OFFSET: não é um número — DERIVA em sete faixas, de −1 a +5, com salto em cada quebra de capítulo, e a declaração anterior de impressa = PDF − 1 só vale na pré-textual | docs/analise/14_LIVROS-BRASILEIROS.md |
 | `CASTANEDA-JENKS_January-6th-and-de-democratization_Social-Sciences-12-4_2023.pdf` | 15 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 5 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `CHEN-LUKITO-KOO_Comparing-the-StopTheSteal-movement-across-platforms_Social-Media-and-Society-9-3_2023.pdf` | 13 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 5 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `PMDB-FUG_Uma-Ponte-para-o-Futuro_2015-10-29.pdf` | 19 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 5 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |

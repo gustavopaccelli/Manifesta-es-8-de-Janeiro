@@ -232,7 +232,7 @@ O pesquisador mandou **ler os três livros**. O offset de cada um deixou de ser 
 | Gurza Lavalle, Carlos, Dowbor e Szwako (2018) | 414 | 411 | **−2** |
 | Abers (2021) | 359 | 356 | **−2** |
 | Madeira, Marona e Del Río (2022) | 427 | 423 | **−2** |
-| *(Singer, Araujo e Rugitsky, 2022, medido no mesmo passo)* | 374 | — | **−1** |
+| *(Singer, Araujo e Rugitsky, 2022, medido no mesmo passo)* | 374 | — | ~~**−1**~~ **ERRADO — ver §9** |
 
 > **A DIFERENÇA ENTRE O TOTAL DA FICHA E O TOTAL DO PDF NÃO É O OFFSET.** Lavalle: diferença 3, offset 2. Abers: diferença 3, offset 2. Madeira: diferença 4, offset 2. **Nos três, a aritmética da ficha daria a resposta errada** — e era exatamente o que o caso Araujo e Sales (offset derivado de um intervalo declarado) ensinara a fazer. O que vale ali não vale aqui: intervalo declarado de um artigo é informação sobre o recorte; total de páginas de um livro é informação sobre o miolo, e os pré-textuais não entram na conta do mesmo jeito. **Só a folha impressa na página decide.** Quatro livros, três editoras, três offsets diferentes, mais o volume com zero.
 
@@ -293,3 +293,70 @@ O capítulo registra ainda a **Lei 13.491/2017**, que levou à Justiça Militar 
 **Nenhum registro foi recodificado, e nenhuma âncora foi lançada.** As três peças passaram de `COLETADO, NÃO LIDO` a `LIDO EM PARTE`, com o lido declarado peça por peça. Pôr qualquer uma delas em `fonte_trecho` exige decidir questões que são do pesquisador, e estão listadas em `docs/PENDENCIAS-ANALITICAS.md`.
 
 **E "lido em parte" é estado honesto, não meio-estado:** os três livros somam **1.189 páginas impressas** e o que se leu foram os sumários, os capítulos de abertura de Lavalle e Abers, o capítulo 8 de Madeira e varredura normalizada do texto integral dos três. O mapa de pertinência de cada livro está em `scripts/` e diz onde ainda há o que ler.
+
+---
+
+## 9. Singer, Araujo e Rugitsky (2022) lido — e o offset que a tabela declarava estava errado — 22/10/2026
+
+**Encaminhamento:** *"Leia e me forneça como vou integrar ao projeto."* A peça estava no corpus desde 08/10/2026 com `COLETADA, NÃO LIDA`, e em 21/10 o registro de estado de leitura a marcou como **o único `NAO_DECLARADO` das 69** — nenhum documento registrava o seu estado.
+
+**A peça.** SINGER, André; ARAUJO, Cicero; RUGITSKY, Fernando (orgs.). *O Brasil no inferno global: capitalismo e democracia fora dos trilhos*. São Paulo: FFLCH/USP, 2022. ISBN 978-85-7506-408-5. DOI `10.11606/9788575064085`. 374 folhas de PDF. **Licença lida na folha 4: acesso aberto, Creative Commons** — *"É permitida a reprodução parcial ou total desta obra, desde que citada a fonte e autoria"*. Coletânea de nove peças mais entrevista, do Grupo de Pesquisa Pensamento e Política no Brasil (CEDEC/FFLCH-USP), escrita entre 2020 e 2021 — **o texto se data a si mesmo: *"quando estas linhas são escritas, em meados de outubro de 2021"*** (p. 10 impressa).
+
+### 9.1 O OFFSET NÃO É CONSTANTE, e é a quinta variante da armadilha de paginação deste repositório
+
+A tabela da §8.3 declarava `impressa = PDF − 1`, medido no mesmo passo dos três livros lidos em 08/10/2026. **O sumário desmente a declaração sem precisar abrir o livro:** ele anuncia *"Sobre os autores … 377"*, e o PDF tem **374** folhas. Com offset −1, a folha 378 teria de existir.
+
+**Medido folha a folha pelo fólio impresso, que nesta obra vem antes do cabeçalho corrido no texto extraído — 352 das 374 folhas confirmam um fólio legível:**
+
+| Folhas do PDF | Offset | O que a faixa cobre |
+|:--|:--:|:--|
+| 7 – 31 | **−1** | pré-textual e Introdução |
+| 34 – 117 | **0** | Rugitsky; Ayers e Saad-Filho |
+| 119 – 148 | **+1** | Singer e Fanton |
+| 150 – 160 | **+2** | entrevista com Streeck |
+| 163 – 244 | **+3** | Araujo e Belinelli; Loureiro |
+| 246 – 287 | **+4** | Lavinas, Bressan e Rubin |
+| 289 – 370 | **+5** | Braga e Santos; Lacerda |
+
+> **São sete faixas, e o salto acontece em cada quebra de capítulo** — o PDF perdeu o verso em branco de cada abertura. **A declaração de −1 só vale na pré-textual e na Introdução**; aplicada ao resto, erra por até seis páginas.
+>
+> **A lição da §8.3 valia e foi aplicada pela metade.** Aquela seção escreveu, em letras, que *"só a folha impressa na página decide"* — e para Singer o offset foi **derivado no mesmo passo** dos outros três, em vez de conferido. Era a quarta peça da leva, não foi lida, e o offset entrou por extensão. **Offset derivado de vizinho é offset suposto**, e a regra que fica é: **um offset por obra é hipótese; só a conferência folha a folha o torna dado — e há obra em que ele não é um número, é uma função.**
+
+### 9.2 O que foi lido, e o recorte está declarado
+
+| Peça da coletânea | Impressas | Folhas | Estado da leitura |
+|:--|:--|:--|:--|
+| **Introdução** — Singer, Araujo e Rugitsky | 7-30 | 8-31 | **lida integral** |
+| **Paleoconservadorismo de Bolsonaro** — Marina Basso Lacerda | 321-375 | 316-370 | **abertura (p. 321-323) e p. 355 lidas na fonte**; capítulo varrido por termo |
+| **A crise constitucional brasileira (1988-2016)** — Araujo e Belinelli | 165-210 | 162-207 | abertura e trechos do argumento |
+| **Pandemia e "great reset" capitalista** — Singer e Fanton | 119-149 | 118-148 | abertura e trechos |
+| Rugitsky · Ayers e Saad-Filho · entrevista Streeck · Loureiro · Lavinas *et al.* · Braga e Santos | — | — | **não lidas** |
+
+### 9.3 O achado que fecha um limite declarado do codebook — PT-08
+
+**O limite, como o registro o declara hoje:** *"a ligação com o Brasil é uma frase de passagem, sem aparato do lado brasileiro"*. PT-08 ancora em Castañeda e Jenks (2023) e Chen, Lukito e Koo (2023), e o precedente de eficácia invocado pelos organizadores — o Sri Lanka — vem da CPMI, p. 614.
+
+**Lacerda, p. 355 impressa (folha 350, offset +5, fólio conferido), dá o lado brasileiro com ator nomeado e data:**
+
+> *"Bolsonaro tem ensaiado seu equivalente de tomada do Capitólio. Em momentos de queda de popularidade em 2020, participou de manifestações que pediam a volta do regime militar, o fechamento do Congresso e do STF e mesmo a retomada do AI-5. Em 2021, seu filho Eduardo, à véspera da posse de Biden, lamentou que a ação do dia 6 nos Estados Unidos não tivesse sido mais estruturada: **'Se fosse organizada, teriam tomado o Capitólio […]. Eles teriam um poder bélico mínimo para […] matar todos os policiais lá dentro ou os congressistas que eles tanto odeiam'**"*
+
+**O que isto é, analiticamente:** **atribuição de eficácia ao precedente por ator brasileiro nomeado, em janeiro de 2021** — isto é, exatamente o mecanismo que PT-08 codifica, e **dois anos antes** do evento. Não é leitura retrospectiva: é invocação de precedente registrada em tempo real, e a crítica embutida — *"não tivesse sido mais estruturada"* — é avaliação de **falha de execução**, que é a forma mais forte de atribuição de eficácia.
+
+> **O LIMITE DESTA PEÇA, e ele é da regra da casa.** Lacerda cita a declaração **via imprensa** (SCAPA, 2021). É **citação colhida em obra lida**: autoriza afirmar que a declaração circula e que a literatura acadêmica a registra, **não** vale como âncora primária do que foi dito. A rota primária seria a própria matéria, que não está no corpus. **Citar Lacerda para o conteúdo da fala seria citar o resumo de terceiro — o modo de falha que este projeto nomeia.**
+
+### 9.4 O que ela corrobora sem acrescentar, e o que acrescenta
+
+| | |
+|:--|:--|
+| **corrobora** PT-01 → PT-02 | p. 321: junho de 2013 *"marca o início da reação conservadora"*, e os movimentos de rua foram **"capturados por setores mais à direita, ainda bastante difusos, que desde então tomaram as ruas de maneira sistemática"*. Mas ela cita **Singer (2018)** e **Tatagiba, Trindade e Teixeira (2018)** — e Tatagiba já é âncora lida de PT-01 e PT-02. **É segunda leitura da mesma tese, não fonte nova** |
+| **acrescenta** a PT-02 | uma precisão que é dela: em 2015, *"os atores conservadores já estavam mais coordenados, mas **ainda não havia tendência que os hegemonizasse**"*. **Coordenação sem hegemonia** é mais fino do que o que o campo diz hoje, e descreve a diferença entre 2015 e 2022 |
+| **corrobora** PT-03C | a Introdução, p. 7, registra a *"ameaça do general Eduardo Villas Bôas, comandante do Exército, ao STF, via Twitter, em abril"*, e conclui: *"Para os militares, o ex-presidente não podia concorrer"*. **PT-03C já ancora esse fato** em Madeira, Marona e Del Río (2022), p. 256 e 267, lidas. **Segunda fonte independente para o mesmo elo** |
+| **NÃO acrescenta** a PT-06 | o capítulo de Singer e Fanton sobre a pandemia é **economia política** — interregno, *great reset*, pacotes fiscais, Trump — e **não trata do negacionismo como mecanismo de mobilização**. Não ancora PT-06 |
+
+### 9.5 O que a obra dá ao artigo, e é de outra ordem
+
+**Um enquadramento macro que o corpus não tinha**, e que serve à introdução do artigo em vez de ao codebook:
+
+- **O *interregno*** de Streeck (2016), adotado pela coletânea como a sua terceira hipótese — *"um período de declínio sem perspectiva de superação, de capitalismo descoordenado e instabilidade política"* (p. 12 impressa). Dá ao 8 de Janeiro um lugar numa conjuntura mundial **sem exigir a comparação sistemática** que o corpus não sustenta.
+- **A Constituição como pacto social tácito**, de Araujo e Belinelli: ela *"não é apenas um texto jurídico… é também um acordo tácito entre os grupos e classes sociais"* (p. 165-166 impressas), e a crise é a **perda de aderência** desse pacto. É uma leitura institucional do arco 1988-2016 que dá a PT-03 um registro que a literatura de movimentos não dá.
+- **A tese do título**, que é uma reivindicação de posição: o Brasil *"na vanguarda do inferno global"* — o caso como **antecipação**, não como réplica tardia. Isso **tensiona** a leitura de PT-08, em que Brasília é adotante tardio do precedente estadunidense, e a tensão vale escrita.

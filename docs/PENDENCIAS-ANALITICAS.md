@@ -4055,7 +4055,52 @@ O registro entra como **passo 6**, depois da grade funcional e antes das checage
 
 | | |
 |:--|:--|
-| **Singer, Araujo e Rugitsky (2022)** | `NAO_DECLARADO` — 374 folhas no corpus sem estado de leitura registrado em documento algum. **Ler ou declarar não lido é decisão sua** |
+| ~~Singer, Araujo e Rugitsky (2022)~~ | ✅ **RESOLVIDO em 22/10/2026:** você mandou ler. Passou a `LIDO_PARCIAL` — Introdução integral, mais a abertura e a p. 355 de Lacerda, a abertura de Araujo e Belinelli e a de Singer e Fanton; seis peças da coletânea seguem não abertas. **E a leitura achou que o offset declarado estava errado:** não é `PDF − 1`, deriva em **sete faixas** de −1 a +5. Com isso o registro de leitura fica **sem nenhum `NAO_DECLARADO`**. Ver item 76 e a §9 do documento 14 |
 | **as duas `NAO_LIDO`** | o preprint de Drummond e Manginelli (eixo 08) e o folder do STF. Nenhuma ancora registro, e nenhuma é necessária ao desenho atual |
 | **a G2 não cobre `reports/`** | ela vigia `docs/`. O relatório de pesquisa e o caderno de evidências não afirmam estado de leitura hoje, mas podem passar a afirmar |
 | **a unidade de leitura dentro de peça grande** | resolvido para a Encyclopedia pelos onze nomes de verbete. **O mesmo problema existe para os livros**: dizer *"capítulo X de Lavalle não lido"* não é vigiado, porque os capítulos não estão nomeados em `termos` |
+
+---
+
+## 76. Singer, Araujo e Rugitsky lido — e o offset declarado estava errado — ✅ 22/10/2026
+
+**Encaminhamento:** *"Leia e me forneça como vou integrar ao projeto."* Era o único `NAO_DECLARADO` das 69 peças, e com ele o registro de leitura fica **sem nenhum**.
+
+### 76.1 O offset não é um número — é uma função
+
+A §8.3 do documento 14 declarava `impressa = PDF − 1`, **derivado no mesmo passo** dos três livros que foram lidos em 08/10/2026. **O sumário desmente a declaração sem abrir o livro:** ele anuncia *"Sobre os autores … 377"* e o PDF tem **374** folhas.
+
+Medido folha a folha pelo fólio impresso — **352 das 374 folhas confirmam um fólio legível** —, o offset **deriva em sete faixas**: `−1` (folhas 7-31) · `0` (34-117) · `+1` (119-148) · `+2` (150-160) · `+3` (163-244) · `+4` (246-287) · `+5` (289-370). **O salto acontece em cada quebra de capítulo**: o PDF perdeu o verso em branco de cada abertura.
+
+> **A §8.3 escreveu, em letras, que *"só a folha impressa na página decide"* — e aplicou a regra a três dos quatro livros.** Para Singer, que não foi lido, o offset entrou **por extensão dos vizinhos**. É a quinta variante da armadilha de paginação deste repositório, e a regra que ela acrescenta: **offset derivado de vizinho é offset suposto, e há obra em que ele não é um número.**
+
+### 76.2 O que a leitura dá ao projeto — e a hierarquia importa
+
+| Valor | O que é | Estado |
+|:--|:--|:--|
+| **fecha um limite declarado de PT-08** | Lacerda, p. 355 impressa: *"Bolsonaro tem ensaiado seu equivalente de tomada do Capitólio"*, e a fala de **Eduardo Bolsonaro** à véspera da posse de Biden, em janeiro de 2021, lamentando que o 6 de janeiro *"não tivesse sido mais estruturada"*. **É atribuição de eficácia ao precedente por ator brasileiro nomeado, dois anos antes do evento** — exatamente o mecanismo que PT-08 codifica, e exatamente o que o registro declara faltar | 🔶 **proposta, não executada** — ver 76.3 |
+| **acrescenta a PT-02** | *"os atores conservadores já estavam mais coordenados, mas **ainda não havia tendência que os hegemonizasse**"* (p. 321). **Coordenação sem hegemonia** descreve a diferença entre 2015 e 2022 melhor do que o campo hoje | 🔶 proposta |
+| **corrobora sem acrescentar** | PT-01 e PT-02 (mas ela cita Tatagiba, que já é âncora lida) e PT-03C (a ameaça de Villas Bôas ao STF, que PT-03C já ancora em Madeira *et al.*, p. 256 e 267) | — |
+| **enquadramento macro para o artigo** | o ***interregno*** de Streeck, e a Constituição como **pacto social tácito** em perda de aderência (Araujo e Belinelli, p. 165-166). Serve à introdução, não ao codebook | — |
+| **NÃO dá** | o capítulo de Singer e Fanton sobre a pandemia é **economia política**, não negacionismo como mecanismo de mobilização. **Não ancora PT-06** | — |
+
+### 76.3 O limite que impede a execução, e é da regra da casa
+
+**Lacerda cita a declaração de Eduardo Bolsonaro via imprensa (SCAPA, 2021).** É **citação colhida em obra lida**: autoriza afirmar que a literatura acadêmica registra a declaração, **não** vale como âncora primária do seu conteúdo. A rota primária é a própria matéria, que **não está no corpus**.
+
+> **Citar Lacerda pelo conteúdo da fala seria citar o resumo de terceiro** — o modo de falha que este projeto nomeia. E por isso **não toquei em PT-08**: acrescentar `fonte_local` e `fonte_pagina` a um registro é alteração do levantamento, que você fechou em 21/10/2026, e a força probatória aqui é de segunda mão.
+>
+> **As duas saídas, e a escolha é sua:** (a) PT-08 cita Lacerda como **literatura que registra a invocação do precedente**, com o limite de segunda mão declarado no campo; (b) coletar a matéria de 2021 e arquivá-la no eixo 09, pela mesma rota de *link rot* que PT-03D usa — e aí a fala ganha âncora própria.
+
+### 76.4 Uma nota de licença que vale registrar
+
+A folha 4 declara **acesso aberto, Creative Commons**: *"É permitida a reprodução parcial ou total desta obra, desde que citada a fonte e autoria"*. O manifesto já a classificava como `CC`. **É uma das peças que poderiam voltar ao git sem problema de licença** — o que não foi feito, porque a decisão de 21/10 tirou os PDFs em bloco, e abrir exceção peça por peça é decisão sua.
+
+### 76.5 O que isto deixa aberto
+
+| | |
+|:--|:--|
+| **PT-08 e Lacerda** | (a) ou (b) da §76.3 — **decisão sua** |
+| **PT-02 e a coordenação sem hegemonia** | proposta de precisão do campo; nomear é sua decisão |
+| **seis peças da coletânea não abertas** | Rugitsky, Ayers e Saad-Filho, a entrevista com Streeck, Loureiro, Lavinas *et al.* e Braga e Santos — todas de economia política, nenhuma necessária ao desenho atual |
+| **o offset como função** | corrigido para esta obra. **Os outros três livros da leva tiveram o offset conferido folha a folha em 08/10** — mas vale perguntar se algum deles também deriva, porque a conferência de então foi em amostra |

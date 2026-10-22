@@ -217,9 +217,9 @@
       ]
     },
     "Fontes/14_Livros-brasileiros/SINGER-ARAUJO-RUGITSKY_O-Brasil-no-inferno-global_FFLCH-USP_2022.pdf": {
-      "estado": "NAO_DECLARADO",
-      "o_que": "o offset foi medido no mesmo passo dos três livros lidos (impressa = PDF − 1), mas NENHUM documento do repositório registra leitura desta peça. Medir offset não é ler",
-      "registrado_em": "",
+      "estado": "LIDO_PARCIAL",
+      "o_que": "lida em 22/10/2026. INTEGRAL: a Introdução de Singer, Araujo e Rugitsky (p. 7-30 impressas). NA FONTE, por trecho: a abertura e a p. 355 do capítulo de Marina Basso Lacerda, 'Paleoconservadorismo de Bolsonaro'; a abertura e trechos de Araujo e Belinelli, 'A crise constitucional brasileira (1988-2016)'; e a abertura de Singer e Fanton sobre a pandemia. NÃO LIDAS: as peças de Rugitsky, Ayers e Saad-Filho, a entrevista com Streeck, Loureiro, Lavinas et al. e Braga e Santos. OFFSET: não é um número — DERIVA em sete faixas, de −1 a +5, com salto em cada quebra de capítulo, e a declaração anterior de impressa = PDF − 1 só vale na pré-textual",
+      "registrado_em": "docs/analise/14_LIVROS-BRASILEIROS.md",
       "termos": [
         "Singer, Araujo e Rugitsky",
         "O Brasil no inferno global"

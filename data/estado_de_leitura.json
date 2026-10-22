@@ -1,0 +1,292 @@
+{
+  "_leia_me": [
+    "ESTADO DE LEITURA DAS PEÇAS QUE NÃO ANCORAM REGISTRO — declaração, 21/10/2026.",
+    "",
+    "POR QUE ESTE ARQUIVO EXISTE. Em 21/10/2026 eu declarei NÃO LIDOS seis verbetes",
+    "que estavam lidos, porque copiei uma lista de 30/09 do documento que PEDIA a",
+    "leitura em vez de abrir o que a REGISTRAVA. O estado de leitura do corpus vivia",
+    "em prosa espalhada por sete documentos de análise, e nada no ciclo conferia.",
+    "",
+    "O QUE ESTE ARQUIVO NÃO PRECISA DECLARAR. Das 69 peças do manifesto, 43 ANCORAM",
+    "registro com `fonte_pagina`, e para elas o estado é MENSURÁVEL em vez de",
+    "declarado: o passo 9 do ciclo confere a transcrição contra a folha do PDF. Logo",
+    "este arquivo cobre só as 26 que não ancoram — a teoria e a literatura que",
+    "informam o desenho sem sustentar registro.",
+    "",
+    "VOCABULÁRIO. LIDO_INTEGRAL · LIDO_PARCIAL (com `o_que`) · NAO_LIDO · ILEGIVEL",
+    "(no corpus e sem camada de texto) · NAO_DECLARADO (nenhum documento do",
+    "repositório registra o estado — é confissão, não suposição).",
+    "",
+    "`termos` são as formas distintivas pelas quais os documentos nomeiam a peça, e",
+    "servem à guarda de prosa: nenhum documento pode afirmar não-leitura de peça aqui",
+    "declarada como lida. `registrado_em` é onde a leitura está registrada, e a",
+    "guarda confere que o arquivo existe e traz a seção."
+  ],
+  "pecas": {
+    "Fontes/05_Bibliografia-teorica/BEACH-PEDERSEN_Process-Tracing-Methods_Michigan-2013.pdf": {
+      "estado": "LIDO_PARCIAL",
+      "o_que": "capítulos 1 a 3 (p. 1-44 impressas) e Apêndice A (p. 163-170); offset impressa = PDF − 8",
+      "registrado_em": "docs/referencial/03_ADAPTACAO-METODOLOGICA.md",
+      "termos": [
+        "Beach e Pedersen",
+        "Beach & Pedersen",
+        "Beach and Pedersen"
+      ]
+    },
+    "Fontes/05_Bibliografia-teorica/COLLIER_Understanding-process-tracing_PS-44-4_2011.pdf": {
+      "estado": "LIDO_INTEGRAL",
+      "o_que": "integral, 8 folhas; offset impressa = PDF + 822",
+      "registrado_em": "docs/analise/09_CONCEITO-MECANISMO.md",
+      "termos": [
+        "Collier (2011)",
+        "Collier 2011"
+      ]
+    },
+    "Fontes/05_Bibliografia-teorica/MAYNTZ_Mechanisms-in-the-analysis-of-social-macro-phenomena_PSS-34-2_2004.pdf": {
+      "estado": "LIDO_INTEGRAL",
+      "o_que": "integral, 23 folhas",
+      "registrado_em": "docs/analise/09_CONCEITO-MECANISMO.md",
+      "termos": [
+        "Mayntz"
+      ]
+    },
+    "Fontes/05_Bibliografia-teorica/process-tracing-research-designs-a-practical-guide.pdf": {
+      "estado": "LIDO_INTEGRAL",
+      "o_que": "integral, 5 folhas; offset impressa = PDF + 841. Lida em 21/10/2026",
+      "registrado_em": "docs/referencial/01_QUADRO-TEORICO-METODOLOGICO.md",
+      "termos": [
+        "Ricks e Liu",
+        "Ricks & Liu",
+        "Ricks and Liu"
+      ]
+    },
+    "Fontes/05_Bibliografia-teorica/Livro_Process tracing.pdf": {
+      "estado": "LIDO_PARCIAL",
+      "o_que": "trechos conceituais com página — condição necessária e suficiente, p. 92 e 97",
+      "registrado_em": "docs/analise/09_CONCEITO-MECANISMO.md",
+      "termos": [
+        "Cunha e Araújo",
+        "Cunha & Araújo"
+      ]
+    },
+    "Fontes/05_Bibliografia-teorica/McADAM-TARROW-TILLY_Dynamics-of-Contention_Cambridge-2001.pdf": {
+      "estado": "LIDO_PARCIAL",
+      "o_que": "trechos definidores citados por folha impressa: brokerage 26, certification 145 e 158, mobilizing structures 45, threshold 307, scale shift 332, difusão 333; offset impressa = PDF − 24",
+      "registrado_em": "docs/referencial/01_QUADRO-TEORICO-METODOLOGICO.md",
+      "termos": [
+        "Dynamics of Contention"
+      ]
+    },
+    "Fontes/05_Bibliografia-teorica/SNOW-DELLA-PORTA-KLANDERMANS-McADAM_Wiley-Blackwell-Encyclopedia-of-Social-and-Political-Movements_2013.pdf": {
+      "estado": "LIDO_PARCIAL",
+      "o_que": "ONZE verbetes lidos integrais: Mechanisms (Tarrow) · Protest cycles and waves · Political opportunity · Repertoires of contention · Policing protest (della Porta e Reiter) · Diffusion and scale shift (Soule) · Demobilization (Fillieule) · Discursive opportunity structure (McCammon) · Multiorganizational fields (Klandermans) · Resource mobilization theory (Edwards e Gillham) · Critical mass theory (Oliver). OS NOMES DOS ONZE VERBETES ESTÃO EM `termos`, e a razão é uma prova negativa que falhou em 21/10/2026: a peça do corpus é o volume, mas a unidade de leitura — e a unidade sobre a qual eu errei — é o VERBETE. Guarda que vigia só o nome do continente não pega afirmação sobre o conteúdo",
+      "registrado_em": "docs/analise/10_VERBETES-ENCICLOPEDIA.md",
+      "termos": [
+        "Wiley-Blackwell Encyclopedia",
+        "Encyclopedia of Social and Political Movements",
+        "Protest cycles and waves",
+        "Political opportunity",
+        "Repertoires of contention",
+        "Policing protest",
+        "Diffusion and scale shift",
+        "Demobilization",
+        "Discursive opportunity structure",
+        "Multiorganizational fields",
+        "Resource mobilization theory",
+        "Critical mass theory"
+      ]
+    },
+    "Fontes/05_Bibliografia-teorica/SNOW-VLIEGENTHART-KETELAARS_The-framing-perspective-on-social-movements_Wiley-Blackwell-Companion-2ed_2019.pdf": {
+      "estado": "LIDO_INTEGRAL",
+      "o_que": "integral, 20 folhas; offset impressa = PDF + 390",
+      "registrado_em": "docs/analise/09_CONCEITO-MECANISMO.md",
+      "termos": [
+        "Snow, Vliegenthart e Ketelaars",
+        "Vliegenthart e Ketelaars"
+      ]
+    },
+    "Fontes/05_Bibliografia-teorica/GONZALEZ-BAILON-BORGE-HOLTHOEFER-RIVERO-MORENO_Dynamics-of-protest-recruitment-through-an-online-network_Scientific-Reports-1_2011.pdf": {
+      "estado": "LIDO_PARCIAL",
+      "o_que": "achados centrais, na ficha 13: os participantes iniciais não têm posição topológica típica; só os disseminadores de cascata são mais centrais",
+      "registrado_em": "docs/analise/08_BIBLIOGRAFIA-METODOLOGICA.md",
+      "termos": [
+        "González-Bailón"
+      ]
+    },
+    "Fontes/05_Bibliografia-teorica/TARROW_O-poder-em-movimento_Vozes-2009.pdf": {
+      "estado": "ILEGIVEL",
+      "o_que": "no corpus e SEM camada de texto: digitalização em duas páginas por folha. Não se faz OCR porque a paginação resultante erraria o que uma ficha precisa ancorar",
+      "registrado_em": "docs/referencial/01_QUADRO-TEORICO-METODOLOGICO.md",
+      "termos": [
+        "O poder em movimento"
+      ]
+    },
+    "Fontes/13_Bolsonarismo-mobilizacao/BASTOS-RECUERO_The-insurrectionist-playbook_Social-Media-and-Society-out-dez_2023.pdf": {
+      "estado": "LIDO_INTEGRAL",
+      "o_que": "lida em 09-10/10/2026. Produziu um LIMITE e não uma âncora: não corrobora o Sri Lanka",
+      "registrado_em": "docs/analise/13_LITERATURA-BOLSONARISMO.md",
+      "termos": [
+        "Bastos e Recuero",
+        "Bastos & Recuero"
+      ]
+    },
+    "Fontes/13_Bolsonarismo-mobilizacao/CESARINO_Identidade-e-representacao-no-bolsonarismo_Revista-de-Antropologia-62-3_2019.pdf": {
+      "estado": "LIDO_INTEGRAL",
+      "o_que": "lida em 09-10/10/2026; não ancora registro",
+      "registrado_em": "docs/analise/13_LITERATURA-BOLSONARISMO.md",
+      "termos": [
+        "Cesarino (2019)",
+        "Cesarino 2019"
+      ]
+    },
+    "Fontes/13_Bolsonarismo-mobilizacao/MESSENBERG_A-direita-que-saiu-do-armario_Sociedade-e-Estado-32-3_2017.pdf": {
+      "estado": "LIDO_INTEGRAL",
+      "o_que": "lida em 09-10/10/2026; não ancora registro",
+      "registrado_em": "docs/analise/13_LITERATURA-BOLSONARISMO.md",
+      "termos": [
+        "Messenberg"
+      ]
+    },
+    "Fontes/13_Bolsonarismo-mobilizacao/ROCHA_Imposto-e-roubo-contrapublico-ultraliberal_Dados-62-3_2019.pdf": {
+      "estado": "LIDO_INTEGRAL",
+      "o_que": "lida em 09-10/10/2026; não ancora registro",
+      "registrado_em": "docs/analise/13_LITERATURA-BOLSONARISMO.md",
+      "termos": [
+        "Rocha (2019)",
+        "Rocha 2019"
+      ]
+    },
+    "Fontes/13_Bolsonarismo-mobilizacao/SANTOS-TANSCHEIT_Quando-velhos-atores-saem-de-cena-nova-direita_Colombia-Internacional-99_2019.pdf": {
+      "estado": "LIDO_INTEGRAL",
+      "o_que": "lida em 09-10/10/2026; não ancora registro",
+      "registrado_em": "docs/analise/13_LITERATURA-BOLSONARISMO.md",
+      "termos": [
+        "Santos e Tanscheit",
+        "Santos & Tanscheit"
+      ]
+    },
+    "Fontes/13_Bolsonarismo-mobilizacao/CHAGAS-CARREIRO_Far-right-digital-activism-in-polarized-contexts_Media-and-Communication-10-4_2022.pdf": {
+      "estado": "LIDO_INTEGRAL",
+      "o_que": "lida em 09-10/10/2026; não ancora registro",
+      "registrado_em": "docs/analise/13_LITERATURA-BOLSONARISMO.md",
+      "termos": [
+        "Chagas e Carreiro",
+        "Chagas et al."
+      ]
+    },
+    "Fontes/13_Bolsonarismo-mobilizacao/TATAGIBA_Entre-as-ruas-e-as-instituicoes-impeachment_Lusotopie-17-1_2018.pdf": {
+      "estado": "LIDO_INTEGRAL",
+      "o_que": "lida em 09-10/10/2026; não ancora registro. A camada de texto foi diagnosticada como cifrada por mim, e o diagnóstico estava errado — ver §8.6 do documento 13",
+      "registrado_em": "docs/analise/13_LITERATURA-BOLSONARISMO.md",
+      "termos": [
+        "Tatagiba (2018)",
+        "Tatagiba 2018"
+      ]
+    },
+    "Fontes/13_Bolsonarismo-mobilizacao/GOHN_Ciclos-de-protestos-no-Brasil-1970-2019_Mundos-Plurales-6-1_2019.pdf": {
+      "estado": "LIDO_PARCIAL",
+      "o_que": "lida em parte em 08/10/2026, para o mapa bibliográfico",
+      "registrado_em": "docs/analise/13_LITERATURA-BOLSONARISMO.md",
+      "termos": [
+        "Gohn"
+      ]
+    },
+    "Fontes/14_Livros-brasileiros/LAVALLE-CARLOS-DOWBOR-SZWAKO_Movimentos-sociais-e-institucionalizacao_EdUERJ_2018.pdf": {
+      "estado": "LIDO_PARCIAL",
+      "o_que": "lido em parte em 08/10/2026; offset medido impressa = PDF − 2. Traz a crítica ao marco teórico declarado do projeto",
+      "registrado_em": "docs/analise/14_LIVROS-BRASILEIROS.md",
+      "termos": [
+        "Gurza Lavalle"
+      ]
+    },
+    "Fontes/14_Livros-brasileiros/ABERS_Ativismo-institucional-criatividade-e-luta-na-burocracia_Editora-UnB_2021.pdf": {
+      "estado": "LIDO_PARCIAL",
+      "o_que": "lido em parte em 08/10/2026; offset medido impressa = PDF − 2",
+      "registrado_em": "docs/analise/14_LIVROS-BRASILEIROS.md",
+      "termos": [
+        "Abers (2021)",
+        "Abers 2021"
+      ]
+    },
+    "Fontes/14_Livros-brasileiros/FARIA-MARQUES_Giros-a-direita-volume-integral_SertaoCult_2020.pdf": {
+      "estado": "LIDO_PARCIAL",
+      "o_que": "capítulo de Marques, p. 241-255, identificado na leitura de 08/10/2026. O volume substituiu os oito offprints, e nenhum registro aponta para ele",
+      "registrado_em": "docs/analise/14_LIVROS-BRASILEIROS.md",
+      "termos": [
+        "Giros à direita"
+      ]
+    },
+    "Fontes/14_Livros-brasileiros/SINGER-ARAUJO-RUGITSKY_O-Brasil-no-inferno-global_FFLCH-USP_2022.pdf": {
+      "estado": "NAO_DECLARADO",
+      "o_que": "o offset foi medido no mesmo passo dos três livros lidos (impressa = PDF − 1), mas NENHUM documento do repositório registra leitura desta peça. Medir offset não é ler",
+      "registrado_em": "",
+      "termos": [
+        "Singer, Araujo e Rugitsky",
+        "O Brasil no inferno global"
+      ]
+    },
+    "Fontes/08_Imprensa-enquadramento/SciELO-Preprints_Drummond-Manginelli_Editoriais-8-jan_2023-10-09.pdf": {
+      "estado": "NAO_LIDO",
+      "o_que": "catalogada no LEIA-ME do eixo 08 como OBJETO DE ANÁLISE, não como fonte de dado. Nenhum documento registra leitura",
+      "registrado_em": "",
+      "termos": [
+        "Drummond e Manginelli",
+        "Drummond & Manginelli"
+      ]
+    },
+    "Fontes/10_Democracia-Inabalada/STF_Democracia-Inabalada_Folder.pdf": {
+      "estado": "NAO_LIDO",
+      "o_que": "folder de 6 páginas e 37,4 MB — o pior índice de bytes por página do corpus (item 46.5 da agenda). O conteúdo lido do mesmo título está no Ebook, que ancora registro",
+      "registrado_em": "",
+      "termos": [
+        "Democracia-Inabalada_Folder",
+        "folder de 6 páginas"
+      ]
+    },
+    "Fontes/13_Bolsonarismo-mobilizacao/KAYSEL-BIANCHI_Bolsonarismo-como-coalizao-discursiva-de-extrema-direita_Caderno-CRH-38_2025.pdf": {
+      "estado": "LIDO_INTEGRAL",
+      "o_que": "lida em 09-10/10/2026. Não ancora registro; recusa 'populismo' por amplo e normativo e propõe conceito espacial e relacional",
+      "registrado_em": "docs/analise/13_LITERATURA-BOLSONARISMO.md",
+      "termos": [
+        "Kaysel e Bianchi",
+        "Kaysel & Bianchi"
+      ]
+    },
+    "Fontes/13_Bolsonarismo-mobilizacao/MENDONCA-DOMINGUES_Protestos-contemporaneos-e-a-crise-da-democracia_RBCP-37_2021.pdf": {
+      "estado": "LIDO_INTEGRAL",
+      "o_que": "lida em 09-10/10/2026; não ancora registro",
+      "registrado_em": "docs/analise/13_LITERATURA-BOLSONARISMO.md",
+      "termos": [
+        "Mendonça e Domingues",
+        "Mendonça & Domingues"
+      ]
+    },
+    "Fontes/13_Bolsonarismo-mobilizacao/MENDONCA-FREITAS_Fake-news-e-o-repertorio-contemporaneo-de-acao-politica_Dados-66-2_2022.pdf": {
+      "estado": "LIDO_INTEGRAL",
+      "o_que": "lida em 09-10/10/2026; não ancora registro",
+      "registrado_em": "docs/analise/13_LITERATURA-BOLSONARISMO.md",
+      "termos": [
+        "Mendonça e Freitas",
+        "Mendonça et al."
+      ]
+    },
+    "Fontes/13_Bolsonarismo-mobilizacao/FARIAS-CASAROES-MAGALHAES_Radical-right-populism-and-the-politics-of-cruelty_Global-Studies-Quarterly-2_2022.pdf": {
+      "estado": "LIDO_INTEGRAL",
+      "o_que": "lida em 09-10/10/2026; não ancora registro",
+      "registrado_em": "docs/analise/13_LITERATURA-BOLSONARISMO.md",
+      "termos": [
+        "Farias, Casarões e Magalhães",
+        "Farias et al."
+      ]
+    }
+  },
+  "fora_do_corpus": {
+    "_leia_me": "Peças que os documentos discutem repetidamente e que NÃO estão no corpus. A afirmação de não-leitura sobre elas é legítima, e é aqui que ela fica declarada — de modo que a guarda de prosa não a confunda com a de peça lida.",
+    "BENFORD e SNOW (2000)": "PENDENTE e closed na camada A, sem depósito em repositório algum. Era o que `marco_teorico` declarava até 21/10/2026; hoje é referência de genealogia",
+    "SNOW et al. (1986)": "a fonte dos quatro tipos de alinhamento de quadros, atribuídos pelo capítulo de 2019. Citá-los como de 1986 seria asserção sem leitura",
+    "TILLY e TARROW (2007)": "o vocabulário que PT-03D atribuía até 21/10/2026. Não está no corpus",
+    "BEACH e PEDERSEN (2016)": "a 2. ed.; o corpus tem a de 2013",
+    "WALDNER (2015)": "editor barrado; ficha 9, metadado só",
+    "TARROW, verbete Mechanisms .pub2 (2022)": "revisão que não está no volume de 2013 do corpus"
+  }
+}

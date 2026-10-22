@@ -3703,7 +3703,7 @@ O texto de 26(c) dizia *"quatro decisões"* e listava `data_hora` de PT-02, o `m
 
 ### 72.1 O campo era uma lista de três itens de tipos diferentes
 
-`marco_teorico` dizia: *"Teoria do Processo Político (McAdam, Tarrow, Tilly); Process Tracing (Beach & Pedersen, 2019); Framing (Snow & Benford, 2000)"*. **Um marco, um método e um conceito na mesma lista** — e duas das três citações eram de obra não lida.
+`marco_teorico` dizia: *"Teoria do Processo Político (McAdam, Tarrow, Tilly); Process Tracing (Beach & Pedersen, 2019); Framing (Snow & Benford, 2000)"*. **Um marco, um método e um conceito na mesma lista** — e, **até 21/10/2026**, duas das três citações eram de obra não lida. (As duas mudaram de estado no mesmo dia: Beach e Pedersen entrou no corpus e foi lido em parte; Snow e Benford saiu da declaração.)
 
 Passou a declarar a sua distinção, que é de **tipo**: um **marco** (Teoria do Processo Político), três **âncoras teóricas** (Mechanisms · Framing · Ciclo de protesto) e uma **âncora metodológica** (process tracing). Cada âncora cita a **peça lida**, com folha.
 
@@ -3776,7 +3776,7 @@ O campo dizia *"em vocabulário de Tilly e Tarrow"*, e **Tilly e Tarrow (2007) n
 | **a rota da âncora metodológica** | (A) ou (B) acima — **decisão sua** |
 | **os passos 4 e 5 de Ricks e Liu** | contrafactual por nó existe em **um** nó. Estendê-lo é pesquisa, não leitura, e não foi aberto aqui |
 | **`framing_narrativa` sem grade funcional** | o capítulo de 2019 dá três tarefas centrais — diagnóstico, prognóstico, motivacional — e o campo **nomeia** quadros sem classificar função. Cobrança da §10, ainda aberta |
-| **os sete verbetes lidos-a-ler** | *Demobilization*, *Repertoires of contention*, *Policing protest*, *Diffusion and scale shift*, *Multiorganizational fields*, *Political opportunity* (✅ **este saiu hoje**) e *Discursive opportunity structure* — todos acessíveis, e o melhor retorno por hora que o corpus oferece |
+| ~~os sete verbetes lidos-a-ler~~ | ❌ **ESTA LINHA ESTAVA ERRADA, e a guarda G2 do registro de leitura a pegou em 21/10/2026.** Os sete **estavam lidos** — integrais, entre 29/09 e 14/10/2026 —, e a leitura está em `docs/analise/10_VERBETES-ENCICLOPEDIA.md`, cujo título diz *"os onze verbetes lidos na fonte"*. Eu copiei esta lista da §7.4 do documento 09, escrita em 30/09, isto é **antes** de o documento 10 existir. Ver item 75 |
 
 ---
 
@@ -3988,3 +3988,74 @@ As duas provas mutaram o campo **pelo parser** e conferiram o **SHA-256** na rev
 | **a cristalização de quadro** | precisa de coleta nova, com o desenho em documento 04 §1 |
 | **o nome de PT-62** | poderia dizer a rota heterônoma; nomear mecanismo é sua decisão |
 | **capítulos 4 a 8 de Beach e Pedersen** | o 5 e o 6 sustentariam a força probatória declarada de cada âncora |
+
+---
+
+## 75. O registro de estado de leitura, com guarda no ciclo — e ele pegou quatro erros meus antes de nascer — ✅ 21/10/2026
+
+**Encaminhamento:** *"construa esse registro de estado de leitura com guarda no ciclo."*
+
+A medida que eu havia proposto e não construído, contra o defeito do mesmo dia: eu relatei seis verbetes como *"lidos-a-ler"* e **os seis estavam lidos**, porque copiei uma lista de 30/09 do documento que **pedia** a leitura em vez do que a **registrava**.
+
+### 75.1 A maior parte do estado é MEDIDA, não declarada — e isso é o desenho
+
+| Origem | Quantas | Como |
+|:--|--:|:--|
+| **MEDIDO** | **43** | a peça **ancora registro** com `fonte_pagina`, e o passo 10 do ciclo confere a transcrição contra a folha do PDF. **Leitura parcial demonstrável, não afirmada** |
+| **DECLARADO** | **26** | a peça **não ancora registro**: informa o desenho sem sustentar dado. O estado vive em `data/estado_de_leitura.json`, que é **dado e não prosa** |
+
+> **A economia aqui não é de esforço, é de confiança.** Só 26 das 69 peças precisam da minha palavra; nas outras 43 o ciclo já prova a leitura há semanas, conferindo transcrição contra folha. **Declarar o que se pode medir é o que criou o problema em primeiro lugar.**
+
+**O vocabulário tem cinco valores, e um deles é confissão:** `LIDO_INTEGRAL` (13) · `LIDO_PARCIAL` (52) · `NAO_LIDO` (2) · `ILEGIVEL` (1, o Tarrow sem camada de texto) · **`NAO_DECLARADO`** (1), que é *"nenhum documento do repositório registra o estado"* — e o único caso é **Singer, Araujo e Rugitsky (2022)**, cujo *offset* foi medido no mesmo passo dos três livros lidos, **mas medir offset não é ler**.
+
+### 75.2 As três guardas, e a segunda é a que faltava
+
+| | O que confere | O que pega |
+|:--|:--|:--|
+| **G1** cobertura, nos dois sentidos | toda peça do manifesto está medida ou declarada; toda declaração existe no manifesto | fonte nova entrando sem estado; declaração que sobreviveu à peça |
+| **G2** coerência de prosa | **nenhum documento de `docs/` afirma não-leitura de peça cujo estado é de leitura** | exatamente o erro de 21/10/2026 |
+| **G3** procedência da leitura | peça declarada lida diz **onde** a leitura está registrada, e o arquivo existe | leitura afirmada sem lugar onde conferi-la |
+
+**A G2 tem duas liberações, e as duas têm razão escrita.** (i) **Menção histórica datada** — o mesmo critério que a checagem 7 usa para nome retirado. (ii) **Negação que senta ao lado de afirmação é qualificação, não negação**: dizer *"lida em parte: capítulos 1 a 3; capítulos 4 a 8 seguem não lidos"* é precisamente o que `LIDO_PARCIAL` exige, e barrar isso ensinaria a **não declarar o recorte**.
+
+### 75.3 O que as guardas pegaram, e os quatro são meus
+
+| # | O que foi pego | Gravidade |
+|--:|:--|:--|
+| 1 | **G1: quatro caminhos errados na minha própria declaração** — volume, número e ano trocados em Kaysel e Bianchi, Mendonça e Domingues, Mendonça e Freitas e Farias *et al.* | média: eu teria declarado estado de leitura para arquivos inexistentes, e o manifesto teria quatro peças sem estado |
+| 2 | **G2: duas asserções que eu escrevi nesta sessão e que a leitura tornou falsas horas depois** — a linha do inventário do documento 09 e a §11.5.1, as duas negando a leitura de Beach e Pedersen, escritas **antes** de o pesquisador mandar ler | **alta: eram falsas no momento em que a guarda rodou** |
+| 3 | **G2: o erro original, ainda vivo** — o item 72.7 desta agenda listava *"os sete verbetes lidos-a-ler"*. A guarda o achou onde ele estava | **alta, e é a prova de utilidade: a guarda pegou o defeito que a motivou, no lugar onde ele continuava** |
+| 4 | **a primeira prova negativa FALHOU, e o defeito era do meu desenho** | **a mais instrutiva das quatro — ver 75.4** |
+
+### 75.4 A prova negativa que falhou, e por que ela valeu mais que as que passaram
+
+Reinjetei o erro ao pé da letra, numa frase que negava a leitura de dois dos verbetes pelo nome — e **a guarda passou**.
+
+> **A razão: os `termos` vigiados da Encyclopedia eram o nome do VOLUME** — *"Wiley-Blackwell Encyclopedia"* — e a unidade de leitura, bem como a unidade sobre a qual eu errei, é o **VERBETE**. **Guarda que vigia o nome do continente não pega afirmação sobre o conteúdo.**
+>
+> É a mesma forma da lição de 18/10 — *vigie o termo, não a frase* — num nível acima: **vigie a unidade sobre a qual a afirmação é feita, não o arquivo que a contém.** Os onze nomes de verbete entraram em `termos`, e com eles a guarda reprova.
+>
+> **E o segundo achado da mesma prova:** ao ampliar os termos, apareceram **dois falsos positivos meus** — o documento 10 dizia *"o campo está desenhado, **não lido** contra clivagem"*, usando *lido* noutro sentido. Reescrito para *"não interpretado contra a clivagem"*, que é melhor prosa de todo modo.
+
+**As três provas, depois da correção:** G2 reinjetando o erro de 21/10 → saída 1; G1 declarando peça fora do manifesto → saída 1; G3 tirando o `registrado_em` de uma peça lida → saída 1. Todas mutando pelo parser ou por arquivo revertido, com **SHA-256 conferido**.
+
+### 75.5 E a guarda reprovou o texto deste próprio item
+
+Escrito o item 75, o ciclo caiu: **duas linhas minhas, aqui mesmo, grafavam as frases que a guarda vigia** — uma citando ao pé da letra a negação de leitura de Beach e Pedersen, outra transcrevendo a frase da prova negativa.
+
+> **Estava certo, e é a terceira vez que uma guarda desta casa reprova o meu texto novo.** A primeira foi em 18/10, com o nome retirado de PT-07; a segunda em F12, com a mesma forma. **O padrão da casa já estava decidido: o artefato deixa de GRAFAR a frase e passa a NOMEAR a afirmação.** Aplicado aqui — *"as duas negando a leitura de Beach e Pedersen"* em vez da citação literal.
+>
+> **E o fato de a guarda ter reprovado o item que a documenta é o teste mais forte que ela podia passar**: ela não distingue autor, data nem intenção. Vigia o enunciado.
+
+### 75.6 O ciclo foi a doze passos
+
+O registro entra como **passo 6**, depois da grade funcional e antes das checagens estruturais, porque é gerador. `scripts/LEIA-ME.md` e o `00_LEIA-ME.md` da pasta do referencial acompanharam.
+
+### 75.7 O que isto deixa aberto
+
+| | |
+|:--|:--|
+| **Singer, Araujo e Rugitsky (2022)** | `NAO_DECLARADO` — 374 folhas no corpus sem estado de leitura registrado em documento algum. **Ler ou declarar não lido é decisão sua** |
+| **as duas `NAO_LIDO`** | o preprint de Drummond e Manginelli (eixo 08) e o folder do STF. Nenhuma ancora registro, e nenhuma é necessária ao desenho atual |
+| **a G2 não cobre `reports/`** | ela vigia `docs/`. O relatório de pesquisa e o caderno de evidências não afirmam estado de leitura hoje, mas podem passar a afirmar |
+| **a unidade de leitura dentro de peça grande** | resolvido para a Encyclopedia pelos onze nomes de verbete. **O mesmo problema existe para os livros**: dizer *"capítulo X de Lavalle não lido"* não é vigiado, porque os capítulos não estão nomeados em `termos` |

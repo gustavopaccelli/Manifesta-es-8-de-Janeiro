@@ -22,7 +22,7 @@ Regra do projeto: nada se afirma sem ter sido lido, e nada se cita contra outra 
 | SEWELL (1996); McADAM & SEWELL (2001) | **Citação literal colhida no verbete de della Porta** |
 | GRANOVETTER (1978); MARWELL & OLIVER (1993) | **Citação colhida no verbete de Oliver** |
 | MACHAMER, DARDEN & CRAVER (2000) | Ficha 2 (metadado) + citação colhida em Mayntz e em Cunha & Araújo |
-| BEACH & PEDERSEN (2013), *Process-Tracing Methods: Foundations and Guidelines*, Michigan | **NO CORPUS desde 21/10/2026**, fornecida pelo pesquisador — 208 folhas, impressa = PDF − 8, licença RESERVADA. **E NÃO LIDA:** o que o aparato afirma dela segue vindo de **citação colhida** em Cunha & Araújo (2018) e em Ricks & Liu (2018), as duas lidas na fonte. Ver §11.5 |
+| BEACH & PEDERSEN (2013), *Process-Tracing Methods: Foundations and Guidelines*, Michigan | **NO CORPUS desde 21/10/2026**, fornecida pelo pesquisador — 208 folhas, impressa = PDF − 8, licença RESERVADA. **E LIDA EM PARTE no mesmo dia**, horas depois: capítulos 1 a 3 (p. 1-44 impressas) e Apêndice A (p. 163-170), com offset conferido folha a folha. Capítulos 4 a 8 seguem não lidos. A adaptação está em `../referencial/03_ADAPTACAO-METODOLOGICA.md`; ver também §11.5 |
 | RICKS & LIU (2018), *Process-Tracing Research Designs: A Practical Guide*, **PS** 51(4) | **Lido na fonte, integral** (5 p., impressa = PDF + 841), corpus — **lido em 21/10/2026, na frente F12**. Estava em `Fontes/05_Bibliografia-teorica/` desde antes e **fora deste inventário**: achado ao medir se alguma edição de Beach e Pedersen estava no corpus. Ver §11.5 |
 | WALDNER (2015) | Ficha 9 (metadado). **Não lido na fonte** — editor barrado |
 | SNOW, VLIEGENTHART & KETELAARS (2019), cap. 22 do *Wiley Blackwell Companion*, 2. ed. | **Lido na fonte, integral** (20 p.), corpus — camada A, achado em 13/10 pelo campo `locations` do OpenAlex; ver §10 |
@@ -428,7 +428,9 @@ A pergunta *"como conceitos que se complementam se diferenciam sem se excluir?"*
 | **licença** | lida no arquivo: **RESERVADA**. Não redistribuível — e é precisamente para isso que o manifesto do corpus existe |
 | **corpus** | 64 → **65** PDFs, 12.144 → **12.352** páginas; a documental **não se move** (23 / 6.970), porque é literatura. Manifesto: 68 → **69** peças |
 
-> **Está no corpus e NÃO está lida, e essa distinção é a que este projeto existe para manter.** Ter o arquivo não é ter lido a obra. Tudo o que o aparato afirma de Beach e Pedersen continua vindo de **citação colhida** em Cunha e Araújo (2018) e em Ricks e Liu (2018), as duas lidas na fonte delas.
+> **ERRATA LAVRADA PELA PRÓPRIA GUARDA, em 21/10/2026.** Esta linha dizia *"está no corpus e não está lida"*, e era verdade quando foi escrita — **deixou de ser horas depois, no mesmo dia**, quando o pesquisador mandou ler. Quem a pegou foi a guarda **G2** de `scripts/gerar_registro_leitura.py`, que nasceu nesta mesma rodada para impedir que um documento afirme não-leitura de peça lida. **Hoje: lida em parte** — capítulos 1 a 3 (p. 1-44) e Apêndice A (p. 163-170), com offset conferido; capítulos 4 a 8 não lidos. A adaptação está em `../referencial/03_ADAPTACAO-METODOLOGICA.md`.
+>
+> **A distinção que a linha original fazia continua valendo, e é a razão de ela ficar registrada aqui em vez de ser apagada:** ter o arquivo não é ter lido a obra.
 
 **A consequência sobre as rotas é assimétrica, e vale escrever por quê.** A rota **(B)** tinha dois custos — **obter** e **ler** — e um deles era de resultado incerto, porque as editoras barradas estão medidas no corpus. **O obstáculo de obtenção caiu**; o de leitura não. A rota (B) deixou de ser *"obter e ler"* e passou a ser **só ler**: 200 páginas impressas, com offset já conferido, o que é a parte caríssima de qualquer ficha.
 

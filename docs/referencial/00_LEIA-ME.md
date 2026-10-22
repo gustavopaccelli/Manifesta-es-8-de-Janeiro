@@ -16,6 +16,7 @@ O repositório tinha o aparato teórico **espalhado por sete documentos de anál
 | [`02_GRADE-FUNCIONAL-ENQUADRAMENTO.md`](02_GRADE-FUNCIONAL-ENQUADRAMENTO.md) | A classificação funcional dos 85 campos `framing_narrativa` — **inferência do analista**, fora do codebook, para ser evocada na escrita |
 | [`03_ADAPTACAO-METODOLOGICA.md`](03_ADAPTACAO-METODOLOGICA.md) | A adaptação de Beach e Pedersen a este projeto, **depois da leitura dos capítulos 1 a 3 e do Apêndice A** |
 | [`04_LACUNAS-DO-CAMPO.md`](04_LACUNAS-DO-CAMPO.md) | As lacunas que a própria literatura declara, e o que este material responde — com as três que exigem trabalho novo separadas das cinco que já têm dado |
+| [`05_REGISTRO-DE-LEITURA.md`](05_REGISTRO-DE-LEITURA.md) | **Peça gerada.** O estado de leitura das 69 peças do corpus — medido onde a peça ancora registro, declarado onde não ancora — com a guarda que impede qualquer documento de afirmar não-leitura de peça lida |
 
 ## As três regras que valem em toda esta pasta
 

@@ -32,7 +32,7 @@ A versão completa — com os seis campos da figura ao lado dos seis do codebook
 | `PT-01` | jun/2013 | Jornadas de Junho | T-1 Conjuntural | Confirmado | janela de oportunidades politicas aberta no ciclo de 2013, … | — | ✅ |
 | `PT-01A` | 04/11/2014 (decisão do TSE) — 05/11/2015 (relatório final) | PSDB pede auditoria ao TSE | T-1 Conjuntural | Confirmado | proposta de mecanismo, nao atribuida | — | ✅ |
 | `PT-01B` | 29/10/2015 | Uma Ponte para o Futuro | T-1 Conjuntural | Confirmado | proposta de mecanismo, nao atribuida | — | ✅ |
-| `PT-02` | 2015–2016 | Marchas pró-impeachment | T-1 Conjuntural | Confirmado | apropriacao parcial do repertorio de protesto por contramov… | — | ✅ |
+| `PT-02` | 2015–2016 (ator anterior: mobilização desde 2011, organização desde 2003) | Marchas pró-impeachment | T-1 Conjuntural | Confirmado | apropriacao parcial do repertorio de protesto por contramov… | — | ✅ |
 | `PT-02A` | 17/02/2016 | STF admite prisão em 2ª instância | T-1 Conjuntural | Confirmado | precondicao jurisprudencial do arco judicial | — | ✅ |
 | `PT-03` | 31/08/2016 | Impeachment consumado | T-1 Conjuntural | Confirmado | ressignificacao do protesto | — | ✅ |
 | `PT-03A` | 12/07/2017 | Moro condena Lula (triplex) | T-1 Conjuntural | Confirmado em fonte primária | certificacao judicial do frame anticorrupcao | — | ✅ |

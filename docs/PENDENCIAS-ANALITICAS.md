@@ -4382,3 +4382,73 @@ Antes de escolher, medi o que o próprio campo já faz nos 85 registros:
 **Três decisões de campo**, todas suas: a promoção de classe de **PT-03B, PT-05A e PT-06C** (51.5, decisão 1), e os nomes dos mecanismos de **PT-01A** e **PT-01B** (item 68).
 
 > **E declaro o precedente que esta decisão abre, porque ele é seu para confirmar ou recusar:** eu decidi um campo do codebook. Fiz isso porque você mandou, e **porque a forma era dedutível de convenção medida** — se tivesse exigido escolher entre leituras teóricas rivais, eu teria voltado a você com as saídas em vez de decidir. **As três que restam são desse segundo tipo:** promover classe muda o critério para todos os registros, e nomear mecanismo é atribuição teórica. **Não as tomo por extensão desta.**
+
+---
+
+## 81. A varredura das meias-âncoras — dez achadas, e o meu primeiro critério era circular — ✅ 22/10/2026
+
+**Encaminhamento:** *"Faça essa varredura das meias-âncoras."* — a terceira das três que eu listei ao fechar o item 80, e a única que era mensurável.
+
+### 81.1 O defeito, nomeado no item 80
+
+A aspa que sustenta uma afirmação do registro pode viver em `nota_auditoria` ou `status_verificacao`. Esses campos **autorizam a prosa** e **não são conferidos contra a folha por guarda alguma** — o passo 9 do ciclo localiza transcrição de **`fonte_trecho`**. Resultado: **o ponteiro no campo certo e a verificação fora do laço.**
+
+### 81.2 O que a varredura mediu
+
+| | |
+|:--|:--|
+| aspas em campo de nota, no codebook | **78** |
+| já presentes em `fonte_trecho` | **47** |
+| **só em campo de nota** | **31**, em 20 dos 85 registros |
+
+### 81.3 O meu primeiro critério de triagem era CIRCULAR
+
+Para separar aspa de fonte de aspa de artefato do projeto, usei *"aparece na prosa do repositório"*. Classificou **22 das 23** como artefato — e está errado:
+
+> **O projeto CITA as suas fontes nos documentos de análise.** A aspa de PT-08 aparece em `docs/analise/14` **porque é citação de fonte**, transcrita no dia anterior. O critério premiava exatamente o caso que eu queria detectar.
+
+Refeito com os dois sinais que **não** são circulares — a aspa estar literal num **campo de dado** do próprio registro, ou conter um **nome retirado** que a checagem 7 vigia —, a classe caiu de 22 para **7**. E para decidir o resto houve de ser o teste caro: **varredura integral dos PDFs vinculados, 7.677 folhas lidas em 205 segundos.**
+
+### 81.4 O resultado
+
+| classe | n | o que é |
+|:--|--:|:--|
+| **meia-âncora, ponteiro ancorado** | **7** | a folha já estava em `fonte_pagina`; só a transcrição estava no campo errado |
+| **meia-âncora sem ponteiro** | **3** | a folha **não** estava em `fonte_pagina`: nem ponteiro, nem transcrição — o caso PT-02 |
+| valor de campo citado na nota | 4 | medido: a aspa está literal num campo de dado do registro |
+| nome retirado | 3 | a nota narra a troca; a checagem 7 já os vigia |
+| **não está em folha alguma** dos PDFs vinculados | **13** | prosa do projeto, instrução sua, paráfrase — **varredura integral**, não amostra |
+| a citação intermediária defeituosa | 1 | PT-08, a aspa mutilada que o item 77 desmentiu. **Deve permanecer na nota**: ela está lá para ser contrastada, não para ancorar |
+
+**As dez corrigidas**, cada aspa conferida por `confere_integral` na folha **antes** de ser escrita:
+
+| registro | peça | folha | o que a aspa sustenta |
+|:--|:--|--:|:--|
+| **PT-57** | AP 2668 | **19** | **a data que `data_hora` afirma** — decidida ontem no item 71 |
+| **PT-57** | AP 2668 | **888** ✚ | o carimbo de **precedente citado**, que desfez a minha errata de 21/10 |
+| **PT-05A** | ADC 43/44/54 | **31** ✚ | o placar contrafactual na voz do próprio ministro |
+| **PT-18A** | Cappelli | **61** ✚ | o ato de nomeação que o registro codifica |
+| **PT-02** | Tatagiba e Galvão | 9 | a ressalva que sustenta a leitura de continuidade |
+| **PT-02** | Alonso 2012 | 4 | o limite do nome do mecanismo na fonte do conceito |
+| **PT-26** | CPMI | 650 | a coordenação em aplicativo fechado (duas aspas) |
+| **PT-30** | CPMI | 670 | o deslocamento ao Planalto |
+| **PT-61** | Balanço 2026 | 14 | a cifra de sessões de julgamento |
+
+**✚ = folha que entrou em `fonte_pagina` com esta correção: nem ponteiro tinha.**
+
+**E as contagens do passo 9 subiram, que é a prova de que a verificação entrou no laço:** PT-02 de **23/23 a 25/25**, PT-05A de 2 a **3/3**, PT-57 de 1 a **2/2**, PT-61 de 3 a **4/4**, mais PT-18A **7/7**, PT-26 **4/4** e PT-30 **3/3**.
+
+### 81.5 E uma lição de literalidade, no meio do caminho
+
+A aspa de PT-57 na folha 19 conferiu **`parcial`**, não `ok` — e o meu verificador **contou `parcial` como bom**, porque a string é *truthy*. A razão do parcial: a frase da nota era **composta por junção** de dois recortes que a folha traz separados.
+
+> **É o modo de falha do `DJe-N` em outra roupa: string montada dentro de aspas.** Cada recorte confere `ok` isolado, e os dois entraram **separados**. `parcial` não é `ok`, e teste que aceita qualquer valor verdadeiro não testa nada.
+
+### 81.6 O que isto deixa aberto
+
+| | |
+|:--|:--|
+| **a guarda é possível e é barata** | o estágio A da varredura — testar a aspa de nota contra as folhas **já** em `fonte_pagina` — é limitado pelas folhas que o ciclo já abre. **A linha de base é agora ZERO.** Não a construí: você pediu a varredura, não a guarda |
+| **o estágio caro não é guardável** | varrer PDF inteiro custou 205 s para 16 aspas; no ciclo inteiro seria proibitivo. A guarda barata pega o caso de ponteiro ancorado, que foram **7 dos 10** |
+| **PT-05A ganhou folha nova** | e é um dos três registros da decisão **(ii)** de 26(c), a promoção de classe. A varredura **acrescentou âncora** a ele — a decisão segue sua, e não a toquei |
+| **as 13 que não estão em folha alguma** | varri os PDFs **vinculados a cada registro**. Aspa de obra que o registro não vincula não seria achada, e três delas são visivelmente instrução sua ou prosa minha — mas **isso é leitura, não medição** |

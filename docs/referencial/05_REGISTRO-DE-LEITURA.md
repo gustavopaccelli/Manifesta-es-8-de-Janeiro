@@ -34,7 +34,7 @@
 
 | Peça | Folhas | Estado | Origem | O que foi lido | Onde está registrado |
 |:--|--:|:--|:--|:--|:--|
-| `STF_ADC-43-44-54_Acordao_2019-11-07.pdf` | 489 | **LIDO_PARCIAL** | MEDIDO | ancora 2 registro(s) com 7 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `STF_ADC-43-44-54_Acordao_2019-11-07.pdf` | 489 | **LIDO_PARCIAL** | MEDIDO | ancora 2 registro(s) com 8 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `STF_ADC-43-MC_Acordao_2016-10-05.pdf` | 250 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 5 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `STF_HC-152752_Acordao_2018-04-04.pdf` | 464 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 3 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `STF_HC-164493_Acordao_Suspeicao-Moro_2021-03-23.pdf` | 441 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 2 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
@@ -42,13 +42,13 @@
 | `STF_HC-193726-AgR_Acordao_2021-04-15.pdf` | 264 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 3 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `TRF4_Revista-97_Acordao-ACr-5046512-94_2018-01-24.pdf` | 657 | **LIDO_PARCIAL** | MEDIDO | ancora 2 registro(s) com 5 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `TSE_RCand-0600903-50_Acordao_2018-09-01.html` | 0 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 3 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
-| `DODF-001_Decreto-01-01-2023_Nomeacao-Torres-SSPDF_2023-01-02.pdf` | 66 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 7 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
-| `DODF-003_Decreto-03-01-2023_Ajudancia-de-Ordens-SSPDF_2023-01-04.pdf` | 66 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 7 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `DODF-001_Decreto-01-01-2023_Nomeacao-Torres-SSPDF_2023-01-02.pdf` | 66 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 8 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `DODF-003_Decreto-03-01-2023_Ajudancia-de-Ordens-SSPDF_2023-01-04.pdf` | 66 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 8 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `PGR_Denuncia_PET-12100_Nucleo-1_2025-02-18.pdf` | 272 | **LIDO_PARCIAL** | MEDIDO | ancora 3 registro(s) com 8 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
-| `GDF-SSP_Relatorio-Interventor-Federal_Cappelli_2023-01-27.pdf` | 62 | **LIDO_PARCIAL** | MEDIDO | ancora 6 registro(s) com 26 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
-| `CPMI-8-de-Janeiro_Relatorio-Final_2023-10-17.pdf` | 1333 | **LIDO_PARCIAL** | MEDIDO | ancora 53 registro(s) com 102 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `GDF-SSP_Relatorio-Interventor-Federal_Cappelli_2023-01-27.pdf` | 62 | **LIDO_PARCIAL** | MEDIDO | ancora 6 registro(s) com 27 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `CPMI-8-de-Janeiro_Relatorio-Final_2023-10-17.pdf` | 1333 | **LIDO_PARCIAL** | MEDIDO | ancora 53 registro(s) com 103 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `STF_AP-2668-QO_Acordao_2025-05-14.pdf` | 50 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 1 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
-| `STF_AP-2668_Acordao_Condenacao_2025-09-11.pdf` | 1991 | **LIDO_PARCIAL** | MEDIDO | ancora 5 registro(s) com 8 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `STF_AP-2668_Acordao_Condenacao_2025-09-11.pdf` | 1991 | **LIDO_PARCIAL** | MEDIDO | ancora 5 registro(s) com 9 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `STF_EP-169_Decisao-Prisao-Domiciliar_2026-03-24.pdf` | 40 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 7 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `STF_EP-169_Decisao-Transferencia-Papuda_2026-01-15.pdf` | 36 | **LIDO_PARCIAL** | MEDIDO | ancora 2 registro(s) com 11 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `STF_Pet-14129_Decisao-Prisao-Preventiva_2025-11-22.pdf` | 17 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 8 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |

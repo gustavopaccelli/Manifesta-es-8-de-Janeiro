@@ -4452,3 +4452,68 @@ A aspa de PT-57 na folha 19 conferiu **`parcial`**, não `ok` — e o meu verifi
 | **o estágio caro não é guardável** | varrer PDF inteiro custou 205 s para 16 aspas; no ciclo inteiro seria proibitivo. A guarda barata pega o caso de ponteiro ancorado, que foram **7 dos 10** |
 | **PT-05A ganhou folha nova** | e é um dos três registros da decisão **(ii)** de 26(c), a promoção de classe. A varredura **acrescentou âncora** a ele — a decisão segue sua, e não a toquei |
 | **as 13 que não estão em folha alguma** | varri os PDFs **vinculados a cada registro**. Aspa de obra que o registro não vincula não seria achada, e três delas são visivelmente instrução sua ou prosa minha — mas **isso é leitura, não medição** |
+
+---
+
+## 82. A guarda barata das meias-âncoras — e ela acusou o resíduo da minha própria correção — ✅ 22/10/2026
+
+**Encaminhamento:** *"Construa a guarda barata."* — a que eu listei em 81.6 e não construí.
+
+### 82.1 Onde ela mora, e é isso que a torna barata
+
+Entrou em **`conferir_paginas.py`**, o passo 10, com `MEIAS_ANCORAS_BASE = 0`.
+
+> **A razão de morar aqui e não em script próprio:** este passo **já abre** as folhas de `fonte_pagina` de cada registro, e `texto_pagina` as guarda em `_cache`. A guarda testa **as mesmas folhas**. **Guarda barata é guarda que vive onde as folhas já estão abertas.**
+
+**E "barata" foi medido, não afirmado:** mesmo conjunto, mesma máquina, com e sem a chamada.
+
+| | |
+|:--|:--|
+| ciclo do passo 10 **com** a guarda | **19,2 s** |
+| **sem** a guarda | **18,5 s** |
+| custo | **+0,7 s, cerca de 4%** |
+
+### 82.2 O detector é de propósito mais frouxo que o promotor
+
+A guarda usa **`casa()`**, de janela, e **não** `confere_integral()`. A razão é um caso real de ontem: a aspa de PT-57 na folha 19 era **composta por junção** de dois recortes que a folha traz separados, e confere **`parcial`**.
+
+> Com `confere_integral` ela **escaparia** da guarda. Com `casa` ela é acusada — que é o que se quer. **Guarda detecta; quem promove confere por inteiro.**
+
+**E não há lista de dispensa, de propósito** — é a lição de 22/10 sobre o `.gitignore`: lista de exceção é dívida que ninguém revisita. Aspa nova que confira faz o ciclo cair, e as saídas são duas: promovê-la a `fonte_trecho`, ou **subir a base e dizer no commit por quê** — a mesma convenção de `PARCIAIS_BASE` e `EMPATES_BASE`.
+
+**A posição da chamada também é deliberada:** ela roda **antes** do desvio de *"referência sem transcrição literal"*. Registro que não tem transcrição em `fonte_trecho` e cuja nota traz aspa conferível é a meia-âncora mais pura que existe — e sairia por aquele `continue` sem ser examinado.
+
+### 82.3 Na primeira execução ela acusou o que eu havia deixado atrás
+
+`meias-âncoras: 1 (base 0)` — **PT-57**, e o defeito era meu, de uma hora antes.
+
+> Na varredura do item 81 eu promovi a `fonte_trecho` os **dois recortes separados** da folha 19 — e deixei na nota a **frase composta**, entre aspas. **Corrigir a promoção sem corrigir a nota deixou a asserção de literalidade de pé:** a forma composta é um **literal falso**, que a folha não traz e que nenhuma guarda conferia. A nota passou a trazer os dois recortes separados.
+
+**E há um efeito de segunda ordem que vale registrar:** as três folhas que a varredura acrescentou a `fonte_pagina` tornaram **testáveis** aspas de nota que antes não tinham folha ancorada onde conferir. **A guarda cresce de alcance a cada âncora nova** — o que é o contrário do que acontece com guarda de lista.
+
+### 82.4 As três provas negativas, e a terceira declara um limite
+
+| | prova | resultado |
+|:--|:--|:--|
+| **1** | aspa de nota que confere em folha **ancorada** | acusa **1** ✔ |
+| **2** | a **mesma** aspa também em `fonte_trecho` | acusa **0** ✔ — a contenção funciona |
+| **3** | aspa de nota que confere em folha que o registro **não** ancora | acusa **0** ✔ — **limite declarado** |
+
+**A prova 3 não é virtude, é o limite:** a parte cara da varredura — abrir o PDF inteiro — levou **205 s para 16 aspas** e não cabe no ciclo. Esta guarda pega **7 dos 10** casos de hoje, e os outros três exigiram folha nova.
+
+### 82.5 Duas coisas que as provas consertaram na própria guarda
+
+| | |
+|:--|:--|
+| **a prova 1 acusava 2 onde havia 1** | a mesma aspa citada duas vezes no campo de nota rende duas ocorrências em `transcricoes()`. A guarda passou a **deduplicar por aspa normalizada** — relato inflado é o que ensina a ignorar a guarda |
+| **o meu harness destruiu trabalho** | a primeira versão revertia com `git checkout --` e a árvore tinha alteração **não comitada**: a reversão **descartou a correção da nota de PT-57**, e as duas provas seguintes rodaram contra linha de base poluída. **Prova negativa que reverte por `git` pressupõe árvore limpa** — esta restaura de uma **cópia em memória**, com SHA-256 conferido |
+
+### 82.6 O ciclo, e o que resta
+
+Doze passos, verde: `meias-âncoras: 0 (base 0)` · `G2 0` · `G4 limpa` · `divergências de nome: 0` · `APROVADO` · `confirmados 74 | falhas 0 | indeterminados 4`.
+
+| | |
+|:--|:--|
+| **a parte cara segue à mão** | varrer PDF inteiro não cabe no ciclo. O item 81 diz como rodar, e o custo é 205 s |
+| **a guarda não vê âncora não-PDF** | `localizar()` só abre PDF, e por isso os seis registros de localizador estrutural seguem fora do alcance. **Ensinar o conferidor a ler âncora não-PDF** mudaria `SEM_PAGINA_EXTRAIVEL_BASE`, que é decisão sua — proposto desde 77.5 |
+| **as três decisões de 26(c)** | intactas |

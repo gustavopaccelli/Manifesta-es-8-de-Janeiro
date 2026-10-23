@@ -240,6 +240,45 @@ EMPATES_BASE = 0
 # os cinco localizadores dele contra os cabecalhos dos arquivos vinculados.
 SEM_PAGINA_EXTRAIVEL_BASE = 6
 
+# LINHA DE BASE DAS MEIAS-ANCORAS: ZERO, medida em 22/10/2026 (itens 80 e
+# 81) e zerada no mesmo dia.
+#
+# A MEIA-ANCORA: a aspa que sustenta uma afirmacao do registro vive em
+# `nota_auditoria` ou `status_verificacao` -- campos que autorizam a prosa e
+# que NENHUMA guarda confere contra a folha, porque este conferidor localiza
+# transcricao de `fonte_trecho`. Resultado: **o ponteiro no campo certo e a
+# verificacao fora do laco.**
+#
+# Descoberta ao decidir `data_hora` de PT-02: acrescentei a folha a
+# `fonte_pagina`, declarei a data ancorada, e o ciclo listou aquela folha
+# entre as "paginas que nenhuma transcricao alcanca". **Por a folha no campo
+# certo nao poe a verificacao no laco -- ancora e folha MAIS transcricao
+# localizavel.**
+#
+# Medido no codebook inteiro: 78 aspas em campo de nota, 47 ja em
+# `fonte_trecho` e 31 nao. Das 31, DEZ eram meias-ancoras reais -- sete com a
+# folha ja em `fonte_pagina` e tres sem ponteiro algum, que exigiram folha
+# nova (PT-05A f.31, PT-18A f.61, PT-57 f.888). Das outras 21: 4 valores de
+# campo citados na nota, 3 nomes retirados que a checagem 7 vigia, 13 que a
+# varredura integral (7.677 folhas) nao achou em folha alguma, e 1 que DEVE
+# ficar na nota -- a citacao intermediaria mutilada que o item 77 desmentiu,
+# que esta la para ser contrastada e nao para ancorar.
+#
+# ESTA GUARDA E A PARTE BARATA DA VARREDURA, e so ela: testa a aspa de nota
+# contra as folhas que o registro JA ancora -- as mesmas que este passo abre,
+# em cache. Pega sete dos dez casos de hoje. A parte CARA -- varrer o PDF
+# inteiro -- levou 205 s para 16 aspas e nao cabe no ciclo; quem quiser roda
+# a mao, e o item 81 diz como.
+#
+# NAO HA LISTA DE DISPENSA, de proposito: a licao de 22/10 e que lista de
+# excecao e divida que ninguem revisita. Aspa de nota que passe a conferir
+# numa folha ancorada faz o ciclo cair, e as saidas sao duas -- promove-la a
+# `fonte_trecho`, ou subir este numero E dizer no commit por que.
+MEIAS_ANCORAS_BASE = 0
+
+# Os campos que autorizam prosa e nao sao conferidos contra a folha.
+CAMPOS_DE_NOTA = ("nota_auditoria", "status_verificacao")
+
 
 def _prefixo_maximo(alvo, folha):
     """Maior prefixo de `alvo` presente em `folha`, por busca binária."""
@@ -469,6 +508,54 @@ INTERVALO = re.compile(r"\b(\d{1,4})\s*[-–—]\s*(\d{1,4})\b")
 ESTRUTURAL = re.compile(r"\bitem\b|\bitens\b|ementa|disposit", re.I)
 
 
+def meias_ancoras(e, pp, docs):
+    """Aspa que vive so em campo de NOTA e confere numa folha JA ancorada.
+
+    Devolve [(campo, cod, folha, aspa)].
+
+    O DETECTOR E DELIBERADAMENTE MAIS FROUXO QUE O PROMOTOR: usa `casa()`, de
+    janela, e nao `confere_integral()`. A razao e um caso real -- a aspa de
+    PT-57 na folha 19 era COMPOSTA por juncao de dois recortes que a folha traz
+    separados, e confere `parcial`. Com `confere_integral` ela escaparia da
+    guarda; com `casa` ela e acusada, que e o que se quer. **Guarda detecta;
+    quem promove confere por inteiro.**
+
+    A contencao usa `fonte_trecho` inteiro e tambem as transcricoes extraidas
+    dele, porque a nota pode citar um PEDACO do que o campo de transcricao traz
+    completo -- e nesse caso nao ha meia-ancora: o passo ja confere o todo.
+    """
+    base = norm_busca(e.get("fonte_trecho") or "")
+    ja = [norm_busca(x) for x in transcricoes(e.get("fonte_trecho"))]
+    achados = []
+    # DEDUPLICA POR ASPA, desde a prova negativa de 22/10/2026: a mesma frase
+    # citada duas vezes no campo de nota rende duas ocorrencias em
+    # `transcricoes()`, e a guarda acusava 2 onde ha 1. Relato inflado e o que
+    # ensina a ignorar a guarda.
+    vistas = set()
+    for campo in CAMPOS_DE_NOTA:
+        for aspa in transcricoes(e.get(campo)):
+            n = norm_busca(aspa)
+            if not n or n in base or any(n in x or x in n for x in ja):
+                continue
+            if n in vistas:
+                continue
+            vistas.add(n)
+            for cod, nums in pp:
+                caminho = docs.get(cod)
+                if not caminho or not caminho.lower().endswith(".pdf"):
+                    continue
+                achou = None
+                for pg in nums:
+                    txt = texto_pagina(caminho, pg)
+                    if txt is not None and casa(aspa, txt):
+                        achou = pg
+                        break
+                if achou:
+                    achados.append((campo, cod, achou, aspa))
+                    break
+    return achados
+
+
 def pares(fonte_pagina):
     """'CPMI: 646, 711 | Cappelli: 55, 57' -> [('CPMI',[646,711]),('Cappelli',[55,57])]
 
@@ -682,6 +769,7 @@ def main():
     ok = falha = indet = parciais_total = atravessa_total = notas_total = 0
     falhas, ociosas_total, excecoes_usadas = [], 0, 0
     empatados = []
+    meias = []          # a guarda de 22/10/2026 — ver MEIAS_ANCORAS_BASE
 
     aninhadas = {}
     for e in alvos_reg:
@@ -698,7 +786,18 @@ def main():
             print("  {:<7} ~  {} fora do alcance (não é PDF)".format(
                 e["id"], ", ".join(c for c, _ in pp)))
             indet += 1
+            # a guarda nao se aplica: sem folha de PDF nao ha onde conferir
             continue
+
+        # A GUARDA DAS MEIAS-ANCORAS roda AQUI, e a posicao e deliberada:
+        # ANTES do desvio de "referencia sem transcricao literal" logo
+        # abaixo. Registro que nao tem transcricao em `fonte_trecho` e cuja
+        # NOTA traz aspa que confere numa folha que ele ancora e a
+        # meia-ancora mais pura que existe -- e sairia pelo `continue` sem
+        # ser examinado se a guarda viesse depois.
+        for _m in meias_ancoras(e, pp, docs):
+            meias.append((e["id"],) + _m)
+
         cits = transcricoes(e.get("fonte_trecho"))
         if not cits:
             print("  {:<7} ~  {} — referência sem transcrição literal".format(
@@ -805,6 +904,23 @@ def main():
         print("    ou voltou a ser: confira qual e por quê, e atualize "
               "SEM_PAGINA_EXTRAIVEL_BASE")
         print("    neste arquivo dizendo no commit a razão.")
+    # A GUARDA DAS MEIAS-ANCORAS, de 22/10/2026 — ver MEIAS_ANCORAS_BASE.
+    print("meias-âncoras: {} (base {}) — aspa que sustenta afirmação do "
+          "registro, vive só em campo de nota".format(len(meias),
+                                                       MEIAS_ANCORAS_BASE))
+    for rid, campo, cod, pg, aspa in meias:
+        print("  X {:<7} [{}] confere em {} p.{} e NÃO está em "
+              "`fonte_trecho`".format(rid, campo, cod, pg))
+        print("      «{}…»".format(norm(aspa)[:92]))
+    if len(meias) != MEIAS_ANCORAS_BASE:
+        print("  ~ A aspa está num campo que autoriza a prosa e que NENHUMA "
+              "guarda confere contra a folha.")
+        print("    Duas saídas: promovê-la a `fonte_trecho` — conferindo-a "
+              "com `confere_integral` antes,")
+        print("    e em recortes separados se a folha os traz separados — ou "
+              "subir MEIAS_ANCORAS_BASE")
+        print("    neste arquivo E dizer no commit por quê. Não há lista de "
+              "dispensa, de propósito.")
     if atravessa_total:
         print("{} fragmento(s) conferem POR INTEIRO ao juntar a página vizinha: a "
               "transcrição atravessa a quebra de página.".format(atravessa_total))
@@ -883,7 +999,8 @@ def main():
             print("  Caiu, o que é bom, e ainda assim precisa de decisão: ajuste")
             print("  PARCIAIS_BASE neste arquivo e diga no commit por que caiu.")
         return 1
-    return 1 if (falhas or aninhadas) else 0
+    return 1 if (falhas or aninhadas
+                 or len(meias) != MEIAS_ANCORAS_BASE) else 0
 
 
 if __name__ == "__main__":

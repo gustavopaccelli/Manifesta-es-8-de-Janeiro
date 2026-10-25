@@ -1,6 +1,6 @@
 # Auditoria de fontes — vínculo registro ↔ documento ↔ página
 
-Gerado por `scripts/gerar_auditoria.py` em **22/10/2026**. Não editar à mão: rode o script de novo depois de cada rodada de coleta.
+Gerado por `scripts/gerar_auditoria.py` em **25/10/2026**. Não editar à mão: rode o script de novo depois de cada rodada de coleta.
 
 Esta peça responde a uma pergunta única e a responde para os 85 registros: **onde está, exatamente, o documento que sustenta esta afirmação, e em que página?** É o que um parecerista cobra quando desconfia de um ponto da cronologia, e é o que separa uma cronologia auditável de uma cronologia asserida.
 
@@ -20,8 +20,8 @@ Esta peça responde a uma pergunta única e a responde para os 85 registros: **o
 
 | Classe | N |
 |:--|--:|
-| Confirmado em fonte primária | 61 |
-| Confirmado | 23 |
+| Confirmado em fonte primária | 67 |
+| Confirmado | 17 |
 | Inferência do analista | 1 |
 
 ## O que esta auditoria alterou
@@ -207,16 +207,16 @@ Cada um aponta arquivo e página. A numeração impressa do relatório da CPMI c
 | PT-02A | ADC 43/44/54 + ADC 43-MC | ADC 43/44/54: 6, 9 | Confirmado |
 | PT-03 | TATAGIBA E GALVAO 2019 + KUNRATH SILVA 2023 + ALONSO 2023 | TATAGIBA E GALVAO 2019: 3, 7, 29 \| KUNRATH SILVA 2023: 29 \| ALONSO 2023: 225, 226 | Confirmado |
 | PT-03A | TRF-4 | TRF-4: 348, 395 | Confirmado em fonte primária |
-| PT-03B | TRF-4 | TRF-4: 30, 401 | Confirmado |
+| PT-03B | TRF-4 | TRF-4: 30, 401 | Confirmado em fonte primária |
 | PT-03C | HC 152.752 + MADEIRA ET AL 2022 | MADEIRA ET AL 2022: 256, 267 | Confirmado |
 | PT-03E | TSE RCand | TSE RCand: ementa itens 2-4 e 12; dispositivo | Confirmado em fonte primária |
 | PT-04 | KUNRATH SILVA 2023 + ALONSO 2023 + ARAUJO E SALES 2022 | KUNRATH SILVA 2023: 30 \| ALONSO 2023: 227 \| ARAUJO E SALES 2022: 11 | Confirmado |
 | PT-05 | ARAUJO E SALES 2022 + VON BULOW E ABERS 2024 | ARAUJO E SALES 2022: 5, 6, 8 \| VON BULOW E ABERS 2024: 6, 8 | Confirmado |
-| PT-05A | ADC 43/44/54 | ADC 43/44/54: 2, 31, 489 | Confirmado |
+| PT-05A | ADC 43/44/54 | ADC 43/44/54: 2, 31, 489 | Confirmado em fonte primária |
 | PT-06 | ARAUJO E SALES 2022 + VON BULOW E ABERS 2024 + CESARINO 2022 + CESARINO 2019 | ARAUJO E SALES 2022: 8 \| VON BULOW E ABERS 2024: 1, 3, 6, 9, 11, 12, 13, 14 \| CESARINO 2022: 3, 20 \| CESARINO 2019: 10, 11 | Confirmado |
 | PT-06A | PGR | PGR: 8 | Confirmado |
-| PT-06B | HC 164.493 + HC 193.726-2 | HC 164.493: inteiro teor | Confirmado |
-| PT-06C | HC 193.726 | HC 193.726: 185 | Confirmado |
+| PT-06B | HC 164.493 + HC 193.726-2 | HC 164.493: inteiro teor | Confirmado em fonte primária |
+| PT-06C | HC 193.726 | HC 193.726: 185 | Confirmado em fonte primária |
 | PT-07 | PGR + SNOW VLIEGENTHART E KETELAARS 2019 | PGR: 8, 249 \| SNOW VLIEGENTHART E KETELAARS 2019: 6, 7, 8, 10 | Confirmado em fonte primária |
 | PT-08 | CPMI + CASTANEDA E JENKS 2023 + CHEN LUKITO E KOO 2023 + Estadão 2021 | CPMI: 614 \| CASTANEDA E JENKS 2023: 4, 10 \| CHEN LUKITO E KOO 2023: 1 \| Estadão 2021: inteiro teor — §A fala inteira e sem elisao, §A critica ao ato de 6 de janeiro, §Ressalvas de uso | Confirmado |
 | PT-08A | CPMI | CPMI: 465-468, 466, 467, 468 | Confirmado em fonte primária |
@@ -277,8 +277,8 @@ Cada um aponta arquivo e página. A numeração impressa do relatório da CPMI c
 | PT-53 | Balanço 2026 | Balanço 2026: 4, 5, 6 | Confirmado em fonte primária |
 | PT-54 | CPMI | CPMI: 21 | Confirmado em fonte primária |
 | PT-55 | CPMI | CPMI: 831, 835, 836 | Confirmado em fonte primária |
-| PT-56 | AP 2668 + AP 2668-QO | AP 2668: inteiro teor | Confirmado |
-| PT-57 | AP 2668 | AP 2668: 19, 888 | Confirmado |
+| PT-56 | AP 2668 + AP 2668-QO | AP 2668: inteiro teor | Confirmado em fonte primária |
+| PT-57 | AP 2668 | AP 2668: 19, 888 | Confirmado em fonte primária |
 | PT-58 | Pet 14.129 + EP 169-Transferência | Pet 14.129: 1, 7, 8, 10, 14, 16 \| EP 169-Transferência: 1 | Confirmado em fonte primária |
 | PT-59 | EP 169-Transferência | EP 169-Transferência: 1, 33, 35, 36 | Confirmado em fonte primária |
 | PT-60 | EP 169-Domiciliar | EP 169-Domiciliar: 1, 35, 36, 37, 38, 40 | Confirmado em fonte primária |

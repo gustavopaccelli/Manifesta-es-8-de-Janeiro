@@ -572,7 +572,17 @@ def main():
     # assim que a nota pode contar que Contextual saiu sem a guarda disparar.
     import re as _re0
     aviso = str(dados["metadados"].get("aviso_metodologico") or "")
-    vocab = set(dados["metadados"].get("vocabulario_status_classe") or [])
+    # CHAVE COM `_` E METADADO SOBRE O VOCABULARIO, nao valor do campo.
+    # `vocabulario_status_classe` passou de lista para dicionario com
+    # definicoes em 25/10/2026 (item 83), porque o critério de
+    # `Confirmado em fonte primaria` vivia em prosa dentro de PT-01A e
+    # nunca tinha sido escrito aqui. `set(dict)` devolve as chaves, o que
+    # serve -- menos para `_nota`, que explica a mudanca. O prefixo `_` ja
+    # e a convencao da casa para metadado-sobre-metadado, e a guarda a
+    # respeita em vez de exigir que a nota metodologica "cite a classe
+    # vigente `_nota`".
+    vocab = {c for c in (dados["metadados"].get(
+        "vocabulario_status_classe") or []) if not c.startswith("_")}
     citadas = set(_re0.findall(r"'([^']{4,40})'", aviso))
     nao_citadas = sorted(c for c in vocab if c not in citadas)
     # Nome de classe conhecido, entre aspas, e fora do vocabulario: o residuo de

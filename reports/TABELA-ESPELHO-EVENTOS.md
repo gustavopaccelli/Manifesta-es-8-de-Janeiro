@@ -30,23 +30,23 @@ A versão completa — com os seis campos da figura ao lado dos seis do codebook
 | id | data | evento na figura | fase | classe | nome do mecanismo | ponto | espelho |
 |:--|:--|:--|:--|:--|:--|:--|:--|
 | `PT-01` | jun/2013 | Jornadas de Junho | T-1 Conjuntural | Confirmado | janela de oportunidades politicas aberta no ciclo de 2013, … | — | ✅ |
-| `PT-01A` | 04/11/2014 (decisão do TSE) — 05/11/2015 (relatório final) | PSDB pede auditoria ao TSE | T-1 Conjuntural | Confirmado | proposta de mecanismo, nao atribuida | — | ✅ |
-| `PT-01B` | 29/10/2015 | Uma Ponte para o Futuro | T-1 Conjuntural | Confirmado | proposta de mecanismo, nao atribuida | — | ✅ |
+| `PT-01A` | 04/11/2014 (decisão do TSE) — 05/11/2015 (relatório final) | PSDB pede auditoria ao TSE | T-1 Conjuntural | Confirmado | articulacao inicial do quadro de fraude, refutada pela via … | — | ✅ |
+| `PT-01B` | 29/10/2015 | Uma Ponte para o Futuro | T-1 Conjuntural | Confirmado | defeccao programatica do aliado de coalizao | — | ✅ |
 | `PT-02` | 2015–2016 (ator anterior: mobilização desde 2011, organização desde 2003) | Marchas pró-impeachment | T-1 Conjuntural | Confirmado | apropriacao parcial do repertorio de protesto por contramov… | — | ✅ |
 | `PT-02A` | 17/02/2016 | STF admite prisão em 2ª instância | T-1 Conjuntural | Confirmado | precondicao jurisprudencial do arco judicial | — | ✅ |
 | `PT-03` | 31/08/2016 | Impeachment consumado | T-1 Conjuntural | Confirmado | ressignificacao do protesto | — | ✅ |
 | `PT-03A` | 12/07/2017 | Moro condena Lula (triplex) | T-1 Conjuntural | Confirmado em fonte primária | certificacao judicial do frame anticorrupcao | — | ✅ |
-| `PT-03B` | 24/01/2018 | TRF-4 confirma e amplia a pena | T-1 Conjuntural | Confirmado | acionamento do gatilho de inelegibilidade | — | ✅ |
+| `PT-03B` | 24/01/2018 | TRF-4 confirma e amplia a pena | T-1 Conjuntural | Confirmado em fonte primária | acionamento do gatilho de inelegibilidade | — | ✅ |
 | `PT-03C` | 04/04/2018 | STF nega HC; prisão em Curitiba | T-1 Conjuntural | Confirmado | fechamento da via recursal | PT-03C/D | ✅ |
 | `PT-03D` | 07/04/2018 | STF nega HC; prisão em Curitiba | T-1 Conjuntural | Confirmado | remocao do competidor e reconfiguracao da estrutura de opor… | PT-03C/D | ✅ |
 | `PT-03E` | 31/08–01/09/2018 | TSE barra a candidatura | T-1 Conjuntural | Confirmado em fonte primária | exclusao institucional do favorito | — | ✅ |
 | `PT-04` | 28/10/2018 | Eleição de Bolsonaro | T-1 Conjuntural | Confirmado | incorporacao do movimento ao estado | — | ✅ |
 | `PT-05` | 2019–2022 | Atrito com STF e Congresso | T-1 Conjuntural | Confirmado | erosao do consenso institucional | — | ✅ |
-| `PT-05A` | 07–08/11/2019 | Fim da prisão em 2ª instância; Lula é s… | T-1 Conjuntural | Confirmado | reversao jurisprudencial e reabertura parcial da oportunida… | — | ✅ |
+| `PT-05A` | 07–08/11/2019 | Fim da prisão em 2ª instância; Lula é s… | T-1 Conjuntural | Confirmado em fonte primária | reversao jurisprudencial e reabertura parcial da oportunida… | — | ✅ |
 | `PT-06` | 2020–2021 | Pandemia e radicalização | T-1 Conjuntural | Confirmado | mobilizacao permanente da base por circulacao de enquadrame… | — | ✅ |
 | `PT-06A` | 08/03/2021 | Anulação; elegibilidade restaurada | T-1 Conjuntural | Confirmado | anulacao por vicio de competencia | PT-06A/B/C | ✅ |
-| `PT-06B` | 23/03/2021 (Plenário confirma em 23/06/2021) | Anulação; elegibilidade restaurada | T-1 Conjuntural | Confirmado | descertificacao do agente judicial | PT-06A/B/C | ✅ |
-| `PT-06C` | 15/04/2021 | Anulação; elegibilidade restaurada | T-1 Conjuntural | Confirmado | reabertura da estrutura de oportunidade eleitoral | PT-06A/B/C | ✅ |
+| `PT-06B` | 23/03/2021 (Plenário confirma em 23/06/2021) | Anulação; elegibilidade restaurada | T-1 Conjuntural | Confirmado em fonte primária | descertificacao do agente judicial | PT-06A/B/C | ✅ |
+| `PT-06C` | 15/04/2021 | Anulação; elegibilidade restaurada | T-1 Conjuntural | Confirmado em fonte primária | reabertura da estrutura de oportunidade eleitoral | PT-06A/B/C | ✅ |
 | `PT-07` | 22/03/2021 (primeira deliberação datada pela denúncia) | Primeira deliberação do grupo | T-1 Conjuntural | Confirmado em fonte primária | deliberacao de ruptura e articulacao do quadro de fraude | — | ✅ |
 | `PT-08` | 06/01/2021 | Capitólio (EUA) | T-1 Conjuntural | Confirmado | difusao transnacional / emulacao | — | ✅ |
 | `PT-08A` | out/2022 (05–26/10/2022) | TRÊS MECANISMOS, UM POR REGISTRO. (PT-0… | T-1 Operacional | Confirmado em fonte primária | captura de aparato estatal para fim eleitoral | PT-08A / PT-08B / PT-08C | ✅ |
@@ -107,8 +107,8 @@ A versão completa — com os seis campos da figura ao lado dos seis do codebook
 | `PT-53` | jan/2023 em diante | Inquéritos e 1.335 ações penais | T+1 Resposta judicial | Confirmado em fonte primária | repressao juridica seletiva e escalonada por nucleos (execu… | — | ✅ |
 | `PT-54` | 2023 | Instalação da CPMI | T+1 Resposta legislativa | Confirmado em fonte primária | abertura de arena institucional de atribuicao de responsabi… | — | ✅ |
 | `PT-55` | 17–18/10/2023 | Relatório da CPMI: 61 indiciamentos | T+1 Resposta legislativa | Confirmado em fonte primária | certificacao parlamentar da cadeia causal | — | ✅ |
-| `PT-56` | 11/09/2025 | Condenação do núcleo crucial | T+1 Resposta judicial | Confirmado | fechamento causal "de cima" | — | ✅ |
-| `PT-57` | 15/10/2025 | Acórdão da AP 2668 concluído | T+1 Resposta judicial | Confirmado | consolidacao documental da narrativa causal oficial | — | ✅ |
+| `PT-56` | 11/09/2025 | Condenação do núcleo crucial | T+1 Resposta judicial | Confirmado em fonte primária | fechamento causal "de cima" | — | ✅ |
+| `PT-57` | 15/10/2025 | Acórdão da AP 2668 concluído | T+1 Resposta judicial | Confirmado em fonte primária | consolidacao documental da narrativa causal oficial | — | ✅ |
 | `PT-58` | 22/11/2025 (preventiva) — 25/11/2025 (início do cumprimento da pena) | Prisão de Bolsonaro | T+1 Resposta judicial | Confirmado em fonte primária | responsabilizacao do topo da cadeia | — | ✅ |
 | `PT-59` | 15/01/2026 | Sala de Estado Maior na Papuda | T+1 Resposta judicial | Confirmado em fonte primária | normalizacao da execucao penal do ex-chefe do executivo | — | ✅ |
 | `PT-60` | 24/03/2026 | Prisão domiciliar humanitária | T+1 Resposta judicial | Confirmado em fonte primária | modulacao humanitaria da sancao | — | ✅ |

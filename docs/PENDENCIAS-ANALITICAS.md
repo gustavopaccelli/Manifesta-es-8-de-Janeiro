@@ -4761,3 +4761,65 @@ A guarda confere **uma cadeia só**: `CLASSE NÃO PRIMÁRIA:`.
 **O verificador foi a nove checagens**, e o rótulo do passo 7 acompanhou. `RESULTADO: APROVADO — as nove checagens passaram` · `6 registro(s) em Confirmado com âncora documental apontada` · `OK — todos declaram a razão da classe`.
 
 **Doze passos, seis guardas nomeadas:** G1, G2 e G3 do registro de leitura · G4 do `ledger` · as meias-âncoras no passo 10 · e a checagem 9 da classe.
+
+---
+
+## 87. O conferidor lê âncora não-PDF — treze transcrições que nunca foram examinadas — ✅ 25/10/2026
+
+**Encaminhamento:** *"Ensine o conferidor a ler âncora não-PDF."* — proposto desde 77.5, e listado em 82.6, 84.3 e 86.3.
+
+### 87.1 O que estava sem guarda, e a razão é de fila
+
+Três registros citam a fonte por **localizador estrutural** num arquivo não paginado — **PT-01A** (duas notícias do TSE em `.md`), **PT-03E** (acórdão do TSE em `.html`, 947 KB) e **PT-19A** (post do NetLab em `.md`).
+
+> **`pares()` não cede numeral para `§seção` nem para `inteiro teor`.** Sem par, os três não entravam em `cands` — a fila de candidatos — e por isso contavam na `SEM_PAGINA_EXTRAIVEL_BASE` e **nunca tiveram uma transcrição examinada**. **Treze transcrições sem guarda alguma**, e a razão não era desenho: era a fila excluindo em silêncio.
+>
+> **Contar o que a fila exclui** é lição desta casa desde 18/10, quando a base nasceu justamente para dar nome a eles. **Dar nome não é conferir** — a base os tornou visíveis e não os tornou verificados.
+
+### 87.2 A unidade não é a folha, é o arquivo — e marcação é aparato
+
+`texto_integral()` lê `.md`, `.html`, `.xml` e `.txt`, e reduz o texto pela mesma função que reduz folha. Para peça não paginada a pergunta é a de sempre — **a transcrição está na peça?** — e a unidade é o arquivo inteiro, que é o que `inteiro teor` e `§seção` já diziam.
+
+**E uma descoberta que mediu o que faltava:** na primeira medição **4 das 13 falharam**. Não era defeito do registro:
+
+> O arquivo traz `Encontramos **185 anúncios** com conteúdo golpista`, e a transcrição não tem os asteriscos. **Marcação inline é aparato do formato, não conteúdo da fonte** — exatamente o que o leitor de HTML já fazia com tags, um formato adiante. Retirados `**`, `*`, `_`, crase e o `>` de citação, **as 13 conferem**.
+>
+> **E a minha primeira medição foi grosseira:** usei substring cru e acusei 7 falhas, das quais 3 eram **elisão `(...)`** que a cadeia do projeto trata partindo a transcrição em `fragmentos()`. **Medir com a semântica do próprio conferidor, não com a minha** — refeito, caiu de 7 para 4, e as 4 eram a marcação.
+
+### 87.3 O resultado
+
+| | antes | depois |
+|:--|--:|--:|
+| `confirmados` | 74 | **77** |
+| `SEM_PAGINA_EXTRAIVEL_BASE` | 6 | **3** |
+| exceções em `EXCECOES` | 8 | **5** |
+| PT-01A · PT-03E · PT-19A | fora do alcance | **6/6 · 7/7 · 2/2** |
+| PT-08 | 8/8 **com 3 dispensas** | **11/11 sem nenhuma** |
+
+> **As três exceções de PT-08 saíram, e é o melhor desfecho possível para uma exceção: a correção que ela pedia chegou.** O comentário delas dizia, em 22/10, com estas palavras: *"A correção certa não é esta exceção: é ensinar `localizar()` a ler âncora não-PDF"*. Ficou o registro, porque **exceção que sai por conserto é dado sobre o conserto** — ela mediu, por três dias, exatamente o buraco que o leitor novo fechou.
+
+**Permanecem três fora do alcance, e por razão diferente:** PT-06B, PT-38 e PT-56 citam **PDF** por `inteiro teor`. Ali o conferidor **sabe abrir a peça e não sabe onde olhar**, e varrer PDF inteiro custou **205 s para 16 aspas** em 22/10 — não cabe no ciclo.
+
+### 87.4 A terceira prova negativa consertou a própria linha de base
+
+| | prova | |
+|:--|:--|:--|
+| **1** | cauda editada em transcrição de `.md` | reprova ✔ |
+| **2** | cifra trocada em transcrição de `.html` | reprova ✔ |
+| **3** | registro que **perde** o anexo | **falhou na primeira execução** |
+
+**A prova 3 passou a mensagem e não o código de saída:** `fora do alcance: 4`, o aviso impresso — e **saída zero**. A base **só avisava**.
+
+> **E o comentário dela afirmava o contrário, desde 18/10, com estas palavras:** *"Com a base, o sexto que aparecer **faz o ciclo cair** — porque registro que deixa de ser conferível tem de ser uma decisão, não um efeito colateral."*
+>
+> **Garantia declarada que ninguém confere, pela terceira vez nesta casa** — depois da vigilância de SHA-256 que não cobria arquivo não-PDF e da exclusão inerte por separador de caminho. **A prova pegou porque testou o código de saída, não a mensagem** — e é por isso que prova negativa afere saída, não texto.
+
+Corrigida, a base **reprova**, e as três provas passam.
+
+### 87.5 O que isto deixa
+
+| | |
+|:--|:--|
+| **as duas guardas que declaravam este limite** | a das meias-âncoras e a checagem 9 seguem sem alcançar localizador estrutural **em PDF**; para `.md` e `.html` o limite caiu junto, porque as duas usam `pares()` |
+| **os três que restam** | varrer PDF inteiro no ciclo custaria minutos. **Um cache de texto por folha, indexado pelo SHA-256 que a checagem 8 já vigia**, resolveria — e é desenho novo, não listado antes |
+| **exceção ociosa não é acusada** | nada avisa quando uma entrada de `EXCECOES` deixa de ser usada. As três de PT-08 eu removi **porque fui olhar**; a quarta ficaria |

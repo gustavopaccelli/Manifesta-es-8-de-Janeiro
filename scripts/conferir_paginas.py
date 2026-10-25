@@ -63,6 +63,7 @@ Uso:
     python scripts/conferir_paginas.py --todos -v   # mostra cada transcrição
 """
 
+import html
 import json
 import random
 import re
@@ -123,28 +124,18 @@ EXCECOES = {
         "o conferidor não a acha — o que está certo. Citar uma citação é o que o "
         "projeto proibiu em 30/09, e a exceção existe para que a proibição fique "
         "legível em vez de virar falha silenciosa",
-    # AS TRES ABAIXO entraram em 22/10/2026, rota (b) do item 76, e sao de um
-    # tipo NOVO: PT-08 e o PRIMEIRO registro do codebook a misturar ancora PDF e
-    # ancora NAO-PDF. As transcricoes sao da materia do Estadao, citada por
-    # LOCALIZADOR ESTRUTURAL num `.md`, e `localizar()` so abre PDF -- de modo
-    # que ela as procura nas folhas de Castaneda, Chen e CPMI, onde nao estao.
+    # AS TRES EXCECOES DE PT-08 SAIRAM EM 25/10/2026, e e o melhor desfecho
+    # possivel para uma excecao: **a correcao que ela pedia chegou.** Elas
+    # entraram em 22/10 porque as transcricoes da materia do Estadao estao num
+    # `.md` citado por localizador estrutural, e `localizar()` so abria PDF --
+    # de modo que ele as procurava nas folhas de Castaneda, Chen e CPMI, onde
+    # nao estao. O comentario delas dizia, com estas palavras: "A correcao
+    # certa nao e esta excecao: e ensinar `localizar()` a ler ancora nao-PDF".
     #
-    # NAO E O MESMO CASO DAS ANTERIORES: aqui a peca ESTA em `fonte_local` e em
-    # `fonte_pagina`, com as secoes que a checagem 5 resolve contra os cabecalhos
-    # do arquivo. A transcricao e ancora de verdade; o que falta e o conferidor
-    # saber abrir texto que nao e PDF. **A correcao certa nao e esta excecao: e
-    # ensinar `localizar()` a ler ancora nao-PDF**, o que tornaria verificaveis
-    # tambem os seis registros hoje "fora do alcance" -- e mudaria
-    # SEM_PAGINA_EXTRAIVEL_BASE e a linha de base do passo 10, que sao decisao
-    # do pesquisador. Fica proposto no item 77.5.
-    ("PT-08", "foi um movimento desorganizado"):
-        "Estadão (08/03/2021), transcrito em Fontes/09_Arquivamento-web/ e citado "
-        "por localizador estrutural; o conferidor só abre PDF",
-    ("PT-08", "a invasao nao serviu de nada"):
-        "idem — §A critica ao ato de 6 de janeiro",
-    ("PT-08", "se fosse organizada, teriam tomado o capitolio"):
-        "idem — §A fala inteira e sem elisao. É a fala que a rota (b) foi buscar "
-        "na fonte, e cuja elisão em Lacerda (2022) a ida à matéria desfez",
+    # Foi o que o item 87 fez. As tres conferem no proprio `.md`, e PT-08
+    # passou de 8/8 com tres dispensas a **11/11 sem nenhuma**. Fica o registro
+    # porque excecao que sai por conserto e dado sobre o conserto: ela media,
+    # durante tres dias, exatamente o buraco que o leitor novo fechou.
 }
 
 
@@ -238,7 +229,14 @@ EMPATES_BASE = 0
 # do TSE sobre a auditoria do PSDB de 2014 -- peca sem paginacao, citada por
 # `§secao`, e e o segundo uso da convencao criada em 16/10. A checagem 5 resolve
 # os cinco localizadores dele contra os cabecalhos dos arquivos vinculados.
-SEM_PAGINA_EXTRAIVEL_BASE = 6
+# 25/10/2026: passa de SEIS para TRES, e e reducao de alcance cego, nao
+# afrouxamento. PT-01A, PT-03E e PT-19A citam por localizador estrutural
+# num `.md` ou `.html`, e o conferidor passou a ler ancora nao-PDF (item
+# 87): as treze transcricoes deles, nunca examinadas, passaram a conferir
+# no arquivo inteiro. Permanecem TRES, e por outra razao -- PT-06B, PT-38
+# e PT-56 citam PDF por `inteiro teor`: o conferidor sabe abrir a peca e
+# nao sabe ONDE olhar, e varrer PDF inteiro custa 205 s para 16 aspas.
+SEM_PAGINA_EXTRAIVEL_BASE = 3
 
 # LINHA DE BASE DAS MEIAS-ANCORAS: ZERO, medida em 22/10/2026 (itens 80 e
 # 81) e zerada no mesmo dia.
@@ -556,6 +554,80 @@ def meias_ancoras(e, pp, docs):
     return achados
 
 
+# ------------------------------------------------------- ANCORA NAO-PDF ---
+# ACRESCENTADO EM 25/10/2026 (item 87). Tres registros citam a fonte por
+# LOCALIZADOR ESTRUTURAL num arquivo `.md` ou `.html` -- PT-01A (noticias do
+# TSE), PT-03E (acordao do TSE em HTML) e PT-19A (post do NetLab) -- e NUNCA
+# FORAM CONFERIDOS: `pares()` nao cede numeral para `§secao`, entao eles nao
+# entram em `cands` e contam na SEM_PAGINA_EXTRAIVEL_BASE. Treze transcricoes
+# sem nenhuma guarda.
+#
+# A UNIDADE AQUI NAO E A FOLHA, E O ARQUIVO. Arquivo sem paginacao nao tem
+# folha para abrir, e a convencao do projeto -- criada em 16/10 para PT-19A e
+# praticada por PT-03E desde 15/10 -- cita `§secao`, que a checagem 5 resolve
+# contra os cabecalhos. Aqui a pergunta e a mesma de sempre: a transcricao esta
+# na peca?
+#
+# E MARCACAO E APARATO DO FORMATO, NAO CONTEUDO DA FONTE. Medido: 4 das 13
+# transcricoes so passaram a conferir quando a marcacao inline do Markdown
+# saiu, porque o arquivo traz `Encontramos **185 anuncios** com conteudo
+# golpista` e a transcricao nao tem os asteriscos. E o mesmo que o leitor de
+# HTML ja fazia com tags, um formato adiante.
+MD_INLINE = re.compile(r"\*\*|\*|__|`|~~")
+MD_CITACAO = re.compile(r"^\s{0,3}>\s?", re.M)
+HTML_BLOCO = re.compile(r"<(script|style)\b[^>]*>.*?</\1>", re.S | re.I)
+HTML_TAGS = re.compile(r"<[^>]+>")
+NAO_PDF_LEGIVEL = (".md", ".markdown", ".html", ".htm", ".xml", ".txt")
+
+
+def texto_integral(caminho):
+    """Texto de peca NAO paginada, reduzido como `_sem_apoio` reduz folha.
+
+    Devolve None quando a extensao nao e de texto legivel -- PDF cai fora de
+    proposito, porque para ele a unidade e a folha e quem decide e `localizar`.
+    """
+    if not caminho.lower().endswith(NAO_PDF_LEGIVEL):
+        return None
+    chave = ("integral", caminho)
+    pronto = _cache.get(chave)
+    if pronto is None:
+        with open(str(RAIZ / caminho), encoding="utf-8",
+                  errors="replace") as fh:
+            bruto = fh.read()
+        baixo = caminho.lower()
+        if baixo.endswith((".html", ".htm", ".xml")):
+            bruto = HTML_BLOCO.sub(" ", bruto)
+            bruto = HTML_TAGS.sub(" ", bruto)
+            bruto = html.unescape(bruto)
+        elif baixo.endswith((".md", ".markdown")):
+            bruto = MD_CITACAO.sub("", bruto)
+            bruto = MD_INLINE.sub("", bruto)
+        pronto = _cache[chave] = _sem_apoio(bruto)
+    return pronto
+
+
+def anexos_legiveis(e):
+    """Os anexos NAO-PDF de `fonte_local` que este conferidor sabe abrir."""
+    out = []
+    for p in (e.get("fonte_local") or "").split(";"):
+        p = p.strip().replace("\\", "/")
+        if p and p.lower().endswith(NAO_PDF_LEGIVEL) and (RAIZ / p).exists():
+            out.append(p)
+    return out
+
+
+def localizar_nao_pdf(frag, anexos):
+    """O fragmento esta em algum anexo nao-PDF? Devolve o caminho, ou None."""
+    alvo = _sem_apoio(frag)
+    if not alvo:
+        return None
+    for cam in anexos:
+        txt = texto_integral(cam)
+        if txt and alvo in txt:
+            return cam
+    return None
+
+
 def pares(fonte_pagina):
     """'CPMI: 646, 711 | Cappelli: 55, 57' -> [('CPMI',[646,711]),('Cappelli',[55,57])]
 
@@ -754,7 +826,13 @@ def main():
     docs = dados["metadados"]["registro_documentos"]
     eventos = {e["id"]: e for e in dados["eventos"]}
 
-    cands = [e for e in dados["eventos"] if pares(e.get("fonte_pagina"))]
+    # OS CANDIDATOS INCLUEM ANCORA NAO-PDF desde 25/10/2026 (item 87): ate aqui
+    # a fila exigia par de `pares()`, e registro que cita por localizador
+    # estrutural num `.md` ou `.html` nao entrava nela -- tres registros com
+    # treze transcricoes nunca examinadas. Contar o que a fila exclui e licao
+    # desta casa; aqui a fila deixa de excluir.
+    cands = [e for e in dados["eventos"]
+             if pares(e.get("fonte_pagina")) or anexos_legiveis(e)]
     if args:
         alvos_reg = [eventos[a] for a in args if a in eventos]
     elif todos:
@@ -770,6 +848,7 @@ def main():
     falhas, ociosas_total, excecoes_usadas = [], 0, 0
     empatados = []
     meias = []          # a guarda de 22/10/2026 — ver MEIAS_ANCORAS_BASE
+    nao_pdf = []        # ancora nao-PDF localizada — ver item 87
 
     aninhadas = {}
     for e in alvos_reg:
@@ -778,11 +857,18 @@ def main():
             aninhadas[e["id"]] = perdidas
 
         pp = pares(e.get("fonte_pagina"))
-        if not pp:
+        # OS ANEXOS NAO-PDF ENTRAM NO PORTAO desde 25/10/2026 (item 87):
+        # registro que cita por localizador estrutural num `.md` ou
+        # `.html` tem onde ser conferido, e ate aqui saia por um destes
+        # `continue` sem nunca ter transcricao examinada.
+        anexos = anexos_legiveis(e)
+        if not pp and not anexos:
             print("  {:<7} ~  sem página estruturada".format(e["id"]))
             indet += 1
             continue
-        if not any((docs.get(c) or "").lower().endswith(".pdf") for c, _ in pp):
+        tem_pdf = any((docs.get(c) or "").lower().endswith(".pdf")
+                      for c, _ in pp)
+        if not tem_pdf and not anexos:
             print("  {:<7} ~  {} fora do alcance (não é PDF)".format(
                 e["id"], ", ".join(c for c, _ in pp)))
             indet += 1
@@ -806,6 +892,7 @@ def main():
             continue
 
         achados, perdidas, usadas, fracas, parciais = [], [], set(), 0, 0
+        em_anexo = []       # fragmentos achados em anexo nao-PDF
         atravessa = notas = 0
         for cit in cits:
             for frag in fragmentos(cit):
@@ -838,6 +925,16 @@ def main():
                     elif _est == "parcial":
                         parciais += 1
                     continue
+                # O RAMO NAO-PDF, antes da excecao: a peca sem paginacao
+                # confere no ARQUIVO INTEIRO, porque nela a unidade nao e
+                # a folha. Vem antes de EXCECOES de proposito -- tres das
+                # oito excecoes existiam so porque este ramo nao existia,
+                # e o comentario delas dizia isso.
+                cam = localizar_nao_pdf(frag, anexos)
+                if cam:
+                    nao_pdf.append((e["id"], cam, frag))
+                    em_anexo.append((frag, cam))
+                    continue
                 chave = next((k for k in EXCECOES
                               if k[0] == e["id"] and norm(frag).startswith(k[1])), None)
                 if chave:
@@ -850,14 +947,23 @@ def main():
         ociosas = sorted(todas - usadas)
         ociosas_total += len(ociosas)
 
-        total = len(achados) + len(perdidas)
+        # O TOTAL CONTA O ANEXO NAO-PDF, desde 25/10/2026 (item 87). Sem
+        # isso os registros de ancora nao paginada relatavam `OK 0/0
+        # localizadas`, e **OK de total zero e pior que falha**: diz que
+        # nada foi conferido com a cara de quem verificou tudo.
+        total = len(achados) + len(em_anexo) + len(perdidas)
         onde_txt = ", ".join("{} p.{}".format(c, p) for c, p in sorted(usadas)[:4])
         if len(usadas) > 4:
             onde_txt += ", +{}".format(len(usadas) - 4)
+        if em_anexo:
+            _anx = sorted({c.split("/")[-1] for _, c in em_anexo})
+            onde_txt = (onde_txt + " · " if onde_txt else "") + \
+                "§{} em {}".format(len(em_anexo), ", ".join(_anx)[:58])
 
         if perdidas:
             print("  {:<7} X  {}/{} localizadas · {}".format(
-                e["id"], len(achados), total, onde_txt or "nenhuma"))
+                e["id"], len(achados) + len(em_anexo), total,
+                onde_txt or "nenhuma"))
             for frag in perdidas:
                 print("          não localizada: «{}…»".format(norm(frag)[:64]))
             falhas.append(e["id"])
@@ -865,7 +971,8 @@ def main():
         else:
             marca = "OK" if not fracas else "OK"
             print("  {:<7} {} {}/{} localizadas · {}{}{}".format(
-                e["id"], marca, len(achados), total, onde_txt,
+                e["id"], marca, len(achados) + len(em_anexo), total,
+                onde_txt,
                 "  ({} por janela curta)".format(fracas) if fracas else "",
                 "  ({} só por janela, texto integral não confere)".format(parciais)
                 if parciais else ""))
@@ -890,20 +997,40 @@ def main():
     # `pares()` nao devolve par e eles nunca entram em `cands`. Antes disto eles
     # simplesmente NAO APARECIAM -- e contagem que nao imprime o que exclui
     # ensina a confiar no total errado.
+    # DEIXA DE CONTAR QUEM TEM ANEXO LEGIVEL, desde 25/10/2026 (item 87):
+    # registro que cita por localizador estrutural num `.md` ou `.html`
+    # passou a ser conferido no arquivo inteiro, e por isso sai desta
+    # lista. Quem permanece sao os PDF citados por `inteiro teor`, para os
+    # quais o conferidor sabe abrir a peca e nao sabe ONDE olhar -- e
+    # varrer PDF inteiro custa 205 s para 16 aspas, medido em 22/10.
     sem_extraivel = sorted(e["id"] for e in dados["eventos"]
                            if (e.get("fonte_pagina") or "").strip()
-                           and not pares(e.get("fonte_pagina")))
+                           and not pares(e.get("fonte_pagina"))
+                           and not anexos_legiveis(e))
     print("fora do alcance deste conferidor: {} registro(s) com `fonte_pagina` e "
           "sem página extraível — {}".format(len(sem_extraivel),
                                              ", ".join(sem_extraivel)))
     print("  citam por localizador estrutural (inteiro teor, peça integral, seção);")
     print("  a folha deles não existe, e por isso não há o que abrir.")
     if len(sem_extraivel) != SEM_PAGINA_EXTRAIVEL_BASE:
-        print("  ~ ATENÇÃO: a linha de base de 18/10/2026 é {}. Um registro deixou "
-              "de ser conferível,".format(SEM_PAGINA_EXTRAIVEL_BASE))
-        print("    ou voltou a ser: confira qual e por quê, e atualize "
-              "SEM_PAGINA_EXTRAIVEL_BASE")
-        print("    neste arquivo dizendo no commit a razão.")
+        # PASSA A REPROVAR EM 25/10/2026 (item 87), e e correcao de
+        # garantia declarada: o comentario desta base diz, desde 18/10,
+        # que "o sexto que aparecer FAZ O CICLO CAIR" -- e ela so
+        # imprimia aviso, com codigo de saida zero. Achado pela prova
+        # negativa do leitor de ancora nao-PDF, que testou o CODIGO DE
+        # SAIDA em vez da mensagem. **Garantia que ninguem confere e a
+        # que nao existe**, pela terceira vez nesta casa.
+        falhas.append("alcance do conferidor mudou: {} registro(s) sem "
+                      "página extraível, base {}"
+                      .format(len(sem_extraivel),
+                              SEM_PAGINA_EXTRAIVEL_BASE))
+        print("  X A linha de base do alcance é {}, e agora são {}. Um "
+              "registro deixou de ser".format(
+                  SEM_PAGINA_EXTRAIVEL_BASE, len(sem_extraivel)))
+        print("    conferível, ou voltou a ser: confira qual e por quê, "
+              "e atualize")
+        print("    SEM_PAGINA_EXTRAIVEL_BASE neste arquivo dizendo no "
+              "commit a razão.")
     # A GUARDA DAS MEIAS-ANCORAS, de 22/10/2026 — ver MEIAS_ANCORAS_BASE.
     print("meias-âncoras: {} (base {}) — aspa que sustenta afirmação do "
           "registro, vive só em campo de nota".format(len(meias),

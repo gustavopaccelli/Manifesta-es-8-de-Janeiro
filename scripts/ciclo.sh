@@ -53,7 +53,7 @@ echo "== 6/12  gerar_registro_leitura — estado de leitura -> docs/referencial/
 python scripts/gerar_registro_leitura.py
 echo
 
-echo "== 7/12  verificar_integridade — oito checagens estruturais"
+echo "== 7/12  verificar_integridade — nove checagens estruturais"
 python scripts/verificar_integridade.py
 
 echo "== 8/12  conferir_figuras — as figuras de reports/figures/ x codebook"

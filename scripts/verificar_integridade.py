@@ -3,7 +3,7 @@
 """
 Verificação de integridade do aparato do process tracing.
 
-Roda oito checagens e devolve código de saída != 0 se qualquer uma falhar.
+Roda nove checagens e devolve código de saída != 0 se qualquer uma falhar.
 Pensada para ser executada depois de toda alteração no codebook — é o que
 garante que JSON, CSV e XLSX não voltem a divergir.
 
@@ -683,6 +683,74 @@ def main():
         if not (faltam or sobram or mudou):
             print("  OK — presença e SHA-256 batem peça por peça")
 
+
+    # ---------------------------------------------------------------------- 9
+    # CLASSE INFERIOR COM ANCORA DOCUMENTAL APONTADA TEM DE DIZER POR QUE.
+    #
+    # Nasceu em 25/10/2026 (item 86) do que o item 83 revelou: o criterio de
+    # `Confirmado em fonte primaria` vivia em PROSA dentro de PT-01A e nunca
+    # tinha sido escrito em `vocabulario_status_classe`. Escrito, ele promoveu
+    # SEIS registros -- o dobro do que a pendencia nomeava -- porque ninguem
+    # podia ler o criterio para aplica-lo aos treze candidatos.
+    #
+    # A GUARDA NAO DECIDE A CLASSE, e nao poderia: duas das tres condicoes do
+    # vocabulario nao sao decidiveis por maquina. "A peca do proprio ato" e
+    # semantico -- PT-27 ancora a CPMI, documental, que CITA outra peca; PT-02A
+    # ancora o acordao de OUTRO processo. E "insuficiencia pendente" e juizo de
+    # prosa. O que ela exige e que o DESVIO SEJA EXPLICADO: registro em
+    # `Confirmado` que ancore peca documental COM localizador que a aponte tem
+    # de trazer a marca canonica no `status_verificacao`. E a forma de
+    # PARCIAIS_BASE -- a excecao e legitima e tem de estar escrita.
+    #
+    # UMA MARCA, NAO UMA LISTA. Lista de marcas e a fragilidade que esta casa
+    # pagou duas vezes: a checagem 7 era cega a caixa e passou nome morto por
+    # onze dias, e a G2 nao tinha a forma coletiva da negacao e nao EXAMINOU a
+    # linha falsa. Aqui a guarda confere uma cadeia so.
+    #
+    # LIMITE DECLARADO: ela nao alcanca quem cita por LOCALIZADOR ESTRUTURAL,
+    # porque `pares()` nao cede numeral para `inteiro teor` nem para `§secao`.
+    # Medido em 25/10/2026: PT-01A, PT-19A e PT-38 caem fora por isso, e os
+    # tres declaram a razao de todo modo. Alcance da guarda: SEIS registros.
+    cabecalho(9, "CLASSE INFERIOR COM ÂNCORA DOCUMENTAL DIZ POR QUÊ")
+    import sys as _sys9
+    _sys9.path.insert(0, str(RAIZ / "scripts"))
+    from conferir_paginas import pares as _pares9
+    MARCA_CLASSE = "CLASSE NÃO PRIMÁRIA:"
+    LIT_EIXOS = {"05", "12", "13", "14", "15"}
+    _rd = dados["metadados"]["registro_documentos"]
+    _mudos, _alcance = [], 0
+    for ev in dados["eventos"]:
+        if ev.get("status_classe") != "Confirmado":
+            continue
+        _docum = set()
+        for _p in (ev.get("fonte_local") or "").split(";"):
+            _p = _p.strip().replace("\\", "/")
+            _m = re.match(r"Fontes/(\d{2})_", _p)
+            if _m and _m.group(1) not in LIT_EIXOS:
+                _docum.add(_p)
+        _aponta = None
+        for _cod, _ in _pares9(ev.get("fonte_pagina")):
+            if (_rd.get(_cod) or "").replace("\\", "/") in _docum:
+                _aponta = _cod
+                break
+        if not _aponta:
+            continue
+        _alcance += 1
+        if MARCA_CLASSE not in (ev.get("status_verificacao") or ""):
+            _mudos.append((ev["id"], _aponta))
+    print("  %d registro(s) em `Confirmado` com âncora documental apontada"
+          % _alcance)
+    for _rid, _cod in _mudos:
+        falhas.append("classe sem razão declarada: {} ancora {} e não traz "
+                      "a marca".format(_rid, _cod))
+        print("    X {} ancora {} com localizador e NAO declara por que a "
+              "classe nao e primaria".format(_rid, _cod))
+    if _mudos:
+        print("    escreva `" + MARCA_CLASSE + " <razao>` no "
+              "status_verificacao, ou promova a classe")
+    else:
+        print("  OK — todos declaram a razão da classe")
+
     # --------------------------------------------------------------------- --
     print("\n" + "=" * 72)
     if falhas:
@@ -690,7 +758,7 @@ def main():
         for f in falhas:
             print("  X " + f)
     else:
-        print("RESULTADO: APROVADO — as oito checagens passaram")
+        print("RESULTADO: APROVADO — as nove checagens passaram")
     for a in avisos:
         print("  ~ aviso: " + a)
     print("=" * 72)

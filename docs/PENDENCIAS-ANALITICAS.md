@@ -4699,3 +4699,65 @@ O registro diz *"por **6 votos a 5**"*. Varri as **464 folhas** por `6 x 5` e po
 > **Com isto, a classe de cada registro do codebook é consequência de critério escrito, e nenhuma delas depende de decisão pendente.**
 
 **Três tarefas abertas:** 10, 17 e 16. E a guarda das três condições segue proposta e não construída, com base agora em **68**.
+
+---
+
+## 86. A guarda das três condições — e duas delas não são mecanizáveis — ✅ 25/10/2026
+
+**Encaminhamento:** *"Construa a guarda das três condições."* — a que eu listei em 83.4, 84.3 e 85.4 e não construí.
+
+### 86.1 O desenho mudou na primeira medição, e é a parte que importa
+
+Eu prometi uma guarda para as três condições do vocabulário. **Duas delas não são decidíveis por máquina:**
+
+| condição | mecanizável? |
+|:--|:--|
+| (1) `fonte_local` inclui **a peça do próprio ato** | ✘ **semântico.** PT-27 ancora a CPMI, que é documental e **cita outra peça**; PT-02A ancora o acórdão de **outro processo**. Nenhum código distingue "a peça do ato" de "peça que documenta o ato" |
+| (2) `fonte_pagina` **localiza** nessa peça | ✔ `pares()` mais `registro_documentos` resolvem |
+| (3) nenhuma **insuficiência pendente** declarada | ✘ **juízo de prosa** |
+
+> **Então a guarda não decide a classe — ela exige que o desvio seja explicado.** Registro em `Confirmado` que ancore peça **documental** com **localizador que a aponte** tem de trazer a marca canônica. **É a forma de `PARCIAIS_BASE`:** a exceção é legítima, e tem de estar escrita.
+>
+> **Uma guarda que tentasse decidir a classe estaria errada em dois dos seis casos que ela testa** — e errada com a aprovação do ciclo, que é o pior defeito possível.
+
+### 86.2 Uma marca, não uma lista
+
+A guarda confere **uma cadeia só**: `CLASSE NÃO PRIMÁRIA:`.
+
+> **Lista de marcas é a fragilidade que esta casa já pagou duas vezes:** a checagem 7 era **cega à caixa** e deixou passar nome morto por onze dias (item 70); e a G2 **não tinha a forma coletiva da negação** e por isso **não examinou** a linha falsa do `ledger` (item 78). Marca única não tem meia-cobertura.
+
+**Medido antes de construir:** a guarda alcança **seis** registros, e só **PT-01B** tinha declaração explícita. Os outros cinco — **PT-02A, PT-06A, PT-08, PT-27, PT-50A** — tinham a razão em prosa e ganharam a marca, cada uma com o motivo que já carregavam:
+
+| registro | razão |
+|:--|:--|
+| **PT-01B** | atribuição externa: o documento é **internamente anônimo** |
+| **PT-02A** | a peça do ato não está no corpus — o acórdão do HC 126.292 não foi obtido |
+| **PT-06A** | idem: a decisão monocrática de 08/03/2021 não foi obtida |
+| **PT-08** | a afirmação central está em **literatura revisada por pares** |
+| **PT-27** | a fonte documental **cita outra peça**, e o original está no corpus |
+| **PT-50A** | relatório de laboratório **não revisado por pares**, categoria operacionalizada pelos autores |
+
+### 86.3 O limite, declarado e medido
+
+**A guarda não alcança quem cita por localizador estrutural**, porque `pares()` não cede numeral para `inteiro teor` nem para `§seção`. **Medido: PT-01A, PT-19A e PT-38 caem fora** — e os três declaram a razão de todo modo.
+
+É o mesmo limite da guarda das meias-âncoras, e a mesma causa: **o conferidor abre PDF numa folha, e localizador estrutural não tem folha.** Ensiná-lo a ler âncora não-PDF resolveria os dois de uma vez, e muda `SEM_PAGINA_EXTRAIVEL_BASE` — segue sua decisão, proposta desde 77.5.
+
+### 86.4 Quatro provas negativas, e a segunda é a que mais vale
+
+| | prova | |
+|:--|:--|:--|
+| **1** | tirar a marca de um dos seis | cai ✔ |
+| **2** | **rebaixar um registro primário** sem escrever razão | **cai** ✔ |
+| **3** | rebaixar um que ancora só literatura | não acusa ✔ — **limite** |
+| **4** | promover o registro tira-o do alcance | não acusa ✔ |
+
+> **A prova 2 é a que justifica a guarda:** ela mostra que a guarda cobre **regressão**, não só o estado de hoje. Alguém que rebaixe um dos 68 primários sem escrever por quê faz o ciclo cair — e é exatamente assim que os treze candidatos se acumularam em silêncio entre 15/10 e 25/10.
+
+**As quatro restauram de cópia em memória, com SHA-256 conferido** — pela lição de 22/10, em que uma prova minha revertia por `git checkout --` e **destruiu trabalho não comitado**.
+
+### 86.5 O ciclo
+
+**O verificador foi a nove checagens**, e o rótulo do passo 7 acompanhou. `RESULTADO: APROVADO — as nove checagens passaram` · `6 registro(s) em Confirmado com âncora documental apontada` · `OK — todos declaram a razão da classe`.
+
+**Doze passos, seis guardas nomeadas:** G1, G2 e G3 do registro de leitura · G4 do `ledger` · as meias-âncoras no passo 10 · e a checagem 9 da classe.

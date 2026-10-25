@@ -45,3 +45,8 @@ Thumbs.db
 # Seguem versionados, de propósito: o manifesto, os LEIA-ME de cada eixo, as
 # transcrições em `.md` que eu mesmo produzi e o `.html` de ato judicial público.
 Fontes/**/*.pdf
+
+# O CACHE DE FOLHA e derivado: some sem perda, e a proxima rodada o
+# reconstroi a partir do PDF cuja checagem 8 vigia o SHA-256. Fica fora do
+# git porque e caro em bytes e nao e fonte de nada (item 88).
+data/cache/

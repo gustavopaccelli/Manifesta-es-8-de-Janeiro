@@ -63,6 +63,8 @@ Uso:
     python scripts/conferir_paginas.py --todos -v   # mostra cada transcrição
 """
 
+import gzip
+import hashlib
 import html
 import json
 import random
@@ -236,7 +238,35 @@ EMPATES_BASE = 0
 # no arquivo inteiro. Permanecem TRES, e por outra razao -- PT-06B, PT-38
 # e PT-56 citam PDF por `inteiro teor`: o conferidor sabe abrir a peca e
 # nao sabe ONDE olhar, e varrer PDF inteiro custa 205 s para 16 aspas.
-SEM_PAGINA_EXTRAIVEL_BASE = 3
+SEM_PAGINA_EXTRAIVEL_BASE = 0
+
+# LINHA DE BASE DA TRANSCRICAO QUE NAO ESTA NA PECA CITADA: CINCO, medida
+# em 25/10/2026 (item 88) e e categoria NOVA, nao afrouxamento.
+#
+# Ate aqui PT-06B, PT-38 e PT-56 eram "fora do alcance": citam PDF por
+# `inteiro teor`, e o conferidor sabia abrir a peca e nao sabia ONDE
+# olhar. Com o cache de folha ele varreu as 2.874 folhas das cinco pecas
+# -- 151 s na construcao, 0,27 s depois -- e provou coisa MAIS FORTE que
+# falta de alcance: **as cinco transcricoes nao estao nas pecas citadas.**
+#
+# A CAUSA E UNICA e esta medida: as cinco sao manchete ou texto da pagina
+# de `fonte_url` -- notas do portal do STF e materias da Agencia Brasil --
+# e `fonte_pagina` cita um PDF por `inteiro teor`. PT-38 e a prova mais
+# limpa: `11,4 milhoes`, `prejuizo financeiro` e `furtados` tem ZERO
+# ocorrencias nas 210 folhas do livro, que TEM camada de texto (68 mil
+# caracteres nas 30 primeiras folhas) -- e a `fonte_url` dele e uma
+# materia de setembro de 2024.
+#
+# O CONSERTO EXISTE E JA FOI FEITO UMA VEZ: arquivar a pagina em
+# `Fontes/09_Arquivamento-web/` como `.md` e cita-la por localizador
+# estrutural, que foi a rota (b) do item 76 para PT-08 em 22/10 e que o
+# leitor de ancora nao-PDF (item 87) confere. **E coleta na web, e coleta
+# e decisao do pesquisador** -- fica listado no item 88.
+#
+# Com a base, a sexta que aparecer faz o ciclo cair. E a base REPROVA --
+# nao avisa --, pela licao de 25/10: a de alcance so avisava, com codigo
+# de saida zero, enquanto o comentario dela dizia o contrario.
+INTEIRO_TEOR_SEM_ACHADO_BASE = 5
 
 # LINHA DE BASE DAS MEIAS-ANCORAS: ZERO, medida em 22/10/2026 (itens 80 e
 # 81) e zerada no mesmo dia.
@@ -628,6 +658,106 @@ def localizar_nao_pdf(frag, anexos):
     return None
 
 
+# --------------------------------------------------- CACHE DE FOLHA EM DISCO
+# ACRESCENTADO EM 25/10/2026 (item 88). Tres registros citam PDF por `inteiro
+# teor` e por isso ficavam fora do alcance: o conferidor sabe abrir a peca e
+# nao sabe ONDE olhar. As 2.874 folhas deles custam 144 s medidos -- por rodada
+# de ciclo e inviavel, e sem varredura a afirmacao deles fica INGUARDAVEL.
+#
+# A CHAVE TEM DUAS PARTES, e a segunda e a que importa:
+#   - o SHA-256 do PDF, que a checagem 8 do ciclo ja vigia peca por peca;
+#   - **a versao da receita de extracao.** `texto_pagina` concatena TRES
+#     leituras -- PyPDF2, PyMuPDF e PyMuPDF com conserto de glifo -- e
+#     normaliza. Se a receita mudar e o cache sobreviver, ele passa a responder
+#     pela receita velha, e **cache que sobrevive a uma mudanca no extrator e
+#     cache que mente**. Mexer em `texto_pagina`, em `_mupdf` ou em
+#     `norm_busca` obriga a subir o numero abaixo.
+#
+# O cache e DERIVADO e fica fora do git: `data/cache/` esta no .gitignore. Ele
+# nao e fonte de nada -- some sem perda, e a proxima rodada o reconstroi.
+RECEITA_EXTRACAO = "v1"
+CACHE_DIR = RAIZ / "data/cache/folhas"
+
+
+def _sha_arquivo(caminho):
+    h = hashlib.sha256()
+    with open(str(RAIZ / caminho), "rb") as fh:
+        for bloco in iter(lambda: fh.read(1 << 20), b""):
+            h.update(bloco)
+    return h.hexdigest()
+
+
+def folhas_da_peca(caminho, verboso=False):
+    """Texto reduzido de TODAS as folhas de um PDF, com cache em disco.
+
+    Devolve [(n, texto_reduzido)]. O texto ja vem por `_sem_apoio`, que e a
+    reducao com que as comparacoes integrais sao feitas -- guardar o bruto
+    custaria o triplo e nenhuma pergunta deste arquivo o usa.
+    """
+    sha = _sha_arquivo(caminho)
+    alvo = CACHE_DIR / ("%s-%s.json.gz" % (sha[:32], RECEITA_EXTRACAO))
+    if alvo.exists():
+        with gzip.open(str(alvo), "rt", encoding="utf-8") as fh:
+            d = json.load(fh)
+        # O arquivo so e aceito se as DUAS partes da chave baterem. O nome ja
+        # as carrega; conferir o conteudo pega cache renomeado a mao.
+        if d.get("sha256") == sha and d.get("receita") == RECEITA_EXTRACAO:
+            return [(i + 1, s) for i, s in enumerate(d["folhas"])]
+    folhas, n = [], 1
+    while True:
+        txt = texto_pagina(caminho, n)
+        if txt is None:
+            break
+        folhas.append(_sem_apoio(txt))
+        n += 1
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    with gzip.open(str(alvo), "wt", encoding="utf-8") as fh:
+        json.dump({"sha256": sha, "receita": RECEITA_EXTRACAO,
+                   "caminho": caminho, "folhas": folhas}, fh)
+    if verboso:
+        print("    cache gravado: %s (%d folhas, %d KB)"
+              % (alvo.name, len(folhas), alvo.stat().st_size // 1024))
+    return [(i + 1, s) for i, s in enumerate(folhas)]
+
+
+def pdfs_integrais(e, docs):
+    """Os PDFs que o registro cita SEM FOLHA -- `inteiro teor`, secao, item.
+
+    **A busca integral vale SO aqui, e a restricao e o ponto.** Aplicada a todo
+    fragmento nao localizado, ela resgataria ancora creditada a FOLHA ERRADA --
+    o defeito que o item 52 mediu em quatro registros e que a folha existe para
+    pegar. `inteiro teor` autoriza procurar em qualquer folha porque e o que o
+    campo afirma; `fonte_pagina: 185` nao.
+    """
+    out = []
+    for seg in (e.get("fonte_pagina") or "").split("|"):
+        if ":" not in seg:
+            continue
+        cod, resto = seg.split(":", 1)
+        cod = cod.strip()
+        # o segmento cede folha? entao nao e integral, e `pares()` ja o trata
+        if re.findall(r"\b\d{1,4}\b", INTERVALO.sub(" ", resto)) \
+                and not ESTRUTURAL.search(resto):
+            continue
+        cam = (docs.get(cod) or "").replace("\\", "/")
+        if cam.lower().endswith(".pdf") and (RAIZ / cam).exists() \
+                and cam not in out:
+            out.append(cam)
+    return out
+
+
+def localizar_inteiro_teor(frag, pdfs):
+    """O fragmento esta em ALGUMA folha de algum dos PDFs? -> (caminho, folha)."""
+    alvo = _sem_apoio(frag)
+    if not alvo:
+        return None
+    for cam in pdfs:
+        for n, red in folhas_da_peca(cam):
+            if alvo in red:
+                return (cam, n)
+    return None
+
+
 def pares(fonte_pagina):
     """'CPMI: 646, 711 | Cappelli: 55, 57' -> [('CPMI',[646,711]),('Cappelli',[55,57])]
 
@@ -832,7 +962,8 @@ def main():
     # treze transcricoes nunca examinadas. Contar o que a fila exclui e licao
     # desta casa; aqui a fila deixa de excluir.
     cands = [e for e in dados["eventos"]
-             if pares(e.get("fonte_pagina")) or anexos_legiveis(e)]
+             if pares(e.get("fonte_pagina")) or anexos_legiveis(e)
+             or pdfs_integrais(e, dados["metadados"]["registro_documentos"])]
     if args:
         alvos_reg = [eventos[a] for a in args if a in eventos]
     elif todos:
@@ -849,6 +980,7 @@ def main():
     empatados = []
     meias = []          # a guarda de 22/10/2026 — ver MEIAS_ANCORAS_BASE
     nao_pdf = []        # ancora nao-PDF localizada — ver item 87
+    fora_da_peca = []   # varrida por inteiro e nao achada — ver item 88
 
     aninhadas = {}
     for e in alvos_reg:
@@ -862,13 +994,14 @@ def main():
         # `.html` tem onde ser conferido, e ate aqui saia por um destes
         # `continue` sem nunca ter transcricao examinada.
         anexos = anexos_legiveis(e)
-        if not pp and not anexos:
+        integrais = pdfs_integrais(e, docs)
+        if not pp and not anexos and not integrais:
             print("  {:<7} ~  sem página estruturada".format(e["id"]))
             indet += 1
             continue
         tem_pdf = any((docs.get(c) or "").lower().endswith(".pdf")
                       for c, _ in pp)
-        if not tem_pdf and not anexos:
+        if not tem_pdf and not anexos and not integrais:
             print("  {:<7} ~  {} fora do alcance (não é PDF)".format(
                 e["id"], ", ".join(c for c, _ in pp)))
             indet += 1
@@ -935,6 +1068,21 @@ def main():
                     nao_pdf.append((e["id"], cam, frag))
                     em_anexo.append((frag, cam))
                     continue
+                # A BUSCA INTEGRAL, com o cache de folha (item 88): vale
+                # SO nos PDFs que o registro cita SEM FOLHA. 2.874 folhas
+                # custam 151 s na primeira construcao e 0,27 s depois.
+                achou_int = localizar_inteiro_teor(frag, integrais)
+                if achou_int:
+                    em_anexo.append((frag, "%s#f%d" % achou_int))
+                    continue
+                # A PECA FOI VARRIDA POR INTEIRO E A TRANSCRICAO NAO ESTA
+                # NELA. Vale so para quem cita EXCLUSIVAMENTE por
+                # localizador integral: registro que declara folha e tem
+                # fragmento perdido continua falhando, porque ali a folha
+                # e a afirmacao. Ver INTEIRO_TEOR_SEM_ACHADO_BASE.
+                if integrais and not pp:
+                    fora_da_peca.append((e["id"], frag))
+                    continue
                 chave = next((k for k in EXCECOES
                               if k[0] == e["id"] and norm(frag).startswith(k[1])), None)
                 if chave:
@@ -959,6 +1107,21 @@ def main():
             _anx = sorted({c.split("/")[-1] for _, c in em_anexo})
             onde_txt = (onde_txt + " · " if onde_txt else "") + \
                 "§{} em {}".format(len(em_anexo), ", ".join(_anx)[:58])
+
+        # TOTAL ZERO NUNCA E OK, e a regra entra em 25/10/2026 (item 88)
+        # porque o defeito apareceu TRES vezes neste arquivo: registro sem
+        # nada conferido relatava `OK 0/0 localizadas`, com cara de
+        # verificado. Se nada foi conferido, o registro e INDETERMINADO e diz
+        # por que -- e os `confirmados` deixam de contar quem nao foi.
+        if total == 0 and not perdidas:
+            _razao = ("as {} transcrição(ões) não estão na peça citada"
+                      .format(len([1 for r, _ in fora_da_peca
+                                   if r == e["id"]]))
+                      if any(r == e["id"] for r, _ in fora_da_peca)
+                      else "nada foi conferido")
+            print("  {:<7} ~  0 de 0 — {}".format(e["id"], _razao))
+            indet += 1
+            continue
 
         if perdidas:
             print("  {:<7} X  {}/{} localizadas · {}".format(
@@ -1006,7 +1169,9 @@ def main():
     sem_extraivel = sorted(e["id"] for e in dados["eventos"]
                            if (e.get("fonte_pagina") or "").strip()
                            and not pares(e.get("fonte_pagina"))
-                           and not anexos_legiveis(e))
+                           and not anexos_legiveis(e)
+                           and not pdfs_integrais(
+                               e, dados["metadados"]["registro_documentos"]))
     print("fora do alcance deste conferidor: {} registro(s) com `fonte_pagina` e "
           "sem página extraível — {}".format(len(sem_extraivel),
                                              ", ".join(sem_extraivel)))
@@ -1031,6 +1196,22 @@ def main():
               "e atualize")
         print("    SEM_PAGINA_EXTRAIVEL_BASE neste arquivo dizendo no "
               "commit a razão.")
+    # A TRANSCRICAO QUE NAO ESTA NA PECA CITADA — ver
+    # INTEIRO_TEOR_SEM_ACHADO_BASE (item 88).
+    print("transcrição varrida na peça inteira e NÃO encontrada: {} "
+          "(base {})".format(len(fora_da_peca),
+                             INTEIRO_TEOR_SEM_ACHADO_BASE))
+    for _rid, _frag in fora_da_peca:
+        print("  ~ {:<7} «{}…»".format(_rid, norm(_frag)[:72]))
+    if len(fora_da_peca) != INTEIRO_TEOR_SEM_ACHADO_BASE:
+        falhas.append("transcrição fora da peça citada: {}, base {}"
+                      .format(len(fora_da_peca),
+                              INTEIRO_TEOR_SEM_ACHADO_BASE))
+        print("    X a contagem mudou. Se uma transcrição nova não está "
+              "na peça, a âncora está")
+        print("      errada; se uma saiu, atualize "
+              "INTEIRO_TEOR_SEM_ACHADO_BASE e diga por quê.")
+
     # A GUARDA DAS MEIAS-ANCORAS, de 22/10/2026 — ver MEIAS_ANCORAS_BASE.
     print("meias-âncoras: {} (base {}) — aspa que sustenta afirmação do "
           "registro, vive só em campo de nota".format(len(meias),

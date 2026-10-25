@@ -4823,3 +4823,67 @@ Corrigida, a base **reprova**, e as três provas passam.
 | **as duas guardas que declaravam este limite** | a das meias-âncoras e a checagem 9 seguem sem alcançar localizador estrutural **em PDF**; para `.md` e `.html` o limite caiu junto, porque as duas usam `pares()` |
 | **os três que restam** | varrer PDF inteiro no ciclo custaria minutos. **Um cache de texto por folha, indexado pelo SHA-256 que a checagem 8 já vigia**, resolveria — e é desenho novo, não listado antes |
 | **exceção ociosa não é acusada** | nada avisa quando uma entrada de `EXCECOES` deixa de ser usada. As três de PT-08 eu removi **porque fui olhar**; a quarta ficaria |
+
+---
+
+## 88. O cache de texto por folha — e a primeira varredura achou cinco âncoras que não existem — ✅ 25/10/2026
+
+**Encaminhamento:** *"Construa o cache de texto por folha."* — o desenho que eu propus em 87.5 e não construí.
+
+### 88.1 Para que serve, e a cifra justifica
+
+Três registros citam PDF por `inteiro teor` — **PT-06B, PT-38, PT-56** — e ali o conferidor **sabia abrir a peça sem saber onde olhar**. Varrer as **2.874 folhas** dessas cinco peças custou **151 s**, medidos. Por rodada de ciclo, inviável; e sem a varredura, **a afirmação deles ficava inguardável**.
+
+| | |
+|:--|:--|
+| primeira construção | **151 s**, 2.874 folhas |
+| segunda leitura, **em processo novo** | **0,27 s** |
+| cache em disco | **1,7 MB** em cinco arquivos gzipados |
+| ciclo completo | de ~40 s a **43 s** |
+
+### 88.2 A chave tem duas partes, e a segunda é a que importa
+
+| | |
+|:--|:--|
+| **SHA-256 do PDF** | que a **checagem 8 já vigia** peça por peça — se os bytes mudarem, o cache é rejeitado |
+| **`RECEITA_EXTRACAO`** | `texto_pagina` concatena **três leituras** — PyPDF2, PyMuPDF e PyMuPDF com conserto de glifo — e normaliza |
+
+> **Cache que sobrevive a uma mudança no extrator é cache que mente.** Mexer em `texto_pagina`, em `_mupdf` ou em `norm_busca` obriga a subir `RECEITA_EXTRACAO`, e as duas primeiras provas negativas aferem exatamente isto: um cache **deliberadamente falso** é usado sob a receita que o gravou, e **deixa de ser usado** quando a receita sobe.
+
+**O cache é derivado e está no `.gitignore`.** Some sem perda: a rodada seguinte o reconstrói do PDF.
+
+### 88.3 A busca integral vale SÓ onde o registro cita a peça inteira
+
+> Aplicada a todo fragmento não localizado, ela **resgataria âncora creditada à folha errada** — o defeito que o item 52 mediu em quatro registros e que a folha existe para pegar. `inteiro teor` autoriza procurar em qualquer folha porque é o que o campo afirma; **`fonte_pagina: 185` não.**
+
+**A quarta prova negativa afere isso:** troquei a folha de PT-06C de 185 para 7, e ele **falhou** em vez de ser resgatado pela varredura.
+
+### 88.4 E a primeira varredura achou cinco âncoras que não existem
+
+**As cinco transcrições dos três registros não estão nas peças citadas.** A causa é única e está medida:
+
+| registro | a transcrição | onde ela está |
+|:--|:--|:--|
+| **PT-06B** | *"STF confirma suspeição de Sergio Moro…"* e a de corroboração | **manchetes** do portal do STF e da Agência Brasil |
+| **PT-56** | *"STF fixa penas de 16 a 27 anos…"* | **manchete** do portal do STF |
+| **PT-38** | *"somente no STF, o prejuízo financeiro chegou a R$ 11,4 milhões"* e *"furtados, quebrados ou completamente destruídos"* | **matéria da Agência Brasil de setembro de 2024** |
+
+> **PT-38 é a prova mais limpa, e exclui a explicação fácil:** `11,4 milhões`, `prejuízo financeiro` e `furtados` têm **zero ocorrências** nas 210 folhas do livro — que **tem camada de texto**, 68 mil caracteres só nas 30 primeiras folhas. **Não é peça ilegível; é transcrição de outra peça.**
+>
+> **É o padrão de PT-08 antes de 22/10**, e o conserto já foi feito uma vez nesta casa: arquivar a página em `Fontes/09_Arquivamento-web/` como `.md` e citá-la por localizador estrutural — a rota (b) do item 76, que o leitor do item 87 agora confere. **Mas é coleta na web, e coleta é decisão sua.**
+
+**Categoria nova, com linha de base que reprova:** `INTEIRO_TEOR_SEM_ACHADO_BASE = 5`. Antes eu podia dizer apenas *"o conferidor não alcança a peça"*; agora ele **varreu as 2.874 folhas e provou** algo mais forte. A sexta que aparecer faz o ciclo cair.
+
+### 88.5 Duas regras nasceram do trabalho, e uma é a terceira reincidência
+
+**`SEM_PAGINA_EXTRAIVEL_BASE` foi a ZERO.** Nenhum registro do codebook está fora do alcance do conferidor — era 6 em 18/10, 3 depois do item 87, e é 0 hoje.
+
+**E `total zero nunca é OK`.** Registro sem nada conferido relatava `OK 0/0 localizadas`, **com cara de verificado**. Apareceu no item 87 com o leitor não-PDF, voltou aqui com a categoria nova, e **em vez de consertar o caso entrou a regra**: se nada foi conferido, o registro é `~ indeterminado` e **diz por quê**. Os `confirmados` deixam de contar quem não foi conferido — `confirmados 77 | falhas 0 | indeterminados 7`.
+
+### 88.6 O que isto deixa
+
+| | |
+|:--|:--|
+| **as cinco âncoras** | o conserto é arquivar três páginas web e citá-las por localizador estrutural, como PT-08. **Coleta é sua decisão** — e a alternativa é retirar as transcrições e deixar os registros ancorados só pela peça, o que PT-56 e PT-06B suportam (o acórdão **é** o ato) e PT-38 não |
+| **o cache cobre cinco peças** | as citadas por `inteiro teor`. Qualquer outra varredura integral o constrói sob demanda, pagando 151 s por 2.874 folhas uma vez |
+| **exceção ociosa** | segue sem guarda, listado desde 87.5 |

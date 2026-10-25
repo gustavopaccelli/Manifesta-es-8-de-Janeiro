@@ -2,20 +2,20 @@
 
 > **Peça gerada por `scripts/gerar_registro_leitura.py`. Não edite à mão.** É a resposta a um defeito com data: em 21/10/2026 eu relatei seis verbetes como *"lidos-a-ler"* e **os seis estavam lidos**, porque copiei uma lista de 30/09 do documento que **pedia** a leitura em vez de abrir o que a **registrava**. O estado de leitura vivia em prosa espalhada por sete documentos, e nada no ciclo conferia.
 
-**70 peças no corpus. 45 com estado MEDIDO, 25 com estado DECLARADO.**
+**74 peças no corpus. 49 com estado MEDIDO, 25 com estado DECLARADO.**
 
 ## 1. Como o estado é estabelecido — e a maior parte não é declarada
 
 | Origem | Quantas | Como |
 |:--|--:|:--|
-| **MEDIDO** | 45 | a peça **ancora registro** com `fonte_pagina`, e o passo 9 do ciclo confere a transcrição contra a folha do PDF. Leitura parcial **demonstrável**, não afirmada |
+| **MEDIDO** | 49 | a peça **ancora registro** com `fonte_pagina`, e o passo 9 do ciclo confere a transcrição contra a folha do PDF. Leitura parcial **demonstrável**, não afirmada |
 | **DECLARADO** | 25 | a peça **não ancora registro**: informa o desenho sem sustentar dado. O estado vive em `data/estado_de_leitura.json`, que é dado e não prosa |
 
 | Estado | Peças |
 |:--|--:|
 | `ILEGIVEL` | 1 |
 | `LIDO_INTEGRAL` | 13 |
-| `LIDO_PARCIAL` | 54 |
+| `LIDO_PARCIAL` | 58 |
 | `NAO_LIDO` | 2 |
 
 **Vocabulário.** `LIDO_INTEGRAL` · `LIDO_PARCIAL`, com o que foi lido · `NAO_LIDO` · `ILEGIVEL`, no corpus e sem camada de texto · `NAO_DECLARADO`, quando **nenhum documento do repositório registra o estado** — é confissão, não suposição.
@@ -65,7 +65,11 @@
 | `Doxa-IESP-UERJ_Manchetometro_Atos-golpistas-8-jan_2023-03.pdf` | 16 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 7 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `NetLab-UFRJ_Anuncios-golpistas-Meta-Ads_2023-02-07.md` | 0 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 0 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `SciELO-Preprints_Drummond-Manginelli_Editoriais-8-jan_2023-10-09.pdf` | 24 | **NAO_LIDO** | DECLARADO | catalogada no LEIA-ME do eixo 08 como OBJETO DE ANÁLISE, não como fonte de dado. Nenhum documento registra leitura | — |
+| `AgenciaBrasil_2021-06_Moro-parcial-triplex_PT-06B.html` | 0 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 2 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `AgenciaBrasil_2024-09_Obras-recuperadas_PT-38.html` | 0 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 1 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `Estadao_2021-03-08_Eduardo-Bolsonaro-nega-atuacao-Capitolio.md` | 0 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 7 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `STF-noticias_Penas-16-a-27-anos_PT-56.html` | 0 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 1 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `STF-noticias_Suspeicao-Moro_PT-06B.html` | 0 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 2 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `STF_Democracia-Inabalada_Ebook_28x28cm.pdf` | 210 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 1 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `STF_Democracia-Inabalada_Folder.pdf` | 6 | **NAO_LIDO** | DECLARADO | folder de 6 páginas e 37,4 MB — o pior índice de bytes por página do corpus (item 46.5 da agenda). O conteúdo lido do mesmo título está no Ebook, que ancora registro | — |
 | `STF_Gabinete-Moraes_Balanco-8-de-Janeiro_2026-04-29.pdf` | 15 | **LIDO_PARCIAL** | MEDIDO | ancora 3 registro(s) com 15 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |

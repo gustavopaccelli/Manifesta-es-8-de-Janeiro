@@ -176,6 +176,8 @@ Além disso, **sete registros citavam dois documentos e declaravam apenas um**. 
 | CESARINO 2019 | 1 | 28 | literatura |
 | HC 164.493 | 1 | 441 | oficial |
 | HC 193.726-2 | 1 | 182 | oficial |
+| STF notícias Moro | 1 |  | arquivamento web |
+| Agência Brasil Moro | 1 |  | arquivamento web |
 | HC 193.726 | 1 | 264 | oficial |
 | SNOW VLIEGENTHART E KETELAARS 2019 | 1 | 20 | bibliografia |
 | CASTANEDA E JENKS 2023 | 1 | 15 | literatura |
@@ -186,8 +188,10 @@ Além disso, **sete registros citavam dois documentos e declaravam apenas um**. 
 | DODF 003 | 1 | 66 | oficial |
 | NetLab | 1 |  | transcrição |
 | Livro STF 2023 | 1 | 210 | oficial |
+| Fontes/09_Arquivamento-web/AgenciaBrasil_2024-09_Obras-recuperadas_PT-38.html | 1 |  | — |
 | Manchetômetro | 1 | 16 | laboratório |
 | AP 2668-QO | 1 | 50 | oficial |
+| STF notícias penas | 1 |  | arquivamento web |
 | Pet 14.129 | 1 | 17 | oficial |
 | EP 169-Domiciliar | 1 | 40 | oficial |
 | CARVALHO E TATAGIBA 2025 | 1 | 46 | literatura |
@@ -215,7 +219,7 @@ Cada um aponta arquivo e página. A numeração impressa do relatório da CPMI c
 | PT-05A | ADC 43/44/54 | ADC 43/44/54: 2, 31, 489 | Confirmado em fonte primária |
 | PT-06 | ARAUJO E SALES 2022 + VON BULOW E ABERS 2024 + CESARINO 2022 + CESARINO 2019 | ARAUJO E SALES 2022: 8 \| VON BULOW E ABERS 2024: 1, 3, 6, 9, 11, 12, 13, 14 \| CESARINO 2022: 3, 20 \| CESARINO 2019: 10, 11 | Confirmado |
 | PT-06A | PGR | PGR: 8 | Confirmado |
-| PT-06B | HC 164.493 + HC 193.726-2 | HC 164.493: inteiro teor | Confirmado em fonte primária |
+| PT-06B | HC 164.493 + HC 193.726-2 + STF notícias Moro + Agência Brasil Moro | HC 164.493: inteiro teor \| STF notícias Moro: inteiro teor \| Agência Brasil Moro: inteiro teor | Confirmado em fonte primária |
 | PT-06C | HC 193.726 | HC 193.726: 185 | Confirmado em fonte primária |
 | PT-07 | PGR + SNOW VLIEGENTHART E KETELAARS 2019 | PGR: 8, 249 \| SNOW VLIEGENTHART E KETELAARS 2019: 6, 7, 8, 10 | Confirmado em fonte primária |
 | PT-08 | CPMI + CASTANEDA E JENKS 2023 + CHEN LUKITO E KOO 2023 + Estadão 2021 | CPMI: 614 \| CASTANEDA E JENKS 2023: 4, 10 \| CHEN LUKITO E KOO 2023: 1 \| Estadão 2021: inteiro teor — §A fala inteira e sem elisao, §A critica ao ato de 6 de janeiro, §Ressalvas de uso | Confirmado |
@@ -258,7 +262,7 @@ Cada um aponta arquivo e página. A numeração impressa do relatório da CPMI c
 | PT-35 | CPMI | CPMI: 673 | Confirmado em fonte primária |
 | PT-36 | CPMI | CPMI: 671 | Confirmado em fonte primária |
 | PT-37 | CPMI | CPMI: 667 | Confirmado em fonte primária |
-| PT-38 | Livro STF 2023 | Livro STF 2023: inteiro teor | Confirmado |
+| PT-38 | Livro STF 2023 + Fontes/09_Arquivamento-web/AgenciaBrasil_2024-09_Obras-recuperadas_PT-38.html | Livro STF 2023: inteiro teor | Confirmado |
 | PT-39 | CPMI + AP 2668 | CPMI: 677 \| AP 2668: 496 | Confirmado em fonte primária |
 | PT-40 | CPMI | CPMI: 678 | Confirmado em fonte primária |
 | PT-41 | CPMI | CPMI: 679 | Confirmado em fonte primária |
@@ -277,7 +281,7 @@ Cada um aponta arquivo e página. A numeração impressa do relatório da CPMI c
 | PT-53 | Balanço 2026 | Balanço 2026: 4, 5, 6 | Confirmado em fonte primária |
 | PT-54 | CPMI | CPMI: 21 | Confirmado em fonte primária |
 | PT-55 | CPMI | CPMI: 831, 835, 836 | Confirmado em fonte primária |
-| PT-56 | AP 2668 + AP 2668-QO | AP 2668: inteiro teor | Confirmado em fonte primária |
+| PT-56 | AP 2668 + AP 2668-QO + STF notícias penas | AP 2668: inteiro teor \| STF notícias penas: inteiro teor | Confirmado em fonte primária |
 | PT-57 | AP 2668 | AP 2668: 19, 888 | Confirmado em fonte primária |
 | PT-58 | Pet 14.129 + EP 169-Transferência | Pet 14.129: 1, 7, 8, 10, 14, 16 \| EP 169-Transferência: 1 | Confirmado em fonte primária |
 | PT-59 | EP 169-Transferência | EP 169-Transferência: 1, 33, 35, 36 | Confirmado em fonte primária |

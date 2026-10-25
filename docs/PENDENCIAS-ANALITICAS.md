@@ -4887,3 +4887,78 @@ Três registros citam PDF por `inteiro teor` — **PT-06B, PT-38, PT-56** — e 
 | **as cinco âncoras** | o conserto é arquivar três páginas web e citá-las por localizador estrutural, como PT-08. **Coleta é sua decisão** — e a alternativa é retirar as transcrições e deixar os registros ancorados só pela peça, o que PT-56 e PT-06B suportam (o acórdão **é** o ato) e PT-38 não |
 | **o cache cobre cinco peças** | as citadas por `inteiro teor`. Qualquer outra varredura integral o constrói sob demanda, pagando 151 s por 2.874 folhas uma vez |
 | **exceção ociosa** | segue sem guarda, listado desde 87.5 |
+
+---
+
+## 89. As três páginas arquivadas — e as cinco âncoras tinham duas causas, não uma — ✅ 25/10/2026
+
+**Encaminhamento:** *"Arquive as três páginas web e ancore as transcrições."*
+
+### 89.1 A medição corrigiu o próprio encaminhamento
+
+O item 88 listou cinco transcrições ausentes das peças citadas e **eu as tratei como um caso só**. Ao ir buscar as páginas, elas se separaram:
+
+| | causa | registros |
+|:--|:--|:--|
+| **3** | **manchete de página web coletável** | PT-06B (duas) e PT-56 (uma) |
+| **2** | **fonte jornalística que o registro já declarava ausente** | PT-38 |
+
+> **PT-38 não tinha página para arquivar, e o campo dizia isso desde 16/08/2026**, com estas palavras: *"**RESSALVA: NENHUM documento primário do corpus traz esses valores** — nem o livro do STF (varrido), nem o balanço de 2026 (varrido), nem o Relatório Final da CPMI (varrido)."* As cifras vêm de **sinopse de documentário** (ago/2023) e de **levantamento divulgado pela imprensa** (jan/2025), sem URL no registro, e a série está no campo **com data de propósito**, porque a cifra de 2023 foi superada pela de 2025.
+>
+> **Entraram em `EXCECOES` com essa razão** — é o caso 4 da lista: transcrição que está em `fonte_trecho` **de propósito** sem ser âncora do registro.
+
+### 89.2 As três coletadas, e a convenção que elas seguem
+
+O eixo 09 tinha **duas convenções** em uso, e eu medi antes de escolher:
+
+| | |
+|:--|:--|
+| **(a) corroboração** | o arquivo fica em `fonte_local`, **sem** código e **sem** citação em `fonte_pagina` — cinco peças |
+| **(b) âncora** | ganha código em `registro_documentos` e é citada em `fonte_pagina` por localizador estrutural — **uma só**, o `.md` do Estadão, feito no item 77 |
+
+*"Ancore as transcrições"* é a **(b)**, e é o que as três seguem:
+
+| peça | registro | código |
+|:--|:--|:--|
+| `STF-noticias_Suspeicao-Moro_PT-06B.html` | PT-06B | `STF notícias Moro` |
+| `AgenciaBrasil_2021-06_Moro-parcial-triplex_PT-06B.html` | PT-06B | `Agência Brasil Moro` |
+| `STF-noticias_Penas-16-a-27-anos_PT-56.html` | PT-56 | `STF notícias penas` |
+
+**E o que elas são fica escrito nos registros:** manchete de nota institucional **não é a peça do ato** — o acórdão é. Nenhuma classe mudou, e a marca `CLASSE NÃO PRIMÁRIA` de PT-06B continua valendo pela razão que já declarava.
+
+**A coleta, com o detalhe que quem repetir precisa saber:** o portal do STF respondeu **504 de WAF** na primeira tentativa — corpo *"The requested URL was rejected"* com id de suporte F5 — e **200 na segunda**, com cabeçalhos de navegador completos. **Não houve captcha nem desafio de script:** só `User-Agent` e `Accept`. Está declarado em `PROCEDENCIA`.
+
+### 89.3 Um achado lateral, e é do tipo que incomoda
+
+> **A página de PT-38 já estava arquivada no eixo 09 desde a coleta, com o id do registro no nome — `AgenciaBrasil_2024-09_Obras-recuperadas_PT-38.html` — e nunca tinha sido vinculada ao registro.** Peça coletada **para** um registro e ausente **dele**. Não estava no manifesto, não estava em `fonte_local`, não era conferida por nada.
+>
+> Vinculada como **corroboração**, e com a medição ao lado: **ela também não traz as duas cifras** — `11,4 milhões`, `prejuízo financeiro`, `furtados` e `quebrados` têm zero ocorrências nela, e as cifras que ela traz são outras (R$ 2,2 milhões repassados à UFPel). **A ressalva de 16/08 continua inteira e agora cobre esta peça também.**
+
+### 89.4 Uma precedência que estava invertida
+
+A categoria `fora_da_peca` do item 88 vinha **antes** de `EXCECOES` no laço. Com essa ordem, **registro que cita só por localizador integral nunca chegaria às exceções** — a categoria o engoliria, e uma razão escrita à mão ficaria inerte.
+
+> **Declaração explícita vence categoria genérica.** Invertida a ordem, as duas de PT-38 passam pela exceção que as explica.
+
+### 89.5 O resultado
+
+| | antes | depois |
+|:--|--:|--:|
+| peças no manifesto | 70 | **74** |
+| `confirmados` | 77 | **79** |
+| `indeterminados` | 7 | **5** |
+| **`INTEIRO_TEOR_SEM_ACHADO_BASE`** | 5 | **0** |
+| `fora do alcance` | 0 | **0** |
+| PT-06B · PT-56 | `~ 0 de 0` | **2/2 · 1/1** |
+
+> **A base em zero é mais forte que a base em cinco:** a primeira transcrição que aparecer fora da peça citada, **sem razão escrita**, faz o ciclo cair.
+
+**E PT-38 segue `~ indeterminado`, dizendo por quê:** *"as 2 transcrições estão dispensadas por exceção registrada em `EXCECOES`"*. A mensagem antes dizia *"nada foi conferido"* — verdade que não é a razão. **Guarda que diz o que aconteceu sem dizer por que obriga quem lê a escavar.**
+
+### 89.6 O que isto deixa
+
+| | |
+|:--|:--|
+| **PT-38 não tem transcrição verificável** | e é o único do codebook nessa situação. O conserto seria coletar a **sinopse do documentário** (ago/2023) e o **levantamento de jan/2025** — fontes jornalísticas, sem URL no registro, e **coleta é sua decisão** |
+| **a convenção (a) do eixo 09** | quatro peças seguem como corroboração sem código. **Nenhuma delas foi conferida contra nada** — não é defeito, é o que corroboração significa, mas vale saber |
+| **exceção ociosa** | segue sem guarda, listado desde 87.5. Hoje são **7 dispensas**, e a próxima que ficar obsoleta não será acusada |

@@ -86,6 +86,36 @@ PROCEDENCIA = {
         ("STF — portal.stf.jus.br/processos/downloadPeca.asp", "oficial",
          "Decisão do min. Alexandre de Moraes na EP 169/DF, 24/03/2026, 40 p. Autoriza prisão "
          "domiciliar humanitária por 90 dias da alta médica. Ancora PT-60."),
+    # AS TRES ABAIXO entraram em 25/10/2026 (item 89), por encaminhamento do
+    # pesquisador, e sao de um tipo que o eixo 09 ainda nao tinha: pagina web
+    # que ANCORA transcricao, com codigo em `registro_documentos` e citacao em
+    # `fonte_pagina`. As cinco anteriores sao corroboracao, sem codigo. O cache
+    # de folha (item 88) provou que as tres transcricoes nao estavam nos
+    # acordaos citados por `inteiro teor` -- eram manchetes destas paginas.
+    #
+    # O PORTAL DO STF RESPONDEU 504 DE WAF na primeira tentativa, com corpo de
+    # "requested URL was rejected" e id de suporte F5, e 200 na segunda, com
+    # cabecalhos de navegador completos. Nao houve captcha nem desafio de
+    # script: so User-Agent e Accept. Quem repetir a coleta deve esperar o
+    # mesmo, e repetir a chamada.
+    "Fontes/09_Arquivamento-web/STF-noticias_Suspeicao-Moro_PT-06B.html":
+        ("STF — noticias.stf.jus.br, curl com cabeçalhos de navegador",
+         "arquivamento web",
+         "Nota institucional do portal do STF (23/03/2021) cuja MANCHETE é a "
+         "transcrição de PT-06B. ÂNCORA, não corroboração: citada em "
+         "`fonte_pagina` por localizador estrutural. Setor público. NÃO é a "
+         "peça do ato — o acórdão do HC 164.493 é."),
+    "Fontes/09_Arquivamento-web/AgenciaBrasil_2021-06_Moro-parcial-triplex_PT-06B.html":
+        ("Agência Brasil (EBC) — curl", "arquivamento web",
+         "Matéria de 23/06/2021 cuja MANCHETE é a segunda transcrição de "
+         "PT-06B, a que o registro declara como corroboração do portal do "
+         "STF. ÂNCORA. Setor público (EBC)."),
+    "Fontes/09_Arquivamento-web/STF-noticias_Penas-16-a-27-anos_PT-56.html":
+        ("STF — noticias.stf.jus.br, curl com cabeçalhos de navegador",
+         "arquivamento web",
+         "Nota institucional do portal do STF (11/09/2025) cuja MANCHETE é a "
+         "transcrição de PT-56. ÂNCORA. Setor público. NÃO é a peça do ato — "
+         "o acórdão da AP 2668 é."),
     "Fontes/09_Arquivamento-web/AgenciaBrasil_2017-07-12_Condenacao-Lula_PT-03A.html":
         ("Agência Brasil (EBC) — arquivamento local", "arquivamento web",
          "Cópia de matéria que ancora registro só por URL. Preserva a evidência contra link rot. "

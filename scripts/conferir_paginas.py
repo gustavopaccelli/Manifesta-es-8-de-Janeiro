@@ -138,6 +138,27 @@ EXCECOES = {
     # passou de 8/8 com tres dispensas a **11/11 sem nenhuma**. Fica o registro
     # porque excecao que sai por conserto e dado sobre o conserto: ela media,
     # durante tres dias, exatamente o buraco que o leitor novo fechou.
+    #
+    # AS DUAS DE PT-38 entraram em 25/10/2026 (item 89) e sao o caso 4:
+    # transcricao que esta em `fonte_trecho` DE PROPOSITO sem ser ancora do
+    # registro. As cifras do dano vem de SINOPSE DE DOCUMENTARIO (ago/2023) e
+    # de LEVANTAMENTO DIVULGADO PELA IMPRENSA (jan/2025), e o proprio campo
+    # declara isso desde 16/08/2026, com estas palavras: "NENHUM documento
+    # primario do corpus traz esses valores -- nem o livro do STF (varrido),
+    # nem o balanco de 2026 (varrido), nem o Relatorio Final da CPMI
+    # (varrido)". O cache de folha do item 88 confirmou a varredura do livro, e
+    # em 25/10 a pagina de 2024-09 do eixo 09 foi vinculada e tambem NAO as
+    # traz. A serie e citada com data de proposito, porque a cifra de 2023 foi
+    # superada pela de 2025 -- e por isso ela fica no campo.
+    ("PT-38", "somente no stf, o prejuizo financeiro chegou a r$ 11,4 milhoes"):
+        "sinopse oficial do documentario 'Democracia Inabalada' (ago/2023), "
+        "fonte jornalistica com atribuicao ao STF; o registro declara desde "
+        "16/08/2026 que nenhum documento primario do corpus traz o valor, e o "
+        "livro foi varrido por inteiro no item 88",
+    ("PT-38", "furtados, quebrados ou completamente destruidos"):
+        "levantamento do STF divulgado pela imprensa (jan/2025), idem. A serie "
+        "esta no campo COM DATA porque a cifra de 2023 foi superada, e e isso "
+        "que o registro existe para mostrar",
 }
 
 
@@ -266,7 +287,16 @@ SEM_PAGINA_EXTRAIVEL_BASE = 0
 # Com a base, a sexta que aparecer faz o ciclo cair. E a base REPROVA --
 # nao avisa --, pela licao de 25/10: a de alcance so avisava, com codigo
 # de saida zero, enquanto o comentario dela dizia o contrario.
-INTEIRO_TEOR_SEM_ACHADO_BASE = 5
+# 25/10/2026: passa de CINCO para ZERO no mesmo dia em que nasceu, e a
+# queda nao veio de afrouxar nada. As cinco tinham DUAS causas: tres eram
+# manchete de pagina web COLETAVEL -- duas de PT-06B e uma de PT-56 --, e
+# as paginas foram coletadas, arquivadas no eixo 09 e ancoradas por
+# localizador estrutural (item 89); as duas de PT-38 vem de sinopse de
+# documentario e de levantamento de imprensa, o proprio campo declara
+# isso desde 16/08/2026, e entraram em EXCECOES com essa razao. **A base
+# em zero e mais forte que a base em cinco:** a primeira transcricao que
+# aparecer fora da peca citada, sem razao escrita, faz o ciclo cair.
+INTEIRO_TEOR_SEM_ACHADO_BASE = 0
 
 # LINHA DE BASE DAS MEIAS-ANCORAS: ZERO, medida em 22/10/2026 (itens 80 e
 # 81) e zerada no mesmo dia.
@@ -1075,6 +1105,18 @@ def main():
                 if achou_int:
                     em_anexo.append((frag, "%s#f%d" % achou_int))
                     continue
+                # EXCECAO VENCE CATEGORIA, e a ordem foi invertida em
+                # 25/10/2026 (item 89): declaracao EXPLICITA do
+                # pesquisador tem precedencia sobre a categoria generica
+                # abaixo. Com a ordem anterior, registro que cita so por
+                # localizador integral NUNCA chegava as excecoes -- a
+                # categoria o engolia antes, e uma razao escrita a mao
+                # ficava inerte.
+                chave = next((k for k in EXCECOES
+                              if k[0] == e["id"] and norm(frag).startswith(k[1])), None)
+                if chave:
+                    excecoes_usadas += 1
+                    continue
                 # A PECA FOI VARRIDA POR INTEIRO E A TRANSCRICAO NAO ESTA
                 # NELA. Vale so para quem cita EXCLUSIVAMENTE por
                 # localizador integral: registro que declara folha e tem
@@ -1082,11 +1124,6 @@ def main():
                 # e a afirmacao. Ver INTEIRO_TEOR_SEM_ACHADO_BASE.
                 if integrais and not pp:
                     fora_da_peca.append((e["id"], frag))
-                    continue
-                chave = next((k for k in EXCECOES
-                              if k[0] == e["id"] and norm(frag).startswith(k[1])), None)
-                if chave:
-                    excecoes_usadas += 1
                     continue
                 perdidas.append(frag)
 
@@ -1114,11 +1151,21 @@ def main():
         # verificado. Se nada foi conferido, o registro e INDETERMINADO e diz
         # por que -- e os `confirmados` deixam de contar quem nao foi.
         if total == 0 and not perdidas:
-            _razao = ("as {} transcrição(ões) não estão na peça citada"
-                      .format(len([1 for r, _ in fora_da_peca
-                                   if r == e["id"]]))
-                      if any(r == e["id"] for r, _ in fora_da_peca)
-                      else "nada foi conferido")
+            # A RAZAO NOMEIA A CAUSA, e desde 25/10/2026 (item 89) a excecao
+            # entra na conta: PT-38 tem as duas transcricoes dispensadas por
+            # EXCECOES e relatava "nada foi conferido", o que e verdade e nao
+            # e a razao. Guarda que diz o que aconteceu sem dizer por que
+            # obriga quem le a ir escavar.
+            _nf = len([1 for r, _ in fora_da_peca if r == e["id"]])
+            _nex = len([1 for k in EXCECOES if k[0] == e["id"]])
+            if _nf:
+                _razao = ("as {} transcrição(ões) não estão na peça citada"
+                          .format(_nf))
+            elif _nex:
+                _razao = ("as {} transcrição(ões) estão dispensadas por "
+                          "exceção registrada em EXCECOES".format(_nex))
+            else:
+                _razao = "nada foi conferido"
             print("  {:<7} ~  0 de 0 — {}".format(e["id"], _razao))
             indet += 1
             continue

@@ -4955,6 +4955,28 @@ A categoria `fora_da_peca` do item 88 vinha **antes** de `EXCECOES` no laço. Co
 
 **E PT-38 segue `~ indeterminado`, dizendo por quê:** *"as 2 transcrições estão dispensadas por exceção registrada em `EXCECOES`"*. A mensagem antes dizia *"nada foi conferido"* — verdade que não é a razão. **Guarda que diz o que aconteceu sem dizer por que obriga quem lê a escavar.**
 
+
+### 89.7 A licença das peças não-PDF, e eu medi isto DEPOIS de empurrar
+
+**O manifesto registra `licenca_declarada` = `NAO CONFERIDA (nao-PDF)` para as cinco peças não-PDF do eixo 09** — as três novas, a de PT-38 e o `.md` do Estadão. O auditor de licença só lê PDF.
+
+**Então fui ler a licença dentro dos arquivos, que é a regra da casa — e a ordem estava errada: eu já havia empurrado.**
+
+| peça | o que o arquivo declara |
+|:--|:--|
+| as **seis** páginas de Agência Brasil (três antigas, a de PT-38, as duas de PT-58) e a nova de PT-06B | **"Todos os direitos reservados"** |
+| as **quatro** do portal do STF (PT-59, PT-60 e as duas novas) | **nada declarado** |
+
+> **O padrão é uniforme e pré-existente: as minhas três não criaram categoria nova.** Cinco páginas de Agência Brasil com *"Todos os direitos reservados"* já estavam no remoto público antes de hoje, e as do STF nunca declararam licença.
+>
+> **Mas a decisão de 21/10/2026 foi sobre PDFs**, e as peças não-PDF do eixo 09 **nunca foram examinadas sob essa lente**. Hoje são **dez arquivos de página web versionados num remoto público**, seis deles declarando direitos reservados — e três entraram hoje, por minha mão.
+>
+> **E eu tenho precedente meu em sentido contrário, do item 77:** para o Estadão decidi *"versionar o HTML seria redistribuição de jornalismo protegido"* e entrou **só a transcrição**. A diferença que eu usei foi setor público contra jornal comercial — e a EBC é empresa pública, o que sustenta a distinção. **O que ela não sustenta é ignorar o que o arquivo escreve.**
+
+**FICA PARA VOCÊ, e são três saídas com o preço de cada uma:** (a) **manter**, porque é conteúdo de comunicação institucional de órgão público e a prática do repositório já era essa — custo: dez arquivos com licença não conferida num remoto público; (b) **converter as dez em transcrição**, como o Estadão, mantendo as aspas ancoradas e descartando o HTML — custo: perde-se a cópia integral contra *link rot*, que é a razão de o eixo 09 existir; (c) **converter só as seis de Agência Brasil**, mantendo as do STF, que nada declaram — custo: a assimetria precisa de razão escrita, e o ganho sobre (a) é pequeno.
+
+**Não executei nenhuma.** E registro a ordem errada: **a licença devia ter sido lida antes do commit, não depois** — é a regra do próprio projeto, e eu a inverti.
+
 ### 89.6 O que isto deixa
 
 | | |
@@ -4962,3 +4984,4 @@ A categoria `fora_da_peca` do item 88 vinha **antes** de `EXCECOES` no laço. Co
 | **PT-38 não tem transcrição verificável** | e é o único do codebook nessa situação. O conserto seria coletar a **sinopse do documentário** (ago/2023) e o **levantamento de jan/2025** — fontes jornalísticas, sem URL no registro, e **coleta é sua decisão** |
 | **a convenção (a) do eixo 09** | quatro peças seguem como corroboração sem código. **Nenhuma delas foi conferida contra nada** — não é defeito, é o que corroboração significa, mas vale saber |
 | **exceção ociosa** | segue sem guarda, listado desde 87.5. Hoje são **7 dispensas**, e a próxima que ficar obsoleta não será acusada |
+| **a licença das dez páginas web** | medida em 89.7, **depois de empurrar**, e são três saídas com o preço escrito. Decisão sua |

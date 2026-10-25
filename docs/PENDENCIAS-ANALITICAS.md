@@ -4568,7 +4568,7 @@ Eu ia decidir sobre três registros. A medição mudou a pergunta:
 
 | | |
 |:--|:--|
-| **PT-03C** | o acórdão do HC 152.752 **está** em `fonte_local` e **nenhum localizador o aponta**: `fonte_pagina` só traz `MADEIRA ET AL 2022`, literatura. Falha a condição (2). **Lacuna fechável, não limite da peça** |
+| **PT-03C** | o acórdão do HC 152.752 **está** em `fonte_local` e **nenhum localizador o aponta**: `fonte_pagina` só traz `MADEIRA ET AL 2022`, literatura. Falha a condição (2). **Lacuna fechável, não limite da peça** — ✅ **RESOLVIDO EM 25/10/2026, horas depois (item 85):** cinco transcrições do próprio acórdão entraram, `fonte_pagina` passou a `HC 152.752: 1, 3 | MADEIRA ET AL 2022: 256, 267` e a classe foi promovida. O codebook foi a **68 em fonte primária** |
 | **PT-03D** | sem peça do ato no corpus — `fonte_local` vazio. Falha a condição (1). É o único registro sem documento vinculado |
 
 As outras quinze já diziam: literatura como única âncora (6), peça do ato não obtida (PT-01A, PT-02A, PT-06A), atribuição externa à peça (PT-01B, documento internamente anônimo), relatório de laboratório não revisado por pares (PT-19A, PT-50A), fonte documental citando outra peça (PT-27), insuficiência pendente (PT-38), afirmação central em literatura (PT-08).
@@ -4600,7 +4600,7 @@ Os dois registros **já traziam proposta** no campo, desde 20/10. Medi a conven�
 
 | | |
 |:--|:--|
-| **PT-03C** | uma transcrição do próprio acórdão do HC 152.752, com folha, e ele satisfaz as três condições. **É a única promoção que falta por lacuna fechável** |
+| **PT-03C** | uma transcrição do próprio acórdão do HC 152.752, com folha, e ele satisfaz as três condições. ~~**É a única promoção que falta por lacuna fechável**~~ — ✅ **RESOLVIDO EM 25/10/2026, horas depois (item 85):** cinco transcrições do próprio acórdão entraram, `fonte_pagina` passou a `HC 152.752: 1, 3 | MADEIRA ET AL 2022: 256, 267` e a classe foi promovida. O codebook foi a **68 em fonte primária** |
 | **a guarda que falta** | nada impede um registro de satisfazer as três condições e ficar em `Confirmado` sem razão escrita. **A base é agora zero e a guarda é barata** — só JSON, sem abrir PDF. Não a construí: você pediu as decisões |
 | **PT-62** | o nome poderia dizer a rota heterônoma; segue sua |
 
@@ -4644,10 +4644,58 @@ Fechada no dia em que a terceira e última parte dela saiu. **Aprovada em 15/10/
 
 | | |
 |:--|:--|
-| **PT-03C** | promoção de classe por lacuna fechável: o acórdão do HC 152.752 está em `fonte_local` e nenhum localizador o aponta. Uma transcrição com folha resolve |
+| **PT-03C** | promoção de classe por lacuna fechável: ~~o acórdão do HC 152.752 está em `fonte_local` e nenhum localizador o aponta. Uma transcrição com folha resolve~~ — ✅ **RESOLVIDO EM 25/10/2026, horas depois (item 85):** cinco transcrições do próprio acórdão entraram, `fonte_pagina` passou a `HC 152.752: 1, 3 | MADEIRA ET AL 2022: 256, 267` e a classe foi promovida. O codebook foi a **68 em fonte primária** |
 | **PT-62** | o nome poderia dizer a rota heterônoma; nomear mecanismo segue sua decisão |
 | **a guarda das três condições** | barata, só JSON, base zero — não construída, porque você pediu as decisões |
 | **âncora não-PDF no conferidor** | tornaria verificáveis os 6 registros de localizador estrutural; muda `SEM_PAGINA_EXTRAIVEL_BASE`, que é sua |
 | **higiene** | os 64 PDFs no histórico · 1 PDF em `.backup_pre_lula/` · 8 `.docx` · o ramo `backup-antes-de-destrackear-pdfs` |
 | **cristalização de quadro** | não resolvível com este corpus; desenho mínimo entregue |
 | **Beach e Pedersen, cap. 4 a 8** | e as quatro dívidas — todas de redação |
+
+---
+
+## 85. PT-03C resolvido — e o placar do registro não está no acórdão — ✅ 25/10/2026
+
+**Encaminhamento:** *"Resolva o PT-03C."* — a lacuna que a §83.1 nomeou ao escrever o critério de classe, três horas antes.
+
+### 85.1 A lacuna, e por que era fechável
+
+O registro codifica a **denegação do HC 152.752**, e o acórdão **estava** em `fonte_local` desde sempre. Mas `fonte_pagina` trazia só `MADEIRA ET AL 2022: 256, 267` — **literatura**. A peça do próprio ato estava no corpus e **nenhum localizador a apontava**, de modo que o passo 9 do ciclo nunca a abria.
+
+**Cinco transcrições entraram, as cinco conferidas por `confere_integral` na folha antes de escritas:**
+
+| folha | o que ancora |
+|--:|:--|
+| **3** | o dispositivo: *"na sessão plenária do dia 04.04.2018, o Tribunal, por maioria e nos termos do voto do relator, denegou a ordem"* — **data e resultado** |
+| **3** | *"vencidos, em menor extensão, os Ministros Gilmar Mendes e Dias Toffoli, e, em maior extensão, os Ministros Ricardo Lewandowski, Marco Aurélio e Celso de Mello"* — **os cinco vencidos** |
+| **3** | a questão de ordem sobre *"havendo empate na votação, a presidente do tribunal não poderia votar"* |
+| **1** | a ementa: *"habeas corpus. matéria criminal. execução provisória da pena"* — **o objeto** |
+| **1** | *"supressão de instância. ordem denegada"* |
+
+`fonte_pagina` passou a `HC 152.752: 1, 3 | MADEIRA ET AL 2022: 256, 267`, e o passo 9 passou a dizer **`PT-03C OK 7/7 localizadas`**. **A classe foi promovida pelas três condições**, e o codebook foi a **68 em fonte primária**.
+
+### 85.2 E o achado: o placar do registro não está na peça
+
+O registro diz *"por **6 votos a 5**"*. Varri as **464 folhas** por `6 x 5` e por `6 votos`: **zero ocorrências**.
+
+> **O que o acórdão escreve é *"por maioria"*, e ele NOMEIA os cinco vencidos.** O 6 a 5 segue de **cinco vencidos numa Corte de onze** — derivação correta, e **não transcrição**. Fica declarado como tal no registro, pela regra de 15/10 sobre cifra à mão: ou se gera, ou se declara de onde vem.
+>
+> **E a mesma folha corrobora a derivação, de um jeito que eu não esperava:** o Tribunal *"rejeitou questão de ordem … no sentido de que, havendo empate na votação, a presidente do tribunal não poderia votar"*. **A questão de ordem só tem sentido se o voto da presidente desempatou** — isto é, se antes dele havia 5 a 5. É o placar de 6 a 5 confirmado pelo que a Corte teve de rejeitar.
+
+**Por que isto importa mais que a promoção de classe:** se alguém fosse conferir o `6 votos a 5` abrindo o acórdão e procurando a cifra, não a acharia — e concluiria que o registro afirma o que a fonte não diz. **A derivação estava certa e invisível; agora está certa e escrita.**
+
+### 85.3 O que mudou em cascata, e as três erratas
+
+| | |
+|:--|:--|
+| **o vocabulário** | a razão *"peça do ato no corpus mas sem localizador que a aponte"* era **de PT-03C e só dele**. Saiu da lista de razões em uso, e ficou **descrita**, porque era a única das razões que era **fechável** em vez de limite da peça |
+| **a figura** | o subtítulo dizia **67** em fonte primária; o codebook tem **68**. O selo do ponto **não** mudou, e corretamente: `PT-03C/D` é **ponto composto** e PT-03D segue `Confirmado` |
+| **os itens 83 e 84** | três linhas escritas **horas antes** diziam que esta era a promoção que faltava. Erratas em 83.1, 83.3 e 84.3 |
+
+### 85.4 O que resta
+
+**Dezesseis registros em `Confirmado`, e nenhum por lacuna fechável** — todos por limite declarado da peça ou da fonte: literatura como única âncora (6), peça do ato não obtida (PT-01A, PT-02A, PT-06A), atribuição externa (PT-01B), relatório de laboratório não revisado por pares (PT-19A, PT-50A), fonte documental citando outra peça (PT-27), insuficiência pendente (PT-38), afirmação central em literatura (PT-08) e notícia arquivada sem peça no corpus (PT-03D).
+
+> **Com isto, a classe de cada registro do codebook é consequência de critério escrito, e nenhuma delas depende de decisão pendente.**
+
+**Três tarefas abertas:** 10, 17 e 16. E a guarda das três condições segue proposta e não construída, com base agora em **68**.

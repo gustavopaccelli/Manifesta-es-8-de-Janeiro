@@ -37,7 +37,7 @@ A versão completa — com os seis campos da figura ao lado dos seis do codebook
 | `PT-03` | 31/08/2016 | Impeachment consumado | T-1 Conjuntural | Confirmado | ressignificacao do protesto | — | ✅ |
 | `PT-03A` | 12/07/2017 | Moro condena Lula (triplex) | T-1 Conjuntural | Confirmado em fonte primária | certificacao judicial do frame anticorrupcao | — | ✅ |
 | `PT-03B` | 24/01/2018 | TRF-4 confirma e amplia a pena | T-1 Conjuntural | Confirmado em fonte primária | acionamento do gatilho de inelegibilidade | — | ✅ |
-| `PT-03C` | 04/04/2018 | STF nega HC; prisão em Curitiba | T-1 Conjuntural | Confirmado | fechamento da via recursal | PT-03C/D | ✅ |
+| `PT-03C` | 04/04/2018 | STF nega HC; prisão em Curitiba | T-1 Conjuntural | Confirmado em fonte primária | fechamento da via recursal | PT-03C/D | ✅ |
 | `PT-03D` | 07/04/2018 | STF nega HC; prisão em Curitiba | T-1 Conjuntural | Confirmado | remocao do competidor e reconfiguracao da estrutura de opor… | PT-03C/D | ✅ |
 | `PT-03E` | 31/08–01/09/2018 | TSE barra a candidatura | T-1 Conjuntural | Confirmado em fonte primária | exclusao institucional do favorito | — | ✅ |
 | `PT-04` | 28/10/2018 | Eleição de Bolsonaro | T-1 Conjuntural | Confirmado | incorporacao do movimento ao estado | — | ✅ |

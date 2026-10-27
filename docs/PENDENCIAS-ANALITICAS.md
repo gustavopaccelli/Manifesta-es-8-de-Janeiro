@@ -4985,3 +4985,101 @@ A categoria `fora_da_peca` do item 88 vinha **antes** de `EXCECOES` no laço. Co
 | **a convenção (a) do eixo 09** | quatro peças seguem como corroboração sem código. **Nenhuma delas foi conferida contra nada** — não é defeito, é o que corroboração significa, mas vale saber |
 | **exceção ociosa** | segue sem guarda, listado desde 87.5. Hoje são **7 dispensas**, e a próxima que ficar obsoleta não será acusada |
 | **a licença das dez páginas web** | medida em 89.7, **depois de empurrar**, e são três saídas com o preço escrito. Decisão sua |
+
+
+---
+
+## 90. O gerador das decisões pendentes — a lacuna que a própria listagem revelou — ✅ 27/10/2026
+
+**Encaminhamento:** *"vamos para a próxima tarefa."* — e as três tarefas abertas dependem todas de você, de modo que peguei a que é minha e que eu havia nomeado como a próxima peça óbvia do aparato.
+
+### 90.1 O diagnóstico, e ele é de dois dias antes
+
+Em 25/10/2026, ao listar tudo, colhi as seções *"O que isto deixa"* de cada item da agenda — e **oito das pendências que a colheita devolveu já estavam resolvidas por itens posteriores**: o item 73 pede ler Beach e Pedersen e o 74 leu; o 78 pede fechar a tarefa 25 e o 79 fechou; o 88 pede arquivar as páginas e o 89 arquivou.
+
+> **O defeito não era a prosa daquelas seções, e elas ficam como estão** — são o registro do que se sabia naquele dia, e é para isso que servem.
+>
+> **O defeito era não haver um lugar único onde virar o bit.** É exatamente o que a ordem de ataque resolveu para as tarefas no item 49, com o campo `estado` — e as decisões nunca tiveram equivalente. **Por isso eu me recusei a copiar a lista para a memória em 25/10:** seria a quarta cópia, e a contabilidade deste projeto já envelheceu quatro vezes por cópia à mão.
+
+### 90.2 O que entrou
+
+`data/decisoes_abertas.json` é a fonte, `scripts/gerar_decisoes.py` o gerador, e a seção **Decisões pendentes** nasce no fim desta agenda, entre marcadores, sobrescrita pelo **passo 4** do ciclo — que foi a **treze passos**.
+
+**Três coisas saem de derivação, e são as três que a mão fazia mal:**
+
+| | |
+|:--|:--|
+| **a seção em que a decisão aparece** | é consequência do campo `estado`. **Fechar uma decisão é virar um campo**, e ela sai da lista sozinha |
+| **a contagem e o agrupamento** | derivados da lista. *"A lista é que manda no número"* foi aprendido **três vezes** nesta casa, sempre por perda de item em cópia |
+| **o ponteiro de seção** | **conferido**: a guarda G-A abre a agenda e exige que a seção citada exista |
+
+> **Por que a G-A é a guarda certa:** ponteiro quebrado é a forma que o apodrecimento toma aqui. E **ponteiro para o nada é pior que pendência esquecida**, porque ele *parece* verificável — quem for conferir abre a agenda, não acha a seção, e não sabe se o erro é do ponteiro ou da memória dele.
+
+**O estado inicial: doze decisões, em três naturezas** — o remoto é público (4), campo do codebook (5), leitura (3). Nenhuma bloqueia as tarefas abertas.
+
+### 90.3 O limite, declarado, porque ele é metade do problema
+
+> **Este gerador conserta a CÓPIA, não o JUÍZO.** Ele dá um lugar único para registrar que uma decisão saiu, e deriva a contagem. **Ele não detecta sozinho** que uma decisão foi resolvida noutro item — isso continua sendo leitura humana.
+>
+> O que ele garante é que, **uma vez lida, a resolução entra em um lugar e a lista acompanha**. É o mesmo contrato da ordem de ataque, e é tudo o que um gerador pode prometer sem mentir.
+
+### 90.4 Três provas negativas
+
+| | prova | |
+|:--|:--|:--|
+| **1** | ponteiro de seção inventado (`§999.9`) | **G-A pega** ✔ |
+| **2** | decidir uma decisão | **sai da lista aberta e a contagem cai** ✔ |
+| **3** | `decidida` sem data | pega ✔ |
+
+**A prova 2 é a que justifica a peça:** ela afere que o defeito de 25/10 não pode voltar — virar o bit basta, e nenhuma prosa precisa ser reescrita à mão.
+
+### 90.5 E um defeito meu, pego antes de empurrar
+
+Escrevi a prosa do `ledger` **sem acentos**, por hábito de comentário de código — e a seção gerada saiu com *"decisoes sao suas"* na agenda que **você** lê.
+
+> **A convenção da casa é clara e eu a inverti:** comentário de código vai sem acento; **prosa para o pesquisador, nunca**. Reescrita, e a regra ficou registrada no próprio `_leia_me` do ledger, onde quem for acrescentar decisão a vê.
+
+---
+
+<!-- DECISOES-PENDENTES: gerado por scripts/gerar_decisoes.py a partir de data/decisoes_abertas.json. Não editar à mão: o ciclo sobrescreve. -->
+
+## Decisões pendentes — revista em 27/10/2026
+
+**As decisões abaixo são suas, e nenhuma delas bloqueia as tarefas abertas.** A lista é gerada de `data/decisoes_abertas.json`: **fechar uma decisão é virar um campo**, e a contagem acompanha. **O que não está aqui não está pendente** — as seções *"O que isto deixa"* de cada item da agenda são o registro do que se sabia naquele dia, e várias delas foram resolvidas por itens posteriores.
+
+**A ordem não é de prioridade, e sim de natureza.** Dentro de cada grupo, a ordem é a de nascimento.
+
+**São doze decisões abertas, em três naturezas:** o remoto é público (4) · campo do codebook (5) · leitura (3).
+
+### O remoto é público
+
+| Decisão | Nasceu | Onde |
+|:--|:--|:--|
+| **A licença das dez páginas web do eixo 09.** Seis declaram *"Todos os direitos reservados"* (Agência Brasil) e quatro nada declaram (portal do STF), e o manifesto registra `licenca_declarada` = `NÃO CONFERIDA (não-PDF)` para todas, porque o auditor de licença **só lê PDF**. **As três saídas estão escritas com o preço de cada uma.** A decisão de 21/10 foi sobre PDFs e nunca examinou as peças não-PDF. | 25/10/2026 | §89.7 |
+| **A higiene que sobrou da tarefa 15:** os PDFs do corpus que seguem no **histórico** do git — removê-los exige reescrita e `push --force` —, o PDF versionado em `.backup_pre_lula/`, os oito `.docx` de síntese, e o ramo `backup-antes-de-destrackear-pdfs`, que segue local. | 13/10/2026 | §46.5 |
+| **A licença da sua própria obra** — o que o repositório declara sobre o uso do codebook e dos documentos de análise. | 13/10/2026 | §46.6 |
+| **Devolver ao git o PDF de Singer, Araujo e Rugitsky**, que é de acesso aberto com licença CC lida na folha 4. **Eu recomendo não devolver**, e a razão não é a licença: a regra `Fontes/**/*.pdf` deixaria de ser uma linha e passaria a ser *"todos menos estes"* — e lista de exceção é dívida que ninguém revisita. | 22/10/2026 | §77.6 |
+
+### Campo do codebook
+
+| Decisão | Nasceu | Onde |
+|:--|:--|:--|
+| **O nome do mecanismo de PT-62.** A rota de desmobilização é *abeyance* sob repressão judicial ativa com institucionalização parcial, e **nenhuma das duas é escolha do movimento**: é desmobilização **heterônoma**, por imposição de custo penal — rota que a tipologia de Taylor não prevê. O nome poderia dizê-lo. **Nomear mecanismo é sua decisão, pelo precedente da tarefa 19.** | 21/10/2026 | §74 |
+| **A grade funcional do enquadramento como 18º campo.** Hoje a classificação vive só em `docs/referencial/02_GRADE-FUNCIONAL-ENQUADRAMENTO.md`, gerada, e **declarada como inferência minha**. Criar campo é sua decisão, e você disse que classifica na escrita. | 21/10/2026 | §73 |
+| **Os quatro registros `N` da grade funcional** — PT-20A, PT-20B, PT-25 e PT-47 têm texto em `framing_narrativa` que **não é quadro de ação coletiva**. São 18 vazios ao todo, e os quatro `N` são os que têm texto e não têm quadro. | 21/10/2026 | §73 |
+| **PT-38 não tem transcrição verificável, e é o único do codebook nessa situação.** As duas aspas vêm de sinopse de documentário (ago/2023) e de levantamento divulgado pela imprensa (jan/2025), e estão em `EXCECOES` com essa razão. **Coletar as duas fontes é sua decisão** — a alternativa é retirar as aspas, e sem elas o registro fica sem transcrição alguma. | 25/10/2026 | §89.6 |
+| **A alegação do site *Proof*** — a matéria do Estadão atribui a ele a notícia de uma reunião em 05/01/2021 nos EUA. **Não está no corpus e não é afirmada pelo registro.** Se entrar, é registro novo, e o levantamento está fechado desde 21/10. | 22/10/2026 | §77.5 |
+
+### Leitura
+
+| Decisão | Nasceu | Onde |
+|:--|:--|:--|
+| **As duas peças `NAO_LIDO` do registro de leitura:** o preprint de Drummond e Manginelli (eixo 08) e o folder do STF. **Nenhuma ancora registro e nenhuma é necessária ao desenho atual** — ler ou manter declarado é sua decisão. | 21/10/2026 | §75 |
+| **As seis peças não abertas da coletânea de Singer, Araujo e Rugitsky:** Rugitsky, Ayers e Saad-Filho, a entrevista com Streeck, Loureiro, Lavinas *et al.* e Braga e Santos. **Todas de economia política, nenhuma necessária ao desenho atual.** | 22/10/2026 | §77.5 |
+| **Os capítulos 4 a 8 de Beach e Pedersen.** O 5 e o 6 sustentariam a **força probatória declarada de cada âncora**, que é a mais dura das quatro dívidas do documento 03. | 21/10/2026 | §74 |
+
+**O que NÃO está nesta lista, e por quê.** As quatro dívidas de Beach e Pedersen, as cobranças dos onze verbetes e a cristalização de quadro **não são decisões**: são trabalho de redação, e a tarefa 16 as cobre. Os limites declarados do aparato — `reports/` fora da G2 e da G4, exceção ociosa sem guarda, capítulo de livro não vigiado, as quatro peças de corroboração do eixo 09 — **não são decisões suas**: são propostas minhas, e vivem nas seções dos itens que as nomearam.
+
+**E o limite desta peça fica declarado:** ela conserta a **cópia**, não o **juízo**. Dá um lugar único para registrar que uma decisão saiu, e deriva a contagem — mas **não detecta sozinha** que uma decisão foi resolvida noutro item. A guarda confere que o ponteiro de seção existe, que é a forma que o apodrecimento toma aqui.
+
+<!-- /DECISOES-PENDENTES -->

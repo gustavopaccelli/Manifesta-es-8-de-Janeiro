@@ -1,0 +1,111 @@
+{
+  "_leia_me": "LEDGER DAS DECISOES DO PESQUISADOR, criado em 27/10/2026 (item 90). Fonte da verdade da secao 'Decisoes pendentes' de docs/PENDENCIAS-ANALITICAS.md, que e GERADA por scripts/gerar_decisoes.py entre marcadores HTML. Nao editar a secao a mao: o ciclo sobrescreve. A razao de existir: as pendencias viviam nas secoes 'O que isto deixa' de cada item da agenda, que sao INSTANTANEOS DATADOS e nao lista viva -- em 25/10/2026 a colheita item a item devolveu oito pendencias ja resolvidas por itens posteriores. O defeito nao era a prosa: era NAO HAVER UM LUGAR UNICO ONDE VIRAR O BIT. As secoes de cada item ficam como estao, porque sao o registro do que se sabia naquele dia; esta secao e o que vale hoje. ATENCAO AO ESCREVER AQUI: os campos de PROSA sao lidos pelo pesquisador na agenda, e vao ACENTUADOS. Comentario de codigo neste repositorio vai sem acento; prosa para ele, nunca.",
+  "_limite_declarado": "Este ledger conserta a COPIA, nao o JUIZO. Ele da um lugar unico para registrar que uma decisao saiu, e deriva a contagem; ele NAO detecta sozinho que uma decisao foi resolvida noutro item. Isso continua sendo leitura humana, e a guarda G-A existe para que ao menos o PONTEIRO nunca aponte para secao inexistente.",
+  "revisada": "27/10/2026",
+  "antes": [
+    "**As decisões abaixo são suas, e nenhuma delas bloqueia as tarefas abertas.** A lista é gerada de `data/decisoes_abertas.json`: **fechar uma decisão é virar um campo**, e a contagem acompanha. **O que não está aqui não está pendente** — as seções *\"O que isto deixa\"* de cada item da agenda são o registro do que se sabia naquele dia, e várias delas foram resolvidas por itens posteriores.",
+    "**A ordem não é de prioridade, e sim de natureza.** Dentro de cada grupo, a ordem é a de nascimento."
+  ],
+  "decisoes": [
+    {
+      "id": "lic-paginas-web",
+      "estado": "aberta",
+      "natureza": "o remoto é público",
+      "o_que": "**A licença das dez páginas web do eixo 09.** Seis declaram *\"Todos os direitos reservados\"* (Agência Brasil) e quatro nada declaram (portal do STF), e o manifesto registra `licenca_declarada` = `NÃO CONFERIDA (não-PDF)` para todas, porque o auditor de licença **só lê PDF**. **As três saídas estão escritas com o preço de cada uma.** A decisão de 21/10 foi sobre PDFs e nunca examinou as peças não-PDF.",
+      "onde": "89.7",
+      "nasceu": "25/10/2026"
+    },
+    {
+      "id": "higiene-historico",
+      "estado": "aberta",
+      "natureza": "o remoto é público",
+      "o_que": "**A higiene que sobrou da tarefa 15:** os PDFs do corpus que seguem no **histórico** do git — removê-los exige reescrita e `push --force` —, o PDF versionado em `.backup_pre_lula/`, os oito `.docx` de síntese, e o ramo `backup-antes-de-destrackear-pdfs`, que segue local.",
+      "onde": "46.5",
+      "nasceu": "13/10/2026"
+    },
+    {
+      "id": "licenca-obra-propria",
+      "estado": "aberta",
+      "natureza": "o remoto é público",
+      "o_que": "**A licença da sua própria obra** — o que o repositório declara sobre o uso do codebook e dos documentos de análise.",
+      "onde": "46.6",
+      "nasceu": "13/10/2026"
+    },
+    {
+      "id": "cc-singer-ao-git",
+      "estado": "aberta",
+      "natureza": "o remoto é público",
+      "o_que": "**Devolver ao git o PDF de Singer, Araujo e Rugitsky**, que é de acesso aberto com licença CC lida na folha 4. **Eu recomendo não devolver**, e a razão não é a licença: a regra `Fontes/**/*.pdf` deixaria de ser uma linha e passaria a ser *\"todos menos estes\"* — e lista de exceção é dívida que ninguém revisita.",
+      "onde": "77.6",
+      "nasceu": "22/10/2026"
+    },
+    {
+      "id": "nome-pt62",
+      "estado": "aberta",
+      "natureza": "campo do codebook",
+      "o_que": "**O nome do mecanismo de PT-62.** A rota de desmobilização é *abeyance* sob repressão judicial ativa com institucionalização parcial, e **nenhuma das duas é escolha do movimento**: é desmobilização **heterônoma**, por imposição de custo penal — rota que a tipologia de Taylor não prevê. O nome poderia dizê-lo. **Nomear mecanismo é sua decisão, pelo precedente da tarefa 19.**",
+      "onde": "74",
+      "nasceu": "21/10/2026"
+    },
+    {
+      "id": "grade-18o-campo",
+      "estado": "aberta",
+      "natureza": "campo do codebook",
+      "o_que": "**A grade funcional do enquadramento como 18º campo.** Hoje a classificação vive só em `docs/referencial/02_GRADE-FUNCIONAL-ENQUADRAMENTO.md`, gerada, e **declarada como inferência minha**. Criar campo é sua decisão, e você disse que classifica na escrita.",
+      "onde": "73",
+      "nasceu": "21/10/2026"
+    },
+    {
+      "id": "quatro-registros-n",
+      "estado": "aberta",
+      "natureza": "campo do codebook",
+      "o_que": "**Os quatro registros `N` da grade funcional** — PT-20A, PT-20B, PT-25 e PT-47 têm texto em `framing_narrativa` que **não é quadro de ação coletiva**. São 18 vazios ao todo, e os quatro `N` são os que têm texto e não têm quadro.",
+      "onde": "73",
+      "nasceu": "21/10/2026"
+    },
+    {
+      "id": "pt38-sem-transcricao",
+      "estado": "aberta",
+      "natureza": "campo do codebook",
+      "o_que": "**PT-38 não tem transcrição verificável, e é o único do codebook nessa situação.** As duas aspas vêm de sinopse de documentário (ago/2023) e de levantamento divulgado pela imprensa (jan/2025), e estão em `EXCECOES` com essa razão. **Coletar as duas fontes é sua decisão** — a alternativa é retirar as aspas, e sem elas o registro fica sem transcrição alguma.",
+      "onde": "89.6",
+      "nasceu": "25/10/2026"
+    },
+    {
+      "id": "alegacao-proof",
+      "estado": "aberta",
+      "natureza": "campo do codebook",
+      "o_que": "**A alegação do site *Proof*** — a matéria do Estadão atribui a ele a notícia de uma reunião em 05/01/2021 nos EUA. **Não está no corpus e não é afirmada pelo registro.** Se entrar, é registro novo, e o levantamento está fechado desde 21/10.",
+      "onde": "77.5",
+      "nasceu": "22/10/2026"
+    },
+    {
+      "id": "duas-nao-lidas",
+      "estado": "aberta",
+      "natureza": "leitura",
+      "o_que": "**As duas peças `NAO_LIDO` do registro de leitura:** o preprint de Drummond e Manginelli (eixo 08) e o folder do STF. **Nenhuma ancora registro e nenhuma é necessária ao desenho atual** — ler ou manter declarado é sua decisão.",
+      "onde": "75",
+      "nasceu": "21/10/2026"
+    },
+    {
+      "id": "seis-pecas-singer",
+      "estado": "aberta",
+      "natureza": "leitura",
+      "o_que": "**As seis peças não abertas da coletânea de Singer, Araujo e Rugitsky:** Rugitsky, Ayers e Saad-Filho, a entrevista com Streeck, Loureiro, Lavinas *et al.* e Braga e Santos. **Todas de economia política, nenhuma necessária ao desenho atual.**",
+      "onde": "77.5",
+      "nasceu": "22/10/2026"
+    },
+    {
+      "id": "beach-cap-4-a-8",
+      "estado": "aberta",
+      "natureza": "leitura",
+      "o_que": "**Os capítulos 4 a 8 de Beach e Pedersen.** O 5 e o 6 sustentariam a **força probatória declarada de cada âncora**, que é a mais dura das quatro dívidas do documento 03.",
+      "onde": "74",
+      "nasceu": "21/10/2026"
+    }
+  ],
+  "depois": [
+    "**O que NÃO está nesta lista, e por quê.** As quatro dívidas de Beach e Pedersen, as cobranças dos onze verbetes e a cristalização de quadro **não são decisões**: são trabalho de redação, e a tarefa 16 as cobre. Os limites declarados do aparato — `reports/` fora da G2 e da G4, exceção ociosa sem guarda, capítulo de livro não vigiado, as quatro peças de corroboração do eixo 09 — **não são decisões suas**: são propostas minhas, e vivem nas seções dos itens que as nomearam.",
+    "**E o limite desta peça fica declarado:** ela conserta a **cópia**, não o **juízo**. Dá um lugar único para registrar que uma decisão saiu, e deriva a contagem — mas **não detecta sozinha** que uma decisão foi resolvida noutro item. A guarda confere que o ponteiro de seção existe, que é a forma que o apodrecimento toma aqui."
+  ]
+}

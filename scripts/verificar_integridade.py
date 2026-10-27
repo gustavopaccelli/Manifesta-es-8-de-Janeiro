@@ -3,7 +3,7 @@
 """
 Verificação de integridade do aparato do process tracing.
 
-Roda nove checagens e devolve código de saída != 0 se qualquer uma falhar.
+Roda dez checagens e devolve código de saída != 0 se qualquer uma falhar.
 Pensada para ser executada depois de toda alteração no codebook — é o que
 garante que JSON, CSV e XLSX não voltem a divergir.
 
@@ -751,6 +751,79 @@ def main():
     else:
         print("  OK — todos declaram a razão da classe")
 
+
+    # --------------------------------------------------------------------- 10
+    # AS CIFRAS DE ESTADO DO README CONTRA O MEDIDO.
+    #
+    # Nasceu em 27/10/2026 (item 91), da revisao do repositorio. O README e o
+    # painel da agenda eram DOIS PAINEIS ESCRITOS A MAO, e os dois estavam
+    # errados: o painel datava-se de 29/09 e nenhuma cifra dele batia; o README
+    # dizia "nove passos" quando eram catorze, "oito checagens" quando eram
+    # nove, "64 PDFs / 12.144 p." quando eram 65 / 12.352 e "25 migracoes"
+    # quando eram 26. O painel passou a ser GERADO; o README continua escrito a
+    # mao, porque e porta de entrada e nao painel -- e por isso ganha guarda.
+    #
+    # **A GUARDA FALHA SE A ANCORA DESAPARECER**, e isso e deliberado: guarda
+    # que nao acha o que vigia e passa em silencio ja morreu duas vezes nesta
+    # casa -- a vigilancia de SHA-256 que nao cobria arquivo nao-PDF, e a
+    # exclusao de caminho inerte por separador de plataforma. Reescrever a
+    # frase do README obriga a reescrever a ancora aqui.
+    cabecalho(10, "AS CIFRAS DO README CONTRA O MEDIDO")
+    import csv as _csv10
+    import glob as _gl10
+    import io as _io10
+    _rd = (RAIZ / "README.md").read_text(encoding="utf-8")
+    _ci = (RAIZ / "scripts/ciclo.sh").read_text(encoding="utf-8")
+    _vi = (RAIZ / "scripts/verificar_integridade.py").read_text(encoding="utf-8")
+    with _io10.open(str(RAIZ / "Fontes/MANIFESTO-CORPUS.csv"),
+                    encoding="utf-8-sig") as _fh10:
+        _man = list(_csv10.DictReader(_fh10))
+    _pdf = [r for r in _man if r["caminho"].lower().endswith(".pdf")]
+    _docpdf = [r for r in _pdf
+               if r.get("documental", "").strip().lower() == "sim"]
+
+    def _mil10(n):
+        return "{:,}".format(int(n)).replace(",", ".")
+
+    ESPERADO = [
+        ("passos do ciclo", r"\*\*(\d+) passos\*\*",
+         max(int(x) for x in re.findall(r"== \d+/(\d+) ", _ci))),
+        ("geradores", r"\*\*(\d+) geram\*\*",
+         len(re.findall(r"python scripts/gerar_", _ci))),
+        ("conferidores", r"\*\*(\d+)\s*\n?\s*conferem\*\*",
+         len(re.findall(r"python scripts/(?:conferir_|verificar_|desenhar_)",
+                        _ci))),
+        ("checagens estruturais", r"\*\*(\d+) checagens estruturais\*\*",
+         len(set(re.findall(r"cabecalho\((\d+),", _vi)))),
+        ("PDFs do corpus", r"\*\*(\d+) PDFs,", len(_pdf)),
+        ("páginas dos PDFs", r"\*\*\d+ PDFs, ([\d.]+) p\.\*\*",
+         _mil10(sum(int(r["paginas"]) for r in _pdf))),
+        ("âncoras não-PDF", r"\*\*(\d+) âncoras não-PDF\*\*",
+         len(_man) - len(_pdf)),
+        ("PDFs documentais", r"\*\*(\d+) PDFs / [\d.]+ p\. são fonte",
+         len(_docpdf)),
+        ("migrações históricas", r"\*\*(\d+) migrações de uso único\*\*",
+         len(_gl10.glob(str(RAIZ / "scripts/historico/*.py")))),
+    ]
+    _erradas = _ausentes = 0
+    for rotulo, padrao, verdade in ESPERADO:
+        m = re.search(padrao, _rd)
+        if not m:
+            _ausentes += 1
+            falhas.append("README: a âncora de '{}' desapareceu".format(rotulo))
+            print("    X a ancora de '{}' nao esta mais no README -- "
+                  "reescreva o padrao aqui".format(rotulo))
+            continue
+        if m.group(1) != str(verdade):
+            _erradas += 1
+            falhas.append("README diz {} em '{}', e são {}".format(
+                m.group(1), rotulo, verdade))
+            print("    X README diz {} em '{}', e sao {}".format(
+                m.group(1), rotulo, verdade))
+    if not (_erradas or _ausentes):
+        print("  OK — as %d cifras de estado do README batem com o medido"
+              % len(ESPERADO))
+
     # --------------------------------------------------------------------- --
     print("\n" + "=" * 72)
     if falhas:
@@ -758,7 +831,7 @@ def main():
         for f in falhas:
             print("  X " + f)
     else:
-        print("RESULTADO: APROVADO — as nove checagens passaram")
+        print("RESULTADO: APROVADO — as dez checagens passaram")
     for a in avisos:
         print("  ~ aviso: " + a)
     print("=" * 72)

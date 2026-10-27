@@ -6,29 +6,32 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 
 ---
 
-## Painel de estado — 29/09/2026
+<!-- PAINEL: gerado por scripts/gerar_painel.py. Não editar à mão: o ciclo sobrescreve. -->
 
-**O aparato está pronto, auditado, versionado e verificável por um comando; o artigo não começou.** Por decisão do pesquisador em 16/08/2026, a redação passou a ser o **último** item da fila: o conjunto de dados de todo o processo político vem primeiro. Nada mudou nessa decisão desde então.
+## Painel de estado — medido em 27 de outubro de 2026
+
+**Esta seção é GERADA pelo passo 5 do ciclo. Nenhuma cifra dela é digitada**, e as listas de tarefas e decisões não são repetidas aqui: o painel aponta para as seções que os passos 3 e 4 geram. **A razão tem data** — até 27/10/2026 este painel era escrito à mão, datava-se de 29/09, e a revisão do repositório mediu que **nenhuma das suas cifras estava certa** (item 91).
+
+**O aparato está pronto, auditado, versionado e verificável por um comando; o artigo não começou.** Por decisão do pesquisador em **16/08/2026**, a redação é o **último** item da fila: o conjunto de dados de todo o processo político vem primeiro. Nada mudou nessa decisão desde então.
 
 | Frente | Estado |
 |:--|:--|
-| Codebook | **83 sub-eventos × 17 campos** — JSON, CSV e XLSX gerados de uma fonte única, com zero divergências. O campo 17, `autonomia_movimento`, entrou em 16/10/2026 por decisão sua, e o campo **está codificado nos 83** — a tarefa 27 foi aberta e executada em 16/10, em cinco rodadas, e o último vazio (PT-19A) foi resolvido no mesmo dia **sem afrouxar guarda nenhuma**, por localizador estrutural em vez de folha (itens 55 a 62) |
-| Ancoragem documental | **81 registros** com arquivo local vinculado · 75 com página ou seção atribuída · 0 referências quebradas |
-| Classes de verificação | **61 em fonte primária** · 21 confirmados por outra via · **0 contextuais** (eram 7 até 04/10) · **0 a verificar** · 1 inferência declarada |
-| Caderno de evidências | **49 registros** com página e transcrição literal |
-| Corpus documental | **22 PDFs / 6.951 p. de fonte documental** + o acórdão do TSE em HTML + 6 matérias arquivadas contra link rot + 7 sínteses. Com a bibliografia teórica do eixo 05, as sete peças da camada $T_{-1}$ do eixo 12, as dezoito do eixo 13, as doze do eixo 14 e as duas do eixo 15, são **66 PDFs / 12.089 p.** — os eixos 12 a 15 acrescentaram **2.698 páginas** em 04 e 08/10, **sem que a documental mudasse**, que é o que a separação das duas contagens serve para mostrar. **Quatro peças sem camada de texto, uma com camada de texto errada e uma sem rótulo de página algum**, declaradas |
-| Figuras | SVG da cadeia causal e cronologia navegável — **realinhadas ao codebook em 25/09**, 83 registros cobertos. São a única parte do aparato escrita à mão |
-| Relatório de pesquisa | `reports/process_tracing_8jan_relatorio.md` — §3.2 corrigido em 11/09; §2.1 e a tabela da Etapa 2 em 25/09; "Próximos passos" reescrita na mesma data. Agora tem checagem no ciclo |
-| Verificação | `bash scripts/ciclo.sh` — **oito passos**: dois geradores e seis checagens, todas com código de saída ≠ 0 em caso de falha |
-| Controle de versão | git desde 20/09/2026, sem remoto configurado |
-| Eixo bibliográfico Lava Jato | 20 referências, 18 com DOI confirmado |
-| Sínteses LeapSpace (não citáveis) | **411 DOIs verificados e triados em 29/09** — 408 existem, os 3 restantes com DOI correto registrado; **35 na camada A**, 65 em B, 308 fora. **Zero referências sobre o Brasil, e o cânone de mecanismos ausente** — itens 22 e 23 |
-| **Redação do artigo** | **não iniciada — por decisão, é o último item da fila** |
+| Codebook | **85 sub-eventos × 17 campos** — JSON, CSV e XLSX gerados de uma fonte única, com zero divergências. Zero vazios em `mecanismo_causal` e em `autonomia_movimento` |
+| Classes de verificação | **68 em fonte primária** · 16 confirmados por outra via · **0 a verificar** · 1 inferência declarada. O critério das três condições está escrito em `metadados.vocabulario_status_classe` desde 25/10/2026 |
+| Ancoragem documental | **84 de 85 registros** com arquivo vinculado · 84 com página ou localizador estrutural · 85 com transcrição literal no campo. O único sem arquivo é PT-03D, declarado |
+| Corpus | **74 peças / 12.352 p.** no manifesto, em 14 eixos — 65 PDFs e 9 âncoras não-PDF, estas conferidas por arquivo inteiro desde 25/10/2026. Da documental: **32 peças / 6.970 p.**; de literatura: 42 peças |
+| Figuras | SVG da cadeia causal e cronologia navegável. **São a única parte do aparato escrita à mão**, e duas guardas as cobrem: o passo 10 confere que todo registro do codebook aparece na figura, e a tabela-espelho do passo 6 confere o **nome do mecanismo** de cada ponto contra o campo — com linha de base em zero divergências |
+| Verificação | `bash scripts/ciclo.sh` — **14 passos**: 8 geradores e 6 conferidores, entre eles as **10 checagens estruturais**. Toda linha de base reprova com código de saída ≠ 0; nenhuma apenas avisa |
+| Controle de versão | git desde **20/09/2026**, 102 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 27/10/2026 |
+| Tarefas abertas | **3** — 10, 17, 16. A lista vive na seção *Ordem de ataque*, gerada pelo passo 3, e 34 tarefas estão fechadas |
+| Decisões pendentes | **12**, em 3 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 4 |
+| **Redação do artigo** | **não iniciada — por decisão, é o último item da fila.** Desde 25/10/2026 ela não tem mais pré-requisito de dado: a tarefa 26 fechou e não há decisão de campo aberta no codebook. **Começá-la é decisão do pesquisador** |
 
-**Fechados na rodada de 16/08/2026:** itens 1, 2 e 8, mais os seis novos — **12** (auditoria de fontes), **13** (estimativa de multidão), **14** (ressalvas restantes), **15** (balanço de 2026 e campanha), **16** (Manchetômetro → PT-50A), **17** (acórdão do TSE) e **18** (execução penal e arquivamento web).
-**Fechados depois:** **19** (11/09 — relatório e páginas da execução penal), **20** (20/09 — reorganização pelo Cookiecutter Data Science) e **21** (25/09 — figuras, relatório e os dois novos passos do ciclo).
-**Abertos e de redação:** itens 3, 4, 5, 6, 9 e 10.
-**Abertos e de verificação:** item 7 (proveniência) e item 11 (coleta) estão **encerrados**. Nenhuma pendência de dado depende de você — as que restam são decisões, e estão no item 21.4.
+> **O que este painel NÃO repete, de propósito.** As tarefas e as decisões abertas têm cada uma a sua seção gerada, e listá-las aqui seria a quarta cópia — a contabilidade deste projeto já envelheceu quatro vezes por cópia à mão, e o histórico está nos itens 49, 78, 83 e 90. **Os itens numerados abaixo são um log cronológico:** a cifra dentro de um item era verdade no dia dele e fica como está.
+
+<!-- /PAINEL -->
+
+> **O PAINEL ANTERIOR, e por que ele saiu — 27/10/2026, item 91.** Até aqui esta seção era escrita à mão e datava-se de **29/09/2026**. A revisão do repositório mediu cada cifra dela e **nenhuma estava certa**: dizia 83 sub-eventos quando são 85, 61 em fonte primária quando são 68, 66 PDFs quando são 65, *oito passos* de ciclo quando são treze, e **49 registros num "Caderno de evidências" que não existe como arquivo algum** — o nome aparecia uma única vez em todo o repositório, nesta tabela. **E uma linha era falsa em sentido perigoso:** afirmava *"git desde 20/09/2026, sem remoto configurado"* quando o remoto existe **e é público** — que é exatamente a premissa que fez os PDFs saírem do versionamento em 21/10. **Painel escrito à mão descreve o dia em que foi escrito**, e por isso ele passou a ser gerado. As linhas de *Fechados* e *Abertos* que vinham aqui usavam a numeração de itens anterior à ordem de ataque, e saíram com ele: as duas listas vivem nas seções geradas pelos passos 3 e 4.
 
 > **✅ RESOLVIDO NO MESMO DIA — o balanço chegou.** PT-53 e PT-61 percorreram quatro estados em 16/08/2026: `Confirmado` (jornalístico) → **rebaixados** a `A verificar` pela auditoria → `Confirmado` por corroboração jornalística dupla → **`Confirmado em fonte primária`**, quando o pesquisador forneceu o documento: o **Relatório do Gabinete do Min. Alexandre de Moraes (29/04/2026, 15 p.)**, obtido do bucket oficial do STF e incorporado em `Fontes/10_Democracia-Inabalada/`. A cifra de **1.402 réus responsabilizados agora pode ser citada como dado oficial, com página** (p. 6). **Não resta nenhum registro em `A verificar` no codebook.** Detalhes nos itens 12–15 e em [`reports/AUDITORIA-FONTES.md`](../reports/AUDITORIA-FONTES.md).
 >
@@ -5038,6 +5041,71 @@ Em 25/10/2026, ao listar tudo, colhi as seções *"O que isto deixa"* de cada it
 Escrevi a prosa do `ledger` **sem acentos**, por hábito de comentário de código — e a seção gerada saiu com *"decisoes sao suas"* na agenda que **você** lê.
 
 > **A convenção da casa é clara e eu a inverti:** comentário de código vai sem acento; **prosa para o pesquisador, nunca**. Reescrita, e a regra ficou registrada no próprio `_leia_me` do ledger, onde quem for acrescentar decisão a vê.
+
+
+---
+
+## 91. A revisão do repositório — dois painéis escritos à mão, e nenhuma cifra certa — ✅ 27/10/2026
+
+**Encaminhamento:** *"Faça a revisão e atualize todo o repositório para mim."*
+
+Tratei como **varredura de obsolescência**, não como reescrita: medir o valor verdadeiro de cada cifra estrutural e procurar, na prosa, as formas que a contradizem.
+
+### 91.1 O método, e a distinção que ele obriga
+
+> **A agenda é um log cronológico: cifra dentro de item datado era verdade no dia dele e fica como está.** *"82 registros"* no item 23 não é erro — é história. O que precisa estar certo é a prosa **descritiva**: README, LEIA-ME, o inventário de fontes, o referencial, e o **painel** no alto deste arquivo.
+>
+> A primeira varredura não fazia essa distinção e devolveu dezenas de falsos positivos — inclusive *"os sete passos"* do checklist de Ricks e Liu, que é método citado, e *"22 registros motivacionais"*, que é subconjunto correto. **Separar log de descrição foi o que tornou a varredura utilizável.**
+
+### 91.2 O achado: havia DOIS painéis escritos à mão, e os dois estavam errados
+
+**O painel da agenda datava-se de 29/09 e nenhuma das suas cifras estava certa:**
+
+| dizia | era |
+|:--|:--|
+| 83 sub-eventos × 17 campos | **85** |
+| 61 em fonte primária · 21 por outra via | **68 · 16** |
+| 66 PDFs / 12.089 p. | **65 / 12.352** |
+| *oito passos: dois geradores e seis checagens* | **catorze passos, oito geradores, dez checagens** |
+| **49 registros** num *"Caderno de evidências"* | **o nome aparecia uma única vez em todo o repositório — nesta tabela. Não existe arquivo algum com esse nome** |
+| *"git desde 20/09/2026, **sem remoto configurado**"* | **o remoto existe e é PÚBLICO** |
+
+> **A última linha é a grave, e não por ser a mais velha.** *"Sem remoto configurado"* é a negação exata da premissa que fez os PDFs do corpus saírem do versionamento em 21/10/2026. **Um leitor do painel concluiria que a decisão de distribuição não tinha razão de ser.**
+
+**E o README era o segundo painel:** *"nove passos"* (catorze), *"oito checagens"* (dez), *"64 PDFs, 12.144 p."* (65 / 12.352), *"25 migrações"* (26). As cifras de fonte documental — **23 PDFs / 6.970 p.** — e as de dossiês e estados de backup estavam **certas**.
+
+### 91.3 O conserto: um painel gerado, o outro guardado
+
+| | |
+|:--|:--|
+| **o painel da agenda** | passou a ser **gerado** — `scripts/gerar_painel.py`, passo 5, entre marcadores. **Nenhuma cifra dele é digitada**, e a prova negativa de procedência **reprova qualquer número nas células que não saia de `medir()`** |
+| **o README** | **continua escrito à mão, porque é porta de entrada e não painel** — e por isso ganhou a **checagem 10**, que compara as suas nove cifras de estado com o medido |
+
+**E os números de passo que o painel cita são derivados de `ciclo.sh`.** Era a cifra mais podre do repositório: **o ciclo foi de oito a catorze passos em dezenove dias**, e cada entrada renumerou tudo. *Citar "passo 9" à mão é marcar hora num relógio que anda.*
+
+**A checagem 10 falha se a sua âncora desaparecer**, e isso é deliberado: guarda que não acha o que vigia e passa em silêncio já morreu duas vezes aqui — a vigilância de SHA-256 que não cobria arquivo não-PDF, e a exclusão de caminho inerte por separador de plataforma. **Reescrever a frase do README obriga a reescrever o padrão na guarda.**
+
+### 91.4 A checagem 10 acusou a si mesma na primeira execução
+
+Acrescentá-la fez o *"9 checagens estruturais"* do README ficar obsoleto **no mesmo instante** — e ela pegou. É a melhor demonstração possível de que funciona.
+
+### 91.5 Quatro defeitos meus no caminho, e três são da mesma família
+
+| | |
+|:--|:--|
+| **prosa sem acento** | escrevi o `ledger` de decisões com prosa não acentuada, por hábito de comentário — e a seção gerada saiu com *"decisoes sao suas"* na agenda que você lê. Corrigido no item 90 |
+| **cifra de referente errado, no meu próprio painel** | a célula das figuras dizia *"77 registros cobertos"*, e 77 é o número de **pontos** no HTML; o passo 10 declara cobertura de **todos** os registros, e a tabela-espelho conta **outro** número de pontos por causa dos compostos. **Cifra que eu não sei explicar não entra** — a célula passou a citar as duas guardas em vez da cifra |
+| **a prova acusando o próprio formato** | ela reprovou `352` e `970`, que são pedaços de **12.352** e **6.970** partidos pelo separador de milhar, e `09` e `10`, que vêm de datas em ISO. **Guarda que acusa o próprio formato treina a ser ignorada** — a correção foi normalizar antes de varrer, e passar as datas do git para a forma brasileira **na fonte** |
+| **identificador tomado por cifra** | a mesma prova acusou `26` em *"a tarefa 26 fechou"*. **Identificador não é cifra** — é a lição do referente aplicada à própria prova |
+
+### 91.6 O que a varredura NÃO mexeu, e por quê
+
+| | |
+|:--|:--|
+| **os itens numerados desta agenda** | log cronológico. Cifra dentro de item datado é história |
+| **`LICENCA-E-DISTRIBUICAO.md`** | as cifras dele são de subconjuntos de literatura, com a data de medição ao lado — e a linha de 13/10 já se declara atualizada |
+| **`Fontes/LEIA-ME_fontes.md`** | as cifras de *"49 registros"* e *"23"* ali são de rodadas datadas de agosto, e o arquivo as apresenta como tal |
+| **`docs/referencial/`** | *"os sete passos"* é o checklist de Ricks e Liu; *"22 registros motivacionais"* e *"os 4 registros `N`"* são subconjuntos corretos |
 
 ---
 

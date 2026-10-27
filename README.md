@@ -11,7 +11,9 @@ pip install -r requirements.txt
 bash scripts/ciclo.sh
 ```
 
-O ciclo tem **nove passos**: três geram — os formatos derivados, a auditoria de fontes e a seção *Ordem de ataque* da agenda — e seis conferem: as oito checagens estruturais, as figuras, o relatório, a amostra contra o texto dos PDFs, o campo multiorganizacional e as citações do documento 11. Ele falha — com código de saída diferente de zero — se qualquer coisa divergir. Rode-o depois de **toda** alteração no JSON ou no corpus.
+O ciclo tem **14 passos**: **8 geram** — os formatos derivados, a auditoria de fontes, as seções *Ordem de ataque*, *Decisões pendentes* e *Painel de estado* da agenda, a tabela-espelho das figuras, a grade funcional do enquadramento e o registro de estado de leitura — e **6 conferem**: as **10 checagens estruturais**, as figuras, o relatório, as transcrições contra a folha do PDF, o campo multiorganizacional e as citações do documento 11. Ele falha — com código de saída diferente de zero — se qualquer coisa divergir. Rode-o depois de **toda** alteração no JSON ou no corpus.
+
+> **As cifras de estado deste README são conferidas pela checagem 10 do ciclo**, que as compara com o medido e **falha se a frase que ela vigia desaparecer** — porque guarda que não acha a sua âncora e passa em silêncio é pior que guarda nenhuma. O estado completo e sempre atual vive no **Painel de estado**, gerado, no alto de [`docs/PENDENCIAS-ANALITICAS.md`](docs/PENDENCIAS-ANALITICAS.md).
 
 ## As regras que sustentam o aparato
 
@@ -27,12 +29,12 @@ A estrutura segue os princípios do padrão *Cookiecutter Data Science* — dado
 
 | Aqui | Papel | Equivalente CCDS |
 |:--|:--|:--|
-| `Fontes/` | Corpus, **imutável**. **64 PDFs, 12.144 p.** — dos quais **23 PDFs / 6.970 p. são fonte documental**, e o resto é bibliografia teórica e literatura —, mais HTML, arquivamento web e sínteses. Inventário em `Fontes/LEIA-ME_fontes.md`, manifesto gerado em `Fontes/MANIFESTO-CORPUS.csv`. **Estes dois números são a linha de base de 13/10/2026 da checagem 6**, que avisa quando o corpus se move | `data/raw` |
+| `Fontes/` | Corpus, **imutável**. **65 PDFs, 12.352 p.** e **9 âncoras não-PDF** — dos quais **23 PDFs / 6.970 p. são fonte documental**, e o resto é bibliografia teórica e literatura —, mais HTML, arquivamento web e sínteses. Inventário em `Fontes/LEIA-ME_fontes.md`, manifesto gerado em `Fontes/MANIFESTO-CORPUS.csv`. **Estes dois números são a linha de base de 13/10/2026 da checagem 6**, que avisa quando o corpus se move | `data/raw` |
 | `process_tracing_8jan_eventos.json` | Codebook — a fonte única da verdade. Fica na raiz porque é a porta de entrada dos dados e o que todo script lê | `data/interim` (curado à mão) |
 | `data/processed/` | Derivados, **gerados**: o CSV e o XLSX do codebook, o catálogo da imprensa, a planilha dos 411 DOIs das sínteses e a triagem deles por pertinência. Não editar — a próxima execução sobrescreve | `data/processed` |
 | `Caderno-de-evidencias/` | Transcrições literais com página, por registro | `references` |
 | `scripts/` | **Só o que roda hoje**: 18 geradores e verificadores. Ver `scripts/LEIA-ME.md` | `src` |
-| `scripts/historico/` | As **25 migrações de uso único** já executadas — `recodificar_*`, `inserir_*`, `migrar_*`. Não são parte do ciclo e **não se reexecutam**: cada uma afirma, por `assert`, o estado anterior que já não existe. Ficam como registro de o que mudou o codebook, e quando | `src` |
+| `scripts/historico/` | As **26 migrações de uso único** já executadas — `recodificar_*`, `inserir_*`, `migrar_*`. Não são parte do ciclo e **não se reexecutam**: cada uma afirma, por `assert`, o estado anterior que já não existe. Ficam como registro de o que mudou o codebook, e quando | `src` |
 | `reports/` | `AUDITORIA-FONTES.md`, a auditoria de vínculos, **gerada** | `reports` |
 | `reports/figures/` | **O único lugar das figuras**: cadeia causal e campo multiorganizacional, em SVG e HTML. As da cronologia são **escritas à mão** — editar o JSON não as atualiza, e `scripts/conferir_figuras.py` acusa a defasagem; as do campo são geradas por `desenhar_campo.py`. Até 14/10/2026 havia uma cópia em `projeto-pos-doc/figuras/`, declarada byte-idêntica e que **não era** — ver `docs/PENDENCIAS-ANALITICAS.md`, item 48 | `reports/figures` |
 | `reports/process_tracing_8jan_relatorio.md` | Relatório de pesquisa, **escrito à mão** — como as figuras, reproduz números do codebook e já ficou para trás duas vezes; `scripts/conferir_relatorio.py` acusa a defasagem | `reports` |

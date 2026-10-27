@@ -22,7 +22,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Corpus | **74 peças / 12.352 p.** no manifesto, em 14 eixos — 65 PDFs e 9 âncoras não-PDF, estas conferidas por arquivo inteiro desde 25/10/2026. Da documental: **32 peças / 6.970 p.**; de literatura: 42 peças |
 | Figuras | SVG da cadeia causal e cronologia navegável. **São a única parte do aparato escrita à mão**, e duas guardas as cobrem: o passo 10 confere que todo registro do codebook aparece na figura, e a tabela-espelho do passo 6 confere o **nome do mecanismo** de cada ponto contra o campo — com linha de base em zero divergências |
 | Verificação | `bash scripts/ciclo.sh` — **14 passos**: 8 geradores e 6 conferidores, entre eles as **10 checagens estruturais**. Toda linha de base reprova com código de saída ≠ 0; nenhuma apenas avisa |
-| Controle de versão | git desde **20/09/2026**, 102 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 27/10/2026 |
+| Controle de versão | git desde **20/09/2026**, 103 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 27/10/2026 |
 | Tarefas abertas | **3** — 10, 17, 16. A lista vive na seção *Ordem de ataque*, gerada pelo passo 3, e 34 tarefas estão fechadas |
 | Decisões pendentes | **12**, em 3 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 4 |
 | **Redação do artigo** | **não iniciada — por decisão, é o último item da fila.** Desde 25/10/2026 ela não tem mais pré-requisito de dado: a tarefa 26 fechou e não há decisão de campo aberta no codebook. **Começá-la é decisão do pesquisador** |
@@ -5106,6 +5106,51 @@ Acrescentá-la fez o *"9 checagens estruturais"* do README ficar obsoleto **no m
 | **`LICENCA-E-DISTRIBUICAO.md`** | as cifras dele são de subconjuntos de literatura, com a data de medição ao lado — e a linha de 13/10 já se declara atualizada |
 | **`Fontes/LEIA-ME_fontes.md`** | as cifras de *"49 registros"* e *"23"* ali são de rodadas datadas de agosto, e o arquivo as apresenta como tal |
 | **`docs/referencial/`** | *"os sete passos"* é o checklist de Ricks e Liu; *"22 registros motivacionais"* e *"os 4 registros `N`"* são subconjuntos corretos |
+
+
+---
+
+## 92. A guarda da exceção ociosa — dispensa que ninguém revisita continua dispensando — ✅ 27/10/2026
+
+**Encaminhamento:** *"crie a guarda para exceção ociosa."* — listada desde 87.5, repetida em 88.6 e 89.6.
+
+### 92.1 Por que uma dispensa sem uso é pior que uma pendência esquecida
+
+As três exceções de PT-08 saíram em 25/10/2026 **porque eu fui olhar** — nada as acusou. E o problema não é cosmético:
+
+> **A chave de `EXCECOES` é o par (registro, prefixo normalizado da transcrição).** Se a transcrição que uma entrada cobria for **reescrita mantendo o começo**, a nova passa pela dispensa velha **sem ninguém conferir** — a exceção deixa de descrever o caso que a justificava e continua valendo. **Dispensa é licença, e licença que ninguém revisita é o defeito que esta casa nomeou em 22/10** ao recusar lista de exceção no `.gitignore`.
+
+### 92.2 Medido antes de construir
+
+| | |
+|:--|:--|
+| exceções registradas | **7** |
+| **em uso numa passagem completa** | **7** |
+| ociosas | **0** |
+
+**A base é genuinamente zero, e não um número herdado.** Reimplementei a mesma cadeia do laço do conferidor para medir antes de instrumentá-lo — porque guarda cuja base se descobre *depois* de ligá-la nasce justificando o que encontrar.
+
+### 92.3 O desenho, e as duas decisões que ele tomou
+
+| | |
+|:--|:--|
+| **`excecoes_usadas` deixou de ser contador** | passou a ser **conjunto de chaves**. Só se pode perguntar quais sobraram sabendo **quais** foram usadas — e o contador respondia *quantas vezes*, que é a pergunta errada |
+| **roda só em `--todos`** | pelo precedente de `PARCIAIS_BASE` e `EMPATES_BASE`, de 10/10/2026: o modo amostral abre doze registros e deixaria a maioria das exceções **sem exercício**. Acusá-las ali seria ruído, **e ruído treina a ignorar guarda** |
+
+**E ela reprova, não avisa** — pela lição de 25/10, quando a linha de base do alcance imprimia o aviso e saía com código zero enquanto o comentário dela afirmava o contrário (§87.4).
+
+### 92.4 Duas provas negativas, e a segunda declara o limite
+
+| | prova | |
+|:--|:--|:--|
+| **1** | exceção plantada com prefixo que nenhuma transcrição começa | **faz o ciclo cair** ✔, nomeando a entrada |
+| **2** | a mesma exceção, **no modo amostral** | **não acusa** ✔ — limite declarado, não virtude |
+
+### 92.5 O que isto deixa
+
+O ciclo segue em **catorze passos** e **dez checagens**, verde, com **sete linhas de base em zero**: `PARCIAIS` · `EMPATES` · `SEM_PAGINA_EXTRAIVEL` · `MEIAS_ANCORAS` · `INTEIRO_TEOR_SEM_ACHADO` · `DIVERGENCIAS` · **`OCIOSAS`**.
+
+**Resta um item dos três que eu havia listado:** `reports/` segue fora da G2 e da G4 — elas vigiam `docs/` e o `ledger`. O relatório de pesquisa e a auditoria não afirmam estado de leitura hoje, **mas podem**, e estender é uma linha em `DOCS_VIGIADOS` **com a medição do estrago antes**.
 
 ---
 

@@ -298,6 +298,23 @@ SEM_PAGINA_EXTRAIVEL_BASE = 0
 # aparecer fora da peca citada, sem razao escrita, faz o ciclo cair.
 INTEIRO_TEOR_SEM_ACHADO_BASE = 0
 
+# LINHA DE BASE DA EXCECAO OCIOSA: ZERO, medida em 27/10/2026 (item 92).
+#
+# Listada desde 87.5: nada avisava quando uma entrada de `EXCECOES`
+# deixava de ser usada. As tres de PT-08 sairam em 25/10 **porque eu fui
+# olhar**, e a quarta teria ficado.
+#
+# E EXCECAO OBSOLETA E PIOR QUE PENDENCIA ESQUECIDA, porque ela CONTINUA
+# DISPENSANDO: a chave e (registro, prefixo normalizado), e se a
+# transcricao que ela cobria for reescrita mantendo o comeco, a NOVA
+# passa pela dispensa velha sem ninguem conferir. Dispensa e licenca, e
+# licenca que ninguem revisita e o defeito que esta casa nomeou ao
+# recusar lista de excecao no `.gitignore` em 22/10.
+#
+# Medido em 27/10/2026, antes de construir: as SETE registradas estao
+# todas em uso. A base e genuinamente zero, e nao um numero herdado.
+OCIOSAS_BASE = 0
+
 # LINHA DE BASE DAS MEIAS-ANCORAS: ZERO, medida em 22/10/2026 (itens 80 e
 # 81) e zerada no mesmo dia.
 #
@@ -1006,7 +1023,10 @@ def main():
         len(alvos_reg)))
     print("=" * 78)
     ok = falha = indet = parciais_total = atravessa_total = notas_total = 0
-    falhas, ociosas_total, excecoes_usadas = [], 0, 0
+    falhas, ociosas_total = [], 0
+    # CONJUNTO DE CHAVES, nao contador, desde 27/10/2026: so se pode
+    # perguntar quais excecoes sobraram se se souber quais foram usadas.
+    excecoes_usadas = set()
     empatados = []
     meias = []          # a guarda de 22/10/2026 — ver MEIAS_ANCORAS_BASE
     nao_pdf = []        # ancora nao-PDF localizada — ver item 87
@@ -1115,7 +1135,7 @@ def main():
                 chave = next((k for k in EXCECOES
                               if k[0] == e["id"] and norm(frag).startswith(k[1])), None)
                 if chave:
-                    excecoes_usadas += 1
+                    excecoes_usadas.add(chave)
                     continue
                 # A PECA FOI VARRIDA POR INTEIRO E A TRANSCRICAO NAO ESTA
                 # NELA. Vale so para quem cita EXCLUSIVAMENTE por
@@ -1301,8 +1321,8 @@ def main():
               "É onde olhar primeiro\nquando uma âncora estiver sob suspeita.".format(
                   ociosas_total))
     if excecoes_usadas:
-        print("{} transcrição(ões) dispensada(s) por exceção registrada em EXCECOES."
-              .format(excecoes_usadas))
+        print("{} de {} exceção(ões) de EXCECOES foram usadas."
+              .format(len(excecoes_usadas), len(EXCECOES)))
     if falhas:
         print("\nFALHAS — investigar antes de citar: {}".format(", ".join(falhas)))
         print("Uma falha significa uma de quatro coisas, nesta ordem de probabilidade:")
@@ -1342,6 +1362,29 @@ def main():
               "15/10/2026.".format(len(empatados), EMPATES_BASE))
         print("  Ver o item 53: a medição que fixou esta base em zero.")
         return 1
+    # A GUARDA DA EXCECAO OCIOSA, e ela roda SO em `--todos` pelo mesmo
+    # motivo que as duas irmas abaixo: o modo amostral abre doze
+    # registros e deixaria a maioria das excecoes sem exercicio, de modo
+    # que acusa-las ali seria ruido -- e ruido treina a ignorar guarda.
+    if todos:
+        ociosas = [k for k in EXCECOES if k not in excecoes_usadas]
+        if len(ociosas) != OCIOSAS_BASE:
+            print("")
+            print("X EXCECAO OCIOSA: {} agora, {} na linha de base de "
+                  "27/10/2026.".format(len(ociosas), OCIOSAS_BASE))
+            for _rid, _pref in ociosas:
+                print("    ~ {:<7} «{}…»".format(_rid, _pref[:66]))
+            print("  Excecao que deixou de ser usada CONTINUA "
+                  "DISPENSANDO: se a transcricao que")
+            print("  ela cobria for reescrita mantendo o comeco, a nova "
+                  "passa pela dispensa velha.")
+            print("  Duas saidas: retire a entrada de EXCECOES, ou "
+                  "atualize OCIOSAS_BASE dizendo")
+            print("  no commit por que uma dispensa sem uso deve ficar.")
+            falhas.append("excecao ociosa: {} de {}".format(
+                len(ociosas), len(EXCECOES)))
+            return 1
+
     if todos and parciais_total != PARCIAIS_BASE:
         print("")
         print("X CASAMENTO PARCIAL SEM CAUSA CLASSIFICADA: {} agora, {} na linha "

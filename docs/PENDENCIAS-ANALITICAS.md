@@ -22,7 +22,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Corpus | **84 peças / 12.644 p.** no manifesto, em 14 eixos — 75 PDFs e 9 âncoras não-PDF, estas conferidas por arquivo inteiro desde 25/10/2026. Da documental: **34 peças / 7.092 p.**; de literatura: 50 peças |
 | Figuras | SVG da cadeia causal e cronologia navegável. **São a única parte do aparato escrita à mão**, e duas guardas as cobrem: o passo 10 confere que todo registro do codebook aparece na figura, e a tabela-espelho do passo 6 confere o **nome do mecanismo** de cada ponto contra o campo — com linha de base em zero divergências |
 | Verificação | `bash scripts/ciclo.sh` — **14 passos**: 8 geradores e 6 conferidores, entre eles as **10 checagens estruturais**. Toda linha de base reprova com código de saída ≠ 0; nenhuma apenas avisa |
-| Controle de versão | git desde **20/09/2026**, 111 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 28/10/2026 |
+| Controle de versão | git desde **20/09/2026**, 112 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 28/10/2026 |
 | Tarefas abertas | **3** — 10, 17, 16. A lista vive na seção *Ordem de ataque*, gerada pelo passo 3, e 34 tarefas estão fechadas |
 | Decisões pendentes | **10**, em 3 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 4 |
 | **Redação do artigo** | **não iniciada — por decisão, é o último item da fila.** Desde 25/10/2026 ela não tem mais pré-requisito de dado: a tarefa 26 fechou e não há decisão de campo aberta no codebook. **Começá-la é decisão do pesquisador** |
@@ -5630,6 +5630,70 @@ A linha que o ciclo imprime dizia *"vive só em campo de nota"*. **Com `mecanism
 **Nada desta frente.** As 15 estão conferidas, a guarda está ligada com base zero e duas provas, e o campo analítico deixou de ser ponto cego.
 
 **E um achado de passagem, que não é desta frente e vale escrito:** ao ler a folha 495 da AP 2668 para corrigir a aspa de PT-28, o acórdão diz, duas sentenças antes, que os danos *"estão estimados em mais R$ 20 milhões de reais"* e que **mais de R$ 11 milhões correspondem somente aos danos aos prédios do Supremo Tribunal Federal** — testado, confere integral na folha 495. **É um TERCEIRO lastro primário para a valoração de PT-38**, independente da CPMI e do Iphan, e ele estava a duas sentenças de uma aspa que o projeto já citava. **Não o acrescentei**: PT-38 não está nesta frente, e ancorar cifra exige a rodada própria.
+
+
+---
+
+## 101. O teste contra o caso chileno — Castro não era rival, e o balanço tem um denominador errado — ✅ 28/10/2026
+
+**Encaminhamento:** *"Teste essas diferenças. É um achado importante em relação a casos regionais."*
+
+### 101.1 As três diferenças reduziram-se a uma, e ela inverte o que eu havia escrito
+
+Em 28/10 de manhã eu declarei Castro (2025) **rival** de PT-62. **Li o resumo, não a operacionalização.**
+
+A célula de **alta severidade com alta seletividade** da Tabela 1 dela prevê **dissuasão**, e a seção teórica (f. 6, impressa 392) admite **três instrumentos** nela: processar organizadores-chave, penas legais duras contra organizadores-chave, e força excessiva contra ativistas específicos. **A conclusão (f. 18, impressa 404) diz qual ela mediu:** táticas como **espancamento**.
+
+> **PT-62 afirma o primeiro e o segundo instrumentos; ela testou o terceiro.** E a teoria dela **prevê** o resultado que PT-62 observa, pela remoção e incapacitação de lideranças — *"The removal or incapacitation of movement leaders disrupts the movement's coordination, communication, and strategic planning"*.
+>
+> **Castro não contradiz PT-62: ela falsifica uma afirmação que PT-62 não faz, e deixa sem teste o mecanismo que ele afirma.** O que dela permanece é a cobrança de **horizonte** — o achado dela é de *curto prazo* e PT-62 projeta três anos. **As três diferenças que eu listei como "a testar" reduzem-se a essa.**
+>
+> **E a lição é de método:** resumo diz o que a peça **achou**; só a operacionalização diz **sobre o quê**. Nomeei rival quem é aliado do mecanismo por ter lido um e não o outro. **Jung (2010) permanece rival de verdade**, e isso não mudou.
+
+### 101.2 O achado comparado é sobre instrumento, não sobre região
+
+**Os dois casos são democráticos** — Castro escolheu o Chile porque a evidência do campo vem sobretudo de contextos autoritários. **Então o que separa os desfechos não é o regime.**
+
+O que separa é **o instrumento e o estrato**: no Chile, força física visível contra manifestantes na rua, com surto de mobilização de curto prazo; no Brasil, processo penal contra organizadores, cuja predição teórica nunca foi testada naquela peça.
+
+> **O par sugere uma hipótese que nenhum dos dois casos testa sozinho:** dentro da mesma célula, **o instrumento penal e o instrumento físico têm sinais opostos**, e a razão candidata é a **visibilidade** — espancamento é público e produz agravo coletivo; processo penal é individual, lento e invisível. **É hipótese, e está escrita como hipótese.**
+
+### 101.3 E o caso contribui com o que a grade dela não expressa
+
+| estrato | o que a repressão fez | severidade |
+|:--|:--|:--|
+| núcleo crucial | 8 réus, 16 a 27 anos, regime fechado (PT-56) | **altíssima** |
+| núcleos principais | 29 réus (PT-61) | alta |
+| base | **552 ANPPs com confissão, 39,37% do total de réus** (Balanço f. 9) | **baixa**, sem privação de liberdade |
+
+> **O caso ocupa duas células ao mesmo tempo, divididas por posição no campo** — e **nunca passou pela célula da reação adversa**, que é a de alta severidade *indiscriminada*, onde o caso chileno operou. **A grade trata o movimento como alvo único e não tem onde escrever isso.** A contribuição é a **repressão estratificada**: o topo removido *enquanto* a base era absorvida por acordo.
+
+### 101.4 O limite, e ele decide o que se pode concluir
+
+**Não há série de eventos de protesto brasileira pós-8/1 neste corpus.** O **tratamento** está ancorado folha por folha; o **desfecho** não está medido — é a inferência de PT-62.
+
+> **A seção testa a PREDIÇÃO da teoria contra o tratamento medido, não o desfecho contra o tratamento.** Ela permite afirmar que o caso está na célula cuja predição é dissuasão; **não** permite afirmar que a dissuasão ocorreu porque a predição existe. **O que fecharia o teste é uma PEA de 2023 a 2026 com os critérios de codificação dela**, e isso não está no corpus.
+
+### 101.5 O defeito de denominador, e ele é da fonte primária
+
+Ao reunir as cifras do estrato, a medição achou que **o balanço do Gabinete do Min. Moraes chama de `total de réus` duas bases diferentes**:
+
+| folha | o que imprime | base que as porcentagens revelam |
+|:--|:--|--:|
+| **9** | `sentenciados 100% do total de réus 1402` — e 552 ANPPs = 39,37%, 431 privativas = 30,74%, 419 restritivas = 29,89%, 413 fechado = 29,46% | **1.402**, e as quatro casam ao centésimo |
+| **10-11** | `190 presos – 10,12% do total de réus`, `169 prisões definitivas 9%`, `21 processuais 1,12%` | **1.878**, e as três casam — nenhuma com 1.402 |
+
+**E 1878 é, na folha 4, o número de `investigações instauradas`.**
+
+> **As porcentagens de prisão do balanço são sobre as investigações, e o rótulo diz réus.** PT-61 transcrevia `190 presos (10,12%)` ao lado dos `1.402 réus` que ele próprio nomeia — **fiel à fonte, e reproduzindo o defeito dela sem sinalizá-lo**. A cifra comparável com os 1.402 é **13,55%**, derivada. O registro passou a declarar a base, e **citar o percentual exige citá-la**.
+>
+> **É `a cifra correta no referente errado` dentro de uma fonte primária, e é a primeira vez neste projeto.** As ocorrências anteriores eram todas de prosa minha. **A lição muda de endereço:** a desconfiança que esta casa treinou contra as próprias cifras **vale também para as cifras da fonte** — e a forma de pegar foi a mesma de sempre, recalcular a razão e comparar com a impressa.
+
+### 101.6 O que isto deixa
+
+**Uma hipótese escrita para ser testada** — sinais opostos do instrumento penal e do físico dentro da mesma célula, por visibilidade — e **o desenho que a testaria**, que é uma PEA brasileira de 2023 a 2026 fora do alcance deste corpus.
+
+**E uma pergunta que eu não respondo:** se o balanço erra o rótulo do denominador em três cifras de prisão, **quantas outras cifras do corpus têm esse defeito e passaram?** A varredura é mecânica — recalcular toda razão impressa contra as bases declaradas na mesma peça — e **não a fiz**, porque é frente própria e não acréscimo desta.
 
 ---
 

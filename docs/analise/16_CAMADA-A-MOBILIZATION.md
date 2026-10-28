@@ -230,3 +230,96 @@ Ao escrever as seis transcrições novas eu as pus em `mecanismo_causal`, e **o 
 > **As 26 que conferem são o achado, e ele é incômodo.** Pela lógica da própria guarda das meias-âncoras — *aspa que sustenta afirmação do registro e vive só em campo que ninguém confere* —, **as 26 são meias-âncoras**, e a base daquela guarda é zero. Elas existem porque `mecanismo_causal` nunca entrou no escopo dela.
 
 > **Não resolvi isto aqui, e a razão é de tamanho:** resolver são 26 transcrições a promover, registro por registro, com a folha de cada uma conferida — é uma frente própria, não um acréscimo a esta. **O que fica feito é a medição e o desenho da guarda:** aspa em `mecanismo_causal` tem de conferir numa folha que o registro ancora **ou** ser nome retirado declarado. **O que fica aberto é a promoção das 26.**
+
+---
+
+## 11. O teste contra o caso chileno — 28/10/2026
+
+**Encaminhamento:** *"Teste essas diferenças. É um achado importante em relação a casos regionais."*
+
+Em 28/10 de manhã eu declarei Castro (2025) **rival** de PT-62, com base no resumo da peça. **A leitura da operacionalização dela desfaz isso**, e o que sobra é mais interessante do que a rivalidade.
+
+### 11.1 A grade dela, e as duas dimensões
+
+Castro cruza **severidade** e **seletividade**, e define as duas na folha 5 (impressa 391):
+
+> *"High-severity tactics involve substantial harm or penalties, such as physical assault, use of lethal force, or **long-term imprisonment**"*
+
+> *"Selective repression focuses on **key activists, leaders, or specific groups** deemed threatening"*
+
+A Tabela 1 da mesma folha prevê, por célula:
+
+| | **baixa seletividade** (indiscriminada) | **alta seletividade** (seletiva) |
+|:--|:--|:--|
+| **alta severidade** | **reação adversa** — aumento de agravos, solidariedade, deslegitimação do Estado | **DISSUASÃO** — dissuasão dos atores-chave, desarticulação de redes, redução da capacidade de coordenação |
+| **baixa severidade** | **efeito nulo** — normalização da repressão, dissuasão ineficaz, adaptação tática | **dissuasão** gradual com baixa reação adversa |
+
+### 11.2 A célula tem três instrumentos, e ela mediu um
+
+A seção teórica, folha 6 (impressa 392), diz o que cabe na célula de dissuasão:
+
+> *"Selective application of severe consequences, such as **prosecuting key organizers**, **harsh legal penalties against key organizers**, and the **employment of excessive force against specific activists**, is expected to have a deterrence effect"*
+
+— e nomeia o mecanismo:
+
+> *"The **removal or incapacitation of movement leaders** disrupts the movement's coordination, communication, and strategic planning"*
+
+**A conclusão, folha 18 (impressa 404), diz qual dos três ela testou:**
+
+> *"Contrary to expectations that selective, high-severity repression would deter protests through targeted disruption, **tactics like beatings** generated short-term surges in mobilization"*
+
+> ### A inversão
+>
+> **Castro mediu o terceiro instrumento — força policial visível na rua.** PT-62 afirma o **primeiro e o segundo** — processo penal e penas longas contra organizadores. **A teoria dela PREVÊ o resultado que PT-62 observa**, pela remoção e incapacitação de lideranças.
+>
+> **Ela não é rival de PT-62: ela falsifica uma afirmação que PT-62 não faz, e deixa sem teste o mecanismo que ele afirma.** O que dela permanece é a cobrança de **horizonte** — o achado dela é explicitamente de *curto prazo*, e PT-62 projeta três anos. **As três diferenças que eu havia listado reduzem-se a essa.**
+>
+> **E a lição de método é minha:** eu nomeei rival quem é aliado do mecanismo porque li o **resumo** e não a **operacionalização**. Resumo diz o que a peça achou; só a operacionalização diz **sobre o quê**.
+
+### 11.3 Onde o caso brasileiro cai na grade dela — e o que a grade não tem
+
+As cifras são ancoradas em fonte primária, registro por registro:
+
+| estrato | o que a repressão fez | severidade | fonte |
+|:--|:--|:--|:--|
+| **núcleo crucial** | 8 réus, penas de 16 a 27 anos, regime inicial fechado | **altíssima** | PT-56, AP 2668 |
+| **núcleos principais** | 29 réus | alta | PT-61, Balanço f. 6 |
+| **crimes graves / menos graves** | 402 e 419 réus | média | PT-61, Balanço f. 6 |
+| **base** | **552 ANPPs com confissão — 39,37% do total de réus** | **baixa**, sem privação de liberdade | PT-61, Balanço f. 9 |
+
+> **O caso ocupa DUAS células ao mesmo tempo, e a divisão é por posição no campo.** Alta severidade e alta seletividade no topo — a célula de dissuasão dela, pelo instrumento que ela não mediu. Baixa severidade e alta seletividade na base — a outra célula de dissuasão, a gradual. **Em nenhum momento o caso brasileiro passou pela célula da reação adversa**, que é a de alta severidade *indiscriminada*, e é onde o caso chileno operou.
+>
+> **A grade dela trata o movimento como alvo único e não tem onde escrever isso.** A contribuição do caso é a **repressão estratificada**: o Estado aplicou severidades diferentes a estratos diferentes do mesmo campo, no mesmo episódio, e o resultado agregado não é a soma de duas células — é o efeito de o topo ter sido removido *enquanto* a base era absorvida por acordo.
+
+### 11.4 O achado comparado, e ele é sobre regime e não sobre região
+
+**Os dois casos são democráticos.** Castro escolheu o Chile justamente porque *"most empirical evidence comes from authoritarian contexts"*. **Então o que separa os dois desfechos não é o regime** — e é isso que faz o par valer como comparação.
+
+O que separa é **o instrumento e o estrato**: no Chile, força física visível contra manifestantes na rua, que produziu surto de mobilização de curto prazo; no Brasil, processo penal contra organizadores, que é o instrumento cuja predição teórica — dissuasão — nunca foi testada empiricamente naquela peça.
+
+> **O par sugere uma hipótese que nenhum dos dois casos testa sozinho:** dentro da mesma célula de alta severidade e alta seletividade, **o instrumento penal e o instrumento físico têm sinais opostos** — o primeiro dissuade, o segundo provoca —, e a razão candidata é a **visibilidade**: espancamento é público e produz agravo coletivo; processo penal é individual, lento e invisível.
+>
+> **Isto é hipótese, não achado.** Está escrita aqui para ser testável, e o que falta para testá-la está nomeado abaixo.
+
+### 11.5 O limite que decide o que se pode concluir
+
+**Não há série de eventos de protesto brasileira pós-8/1 neste corpus.** O lado do **tratamento** — quem foi punido, com que severidade, em que estrato — está ancorado em fonte primária, folha por folha. O lado do **desfecho** — se a mobilização de rua caiu, quando e quanto — **não está medido**: é a inferência de PT-62, e a classe dele diz isso.
+
+> **Então o que esta seção faz é testar a PREDIÇÃO da teoria contra o tratamento medido, e não o desfecho contra o tratamento.** A diferença importa: ela permite afirmar que o caso brasileiro está na célula cuja predição é dissuasão, e **não** permite afirmar que a dissuasão ocorreu porque a predição existe.
+>
+> **O que fecharia o teste:** uma PEA brasileira de 2023 a 2026 com os mesmos critérios de codificação de evento que Castro usa. **Não está no corpus e não é coleta pequena** — é o desenho que a §3.5 do documento 03 já descreve para a cobrança da variável dependente, aplicado ao outro lado da cadeia.
+
+### 11.6 E um defeito de denominador na fonte primária, achado de passagem
+
+Ao reunir as cifras do estrato, a medição achou que **o balanço do STF chama de `total de réus` duas bases diferentes**:
+
+| folha | o que imprime | base que as porcentagens revelam |
+|:--|:--|--:|
+| **9** | `sentenciados 100% do total de réus 1402`, e 552 ANPPs = 39,37%, 431 privativas = 30,74%, 419 restritivas = 29,89%, 413 fechado = 29,46% | **1.402** — as quatro casam ao centésimo |
+| **10-11** | `190 presos – 10,12% do total de réus`, `169 prisões definitivas 9%`, `21 processuais 1,12%` | **1.878** — as três casam, nenhuma com 1.402 |
+
+**E 1878 é, na folha 4, o número de `investigações instauradas`.**
+
+> **As porcentagens de prisão do balanço são sobre as investigações, e o rótulo diz réus.** PT-61 transcrevia `190 presos (10,12%)` ao lado dos `1.402 réus` que ele próprio nomeia — fiel à fonte, e reproduzindo o defeito dela sem sinalizá-lo. **A cifra comparável com os 1.402 é 13,55%, derivada.** O registro passou a declarar isso, e **citar o percentual exige citar a base**.
+>
+> **É `a cifra correta no referente errado` — desta vez dentro de uma fonte primária**, o que é a primeira ocorrência desse tipo neste projeto. As anteriores eram todas de prosa minha.

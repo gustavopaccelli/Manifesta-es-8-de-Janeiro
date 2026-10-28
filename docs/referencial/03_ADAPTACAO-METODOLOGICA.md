@@ -93,6 +93,22 @@ O Apêndice A.2 (p. 164-165 impressa) exige:
 
 ---
 
+### 3.5 A seleção pela variável dependente, declarada em 28/10/2026
+
+**A cobrança é da literatura lida, e é direta.** Kriesi, Hutter e Bojár (2019, f. 6, impressa 256), ao explicar como escolheram os sessenta episódios do estudo deles, invocam McAdam e Boudet (2012):
+
+> *"one needs to be careful not to select on the dependent variable"*
+
+— e a saída que eles adotam é estudar a *"população em risco"*: no caso deles, propostas de política **em risco** de contestação, selecionadas **antes** de se saber quão contenciosas seriam.
+
+**Este projeto faz o contrário, e por desenho.** Ele estuda **um** episódio, escolhido **porque** ele aconteceu e porque foi contencioso. Não há população em risco amostrada, não há caso de controle, e os 85 sub-eventos são todos do mesmo episódio.
+
+> **Isto não é um defeito corrigível — é o preço da variante declarada.** O Apêndice A.1 de Beach e Pedersen define `explaining-outcome process tracing` como a variante que **parte de um desfecho particular** e procura a explicação suficiente dele. Partir do desfecho **é** selecionar pela variável dependente, e a variante existe para esse tipo de pergunta.
+>
+> **O que a declaração muda é o que o projeto pode concluir.** Ele pode afirmar que a cadeia é suficiente para **este** desfecho, com a evidência ancorada folha a folha. Ele **não** pode afirmar que os mecanismos nomeados produziriam o mesmo desfecho em outro caso, nem que episódios parecidos sem invasão careciam deles — e a segunda afirmação é a que a seleção pela dependente proíbe, porque **nenhum caso sem o desfecho foi examinado**.
+
+**O que seria preciso para responder à cobrança no termo dela:** uma população de episódios em risco — por exemplo, as eleições presidenciais latino-americanas contestadas desde 2019 — com a mesma grade aplicada aos que **não** terminaram em invasão. **Isso é outro desenho e outro corpus**, e fica declarado como o que não se faz aqui em vez de ficar implícito.
+
 ## 4. O quadro de adaptação, item por item
 
 | Exigência da variante *explaining-outcome* | O que o projeto tem | Estado |

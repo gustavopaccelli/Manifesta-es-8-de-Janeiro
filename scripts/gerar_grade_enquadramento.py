@@ -245,16 +245,24 @@ w("| **N** | não é quadro de ação coletiva | o capítulo define as três "
   "tarefas para **quadros de movimento**; avaliação interna de órgão e "
   "contrição reputacional não são nenhuma das três |")
 w("")
-w("> **A extensão que declaro, porque é o ponto frágil da inferência:** as "
+w("> **A extensão, e ela DEIXOU DE SER ANALOGIA MINHA EM 28/10/2026:** as "
   "três tarefas foram formuladas para quadros **de movimento**, e dos {} "
   "registros com quadro **{} são de desafiante ou do campo, {} são de ator "
   "estatal** — tribunal, Judiciário, Legislativo, Executivo — e {} é díade "
-  "entre campos opostos. Aplicar a grade aos estatais é **extensão por "
-  "analogia**, não leitura literal da fonte. Mantive porque a simetria é "
-  "analiticamente útil — um tipo penal *é* atribuição de responsabilidade, "
-  "que é a definição de diagnóstico —, mas **a extensão fica declarada e é "
-  "sua para aceitar ou recusar**.".format(com_quadro, desafiante, estatal,
-                                         misto))
+  "entre campos opostos. Até 28/10 eu declarava isto como **extensão por "
+  "analogia**, mantida porque a simetria é analiticamente útil — um tipo "
+  "penal *é* atribuição de responsabilidade, que é a definição de "
+  "diagnóstico. **A leitura de Kriesi, Hutter e Bojár (2019) deu a ela "
+  "autorização por citação:** a `Contentious Episode Analysis` existe, "
+  "entre outras razões, para ir além do foco estreito nas ações de "
+  "protesto dos desafiantes, e define o episódio pela **interação "
+  "diádica** entre governo e desafiantes mais terceiros (f. 4, impressa "
+  "254). Incorporar o ator estatal à análise de um episódio contencioso é "
+  "o que aquela peça foi escrita para fazer. **O que continua sendo meu é "
+  "o recorte mais estreito**: CEA autoriza analisar o ato estatal; "
+  "aplicar-lhe a grade de TAREFAS DE ENQUADRAMENTO de Snow é um passo a "
+  "mais, que a peça não dá e eu dou. **O ponto frágil mudou de lugar, e "
+  "encolheu.**".format(com_quadro, desafiante, estatal, misto))
 w("")
 w("## 2. O que a grade mostra, e as cifras são geradas deste documento")
 w("")
@@ -319,9 +327,12 @@ w("|:--|:--|")
 w("| **a grade entra no esquema?** | criar um 18º campo é **decisão sua**. "
   "Hoje a classificação vive **só aqui**, e é inferência declarada |")
 w("| **a extensão a ator estatal** | **{} dos {}** quadros são de ator "
-  "estatal — contra {} de desafiante e {} de díade entre campos —, e a fonte "
-  "formulou as três tarefas para quadros de movimento. Aceitar a simetria é "
-  "escolha analítica |".format(estatal, com_quadro, desafiante, misto))
+  "estatal — contra {} de desafiante e {} de díade entre campos. **Desde "
+  "28/10/2026 a extensão cita Kriesi, Hutter e Bojár (2019)**, que "
+  "incorporam o ator estatal à análise do episódio por construção. O que "
+  "resta de escolha minha é aplicar a eles a grade de TAREFAS, que "
+  "aquela peça não aplica |".format(estatal, com_quadro, desafiante,
+                                   misto))
 w("| **os {} registros `N`** | PT-20A, PT-20B, PT-25 e PT-47 têm texto no "
   "campo que **não é quadro de ação coletiva**. Se a grade entrar, eles "
   "precisam de valor próprio, ou o campo precisa de outro nome |".format(

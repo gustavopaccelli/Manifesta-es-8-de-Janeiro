@@ -22,7 +22,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Corpus | **84 peças / 12.644 p.** no manifesto, em 14 eixos — 75 PDFs e 9 âncoras não-PDF, estas conferidas por arquivo inteiro desde 25/10/2026. Da documental: **34 peças / 7.092 p.**; de literatura: 50 peças |
 | Figuras | SVG da cadeia causal e cronologia navegável. **São a única parte do aparato escrita à mão**, e duas guardas as cobrem: o passo 10 confere que todo registro do codebook aparece na figura, e a tabela-espelho do passo 6 confere o **nome do mecanismo** de cada ponto contra o campo — com linha de base em zero divergências |
 | Verificação | `bash scripts/ciclo.sh` — **14 passos**: 8 geradores e 6 conferidores, entre eles as **10 checagens estruturais**. Toda linha de base reprova com código de saída ≠ 0; nenhuma apenas avisa |
-| Controle de versão | git desde **20/09/2026**, 109 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 28/10/2026 |
+| Controle de versão | git desde **20/09/2026**, 110 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 28/10/2026 |
 | Tarefas abertas | **3** — 10, 17, 16. A lista vive na seção *Ordem de ataque*, gerada pelo passo 3, e 34 tarefas estão fechadas |
 | Decisões pendentes | **10**, em 3 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 4 |
 | **Redação do artigo** | **não iniciada — por decisão, é o último item da fila.** Desde 25/10/2026 ela não tem mais pré-requisito de dado: a tarefa 26 fechou e não há decisão de campo aberta no codebook. **Começá-la é decisão do pesquisador** |
@@ -5502,6 +5502,73 @@ Fui a **Snow *et al.* (2014)** esperando uma segunda fonte para a lacuna da **cr
 **Oito cobranças de leitura, nenhuma executada, todas no documento 16.** A mais pesada não é nenhum dos rivais: é que **a extensão da grade funcional a atos de Estado pode deixar de ser inferência minha** e passar a citar a peça que foi escrita para fazer isso. As outras sete estão na tabela da §9 daquele documento.
 
 **E um limite declarado do documento novo:** `docs/analise/16_CAMADA-A-MOBILIZATION.md` **não está sob guarda de citação de página** — `conferir_hipoteses.py` vigia os documentos 11 e 12. **As dezessete transcrições dele foram testadas uma a uma pelo conferidor e as dezessete casam integral na folha citada**, mas o que garante isso é a medição feita ao escrevê-las, não uma guarda que as reconfira. **Estender o conferidor a este documento é proposta minha, e não a executei.**
+
+
+---
+
+## 99. As oito cobranças do documento 16 — e duas delas estavam erradas — ✅ 28/10/2026
+
+**Encaminhamento:** *"Resolva as oito cobranças do documento 16"*.
+
+### 99.1 As oito, e o que cada uma virou
+
+| | cobrava | virou |
+|:--|:--|:--|
+| 1 | a extensão da grade a atos de Estado era **analogia minha** | **cita Kriesi, Hutter e Bojár (2019)** — e o ponto frágil **encolheu em vez de sair** |
+| 2 | CEA como âncora metodológica irmã | **entrou em `marco_teorico`**, com a citação em que a peça se declara complemento |
+| 3 | a autocrítica dos autores de DoC | **entrou na âncora `Mechanisms`**, com folha |
+| 4 | a seleção pela variável dependente | **§3.5 nova no doc 03** |
+| 5 | dois rivais para PT-62 | **declarados, com as peças em `fonte_pagina`** |
+| 6 | PT-61 separa intenção de efeito | **a intenção passou a estar rotulada como leitura minha** |
+| 7 | `object shift` em PT-19 e PT-34 | **citado em PT-19; PT-34 estava errado na cobrança** |
+| 8 | a quarta arena como *a mais fraca* | **medida: ela está VAZIA** |
+
+**Nenhum nome de mecanismo mudou, nenhuma classe mudou, nenhum fato mudou.** O que mudou foi o que o aparato **declara** e o que ele **cita**.
+
+### 99.2 A cobrança 1 encolheu em vez de sair, e a distinção importa
+
+A grade funcional declarava, desde 21/10, que aplicar as três tarefas de enquadramento a atos de Estado era **extensão por analogia minha**. CEA é a peça escrita para incorporar o ator estatal à análise do episódio, e define o episódio pela **interação diádica** — de modo que a extensão **ganhou autorização por citação**.
+
+> **Mas não toda ela.** CEA autoriza **analisar** o ato estatal dentro do episódio; **aplicar-lhe a grade de TAREFAS DE ENQUADRAMENTO de Snow é um passo a mais, que aquela peça não dá e eu dou.** O ponto frágil mudou de lugar e ficou menor — e dizer isso é mais honesto do que riscar a declaração.
+
+### 99.3 A cobrança 8 não era o que eu escrevi
+
+Eu havia escrito que a quarta arena de Alimi *et al.* — movimento × contramovimento — era **a mais fraca** deste codebook. **Medido no campo multiorganizacional: ela está vazia.**
+
+> As 22 entidades ocupam seis posições de sistema, e **as sete de `CONFLITO` são todas órgãos de Estado** — STF, Congresso, TSE, Polícia Federal, PGR, governo federal e o interventor. **Não há uma entidade de contramovimento no campo.**
+>
+> **E a ausência é achado, não lacuna de coleta:** neste episódio quem enfrentou o desafiante foram tribunais, polícias e o Congresso, **não um movimento adversário**. Alimi e coautores derivaram a arena de três casos etnonacionais, em que o contramovimento é parte da estrutura do conflito.
+>
+> **O limite da afirmação fica escrito:** houve contramobilização pró-democracia em 2022 e ela **não está no codebook**. O que se pode afirmar é sobre o campo **tal como codificado**.
+
+**E a cobrança 7 nomeava PT-34 por engano.** Ele descreve **simultaneidade por contiguidade**, não deslocamento de alvo. O deslocamento se vê comparando **PT-14** (TSE e processo eleitoral), **PT-12** (Forças Armadas como destinatário do apelo) e **PT-19** (Planalto, Congresso e STF) — e é em PT-19 que ele se completa. **PT-34 não foi tocado**, e `object shift` entrou como **citação**, não como nome: trocar o nome de PT-19 retiraria um nome atribuído para ganhar um termo que a citação já entrega.
+
+### 99.4 Dois erros meus, e o segundo abriu um buraco grande
+
+**O primeiro é de convenção.** Escrevi em `fonte_pagina` a página **impressa** das peças novas, e o campo carrega a **folha do PDF** — a impressa vive na prosa, ao lado do offset. **O conferidor reprovou as seis aspas na primeira execução**, que é o comportamento certo, e o conserto foi trocar quatro números.
+
+**O segundo é de campo, e é o achado desta rodada.** Pus as seis transcrições em `mecanismo_causal`, **e nenhuma guarda lê esse campo**: `transcricoes()` lê `fonte_trecho`, e `CAMPOS_DE_NOTA` da guarda das meias-âncoras é `nota_auditoria` e `status_verificacao`. **Eu andei para dentro do ponto cego que este projeto tem guarda para pegar.** As seis foram movidas e hoje conferem por folha.
+
+### 99.5 O ponto cego medido, e ele não é meu
+
+| | |
+|:--|--:|
+| aspas de 45 caracteres ou mais em `mecanismo_causal` | **45** |
+| registros que as carregam | **24** |
+| **que conferem** numa folha que o próprio registro ancora | **26** |
+| que não conferem | **8** |
+
+**As 8 que não conferem têm causa conhecida e legítima:** são **nomes de mecanismo retirados**, grafados dentro do registro pelo padrão da casa — PT-01, PT-06, PT-12A, PT-21, PT-34 e PT-62 (duas) — mais uma frase de prosa minha em PT-18.
+
+> **As 26 que conferem são o problema.** Pela lógica da própria guarda das meias-âncoras — *aspa que sustenta afirmação do registro e vive só em campo que ninguém confere* —, **as 26 são meias-âncoras**, e a linha de base daquela guarda é **zero**. Elas existem porque `mecanismo_causal` nunca entrou no escopo dela, e **a guarda nasceu em 25/10 medindo o campo errado para esta pergunta**.
+>
+> **Não resolvi, e a razão é de tamanho:** são 26 transcrições a promover, registro por registro, com a folha de cada uma conferida. **O que fica feito é a medição e o desenho:** aspa em `mecanismo_causal` tem de conferir numa folha que o registro ancora **ou** ser nome retirado declarado — e o registro de nomes retirados da checagem 7 já tem os nomes. **O que fica aberto é a promoção das 26.**
+
+### 99.6 O que isto deixa
+
+**Uma frente nova, minha, não executada:** a promoção das 26 aspas de `mecanismo_causal` a `fonte_trecho` e a extensão da guarda das meias-âncoras àquele campo. **É a maior dívida de aparato aberta hoje**, e nasceu de um erro meu de uma hora antes.
+
+**E uma correção a jusante que a cobrança 2 fez de passagem:** a frase de `marco_teorico` que dizia restar **ler** Beach e Pedersen estava **uma semana desatualizada** — a obra foi lida em 21/10, capítulos 1 a 3 e Apêndice A, e o registro de leitura o diz desde então. **O campo que declara a âncora metodológica estava mais velho que o registro que a mede.**
 
 ---
 

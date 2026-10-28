@@ -111,7 +111,13 @@ e os mecanismos correspondentes:
 
 > *"opportunity/threat spirals, competition for power, outbidding, and object shift—combine differently to drive the process"*
 
-**As quatro arenas existem neste codebook, e três delas estão povoadas:** movimento × ambiente político (a camada $T_{-1}$ inteira), entre atores do movimento (PT-15, PT-16, PT-21), e movimento × forças de segurança (o $T_0$ inteiro, mais PT-52 e PT-53). **A quarta — movimento × contramovimento — é a que o codebook tem mais fraca**, e o campo multiorganizacional já havia registrado isso por outro caminho.
+**As quatro arenas existem neste codebook, e três delas estão povoadas:** movimento × ambiente político (a camada $T_{-1}$ inteira), entre atores do movimento (PT-15, PT-16, PT-21), e movimento × forças de segurança (o $T_0$ inteiro, mais PT-52 e PT-53).
+
+> **A quarta — movimento × contramovimento — está VAZIA, e a medição é de 28/10/2026.** Eu havia escrito que ela era *a mais fraca*; medido no campo multiorganizacional, ela não é fraca, é **inexistente**. As 22 entidades se distribuem em seis posições de sistema, e as **sete de `CONFLITO` são todas órgãos de Estado** — STF, Congresso Nacional, TSE, Polícia Federal, PGR, governo federal a partir de 01/01/2023 e o interventor federal. **Contramovimento, no sentido de Alimi e coautores — um movimento rival — não tem nenhuma entidade no campo.**
+
+> **E a ausência é um achado, não uma lacuna de coleta.** Neste episódio a oposição ao desafiante foi **institucional**: quem o enfrentou foram tribunais, polícias e o Congresso, não um movimento adversário na rua. Alimi e coautores derivaram a quarta arena de três casos etnonacionais, em que o contramovimento é parte da estrutura do conflito; **aqui ele não está ausente da codificação, está ausente do episódio** — e é isso que o `sistema CONFLITO` do campo mostra quando se olha o que ele contém.
+
+> **O limite da afirmação:** houve contramobilização pró-democracia em 2022, e ela **não está no codebook**. Se ela deve entrar, é registro novo, e o levantamento está fechado desde 21/10 — de modo que o que se pode afirmar é sobre o campo **tal como codificado**, não sobre o episódio no mundo.
 
 **`Object shift` é o mecanismo a observar.** Ele nomeia o deslocamento do alvo da contestação — e o 8 de janeiro é, em parte, exatamente isso: o alvo passa da urna (2022) ao Congresso, ao Planalto e ao STF. **PT-19 e PT-34 descrevem esse deslocamento sem nomeá-lo com o termo da literatura.**
 
@@ -185,19 +191,42 @@ e os mecanismos correspondentes:
 
 ---
 
-## 9. O que isto cobra do codebook — e não executo
+## 9. O que isto cobrou do codebook — **as oito, executadas em 28/10/2026**
 
-**Nenhuma destas é mecânica, e por isso nenhuma foi executada.** Elas vão para a agenda, e a decisão é do pesquisador.
+**Escritas aqui como cobranças em 28/10/2026 e executadas no mesmo dia, por encaminhamento do pesquisador** — *"Resolva as oito cobranças do documento 16"*. A tabela ficou como registro do que cada uma pedia, e a coluna nova diz o que foi feito. **Duas delas estavam imprecisas, e a execução as corrigiu.**
 
-| | o que a leitura cobra | onde |
+| | o que a leitura cobrava | o que foi feito |
 |:--|:--|:--|
-| 1 | **A extensão da grade funcional a atos de Estado deixa de ser analogia minha** e passa a citar Kriesi, Hutter e Bojár (2019) — a peça existe para incorporar atores além dos desafiantes | `02_GRADE-FUNCIONAL` |
-| 2 | **O `marco_teorico` pode ganhar CEA como âncora metodológica irmã**, com a citação de que ela complementa e não substitui o *process tracing* | `metadados` |
-| 3 | **A âncora de DoC passa a citar a autocrítica dos autores** sobre invocar mecanismos com pouco rigor | `metadados`, doc 09 |
-| 4 | **A seleção pela variável dependente passa a ser declarada**, com a justificativa do desenho de Beach e Pedersen | doc 03 |
-| 5 | **PT-62 recebe dois rivais declarados** — o declínio por fatores internos de Jung (2010) e a falha da dissuasão de Castro (2025), com as três diferenças de desenho escritas | PT-62 |
-| 6 | **PT-61 separa intenção de efeito**, pela distinção de Ellefsen (2021) | PT-61 |
-| 7 | **PT-19 e PT-34 podem nomear `object shift`**, que é o termo da literatura para o deslocamento de alvo que eles descrevem | PT-19, PT-34 |
-| 8 | **A quarta arena de Alimi *et al.* — movimento × contramovimento — é a mais fraca deste codebook**, e o campo multiorganizacional já o havia indicado por outro caminho | doc do campo |
+| 1 | a extensão da grade a atos de Estado era **analogia minha** | ✅ **passa a citar Kriesi, Hutter e Bojár (2019)**, f. 4. E o ponto frágil **encolheu em vez de sair**: CEA autoriza analisar o ato estatal, e aplicar-lhe a grade de **tarefas** de Snow é um passo que ela não dá e eu dou — é só esse que continua sendo meu |
+| 2 | CEA como âncora metodológica irmã | ✅ **entrou em `marco_teorico`**, com as duas transcrições em que a própria peça declara complementar e não substituir o *process tracing*. **E a frase do campo que dizia restar ler Beach e Pedersen saiu**: estava uma semana desatualizada |
+| 3 | a autocrítica dos autores de DoC | ✅ **entrou na âncora `Mechanisms`**, com a folha. Ela não invalida a âncora: muda o que se pode fazer com ela — citar mecanismo de DoC exige folha, e não vale invocar o vocabulário por familiaridade |
+| 4 | a seleção pela variável dependente | ✅ **§3.5 nova no doc 03**, com o que o projeto pode e **não** pode concluir, e com o desenho que responderia à cobrança no termo dela |
+| 5 | dois rivais para PT-62 | ✅ **declarados no mecanismo, com as duas peças em `fonte_pagina`** e as três transcrições conferidas por folha. As três diferenças de desenho entraram **como diferenças a testar**, não como resposta |
+| 6 | PT-61 separa intenção de efeito | ✅ **a divulgação continua fato ancorado; a intenção dissuasiva passa a estar rotulada como leitura minha**, com Ellefsen (2021) dizendo por que a distinção importa |
+| 7 | `object shift` em PT-19 e PT-34 | ✅ **citado em PT-19, sem trocar nome** — e **a cobrança estava errada sobre PT-34**: ele descreve simultaneidade por contiguidade, não deslocamento. O deslocamento se vê comparando **PT-14 → PT-12 → PT-19**, e PT-34 não foi tocado |
+| 8 | a quarta arena como *a mais fraca* | ✅ **medida, e ela não é fraca: está vazia.** As sete entidades de `CONFLITO` do campo são **todas órgãos de Estado**, e a ausência é achado — a oposição ao desafiante foi institucional, não movimental |
+
+> **O que a execução não mudou:** nenhum **nome** de mecanismo, nenhuma **classe**, nenhum **fato**. As quatro peças novas entraram em `fonte_local` e `fonte_pagina` dos três registros, e por isso as seis transcrições novas **são conferidas por folha a cada ciclo** em vez de viverem em prosa.
 
 **E uma que não é decisão, e sim medição já feita:** a lacuna da cristalização de quadro **continua apoiada em uma fonte só**, porque o balanço de 2014 não a enuncia. Isso não muda o estado dela — muda o que se pode dizer sobre o lastro dela.
+
+---
+
+## 10. O ponto cego que a execução achou, e ele é grande
+
+Ao escrever as seis transcrições novas eu as pus em `mecanismo_causal`, e **o conferidor não as leu** — `transcricoes()` lê `fonte_trecho`, e `CAMPOS_DE_NOTA` da guarda das meias-âncoras é `nota_auditoria` e `status_verificacao`. **`mecanismo_causal` não está em nenhum dos dois.** As seis foram movidas para `fonte_trecho` e hoje conferem por folha.
+
+**Mas a medição do ponto cego devolveu mais do que as minhas seis:**
+
+| | |
+|:--|--:|
+| aspas de 45 caracteres ou mais em `mecanismo_causal` | **45** |
+| registros que as carregam | **24** |
+| **que conferem** numa folha que o próprio registro ancora | **26** |
+| que não conferem | **8** |
+
+**E as 8 que não conferem têm causa conhecida:** são **nomes de mecanismo retirados**, grafados dentro do registro pelo padrão da casa — PT-01, PT-06, PT-12A, PT-21, PT-34 e PT-62 (duas) — mais uma frase de prosa minha em PT-18.
+
+> **As 26 que conferem são o achado, e ele é incômodo.** Pela lógica da própria guarda das meias-âncoras — *aspa que sustenta afirmação do registro e vive só em campo que ninguém confere* —, **as 26 são meias-âncoras**, e a base daquela guarda é zero. Elas existem porque `mecanismo_causal` nunca entrou no escopo dela.
+
+> **Não resolvi isto aqui, e a razão é de tamanho:** resolver são 26 transcrições a promover, registro por registro, com a folha de cada uma conferida — é uma frente própria, não um acréscimo a esta. **O que fica feito é a medição e o desenho da guarda:** aspa em `mecanismo_causal` tem de conferir numa folha que o registro ancora **ou** ser nome retirado declarado. **O que fica aberto é a promoção das 26.**

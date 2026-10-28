@@ -22,7 +22,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Corpus | **74 peças / 12.352 p.** no manifesto, em 14 eixos — 65 PDFs e 9 âncoras não-PDF, estas conferidas por arquivo inteiro desde 25/10/2026. Da documental: **32 peças / 6.970 p.**; de literatura: 42 peças |
 | Figuras | SVG da cadeia causal e cronologia navegável. **São a única parte do aparato escrita à mão**, e duas guardas as cobrem: o passo 10 confere que todo registro do codebook aparece na figura, e a tabela-espelho do passo 6 confere o **nome do mecanismo** de cada ponto contra o campo — com linha de base em zero divergências |
 | Verificação | `bash scripts/ciclo.sh` — **14 passos**: 8 geradores e 6 conferidores, entre eles as **10 checagens estruturais**. Toda linha de base reprova com código de saída ≠ 0; nenhuma apenas avisa |
-| Controle de versão | git desde **20/09/2026**, 104 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 27/10/2026 |
+| Controle de versão | git desde **20/09/2026**, 105 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 27/10/2026 |
 | Tarefas abertas | **3** — 10, 17, 16. A lista vive na seção *Ordem de ataque*, gerada pelo passo 3, e 34 tarefas estão fechadas |
 | Decisões pendentes | **12**, em 3 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 4 |
 | **Redação do artigo** | **não iniciada — por decisão, é o último item da fila.** Desde 25/10/2026 ela não tem mais pré-requisito de dado: a tarefa 26 fechou e não há decisão de campo aberta no codebook. **Começá-la é decisão do pesquisador** |
@@ -5199,6 +5199,55 @@ A G2 nasceu em 21/10 olhando `docs/`, onde a prosa de análise vive. Ficaram for
 **Os três itens que eu havia listado saíram:** a guarda das três condições (86), a da exceção ociosa (92) e esta. O ciclo segue em **catorze passos** e **dez checagens**, verde, com **sete linhas de base em zero**.
 
 **O que permanece fora de guarda de prosa, declarado:** `Fontes/LEIA-ME_fontes.md` e os dois `LEIA-ME` de `scripts/` e da raiz — são inventário e manual, não afirmam estado de leitura, **mas podem**. Estendê-los é a mesma linha de `glob`, e a medição do estrago vem antes.
+
+
+---
+
+## 94. A G2 vai aos manuais e ao inventário — e pegou a frase em que eu descrevia a extensão anterior — ✅ 27/10/2026
+
+**Encaminhamento:** *"estenda também para os LEIA-ME e o inventário de fontes."*
+
+### 94.1 O caso oposto ao de `reports/`, e a expectativa estava errada
+
+`reports/` era prosa que **não fala de leitura**, e nasceu verde como eu previa. Estes são o contrário: **`Fontes/LEIA-ME_fontes.md` declara leitura peça por peça** — é o inventário do corpus. **Era onde eu mais esperava achado.**
+
+| arquivo | linhas | incoerências |
+|:--|--:|--:|
+| `README.md` | 68 | **0** |
+| `LICENCA-E-DISTRIBUICAO.md` | 66 | **0** |
+| `Fontes/LEIA-ME_fontes.md` | 395 | **0** |
+| **`scripts/LEIA-ME.md`** | 211 | **1** |
+
+> **O inventário passou limpo, e o manual não.** A razão é instrutiva: o inventário fala de leitura **com o recorte sempre ao lado** — *"lida em parte"*, *"ficha de metadado"*, *"sem camada de texto"* —, porque foi escrito para registrar estado. A G2 libera negação que senta ao lado de afirmação, e o inventário nunca nega sem qualificar.
+
+### 94.2 A única incoerência era minha, de uma hora antes
+
+**`scripts/LEIA-ME.md:67`** — a linha em que eu descrevia a extensão da G4 ao ledger das decisões, escrita no item 93:
+
+A frase citava as peças `NAO_LIDO`, **negava a leitura dos capítulos finais da âncora metodológica sem dizer que os iniciais estão lidos**, e falava das seis peças fechadas da coletânea.
+
+> **E a frase não está transcrita aqui, de propósito.** Grafá-la faria este item reproduzir o defeito que ele narra — e foi o que aconteceu na primeira escrita: **a G2 reprovou o item 94 por citar a frase do item 93**, que é a quinta vez que uma guarda desta casa reprova texto meu novo e a segunda pela mesma causa. O padrão existe desde §75.5: **nomear a afirmação em vez de grafar a frase** — e ele vale também para a citação, porque **quem cita o defeito reproduz o defeito**.
+
+**A frase é verdadeira** — os capítulos 4 a 8 seguem por ler — e **não carrega a qualificação** de que a peça é `LIDO_PARCIAL`. A G2 só libera negação que senta ao lado de afirmação, e ali não havia nenhuma.
+
+> **É a quarta vez que uma guarda desta casa reprova texto meu novo** — e desta o escopo que eu acabara de estender pegou a frase em que eu **descrevia a extensão anterior**. O conserto é o padrão: a frase passou a dizer o recorte — *"lido em parte, capítulos 1 a 3 e o Apêndice A, com o 4 ao 8 ainda por ler"* —, **o que também é prosa melhor**, porque informa o leitor do estado em vez de só negar.
+
+### 94.3 O escopo passou a ser declarado em seis famílias
+
+O `assert` deixou de vigiar uma família e passou a nomear **todas as seis**: `docs/analise/`, `docs/referencial/`, `reports/`, o `README`, o inventário de fontes e a própria agenda.
+
+> **Família que sai do escopo derruba o ciclo**, em vez de encolher a vigilância em silêncio. **Guarda cujo escopo encolhe sem aviso é guarda que mente** — e a comparação normaliza a barra, porque o separador de caminho já morde aqui pela terceira vez.
+
+### 94.4 Cinco provas negativas, uma por família e uma de desenho
+
+| | |
+|:--|:--|
+| injeção no **README** · na **licença** · no **manual** · no **inventário** | as quatro pegas ✔ |
+| **uma família retirada do escopo** | o `assert` derruba ✔ |
+
+### 94.5 O que resta fora de guarda de prosa
+
+**Nada de `.md` do repositório, hoje** — as seis famílias cobrem `docs/`, `reports/`, a raiz e `Fontes/`. **O que fica fora, declarado:** a prosa dentro dos **campos do codebook** (`fonte_trecho`, `nota_auditoria`, `status_verificacao`), que a G2 não lê porque é dado e não documento — e ali quem vigia são a checagem 7, a 9 e a guarda das meias-âncoras, cada uma com a sua pergunta.
 
 ---
 

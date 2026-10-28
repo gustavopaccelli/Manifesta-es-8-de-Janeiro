@@ -145,11 +145,30 @@ DOCS_VIGIADOS = [x for x in
                  sorted(glob.glob("docs/analise/*.md"))
                  + sorted(glob.glob("docs/referencial/*.md"))
                  + sorted(glob.glob("reports/**/*.md", recursive=True))
+                 # OS MANUAIS E O INVENTARIO entram em 27/10/2026 (item
+                 # 94). Caso oposto ao de `reports/`: o inventario de
+                 # fontes FALA DE LEITURA o tempo todo -- declara o que
+                 # foi lido peca por peca --, e era o lugar onde eu mais
+                 # esperava achado. Medido: zero nele, zero no README e
+                 # zero na licenca; UMA no manual dos scripts, e era
+                 # texto MEU de uma hora antes, a frase que descrevia a
+                 # extensao anterior desta guarda. Corrigida pelo padrao
+                 # da casa: a frase passou a dizer o recorte.
+                 + ["README.md", "LICENCA-E-DISTRIBUICAO.md",
+                    "scripts/LEIA-ME.md", "Fontes/LEIA-ME_fontes.md"]
                  + ["docs/PENDENCIAS-ANALITICAS.md"]
                  if not _mesmo(x, SAIDA)]
-assert any(x.replace("\\", "/").startswith("reports/")
-           for x in DOCS_VIGIADOS), \
-    "a G2 deixou de alcançar reports/ — confira o glob"
+# AS QUATRO FAMILIAS TEM DE ESTAR, e o `assert` nomeia cada uma: glob que
+# seca ou caminho renomeado derruba o ciclo em vez de passar em silencio.
+# Pela licao de 25/10, guarda cujo escopo encolhe sem aviso e guarda que
+# mente -- e a terceira vez que o separador de caminho morde aqui, de
+# modo que a comparacao normaliza a barra.
+for _fam in ("docs/analise/", "docs/referencial/", "reports/",
+             "README.md", "Fontes/LEIA-ME_fontes.md",
+             "docs/PENDENCIAS-ANALITICAS.md"):
+    assert any(x.replace("\\", "/").startswith(_fam)
+               for x in DOCS_VIGIADOS), \
+        "a G2 deixou de alcançar %s — confira o glob" % _fam
 assert not any(_mesmo(x, SAIDA) for x in DOCS_VIGIADOS), \
     "a exclusão da própria saída ficou inerte — confira o separador"
 

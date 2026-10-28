@@ -88,6 +88,35 @@ NO_CORPUS = {
     "10.1002/9781119168577.ch22":
         "Fontes/05_Bibliografia-teorica/SNOW-VLIEGENTHART-KETELAARS_"
         "The-framing-perspective-on-social-movements_Wiley-Blackwell-Companion-2ed_2019.pdf",
+    # OS OITO DA MOBILIZATION, entregues pelo pesquisador em 28/10/2026
+    # pelo pedido do dia anterior. A rota do REGISTRO e FECHADO nos oito --
+    # medido na API do OpenAlex antes de pedir: `oa_status = closed` nos oito
+    # e ZERO depositos abertos entre os treze que ele lista. CORPUS aqui diz
+    # o que e verdade hoje: o arquivo esta em Fontes/.
+    "10.17813/maiq.14.3.kx87723664558jm4":
+        "Fontes/05_Bibliografia-teorica/"
+        "BROER-DUYVENDAK_Discursive-opportunities-feeling-rules_Mobilization-14-3_2009.pdf",
+    "10.17813/maiq.15.1.86260543m3110705":
+        "Fontes/05_Bibliografia-teorica/"
+        "JUNG_Disentangling-protest-cycles_Mobilization-15-1_2010.pdf",
+    "10.17813/maiq.16.1.74v41g7nl3722775":
+        "Fontes/05_Bibliografia-teorica/"
+        "BEISSINGER_Mechanisms-of-Maidan_Mobilization-16-1_2011.pdf",
+    "10.17813/maiq.17.1.u7rw348t8200174h":
+        "Fontes/05_Bibliografia-teorica/"
+        "ALIMI-BOSI-DEMETRIOU_Relational-dynamics-processes-of-radicalization_Mobilization-17-1_2012.pdf",
+    "10.17813/maiq.19.1.x74278226830m69l":
+        "Fontes/05_Bibliografia-teorica/"
+        "SNOW-BENFORD-McCAMMON-HEWITT-FITZGERALD_Framing-perspective-25-anos_Mobilization-19-1_2014.pdf",
+    "10.17813/1086-671x-24-3-251":
+        "Fontes/05_Bibliografia-teorica/"
+        "KRIESI-HUTTER-BOJAR_Contentious-episode-analysis_Mobilization-24-3_2019.pdf",
+    "10.17813/1086-671x-26-1-87":
+        "Fontes/05_Bibliografia-teorica/"
+        "ELLEFSEN_Unintended-consequences-of-escalated-repression_Mobilization-26-1_2021.pdf",
+    "10.17813/1086-671x-30-4-387":
+        "Fontes/05_Bibliografia-teorica/"
+        "CASTRO_Deterrence-or-defiance_Mobilization-30-4_2025.pdf",
 }
 
 # =============================================================================
@@ -179,6 +208,52 @@ LIDOS = {
         "2019, pp. 392-410; licenca Taverne, nao CC",
         "Fontes/05_Bibliografia-teorica/SNOW-VLIEGENTHART-KETELAARS_"
         "The-framing-perspective-on-social-movements_Wiley-Blackwell-Companion-2ed_2019.pdf"),
+    # OS OITO DA MOBILIZATION, lidos em 28/10/2026 no dia em que chegaram.
+    # **O OFFSET DE CADA UM FOI CONFERIDO FOLHA A FOLHA**, procurando o
+    # numero impresso na borda de CADA folha -- nao derivado da primeira
+    # pagina, que e o atalho que deriva em sete faixas quando a peca tem
+    # material editorial. Tres folhas do lote nao trazem o numero na borda,
+    # e a causa de cada uma esta medida e escrita no campo do meio.
+    "10.17813/maiq.14.3.kx87723664558jm4": (
+        "28/10",
+        "integral, 20 p. — impressa = PDF + 336",
+        "Fontes/05_Bibliografia-teorica/"
+        "BROER-DUYVENDAK_Discursive-opportunities-feeling-rules_Mobilization-14-3_2009.pdf"),
+    "10.17813/maiq.15.1.86260543m3110705": (
+        "28/10",
+        "integral, 20 p. — impressa = PDF + 24",
+        "Fontes/05_Bibliografia-teorica/"
+        "JUNG_Disentangling-protest-cycles_Mobilization-15-1_2010.pdf"),
+    "10.17813/maiq.16.1.74v41g7nl3722775": (
+        "28/10",
+        "integral, 19 p. — impressa = PDF + 24",
+        "Fontes/05_Bibliografia-teorica/"
+        "BEISSINGER_Mechanisms-of-Maidan_Mobilization-16-1_2011.pdf"),
+    "10.17813/maiq.17.1.u7rw348t8200174h": (
+        "28/10",
+        "integral, 20 p. — impressa = PDF + 6",
+        "Fontes/05_Bibliografia-teorica/"
+        "ALIMI-BOSI-DEMETRIOU_Relational-dynamics-processes-of-radicalization_Mobilization-17-1_2012.pdf"),
+    "10.17813/maiq.19.1.x74278226830m69l": (
+        "28/10",
+        "integral, 24 folhas e o ARTIGO tem 23 — impressa = PDF + 22; a linha de copyright diz 23-45 e a folha 24 e anuncio da editora",
+        "Fontes/05_Bibliografia-teorica/"
+        "SNOW-BENFORD-McCAMMON-HEWITT-FITZGERALD_Framing-perspective-25-anos_Mobilization-19-1_2014.pdf"),
+    "10.17813/1086-671x-24-3-251": (
+        "28/10",
+        "integral, 23 p. — impressa = PDF + 250; a folha 17 e figura de pagina inteira e nao traz o numero na borda",
+        "Fontes/05_Bibliografia-teorica/"
+        "KRIESI-HUTTER-BOJAR_Contentious-episode-analysis_Mobilization-24-3_2019.pdf"),
+    "10.17813/1086-671x-26-1-87": (
+        "28/10",
+        "integral, 22 p. — impressa = PDF + 86; o arquivo traz MARCA DE DOWNLOAD nas 22 folhas, que entra na camada de texto",
+        "Fontes/05_Bibliografia-teorica/"
+        "ELLEFSEN_Unintended-consequences-of-escalated-repression_Mobilization-26-1_2021.pdf"),
+    "10.17813/1086-671x-30-4-387": (
+        "28/10",
+        "integral, 22 p. — impressa = PDF + 386; chegou em DUAS copias e entrou a sem marca de download",
+        "Fontes/05_Bibliografia-teorica/"
+        "CASTRO_Deterrence-or-defiance_Mobilization-30-4_2025.pdf"),
 }
 
 # Impedimento declarado, para a conta não sugerir que só falta querer.

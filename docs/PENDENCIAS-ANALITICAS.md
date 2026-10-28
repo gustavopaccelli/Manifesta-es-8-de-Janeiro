@@ -19,10 +19,10 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Codebook | **85 sub-eventos × 17 campos** — JSON, CSV e XLSX gerados de uma fonte única, com zero divergências. Zero vazios em `mecanismo_causal` e em `autonomia_movimento` |
 | Classes de verificação | **69 em fonte primária** · 15 confirmados por outra via · **0 a verificar** · 1 inferência declarada. O critério das três condições está escrito em `metadados.vocabulario_status_classe` desde 25/10/2026 |
 | Ancoragem documental | **84 de 85 registros** com arquivo vinculado · 84 com página ou localizador estrutural · 85 com transcrição literal no campo. O único sem arquivo é PT-03D, declarado |
-| Corpus | **76 peças / 12.474 p.** no manifesto, em 14 eixos — 67 PDFs e 9 âncoras não-PDF, estas conferidas por arquivo inteiro desde 25/10/2026. Da documental: **34 peças / 7.092 p.**; de literatura: 42 peças |
+| Corpus | **84 peças / 12.644 p.** no manifesto, em 14 eixos — 75 PDFs e 9 âncoras não-PDF, estas conferidas por arquivo inteiro desde 25/10/2026. Da documental: **34 peças / 7.092 p.**; de literatura: 50 peças |
 | Figuras | SVG da cadeia causal e cronologia navegável. **São a única parte do aparato escrita à mão**, e duas guardas as cobrem: o passo 10 confere que todo registro do codebook aparece na figura, e a tabela-espelho do passo 6 confere o **nome do mecanismo** de cada ponto contra o campo — com linha de base em zero divergências |
 | Verificação | `bash scripts/ciclo.sh` — **14 passos**: 8 geradores e 6 conferidores, entre eles as **10 checagens estruturais**. Toda linha de base reprova com código de saída ≠ 0; nenhuma apenas avisa |
-| Controle de versão | git desde **20/09/2026**, 108 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 27/10/2026 |
+| Controle de versão | git desde **20/09/2026**, 109 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 28/10/2026 |
 | Tarefas abertas | **3** — 10, 17, 16. A lista vive na seção *Ordem de ataque*, gerada pelo passo 3, e 34 tarefas estão fechadas |
 | Decisões pendentes | **10**, em 3 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 4 |
 | **Redação do artigo** | **não iniciada — por decisão, é o último item da fila.** Desde 25/10/2026 ela não tem mais pré-requisito de dado: a tarefa 26 fechou e não há decisão de campo aberta no codebook. **Começá-la é decisão do pesquisador** |
@@ -1720,7 +1720,7 @@ Você delegou a decisão. **Gohn (2019) fecha PARCIALMENTE a tarefa 10, e num n�
 | # | Tarefa | Item desta agenda | Depende de |
 |:--|:--|:--|:--|
 | 10 | Acrescentar a literatura brasileira em livro — 🔶 **eixo 14 com 5 arquivos, 1.832 p., e 5 das 5 estão lidas** — 2 delas ancoram registro, e o estado de cada uma é medido em [`05_REGISTRO-DE-LEITURA.md`](referencial/05_REGISTRO-DE-LEITURA.md). **ERRATA DE 22/10/2026 (item 78):** esta linha dizia *"nenhuma lida"*. Era falsa desde **08/10/2026**, quando quatro das cinco foram lidas, e seguiu falsa depois de a quinta ser lida em 22/10 — **catorze dias dentro de um arquivo que a guarda G2 vigia**, porque a forma coletiva da negação não estava no vocabulário dela. A cifra passou a ser **derivada do censo único** e não pode voltar a divergir. **O que falta nesta tarefa nunca foi a leitura deste eixo.** A coleta somou **12 peças** — 7 coletadas, 3 entregues por você e 2 capítulos a mais por encaminhamento —, e o manifesto conta menos arquivos do que isso porque **o volume integral substituiu oito offprints em 08/10** (item 39.1): peça coletada e arquivo no corpus deixaram de ser a mesma unidade. **A tarefa SE DIVIDIU em duas, e metade está fechada** (item 38.8): o mapa bibliográfico brasileiro que as sínteses não tinham está em Gohn (2019), que mapeia 1970-2019 por ciclo nomeando autores e paradigmas; o que resta é **obter os textos que esse mapa nomeia** — o cânone (Sader, Scherer-Warren, Avritzer, Doimo, Telles, Abranches, Nobre, Solano, Messenberg) é de editora comercial, **zero com autoria casada em acesso aberto**, e depende dos seus arquivos | 11.4, 22.4, 37, 38 | seus arquivos |
-| 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **25 pendentes**: 8 lidos, 7 com ficha da 1ª leva, 3 impedidos. Números medidos por `localizar_camada_a.py` a cada geração desta linha, nunca digitados. Das 25, **9 têm arquivo em algum servidor e são barradas no cliente automatizado** e **16 não têm depósito aberto em lugar nenhum**; **8 das 25 estão num só periódico, a *Mobilization*** (item 47.5) | 23, 24, 25 | acesso institucional |
+| 17 | **Ler na fonte os 43 da camada A** (passo 3 do item 11.3) — **17 pendentes**: 16 lidos, 7 com ficha da 1ª leva, 3 impedidos. Números medidos por `localizar_camada_a.py` a cada geração desta linha, nunca digitados. Das 17, **9 têm arquivo em algum servidor e são barradas no cliente automatizado** e **16 não têm depósito aberto em lugar nenhum**; **0 das 17 estão num só periódico, a *Mobilization*** (item 47.5) | 23, 24, 25 | acesso institucional |
 | 16 | **Redação do artigo** | 3, 4, 5, 6, 9, 10 | tudo acima |
 
 **Nenhuma pendência de dado depende de você** — isso valia desde 16/08, deixou de valer em 30/09 com a tarefa 24, e em 04/10 mudou duas vezes: a tarefa **14** fechou a parte que podia fechar e deixou a **25**, bibliográfica; e horas depois, na terceira rodada, **você entregou as quatro peças barradas e mandou ler duas**, o que fechou a coleta da 25 e tirou PT-05 de contextual. ~~**O que resta da 25 é leitura, e a leitura não depende de você.**~~ — ✅ **e ela foi feita:** as dezoito peças do eixo 13 estão lidas, doze delas em 09-10/10/2026, e **você fechou a tarefa em 22/10/2026**.
@@ -5435,6 +5435,73 @@ A primeira gravação do manifesto saiu com **fim de linha LF** onde o arquivo t
 **A decisão `pt38-sem-transcricao` segue sua, e encolheu outra vez:** o que está em jogo é só a **revisão de jan/2025**, porque a cifra de ago/2023 tem lastro primário na CPMI f. 676. Retirar as duas aspas deixa o registro com **quinze transcrições conferidas**.
 
 **E uma proposta minha, não executada:** o laudo pericial do Instituto de Criminalística da PF segue não obtido, e **agora sabe-se o que ele acrescentaria** — atribuição forense de autoria, que nenhum registro deste codebook afirma. **Ele deixou de ser pendência de PT-38 e passou a ser peça de um registro que não existe.** Abrir esse registro é levantamento novo, e o levantamento está fechado desde 21/10.
+
+
+---
+
+## 98. Os oito da *Mobilization* — lidos no dia em que chegaram, e dois deles disputam com PT-62 — ✅ 28/10/2026
+
+**Encaminhamento:** *"Peça os 8 da Mobilization"* e, horas depois, *"Os artigos se encontram no anexo"*.
+
+### 98.1 A camada A deixou de ter atalho
+
+| | antes | depois |
+|:--|--:|--:|
+| **LIDO** | 8 | **16** |
+| **PENDENTE** | 25 | **17** |
+| rota CORPUS | 4 | **12** |
+
+**E a mudança estrutural é a que importa:** os oito eram a maior concentração da lista, **oito num periódico só**. Os 17 que restam estão em **dezesseis veículos diferentes**, um em cada, com uma exceção de dois. **Não há mais um pedido que resolva um terço da fila.**
+
+### 98.2 O que a medição achou antes da leitura
+
+**Nada foi lido do nome do arquivo.** Cada peça foi identificada pelo DOI ou pela linha de copyright da folha 1, e **o offset de cada uma foi conferido folha a folha**.
+
+> **Castro chegou duas vezes**, em arquivos de SHA-256 diferente e mesmo DOI — e **não são byte-idênticos**: uma das cópias traz **22 marcas de download, uma por folha**. Entrou a limpa. **Marca de download não é cosmética:** ela entra na camada de texto e pode atravessar a janela de uma transcrição. **Ellefsen chegou só na versão marcada**, e isso ficou declarado no registro de leitura em vez de ser descoberto por uma transcrição que falhasse.
+>
+> **E o lote trouxe uma divergência de contagem que a linha de copyright explica:** Snow *et al.* tem **24 folhas e o artigo tem 23** — a folha 24 é **anúncio da editora**. A linha de copyright diz `23-45`, o OpenAlex diz `23-46`, e **os dois estão certos sobre coisas diferentes**: o artigo acaba na 45, e a folha seguinte existe no arquivo.
+
+### 98.3 A peça que mexe no aparato
+
+**Kriesi, Hutter e Bojár (2019)** propõem *Contentious Episode Analysis*, e ela toca este projeto em três pontos independentes:
+
+1. **A unidade do codebook tem nome na literatura** — episódio contencioso definido pela **interação diádica** entre governo e desafiantes, mais terceiros (f. 4, impressa 254). O codebook tem 36 registros de ator desafiante, 25 de estatal e **1 díade**.
+2. **A extensão da grade funcional a atos de Estado deixa de ser analogia minha.** CEA existe para incorporar atores além dos desafiantes; a grade declarava a extensão como inferência desde 21/10.
+3. **CEA não substitui o *process tracing* — ela o exige** (f. 3, impressa 253), e isso responde a uma pergunta que o projeto nunca tinha feito em voz alta.
+
+**E ela traz duas cobranças.** A folha 2 relata a **autocrítica dos autores de DoC** — que é a âncora de mecanismos deste projeto — sobre terem invocado mecanismos com pouco rigor. E a folha 6 nomeia a **seleção pela variável dependente**, que é o que este codebook faz: ele estuda um episódio **porque** ele foi contencioso. **A variante de Beach e Pedersen justifica a escolha; a cobrança passa a estar escrita.**
+
+### 98.4 Dois rivais para PT-62, e nenhum dos dois é fraco
+
+**Jung (2010)** explica o declínio de ciclos por **dois fatores internos** — institucionalização e violência crescente nos protestos — e **os dois estão presentes no caso brasileiro**. PT-62 chama o mecanismo de *desmobilização heterônoma por custo penal*, e a heteronomia é o cerne do nome.
+
+**Castro (2025)** mede, no ciclo chileno de 2019 e em **contexto democrático**, que **tática seletiva de alta severidade produziu mobilização de curto prazo, não dissuasão** — contra a expectativa teórica, e ela o diz.
+
+> **Nenhum dos dois desmente PT-62, e os dois disputam com ele.** PT-62 é `Inferência do analista`, e **este é exatamente o tipo de cobrança que essa classe existe para receber.** As três diferenças candidatas estão no próprio desenho — a severidade alcançou o **topo da cadeia** e não a rua, o escalonamento foi **por núcleos de responsabilidade** e não por evento, e a janela é de **três anos** e não de curto prazo —, e **nenhuma delas está escrita em registro nenhum**.
+
+### 98.5 Uma lacuna que a leitura mediu pela ausência
+
+Fui a **Snow *et al.* (2014)** esperando uma segunda fonte para a lacuna da **cristalização de quadro**, que é a única das oito do campo declarada não resolvível com este corpus. **A palavra tem zero ocorrências nas 24 folhas.**
+
+> O que o balanço traz é o **irmão mais velho** da cobrança, na voz da crítica interna de Benford (1997): examinar a dinâmica de enquadramento **ao longo do tempo**. **É cobrança da mesma família, e não a mesma cobrança** — e a lacuna declarada **continua apoiada em uma fonte só**. Isso não muda o estado dela; muda o que se pode afirmar sobre o lastro dela.
+
+**E a mesma folha carrega a cobrança que atinge este projeto de frente:** a crítica de que boa parte da literatura de enquadramento se apoiou em **casos únicos**. Este é um estudo de caso único, e a resposta é de desenho declarado, não de correção.
+
+### 98.6 Três guardas cobraram, em cascata, e todas na primeira execução
+
+| guarda | o que cobrou |
+|:--|:--|
+| **G1** (cobertura do registro de leitura) | as oito peças estavam no manifesto **sem estado medido nem declarado** |
+| **checagem 3** (cobertura do inventário) | as oito **não ancoram registro** e por isso precisavam de procedência declarada |
+| **checagem 10** (cifras do README) | 67 → **75** PDFs e 12.474 → **12.644** páginas |
+
+> **A cascata é o desenho funcionando.** Peça nova em `Fontes/` dispara três perguntas diferentes — *alguém leu?*, *de onde veio?*, *a porta de entrada ainda diz a verdade?* — e as três foram respondidas antes de o ciclo passar. **As páginas dos PDFs documentais não mudaram**, porque as oito são literatura e não fonte documental: é a décima cifra, que entrou ontem, dizendo corretamente que **não** havia o que mudar.
+
+### 98.7 O que isto deixa
+
+**Oito cobranças de leitura, nenhuma executada, todas no documento 16.** A mais pesada não é nenhum dos rivais: é que **a extensão da grade funcional a atos de Estado pode deixar de ser inferência minha** e passar a citar a peça que foi escrita para fazer isso. As outras sete estão na tabela da §9 daquele documento.
+
+**E um limite declarado do documento novo:** `docs/analise/16_CAMADA-A-MOBILIZATION.md` **não está sob guarda de citação de página** — `conferir_hipoteses.py` vigia os documentos 11 e 12. **As dezessete transcrições dele foram testadas uma a uma pelo conferidor e as dezessete casam integral na folha citada**, mas o que garante isso é a medição feita ao escrevê-las, não uma guarda que as reconfira. **Estender o conferidor a este documento é proposta minha, e não a executei.**
 
 ---
 

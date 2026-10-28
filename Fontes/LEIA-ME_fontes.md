@@ -96,6 +96,27 @@ Eixo aberto em 16/08/2026. **Leia o `LEIA-ME.md` da pasta** — ele fixa a disti
 
 ### 05 — Bibliografia teórica
 
+**Os oito da *Mobilization*, entregues pelo pesquisador em 28/10/2026.** Eram a maior concentração da camada A — **oito dos vinte e cinco pendentes no mesmo periódico** —, e por isso foram pedidos juntos. Com eles a camada A passou a **16 lidos** e **17 pendentes**, e os 17 que restam estão em dezesseis veículos diferentes.
+
+| Arquivo | Impressa | Offset | Serve a |
+|:--|:--|--:|:--|
+| `BROER-DUYVENDAK_...Mobilization-14-3_2009.pdf` (20 f.) | 337–356 | +336 | PT-07 e PT-50A |
+| `JUNG_...Mobilization-15-1_2010.pdf` (20 f.) | 25–44 | +24 | PT-01 e **um rival para PT-62** |
+| `BEISSINGER_...Mobilization-16-1_2011.pdf` (19 f.) | 25–43 | +24 | o precedente publicado do documento 11 |
+| `ALIMI-BOSI-DEMETRIOU_...Mobilization-17-1_2012.pdf` (20 f.) | 7–26 | +6 | PT-06, PT-15 e PT-16 |
+| `SNOW-BENFORD-McCAMMON-HEWITT-FITZGERALD_...Mobilization-19-1_2014.pdf` (**24 f., artigo com 23**) | 23–45 | +22 | PT-07 |
+| `KRIESI-HUTTER-BOJAR_...Mobilization-24-3_2019.pdf` (23 f.) | 251–273 | +250 | **o aparato** |
+| `ELLEFSEN_...Mobilization-26-1_2021.pdf` (22 f.) | 87–108 | +86 | PT-15, PT-16, PT-61 e PT-62 |
+| `CASTRO_...Mobilization-30-4_2025.pdf` (22 f.) | 387–408 | +386 | **o rival mais duro de PT-62** |
+
+**As oito estão lidas integralmente**, e a leitura está em [`../docs/analise/16_CAMADA-A-MOBILIZATION.md`](../docs/analise/16_CAMADA-A-MOBILIZATION.md). **Nenhuma ancora registro**: elas sustentam o aparato e a redação, e por isso o estado delas é declarado em `data/estado_de_leitura.json`.
+
+> **O offset de cada uma foi conferido folha a folha**, procurando o número impresso na borda de **cada** folha — não derivado da primeira, que é o atalho que já derivou em sete faixas neste projeto. **Três folhas do lote não trazem o número na borda, e a causa de cada uma foi medida:** a folha 17 de Kriesi *et al.* é figura de página inteira, e a folha 24 de Snow *et al.* é **anúncio da editora** — o que explica por que a linha de copyright diz `23-45` num arquivo de 24 folhas.
+>
+> **Duas coisas que o nome do arquivo não diria.** **Castro chegou em duas cópias**, de SHA-256 diferente e mesmo DOI: uma traz **22 marcas de download, uma por folha**, e a outra não traz nenhuma — entrou a limpa, porque marca de download entra na camada de texto e pode atravessar a janela de uma transcrição. **Ellefsen chegou só na versão marcada**, e isso fica declarado.
+>
+> **A licença foi medida nas oito:** todas trazem `© <ano> Mobilization ...` na folha 1, que é **linha de copyright e não concessão** — `RESERVADA`. O único `reproduction` do lote, em Bröer e Duyvendak, **é prosa sobre ressonância de mensagem**, não termo de licença.
+
 **O cânone de mecanismos, acrescentado à mão em 29/09/2026.** A triagem dos DOIs das sínteses (item 23 da agenda) mostrou que as obras de que o codebook toma o vocabulário — certificação, difusão, apropriação de repertório, limiar — **não estavam no corpus**, e nenhuma lista de DOIs gerada as traria. Entraram pelo pesquisador, e os dados abaixo foram lidos das próprias folhas de rosto:
 
 | Arquivo | Referência | Observação |

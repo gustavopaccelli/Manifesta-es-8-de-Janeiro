@@ -229,6 +229,34 @@ PROCEDENCIA = {
          "enquadramento de 105 editoriais (Folha 34, Estadão 36, O Globo 35), 1 a 18/01/2023. "
          "NÃO revisado por pares — verificar publicação definitiva antes de citar. NÃO traz "
          "números de manifestantes: sustenta a frente de disputa discursiva, não o codebook."),
+    # OS OITO DA MOBILIZATION, 28/10/2026. Nenhum deles ancora registro:
+    # eles sustentam o APARATO e a redacao, e e por isso que precisam de
+    # procedencia declarada aqui. A rota do registro e FECHADO nos oito --
+    # `oa_status = closed` e zero depositos abertos, medido antes de pedir.
+    "Fontes/05_Bibliografia-teorica/BROER-DUYVENDAK_Discursive-opportunities-feeling-rules_Mobilization-14-3_2009.pdf":
+        ("Arquivo fornecido pelo pesquisador em 28/10/2026, pelo pedido dos oito da Mobilization", "literatura",
+         "Estrutura de oportunidade discursiva com regras de sentimento. Serve a PT-07 e PT-50A pela pergunta de por que um evento e vivido como oportunidade. Lida integral; offset impressa = PDF + 336."),
+    "Fontes/05_Bibliografia-teorica/JUNG_Disentangling-protest-cycles_Mobilization-15-1_2010.pdf":
+        ("Arquivo fornecido pelo pesquisador em 28/10/2026, pelo pedido dos oito da Mobilization", "literatura",
+         "Event-history analysis de ciclos de protesto. Corrobora a arquitetura de PT-01 -- a oportunidade opera na entrada -- e entrega um RIVAL para PT-62, que explica declinio por dois fatores internos. Lida integral; offset impressa = PDF + 24."),
+    "Fontes/05_Bibliografia-teorica/BEISSINGER_Mechanisms-of-Maidan_Mobilization-16-1_2011.pdf":
+        ("Arquivo fornecido pelo pesquisador em 28/10/2026, pelo pedido dos oito da Mobilization", "literatura",
+         "Peso causal de mecanismos rivais para um ponto unico de um episodio contencioso. E o precedente publicado do procedimento do documento 11. Lida integral; offset impressa = PDF + 24."),
+    "Fontes/05_Bibliografia-teorica/ALIMI-BOSI-DEMETRIOU_Relational-dynamics-processes-of-radicalization_Mobilization-17-1_2012.pdf":
+        ("Arquivo fornecido pelo pesquisador em 28/10/2026, pelo pedido dos oito da Mobilization", "literatura",
+         "Quatro arenas de interacao e quatro mecanismos de radicalizacao, com `object shift` entre eles. Serve a PT-06, PT-15 e PT-16. Lida integral; offset impressa = PDF + 6."),
+    "Fontes/05_Bibliografia-teorica/SNOW-BENFORD-McCAMMON-HEWITT-FITZGERALD_Framing-perspective-25-anos_Mobilization-19-1_2014.pdf":
+        ("Arquivo fornecido pelo pesquisador em 28/10/2026, pelo pedido dos oito da Mobilization", "literatura",
+         "Balanco de 25 anos do alinhamento de quadros, pelos proprios autores. O ARQUIVO tem 24 folhas e o ARTIGO tem 23: a folha 24 e anuncio da editora, e a linha de copyright diz 23-45. Lida integral; offset impressa = PDF + 22."),
+    "Fontes/05_Bibliografia-teorica/KRIESI-HUTTER-BOJAR_Contentious-episode-analysis_Mobilization-24-3_2019.pdf":
+        ("Arquivo fornecido pelo pesquisador em 28/10/2026, pelo pedido dos oito da Mobilization", "literatura",
+         "Contentious Episode Analysis. A peca que mais mexe no aparato: define o episodio contencioso pela interacao diadica, incorpora atores estatais por construcao, e declara que CEA complementa e nao substitui o process tracing. Lida integral; offset impressa = PDF + 250."),
+    "Fontes/05_Bibliografia-teorica/ELLEFSEN_Unintended-consequences-of-escalated-repression_Mobilization-26-1_2021.pdf":
+        ("Arquivo fornecido pelo pesquisador em 28/10/2026, pelo pedido dos oito da Mobilization", "literatura",
+         "Tres resultados nao pretendidos da repressao escalada. Toca PT-15, PT-16 e PT-62, e cobra de PT-61 a separacao entre intencao e efeito. O arquivo traz marca de download nas 22 folhas. Lida integral; offset impressa = PDF + 86."),
+    "Fontes/05_Bibliografia-teorica/CASTRO_Deterrence-or-defiance_Mobilization-30-4_2025.pdf":
+        ("Arquivo fornecido pelo pesquisador em 28/10/2026, pelo pedido dos oito da Mobilization", "literatura",
+         "Severidade e seletividade da repressao no ciclo chileno de 2019, em contexto democratico. E o rival mais duro para PT-62: tatica seletiva de alta severidade produziu mobilizacao, nao dissuasao. Chegou em duas copias e entrou a sem marca de download. Lida integral; offset impressa = PDF + 386."),
 }
 
 # Arquivamento web: cópias de matérias que ancoram registros só por URL.

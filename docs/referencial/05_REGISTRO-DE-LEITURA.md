@@ -2,19 +2,19 @@
 
 > **Peça gerada por `scripts/gerar_registro_leitura.py`. Não edite à mão.** É a resposta a um defeito com data: em 21/10/2026 eu relatei seis verbetes como *"lidos-a-ler"* e **os seis estavam lidos**, porque copiei uma lista de 30/09 do documento que **pedia** a leitura em vez de abrir o que a **registrava**. O estado de leitura vivia em prosa espalhada por sete documentos, e nada no ciclo conferia.
 
-**76 peças no corpus. 51 com estado MEDIDO, 25 com estado DECLARADO.**
+**84 peças no corpus. 51 com estado MEDIDO, 33 com estado DECLARADO.**
 
 ## 1. Como o estado é estabelecido — e a maior parte não é declarada
 
 | Origem | Quantas | Como |
 |:--|--:|:--|
 | **MEDIDO** | 51 | a peça **ancora registro** com `fonte_pagina`, e o passo 9 do ciclo confere a transcrição contra a folha do PDF. Leitura parcial **demonstrável**, não afirmada |
-| **DECLARADO** | 25 | a peça **não ancora registro**: informa o desenho sem sustentar dado. O estado vive em `data/estado_de_leitura.json`, que é dado e não prosa |
+| **DECLARADO** | 33 | a peça **não ancora registro**: informa o desenho sem sustentar dado. O estado vive em `data/estado_de_leitura.json`, que é dado e não prosa |
 
 | Estado | Peças |
 |:--|--:|
 | `ILEGIVEL` | 1 |
-| `LIDO_INTEGRAL` | 13 |
+| `LIDO_INTEGRAL` | 21 |
 | `LIDO_PARCIAL` | 60 |
 | `NAO_LIDO` | 2 |
 
@@ -54,12 +54,20 @@
 | `STF_EP-169_Decisao-Prisao-Domiciliar_2026-03-24.pdf` | 40 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 7 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `STF_EP-169_Decisao-Transferencia-Papuda_2026-01-15.pdf` | 36 | **LIDO_PARCIAL** | MEDIDO | ancora 2 registro(s) com 11 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `STF_Pet-14129_Decisao-Prisao-Preventiva_2025-11-22.pdf` | 17 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 8 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `ALIMI-BOSI-DEMETRIOU_Relational-dynamics-processes-of-radicalization_Mobilization-17-1_2012.pdf` | 20 | **LIDO_INTEGRAL** | DECLARADO | integral, 20 folhas; offset impressa = PDF + 6 | docs/analise/16_CAMADA-A-MOBILIZATION.md |
 | `BEACH-PEDERSEN_Process-Tracing-Methods_Michigan-2013.pdf` | 208 | **LIDO_PARCIAL** | DECLARADO | capítulos 1 a 3 (p. 1-44 impressas) e Apêndice A (p. 163-170); offset impressa = PDF − 8 | docs/referencial/03_ADAPTACAO-METODOLOGICA.md |
+| `BEISSINGER_Mechanisms-of-Maidan_Mobilization-16-1_2011.pdf` | 19 | **LIDO_INTEGRAL** | DECLARADO | integral, 19 folhas; offset impressa = PDF + 24 | docs/analise/16_CAMADA-A-MOBILIZATION.md |
+| `BROER-DUYVENDAK_Discursive-opportunities-feeling-rules_Mobilization-14-3_2009.pdf` | 20 | **LIDO_INTEGRAL** | DECLARADO | integral, 20 folhas; offset impressa = PDF + 336 | docs/analise/16_CAMADA-A-MOBILIZATION.md |
+| `CASTRO_Deterrence-or-defiance_Mobilization-30-4_2025.pdf` | 22 | **LIDO_INTEGRAL** | DECLARADO | integral, 22 folhas; offset impressa = PDF + 386; chegou em duas cópias e entrou a sem marca de download | docs/analise/16_CAMADA-A-MOBILIZATION.md |
 | `COLLIER_Understanding-process-tracing_PS-44-4_2011.pdf` | 8 | **LIDO_INTEGRAL** | DECLARADO | integral, 8 folhas; offset impressa = PDF + 822 | docs/analise/09_CONCEITO-MECANISMO.md |
+| `ELLEFSEN_Unintended-consequences-of-escalated-repression_Mobilization-26-1_2021.pdf` | 22 | **LIDO_INTEGRAL** | DECLARADO | integral, 22 folhas; offset impressa = PDF + 86; o arquivo traz marca de download nas 22 folhas, que entra na camada de texto | docs/analise/16_CAMADA-A-MOBILIZATION.md |
 | `GONZALEZ-BAILON-BORGE-HOLTHOEFER-RIVERO-MORENO_Dynamics-of-protest-recruitment-through-an-online-network_Scientific-Reports-1_2011.pdf` | 7 | **LIDO_PARCIAL** | DECLARADO | achados centrais, na ficha 13: os participantes iniciais não têm posição topológica típica; só os disseminadores de cascata são mais centrais | docs/analise/08_BIBLIOGRAFIA-METODOLOGICA.md |
+| `JUNG_Disentangling-protest-cycles_Mobilization-15-1_2010.pdf` | 20 | **LIDO_INTEGRAL** | DECLARADO | integral, 20 folhas; offset impressa = PDF + 24 | docs/analise/16_CAMADA-A-MOBILIZATION.md |
+| `KRIESI-HUTTER-BOJAR_Contentious-episode-analysis_Mobilization-24-3_2019.pdf` | 23 | **LIDO_INTEGRAL** | DECLARADO | integral, 23 folhas; offset impressa = PDF + 250; a folha 17 é figura de página inteira e não traz o número na borda | docs/analise/16_CAMADA-A-MOBILIZATION.md |
 | `Livro_Process tracing.pdf` | 104 | **LIDO_PARCIAL** | DECLARADO | trechos conceituais com página — condição necessária e suficiente, p. 92 e 97 | docs/analise/09_CONCEITO-MECANISMO.md |
 | `MAYNTZ_Mechanisms-in-the-analysis-of-social-macro-phenomena_PSS-34-2_2004.pdf` | 23 | **LIDO_INTEGRAL** | DECLARADO | integral, 23 folhas | docs/analise/09_CONCEITO-MECANISMO.md |
 | `McADAM-TARROW-TILLY_Dynamics-of-Contention_Cambridge-2001.pdf` | 411 | **LIDO_PARCIAL** | DECLARADO | trechos definidores citados por folha impressa: brokerage 26, certification 145 e 158, mobilizing structures 45, threshold 307, scale shift 332, difusão 333; offset impressa = PDF − 24 | docs/referencial/01_QUADRO-TEORICO-METODOLOGICO.md |
+| `SNOW-BENFORD-McCAMMON-HEWITT-FITZGERALD_Framing-perspective-25-anos_Mobilization-19-1_2014.pdf` | 24 | **LIDO_INTEGRAL** | DECLARADO | integral; o ARQUIVO tem 24 folhas e o ARTIGO tem 23 — a linha de copyright diz 23-45 e a folha 24 é anúncio da editora; offset impressa = PDF + 22 | docs/analise/16_CAMADA-A-MOBILIZATION.md |
 | `SNOW-DELLA-PORTA-KLANDERMANS-McADAM_Wiley-Blackwell-Encyclopedia-of-Social-and-Political-Movements_2013.pdf` | 1638 | **LIDO_PARCIAL** | DECLARADO | ONZE verbetes lidos integrais: Mechanisms (Tarrow) · Protest cycles and waves · Political opportunity · Repertoires of contention · Policing protest (della Porta e Reiter) · Diffusion and scale shift (Soule) · Demobilization (Fillieule) · Discursive opportunity structure (McCammon) · Multiorganizational fields (Klandermans) · Resource mobilization theory (Edwards e Gillham) · Critical mass theory (Oliver). OS NOMES DOS ONZE VERBETES ESTÃO EM `termos`, e a razão é uma prova negativa que falhou em 21/10/2026: a peça do corpus é o volume, mas a unidade de leitura — e a unidade sobre a qual eu errei — é o VERBETE. Guarda que vigia só o nome do continente não pega afirmação sobre o conteúdo | docs/analise/10_VERBETES-ENCICLOPEDIA.md |
 | `SNOW-VLIEGENTHART-KETELAARS_The-framing-perspective-on-social-movements_Wiley-Blackwell-Companion-2ed_2019.pdf` | 20 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 6 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `TARROW_O-poder-em-movimento_Vozes-2009.pdf` | 162 | **ILEGIVEL** | DECLARADO | no corpus e SEM camada de texto: digitalização em duas páginas por folha. Não se faz OCR porque a paginação resultante erraria o que uma ficha precisa ancorar | docs/referencial/01_QUADRO-TEORICO-METODOLOGICO.md |

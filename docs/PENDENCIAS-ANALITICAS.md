@@ -22,9 +22,9 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Corpus | **74 peças / 12.352 p.** no manifesto, em 14 eixos — 65 PDFs e 9 âncoras não-PDF, estas conferidas por arquivo inteiro desde 25/10/2026. Da documental: **32 peças / 6.970 p.**; de literatura: 42 peças |
 | Figuras | SVG da cadeia causal e cronologia navegável. **São a única parte do aparato escrita à mão**, e duas guardas as cobrem: o passo 10 confere que todo registro do codebook aparece na figura, e a tabela-espelho do passo 6 confere o **nome do mecanismo** de cada ponto contra o campo — com linha de base em zero divergências |
 | Verificação | `bash scripts/ciclo.sh` — **14 passos**: 8 geradores e 6 conferidores, entre eles as **10 checagens estruturais**. Toda linha de base reprova com código de saída ≠ 0; nenhuma apenas avisa |
-| Controle de versão | git desde **20/09/2026**, 105 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 27/10/2026 |
+| Controle de versão | git desde **20/09/2026**, 106 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 27/10/2026 |
 | Tarefas abertas | **3** — 10, 17, 16. A lista vive na seção *Ordem de ataque*, gerada pelo passo 3, e 34 tarefas estão fechadas |
-| Decisões pendentes | **12**, em 3 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 4 |
+| Decisões pendentes | **11**, em 3 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 4 |
 | **Redação do artigo** | **não iniciada — por decisão, é o último item da fila.** Desde 25/10/2026 ela não tem mais pré-requisito de dado: a tarefa 26 fechou e não há decisão de campo aberta no codebook. **Começá-la é decisão do pesquisador** |
 
 > **O que este painel NÃO repete, de propósito.** As tarefas e as decisões abertas têm cada uma a sua seção gerada, e listá-las aqui seria a quarta cópia — a contabilidade deste projeto já envelheceu quatro vezes por cópia à mão, e o histórico está nos itens 49, 78, 83 e 90. **Os itens numerados abaixo são um log cronológico:** a cifra dentro de um item era verdade no dia dele e fica como está.
@@ -5249,6 +5249,72 @@ O `assert` deixou de vigiar uma família e passou a nomear **todas as seis**: `d
 
 **Nada de `.md` do repositório, hoje** — as seis famílias cobrem `docs/`, `reports/`, a raiz e `Fontes/`. **O que fica fora, declarado:** a prosa dentro dos **campos do codebook** (`fonte_trecho`, `nota_auditoria`, `status_verificacao`), que a G2 não lê porque é dado e não documento — e ali quem vigia são a checagem 7, a 9 e a guarda das meias-âncoras, cada uma com a sua pergunta.
 
+
+---
+
+## 95. A busca na CPMI: PT-38 ganha folha, e a alegação do *Proof* fecha como negativa medida — ✅ 27/10/2026
+
+**Encaminhamento:** sete perguntas sobre a lista das 12 decisões e das 3 tarefas. Duas eram busca — *"Encontre esse registro no documento da CPMI ou em sites oficiais"* e *"me forneça a descrição desse evento. Procure por ele em sites oficiais ou então no Documento da CPMI"*.
+
+### 95.1 A varredura anterior era negativa no predicado que usou
+
+PT-38 declarava desde 16/08/2026 que a busca na CPMI havia sido **exaustiva e negativa**. Era verdade **da cifra**: `11,4` tem zero ocorrências nas 1.333 folhas. A busca de hoje foi por **nome de obra** — e o relatório descreve o evento em quatro folhas:
+
+| folha | o que a CPMI traz | lastro que ela própria declara |
+|:--|:--|:--|
+| **668** | Congresso: telas rasgadas, mobiliário do Museu do Senado, quadros e esculturas do Salão Verde, incêndio. **R$ 3.500.000,00** e **R$ 3.556.509,14** | Nota Técnica nº 1/2023-ATDGER; Processo nº 221.490/2023 |
+| **671** | Planalto: móveis atirados na Praça, fotografias rasgadas, o painel de Di Cavalcanti esfaqueado, e **um relógio de Balthazar Martinot, do século XVII** | narrativa do relatório, com oitivas |
+| **672** | o relatório do **Iphan** sobre os bens culturais afetados. **R$ 4.300.000,00** | **DOC 366**, Inquérito 4922 — **mas a cifra remete à Folha de S.Paulo** |
+| **676** | STF: Estátua da Justiça pichada, busto de Ruy Barbosa, plenário depredado. **R$ 7.708.061,56** mais **R$ 3.705.593,28** | **Ofício 023/CDG/2023 – STF** |
+
+> **A lição é do predicado, não da diligência.** A varredura de agosto fez a pergunta certa de um jeito que não podia achar: procurou o **total impresso**, e o que a fonte imprime são as **parcelas**. **Negativa medida vale pelo predicado que usou, e o predicado tem de estar escrito ao lado dela** — senão a negativa cresce sozinha e passa a negar o que nunca examinou.
+
+### 95.2 Oito transcrições, todas integrais, e o que ficou de fora de propósito
+
+As oito conferem na folha citada **por casamento integral**, nenhuma por janela — testadas antes de entrar no campo. PT-38 passou de *fora do alcance do conferidor* a **`OK 8/8 localizadas`**, e com isso **deixou de ser o único registro do codebook sem transcrição verificável**.
+
+**O painel de Di Cavalcanti não está transcrito, e a razão é mecânica:** a CPMI grafa o título da obra entre aspas, dentro da mesma frase. **Aspa aninhada inverte a paridade do extrator de transcrições** — é a limitação declarada no item 34.5, cuja saída é escolher outro trecho da mesma folha. Foi o que se fez: a frase entra cortada antes do título, e o quadro é nomeado na prosa do campo, fora das aspas.
+
+**As duas exceções de PT-38 FICAM, e só a razão delas muda.** A pergunta da exceção é sobre a **aspa**, não sobre a cifra: as duas aspas continuam não estando em peça nenhuma do corpus. O que a CPMI traz são as **parcelas** — e `7 de 7 exceção(ões) usadas`, com a guarda do item 92 de testemunha.
+
+### 95.3 A soma é derivada, e o referente é o perigo
+
+**R$ 7.708.061,56 + R$ 3.705.593,28 = R$ 11.413.654,84**, que é a cifra de ago/2023 da série. **A CPMI imprime as duas parcelas e nunca o total** — é o caso de PT-03C outra vez, e o registro diz isso com estas palavras.
+
+> **E aqui estavam quatro cifras de quatro referentes na mesma vizinhança.** R$ 4,3 mi é **Planalto**; R$ 3,5 mi e R$ 3,56 mi são **Senado e Câmara**; só R$ 7,7 mi mais R$ 3,7 mi é **STF**, que é o referente deste registro. **Nenhuma guarda deste projeto vigia troca de referente**, e por isso cada cifra entrou no campo com o seu dono grafado ao lado.
+>
+> **Um achado a jusante, que não é cifra minha:** a decomposição do Congresso de jan/2025 — R$ 2,7 mi na Câmara, R$ 2,2 mi no Senado — **não bate com a da CPMI**, que é de 2023 e **maior** nas duas casas. São medições de datas diferentes, e o registro passou a dizer que não se substituem.
+
+### 95.4 A alegação do *Proof*: zero em 1.333 folhas
+
+Medido com normalização de acento e de caixa: **`proof` zero ocorrências**, **`5 de janeiro de 2021` zero**. As **dez menções a Eduardo Bolsonaro**, nas folhas 84, 151, 157, 165, 334, 335, 418, 476 e 527, tratam de Olavo de Carvalho, do núcleo da organização, de Bannon, de contas de rede, da Combat Armor, de Cerimedo e de atos — **nenhuma de reunião nos EUA em janeiro de 2021**. A folha 416 traz Bolsonaro invocando o Capitólio **em 7 de janeiro**, que é outro evento.
+
+Fora do corpus: *Proof* é o sítio próprio do jornalista **Seth Abramson**, e a alegação não tem confirmação independente. O único rastro quase-oficial é um requerimento de informações ao Itamaraty, de março de 2021, **sobre a viagem e não sobre a reunião** — e **eu o conheço por notícia, não por documento do Senado**, o que o deixa fora do que este projeto pode afirmar.
+
+> **A decisão fecha, e o levantamento segue fechado desde 21/10.** A negativa entra aqui com **data e predicado** para não ser refeita — e vale enquanto o arquivo for o mesmo, o que a checagem 8 vigia pelo sha256.
+
+### 95.5 A guarda da classe pegou PT-38 na mesma rodada
+
+Ao passar a citar por folha, PT-38 **entrou no alcance da checagem 9** — que até ontem não o alcançava, porque `pares()` não cede numeral para *inteiro teor* — e a guarda o pegou **mudo**: classe `Confirmado` ancorando peça documental sem dizer por quê.
+
+> **O alcance de uma guarda que depende de FORMA DE CITAÇÃO cresce sozinho quando um registro muda de forma.** Era seis; é sete. O comentário da checagem nomeava PT-38 entre os que caem fora, e foi corrigido no mesmo commit — **a cifra do alcance passou a vir com a advertência de que não é fixa**.
+
+A razão declarada **não é a promoção**, que é sua: é que o registro **afirma uma série de valoração cuja metade de jan/2025 não tem lastro primário algum**, por ser posterior ao relatório. O vandalismo está em fonte primária com folha; a cifra mais recente não está.
+
+### 95.6 Uma cifra velha no meu próprio plano, e o arquivo errado na raiz
+
+**Duas coisas minhas, ambas registradas porque são do tipo que esta agenda existe para pegar.**
+
+A primeira: o plano desta sessão afirmava que o ciclo passava em `confirmados 74`. **Eu copiei a cifra do plano anterior**, escrito semanas antes — e a medição de hoje devolveu **80**. É literalmente o modo de falha que o item 91 nomeou: **painel escrito à mão descreve o dia em que foi escrito**. O número correto não foi recalculado por subtração: ele é o que o passo 12 imprimiu.
+
+A segunda: uma linha residual num script de busca meu criou um **arquivo vazio `x` na raiz do repositório**, durante o modo de planejamento, em que eu não devia escrever nada. Removido no mesmo minuto, com `git status` de volta a zero. **Fica escrito porque script de leitura que escreve é script que mente sobre a própria natureza.**
+
+### 95.7 O que isto deixa
+
+**Duas decisões suas, e as duas ficaram mais baratas:** a promoção de classe de PT-38, que as três condições agora admitem, e o `autonomia_movimento` dele, hoje `Lido, não documentado` — a f. 672 traz o depoimento do general Gonçalves Dias sobre os invasores agirem **como se tivessem coordenação**, mas isso é do cerco ao Planalto, não da destruição do acervo, e importar valor de folha vizinha é o que o próprio registro proibiu em 16/10.
+
+**E uma proposta minha, não executada:** o laudo do Instituto de Criminalística/PF continua não obtido, mas **o DOC 366 do Iphan é um documento nomeado e numerado** — vistoria dos bens culturais, Inquérito 4922. Coletá-lo daria o detalhamento por peça que o registro diz depender do laudo. **O levantamento de eventos está fechado; coleta de documento para registro existente não é levantamento novo** — mas a distinção é sua, não minha.
+
 ---
 
 <!-- DECISOES-PENDENTES: gerado por scripts/gerar_decisoes.py a partir de data/decisoes_abertas.json. Não editar à mão: o ciclo sobrescreve. -->
@@ -5259,7 +5325,7 @@ O `assert` deixou de vigiar uma família e passou a nomear **todas as seis**: `d
 
 **A ordem não é de prioridade, e sim de natureza.** Dentro de cada grupo, a ordem é a de nascimento.
 
-**São doze decisões abertas, em três naturezas:** o remoto é público (4) · campo do codebook (5) · leitura (3).
+**São onze decisões abertas, em três naturezas:** o remoto é público (4) · campo do codebook (4) · leitura (3).
 
 ### O remoto é público
 
@@ -5277,8 +5343,7 @@ O `assert` deixou de vigiar uma família e passou a nomear **todas as seis**: `d
 | **O nome do mecanismo de PT-62.** A rota de desmobilização é *abeyance* sob repressão judicial ativa com institucionalização parcial, e **nenhuma das duas é escolha do movimento**: é desmobilização **heterônoma**, por imposição de custo penal — rota que a tipologia de Taylor não prevê. O nome poderia dizê-lo. **Nomear mecanismo é sua decisão, pelo precedente da tarefa 19.** | 21/10/2026 | §74 |
 | **A grade funcional do enquadramento como 18º campo.** Hoje a classificação vive só em `docs/referencial/02_GRADE-FUNCIONAL-ENQUADRAMENTO.md`, gerada, e **declarada como inferência minha**. Criar campo é sua decisão, e você disse que classifica na escrita. | 21/10/2026 | §73 |
 | **Os quatro registros `N` da grade funcional** — PT-20A, PT-20B, PT-25 e PT-47 têm texto em `framing_narrativa` que **não é quadro de ação coletiva**. São 18 vazios ao todo, e os quatro `N` são os que têm texto e não têm quadro. | 21/10/2026 | §73 |
-| **PT-38 não tem transcrição verificável, e é o único do codebook nessa situação.** As duas aspas vêm de sinopse de documentário (ago/2023) e de levantamento divulgado pela imprensa (jan/2025), e estão em `EXCECOES` com essa razão. **Coletar as duas fontes é sua decisão** — a alternativa é retirar as aspas, e sem elas o registro fica sem transcrição alguma. | 25/10/2026 | §89.6 |
-| **A alegação do site *Proof*** — a matéria do Estadão atribui a ele a notícia de uma reunião em 05/01/2021 nos EUA. **Não está no corpus e não é afirmada pelo registro.** Se entrar, é registro novo, e o levantamento está fechado desde 21/10. | 22/10/2026 | §77.5 |
+| **As duas aspas de PT-38 que não estão em peça do corpus.** Elas vêm de sinopse de documentário (ago/2023) e de levantamento divulgado pela imprensa (jan/2025), e seguem em `EXCECOES` com essa razão. **A premissa desta decisão encolheu em 27/10/2026:** o registro ganhou oito transcrições da CPMI conferidas por folha, de modo que **retirar as duas aspas já não o deixa sem transcrição alguma** — e a cifra de ago/2023 passou a ter lastro primário nas duas parcelas da f. 676. O que resta é a cifra de jan/2025, posterior ao relatório. **Coletar as duas fontes continua sendo sua decisão**, e agora ela é mais barata. | 25/10/2026 | §95.2 |
 
 ### Leitura
 
@@ -5288,7 +5353,13 @@ O `assert` deixou de vigiar uma família e passou a nomear **todas as seis**: `d
 | **As seis peças não abertas da coletânea de Singer, Araujo e Rugitsky:** Rugitsky, Ayers e Saad-Filho, a entrevista com Streeck, Loureiro, Lavinas *et al.* e Braga e Santos. **Todas de economia política, nenhuma necessária ao desenho atual.** | 22/10/2026 | §77.5 |
 | **Os capítulos 4 a 8 de Beach e Pedersen.** O 5 e o 6 sustentariam a **força probatória declarada de cada âncora**, que é a mais dura das quatro dívidas do documento 03. | 21/10/2026 | §74 |
 
-**O que NÃO está nesta lista, e por quê.** As quatro dívidas de Beach e Pedersen, as cobranças dos onze verbetes e a cristalização de quadro **não são decisões**: são trabalho de redação, e a tarefa 16 as cobre. Os limites declarados do aparato — `reports/` fora da G2 e da G4, exceção ociosa sem guarda, capítulo de livro não vigiado, as quatro peças de corroboração do eixo 09 — **não são decisões suas**: são propostas minhas, e vivem nas seções dos itens que as nomearam.
+### Decididas
+
+| Decisão | Quando |
+|:--|:--|
+| ~~A alegação do site *Proof* — a matéria do Estadão atribui a ele a notícia de uma reunião em 05/01/2021 nos EUA~~ | ✅ 27/10/2026 — sem rastro na CPMI, medido em 1.333 folhas |
+
+**O que NÃO está nesta lista, e por quê.** As quatro dívidas de Beach e Pedersen, as cobranças dos onze verbetes e a cristalização de quadro **não são decisões**: são trabalho de redação, e a tarefa 16 as cobre. Os limites declarados do aparato **não são decisões suas**: são propostas minhas, e vivem nas seções dos itens que as nomearam. **E esta frase nomeava quatro deles até 27/10/2026, quando três haviam sido fechados no mesmo dia** — a extensão da G2 e da G4 a `reports/` (item 93), a guarda da exceção ociosa (item 92) e a extensão aos manuais e ao inventário (item 94). **Enumerar limites aqui é fazer à mão o que este arquivo existe para gerar**, e por isso a enumeração saiu em vez de ser corrigida.
 
 **E o limite desta peça fica declarado:** ela conserta a **cópia**, não o **juízo**. Dá um lugar único para registrar que uma decisão saiu, e deriva a contagem — mas **não detecta sozinha** que uma decisão foi resolvida noutro item. A guarda confere que o ponteiro de seção existe, que é a forma que o apodrecimento toma aqui.
 

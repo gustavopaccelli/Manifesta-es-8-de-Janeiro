@@ -142,23 +142,34 @@ EXCECOES = {
     # AS DUAS DE PT-38 entraram em 25/10/2026 (item 89) e sao o caso 4:
     # transcricao que esta em `fonte_trecho` DE PROPOSITO sem ser ancora do
     # registro. As cifras do dano vem de SINOPSE DE DOCUMENTARIO (ago/2023) e
-    # de LEVANTAMENTO DIVULGADO PELA IMPRENSA (jan/2025), e o proprio campo
-    # declara isso desde 16/08/2026, com estas palavras: "NENHUM documento
-    # primario do corpus traz esses valores -- nem o livro do STF (varrido),
-    # nem o balanco de 2026 (varrido), nem o Relatorio Final da CPMI
-    # (varrido)". O cache de folha do item 88 confirmou a varredura do livro, e
-    # em 25/10 a pagina de 2024-09 do eixo 09 foi vinculada e tambem NAO as
-    # traz. A serie e citada com data de proposito, porque a cifra de 2023 foi
-    # superada pela de 2025 -- e por isso ela fica no campo.
+    # de LEVANTAMENTO DIVULGADO PELA IMPRENSA (jan/2025).
+    #
+    # A RAZAO DELAS MUDOU EM 27/10/2026 (item 95), e as excecoes FICARAM.
+    # Ate aqui elas invocavam uma afirmacao do proprio registro: a de que
+    # NENHUM documento primario do corpus carregava a valoracao do dano. **Essa
+    # afirmacao caiu**, e a frase nao esta grafada aqui de proposito, porque
+    # quem cita o defeito reproduz o defeito. O que a derrubou: a varredura de
+    # 16/08 buscou a CIFRA, e buscando NOME DE OBRA o Relatorio Final da CPMI
+    # descreve o evento em quatro folhas e credita a valoracao do STF a oficio
+    # do proprio tribunal -- as DUAS PARCELAS de ago/2023 estao na f. 676.
+    #
+    # ENTAO POR QUE AS EXCECOES FICAM? Porque a pergunta delas e outra: a
+    # excecao dispensa uma ASPA de ser localizada, e as duas aspas continuam
+    # nao estando em peca nenhuma do corpus. **O que a CPMI traz sao as
+    # parcelas, nao a frase, e a soma e derivacao que ela nunca imprime.** O
+    # registro deixou de ser o unico do codebook sem transcricao verificavel --
+    # tem oito, conferidas por folha --, e e so isso que mudou aqui.
     ("PT-38", "somente no stf, o prejuizo financeiro chegou a r$ 11,4 milhoes"):
-        "sinopse oficial do documentario 'Democracia Inabalada' (ago/2023), "
-        "fonte jornalistica com atribuicao ao STF; o registro declara desde "
-        "16/08/2026 que nenhum documento primario do corpus traz o valor, e o "
-        "livro foi varrido por inteiro no item 88",
+        "sinopse oficial do documentário Democracia Inabalada (ago/2023), "
+        "fonte jornalística com atribuição ao STF. A CIFRA tem lastro primário "
+        "desde 27/10/2026, nas duas parcelas da CPMI f. 676 (Ofício "
+        "023/CDG/2023 – STF), mas a SOMA é derivada e a CPMI não a imprime: a "
+        "aspa, que é o que esta exceção dispensa, continua fora do corpus",
     ("PT-38", "furtados, quebrados ou completamente destruidos"):
-        "levantamento do STF divulgado pela imprensa (jan/2025), idem. A serie "
-        "esta no campo COM DATA porque a cifra de 2023 foi superada, e e isso "
-        "que o registro existe para mostrar",
+        "levantamento do STF divulgado pela imprensa (jan/2025), idem — e esta "
+        "metade da série segue SEM lastro primário, porque é posterior ao "
+        "relatório da CPMI. A série está no campo COM DATA porque a cifra de "
+        "2023 foi superada, e é isso que o registro existe para mostrar",
 }
 
 

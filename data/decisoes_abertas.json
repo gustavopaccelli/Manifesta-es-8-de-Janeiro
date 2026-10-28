@@ -67,17 +67,18 @@
       "id": "pt38-sem-transcricao",
       "estado": "aberta",
       "natureza": "campo do codebook",
-      "o_que": "**PT-38 não tem transcrição verificável, e é o único do codebook nessa situação.** As duas aspas vêm de sinopse de documentário (ago/2023) e de levantamento divulgado pela imprensa (jan/2025), e estão em `EXCECOES` com essa razão. **Coletar as duas fontes é sua decisão** — a alternativa é retirar as aspas, e sem elas o registro fica sem transcrição alguma.",
-      "onde": "89.6",
+      "o_que": "**As duas aspas de PT-38 que não estão em peça do corpus.** Elas vêm de sinopse de documentário (ago/2023) e de levantamento divulgado pela imprensa (jan/2025), e seguem em `EXCECOES` com essa razão. **A premissa desta decisão encolheu em 27/10/2026:** o registro ganhou oito transcrições da CPMI conferidas por folha, de modo que **retirar as duas aspas já não o deixa sem transcrição alguma** — e a cifra de ago/2023 passou a ter lastro primário nas duas parcelas da f. 676. O que resta é a cifra de jan/2025, posterior ao relatório. **Coletar as duas fontes continua sendo sua decisão**, e agora ela é mais barata.",
+      "onde": "95.2",
       "nasceu": "25/10/2026"
     },
     {
       "id": "alegacao-proof",
-      "estado": "aberta",
+      "estado": "decidida",
       "natureza": "campo do codebook",
-      "o_que": "**A alegação do site *Proof*** — a matéria do Estadão atribui a ele a notícia de uma reunião em 05/01/2021 nos EUA. **Não está no corpus e não é afirmada pelo registro.** Se entrar, é registro novo, e o levantamento está fechado desde 21/10.",
-      "onde": "77.5",
-      "nasceu": "22/10/2026"
+      "o_que": "**A alegação do site *Proof*** — a matéria do Estadão atribui a ele a notícia de uma reunião em 05/01/2021 nos EUA. **NÃO ENTRA, e a razão é medida:** `proof` e `5 de janeiro de 2021` têm ZERO ocorrências nas 1.333 folhas do Relatório Final da CPMI, e as dez menções a Eduardo Bolsonaro tratam de outra coisa. Fora do corpus, a alegação é de sítio jornalístico próprio e sem confirmação independente. O levantamento está fechado desde 21/10.",
+      "onde": "95.4",
+      "nasceu": "22/10/2026",
+      "quando": "✅ 27/10/2026 — sem rastro na CPMI, medido em 1.333 folhas"
     },
     {
       "id": "duas-nao-lidas",
@@ -105,7 +106,7 @@
     }
   ],
   "depois": [
-    "**O que NÃO está nesta lista, e por quê.** As quatro dívidas de Beach e Pedersen, as cobranças dos onze verbetes e a cristalização de quadro **não são decisões**: são trabalho de redação, e a tarefa 16 as cobre. Os limites declarados do aparato — `reports/` fora da G2 e da G4, exceção ociosa sem guarda, capítulo de livro não vigiado, as quatro peças de corroboração do eixo 09 — **não são decisões suas**: são propostas minhas, e vivem nas seções dos itens que as nomearam.",
+    "**O que NÃO está nesta lista, e por quê.** As quatro dívidas de Beach e Pedersen, as cobranças dos onze verbetes e a cristalização de quadro **não são decisões**: são trabalho de redação, e a tarefa 16 as cobre. Os limites declarados do aparato **não são decisões suas**: são propostas minhas, e vivem nas seções dos itens que as nomearam. **E esta frase nomeava quatro deles até 27/10/2026, quando três haviam sido fechados no mesmo dia** — a extensão da G2 e da G4 a `reports/` (item 93), a guarda da exceção ociosa (item 92) e a extensão aos manuais e ao inventário (item 94). **Enumerar limites aqui é fazer à mão o que este arquivo existe para gerar**, e por isso a enumeração saiu em vez de ser corrigida.",
     "**E o limite desta peça fica declarado:** ela conserta a **cópia**, não o **juízo**. Dá um lugar único para registrar que uma decisão saiu, e deriva a contagem — mas **não detecta sozinha** que uma decisão foi resolvida noutro item. A guarda confere que o ponteiro de seção existe, que é a forma que o apodrecimento toma aqui."
   ]
 }

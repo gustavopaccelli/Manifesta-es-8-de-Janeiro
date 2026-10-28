@@ -709,8 +709,16 @@ def main():
     #
     # LIMITE DECLARADO: ela nao alcanca quem cita por LOCALIZADOR ESTRUTURAL,
     # porque `pares()` nao cede numeral para `inteiro teor` nem para `§secao`.
-    # Medido em 25/10/2026: PT-01A, PT-19A e PT-38 caem fora por isso, e os
-    # tres declaram a razao de todo modo. Alcance da guarda: SEIS registros.
+    # Medido em 25/10/2026: PT-01A, PT-19A e PT-38 caiam fora por isso, e os
+    # tres declaravam a razao de todo modo. Alcance entao: SEIS registros.
+    #
+    # ATUALIZADO EM 27/10/2026 (item 95): **PT-38 ENTROU no alcance** ao
+    # ganhar `CPMI: 668, 671-672, 676`, e a guarda o pegou mudo na mesma
+    # rodada em que a ancora entrou. Alcance hoje: SETE registros. A licao
+    # e de desenho e vale para as outras guardas deste arquivo: **o alcance
+    # de uma guarda que depende de FORMA DE CITACAO cresce sozinho quando
+    # um registro muda de forma** -- e por isso o numero acima nunca deve
+    # ser lido como fixo, nem copiado para prosa fora daqui.
     cabecalho(9, "CLASSE INFERIOR COM ÂNCORA DOCUMENTAL DIZ POR QUÊ")
     import sys as _sys9
     _sys9.path.insert(0, str(RAIZ / "scripts"))

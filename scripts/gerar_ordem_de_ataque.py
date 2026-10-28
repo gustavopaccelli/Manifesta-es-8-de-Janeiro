@@ -110,6 +110,25 @@ def guarda_g4(d):
         unidades.append(("ledger/tarefa %s" % x["n"], x["texto"]))
     for i, par in enumerate(d.get("depois", []), 1):
         unidades.append(("ledger/depois[%d]" % i, par))
+
+    # O SEGUNDO LEDGER ENTRA EM 27/10/2026 (item 93). `data/
+    # decisoes_abertas.json` nasceu em 27/10 e a G4 recebia so o ledger
+    # das tarefas como argumento: **guarda escrita para um artefato nao
+    # cresce sozinha quando nasce o irmao dele.** E o ledger das decisoes
+    # e justamente onde afirmacao de leitura mora -- ele fala das pecas
+    # NAO_LIDO, dos capitulos nao lidos de Beach e Pedersen e das seis
+    # pecas nao abertas da coletanea.
+    dec = json.loads(io.open(str(RAIZ / "data/decisoes_abertas.json"),
+                             encoding="utf-8").read())
+    for i, par in enumerate(dec.get("antes", []), 1):
+        unidades.append(("decisoes/antes[%d]" % i, par))
+    for x in dec["decisoes"]:
+        unidades.append(("decisoes/%s" % x["id"], x["o_que"]))
+    for i, par in enumerate(dec.get("depois", []), 1):
+        unidades.append(("decisoes/depois[%d]" % i, par))
+    assert any(r.startswith("decisoes/") for r, _ in unidades), \
+        "a G4 deixou de alcançar o ledger das decisões"
+
     return R.exame_de_prosa(unidades, lidas)
 
 

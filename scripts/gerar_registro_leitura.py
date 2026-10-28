@@ -131,11 +131,25 @@ def _mesmo(a, b):
 # Exclui-se so a propria saida. A grade funcional (02) tambem e gerada, mas a
 # prosa dela vem de um dicionario escrito a mao no script: afirmacao de
 # nao-leitura ali e defeito de verdade, e segue vigiada.
+# `reports/` ENTRA EM 27/10/2026 (item 93). A G2 nasceu em 21/10 vigiando
+# `docs/`, onde a prosa de analise vive, e o relatorio de pesquisa, a
+# auditoria de fontes e a tabela-espelho ficaram fora. **Dois dos tres sao
+# GERADOS**, e isso torna a vigilancia MAIS util, nao menos: afirmacao
+# falsa ali e defeito do gerador, nao erro de digitacao, e defeito de
+# gerador se repete a cada rodada.
+#
+# Medido antes de estender: ZERO incoerencias em 1.038 linhas. O risco
+# aqui nao era conserto de conteudo -- era guarda INERTE, e a prova
+# negativa injeta dentro de `reports/` para afasta-lo.
 DOCS_VIGIADOS = [x for x in
                  sorted(glob.glob("docs/analise/*.md"))
                  + sorted(glob.glob("docs/referencial/*.md"))
+                 + sorted(glob.glob("reports/**/*.md", recursive=True))
                  + ["docs/PENDENCIAS-ANALITICAS.md"]
                  if not _mesmo(x, SAIDA)]
+assert any(x.replace("\\", "/").startswith("reports/")
+           for x in DOCS_VIGIADOS), \
+    "a G2 deixou de alcançar reports/ — confira o glob"
 assert not any(_mesmo(x, SAIDA) for x in DOCS_VIGIADOS), \
     "a exclusão da própria saída ficou inerte — confira o separador"
 

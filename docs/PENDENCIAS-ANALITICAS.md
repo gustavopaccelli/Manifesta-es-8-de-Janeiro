@@ -22,7 +22,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Corpus | **74 peças / 12.352 p.** no manifesto, em 14 eixos — 65 PDFs e 9 âncoras não-PDF, estas conferidas por arquivo inteiro desde 25/10/2026. Da documental: **32 peças / 6.970 p.**; de literatura: 42 peças |
 | Figuras | SVG da cadeia causal e cronologia navegável. **São a única parte do aparato escrita à mão**, e duas guardas as cobrem: o passo 10 confere que todo registro do codebook aparece na figura, e a tabela-espelho do passo 6 confere o **nome do mecanismo** de cada ponto contra o campo — com linha de base em zero divergências |
 | Verificação | `bash scripts/ciclo.sh` — **14 passos**: 8 geradores e 6 conferidores, entre eles as **10 checagens estruturais**. Toda linha de base reprova com código de saída ≠ 0; nenhuma apenas avisa |
-| Controle de versão | git desde **20/09/2026**, 103 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 27/10/2026 |
+| Controle de versão | git desde **20/09/2026**, 104 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 27/10/2026 |
 | Tarefas abertas | **3** — 10, 17, 16. A lista vive na seção *Ordem de ataque*, gerada pelo passo 3, e 34 tarefas estão fechadas |
 | Decisões pendentes | **12**, em 3 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 4 |
 | **Redação do artigo** | **não iniciada — por decisão, é o último item da fila.** Desde 25/10/2026 ela não tem mais pré-requisito de dado: a tarefa 26 fechou e não há decisão de campo aberta no codebook. **Começá-la é decisão do pesquisador** |
@@ -5151,6 +5151,54 @@ As três exceções de PT-08 saíram em 25/10/2026 **porque eu fui olhar** — n
 O ciclo segue em **catorze passos** e **dez checagens**, verde, com **sete linhas de base em zero**: `PARCIAIS` · `EMPATES` · `SEM_PAGINA_EXTRAIVEL` · `MEIAS_ANCORAS` · `INTEIRO_TEOR_SEM_ACHADO` · `DIVERGENCIAS` · **`OCIOSAS`**.
 
 **Resta um item dos três que eu havia listado:** `reports/` segue fora da G2 e da G4 — elas vigiam `docs/` e o `ledger`. O relatório de pesquisa e a auditoria não afirmam estado de leitura hoje, **mas podem**, e estender é uma linha em `DOCS_VIGIADOS` **com a medição do estrago antes**.
+
+
+---
+
+## 93. A G2 vai a `reports/` e a G4 aos dois ledgers — e as duas nasceram verdes — ✅ 27/10/2026
+
+**Encaminhamento:** *"estenda a G2 e a G4 para `reports/`."* — o último dos três itens que eu havia listado.
+
+### 93.1 O pedido obrigou uma distinção, e ela achou um segundo buraco
+
+**A G2 vigia arquivos; a G4 vigia o `ledger`.** `reports/` é arquivo, e entra na G2 sem dificuldade — mas *"estender a G4 para `reports/`"* não tem sentido, porque `reports/` não é ledger.
+
+> **O que a G4 tinha de equivalente, e eu fui olhar:** ela recebia **um** ledger como argumento — o da ordem de ataque. E `data/decisoes_abertas.json` **nasceu em 27/10**, um dia antes. **Guarda escrita para um artefato não cresce sozinha quando nasce o irmão dele.**
+>
+> E o ledger das decisões é **justamente onde afirmação de leitura mora**: ele fala das peças `NAO_LIDO`, dos capítulos 4 a 8 de Beach e Pedersen, das seis peças não abertas da coletânea. **Era o escopo mais sensível à G4 em todo o repositório, e estava fora dela.**
+
+### 93.2 Por que `reports/` faltava, e por que vigiar gerado é mais útil
+
+A G2 nasceu em 21/10 olhando `docs/`, onde a prosa de análise vive. Ficaram fora três arquivos, e **dois deles são gerados** — a auditoria de fontes e a tabela-espelho.
+
+> **Vigiar prosa gerada é mais útil aqui, não menos:** afirmação falsa num gerado é **defeito do gerador**, não erro de digitação — e defeito de gerador **se repete a cada rodada**. É o oposto do caso de 25/10, em que a G2 deixou de vigiar a própria saída: lá o arquivo **citava os defeitos que ela encontrava**, criando laço; aqui a prosa vem de código que pode estar errado.
+
+### 93.3 Medido antes de estender — e as duas nasceram verdes
+
+| | |
+|:--|:--|
+| G2 em `reports/` | **zero** incoerências em **1.038 linhas**, 3 arquivos |
+| G4 no ledger das decisões | **zero** em 16 unidades |
+
+> **E guarda que nasce verde é o caso perigoso.** Não há conteúdo a consertar, logo nada prova que ela está olhando. **A única resposta é injetar dentro de cada escopo novo** — e, além disso, um `assert` em cada uma reprova se o escopo **secar**: se o `glob` de `reports/` parar de casar, ou se o ledger das decisões sair da lista, o ciclo cai em vez de passar em silêncio.
+
+### 93.4 Três provas negativas, e a primeira falhou por defeito dela
+
+| | prova | |
+|:--|:--|:--|
+| **1** | afirmação de não-leitura no **relatório de pesquisa** | G2 pega ✔ |
+| **2** | a mesma no **ledger das decisões** | G4 pega ✔ |
+| **3** | o `glob` de `reports/` **secando** | o `assert` derruba ✔ |
+
+**A prova 1 relatou FALHOU com a guarda funcionando**, e o defeito era meu: a agulha procurava `reports/process_...` e a saída traz `reports\process_...`, porque o `glob` devolve o separador da plataforma.
+
+> **É o terceiro encontro com o separador de caminho neste repositório** — depois da exclusão inerte de 25/10 e do `cands` com barra. A prova passou a comparar normalizando, e a lição fica: **em prova que casa caminho, normalize o separador antes de concluir que a guarda falhou.**
+
+### 93.5 O que isto fecha
+
+**Os três itens que eu havia listado saíram:** a guarda das três condições (86), a da exceção ociosa (92) e esta. O ciclo segue em **catorze passos** e **dez checagens**, verde, com **sete linhas de base em zero**.
+
+**O que permanece fora de guarda de prosa, declarado:** `Fontes/LEIA-ME_fontes.md` e os dois `LEIA-ME` de `scripts/` e da raiz — são inventário e manual, não afirmam estado de leitura, **mas podem**. Estendê-los é a mesma linha de `glob`, e a medição do estrago vem antes.
 
 ---
 

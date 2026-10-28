@@ -724,11 +724,19 @@ def main():
     #
     # ATUALIZADO EM 27/10/2026 (item 95): **PT-38 ENTROU no alcance** ao
     # ganhar `CPMI: 668, 671-672, 676`, e a guarda o pegou mudo na mesma
-    # rodada em que a ancora entrou. Alcance hoje: SETE registros. A licao
-    # e de desenho e vale para as outras guardas deste arquivo: **o alcance
-    # de uma guarda que depende de FORMA DE CITACAO cresce sozinho quando
-    # um registro muda de forma** -- e por isso o numero acima nunca deve
-    # ser lido como fixo, nem copiado para prosa fora daqui.
+    # rodada em que a ancora entrou. A licao e de desenho e vale para as
+    # outras guardas deste arquivo: **o alcance de uma guarda que depende
+    # de FORMA DE CITACAO cresce sozinho quando um registro muda de
+    # forma.**
+    #
+    # E EM 28/10/2026 ELE ENCOLHEU: PT-38 foi promovido a `Confirmado em
+    # fonte primaria` e SAIU do alcance, um dia depois de entrar. O
+    # comentario trazia a cifra do alcance com a advertencia de que ela
+    # nao era fixa -- e envelheceu em UM DIA de todo modo. **A advertencia
+    # nao conserta a cifra: so a cifra conserta a cifra.** Por isso o
+    # numero saiu daqui: a guarda IMPRIME o alcance a cada rodada, na
+    # linha `registro(s) em Confirmado com ancora documental apontada`, e
+    # essa e a cifra medida. Nao escreva outra em prosa, aqui ou fora.
     cabecalho(9, "CLASSE INFERIOR COM ÂNCORA DOCUMENTAL DIZ POR QUÊ")
     import sys as _sys9
     _sys9.path.insert(0, str(RAIZ / "scripts"))
@@ -820,6 +828,16 @@ def main():
          len(_man) - len(_pdf)),
         ("PDFs documentais", r"\*\*(\d+) PDFs / [\d.]+ p\. são fonte",
          len(_docpdf)),
+        # ACRESCENTADA EM 28/10/2026 (item 97). A entrada acima capturava a
+        # CONTAGEM e pulava a cifra de PAGINAS da mesma frase, com
+        # `[\d.]+`. Em 28/10 a guarda acusou tres cifras do README e
+        # deixou passar a quarta, a seis caracteres da terceira: eu a
+        # corrigi a mao e ninguem me cobraria o erro. **Presenca da cifra
+        # certa nao prova ausencia da errada no mesmo paragrafo** -- e o
+        # proprio padrao da guarda declarava esta como irrelevante.
+        ("páginas dos PDFs documentais",
+         r"\*\*\d+ PDFs / ([\d.]+) p\. são fonte",
+         _mil10(sum(int(r["paginas"]) for r in _docpdf))),
         ("migrações históricas", r"\*\*(\d+) migrações de uso único\*\*",
          len(_gl10.glob(str(RAIZ / "scripts/historico/*.py")))),
     ]

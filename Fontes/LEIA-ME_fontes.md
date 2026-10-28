@@ -41,6 +41,12 @@ Fontes/
 | Arquivo | Pág. | Registro | Origem |
 |:--|--:|:--|:--|
 | *(o livro do STF migrou para `10_Democracia-Inabalada/`)* | — | PT-38 | Havia duas cópias byte-idênticas no corpus. Consolidadas em 16/08/2026: mantida a do eixo 10, removida esta (backup em `.backup_pre_lula/`) |
+| `IPHAN-DF_Relatorio-Preliminar-Vistoria-Bens-Culturais_2023-01-12.pdf` | 50 | PT-38 | **É o DOC 366 que a CPMI cita na folha 672** — o título casa literalmente com a nota de rodapé 823, *Relatório Preliminar da vistoria realizada em relação aos bens culturais afetados por vandalismo praça dos Três Poderes, Inquérito 4922*. Obtido em 28/10/2026 |
+| `IPHAN-DF_Relatorio-Vistoria-Bens-Culturais_2023-03-02.pdf` | 72 | PT-38 | **A revisão do anterior, e é a que traz os laudos de conservação peça por peça** — quatorze bens, com *As mulatas* em primeiro e as sete perfurações descritas. É o detalhamento que PT-38 declarava pendente **de outra peça**. Obtido em 28/10/2026 |
+
+> **A procedência dos dois é incomum e fica declarada:** `gov.br/iphan` devolve **401** ao `curl`, e a página da notícia que os publicava hoje diz *"Conteúdo Restrito — é necessário autenticar para visualizar essa página"*. Os dois vieram de **snapshots do Internet Archive das URLs oficiais**, abrem como PDF 1.7 e têm camada de texto em **todas** as 122 folhas. **Nada foi autenticado.**
+>
+> **E a licença dos dois foi MEDIDA, não presumida:** `licença`, `direitos reservados`, `creative commons` e `reprodução` têm **zero ocorrências** nos dois arquivos. `ATO OFICIAL` no manifesto é **classificação pela natureza da peça** — relatório de autarquia federal —, e não declaração achada nela: é o mesmo critério com que os acórdãos do STF entraram, e nenhum deles declara licença.
 
 ### 04 — T+1, resposta institucional
 

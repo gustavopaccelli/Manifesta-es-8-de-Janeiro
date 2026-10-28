@@ -29,7 +29,7 @@ A estrutura segue os princípios do padrão *Cookiecutter Data Science* — dado
 
 | Aqui | Papel | Equivalente CCDS |
 |:--|:--|:--|
-| `Fontes/` | Corpus, **imutável**. **65 PDFs, 12.352 p.** e **9 âncoras não-PDF** — dos quais **23 PDFs / 6.970 p. são fonte documental**, e o resto é bibliografia teórica e literatura —, mais HTML, arquivamento web e sínteses. Inventário em `Fontes/LEIA-ME_fontes.md`, manifesto gerado em `Fontes/MANIFESTO-CORPUS.csv`. **Estes dois números são a linha de base de 13/10/2026 da checagem 6**, que avisa quando o corpus se move | `data/raw` |
+| `Fontes/` | Corpus, **imutável**. **67 PDFs, 12.474 p.** e **9 âncoras não-PDF** — dos quais **25 PDFs / 7.092 p. são fonte documental**, e o resto é bibliografia teórica e literatura —, mais HTML, arquivamento web e sínteses. Inventário em `Fontes/LEIA-ME_fontes.md`, manifesto gerado em `Fontes/MANIFESTO-CORPUS.csv`. **Estes dois números são a linha de base de 13/10/2026 da checagem 6**, que avisa quando o corpus se move | `data/raw` |
 | `process_tracing_8jan_eventos.json` | Codebook — a fonte única da verdade. Fica na raiz porque é a porta de entrada dos dados e o que todo script lê | `data/interim` (curado à mão) |
 | `data/processed/` | Derivados, **gerados**: o CSV e o XLSX do codebook, o catálogo da imprensa, a planilha dos 411 DOIs das sínteses e a triagem deles por pertinência. Não editar — a próxima execução sobrescreve | `data/processed` |
 | `Caderno-de-evidencias/` | Transcrições literais com página, por registro | `references` |

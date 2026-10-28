@@ -8,7 +8,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 
 <!-- PAINEL: gerado por scripts/gerar_painel.py. Não editar à mão: o ciclo sobrescreve. -->
 
-## Painel de estado — medido em 27 de outubro de 2026
+## Painel de estado — medido em 28 de outubro de 2026
 
 **Esta seção é GERADA pelo passo 5 do ciclo. Nenhuma cifra dela é digitada**, e as listas de tarefas e decisões não são repetidas aqui: o painel aponta para as seções que os passos 3 e 4 geram. **A razão tem data** — até 27/10/2026 este painel era escrito à mão, datava-se de 29/09, e a revisão do repositório mediu que **nenhuma das suas cifras estava certa** (item 91).
 
@@ -17,12 +17,12 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Frente | Estado |
 |:--|:--|
 | Codebook | **85 sub-eventos × 17 campos** — JSON, CSV e XLSX gerados de uma fonte única, com zero divergências. Zero vazios em `mecanismo_causal` e em `autonomia_movimento` |
-| Classes de verificação | **68 em fonte primária** · 16 confirmados por outra via · **0 a verificar** · 1 inferência declarada. O critério das três condições está escrito em `metadados.vocabulario_status_classe` desde 25/10/2026 |
+| Classes de verificação | **69 em fonte primária** · 15 confirmados por outra via · **0 a verificar** · 1 inferência declarada. O critério das três condições está escrito em `metadados.vocabulario_status_classe` desde 25/10/2026 |
 | Ancoragem documental | **84 de 85 registros** com arquivo vinculado · 84 com página ou localizador estrutural · 85 com transcrição literal no campo. O único sem arquivo é PT-03D, declarado |
-| Corpus | **74 peças / 12.352 p.** no manifesto, em 14 eixos — 65 PDFs e 9 âncoras não-PDF, estas conferidas por arquivo inteiro desde 25/10/2026. Da documental: **32 peças / 6.970 p.**; de literatura: 42 peças |
+| Corpus | **76 peças / 12.474 p.** no manifesto, em 14 eixos — 67 PDFs e 9 âncoras não-PDF, estas conferidas por arquivo inteiro desde 25/10/2026. Da documental: **34 peças / 7.092 p.**; de literatura: 42 peças |
 | Figuras | SVG da cadeia causal e cronologia navegável. **São a única parte do aparato escrita à mão**, e duas guardas as cobrem: o passo 10 confere que todo registro do codebook aparece na figura, e a tabela-espelho do passo 6 confere o **nome do mecanismo** de cada ponto contra o campo — com linha de base em zero divergências |
 | Verificação | `bash scripts/ciclo.sh` — **14 passos**: 8 geradores e 6 conferidores, entre eles as **10 checagens estruturais**. Toda linha de base reprova com código de saída ≠ 0; nenhuma apenas avisa |
-| Controle de versão | git desde **20/09/2026**, 107 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 27/10/2026 |
+| Controle de versão | git desde **20/09/2026**, 108 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 27/10/2026 |
 | Tarefas abertas | **3** — 10, 17, 16. A lista vive na seção *Ordem de ataque*, gerada pelo passo 3, e 34 tarefas estão fechadas |
 | Decisões pendentes | **10**, em 3 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 4 |
 | **Redação do artigo** | **não iniciada — por decisão, é o último item da fila.** Desde 25/10/2026 ela não tem mais pré-requisito de dado: a tarefa 26 fechou e não há decisão de campo aberta no codebook. **Começá-la é decisão do pesquisador** |
@@ -5364,11 +5364,83 @@ Nem fato, nem campo, nem classe. PT-62 continua **um** registro com dois compone
 
 **Nada de decisão nova.** A §4 de `04_LACUNAS-DO-CAMPO.md` já contava a tipologia de rotas como resolvida, e agora o campo diz o que o documento mediu. **Resta a cristalização de quadro**, a única das oito lacunas não resolvível com este corpus, e ela está com o desenho mínimo escrito — e é trabalho de coleta, não decisão.
 
+
+---
+
+## 97. O laudo do patrimônio existia — e a pendência nomeava a peça errada — ✅ 28/10/2026
+
+**Encaminhamento:** *"resolva as inferências e tarefas a mais 1, 2 e 3"* — a promoção de classe de PT-38, o `autonomia_movimento` dele, e a coleta do DOC 366 do Iphan.
+
+### 97.1 A coleta, e o portal que fechou a porta
+
+O DOC 366 que a CPMI cita na folha 672 é o **Relatório Preliminar de vistoria de bens culturais afetados por vandalismo**, do Iphan-DF, de 12/01/2023 — o título casa **literalmente** com a nota de rodapé 823. E existe a revisão dele, de **02/03/2023**.
+
+> **`gov.br/iphan` devolve 401 ao `curl`, e a página que os publicava hoje diz, com estas palavras, que o conteúdo é restrito e exige autenticação.** Os dois vieram de **snapshots do Internet Archive das URLs oficiais**, abrem como PDF 1.7 e têm camada de texto em **todas as 122 folhas**. **Nada foi autenticado**, e a procedência incomum está declarada no manifesto e no inventário.
+
+| peça | folhas | o que é |
+|:--|--:|:--|
+| `IPHAN-DF_Relatorio-Preliminar-...2023-01-12.pdf` | 50 | **o DOC 366 citado pela CPMI** |
+| `IPHAN-DF_Relatorio-Vistoria-...2023-03-02.pdf` | 72 | a revisão, **com os laudos de conservação peça por peça** |
+
+**E a licença foi MEDIDA:** `licença`, `direitos reservados`, `creative commons` e `reprodução` têm **zero ocorrências** nos dois. `ATO OFICIAL` no manifesto é **classificação pela natureza da peça** — relatório de autarquia federal —, e não declaração achada nela. É o mesmo critério dos acórdãos do STF, que também não declaram licença.
+
+### 97.2 O achado: a pendência pedia o laudo errado
+
+PT-38 declarava desde 16/08/2026 que **o detalhamento por peça exigia o laudo pericial do Instituto de Criminalística da PF**. O relatório de 02/03 traz, na folha 47, os **laudos de conservação de quatorze bens** — *As mulatas* em primeiro, com as **sete perfurações** descritas uma a uma, o relógio de Martinot, o Bruno Giorgi, o Krajcberg, o Amílcar de Castro.
+
+> **O laudo da PF continua não obtido, e a pendência saiu de todo modo** — porque o que ela pedia estava em peça de **outra autoria**. O laudo pericial faria **atribuição forense**, que é coisa diferente e que este registro não afirma.
+>
+> **É o modo de falha mais difícil de ver deste projeto: a pendência nomeava a peça errada.** Ela sobreviveu dois meses e meio parecendo não fechável, e o que a travava não era a ausência do documento: era o nome escrito nela. **Lição irmã da de ontem** — a varredura era negativa no predicado que usou; esta era pendente na peça que nomeou.
+
+**Sete transcrições novas, todas integrais**, inclusive o limite que a própria peça declara: os laudos se limitaram às deteriorações visíveis, por exames organolépticos breves. **PT-38 tem hoje quinze transcrições conferidas por folha.**
+
+### 97.3 A classe, condição por condição
+
+| condição do vocabulário | PT-38 em 28/10/2026 |
+|:--|:--|
+| (1) a **peça do próprio ato** em `fonte_local` | ✔ o relatório de vistoria do **órgão federal do patrimônio** — e a versão preliminar **é** o DOC 366 que a CPMI cita |
+| (2) `fonte_pagina` **localiza** a afirmação | ✔ por folha, em quatro peças |
+| (3) **sem insuficiência pendente** sobre essa âncora | ✔ a que havia pedia o detalhamento por peça, que está nos laudos |
+
+**Promovido a `Confirmado em fonte primária`**, e a marca `CLASSE NÃO PRIMÁRIA` saiu do registro, porque a razão que ela declarava deixou de existir. **A razão saiu também do vocabulário:** *insuficiência declarada e pendente* era de PT-38 e é hoje a **segunda razão fechada** — e a única que fechou por a pendência estar **mal endereçada** em vez de a peça faltar.
+
+**A cifra de jan/2025 fica declarada como corroboração em imprensa, não como afirmação ancorada** — o mesmo recurso com que PT-62 separa remissão de afirmação própria.
+
+### 97.4 A autonomia foi relida e NÃO mudou
+
+As **122 folhas** novas foram varridas pelos **onze termos** da quinta rodada. **Todas têm camada de texto.**
+
+> As únicas ocorrências de `lideran` são **`gabinetes de lideranças partidárias`** e **`corredor de lideranças`** — que são **lugares do Congresso**, não liderança de movimento. `coorden` e `planeja` falam das equipes do próprio Iphan e do cronograma de restauro. Nas quatro folhas novas da CPMI, `dirigi` e `coorden` aparecem só na 672, e as duas são do **cerco ao Planalto**, não da destruição do acervo — mais o *como se tivessem uma coordenação* do general Gonçalves Dias, que é **símile e não documentação de comando**.
+
+**Relatório de conservação não tem o objeto desta pergunta.** `Lido, não documentado` segue sendo a afirmação verdadeira — e agora ela está sobre **folha lida**, não sobre varredura de outra peça. Importar valor de folha vizinha é o que este registro proibiu em 16/10.
+
+### 97.5 Duas guardas se mexeram, e uma delas me pegou de novo
+
+**A checagem 10 acusou três cifras do README** — 65 → 67 PDFs, 12.352 → 12.474 páginas, 23 → 25 documentais — e é exatamente para isso que ela existe.
+
+> **Mas ela deixou passar a quarta, a seis caracteres da terceira.** O padrão da entrada `PDFs documentais` capturava a **contagem** e pulava a cifra de **páginas da mesma frase**, com `[\d.]+`. Eu tive de corrigir 6.970 → 7.092 **à mão, sem guarda nenhuma me cobrando o erro**. **Presença da cifra certa não prova ausência da errada no mesmo parágrafo** — e aqui o próprio padrão da guarda declarava aquela cifra como irrelevante. Entrou a **décima cifra vigiada**, com prova negativa: `9.999` no lugar de `7.092` derruba o ciclo.
+
+**E o comentário da checagem 9 envelheceu em UM DIA.** Ontem eu escrevi nele que o alcance era de sete registros, **com a advertência de que o número não era fixo** — e hoje PT-38 saiu do alcance pela promoção, de modo que são seis.
+
+> **A advertência não conserta a cifra: só a cifra conserta a cifra.** O número saiu do comentário, e ele passou a apontar para a **linha que a guarda imprime a cada rodada**, que é medida. É o mesmo remédio do item 91, aplicado agora a comentário de código.
+
+### 97.6 Um conserto de escrita, e vale pela forma
+
+A primeira gravação do manifesto saiu com **fim de linha LF** onde o arquivo tem **CRLF**, e com o **BOM removido**. O `git diff` passou a mostrar **77 linhas acrescentadas e 75 removidas** para uma adição de **duas linhas**.
+
+> **Escritor que normaliza fim de linha reescreve o arquivo inteiro** — e o diff deixa de ser revisável: a mudança real fica escondida dentro da reescrita. Conferido byte a byte contra o `HEAD` e regravado com CRLF e BOM; o diff voltou a ser `2 0`.
+
+### 97.7 O que isto deixa
+
+**A decisão `pt38-sem-transcricao` segue sua, e encolheu outra vez:** o que está em jogo é só a **revisão de jan/2025**, porque a cifra de ago/2023 tem lastro primário na CPMI f. 676. Retirar as duas aspas deixa o registro com **quinze transcrições conferidas**.
+
+**E uma proposta minha, não executada:** o laudo pericial do Instituto de Criminalística da PF segue não obtido, e **agora sabe-se o que ele acrescentaria** — atribuição forense de autoria, que nenhum registro deste codebook afirma. **Ele deixou de ser pendência de PT-38 e passou a ser peça de um registro que não existe.** Abrir esse registro é levantamento novo, e o levantamento está fechado desde 21/10.
+
 ---
 
 <!-- DECISOES-PENDENTES: gerado por scripts/gerar_decisoes.py a partir de data/decisoes_abertas.json. Não editar à mão: o ciclo sobrescreve. -->
 
-## Decisões pendentes — revista em 27/10/2026
+## Decisões pendentes — revista em 28/10/2026
 
 **As decisões abaixo são suas, e nenhuma delas bloqueia as tarefas abertas.** A lista é gerada de `data/decisoes_abertas.json`: **fechar uma decisão é virar um campo**, e a contagem acompanha. **O que não está aqui não está pendente** — as seções *"O que isto deixa"* de cada item da agenda são o registro do que se sabia naquele dia, e várias delas foram resolvidas por itens posteriores.
 
@@ -5391,7 +5463,7 @@ Nem fato, nem campo, nem classe. PT-62 continua **um** registro com dois compone
 |:--|:--|:--|
 | **A grade funcional do enquadramento como 18º campo.** Hoje a classificação vive só em `docs/referencial/02_GRADE-FUNCIONAL-ENQUADRAMENTO.md`, gerada, e **declarada como inferência minha**. Criar campo é sua decisão, e você disse que classifica na escrita. | 21/10/2026 | §73 |
 | **Os quatro registros `N` da grade funcional** — PT-20A, PT-20B, PT-25 e PT-47 têm texto em `framing_narrativa` que **não é quadro de ação coletiva**. São 18 vazios ao todo, e os quatro `N` são os que têm texto e não têm quadro. | 21/10/2026 | §73 |
-| **As duas aspas de PT-38 que não estão em peça do corpus.** Elas vêm de sinopse de documentário (ago/2023) e de levantamento divulgado pela imprensa (jan/2025), e seguem em `EXCECOES` com essa razão. **A premissa desta decisão encolheu em 27/10/2026:** o registro ganhou oito transcrições da CPMI conferidas por folha, de modo que **retirar as duas aspas já não o deixa sem transcrição alguma** — e a cifra de ago/2023 passou a ter lastro primário nas duas parcelas da f. 676. O que resta é a cifra de jan/2025, posterior ao relatório. **Coletar as duas fontes continua sendo sua decisão**, e agora ela é mais barata. | 25/10/2026 | §95.2 |
+| **As duas aspas de PT-38 que não estão em peça do corpus** — a sinopse do documentário (ago/2023) e o levantamento divulgado pela imprensa (jan/2025). **A premissa encolheu duas vezes em dois dias.** Em 27/10 o registro ganhou oito transcrições da CPMI; em 28/10 ganhou sete do Iphan e **foi promovido a `Confirmado em fonte primária`**. A cifra de ago/2023 tem lastro primário na CPMI f. 676; **só a de jan/2025 segue sem**, por ser posterior ao relatório. **Coletar as duas fontes continua sendo sua decisão**, e hoje o que está em jogo é apenas a revisão de 2025 — a alternativa é retirar as duas aspas, e o registro fica com quinze transcrições conferidas. | 25/10/2026 | §97.5 |
 
 ### Leitura
 

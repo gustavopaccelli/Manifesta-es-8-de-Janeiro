@@ -88,7 +88,7 @@ A versão completa — com os seis campos da figura ao lado dos seis do codebook
 | `PT-35` | 08/01/2023 15h37 | Invasão do STF | T0 Execução | Confirmado em fonte primária | fechamento do ciclo de alvos em 37 minutos | — | ✅ |
 | `PT-36` | 08/01/2023 15h45 | 3º andar do Planalto | T0 Execução | Confirmado em fonte primária | penetracao do nucleo simbolico | — | ✅ |
 | `PT-37` | 08/01/2023 15h53 | PMs abandonam o Congresso | T0 Execução | Confirmado em fonte primária | colapso da contencao e inversao da relacao de forca | — | ✅ |
-| `PT-38` | 08/01/2023 ~15h–16h30 | Violência simbólica dirigida. O alvo nã… | T0 Execução | Confirmado | violencia simbolica dirigida | — | ✅ |
+| `PT-38` | 08/01/2023 ~15h–16h30 | Violência simbólica dirigida. O alvo nã… | T0 Execução | Confirmado em fonte primária | violencia simbolica dirigida | — | ✅ |
 | `PT-39` | 08/01/2023 16h25 | Início da expulsão | T0 Resposta tática | Confirmado em fonte primária | inflexao tardia da contencao | — | ✅ |
 | `PT-40` | 08/01/2023 16h40 | Guarda Presidencial no Planalto | T0 Resposta tática | Confirmado em fonte primária | substituicao do agente de contencao | — | ✅ |
 | `PT-41` | 08/01/2023 17h00 | Choque chega 2h após ser pedido | T0 Resposta tática | Confirmado em fonte primária | latencia de resposta | — | ✅ |

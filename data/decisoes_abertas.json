@@ -1,7 +1,7 @@
 {
   "_leia_me": "LEDGER DAS DECISOES DO PESQUISADOR, criado em 27/10/2026 (item 90). Fonte da verdade da secao 'Decisoes pendentes' de docs/PENDENCIAS-ANALITICAS.md, que e GERADA por scripts/gerar_decisoes.py entre marcadores HTML. Nao editar a secao a mao: o ciclo sobrescreve. A razao de existir: as pendencias viviam nas secoes 'O que isto deixa' de cada item da agenda, que sao INSTANTANEOS DATADOS e nao lista viva -- em 25/10/2026 a colheita item a item devolveu oito pendencias ja resolvidas por itens posteriores. O defeito nao era a prosa: era NAO HAVER UM LUGAR UNICO ONDE VIRAR O BIT. As secoes de cada item ficam como estao, porque sao o registro do que se sabia naquele dia; esta secao e o que vale hoje. ATENCAO AO ESCREVER AQUI: os campos de PROSA sao lidos pelo pesquisador na agenda, e vao ACENTUADOS. Comentario de codigo neste repositorio vai sem acento; prosa para ele, nunca.",
   "_limite_declarado": "Este ledger conserta a COPIA, nao o JUIZO. Ele da um lugar unico para registrar que uma decisao saiu, e deriva a contagem; ele NAO detecta sozinho que uma decisao foi resolvida noutro item. Isso continua sendo leitura humana, e a guarda G-A existe para que ao menos o PONTEIRO nunca aponte para secao inexistente.",
-  "revisada": "27/10/2026",
+  "revisada": "28/10/2026",
   "antes": [
     "**As decisões abaixo são suas, e nenhuma delas bloqueia as tarefas abertas.** A lista é gerada de `data/decisoes_abertas.json`: **fechar uma decisão é virar um campo**, e a contagem acompanha. **O que não está aqui não está pendente** — as seções *\"O que isto deixa\"* de cada item da agenda são o registro do que se sabia naquele dia, e várias delas foram resolvidas por itens posteriores.",
     "**A ordem não é de prioridade, e sim de natureza.** Dentro de cada grupo, a ordem é a de nascimento."
@@ -68,8 +68,8 @@
       "id": "pt38-sem-transcricao",
       "estado": "aberta",
       "natureza": "campo do codebook",
-      "o_que": "**As duas aspas de PT-38 que não estão em peça do corpus.** Elas vêm de sinopse de documentário (ago/2023) e de levantamento divulgado pela imprensa (jan/2025), e seguem em `EXCECOES` com essa razão. **A premissa desta decisão encolheu em 27/10/2026:** o registro ganhou oito transcrições da CPMI conferidas por folha, de modo que **retirar as duas aspas já não o deixa sem transcrição alguma** — e a cifra de ago/2023 passou a ter lastro primário nas duas parcelas da f. 676. O que resta é a cifra de jan/2025, posterior ao relatório. **Coletar as duas fontes continua sendo sua decisão**, e agora ela é mais barata.",
-      "onde": "95.2",
+      "o_que": "**As duas aspas de PT-38 que não estão em peça do corpus** — a sinopse do documentário (ago/2023) e o levantamento divulgado pela imprensa (jan/2025). **A premissa encolheu duas vezes em dois dias.** Em 27/10 o registro ganhou oito transcrições da CPMI; em 28/10 ganhou sete do Iphan e **foi promovido a `Confirmado em fonte primária`**. A cifra de ago/2023 tem lastro primário na CPMI f. 676; **só a de jan/2025 segue sem**, por ser posterior ao relatório. **Coletar as duas fontes continua sendo sua decisão**, e hoje o que está em jogo é apenas a revisão de 2025 — a alternativa é retirar as duas aspas, e o registro fica com quinze transcrições conferidas.",
+      "onde": "97.5",
       "nasceu": "25/10/2026"
     },
     {

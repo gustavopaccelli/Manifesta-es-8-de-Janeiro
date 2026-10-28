@@ -113,5 +113,5 @@ A versão completa — com os seis campos da figura ao lado dos seis do codebook
 | `PT-59` | 15/01/2026 | Sala de Estado Maior na Papuda | T+1 Resposta judicial | Confirmado em fonte primária | normalizacao da execucao penal do ex-chefe do executivo | — | ✅ |
 | `PT-60` | 24/03/2026 | Prisão domiciliar humanitária | T+1 Resposta judicial | Confirmado em fonte primária | modulacao humanitaria da sancao | — | ✅ |
 | `PT-61` | 29/04/2026 | Balanço: 1.402 responsabilizados | T+1 Balanço institucional | Confirmado em fonte primária | encerramento formal do ciclo repressivo-judicial | — | ✅ |
-| `PT-62` | 2023–2026 | Desmobilização por repressão seletiva, … | T+1 Efeito de processo | Inferência do analista | desmobilizacao por repressao seletiva, seguida de migracao … | — | ✅ |
+| `PT-62` | 2023–2026 | Desmobilização heterônoma por custo pen… | T+1 Efeito de processo | Inferência do analista | desmobilizacao heteronoma por custo penal | — | ✅ |
 

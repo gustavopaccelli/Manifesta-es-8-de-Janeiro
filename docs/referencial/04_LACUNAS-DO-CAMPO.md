@@ -93,9 +93,15 @@ Não mede a clivagem contra dados de estrutura social brasileira — renda, seto
 >
 > **E isto fecha com a segunda lacuna do mesmo verbete** — *"explore the effects across time and space of the **failure** of a movement"* —, porque é precisamente um caso de fracasso com desfecho medido: 1.402 responsabilizados (PT-61).
 
-### 3.2 O que isto cobra do codebook — e não executo
+### 3.2 O que isto cobrou do codebook — **adotado em 27/10/2026**
 
-O nome de PT-62 poderia passar a dizer a rota — algo como *"desmobilização heterônoma por custo penal: abeyance sob repressão ativa com institucionalização parcial da pauta"*. **Não alterei o campo:** nomear mecanismo é decisão do pesquisador pelo precedente da tarefa 19, e ele determinou em 21/10/2026 que o levantamento dos eventos está fechado. **Fica proposto aqui, e a §3.1 é o fundamento.**
+A proposta era que o nome de PT-62 passasse a dizer a rota, e o pesquisador **a adotou em 27/10/2026**: o mecanismo chama-se hoje **desmobilização heterônoma por custo penal: abeyance sob repressão ativa com institucionalização parcial da pauta**, e a §3.1 acima é o fundamento dele.
+
+**A proposta ficou escrita e não executada por seis dias**, porque nomear mecanismo é decisão do pesquisador pelo precedente da tarefa 19 — e é esse o desenho: a §3.1 mede, a §3.2 propõe, e o campo só muda com a palavra dele.
+
+**O que mudou junto, e por quê.** O nome retirado — *desmobilização por repressão seletiva, seguida de migração de arena* — entrou no registro de nomes retirados da checagem 7, e **a entrada que havia sido criada em 10/10 foi atualizada no mesmo movimento**, porque o nome que ela apontava como vigente era justamente o que saiu. Os dois rótulos internos do campo também mudaram: eles eram as duas metades do nome retirado, e deixá-los repetiria a lição do item 66 — **nome retirado de um registro não retira o conceito** se ele segue vivo como rótulo dentro do próprio registro.
+
+**O que NÃO mudou:** o campo continua nomeando dois componentes, a classe continua `Inferência do analista`, e a âncora de Carvalho e Tatagiba (2025, f. 35) continua cobrindo 2023 e não a janela inteira. **Nenhum fato foi tocado.**
 
 ---
 

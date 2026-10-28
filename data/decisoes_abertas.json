@@ -41,11 +41,12 @@
     },
     {
       "id": "nome-pt62",
-      "estado": "aberta",
+      "estado": "decidida",
       "natureza": "campo do codebook",
-      "o_que": "**O nome do mecanismo de PT-62.** A rota de desmobilização é *abeyance* sob repressão judicial ativa com institucionalização parcial, e **nenhuma das duas é escolha do movimento**: é desmobilização **heterônoma**, por imposição de custo penal — rota que a tipologia de Taylor não prevê. O nome poderia dizê-lo. **Nomear mecanismo é sua decisão, pelo precedente da tarefa 19.**",
-      "onde": "74",
-      "nasceu": "21/10/2026"
+      "o_que": "**O nome do mecanismo de PT-62.** **ADOTADO em 27/10/2026:** *desmobilização heterônoma por custo penal: abeyance sob repressão ativa com institucionalização parcial da pauta* — a rota que a tipologia de Taylor não prevê, porque o custo foi imposto e não calculado. O nome retirado entrou na checagem 7, e a entrada de 10/10 foi atualizada junto.",
+      "onde": "96.1",
+      "nasceu": "21/10/2026",
+      "quando": "✅ 27/10/2026 — nome da tipologia adotado"
     },
     {
       "id": "grade-18o-campo",

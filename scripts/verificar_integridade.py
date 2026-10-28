@@ -428,8 +428,18 @@ def main():
                                    "Concentração simultânea no conjunto simbólico"),
         "rede distribuída com nós centralizadores":
             ("10/10/2026", "PT-12A", "Agregação na base e intermediação concentrada"),
+        # DUAS ENTRADAS PARA PT-62, e a segunda nasceu da primeira. Em
+        # 27/10/2026 (item 96) o pesquisador adotou o nome da tipologia, e o
+        # nome que ESTA entrada apontava como vigente desde 10/10 passou a ser
+        # ele proprio um nome retirado. **Entrada de registro de nome morto
+        # tambem envelhece**: ela aponta para o que vale hoje, e se o que vale
+        # hoje sair sem que ela mude, a guarda passa a ensinar nome morto.
         "Desarticulação do repertório de rua":
-            ("10/10/2026", "PT-62", "Desmobilização por repressão seletiva"),
+            ("10/10/2026", "PT-62",
+             "Desmobilização heterônoma por custo penal"),
+        "Desmobilização por repressão seletiva":
+            ("27/10/2026", "PT-62",
+             "Desmobilização heterônoma por custo penal"),
         "Certificação de eficácia": ("04/10/2026", "PT-03", "Ressignificação do protesto"),
         # Nao e nome de mecanismo, e a vigilancia e a mesma: atribuicao retirada.
         # Os quatro testes sao de Van Evera (1997), na formulacao de Bennett

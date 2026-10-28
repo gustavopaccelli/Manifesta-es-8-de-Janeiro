@@ -22,9 +22,9 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Corpus | **74 peças / 12.352 p.** no manifesto, em 14 eixos — 65 PDFs e 9 âncoras não-PDF, estas conferidas por arquivo inteiro desde 25/10/2026. Da documental: **32 peças / 6.970 p.**; de literatura: 42 peças |
 | Figuras | SVG da cadeia causal e cronologia navegável. **São a única parte do aparato escrita à mão**, e duas guardas as cobrem: o passo 10 confere que todo registro do codebook aparece na figura, e a tabela-espelho do passo 6 confere o **nome do mecanismo** de cada ponto contra o campo — com linha de base em zero divergências |
 | Verificação | `bash scripts/ciclo.sh` — **14 passos**: 8 geradores e 6 conferidores, entre eles as **10 checagens estruturais**. Toda linha de base reprova com código de saída ≠ 0; nenhuma apenas avisa |
-| Controle de versão | git desde **20/09/2026**, 106 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 27/10/2026 |
+| Controle de versão | git desde **20/09/2026**, 107 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 27/10/2026 |
 | Tarefas abertas | **3** — 10, 17, 16. A lista vive na seção *Ordem de ataque*, gerada pelo passo 3, e 34 tarefas estão fechadas |
-| Decisões pendentes | **11**, em 3 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 4 |
+| Decisões pendentes | **10**, em 3 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 4 |
 | **Redação do artigo** | **não iniciada — por decisão, é o último item da fila.** Desde 25/10/2026 ela não tem mais pré-requisito de dado: a tarefa 26 fechou e não há decisão de campo aberta no codebook. **Começá-la é decisão do pesquisador** |
 
 > **O que este painel NÃO repete, de propósito.** As tarefas e as decisões abertas têm cada uma a sua seção gerada, e listá-las aqui seria a quarta cópia — a contabilidade deste projeto já envelheceu quatro vezes por cópia à mão, e o histórico está nos itens 49, 78, 83 e 90. **Os itens numerados abaixo são um log cronológico:** a cifra dentro de um item era verdade no dia dele e fica como está.
@@ -5315,6 +5315,55 @@ A segunda: uma linha residual num script de busca meu criou um **arquivo vazio `
 
 **E uma proposta minha, não executada:** o laudo do Instituto de Criminalística/PF continua não obtido, mas **o DOC 366 do Iphan é um documento nomeado e numerado** — vistoria dos bens culturais, Inquérito 4922. Coletá-lo daria o detalhamento por peça que o registro diz depender do laudo. **O levantamento de eventos está fechado; coleta de documento para registro existente não é levantamento novo** — mas a distinção é sua, não minha.
 
+
+---
+
+## 96. O nome de PT-62 — a rota que a tipologia de Taylor não tem — ✅ 27/10/2026
+
+**Encaminhamento:** *"Adote o nome de PT-62"*.
+
+### 96.1 O nome, e o que ele carrega que o anterior não carregava
+
+> **Desmobilização heterônoma por custo penal: abeyance sob repressão ativa com institucionalização parcial da pauta**
+
+A proposta estava escrita na **§3.2 de `docs/referencial/04_LACUNAS-DO-CAMPO.md`** desde 21/10 e não executada desde então, porque nomear mecanismo é decisão sua pelo precedente da tarefa 19. O fundamento é a §3.1, que confrontou o caso com as **cinco rotas de desmobilização de Taylor** e mediu que ele **não é nenhuma delas**:
+
+| rota | o caso é dela? |
+|:--|:--|
+| burocratização | ❌ não havia organização formal a burocratizar — o campo era rede |
+| institucionalização | 🔶 **em parte** — a migração para o pleito e para o debate de anistia é isso, **mas na tipologia é escolha do movimento** |
+| assimilação pelo Estado | ❌ é o inverso: a estrutura estatal **processou penalmente** o campo |
+| radicalização | ❌ não como desfecho — é anterior, e culmina no próprio 8/1 |
+| *abeyance* | 🔶 **em parte** — a rede persiste sem repertório de rua |
+
+**A rota do caso é a combinação de duas sob uma condição que a tipologia não prevê:** a rede sobrevive **e** parte da pauta entra em arena instituída, **mas nenhuma das duas é escolha do movimento** — são o que resta depois de o repertório de rua ser removido por operação estatal com data e decisão judicial (PT-52) e de a liderança ser encarcerada (PT-58, PT-59). **O custo foi imposto, não calculado**, e é isso que `heterônoma` nomeia.
+
+> **O nome velho dizia a CAUSA e o DESTINO, e a tipologia pergunta pela ROTA.** *Desmobilização por repressão seletiva, seguida de migração de arena* é verdadeiro e descreve o percurso — mas não responde a pergunta que a literatura faz. **E `seletiva` dizia menos do que o caso tem:** o que PT-53 documenta é escalonamento **por núcleos de responsabilidade**, que não é seleção.
+
+### 96.2 Três coisas mudaram junto, e nenhuma é cosmética
+
+**O registro de nomes retirados ganhou o nome velho — e a entrada de 10/10 foi atualizada.** Ela apontava *"Desarticulação do repertório de rua"* como retirado em favor de *"Desmobilização por repressão seletiva"*, que é exatamente o que saiu hoje.
+
+> **Entrada de registro de nome morto também envelhece.** Ela existe para dizer o que vale hoje — e, se o que vale hoje sai sem que ela mude, **a guarda passa a ensinar nome morto**. É a primeira vez que este registro teve de ser corrigido por dentro, e não só estendido.
+
+**Os dois rótulos internos do campo mudaram.** Eles eram as duas metades do nome retirado — `(1) DESMOBILIZAÇÃO POR REPRESSÃO SELETIVA` e `(2) MIGRAÇÃO DE ARENA` — e passaram a `(1) A IMPOSIÇÃO DO CUSTO PENAL` e `(2) A ROTA QUE RESTA — ABEYANCE COM INSTITUCIONALIZAÇÃO PARCIAL`. **É a lição do item 66 aplicada por antecipação:** nome retirado de um registro não retira o conceito se ele segue vivo como rótulo dentro do próprio registro — e aqui ele seguiria, no único lugar que a checagem 7 não varre, que é o próprio codebook.
+
+**E a figura recebeu o nome novo**, porque a base de divergências de nome é zero e a tabela-espelho compara exatamente o recorte até o primeiro `:`.
+
+### 96.3 Uma frase da figura que a medição de ontem derrubou — e não foi pedida
+
+Ao abrir o HTML para o nome de PT-62, o `src` de **PT-38** ainda afirmava que a valoração do dano era *apoiada em imprensa e sem lastro primário*. **O item 95 achou as duas parcelas de ago/2023 na folha 676 da CPMI**, creditadas ao Ofício 023/CDG/2023 – STF.
+
+> **É o defeito que esta casa trata como o mais caro: a figura afirma o que o codebook retirou** — e a figura vai ao artigo com a aparência de ser gerada da base. A frase passou a dizer o lastro de cada metade da série, com o referente de cada cifra ao lado. **Corrigida no mesmo commit em que foi vista**, porque frase falsa em artefato de publicação não espera frente própria.
+
+### 96.4 O que isto NÃO mudou, e vale escrever
+
+Nem fato, nem campo, nem classe. PT-62 continua **um** registro com dois componentes; o componente (1) continua **remissão** a PT-49, PT-52, PT-53 e PT-61 em vez de afirmação própria; a classe continua `Inferência do analista`; e a âncora de Carvalho e Tatagiba (2025, f. 35) continua cobrindo **2023 e não a janela até 2026**, que é o limite declarado desde 09/10.
+
+### 96.5 O que isto deixa
+
+**Nada de decisão nova.** A §4 de `04_LACUNAS-DO-CAMPO.md` já contava a tipologia de rotas como resolvida, e agora o campo diz o que o documento mediu. **Resta a cristalização de quadro**, a única das oito lacunas não resolvível com este corpus, e ela está com o desenho mínimo escrito — e é trabalho de coleta, não decisão.
+
 ---
 
 <!-- DECISOES-PENDENTES: gerado por scripts/gerar_decisoes.py a partir de data/decisoes_abertas.json. Não editar à mão: o ciclo sobrescreve. -->
@@ -5325,7 +5374,7 @@ A segunda: uma linha residual num script de busca meu criou um **arquivo vazio `
 
 **A ordem não é de prioridade, e sim de natureza.** Dentro de cada grupo, a ordem é a de nascimento.
 
-**São onze decisões abertas, em três naturezas:** o remoto é público (4) · campo do codebook (4) · leitura (3).
+**São dez decisões abertas, em três naturezas:** o remoto é público (4) · campo do codebook (3) · leitura (3).
 
 ### O remoto é público
 
@@ -5340,7 +5389,6 @@ A segunda: uma linha residual num script de busca meu criou um **arquivo vazio `
 
 | Decisão | Nasceu | Onde |
 |:--|:--|:--|
-| **O nome do mecanismo de PT-62.** A rota de desmobilização é *abeyance* sob repressão judicial ativa com institucionalização parcial, e **nenhuma das duas é escolha do movimento**: é desmobilização **heterônoma**, por imposição de custo penal — rota que a tipologia de Taylor não prevê. O nome poderia dizê-lo. **Nomear mecanismo é sua decisão, pelo precedente da tarefa 19.** | 21/10/2026 | §74 |
 | **A grade funcional do enquadramento como 18º campo.** Hoje a classificação vive só em `docs/referencial/02_GRADE-FUNCIONAL-ENQUADRAMENTO.md`, gerada, e **declarada como inferência minha**. Criar campo é sua decisão, e você disse que classifica na escrita. | 21/10/2026 | §73 |
 | **Os quatro registros `N` da grade funcional** — PT-20A, PT-20B, PT-25 e PT-47 têm texto em `framing_narrativa` que **não é quadro de ação coletiva**. São 18 vazios ao todo, e os quatro `N` são os que têm texto e não têm quadro. | 21/10/2026 | §73 |
 | **As duas aspas de PT-38 que não estão em peça do corpus.** Elas vêm de sinopse de documentário (ago/2023) e de levantamento divulgado pela imprensa (jan/2025), e seguem em `EXCECOES` com essa razão. **A premissa desta decisão encolheu em 27/10/2026:** o registro ganhou oito transcrições da CPMI conferidas por folha, de modo que **retirar as duas aspas já não o deixa sem transcrição alguma** — e a cifra de ago/2023 passou a ter lastro primário nas duas parcelas da f. 676. O que resta é a cifra de jan/2025, posterior ao relatório. **Coletar as duas fontes continua sendo sua decisão**, e agora ela é mais barata. | 25/10/2026 | §95.2 |
@@ -5357,6 +5405,7 @@ A segunda: uma linha residual num script de busca meu criou um **arquivo vazio `
 
 | Decisão | Quando |
 |:--|:--|
+| ~~O nome do mecanismo de PT-62~~ | ✅ 27/10/2026 — nome da tipologia adotado |
 | ~~A alegação do site *Proof* — a matéria do Estadão atribui a ele a notícia de uma reunião em 05/01/2021 nos EUA~~ | ✅ 27/10/2026 — sem rastro na CPMI, medido em 1.333 folhas |
 
 **O que NÃO está nesta lista, e por quê.** As quatro dívidas de Beach e Pedersen, as cobranças dos onze verbetes e a cristalização de quadro **não são decisões**: são trabalho de redação, e a tarefa 16 as cobre. Os limites declarados do aparato **não são decisões suas**: são propostas minhas, e vivem nas seções dos itens que as nomearam. **E esta frase nomeava quatro deles até 27/10/2026, quando três haviam sido fechados no mesmo dia** — a extensão da G2 e da G4 a `reports/` (item 93), a guarda da exceção ociosa (item 92) e a extensão aos manuais e ao inventário (item 94). **Enumerar limites aqui é fazer à mão o que este arquivo existe para gerar**, e por isso a enumeração saiu em vez de ser corrigida.

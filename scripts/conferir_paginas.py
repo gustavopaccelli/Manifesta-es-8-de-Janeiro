@@ -363,7 +363,26 @@ OCIOSAS_BASE = 0
 MEIAS_ANCORAS_BASE = 0
 
 # Os campos que autorizam prosa e nao sao conferidos contra a folha.
-CAMPOS_DE_NOTA = ("nota_auditoria", "status_verificacao")
+# ESTENDIDO EM 28/10/2026 (item 100), e o nome do constante ficou estreito
+# para o que ele cobre hoje. A guarda nasceu em 25/10 perguntando por aspa
+# que vive em campo de NOTA, e `mecanismo_causal` NAO e nota -- e o campo
+# analitico. So que e nele que a prosa deste projeto mais cita fonte, e em
+# 28/10 eu escrevi seis aspas la e o conferidor nao as leu: **o ponto cego
+# mordeu quem o construiu.**
+#
+# MEDIDO ANTES DE LIGAR, com as 15 aspas da mesma rodada ja promovidas:
+# 45 aspas em `mecanismo_causal`, em 24 registros; 26 localizam numa folha
+# que o proprio registro ancora e **as 26 estao em `fonte_trecho`**, de
+# modo que a contencao `n in base` as dispensa; as 8 restantes NAO
+# localizam, porque sao NOMES DE MECANISMO RETIRADOS grafados dentro do
+# registro pelo padrao da casa -- PT-01, PT-06, PT-12A, PT-21, PT-34 e
+# PT-62 (duas) -- mais uma frase de prosa do analista em PT-18. A guarda so
+# acusa aspa que LOCALIZA, e por isso **nenhuma excecao nova foi precisa**.
+#
+# O QUE ELA PASSA A PEGAR: aspa nova escrita no campo analitico sem ir para
+# `fonte_trecho` -- exatamente o defeito que eu cometi em 28/10.
+CAMPOS_DE_NOTA = ("nota_auditoria", "status_verificacao",
+                  "mecanismo_causal")
 
 
 def _prefixo_maximo(alvo, folha):
@@ -1045,7 +1064,13 @@ def main():
 
     aninhadas = {}
     for e in alvos_reg:
-        perdidas = aninhamento(e.get("fonte_trecho"))
+        # A PARIDADE VAI AOS DOIS CAMPOS desde 28/10/2026 (item 100): a
+        # guarda das meias-ancoras passou a ler `mecanismo_causal`, e
+        # aspa aninhada ali inverteria a paridade e esconderia aspa da
+        # guarda nova -- o mesmo silencio que §34.5 documentou para
+        # `fonte_trecho`. Medido ao ligar: zero perdidas nos dois.
+        perdidas = (aninhamento(e.get("fonte_trecho"))
+                    + aninhamento(e.get("mecanismo_causal")))
         if perdidas:
             aninhadas[e["id"]] = perdidas
 
@@ -1291,9 +1316,15 @@ def main():
               "INTEIRO_TEOR_SEM_ACHADO_BASE e diga por quê.")
 
     # A GUARDA DAS MEIAS-ANCORAS, de 22/10/2026 — ver MEIAS_ANCORAS_BASE.
+    # A FRASE MUDOU EM 28/10/2026 (item 100), porque o escopo mudou: ela dizia
+    # "campo de nota" e a guarda passou a ler tambem `mecanismo_causal`, que
+    # NAO e nota. Prosa de guarda que descreve escopo menor do que o que ela
+    # tem e a mesma falha que o item 97 pegou na checagem 9 -- e aqui ela
+    # apareceria no proprio relatorio que o pesquisador le a cada ciclo.
     print("meias-âncoras: {} (base {}) — aspa que sustenta afirmação do "
-          "registro, vive só em campo de nota".format(len(meias),
-                                                       MEIAS_ANCORAS_BASE))
+          "registro e vive fora de `fonte_trecho`, nos campos {}"
+          .format(len(meias), MEIAS_ANCORAS_BASE,
+                  ", ".join("`%s`" % c for c in CAMPOS_DE_NOTA)))
     for rid, campo, cod, pg, aspa in meias:
         print("  X {:<7} [{}] confere em {} p.{} e NÃO está em "
               "`fonte_trecho`".format(rid, campo, cod, pg))

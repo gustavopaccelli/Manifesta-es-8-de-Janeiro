@@ -22,7 +22,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Corpus | **84 peças / 12.644 p.** no manifesto, em 14 eixos — 75 PDFs e 9 âncoras não-PDF, estas conferidas por arquivo inteiro desde 25/10/2026. Da documental: **34 peças / 7.092 p.**; de literatura: 50 peças |
 | Figuras | SVG da cadeia causal e cronologia navegável. **São a única parte do aparato escrita à mão**, e duas guardas as cobrem: o passo 10 confere que todo registro do codebook aparece na figura, e a tabela-espelho do passo 6 confere o **nome do mecanismo** de cada ponto contra o campo — com linha de base em zero divergências |
 | Verificação | `bash scripts/ciclo.sh` — **14 passos**: 8 geradores e 6 conferidores, entre eles as **10 checagens estruturais**. Toda linha de base reprova com código de saída ≠ 0; nenhuma apenas avisa |
-| Controle de versão | git desde **20/09/2026**, 110 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 28/10/2026 |
+| Controle de versão | git desde **20/09/2026**, 111 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 28/10/2026 |
 | Tarefas abertas | **3** — 10, 17, 16. A lista vive na seção *Ordem de ataque*, gerada pelo passo 3, e 34 tarefas estão fechadas |
 | Decisões pendentes | **10**, em 3 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 4 |
 | **Redação do artigo** | **não iniciada — por decisão, é o último item da fila.** Desde 25/10/2026 ela não tem mais pré-requisito de dado: a tarefa 26 fechou e não há decisão de campo aberta no codebook. **Começá-la é decisão do pesquisador** |
@@ -5569,6 +5569,67 @@ Eu havia escrito que a quarta arena de Alimi *et al.* — movimento × contramov
 **Uma frente nova, minha, não executada:** a promoção das 26 aspas de `mecanismo_causal` a `fonte_trecho` e a extensão da guarda das meias-âncoras àquele campo. **É a maior dívida de aparato aberta hoje**, e nasceu de um erro meu de uma hora antes.
 
 **E uma correção a jusante que a cobrança 2 fez de passagem:** a frase de `marco_teorico` que dizia restar **ler** Beach e Pedersen estava **uma semana desatualizada** — a obra foi lida em 21/10, capítulos 1 a 3 e Apêndice A, e o registro de leitura o diz desde então. **O campo que declara a âncora metodológica estava mais velho que o registro que a mede.**
+
+
+---
+
+## 100. As aspas do campo analítico — eram 15, e duas não eram literais — ✅ 28/10/2026
+
+**Encaminhamento:** *"Promova as 26 aspas, resolva esse erro. E, por favor, não cometa mais erros."*
+
+### 100.1 Eram 15, e a cifra que eu dei era minha
+
+Das 26 aspas de `mecanismo_causal` que conferem numa folha ancorada, **onze já estavam em `fonte_trecho`** — e a guarda das meias-âncoras já as dispensava por isso, pela contenção `n in base`. **Eu contei as 26 sem testar essa condição**, e relatei como dívida o que já estava pago em 42% dos casos.
+
+> **É a quinta cifra minha que envelhece ou nasce errada nesta semana**, e as cinco têm a mesma forma: **número obtido de uma medição que não testou a condição que o número afirma**. A barreira que entrou no plano desta frente — *nenhuma cifra entra em prosa sem o comando que a mediu ter rodado na mesma sessão* — não teria pego esta, porque o comando rodou. **O que pega é medir a condição certa**, e aqui a condição era *já está no campo conferido?*.
+
+**As 15, em oito registros, e nenhuma âncora nova foi necessária:** elas localizam com o `fonte_pagina` que cada registro já tinha.
+
+| registro | peça · folha |
+|:--|:--|
+| PT-06A | PGR f. 8 |
+| PT-07 | Snow, Vliegenthart e Ketelaars f. 7, 8, 10 — quatro |
+| PT-08 | CPMI f. 614 |
+| PT-12 | CPMI f. 577 |
+| PT-18A | CPMI f. 831 · Cappelli f. 58 |
+| PT-28 | Cappelli f. 57 · AP 2668 f. 495, 497 — cinco |
+| PT-50A | Manchetômetro f. 15 |
+
+### 100.2 O achado: PT-28 citava a AP 2668 fora da letra
+
+O campo dizia que Anderson Torres, Fernando de Sousa Oliveira e Marília Ferreira de Alencar *"se **omitiram** no exercício de suas funções"*. **A folha 495 do acórdão diz** *"tendo se **omitido** no exercício de suas funções"*.
+
+> **O verbo foi conjugado dentro das aspas**, para concordar com o sujeito plural que a prosa havia montado. **É a mesma falha de PT-39**, corrigida em 15/10/2026 por abreviação dentro de aspas — e esta **sobreviveu porque nenhuma guarda lia `mecanismo_causal`**.
+>
+> **O conteúdo estava certo e a transcrição não era literal**, que é a distinção que esta casa mantém desde 15/10. A correção **estendeu** a aspa em vez de encurtá-la: ela passou a trazer o trecho inteiro da folha, *"novamente desempenharam papel relevante na organização criminosa, tendo se omitido…"*, que é literal e inclui o predicado.
+
+**E PT-07 elidia com reticência solta.** A aspa trazia *"the strategic efforts … to link their interests"*, e a folha 10 diz *"the strategic efforts **of social movement actors and organizations** to link their interests"*. `fragmentos()` só parte elisão **entre parênteses**, de modo que o fragmento atravessava a junção e conferia só por janela.
+
+> **Testei as duas saídas antes de escolher.** Pôr a elisão entre parênteses conserta o `parcial` **mas tira 21 caracteres da conferência**, porque o primeiro pedaço cai abaixo do mínimo de 45 e é descartado em silêncio. **Restituir as palavras elididas confere integral e não perde nada.** A reticência solta é, aqui, uma forma de elisão que o aparato não vê.
+
+**Depois das duas correções: oito registros, `OK` em todos, zero parciais.**
+
+### 100.3 A guarda, e por que ela estava cega
+
+`CAMPOS_DE_NOTA` passou a incluir **`mecanismo_causal`**, e `aninhamento()` passou a ser chamada nele.
+
+> **A cegueira tem explicação e ela é instrutiva.** A guarda nasceu em 22/10 perguntando por *aspa que vive em campo de **nota*** — e nomeou os dois campos de nota. **`mecanismo_causal` não é nota: é o campo analítico** — e é exatamente nele que a prosa deste projeto mais cita fonte. **A pergunta estava certa e o escopo foi derivado do NOME da pergunta, não da medição de onde as aspas moram.**
+
+**Nasce verde por construção, e as cifras foram medidas antes de ligar:** 26 localizam e as 26 estão hoje em `fonte_trecho`; as 8 restantes **não localizam**, porque são nomes de mecanismo retirados grafados no registro pelo padrão da casa — PT-01, PT-06, PT-12A, PT-21, PT-34 e PT-62 (duas) — mais prosa do analista em PT-18. **Zero exceções novas**, e zero aspas curvas perdidas por paridade nos dois campos.
+
+**Duas provas negativas, e a primeira reproduz o meu defeito:** uma aspa que confere numa folha do registro, escrita no campo analítico e **ausente** de `fonte_trecho`, derruba o ciclo com `meias-âncoras: 1`. **E a prova de limite:** a mesma aspa, também presente em `fonte_trecho`, **não** é acusada — senão a guarda acusaria as 26 que esta própria rodada promoveu, e guarda que acusa o certo ensina a ignorar a guarda.
+
+### 100.4 E a frase da guarda descrevia escopo menor do que ela tem
+
+A linha que o ciclo imprime dizia *"vive só em campo de nota"*. **Com `mecanismo_causal` dentro, a frase passou a ser falsa no relatório que você lê a cada execução** — a mesma falha que o item 97 pegou no comentário da checagem 9, agora na saída.
+
+> **O conserto não foi reescrever a frase: foi derivá-la.** Ela passou a imprimir os campos a partir da própria constante, de modo que **a frase não pode mais descrever um escopo diferente do que a guarda tem**. Cifra derivada é sempre verdadeira; frase derivada também.
+
+### 100.5 O que isto deixa
+
+**Nada desta frente.** As 15 estão conferidas, a guarda está ligada com base zero e duas provas, e o campo analítico deixou de ser ponto cego.
+
+**E um achado de passagem, que não é desta frente e vale escrito:** ao ler a folha 495 da AP 2668 para corrigir a aspa de PT-28, o acórdão diz, duas sentenças antes, que os danos *"estão estimados em mais R$ 20 milhões de reais"* e que **mais de R$ 11 milhões correspondem somente aos danos aos prédios do Supremo Tribunal Federal** — testado, confere integral na folha 495. **É um TERCEIRO lastro primário para a valoração de PT-38**, independente da CPMI e do Iphan, e ele estava a duas sentenças de uma aspa que o projeto já citava. **Não o acrescentei**: PT-38 não está nesta frente, e ancorar cifra exige a rodada própria.
 
 ---
 

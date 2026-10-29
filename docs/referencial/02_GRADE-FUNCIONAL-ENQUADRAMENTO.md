@@ -21,14 +21,14 @@ E duas categorias que a própria peça obriga a acrescentar, porque o campo do c
 | **C** | contraquadro / disputa de quadro | o capítulo lista **contramobilização** entre as três funções de mobilização (p. 395) e **disputas de quadro** entre os quatro riscos de enquadramento (p. 403-404) |
 | **N** | não é quadro de ação coletiva | o capítulo define as três tarefas para **quadros de movimento**; avaliação interna de órgão e contrição reputacional não são nenhuma das três |
 
-> **A extensão, e ela DEIXOU DE SER ANALOGIA MINHA EM 28/10/2026:** as três tarefas foram formuladas para quadros **de movimento**, e dos 62 registros com quadro **36 são de desafiante ou do campo, 25 são de ator estatal** — tribunal, Judiciário, Legislativo, Executivo — e 1 é díade entre campos opostos. Até 28/10 eu declarava isto como **extensão por analogia**, mantida porque a simetria é analiticamente útil — um tipo penal *é* atribuição de responsabilidade, que é a definição de diagnóstico. **A leitura de Kriesi, Hutter e Bojár (2019) deu a ela autorização por citação:** a `Contentious Episode Analysis` existe, entre outras razões, para ir além do foco estreito nas ações de protesto dos desafiantes, e define o episódio pela **interação diádica** entre governo e desafiantes mais terceiros (f. 4, impressa 254). Incorporar o ator estatal à análise de um episódio contencioso é o que aquela peça foi escrita para fazer. **O que continua sendo meu é o recorte mais estreito**: CEA autoriza analisar o ato estatal; aplicar-lhe a grade de TAREFAS DE ENQUADRAMENTO de Snow é um passo a mais, que a peça não dá e eu dou. **O ponto frágil mudou de lugar, e encolheu.**
+> **A extensão, e ela DEIXOU DE SER ANALOGIA MINHA EM 28/10/2026:** as três tarefas foram formuladas para quadros **de movimento**, e dos 64 registros com quadro **38 são de desafiante ou do campo, 25 são de ator estatal** — tribunal, Judiciário, Legislativo, Executivo — e 1 é díade entre campos opostos. Até 28/10 eu declarava isto como **extensão por analogia**, mantida porque a simetria é analiticamente útil — um tipo penal *é* atribuição de responsabilidade, que é a definição de diagnóstico. **A leitura de Kriesi, Hutter e Bojár (2019) deu a ela autorização por citação:** a `Contentious Episode Analysis` existe, entre outras razões, para ir além do foco estreito nas ações de protesto dos desafiantes, e define o episódio pela **interação diádica** entre governo e desafiantes mais terceiros (f. 4, impressa 254). Incorporar o ator estatal à análise de um episódio contencioso é o que aquela peça foi escrita para fazer. **O que continua sendo meu é o recorte mais estreito**: CEA autoriza analisar o ato estatal; aplicar-lhe a grade de TAREFAS DE ENQUADRAMENTO de Snow é um passo a mais, que a peça não dá e eu dou. **O ponto frágil mudou de lugar, e encolheu.**
 
 ## 2. O que a grade mostra, e as cifras são geradas deste documento
 
 | | |
 |:--|--:|
-| registros classificados | **85** |
-| com quadro de ação coletiva | **62** |
+| registros classificados | **87** |
+| com quadro de ação coletiva | **64** |
 | dos quais **acumulam mais de uma função** | **15** |
 | campo vazio no codebook (`—`) | **18** |
 | não é quadro de ação coletiva | **4** |
@@ -39,12 +39,12 @@ E duas categorias que a própria peça obriga a acrescentar, porque o campo do c
 | **D** diagnóstico | **24** |
 | **P** prognóstico | **23** |
 | **M** motivacional | **22** |
-| **C** contraquadro / disputa | **11** |
+| **C** contraquadro / disputa | **13** |
 
 **Três leituras que a contagem autoriza, e nenhuma delas estava visível no campo em prosa:**
 
 1. **O motivacional concentra-se no dia.** Dos 22 registros motivacionais, a maioria está em T−1 operacional e T0 — *'festa da Selma'*, *'marcha patriótica'*, *'o povo no poder'*, *'casa do povo'*, *'praça do povo'*, *'tomada do poder'*. **O diagnóstico é de anos; a convocação é de semanas.**
-2. **O contraquadro é quase todo judicial.** Das 11 ocorrências de **C**, a maior parte é **díade de arena** — *'presunção de inocência'* × *'efetividade da jurisdição'* e variantes —, e só três são contraquadro de ator político: PT-03B (*lawfare*), PT-50 (negação de vínculo) e PT-50A (*'infiltrados'*). **A disputa de enquadramento deste caso corre, em boa medida, dentro do Judiciário.**
+2. **O contraquadro é quase todo judicial.** Das 13 ocorrências de **C**, a maior parte é **díade de arena** — *'presunção de inocência'* × *'efetividade da jurisdição'* e variantes —, e só três são contraquadro de ator político: PT-03B (*lawfare*), PT-50 (negação de vínculo) e PT-50A (*'infiltrados'*). **A disputa de enquadramento deste caso corre, em boa medida, dentro do Judiciário.**
 3. **E o prognóstico tem dois donos opostos.** *'Intervenção militar'* e *'anistia'* de um lado; *'defesa do Estado Democrático de Direito'*, *'restabelecimento da ordem'*, *'apuração de responsabilidades'* e *'cumprimento de ordem judicial'* do outro. **O campo `framing_narrativa` guarda, sem distinguir, os dois programas que disputaram o desfecho.**
 
 ## 3. Registro por registro
@@ -70,6 +70,8 @@ E duas categorias que a própria peça obriga a acrescentar, porque o campo do c
 | `PT-06B` | tribunal/campo | **C** | díade |
 | `PT-06C` | tribunal/campo | **C** | díade |
 | `PT-07` | núcleo político | **D** | 'fraude nas urnas' é O quadro diagnóstico do caso — e a PGR o declara FALSO |
+| `PT-07A` | partido | **C** | disputa o quadro de fraude de PT-07, no dia seguinte à ameaça |
+| `PT-07B` | setor econômico | **C** | disputa o mesmo quadro, e a folha atribui o motivo a interesse ameaçado |
 | `PT-08` | movimento estrangeiro | **D** + **M** | 'Stop the Steal' diagnostica e convoca na mesma frase |
 | `PT-08A` | Estado | **D** | 'combate à compra de votos' — diagnóstico PRETEXTUAL, recusado pela própria PF na Bahia |
 | `PT-08B` | tribunal eleitoral | **P** | 'garantia do exercício do voto' é o remédio que a ordem impõe |
@@ -142,6 +144,6 @@ E duas categorias que a própria peça obriga a acrescentar, porque o campo do c
 | | |
 |:--|:--|
 | **a grade entra no esquema?** | criar um 18º campo é **decisão sua**. Hoje a classificação vive **só aqui**, e é inferência declarada |
-| **a extensão a ator estatal** | **25 dos 62** quadros são de ator estatal — contra 36 de desafiante e 1 de díade entre campos. **Desde 28/10/2026 a extensão cita Kriesi, Hutter e Bojár (2019)**, que incorporam o ator estatal à análise do episódio por construção. O que resta de escolha minha é aplicar a eles a grade de TAREFAS, que aquela peça não aplica |
+| **a extensão a ator estatal** | **25 dos 64** quadros são de ator estatal — contra 38 de desafiante e 1 de díade entre campos. **Desde 28/10/2026 a extensão cita Kriesi, Hutter e Bojár (2019)**, que incorporam o ator estatal à análise do episódio por construção. O que resta de escolha minha é aplicar a eles a grade de TAREFAS, que aquela peça não aplica |
 | **os 4 registros `N`** | PT-20A, PT-20B, PT-25 e PT-47 têm texto no campo que **não é quadro de ação coletiva**. Se a grade entrar, eles precisam de valor próprio, ou o campo precisa de outro nome |
 | **os 18 vazios** | são vazio de **ato sem enquadramento declarado** — retirada de barreira, chegada de tropa, decisão administrativa. Distintos de PT-01, que é **ausência medida na literatura** |

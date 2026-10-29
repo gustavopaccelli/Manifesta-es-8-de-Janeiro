@@ -323,3 +323,90 @@ Ao reunir as cifras do estrato, a medição achou que **o balanço do STF chama 
 > **As porcentagens de prisão do balanço são sobre as investigações, e o rótulo diz réus.** PT-61 transcrevia `190 presos (10,12%)` ao lado dos `1.402 réus` que ele próprio nomeia — fiel à fonte, e reproduzindo o defeito dela sem sinalizá-lo. **A cifra comparável com os 1.402 é 13,55%, derivada.** O registro passou a declarar isso, e **citar o percentual exige citar a base**.
 >
 > **É `a cifra correta no referente errado` — desta vez dentro de uma fonte primária**, o que é a primeira ocorrência desse tipo neste projeto. As anteriores eram todas de prosa minha.
+
+---
+
+## 12. A contramobilização como contraste — 29/10/2026
+
+**Encaminhamento:** *"Contramobilização deve entrar como contraste. Verificar os elementos de causalidade e a teoria que respalda."*
+
+**O levantamento de eventos está fechado desde 21/10, e ele o reabriu para ESTE contraste, com escopo nomeado.** Nenhuma coleta foi necessária: a evidência está na peça que o codebook mais usa, e a teoria estava no corpus desde 30/09, por ler.
+
+### 12.1 A teoria, e ela estava no corpus
+
+**`Movement/countermovement dynamics`, de Maria K. Dillard**, folhas 391-393 do exemplar da *Wiley-Blackwell Encyclopedia* em `Fontes/05_Bibliografia-teorica/` — **décimo segundo verbete lido daquele volume**, e lido integral. Folha 391:
+
+> *"Movement/countermovement dynamics refers to the patterns of interaction between the originating social movement and the responding countermovement"*
+
+**Os elementos de causalidade que o encaminhamento pede verificados são três conjuntos, e o verbete os nomeia.**
+
+**(a) A emergência.** Folha 391:
+
+> *"A variety of factors have been tied to countermovement emergence, including progress and success of the originating SM, threatened interests for some population as a result of the SM"*
+
+**(b) As dimensões de distinção** — objetivos, ideologia, táticas, composição e **posição na estrutura social**. Folha 393:
+
+> *"threatened interests (e.g., political, economic, cultural, social) can facilitate and hinder mobilization efforts for both SMs and CMs"*
+
+**(c) Os três pontos de conexão, de Zald e Useem (1987).** Folha 392:
+
+> *"They include direct, face-to-face encounters, attempts to gain support from the same third party, and efforts to undo the impacts of the other"*
+
+E o verbete fecha com a formulação de Mottl (1980) que o projeto pode usar: a dinâmica movimento/contramovimento é uma dialética contínua, em que **"The SM and CM shape and are shaped by their interaction"** (f. 393).
+
+### 12.2 A direção da díade já estava decidida pelo codebook
+
+**PT-01 e PT-02 chamam o campo bolsonarista de contramovimento** — *"apropriação parcial do repertório de protesto por contramovimentos conservadores"*. Então, no vocabulário do próprio codebook, **a mobilização pró-democracia não é o contramovimento**: é a reação do campo ameaçado.
+
+> **O contraste, portanto, não é entre movimento e contramovimento: é entre DOIS MODOS DE RESPONDER À AMEAÇA** — e é por isso que ele vale como contraste e não como simetria.
+
+### 12.3 Os dois registros, e a evidência é primária
+
+| | PT-07A | PT-07B |
+|:--|:--|:--|
+| **data** | **10/07/2021** | 2022, meses anteriores ao pleito — **a folha não data** |
+| **ator** | oito partidos, não nomeados na folha | Fiesp e Febraban |
+| **repertório** | nota pública conjunta | Manifesto Pró-Democracia |
+| **âncora** | CPMI f. 421 | CPMI f. 64 |
+
+**O elemento de causalidade mais forte está na folha 421**, e é a reação datada a uma ameaça nomeada:
+
+> *"No dia seguinte, 10 de julho, em reação às ameaças, oito partidos políticos divulgaram nota em defesa da democracia e do sistema eleitoral brasileiro"*
+
+> **E uma correção de data antes de escrever o registro:** o plano desta frente dizia **10/07/2022**. **A folha diz 2021**, e o ano está conferido por dois sinais independentes — o cabeçalho de ano da folha 416 é `2021`, e as três notas de rodapé da folha 421 trazem URL de 2021. **Isso move os dois registros para `T−1 Conjuntural`**, porque a camada operacional só começa em 05/10/2022. Eu havia lido a frase sem conferir o ano.
+
+**E na folha 64 está o motivo, atribuído pela CPMI e não por mim:**
+
+> *"optaram por externar sua objeção, não por efetivo apreço ao candidato opositor, mas por fundado receio do avanço totalitário"*
+
+— que é, literalmente, o **threatened interests** do verbete. **A teoria e a folha se encontram na mesma palavra**, e é o encaixe mais limpo que este corpus deu entre um conceito do campo e uma atribuição de fonte primária.
+
+### 12.4 O contraste nas cinco dimensões
+
+| dimensão de Dillard | campo desafiante | campo que contramobiliza |
+|:--|:--|:--|
+| **objetivos** | reversão do resultado eleitoral | manutenção do sistema eleitoral |
+| **ideologia** | fraude nas urnas, intervenção | legalidade constitucional |
+| **táticas** | acampamento, bloqueio, invasão (PT-10, PT-12, PT-21) | **nota pública e manifesto** |
+| **composição** | rede difusa, caravanas, doadores | **partidos e entidades patronais** |
+| **posição na estrutura social** | base mobilizada e patrocínio de setor | **cúpula institucional e financeira** |
+
+> **A divergência decisiva é de composição e de posição, não de repertório simétrico.** Nenhum dos dois registros novos é mobilização de rua — e isso **fecha a cobrança 8 do documento 16 por outro caminho**: a quarta arena de Alimi está vazia porque, neste episódio, **quem se opôs ao desafiante não foi um movimento**.
+
+**Dos três pontos de conexão de Zald e Useem, o corpus documenta um e sugere outro:**
+
+| ponto | o que o corpus dá |
+|:--|:--|
+| encontro direto, face a face | **nada** |
+| disputa pelo **mesmo terceiro** | **sugerido** — os dois campos apelam às Forças Armadas e às instituições (PT-12 de um lado; a nota partidária de outro), mas nenhum registro mede a disputa pelo mesmo público |
+| esforço para **desfazer o efeito do outro** | **documentado** — a nota de 10/07/2021 é reação explícita, no dia seguinte, às ameaças que PT-07 articula |
+
+### 12.5 O que o contraste NÃO autoriza a dizer
+
+**Dois limites, e os dois estão nos registros.**
+
+A folha 421 **não nomeia os oito partidos**, e a folha 64 **não data o manifesto nem transcreve o teor dele** — a remissão de rodapé é a um sítio jornalístico, e o documento não está no corpus. **Os registros afirmam a existência, a autoria institucional e a reação; não afirmam conteúdo.**
+
+> **E a `Carta às brasileiras e aos brasileiros`, de 11/08/2022, NÃO ENTRA.** Medido nas 1.333 folhas: `carta às brasileiras`, `atos pela democracia` e `Largo de São Francisco` têm **zero ocorrências**. O manifesto da Fiesp e da Febraban que a folha 64 menciona pertence à mesma família de eventos, **e dizer que são o mesmo documento seria inferência minha** — a folha não o diz, e o registro não o diz.
+
+**Nome do mecanismo e classe: propostos e não atribuídos.** As três condições do vocabulário de classe estão satisfeitas nos dois; o que falta é a palavra do pesquisador, pelo precedente da tarefa 19 e pela forma com que PT-01A e PT-01B nasceram.

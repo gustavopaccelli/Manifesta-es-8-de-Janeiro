@@ -64,6 +64,26 @@ G = {
     "PT-06B": ("tribunal/campo", "C", "díade"),
     "PT-06C": ("tribunal/campo", "C", "díade"),
     "PT-07":  ("núcleo político", "D", "'fraude nas urnas' é O quadro diagnóstico do caso — e a PGR o declara FALSO"),
+    # OS DOIS DA CONTRAMOBILIZACAO, 29/10/2026 (item 102). Sao `C` por
+    # definicao do capitulo: contraquadro e o quadro que DISPUTA outro, e os
+    # dois disputam o de PT-07.
+    #
+    # E OS ROTULOS DE ATOR SAO OS QUE O CONJUNTO JA TINHA -- `partido` e
+    # `setor economico`. Eu havia escrito dois rotulos novos e o `assert`
+    # derrubou o ciclo, que e o comportamento certo: a taxonomia ja tem casa
+    # para ator coletivo nao estatal, e inventar rotulo seria crescer o
+    # vocabulario sem necessidade.
+    #
+    # LIMITE QUE VALE ESCRITO: o conjunto se chama DESAFIANTE e **estes dois
+    # sao do campo OPOSTO ao desafiante**. O nome do conjunto e mais estreito
+    # do que o que ele guarda -- ele ja abrigava `contramovimento`, `campo
+    # derrotado` e `movimento estrangeiro` --, e a prosa gerada diz
+    # "desafiante OU DO CAMPO", que e a formula que cobre isso. O conjunto
+    # separa ator ESTATAL de ator NAO ESTATAL, nao um campo do outro.
+    "PT-07A": ("partido", "C",
+               "disputa o quadro de fraude de PT-07, no dia seguinte à ameaça"),
+    "PT-07B": ("setor econômico", "C",
+               "disputa o mesmo quadro, e a folha atribui o motivo a interesse ameaçado"),
     "PT-08":  ("movimento estrangeiro", "DM", "'Stop the Steal' diagnostica e convoca na mesma frase"),
     "PT-08A": ("Estado", "D", "'combate à compra de votos' — diagnóstico PRETEXTUAL, recusado pela própria PF na Bahia"),
     "PT-08B": ("tribunal eleitoral", "P", "'garantia do exercício do voto' é o remédio que a ordem impõe"),

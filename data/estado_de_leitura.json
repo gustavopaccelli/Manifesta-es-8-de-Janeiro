@@ -79,7 +79,7 @@
     },
     "Fontes/05_Bibliografia-teorica/SNOW-DELLA-PORTA-KLANDERMANS-McADAM_Wiley-Blackwell-Encyclopedia-of-Social-and-Political-Movements_2013.pdf": {
       "estado": "LIDO_PARCIAL",
-      "o_que": "ONZE verbetes lidos integrais: Mechanisms (Tarrow) · Protest cycles and waves · Political opportunity · Repertoires of contention · Policing protest (della Porta e Reiter) · Diffusion and scale shift (Soule) · Demobilization (Fillieule) · Discursive opportunity structure (McCammon) · Multiorganizational fields (Klandermans) · Resource mobilization theory (Edwards e Gillham) · Critical mass theory (Oliver). OS NOMES DOS ONZE VERBETES ESTÃO EM `termos`, e a razão é uma prova negativa que falhou em 21/10/2026: a peça do corpus é o volume, mas a unidade de leitura — e a unidade sobre a qual eu errei — é o VERBETE. Guarda que vigia só o nome do continente não pega afirmação sobre o conteúdo",
+      "o_que": "DOZE verbetes lidos integrais: Mechanisms (Tarrow) · Protest cycles and waves · Political opportunity · Repertoires of contention · Policing protest (della Porta e Reiter) · Diffusion and scale shift (Soule) · Demobilization (Fillieule) · Discursive opportunity structure (McCammon) · Multiorganizational fields (Klandermans) · Resource mobilization theory (Edwards e Gillham) · Critical mass theory (Oliver) · **Movement/countermovement dynamics (Dillard), folhas 391-393, lido em 29/10/2026** — é a teoria que respalda PT-07A e PT-07B, e dele saem os elementos de causalidade da emergência de contramovimento, as cinco dimensões de distinção e os três pontos de conexão de Zald e Useem. OS NOMES DOS ONZE VERBETES ESTÃO EM `termos`, e a razão é uma prova negativa que falhou em 21/10/2026: a peça do corpus é o volume, mas a unidade de leitura — e a unidade sobre a qual eu errei — é o VERBETE. Guarda que vigia só o nome do continente não pega afirmação sobre o conteúdo",
       "registrado_em": "docs/analise/10_VERBETES-ENCICLOPEDIA.md",
       "termos": [
         "Wiley-Blackwell Encyclopedia",
@@ -93,7 +93,8 @@
         "Discursive opportunity structure",
         "Multiorganizational fields",
         "Resource mobilization theory",
-        "Critical mass theory"
+        "Critical mass theory",
+        "Movement/countermovement dynamics"
       ]
     },
     "Fontes/05_Bibliografia-teorica/SNOW-VLIEGENTHART-KETELAARS_The-framing-perspective-on-social-movements_Wiley-Blackwell-Companion-2ed_2019.pdf": {

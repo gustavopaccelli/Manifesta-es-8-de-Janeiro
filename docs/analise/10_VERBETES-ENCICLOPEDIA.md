@@ -165,6 +165,20 @@ Oito, agora, das quais **cinco foram lidas na fonte** e não colhidas em síntes
 
 ---
 
+## 12. *Movement/countermovement dynamics* — o décimo segundo, lido em 29/10/2026
+
+**Por que ele foi lido:** o pesquisador mandou a contramobilização entrar como contraste, e pediu os elementos de causalidade e a teoria que a respalda. **A teoria estava aqui desde 30/09**, no mesmo volume de onde saíram os onze anteriores. Autoria: **Maria K. Dillard**, folhas 391-393 do exemplar do corpus.
+
+**O que ele entrega, em três conjuntos.** A **emergência** do contramovimento, por progresso do movimento original e por *"threatened interests for some population as a result of the SM"* (f. 391). As **cinco dimensões de distinção** — objetivos, ideologia, táticas, composição e **posição na estrutura social**. E os **três pontos de conexão** de Zald e Useem (1987), na folha 392: *"direct, face-to-face encounters, attempts to gain support from the same third party, and efforts to undo the impacts of the other"*.
+
+**A quais registros serve:** **PT-07A** e **PT-07B**, nascidos no mesmo dia, e por tabela o contraste inteiro — ver [`16_CAMADA-A-MOBILIZATION.md`](16_CAMADA-A-MOBILIZATION.md), §12.
+
+> **O encaixe mais limpo que este corpus deu entre conceito e fonte primária:** a folha 64 da CPMI atribui a adesão do setor empresarial a *"fundado receio do avanço totalitário"* e à ameaça aos interesses da própria posição econômica — que é **literalmente** o `threatened interests` do verbete. **A teoria e a folha se encontram na mesma palavra.**
+
+**O que ele COBRA do projeto, e não executei:** o verbete trata a díade como **dialética contínua** — *"The SM and CM shape and are shaped by their interaction"* (f. 393) —, e o codebook codifica os dois campos em registros separados sem nenhum campo que marque o par. **Marcar a díade exigiria campo novo, que é decisão do pesquisador**, e PT-06C já mostra que o codebook sabe registrar díade no campo de ator quando precisa.
+
+---
+
 ## 11. A tabela comparativa-descritiva dos onze verbetes — 21/10/2026
 
 **Encaminhamento:** *"Faça isso, enumere-os e construa a tabela comparativa-descritiva."*

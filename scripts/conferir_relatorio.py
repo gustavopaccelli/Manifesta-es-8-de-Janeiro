@@ -218,6 +218,35 @@ def main():
     if "{} sub-eventos".format(n_json) not in cabecalho:
         falhas.append("o cabeçalho não declara os {} sub-eventos do codebook".format(n_json))
 
+    # AS TRES CIFRAS DO FECHAMENTO, acrescentadas em 29/10/2026.
+    #
+    # O paragrafo "Onde o projeto esta" declarava SETE cifras a mao, e
+    # declarava tambem que este conferidor nao as cobria. Em 29/10 as
+    # sete foram medidas e as sete estavam erradas -- 85/61/23/22/6.951/
+    # 66/12.089 contra 87/69/17/25/7.092/75/12.644.
+    #
+    # O CRITERIO DE QUEM FICA E DO PESQUISADOR: cifra com relacao ao
+    # processo ou a eventos dentro dele passa. Ficaram as tres da
+    # CADEIA -- o numero de elos e a particao de classe, que qualifica
+    # toda proposicao causal. Sairam as quatro de TAMANHO DE CORPUS,
+    # que descrevem a leitura e nao o episodio, e que vivem no README
+    # sob a decima checagem da integridade.
+    #
+    # VERIFICAR EM VEZ DE GERAR e a pratica da casa: a checagem 10 faz
+    # o mesmo com o README. O efeito contra o envelhecimento e o mesmo
+    # -- o ciclo cai -- e o texto continua sendo texto.
+    _cl = {}
+    for _ev in J.values() if isinstance(J, dict) else J:
+        _k = _ev.get("status_classe")
+        _cl[_k] = _cl.get(_k, 0) + 1
+    for _rot, _n in (("deles em fonte primária citada por página",
+                      _cl.get("Confirmado em fonte primária", 0)),
+                     ("confirmados por outra via",
+                      _cl.get("Confirmado", 0))):
+        if "{} {}".format(_n, _rot) not in texto:
+            falhas.append(
+                "o fechamento não declara «{} {}» — é o que o codebook tem".format(_n, _rot))
+
     print("=" * 78)
     if falhas:
         print("FALHAS — {}:".format(len(falhas)))

@@ -17,12 +17,12 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Frente | Estado |
 |:--|:--|
 | Codebook | **87 sub-eventos × 17 campos** — JSON, CSV e XLSX gerados de uma fonte única, com zero divergências. Zero vazios em `mecanismo_causal` e em `autonomia_movimento` |
-| Classes de verificação | **69 em fonte primária** · 17 confirmados por outra via · **0 a verificar** · 1 inferência declarada. O critério das três condições está escrito em `metadados.vocabulario_status_classe` desde 25/10/2026 |
+| Classes de verificação | **71 em fonte primária** · 15 confirmados por outra via · **0 a verificar** · 1 inferência declarada. O critério das três condições está escrito em `metadados.vocabulario_status_classe` desde 25/10/2026 |
 | Ancoragem documental | **86 de 87 registros** com arquivo vinculado · 86 com página ou localizador estrutural · 87 com transcrição literal no campo. O único sem arquivo é PT-03D, declarado |
 | Corpus | **84 peças / 12.644 p.** no manifesto, em 14 eixos — 75 PDFs e 9 âncoras não-PDF, estas conferidas por arquivo inteiro desde 25/10/2026. Da documental: **34 peças / 7.092 p.**; de literatura: 50 peças |
 | Figuras | SVG da cadeia causal e cronologia navegável. **São a única parte do aparato escrita à mão**, e duas guardas as cobrem: o passo 10 confere que todo registro do codebook aparece na figura, e a tabela-espelho do passo 6 confere o **nome do mecanismo** de cada ponto contra o campo — com linha de base em zero divergências |
 | Verificação | `bash scripts/ciclo.sh` — **14 passos**: 8 geradores e 6 conferidores, entre eles as **10 checagens estruturais**. Toda linha de base reprova com código de saída ≠ 0; nenhuma apenas avisa |
-| Controle de versão | git desde **20/09/2026**, 113 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 28/10/2026 |
+| Controle de versão | git desde **20/09/2026**, 114 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 29/10/2026 |
 | Tarefas abertas | **3** — 10, 17, 16. A lista vive na seção *Ordem de ataque*, gerada pelo passo 3, e 34 tarefas estão fechadas |
 | Decisões pendentes | **10**, em 3 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 4 |
 | **Redação do artigo** | **não iniciada — por decisão, é o último item da fila.** Desde 25/10/2026 ela não tem mais pré-requisito de dado: a tarefa 26 fechou e não há decisão de campo aberta no codebook. **Começá-la é decisão do pesquisador** |
@@ -5765,6 +5765,55 @@ Ao reunir as cifras do estrato, a medição achou que **o balanço do Gabinete d
 **Uma cobrança do verbete que não executei:** ele trata a díade como **dialética contínua** — *"The SM and CM shape and are shaped by their interaction"* —, e o codebook codifica os dois campos em registros separados **sem nenhum campo que marque o par**. Marcar a díade exigiria campo novo, que é decisão sua.
 
 **E um parágrafo do relatório de pesquisa que segue velho, declaradamente:** o fechamento da §"Onde o projeto está" traz sete cifras escritas à mão que `conferir_relatorio.py` **declara não cobrir** — 85 sub-eventos, 61 em fonte primária, 23 confirmados, 22 PDFs documentais, 6.951 páginas, 66 PDFs, 12.089 páginas. **Nenhuma delas é verdade hoje.** O buraco está declarado no próprio parágrafo desde 04/10, e fechá-lo é frente própria: ou as cifras saem, ou passam a ser geradas.
+
+
+---
+
+## 103. Os dois nomes, as duas classes, e as sete cifras pelo critério dele — ✅ 29/10/2026
+
+**Encaminhamentos:** *"Contramobilização institucional reativa"* e *"Qual a relevância dessas cifras? […] Se elas têm relação com o processo ou com eventos dentro do processo, elas passam."*
+
+### 103.1 Os dois nomes e as duas classes
+
+**PT-07A** passa a **Contramobilização institucional reativa** e **PT-07B** a **Contramobilização de interesse ameaçado**; os dois são promovidos a **`Confirmado em fonte primária`**. As classes passaram a **71 / 15 / 1**, medidas.
+
+**A marca `CLASSE NÃO PRIMÁRIA` saiu dos dois**, porque a razão que ela declarava era a espera da sua palavra — e ela veio. **Deixá-la seria prosa falsa no campo**, e a checagem 9 nem a cobraria mais: ela só olha registro em `Confirmado`.
+
+> **E a tabela-espelho não precisou de nada.** O nome vinha **antes** do travessão nos dois lados desde que os registros nasceram — foi a correção de ordem do item 102 —, de modo que o recorte comparado não se moveu quando a ressalva saiu. **Ordenar o campo certo uma vez poupou a divergência agora.**
+
+A jusante: o selo dos dois pontos da figura passou de `ok` a **`pri`**, e o subtítulo de 69 a **71** — cifra tirada de `Counter(status_classe)`, não de soma.
+
+### 103.2 As sete cifras: três passam, quatro saem
+
+**Medidas antes de decidir, e as sete estavam erradas:**
+
+| cifra | escrito | medido |
+|:--|--:|--:|
+| sub-eventos | 85 | **87** |
+| em fonte primária | 61 | **71** |
+| confirmados por outra via | 23 | **15** |
+| PDFs documentais | 22 | **25** |
+| páginas documentais | 6.951 | **7.092** |
+| PDFs no total | 66 | **75** |
+| páginas no total | 12.089 | **12.644** |
+
+> **As três primeiras passam pelo seu critério.** O número de sub-eventos **é a cadeia** — é a contagem dos elos que a explicação afirma. E a partição entre fonte primária e outra via **qualifica toda proposição causal**: ela diz, elo por elo, a que distância do ato está a evidência. Não explicam o fenômeno; **delimitam o que a explicação pode afirmar**, e isso é relação com o processo.
+>
+> **As quatro últimas não passam.** Tamanho de corpus descreve **a leitura**, não o episódio. Nenhum elo muda se o corpus tem 66 ou 75 PDFs, e nenhum evento do processo guarda relação com 12.644 páginas. **Eram métrica de aparato num parágrafo de resultado** — e as quatro estavam erradas, o que é o argumento empírico a favor do seu critério: a cifra que ninguém usa é a que ninguém conserta.
+
+**As quatro saíram do relatório e seguem no README e no inventário gerado**, onde a décima checagem as confere a cada ciclo. **As três ficaram e entraram em `conferir_relatorio.py`**, com **duas provas negativas**: envelhecer qualquer uma das duas cifras de classe derruba o conferidor.
+
+> **Verificar em vez de gerar, e é a prática da casa** — a checagem 10 faz o mesmo com o README. O efeito contra o envelhecimento é idêntico, e o texto continua sendo texto.
+
+### 103.3 E o parágrafo tinha mais do que as sete
+
+Ao abri-lo, **duas outras cifras à mão apareceram**, nenhuma na lista das sete: a frase dizia que o ciclo *"roda quatro checagens"* — ele tem **catorze passos e dez checagens estruturais** — e a composição do corpus vinha enumerada por eixo, com cinco cifras.
+
+> **As duas saíram pelo mesmo critério**, e a lição é de método: **a lista de sete era a lista do que eu já havia notado.** Abrir o parágrafo para corrigir sete revelou nove. **Contagem de cifras à mão também é cifra à mão** — e por isso a frase das checagens passou a **descrever sem contar**, em vez de ser corrigida para catorze.
+
+### 103.4 O que isto deixa
+
+**Nada destas duas frentes.** Os dois nomes estão atribuídos, as duas classes promovidas, as três cifras sob guarda com prova, e as seis que saíram vivem onde há guarda para elas.
 
 ---
 

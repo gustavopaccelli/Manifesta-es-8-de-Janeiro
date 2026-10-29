@@ -48,8 +48,8 @@ A versão completa — com os seis campos da figura ao lado dos seis do codebook
 | `PT-06B` | 23/03/2021 (Plenário confirma em 23/06/2021) | Anulação; elegibilidade restaurada | T-1 Conjuntural | Confirmado em fonte primária | descertificacao do agente judicial | PT-06A/B/C | ✅ |
 | `PT-06C` | 15/04/2021 | Anulação; elegibilidade restaurada | T-1 Conjuntural | Confirmado em fonte primária | reabertura da estrutura de oportunidade eleitoral | PT-06A/B/C | ✅ |
 | `PT-07` | 22/03/2021 (primeira deliberação datada pela denúncia) | Primeira deliberação do grupo | T-1 Conjuntural | Confirmado em fonte primária | deliberacao de ruptura e articulacao do quadro de fraude | — | ✅ |
-| `PT-07A` | 10/07/2021 | Oito partidos: nota em defesa da democr… | T-1 Conjuntural | Confirmado | contramobilizacao institucional reativa | — | ✅ |
-| `PT-07B` | 2022, nos meses anteriores ao pleito (data não declarada na folha) | Manifesto Pró-Democracia: Fiesp e Febra… | T-1 Conjuntural | Confirmado | contramobilizacao de interesse ameacado | — | ✅ |
+| `PT-07A` | 10/07/2021 | Oito partidos: nota em defesa da democr… | T-1 Conjuntural | Confirmado em fonte primária | contramobilizacao institucional reativa | — | ✅ |
+| `PT-07B` | 2022, nos meses anteriores ao pleito (data não declarada na folha) | Manifesto Pró-Democracia: Fiesp e Febra… | T-1 Conjuntural | Confirmado em fonte primária | contramobilizacao de interesse ameacado | — | ✅ |
 | `PT-08` | 06/01/2021 | Capitólio (EUA) | T-1 Conjuntural | Confirmado | difusao transnacional / emulacao | — | ✅ |
 | `PT-08A` | out/2022 (05–26/10/2022) | TRÊS MECANISMOS, UM POR REGISTRO. (PT-0… | T-1 Operacional | Confirmado em fonte primária | captura de aparato estatal para fim eleitoral | PT-08A / PT-08B / PT-08C | ✅ |
 | `PT-08B` | 29/10/2022 | TRÊS MECANISMOS, UM POR REGISTRO. (PT-0… | T-1 Operacional | Confirmado em fonte primária | tentativa de contencao institucional preventiva | PT-08A / PT-08B / PT-08C | ✅ |

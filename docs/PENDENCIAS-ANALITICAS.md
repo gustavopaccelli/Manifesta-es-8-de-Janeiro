@@ -22,7 +22,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Corpus | **84 peças / 12.644 p.** no manifesto, em 14 eixos — 75 PDFs e 9 âncoras não-PDF, estas conferidas por arquivo inteiro desde 25/10/2026. Da documental: **34 peças / 7.092 p.**; de literatura: 50 peças |
 | Figuras | SVG da cadeia causal e cronologia navegável. **São a única parte do aparato escrita à mão**, e duas guardas as cobrem: o passo 11 confere que todo registro do codebook aparece na figura, e a tabela-espelho do passo 6 confere o **nome do mecanismo** de cada ponto contra o campo — com linha de base em zero divergências |
 | Verificação | `bash scripts/ciclo.sh` — **15 passos**: 9 geradores e 6 conferidores, entre eles as **10 checagens estruturais**. Toda linha de base reprova com código de saída ≠ 0; nenhuma apenas avisa |
-| Controle de versão | git desde **20/09/2026**, 115 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 29/10/2026 |
+| Controle de versão | git desde **20/09/2026**, 116 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 29/10/2026 |
 | Tarefas abertas | **3** — 10, 17, 16. A lista vive na seção *Ordem de ataque*, gerada pelo passo 3, e 34 tarefas estão fechadas |
 | Decisões pendentes | **10**, em 3 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 4 |
 | **Redação do artigo** | **não iniciada — por decisão, é o último item da fila.** Desde 25/10/2026 ela não tem mais pré-requisito de dado: a tarefa 26 fechou e não há decisão de campo aberta no codebook. **Começá-la é decisão do pesquisador** |
@@ -5865,6 +5865,64 @@ Ao abri-lo, **duas outras cifras à mão apareceram**, nenhuma na lista das sete
 **O ciclo foi a quinze passos**, e as cifras do README foram atualizadas pela décima checagem, que as acusou na primeira execução.
 
 **E uma proposta minha, não executada:** hoje o marcador de díade é lido **só** de `mecanismo_causal`. Se um dia ele aparecer noutro campo, **o gerador não o verá e não dirá nada** — é o mesmo modo de falha que esta frente acabou de consertar em outra guarda. A saída barata é a guarda procurar o marcador em **todos** os campos de prosa e **reprovar** quando ele estiver fora do campo canônico. **Não a construí**, porque seria guarda sobre um defeito que ainda não ocorreu.
+
+
+---
+
+## 105. A varredura das razões — ela achou que a classe tem um membro — e a PEA que fecharia o teste — ✅ 29/10/2026
+
+**Encaminhamentos:** *"A varredura das razões impressas no corpus […] Resolva isso"* e *"Encontre essa PEA que ajude a compreender o fenômeno."*
+
+### 105.1 A varredura rodou, e o resultado foi NÃO construir a guarda
+
+**Três medições, em cascata, e cada uma estreitou o problema:**
+
+| passo | medido |
+|:--|:--|
+| **censo bruto** do corpus documental | **17 das 25 peças** imprimem percentual, em **287 das 7.092 folhas — 4%**, com **1.056 percentuais** |
+| **o subconjunto rotulado** — `N% do/da <rótulo>` | **236** de 1.056 |
+| **densidade por folha-com-percentual** | balanço do Gabinete **22,7**; a peça seguinte, **7,0** |
+
+> **E os rótulos dos 236 mudaram o diagnóstico.** Os mais frequentes são *dos casos*, *dos votos*, *do PIB*, *das ações da Positivo*. **Nos acórdãos, o percentual cita estudo de terceiro** — não há contagem da própria peça para recalcular, e portanto **não há defeito possível da forma que o balanço tem.**
+>
+> **A classe de peça onde a pergunta se aplica tem UM membro.** O balanço do Gabinete do Min. Moraes é o único relatório estatístico das **próprias** contagens no corpus — 22,7 percentuais por folha contra 7,0 da peça seguinte, cujos 182 são citação criminológica. **E o defeito dele já está declarado**, em PT-61 e no item 101.
+
+**Por isso ela não virou checagem do ciclo, e as três razões são medidas:**
+
+1. **A busca bruta é má guarda.** No balanço, **477 percentuais contra 125 inteiros candidatos: 454 "resolvem"** — quase todo percentual acha um divisor por acidente. Os denominadores mais frequentes que a busca devolve são **9605** e **500**, e a lista traz **4828, 4781 e 4918**, que são **números de inquérito**. **Identificador não é cifra.**
+2. **O subconjunto rotulado é dominado por citação externa**, como acima.
+3. **A única ocorrência viva já está declarada** — e guarda cuja ocorrência viva já está declarada é **dispensa que ninguém revisita**, a lição do item 92.
+
+### 105.2 O que entrou no lugar da guarda
+
+**`scripts/historico/auditar_razoes_2026-10-29.py`** — auditoria **de uso único**, no lugar que esta casa reserva para ferramenta que rodou uma vez. Ela reproduz a medição, e a própria saída diz como se lê:
+
+> **O que vale não é a lista de órfãos: é o HISTOGRAMA de denominadores.** No balanço, `1402` aparece **24 vezes** e `1878` **5 vezes** — as duas bases reais, sem ler nada. **Dois denominadores frequentes com o MESMO rótulo na peça são o defeito.**
+
+**E o gatilho para rodá-la de novo fica declarado, sem exigir julgamento:** quando entrar no corpus uma peça com **densidade alta de percentual** — muitos percentuais em poucas folhas, a assinatura de relatório estatístico —, rode isto nela. A densidade sai do primeiro passo da própria auditoria.
+
+> **A recomendação mudou durante a execução, e vale dizer por quê.** O plano previa declarar as bases por peça e construir a guarda das duas perguntas. **A terceira medição tornou isso desnecessário:** declarar bases de dezessete peças para vigiar um defeito que só pode existir numa, já declarada, é construir aparato para uma classe vazia. **A medição que eu fiz para dimensionar o trabalho foi a que o cancelou** — e esse é o melhor desfecho possível para uma proposta minha.
+
+### 105.3 A PEA existe, e é a ACLED
+
+| | |
+|:--|:--|
+| cobertura do Brasil | **2018 → presente**, semanal |
+| unidade | **evento**, com data, local, ator e tipo |
+| tipos pertinentes | `protests` e `riots` |
+| acesso | **gratuito com registro acadêmico** |
+
+> **E ela já codificou a variável que o teste precisa:** o panorama da ACLED de **outubro de 2025** registra **105 manifestações relacionadas ao julgamento de Bolsonaro**. É o lado do desfecho que PT-62 afirma por inferência.
+
+**As PEAs brasileiras param antes:** **LA Protesta Brasil** (Unicamp) cobre 2011-2021, estendida a 2022, com sub-base de 2023 **só para protestos de policiais**; **BEP-CEBRAP** cobre 2013-2016 — e é a **linhagem metodológica da sua tese**. **O que elas dão é mais útil que dados aqui: as decisões de codificação em português**, com o artigo metodológico do BEP como referência.
+
+**A consulta está especificada** na §13 de `docs/analise/16_CAMADA-A-MOBILIZATION.md`: país, janela de 09/01/2023 a 29/04/2026, tipos, campos e recorte temático. **E o limite de comparabilidade está escrito:** a codificação da ACLED **não é a de Castro**, de modo que a comparação Brasil × Chile se faz **comparando desenho**, não somando séries.
+
+### 105.4 O que isto deixa
+
+**Uma decisão sua, e com o preço na mão:** registrar-se na ACLED e trazer a série para `Fontes/` é **coleta**, com as mesmas perguntas que os PDFs tiveram — licença, procedência, estado de leitura, lugar no manifesto.
+
+> **E uma consequência que vale antes da decisão:** se a série entrar, **PT-62 pode deixar de ser `Inferência do analista`**. É o **único** registro do codebook nessa classe, e o que o mantém ali é exatamente a ausência da medição do desfecho.
 
 ---
 

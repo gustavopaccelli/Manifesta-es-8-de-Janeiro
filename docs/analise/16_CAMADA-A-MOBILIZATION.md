@@ -410,3 +410,55 @@ A folha 421 **não nomeia os oito partidos**, e a folha 64 **não data o manifes
 > **E a `Carta às brasileiras e aos brasileiros`, de 11/08/2022, NÃO ENTRA.** Medido nas 1.333 folhas: `carta às brasileiras`, `atos pela democracia` e `Largo de São Francisco` têm **zero ocorrências**. O manifesto da Fiesp e da Febraban que a folha 64 menciona pertence à mesma família de eventos, **e dizer que são o mesmo documento seria inferência minha** — a folha não o diz, e o registro não o diz.
 
 **Nome do mecanismo e classe: propostos e não atribuídos.** As três condições do vocabulário de classe estão satisfeitas nos dois; o que falta é a palavra do pesquisador, pelo precedente da tarefa 19 e pela forma com que PT-01A e PT-01B nasceram.
+
+---
+
+## 13. O protocolo da PEA que fecharia o teste — 29/10/2026
+
+**Encaminhamento:** *"Encontre essa PEA que ajude a compreender o fenômeno."*
+
+A §11 deixou um limite escrito: **o lado do tratamento está ancorado folha por folha, e o lado do desfecho não está medido.** Esta seção diz qual base o mede, o que ela entrega, e o que ela **não** resolve.
+
+### 13.1 A base existe, e é a ACLED
+
+| | |
+|:--|:--|
+| cobertura do Brasil | **2018 → presente**, atualização semanal |
+| unidade | **evento**, com data, local, ator e tipo |
+| tipos pertinentes | `protests` e `riots` |
+| acesso | **gratuito com registro acadêmico**, pela ferramenta de exportação e pela API |
+
+> **E ela já codificou a variável que o teste precisa.** O panorama regional da ACLED de **outubro de 2025** registra **105 manifestações relacionadas ao julgamento de Bolsonaro**. É o lado do desfecho que PT-62 afirma por inferência — e ele existe, codificado por terceiro, fora deste corpus.
+
+### 13.2 As PEAs brasileiras param antes da janela
+
+| base | cobertura |
+|:--|:--|
+| **LA Protesta Brasil** (Unicamp) | 2011-2021, estendida a 2022; sub-base de 2023 **só para protestos de policiais** |
+| **BEP-CEBRAP** | 2013-2016 — e é a **linhagem metodológica da tese do pesquisador** |
+
+> **Nenhuma delas alcança 2023-2026.** O que elas dão é o que vale mais do que dados para esta frente: **as decisões de codificação em português**, com o artigo metodológico do BEP como referência — e é dele que sai o vocabulário que uma consulta à ACLED teria de traduzir.
+
+### 13.3 A consulta, especificada
+
+| parâmetro | valor |
+|:--|:--|
+| país | Brasil |
+| janela | **09/01/2023 a 29/04/2026** — do dia seguinte ao episódio ao balanço de PT-61 |
+| tipos | `Protests` e `Riots`, com os subtipos |
+| campos | data, admin1, admin2, ator, ator associado, tipo, subtipo, notas |
+| recorte temático | os eventos cuja nota mencione anistia, o julgamento, ou o próprio 8 de janeiro |
+
+**E a série de tratamento, que o corpus já tem, por folha:** PT-52 (as 2.151 prisões em flagrante), PT-53 (os inquéritos e as 1.335 ações), PT-56 (as oito condenações do núcleo crucial), PT-58 a PT-60 (a prisão, a transferência e a domiciliar) e PT-61 (o balanço). **O tratamento é datado e primário; só o desfecho é externo.**
+
+### 13.4 O limite de comparabilidade, e ele é o ponto
+
+> **A codificação da ACLED não é a de Castro.** Ela usou dados próprios do ciclo chileno, com categorias de tática policial que a ACLED não tem no mesmo recorte. **Então a comparação Brasil × Chile não se faz somando as duas séries** — ela se faz comparando **o tratamento caracterizado nos termos da Tabela 1 dela** (que a §11 já fez, com folha) contra **o desfecho medido em cada caso pela sua própria base**.
+>
+> **Isso é comparação de desenho, não de dados**, e a diferença tem de estar escrita em qualquer coisa que o artigo afirme. **Declarar isto é o que esta seção entrega; medir as duas séries na mesma régua é outro projeto.**
+
+### 13.5 O que fica para a sua decisão
+
+**Esta seção não traz dados.** Registrar-se numa base externa e trazer série de terceiro para `Fontes/` é **coleta**, com as mesmas perguntas que os PDFs e as páginas web tiveram: licença, procedência, estado de leitura e lugar no manifesto. **O protocolo está pronto; a decisão de coletar é sua**, e o preço está na tabela acima.
+
+> **E uma consequência que vale antes da decisão:** se a série entrar, **PT-62 pode deixar de ser `Inferência do analista`** — é o único registro do codebook nessa classe, e o que o mantém ali é exatamente a ausência da medição do desfecho.

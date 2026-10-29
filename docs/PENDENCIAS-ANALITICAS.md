@@ -20,9 +20,9 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Classes de verificação | **71 em fonte primária** · 15 confirmados por outra via · **0 a verificar** · 1 inferência declarada. O critério das três condições está escrito em `metadados.vocabulario_status_classe` desde 25/10/2026 |
 | Ancoragem documental | **86 de 87 registros** com arquivo vinculado · 86 com página ou localizador estrutural · 87 com transcrição literal no campo. O único sem arquivo é PT-03D, declarado |
 | Corpus | **84 peças / 12.644 p.** no manifesto, em 14 eixos — 75 PDFs e 9 âncoras não-PDF, estas conferidas por arquivo inteiro desde 25/10/2026. Da documental: **34 peças / 7.092 p.**; de literatura: 50 peças |
-| Figuras | SVG da cadeia causal e cronologia navegável. **São a única parte do aparato escrita à mão**, e duas guardas as cobrem: o passo 10 confere que todo registro do codebook aparece na figura, e a tabela-espelho do passo 6 confere o **nome do mecanismo** de cada ponto contra o campo — com linha de base em zero divergências |
-| Verificação | `bash scripts/ciclo.sh` — **14 passos**: 8 geradores e 6 conferidores, entre eles as **10 checagens estruturais**. Toda linha de base reprova com código de saída ≠ 0; nenhuma apenas avisa |
-| Controle de versão | git desde **20/09/2026**, 114 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 29/10/2026 |
+| Figuras | SVG da cadeia causal e cronologia navegável. **São a única parte do aparato escrita à mão**, e duas guardas as cobrem: o passo 11 confere que todo registro do codebook aparece na figura, e a tabela-espelho do passo 6 confere o **nome do mecanismo** de cada ponto contra o campo — com linha de base em zero divergências |
+| Verificação | `bash scripts/ciclo.sh` — **15 passos**: 9 geradores e 6 conferidores, entre eles as **10 checagens estruturais**. Toda linha de base reprova com código de saída ≠ 0; nenhuma apenas avisa |
+| Controle de versão | git desde **20/09/2026**, 115 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 29/10/2026 |
 | Tarefas abertas | **3** — 10, 17, 16. A lista vive na seção *Ordem de ataque*, gerada pelo passo 3, e 34 tarefas estão fechadas |
 | Decisões pendentes | **10**, em 3 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 4 |
 | **Redação do artigo** | **não iniciada — por decisão, é o último item da fila.** Desde 25/10/2026 ela não tem mais pré-requisito de dado: a tarefa 26 fechou e não há decisão de campo aberta no codebook. **Começá-la é decisão do pesquisador** |
@@ -5814,6 +5814,57 @@ Ao abri-lo, **duas outras cifras à mão apareceram**, nenhuma na lista das sete
 ### 103.4 O que isto deixa
 
 **Nada destas duas frentes.** Os dois nomes estão atribuídos, as duas classes promovidas, as três cifras sob guarda com prova, e as seis que saíram vivem onde há guarda para elas.
+
+
+---
+
+## 104. As díades, e eu recomendei NÃO criar campo — ✅ 29/10/2026
+
+**Encaminhamento:** *"Resolva isso. O que você sugere dentro do escopo do projeto?"*
+
+### 104.1 A medição decidiu, e ela decidiu contra o campo novo
+
+| | |
+|:--|--:|
+| registros que **já remetem** a outro registro | **58** de 87 |
+| remissões ao todo | **226** |
+| em `nota_auditoria` · `mecanismo_causal` · `status_verificacao` · `fonte_trecho` | 95 · 84 · 33 · 14 |
+| ocorrências de `díade` no codebook antes disto | **0** |
+| marcadores tipados existentes | **1** (`REMISSÃO`, em PT-62) |
+
+> **A relação já estava no codebook. O que faltava não era um campo: era TIPO e RECIPROCIDADE.** Um 18º campo seria a **quinta cópia** de uma relação que a prosa já carrega — e abriria uma segunda decisão de esquema enquanto a primeira, a grade funcional como 18º campo, segue aberta na sua lista.
+
+### 104.2 O que entrou, em três peças
+
+**(a) O marcador `DÍADE: PT-XX`** em `mecanismo_causal`, num campo só e de propósito: espalhá-lo por quatro campos daria a mesma ambiguidade que a remissão solta tem hoje.
+
+**(b) A tabela gerada** `reports/TABELA-DIADES.md`, pelo padrão da tabela-espelho: um par por seção, com data, fase, ator, repertório e enquadramento dos dois lados, **lidos do codebook sem intermediação**.
+
+> **A divergência não é declarada: ela é lida.** As dimensões de Dillard aparecem nas próprias linhas de ator, repertório e enquadramento. **A única afirmação nova da tabela é o PAR** — e é por isso que o marcador carrega só os ids.
+
+**(c) A guarda, e a reciprocidade é o que a torna verificável.** Se A declara díade com B, **B tem de declarar com A**. **Ponteiro confere existência; reciprocidade confere que a relação foi pensada dos dois lados** — é a diferença entre *vide também* e uma afirmação sobre a estrutura do conflito. **Três provas negativas:** id inexistente, declaração de um lado só, e díade consigo mesmo.
+
+### 104.3 Os três pares, lidos um a um antes de declarar
+
+| par | por quê |
+|:--|:--|
+| **PT-01 ↔ PT-02** | a forma canônica do verbete: PT-01 é o ciclo que **origina**, PT-02 é o contramovimento que **responde** — e o campo já dizia *contramovimentos conservadores* com a palavra do campo |
+| **PT-07 ↔ PT-07A** | o quadro de fraude e a nota conjunta de oito partidos no dia seguinte às ameaças |
+| **PT-07 ↔ PT-07B** | o mesmo quadro e o manifesto do setor empresarial e financeiro |
+
+> **E PT-03D NÃO recebeu marcador, e não é omissão.** A díade dele é **intra-registro**: o `framing_narrativa` carrega dois quadros em disputa — *'Ninguém está acima da lei' × 'preso político'* — dentro de um registro só. **São dois sentidos de `díade` no mesmo aparato**, e a tabela gerada declara a diferença para que ninguém os confunda. O conjunto `MISTO` da grade funcional, que se chama `campos opostos`, tem **um** registro, e é esse.
+
+### 104.4 E a frente achou um buraco irmão do do item 100
+
+**A checagem 6 valida remissão `PT-XX` em três campos — e `status_verificacao`, que tem 33 remissões, não era um deles.** Medido: **zero quebradas hoje**, de modo que a extensão **nasceu verde** e entrou no mesmo commit.
+
+> **Guarda que enumera campos à mão não cresce quando a prosa migra de campo.** É exatamente o que o item 100 achou na guarda das meias-âncoras, três dias antes, e o que apareceu aqui ao medir o escopo das díades. **Duas guardas desta casa foram escritas com a lista de campos que existia no dia** — e a lição é de desenho: **quem enumera campo tem de dizer, no próprio comentário, quais campos deixa fora.**
+
+### 104.5 O que isto deixa
+
+**O ciclo foi a quinze passos**, e as cifras do README foram atualizadas pela décima checagem, que as acusou na primeira execução.
+
+**E uma proposta minha, não executada:** hoje o marcador de díade é lido **só** de `mecanismo_causal`. Se um dia ele aparecer noutro campo, **o gerador não o verá e não dirá nada** — é o mesmo modo de falha que esta frente acabou de consertar em outra guarda. A saída barata é a guarda procurar o marcador em **todos** os campos de prosa e **reprovar** quando ele estiver fora do campo canônico. **Não a construí**, porque seria guarda sobre um defeito que ainda não ocorreu.
 
 ---
 

@@ -619,7 +619,15 @@ def main():
     ids = {ev["id"] for ev in eventos}
     pendura = 0
     for ev in eventos:
-        for campo in ("mecanismo_causal", "fonte_trecho", "nota_auditoria"):
+        # `status_verificacao` ENTROU EM 29/10/2026 (item 104). Medido
+        # naquele dia, ao levantar o escopo das diades: aquele campo
+        # tem 33 remissoes PT-XX e esta checagem nao o lia -- zero
+        # quebradas, de modo que a extensao nasceu verde. **Guarda que
+        # enumera campos a mao nao cresce quando a prosa migra de
+        # campo**, e e o irmao do buraco que o item 100 achou na guarda
+        # das meias-ancoras.
+        for campo in ("mecanismo_causal", "fonte_trecho",
+                      "nota_auditoria", "status_verificacao"):
             # Fronteira de palavra dos dois lados. ATENCAO: esta linha ja foi
             # escrita uma vez por heredoc, que converteu a sequencia barra-b em
             # BACKSPACE de controle (\x08). O regex ficou inerte e a checagem

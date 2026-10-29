@@ -11,7 +11,7 @@ pip install -r requirements.txt
 bash scripts/ciclo.sh
 ```
 
-O ciclo tem **14 passos**: **8 geram** — os formatos derivados, a auditoria de fontes, as seções *Ordem de ataque*, *Decisões pendentes* e *Painel de estado* da agenda, a tabela-espelho das figuras, a grade funcional do enquadramento e o registro de estado de leitura — e **6 conferem**: as **10 checagens estruturais**, as figuras, o relatório, as transcrições contra a folha do PDF, o campo multiorganizacional e as citações do documento 11. Ele falha — com código de saída diferente de zero — se qualquer coisa divergir. Rode-o depois de **toda** alteração no JSON ou no corpus.
+O ciclo tem **15 passos**: **9 geram** — os formatos derivados, a auditoria de fontes, as seções *Ordem de ataque*, *Decisões pendentes* e *Painel de estado* da agenda, a tabela-espelho das figuras, a grade funcional do enquadramento e o registro de estado de leitura — e **6 conferem**: as **10 checagens estruturais**, as figuras, o relatório, as transcrições contra a folha do PDF, o campo multiorganizacional e as citações do documento 11. Ele falha — com código de saída diferente de zero — se qualquer coisa divergir. Rode-o depois de **toda** alteração no JSON ou no corpus.
 
 > **As cifras de estado deste README são conferidas pela checagem 10 do ciclo**, que as compara com o medido e **falha se a frase que ela vigia desaparecer** — porque guarda que não acha a sua âncora e passa em silêncio é pior que guarda nenhuma. O estado completo e sempre atual vive no **Painel de estado**, gerado, no alto de [`docs/PENDENCIAS-ANALITICAS.md`](docs/PENDENCIAS-ANALITICAS.md).
 

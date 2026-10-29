@@ -616,18 +616,36 @@ def main():
     # ja inseriu identificadores com sufixo em revisao posterior (PT-03A a PT-06C),
     # de modo que remissao quebrada e risco real, e hoje nada a acusava.
     import re as _re
+    import sys as _sys6
+    _sys6.path.insert(0, str(RAIZ / "scripts"))
+    from conferir_paginas import (CAMPOS_DE_PROSA as _PROSA6,
+                                  CAMPO_BASE as _BASE6,
+                                  confere_esquema as _esq6)
+    # O ASSERT DO ESQUEMA RODA AQUI, no primeiro passo que importa a
+    # classificacao. Se o codebook ganhar campo, ele derruba o ciclo no
+    # passo 9 e exige a classificacao -- de modo que a guarda seguinte
+    # nao pode nascer cega. **Funcao de guarda que ninguem chama nao e
+    # guarda**, e esta casa ja pagou por isso uma vez, quando um
+    # backspace de controle deixou o regex desta mesma checagem inerte.
+    for _ev6 in eventos:
+        _esq6(_ev6)
     ids = {ev["id"] for ev in eventos}
     pendura = 0
     for ev in eventos:
-        # `status_verificacao` ENTROU EM 29/10/2026 (item 104). Medido
-        # naquele dia, ao levantar o escopo das diades: aquele campo
-        # tem 33 remissoes PT-XX e esta checagem nao o lia -- zero
-        # quebradas, de modo que a extensao nasceu verde. **Guarda que
-        # enumera campos a mao nao cresce quando a prosa migra de
-        # campo**, e e o irmao do buraco que o item 100 achou na guarda
-        # das meias-ancoras.
-        for campo in ("mecanismo_causal", "fonte_trecho",
-                      "nota_auditoria", "status_verificacao"):
+        # A LISTA DE CAMPOS DESTA CHECAGEM DEIXOU DE EXISTIR EM
+        # 29/10/2026 (item 106), e e o conserto do padrao que a mordeu.
+        # Em 28/10 ela lia tres campos e nao `status_verificacao`, que
+        # tinha 33 remissoes; em 29/10 a varredura achou que ela tambem
+        # nao lia `target_alvo` nem `resposta_estatal`, com 4 remissoes
+        # e zero quebradas. **Em vez de acrescentar os dois, a lista
+        # saiu:** ela passou a ser a classificacao derivada de
+        # `conferir_paginas`, que o `assert` do esquema protege. Se o
+        # codebook ganhar campo de prosa, esta checagem o le sozinha.
+        #
+        # Remissao pode morar em QUALQUER prosa, inclusive na
+        # transcrita, e por isso o campo base entra aqui -- diferente
+        # da guarda das meias-ancoras, onde ele e a contencao.
+        for campo in _PROSA6 + (_BASE6,):
             # Fronteira de palavra dos dois lados. ATENCAO: esta linha ja foi
             # escrita uma vez por heredoc, que converteu a sequencia barra-b em
             # BACKSPACE de controle (\x08). O regex ficou inerte e a checagem

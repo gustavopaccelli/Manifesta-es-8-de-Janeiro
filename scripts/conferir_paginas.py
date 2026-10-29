@@ -362,27 +362,75 @@ OCIOSAS_BASE = 0
 # `fonte_trecho`, ou subir este numero E dizer no commit por que.
 MEIAS_ANCORAS_BASE = 0
 
-# Os campos que autorizam prosa e nao sao conferidos contra a folha.
-# ESTENDIDO EM 28/10/2026 (item 100), e o nome do constante ficou estreito
-# para o que ele cobre hoje. A guarda nasceu em 25/10 perguntando por aspa
-# que vive em campo de NOTA, e `mecanismo_causal` NAO e nota -- e o campo
-# analitico. So que e nele que a prosa deste projeto mais cita fonte, e em
-# 28/10 eu escrevi seis aspas la e o conferidor nao as leu: **o ponto cego
-# mordeu quem o construiu.**
+# --------------------------------------- A CLASSIFICACAO DOS CAMPOS ---
+# ACRESCENTADA EM 29/10/2026 (item 106), e ela e o conserto de um padrao que
+# mordeu DUAS VEZES EM TRES DIAS:
 #
-# MEDIDO ANTES DE LIGAR, com as 15 aspas da mesma rodada ja promovidas:
-# 45 aspas em `mecanismo_causal`, em 24 registros; 26 localizam numa folha
-# que o proprio registro ancora e **as 26 estao em `fonte_trecho`**, de
-# modo que a contencao `n in base` as dispensa; as 8 restantes NAO
-# localizam, porque sao NOMES DE MECANISMO RETIRADOS grafados dentro do
-# registro pelo padrao da casa -- PT-01, PT-06, PT-12A, PT-21, PT-34 e
-# PT-62 (duas) -- mais uma frase de prosa do analista em PT-18. A guarda so
-# acusa aspa que LOCALIZA, e por isso **nenhuma excecao nova foi precisa**.
+#   - a guarda das meias-ancoras nasceu em 22/10 lendo dois campos de nota, e
+#     nao lia `mecanismo_causal`, que e onde a prosa deste projeto mais cita
+#     fonte. Em 28/10 eu escrevi seis aspas la e o conferidor nao as leu: **o
+#     ponto cego mordeu quem o construiu** (item 100);
+#   - a checagem 6 validava remissao `PT-XX` em tres campos e nao em
+#     `status_verificacao`, que tinha 33 remissoes (item 104).
 #
-# O QUE ELA PASSA A PEGAR: aspa nova escrita no campo analitico sem ir para
-# `fonte_trecho` -- exatamente o defeito que eu cometi em 28/10.
-CAMPOS_DE_NOTA = ("nota_auditoria", "status_verificacao",
-                  "mecanismo_causal")
+# A CAUSA NAO E DESCUIDO: nao existia aqui uma classificacao dos campos do
+# esquema, de modo que **cada guarda enumerava a lista do dia** e ficava a um
+# campo de distancia de cegar. Varrido o repositorio em 29/10: TRES guardas
+# enumeravam campo -- as duas acima e o marcador de diade, que le um campo so.
+#
+# A DISTINCAO QUE O CENSO OBRIGA A FAZER: **gerador que nomeia campo esta
+# certo** -- nomear e o trabalho dele, e `gerar_codebook` nomeia quinze. O que
+# envelhece e **guarda que VARRE PROSA e nomeia campo**.
+#
+# `NAO_PROSA` traz a razao de cada exclusao, porque exclusao sem razao e a
+# dividida que esta casa persegue. `CAMPO_BASE` nao e exclusao: e o campo
+# CONFERIDO, e ele entra nas guardas como contencao, nao como alvo.
+NAO_PROSA = {
+    "id": "identificador",
+    "data_hora": "data, nao prosa — e `identificador nao e cifra` vale aqui",
+    "fase": "vocabulario de quatro camadas",
+    "autonomia_movimento": "vocabulario controlado de cinco valores",
+    "status_classe": "vocabulario controlado de quatro classes",
+    "fonte_url": "URL",
+    "fonte_local": "caminhos, separados por ponto e virgula",
+    "fonte_pagina": "localizadores — folha de PDF ou §secao",
+}
+CAMPO_BASE = "fonte_trecho"
+
+# O ESQUEMA DECLARADO. Ele existe para o `assert` abaixo poder falar, e e
+# conferido contra as chaves do proprio registro -- nao contra `CABECALHOS` de
+# `gerar_codebook`, que arrastaria `openpyxl` para dentro de um conferidor.
+ESQUEMA = ("id", "data_hora", "fase", "ator_grupo", "repertorio_acao",
+           "target_alvo", "framing_narrativa", "resposta_estatal",
+           "mecanismo_causal", "autonomia_movimento", "fonte_trecho",
+           "fonte_url", "fonte_local", "fonte_pagina", "status_verificacao",
+           "status_classe", "nota_auditoria")
+
+CAMPOS_DE_PROSA = tuple(c for c in ESQUEMA
+                        if c not in NAO_PROSA and c != CAMPO_BASE)
+assert set(NAO_PROSA) | {CAMPO_BASE} | set(CAMPOS_DE_PROSA) == set(ESQUEMA)
+
+
+def confere_esquema(evento):
+    """O registro tem exatamente os campos que a classificacao conhece?
+
+    **E AQUI QUE O PADRAO SE FECHA.** Se o esquema crescer, este assert
+    derruba o ciclo e exige que o campo novo seja classificado em prosa ou
+    nao-prosa -- de modo que a guarda seguinte **nao pode nascer cega**. A
+    comparacao e contra as chaves do registro, que e a fonte da verdade.
+    """
+    vistos = set(evento)
+    assert vistos == set(ESQUEMA), (
+        "o esquema mudou e a classificacao de campos nao sabe: "
+        "sobrando %s, faltando %s — classifique em NAO_PROSA ou deixe cair em "
+        "CAMPOS_DE_PROSA, e diga a razao"
+        % (sorted(vistos - set(ESQUEMA)) or "nada",
+           sorted(set(ESQUEMA) - vistos) or "nada"))
+
+
+# O nome antigo fica como apelido, porque a saida do ciclo o imprime e tres
+# guardas o consomem. **O constante deixou de ser lista:** ele e derivado.
+CAMPOS_DE_NOTA = CAMPOS_DE_PROSA
 
 
 def _prefixo_maximo(alvo, folha):
@@ -1061,6 +1109,12 @@ def main():
     meias = []          # a guarda de 22/10/2026 — ver MEIAS_ANCORAS_BASE
     nao_pdf = []        # ancora nao-PDF localizada — ver item 87
     fora_da_peca = []   # varrida por inteiro e nao achada — ver item 88
+
+    # O ASSERT DO ESQUEMA tambem aqui, porque este passo e o que imprime
+    # a linha das meias-ancoras com os campos no escopo: se a
+    # classificacao estiver desatualizada, a linha mentiria.
+    for _ev in eventos.values():
+        confere_esquema(_ev)
 
     aninhadas = {}
     for e in alvos_reg:

@@ -22,7 +22,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Corpus | **84 peças / 12.644 p.** no manifesto, em 14 eixos — 75 PDFs e 9 âncoras não-PDF, estas conferidas por arquivo inteiro desde 25/10/2026. Da documental: **34 peças / 7.092 p.**; de literatura: 50 peças |
 | Figuras | SVG da cadeia causal e cronologia navegável. **São a única parte do aparato escrita à mão**, e duas guardas as cobrem: o passo 11 confere que todo registro do codebook aparece na figura, e a tabela-espelho do passo 6 confere o **nome do mecanismo** de cada ponto contra o campo — com linha de base em zero divergências |
 | Verificação | `bash scripts/ciclo.sh` — **15 passos**: 9 geradores e 6 conferidores, entre eles as **10 checagens estruturais**. Toda linha de base reprova com código de saída ≠ 0; nenhuma apenas avisa |
-| Controle de versão | git desde **20/09/2026**, 116 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 29/10/2026 |
+| Controle de versão | git desde **20/09/2026**, 117 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 29/10/2026 |
 | Tarefas abertas | **3** — 10, 17, 16. A lista vive na seção *Ordem de ataque*, gerada pelo passo 3, e 34 tarefas estão fechadas |
 | Decisões pendentes | **10**, em 3 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 4 |
 | **Redação do artigo** | **não iniciada — por decisão, é o último item da fila.** Desde 25/10/2026 ela não tem mais pré-requisito de dado: a tarefa 26 fechou e não há decisão de campo aberta no codebook. **Começá-la é decisão do pesquisador** |
@@ -5923,6 +5923,76 @@ Ao abri-lo, **duas outras cifras à mão apareceram**, nenhuma na lista das sete
 **Uma decisão sua, e com o preço na mão:** registrar-se na ACLED e trazer a série para `Fontes/` é **coleta**, com as mesmas perguntas que os PDFs tiveram — licença, procedência, estado de leitura, lugar no manifesto.
 
 > **E uma consequência que vale antes da decisão:** se a série entrar, **PT-62 pode deixar de ser `Inferência do analista`**. É o **único** registro do codebook nessa classe, e o que o mantém ali é exatamente a ausência da medição do desfecho.
+
+
+---
+
+## 106. A varredura das guardas que enumeram campo — e o conserto foi na raiz — ✅ 29/10/2026
+
+**Encaminhamento:** *"O que você propõe? executar? elabore um plano para a execução."*
+
+### 106.1 O padrão tem três instâncias, e a terceira era a que eu havia recusado
+
+Varri o repositório procurando guarda que enumera campo à mão, e o censo obriga uma distinção:
+
+> **Gerador que nomeia campo está CERTO** — nomear é o trabalho dele, e `gerar_codebook.py` nomeia quinze. **O que envelhece é guarda que VARRE PROSA e nomeia campo**, porque ela fica sempre a um campo de distância de cegar.
+
+| guarda | não lia | o que morava lá |
+|:--|:--|--:|
+| meias-âncoras | `repertorio_acao`, `framing_narrativa` | **5 aspas / 6 fragmentos, meias-âncoras de verdade** |
+| checagem 6 | `target_alvo`, `resposta_estatal` | 4 remissões, **zero quebradas** |
+| marcador de díade | todos menos um | **zero** |
+
+> **A terceira é a que eu havia recusado em 29/10 de manhã**, por ser "guarda sobre defeito que ainda não ocorreu. **A varredura provou a classe duas vezes** — e guarda para a terceira instância de classe provada não é especulação. Custo: um laço.
+
+### 106.2 O conserto não foi estender três listas
+
+**As três enumeravam porque não existia no repositório uma classificação dos campos do esquema.** Enquanto ela não existisse, **toda guarda nova ia enumerar e envelhecer igual** — e o comentário de cada uma seria mais uma dívida.
+
+| | |
+|:--|:--|
+| `NAO_PROSA` | **8 campos, com a razão de cada exclusão** — id, data, fase, os dois vocabulários controlados, a URL, os caminhos e os localizadores |
+| `CAMPO_BASE` | `fonte_trecho` — **não é exclusão**: é o campo conferido, e entra nas guardas como contenção |
+| `CAMPOS_DE_PROSA` | **derivado** — os oito que sobram. **A lista deixou de existir** |
+
+**E o `assert` é o coração.** `confere_esquema()` compara a classificação contra **as chaves do próprio registro no JSON** — não contra lista escrita à mão — e **roda nos 87 registros, no passo 9 e no 13**. Se o codebook ganhar um campo, **o ciclo cai e exige que ele seja classificado**.
+
+> **Não deriva de `CABECALHOS`**, que é a declaração do esquema, porque aquele constante vive em `gerar_codebook.py`, que importa `openpyxl`. **Acoplar um conferidor a biblioteca de planilha seria pior do que o problema** — e comparar contra as chaves do JSON dá a mesma garantia, com a fonte da verdade do projeto fazendo o trabalho.
+
+### 106.3 Funcão morta não é guarda, e eu escrevi uma
+
+**Escrevi `confere_esquema()` e não a chamei de lugar nenhum.** A prova negativa do desenho passou vermelha, e foi assim que apareceu.
+
+> **Guarda que existe e não roda é pior do que guarda que não existe**, porque o comentário dela promete vigilância que não ocorre. **E esta casa já pagou por isso**: o regex da própria checagem 6 ficou inerte por um backspace de controle, e a checagem imprimia `OK` testando zero strings. A função passou a ser chamada em **dois** pontos, e a ordem importa — no passo 9, que é o primeiro a importar a classificação, para que o esquema novo não espere o passo 13.
+>
+> **E um erro de tipo no caminho:** `eventos` no passo 13 é **dicionário** indexado por id, e `for _ev in eventos` iteraria as chaves — `confere_esquema("PT-01")` faria `set()` de caracteres. Pego pela prova, consertado para `.values()`.
+
+### 106.4 As cinco aspas, promovidas antes de ligar a guarda
+
+**PT-10A, PT-12A, PT-23 (duas) e PT-53**, todas em `framing_narrativa`, com os **seis fragmentos conferindo integral** em CPMI f. 884, 578 e 376 e Balanço f. 6. **Nenhuma âncora nova:** a folha já estava em `fonte_pagina`. A de PT-12A rende dois fragmentos porque tem elisão entre parênteses, que é a forma que `fragmentos()` parte — a lição do item 100 aplicada antes de doer.
+
+> **O `framing_narrativa` continua com a aspa, e é de propósito:** aquele campo é o do quadro, e o quadro **é** uma frase citada em boa parte dos registros. **Cinco outras aspas dele já estavam em `fonte_trecho`** — PT-01B, PT-19B, PT-20B (duas) e PT-50A —, de modo que **promover já era a prática da casa**; o que faltava era a guarda que a cobra. O que a promoção acrescenta não é o texto: é **a conferência da literalidade dele**.
+
+**PT-23 passou de indeterminado a `OK 2/2`**, e os indeterminados caíram de 4 a 3.
+
+### 106.5 Sete provas negativas
+
+| prova | onde |
+|:--|:--|
+| meias-âncoras pega em `framing_narrativa` | passo 13 cai |
+| checagem 6 pega em `resposta_estatal` | passo 9 cai |
+| **campo novo sem classificação** | **o `assert` cai** |
+| díade: id inexistente · um lado só · consigo mesmo · **fora do campo canônico** | passo 7 cai, quatro vezes |
+
+**A terceira é a que fecha o padrão**, e a última nasceu desta frente: o marcador de díade é **lido** de um campo só, e agora é **vigiado** em todos — ler um campo e vigiar um campo não são a mesma coisa.
+
+### 106.6 O que isto deixa, e o que eu retirei
+
+**Retirei a minha própria proposta de ontem.** Eu havia sugerido que cada guarda enumerasse em comentário os campos que deixa fora. **Com a classificação derivada não há campo deixado fora para enumerar** — e comentário que enumera é a mesma dívida que a constante era.
+
+**E o censo não virou script.** Ele existe para decidir esta frente; **o `assert` é o que o torna permanente**. Gravá-lo em `scripts/historico/` seria guardar a pergunta depois de a resposta ter virado guarda.
+
+**Nada fica aberto desta frente.**
 
 ---
 

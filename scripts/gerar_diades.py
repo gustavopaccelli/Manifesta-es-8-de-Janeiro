@@ -48,6 +48,8 @@ from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
 JSON_P = RAIZ / "process_tracing_8jan_eventos.json"
+sys.path.insert(0, str(RAIZ / "scripts"))
+from conferir_paginas import CAMPO_BASE, CAMPOS_DE_PROSA  # noqa: E402
 SAIDA = RAIZ / "reports/TABELA-DIADES.md"
 
 # `DIADE:` com ou sem acento, seguido de um ou mais ids separados por virgula.
@@ -56,17 +58,44 @@ MARCA = re.compile(r"D[IÍ]ADE\s*:\s*((?:PT-\d{1,2}[A-E]?(?:\s*,\s*)?)+)",
 ID = re.compile(r"PT-\d{1,2}[A-E]?")
 
 
-def declaradas(dados):
-    """{id: [ids declarados]} a partir de `mecanismo_causal`.
+CANONICO = "mecanismo_causal"
 
-    UM CAMPO SO, de proposito. Espalhar o marcador por quatro campos daria a
-    mesma ambiguidade que a remissao solta tem hoje -- e o campo analitico e
-    onde a afirmacao sobre o mecanismo vive.
+
+def fora_do_canonico(dados):
+    """O marcador aparece em campo que NAO e o canonico? -> [(id, campo)]
+
+    ACRESCENTADA EM 29/10/2026 (item 106). O marcador e lido so de
+    `mecanismo_causal`, e isso e desenho -- o campo analitico e onde a
+    afirmacao sobre o mecanismo vive. **Mas ler um campo e vigiar um campo nao
+    sao a mesma coisa:** se a declaracao aparecer noutro campo, ler so o
+    canonico faz o gerador NAO VER e nao dizer nada, que e o modo de falha que
+    mordeu a guarda das meias-ancoras e a checagem 6.
+
+    Medido ao ligar: **zero ocorrencias fora do canonico** -- de modo que esta
+    guarda nasce verde. Ela nao e especulativa: a classe de defeito foi provada
+    DUAS VEZES em tres dias, e esta e a terceira instancia dela.
+    """
+    achados = []
+    for ev in dados["eventos"]:
+        for campo in CAMPOS_DE_PROSA + (CAMPO_BASE,):
+            if campo == CANONICO:
+                continue
+            if MARCA.search(str(ev.get(campo) or "")):
+                achados.append((ev["id"], campo))
+    return achados
+
+
+def declaradas(dados):
+    """{id: [ids declarados]} a partir do campo canonico.
+
+    UM CAMPO SO, de proposito. Espalhar o marcador daria a mesma ambiguidade
+    que a remissao solta tem hoje -- e `fora_do_canonico` e o que garante que
+    `um campo so` seja regra vigiada, e nao esperanca.
     """
     out = {}
     for ev in dados["eventos"]:
         achados = []
-        for m in MARCA.finditer(ev.get("mecanismo_causal") or ""):
+        for m in MARCA.finditer(ev.get(CANONICO) or ""):
             achados.extend(ID.findall(m.group(1)))
         if achados:
             # dedup preservando a ordem de escrita
@@ -98,6 +127,10 @@ def guarda(dados, falar=True):
                 falhas.append(
                     "díade não recíproca: %s declara %s, e %s não declara %s"
                     % (a, b, b, a))
+
+    for rid, campo in fora_do_canonico(dados):
+        falhas.append("%s declara díade em `%s`, e o campo canônico é "
+                      "`%s`" % (rid, campo, CANONICO))
 
     pares = sorted({tuple(sorted((a, b))) for a, alvos in decl.items()
                     for b in alvos if b in ids and b != a})
@@ -204,8 +237,15 @@ def autoteste():
     _, f3 = guarda(c, falar=False)
     assert any("consigo mesmo" in x for x in f3), f3
 
-    print("autoteste OK — %d par(es), reciprocidade conferida, três provas "
-          "negativas" % len(pares))
+    # PROVA 4 — o marcador fora do campo canonico
+    c = copy.deepcopy(dados)
+    alvo2 = next(e for e in c["eventos"] if e["id"] == a)
+    alvo2["nota_auditoria"] = (alvo2["nota_auditoria"] or "") + " DÍADE: PT-01"
+    _, f4 = guarda(c, falar=False)
+    assert any("campo canônico" in x for x in f4), f4
+
+    print("autoteste OK — %d par(es), reciprocidade conferida, quatro "
+          "provas negativas" % len(pares))
 
 
 def main():

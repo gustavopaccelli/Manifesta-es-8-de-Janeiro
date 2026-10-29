@@ -43,7 +43,18 @@ JSON_P = RAIZ / "process_tracing_8jan_eventos.json"
 
 # `mecanismo_causal` entrou em 25/09/2026: é onde PT-28 citava dois documentos
 # sem ancorar nenhum, e a varredura sem ele não via. Custo em ruído: zero.
-CAMPOS = ("fonte_trecho", "mecanismo_causal", "status_verificacao", "nota_auditoria")
+#
+# A LISTA SAIU EM 29/10/2026 (item 106). Ela tinha a mesma forma das duas
+# guardas que cegaram em três dias, e o conserto é o mesmo: a
+# classificação derivada de `conferir_paginas`, protegida pelo `assert`
+# do esquema. Esta peça está FORA do ciclo, de modo que a lacuna aqui não
+# causava falha silenciosa — causava diagnóstico mais fraco. Entrou de
+# carona porque é uma linha, e porque o comentário acima já declarava que
+# o custo em ruído de acrescentar campo é zero.
+sys.path.insert(0, str(RAIZ / "scripts"))
+from conferir_paginas import CAMPO_BASE, CAMPOS_DE_PROSA  # noqa: E402
+
+CAMPOS = (CAMPO_BASE,) + CAMPOS_DE_PROSA
 
 # Como os documentos aparecem escritos na prosa, além do código curto que o
 # próprio JSON registra em metadados.registro_documentos.

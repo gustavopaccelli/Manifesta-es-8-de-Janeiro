@@ -6,7 +6,9 @@
 
 ## 1. A decisão, e ela é forçada pela evidência
 
-**Este repositório não vai a remoto público.**
+> **ERRATA DE 30/10/2026, E ELA É DE RUMO, NÃO DE CIFRA.** As seções 1 e 2 afirmam, em presente, que este repositório não vai a remoto público e que "continua privado". **Deixou de ser verdade em 21/10/2026**, quando o pesquisador decidiu publicar o remoto — e a consequência dessa decisão foi exatamente a que este documento previa: **os PDFs do corpus saíram do versionamento**, pela regra `Fontes/**/*.pdf` do `.gitignore`, porque o remoto é público. **A evidência deste documento não mudou; a saída que ele escolheu mudou.** O que segue abaixo é o levantamento de 13/10/2026, e fica como está — é o registro de por que a redistribuição do corpus estava fora de questão, e continua fora.
+
+**Este repositório não vai a remoto público.** *(afirmação de 13/10/2026 — revista em 21/10/2026: ver a errata acima.)*
 
 Não é preferência de cautela. A auditoria de licença — `python scripts/auditar_licencas.py`, que lê o que **cada arquivo declara sobre si**, e não o que o editor ou o registro de acesso aberto dizem — encontrou isto:
 
@@ -33,7 +35,7 @@ Não é preferência de cautela. A auditoria de licença — `python scripts/aud
 
 Os PDFs estão **no histórico**. O `.git` tem **250 MB** por causa deles, contra **8 MB** de texto e código. Um remoto público deste repositório distribuiria os arquivos **mesmo que a árvore de trabalho ficasse limpa**.
 
-> Logo a pergunta "tirar o corpus do versionamento antes de criar o remoto?" tem resposta **não**, por duas razões: não bastaria, e o versionamento é o que garante os bytes exatos de nove peças que o pesquisador obteve pessoalmente e que não se recuperam. **O corpus continua versionado, e o repositório continua privado.**
+> Logo a pergunta "tirar o corpus do versionamento antes de criar o remoto?" tem resposta **não**, por duas razões: não bastaria, e o versionamento é o que garante os bytes exatos de nove peças que o pesquisador obteve pessoalmente e que não se recuperam. **O corpus continua versionado, e o repositório continua privado.** *(13/10/2026. Em 21/10/2026 o repositório foi publicado e **o corpus deixou de ser versionado** — a segunda metade desta frase é que resolveu a primeira. Ver a errata na seção 1.)*
 
 ## 3. Como a pesquisa fica verificável sem ser redistribuída
 
@@ -58,8 +60,18 @@ E o manifesto serve a um segundo propósito que vale por si: a **checagem 8** de
 1. **`.backup_pre_lula/` está versionado**: 27 arquivos, **27 MB**, incluindo um PDF de 24,7 MB. É diretório de backup dentro do controle de versão. Não foi removido porque são os estados anteriores do JSON, que são a sua rede de segurança — **tirar backup do versionamento é decisão sua**. A exportação já o exclui por construção.
 2. **`STF_Democracia-Inabalada_Folder.pdf`: 37,4 MB em 6 páginas** — 6,23 MB por página, o pior índice do corpus. Recomprimir seria seguro quanto à licença, porque é ato oficial, mas **mudaria os bytes** e com isso o SHA-256 do manifesto e o lastro de qualquer âncora que dependa da peça. **Não se toca em bytes de peça do corpus sem decisão explícita.**
 
-## 6. O que continua em aberto, e é jurídico
+## 6. A licença da obra — ✅ DECIDIDA EM 30/10/2026
 
-**Sob que licença sai a obra do pesquisador** — o codebook, os scripts, os documentos de análise. Não escolhi por você: licença é decisão jurídica, e a de quem assina a obra.
+**Sob que licença sai a obra do pesquisador** era a pendência jurídica desta tarefa, aberta em 13/10/2026. **Decisão dele em 30/10/2026, e são duas licenças com escopo declarado:**
+
+| escopo | licença |
+|:--|:--|
+| prosa, dados e documentação — codebook, `docs/`, `reports/`, `data/`, figuras, e a catalogação dentro de `Fontes/` | **CC BY 4.0** |
+| `scripts/` | **MIT** |
+| as peças do corpus em `Fontes/` | **nenhuma** — obra de terceiros, que este repositório não tem como licenciar |
+
+**O arquivo operativo é `LICENSE`**, na raiz, e o escopo de cada seção está escrito lá. **Duas e não uma porque a própria Creative Commons recomenda não aplicar suas licenças a software**, que não tratam de patente nem de isenção de garantia.
+
+> **E há um limite que a licença não pode vencer, declarado no próprio `LICENSE`:** a CC BY alcança o codebook **como obra** — a seleção, a codificação, os mecanismos nomeados, as notas de auditoria —, e **não alcança as transcrições literais de `fonte_trecho`**, que são citação de obra de terceiros, com fonte e folha declaradas registro por registro. **Licenciar o que não é seu seria o mesmo defeito que este documento inteiro existe para evitar.**
 
 Os arquivos que a exportação exclui por serem binários **e que são seus** estão listados pelo próprio script quando ele roda: a tese de doutorado, o projeto de pesquisa, as planilhas e os sete `.docx` de fichamento do eixo 05. Publicá-los é decisão sua, e é por isso que o script os **lista em vez de decidir**.

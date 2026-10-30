@@ -1,7 +1,7 @@
 {
   "_leia_me": "LEDGER DAS DECISOES DO PESQUISADOR, criado em 27/10/2026 (item 90). Fonte da verdade da secao 'Decisoes pendentes' de docs/PENDENCIAS-ANALITICAS.md, que e GERADA por scripts/gerar_decisoes.py entre marcadores HTML. Nao editar a secao a mao: o ciclo sobrescreve. A razao de existir: as pendencias viviam nas secoes 'O que isto deixa' de cada item da agenda, que sao INSTANTANEOS DATADOS e nao lista viva -- em 25/10/2026 a colheita item a item devolveu oito pendencias ja resolvidas por itens posteriores. O defeito nao era a prosa: era NAO HAVER UM LUGAR UNICO ONDE VIRAR O BIT. As secoes de cada item ficam como estao, porque sao o registro do que se sabia naquele dia; esta secao e o que vale hoje. ATENCAO AO ESCREVER AQUI: os campos de PROSA sao lidos pelo pesquisador na agenda, e vao ACENTUADOS. Comentario de codigo neste repositorio vai sem acento; prosa para ele, nunca.",
   "_limite_declarado": "Este ledger conserta a COPIA, nao o JUIZO. Ele da um lugar unico para registrar que uma decisao saiu, e deriva a contagem; ele NAO detecta sozinho que uma decisao foi resolvida noutro item. Isso continua sendo leitura humana, e a guarda G-A existe para que ao menos o PONTEIRO nunca aponte para secao inexistente.",
-  "revisada": "28/10/2026",
+  "revisada": "30/10/2026",
   "antes": [
     "**As decisões abaixo são suas, e nenhuma delas bloqueia as tarefas abertas.** A lista é gerada de `data/decisoes_abertas.json`: **fechar uma decisão é virar um campo**, e a contagem acompanha. **O que não está aqui não está pendente** — as seções *\"O que isto deixa\"* de cada item da agenda são o registro do que se sabia naquele dia, e várias delas foram resolvidas por itens posteriores.",
     "**A ordem não é de prioridade, e sim de natureza.** Dentro de cada grupo, a ordem é a de nascimento."
@@ -9,11 +9,12 @@
   "decisoes": [
     {
       "id": "lic-paginas-web",
-      "estado": "aberta",
+      "estado": "decidida",
       "natureza": "o remoto é público",
-      "o_que": "**A licença das dez páginas web do eixo 09.** Seis declaram *\"Todos os direitos reservados\"* (Agência Brasil) e quatro nada declaram (portal do STF), e o manifesto registra `licenca_declarada` = `NÃO CONFERIDA (não-PDF)` para todas, porque o auditor de licença **só lê PDF**. **As três saídas estão escritas com o preço de cada uma.** A decisão de 21/10 foi sobre PDFs e nunca examinou as peças não-PDF.",
-      "onde": "89.7",
-      "nasceu": "25/10/2026"
+      "o_que": "**A licença das páginas web do eixo 09.** **DECIDIDA em 30/10/2026: manter, com a razão escrita** — a saída (a) de §89.7. Nasceu `Fontes/09_Arquivamento-web/LEIA-ME.md`, porque **o eixo não tinha LEIA-ME** e a razão precisava de lugar. Lido no arquivo em 30/10: **6 de 6** da Agência Brasil declaram *\"Todos os direitos reservados\"* e **4 de 4** do STF não declaram nada. A razão tem três pernas — comunicação institucional de órgão público, o precedente do item 77 que barrou o HTML do Estadão por ser jornalismo comercial, e **o preço escrito**: dez páginas num remoto público. **E o censo corrigiu uma cifra minha:** dos **11** arquivos rastreados, **5** estão no manifesto e **6** fora — eu havia dito 4, por ter contado só os `.html`.",
+      "onde": "107.3",
+      "nasceu": "25/10/2026",
+      "quando": "✅ 30/10/2026 — mantidas, com a razão escrita no LEIA-ME do eixo"
     },
     {
       "id": "higiene-historico",
@@ -25,11 +26,12 @@
     },
     {
       "id": "licenca-obra-propria",
-      "estado": "aberta",
+      "estado": "decidida",
       "natureza": "o remoto é público",
-      "o_que": "**A licença da sua própria obra** — o que o repositório declara sobre o uso do codebook e dos documentos de análise.",
-      "onde": "46.6",
-      "nasceu": "13/10/2026"
+      "o_que": "**A licença da sua própria obra.** **DECIDIDA em 30/10/2026:** **CC BY 4.0** no codebook, em `docs/`, `reports/`, `data/`, nas figuras e na catalogação dentro de `Fontes/`; **MIT** em `scripts/`; e **`Fontes/` fora**, porque é obra de terceiros que este repositório não tem como licenciar. Duas licenças e não uma porque a própria Creative Commons recomenda não aplicar as suas a software. O arquivo operativo é `LICENSE`, e o limite está escrito nele: a CC BY alcança o codebook **como obra**, e **não** as transcrições literais de `fonte_trecho`, que são citação de terceiro. A §6 de `LICENCA-E-DISTRIBUICAO.md` deixou de ser pendência, e as §1 e §2 ganharam errata — diziam em presente que o repositório é privado, e o remoto é público desde 21/10/2026.",
+      "onde": "107.1",
+      "nasceu": "13/10/2026",
+      "quando": "✅ 30/10/2026 — CC BY 4.0 na prosa e nos dados, MIT nos scripts"
     },
     {
       "id": "cc-singer-ao-git",
@@ -58,11 +60,12 @@
     },
     {
       "id": "quatro-registros-n",
-      "estado": "aberta",
+      "estado": "decidida",
       "natureza": "campo do codebook",
-      "o_que": "**Os quatro registros `N` da grade funcional** — PT-20A, PT-20B, PT-25 e PT-47 têm texto em `framing_narrativa` que **não é quadro de ação coletiva**. São 18 vazios ao todo, e os quatro `N` são os que têm texto e não têm quadro.",
-      "onde": "73",
-      "nasceu": "21/10/2026"
+      "o_que": "**Os quatro registros `N` da grade funcional** — PT-20A, PT-20B, PT-25 e PT-47. **DECIDIDA em 30/10/2026, e a medição inverteu o problema:** os quatro guardam **avaliação de ator estatal**, e as três primeiras são a cadeia do rebaixamento de risco, que é evidência do caso. **O defeito não eram os valores: era o campo não ter alcance escrito**, de modo que o nome dele fazia a definição. Entrou `metadados.alcance_framing_narrativa` — o campo guarda o enquadramento que o ator dá à situação, e **quadro de ação coletiva é subconjunto dele**. **Nenhum registro mudou**, e mover o texto para `nota_auditoria` foi recusado porque produziria **vazio falso**: vazio aqui significa fonte lida e silenciosa, e as quatro fontes declaram o enquadramento. A declaração **não enumera registro nem traz cifra** — a fronteira segue derivada pela grade (lição do item 106).",
+      "onde": "107.2",
+      "nasceu": "21/10/2026",
+      "quando": "✅ 30/10/2026 — o alcance do campo declarado, zero registro mudou"
     },
     {
       "id": "pt38-sem-transcricao",

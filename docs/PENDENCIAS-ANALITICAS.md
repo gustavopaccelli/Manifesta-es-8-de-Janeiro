@@ -8,7 +8,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 
 <!-- PAINEL: gerado por scripts/gerar_painel.py. Não editar à mão: o ciclo sobrescreve. -->
 
-## Painel de estado — medido em 29 de outubro de 2026
+## Painel de estado — medido em 30 de outubro de 2026
 
 **Esta seção é GERADA pelo passo 5 do ciclo. Nenhuma cifra dela é digitada**, e as listas de tarefas e decisões não são repetidas aqui: o painel aponta para as seções que os passos 3 e 4 geram. **A razão tem data** — até 27/10/2026 este painel era escrito à mão, datava-se de 29/09, e a revisão do repositório mediu que **nenhuma das suas cifras estava certa** (item 91).
 
@@ -22,9 +22,9 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Corpus | **84 peças / 12.644 p.** no manifesto, em 14 eixos — 75 PDFs e 9 âncoras não-PDF, estas conferidas por arquivo inteiro desde 25/10/2026. Da documental: **34 peças / 7.092 p.**; de literatura: 50 peças |
 | Figuras | SVG da cadeia causal e cronologia navegável. **São a única parte do aparato escrita à mão**, e duas guardas as cobrem: o passo 11 confere que todo registro do codebook aparece na figura, e a tabela-espelho do passo 6 confere o **nome do mecanismo** de cada ponto contra o campo — com linha de base em zero divergências |
 | Verificação | `bash scripts/ciclo.sh` — **15 passos**: 9 geradores e 6 conferidores, entre eles as **10 checagens estruturais**. Toda linha de base reprova com código de saída ≠ 0; nenhuma apenas avisa |
-| Controle de versão | git desde **20/09/2026**, 117 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 29/10/2026 |
+| Controle de versão | git desde **20/09/2026**, 118 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 29/10/2026 |
 | Tarefas abertas | **3** — 10, 17, 16. A lista vive na seção *Ordem de ataque*, gerada pelo passo 3, e 34 tarefas estão fechadas |
-| Decisões pendentes | **10**, em 3 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 4 |
+| Decisões pendentes | **7**, em 3 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 4 |
 | **Redação do artigo** | **não iniciada — por decisão, é o último item da fila.** Desde 25/10/2026 ela não tem mais pré-requisito de dado: a tarefa 26 fechou e não há decisão de campo aberta no codebook. **Começá-la é decisão do pesquisador** |
 
 > **O que este painel NÃO repete, de propósito.** As tarefas e as decisões abertas têm cada uma a sua seção gerada, e listá-las aqui seria a quarta cópia — a contabilidade deste projeto já envelheceu quatro vezes por cópia à mão, e o histórico está nos itens 49, 78, 83 e 90. **Os itens numerados abaixo são um log cronológico:** a cifra dentro de um item era verdade no dia dele e fica como está.
@@ -5994,25 +5994,106 @@ Varri o repositório procurando guarda que enumera campo à mão, e o censo obri
 
 **Nada fica aberto desta frente.**
 
+
+---
+
+## 107. A faixa 2 da ordem de ataque — três decisões, e nenhuma custou o que o ledger dizia — ✅ 30/10/2026
+
+**Encaminhamento:** *"Vamos executar as tarefas da faixa 2 já que é de execução pequena."*
+
+As três eram **decisões dele por natureza**, e por isso foram perguntadas de uma vez, com o preço de cada saída medido antes. **As três respostas foram a recomendação.** O que a execução mostrou é que **duas das três estavam descritas de menos no ledger** — não erradas: curtas.
+
+### 107.1 A licença da obra — CC BY 4.0 na prosa, MIT nos scripts
+
+**Decisão dele:** duas licenças com escopo declarado, e `Fontes/` fora.
+
+| escopo | licença |
+|:--|:--|
+| codebook, `docs/`, `reports/`, `data/`, figuras e a catalogação dentro de `Fontes/` | **CC BY 4.0** |
+| `scripts/` | **MIT** |
+| as peças do corpus | **nenhuma** — obra de terceiros, que este repositório não tem como licenciar |
+
+**Duas e não uma porque a própria Creative Commons recomenda não aplicar suas licenças a software** — elas não tratam de patente nem de isenção de garantia. O arquivo operativo é **`LICENSE`**, na raiz; a pendência jurídica fechou na §6 de `LICENCA-E-DISTRIBUICAO.md`, onde estava aberta desde 13/10/2026.
+
+> **E há um limite que a licença não pode vencer, e ele está escrito dentro do `LICENSE`:** a CC BY alcança o codebook **como obra** — a seleção, a codificação, os mecanismos nomeados, as notas de auditoria —, e **não alcança as transcrições literais de `fonte_trecho`**, que são citação de obra de terceiros com fonte e folha declaradas registro por registro. **Licenciar o que não é seu seria o mesmo defeito que `LICENCA-E-DISTRIBUICAO.md` existe para evitar.**
+
+**E a execução obrigou uma errata de rumo, não de cifra.** As §1 e §2 daquele documento afirmam, **em presente**, que o repositório *"não vai a remoto público"* e que *"continua privado"*. **Deixou de ser verdade em 21/10/2026**, quando ele decidiu publicar — e a consequência foi exatamente a que o documento previa: os PDFs saíram do versionamento, pela regra `Fontes/**/*.pdf`, **porque o remoto é público**. As duas passagens ganharam errata datada e o levantamento de 13/10 fica como está.
+
+> **Escrever licença nova dentro de um documento que diz que o repositório é privado seria publicar contradição.** A evidência daquele documento não mudou; a saída que ele escolheu mudou.
+
+**E a licença não viajaria na árvore publicável — achado na minha própria prova.** `exportar_aparato.py` monta a árvore por **inclusão por autorização**, e autoriza **por sufixo**: `.md`, `.py`, `.json`, `.csv`… **`LICENSE` não tem extensão**, de modo que o aparato publicado sairia **sem a licença da obra**, no mesmo dia em que a licença foi decidida. Conserto por **nome de arquivo** — não por sufixo novo, porque `endswith("license")` casaria qualquer caminho terminado nessa palavra — e **duas provas**: a negativa, que o predicado antigo é falso para `LICENSE`; e a positiva, que exporta de verdade e confere o arquivo no destino.
+
+> **E a assimetria da guarda daquele script vale ser nomeada, porque ela se repete neste repositório:** ela **apaga o destino** se qualquer peça `RESERVADA` **vazar** — e **nada nela acusaria a AUSÊNCIA** de um arquivo que devia viajar. **Guarda de vazamento não é guarda de omissão**, e é a mesma forma do achado da 107.3: o manifesto vigia **bytes**, e não vigia **licença** de peça que não ancora registro.
+
+**E a saída do exportador trazia a assinatura da casa, dentro do próprio relatório.** A linha dizia *"entre eles os **1** PDFs do corpus, de que fica só o manifesto"* — e **dois defeitos numa frase**: ela **não lê com o valor novo**, que é a lição de 22/10/2026 sobre cifra derivada quebrar a frase; e **o referente está errado, que é pior** — o único PDF versionado é um **backup** em `.backup_pre_lula/`, e **não é peça do corpus**: os PDFs do corpus saíram do versionamento em 21/10/2026, de modo que a exportação exclui **zero** peças do corpus. A cifra passou a ser **partida pelo manifesto**, que é quem define peça do corpus, e a frase ficou **sem verbo** de propósito, porque `"%d não são"` lia *"1 não são"*. Hoje imprime: **`entre eles 0 PDF(s) de peça do corpus e 1 PDF(s) fora do corpus`**.
+
+### 107.2 Os quatro registros `N` — o defeito não eram os quatro valores
+
+**Medi os quatro antes de propor saída, e a medição inverteu o problema.**
+
+| registro | o que está em `framing_narrativa` |
+|:--|:--|
+| PT-20A | `Avaliação de risco rebaixada` |
+| PT-20B | `'As divulgações apresentam-se de forma alarmante'` |
+| PT-25 | `Manifestação sob controle` |
+| PT-47 | `Contrição` |
+
+**São avaliações de ator estatal, e as três primeiras são a cadeia do rebaixamento de risco** — evidência substantiva do caso, não ruído. **O defeito é o campo não ter alcance escrito: o NOME dele estava fazendo a definição.**
+
+**Decisão dele: declarar o alcance**, no molde de `vocabulario_status_classe` (item 83). Entrou `metadados.alcance_framing_narrativa`, com cinco partes: o que o campo guarda — *o enquadramento que o ator dá à situação* —, que **quadro de ação coletiva é SUBCONJUNTO** dele, onde a fronteira é classificada, o que **vazio** significa, e que a classificação funcional **não é campo**. **Nenhum registro mudou.**
+
+> **A saída de mover os quatro para `nota_auditoria` foi recusada por medição, e a razão é fina:** `framing_narrativa` ficaria **vazio** nos quatro, e **vazio aqui tem significado declarado — fonte lida e silenciosa**. As fontes dos quatro **declaram** o enquadramento do ator. Mover produziria **vazio falso**, que é pior do que o nome ambíguo: trocaria uma imprecisão de rótulo por uma afirmação errada sobre a fonte.
+
+**E a declaração não enumera nem conta, de propósito.** Se ela dissesse *"são quatro — PT-20A, PT-20B, PT-25 e PT-47"*, eu teria escrito a próxima lista à mão deste repositório, e ela envelheceria no primeiro registro novo com avaliação de ator. A fronteira continua **derivada** pela grade funcional a cada ciclo. **É a lição do item 106 aplicada no dia seguinte, e do lado certo: a cura é a declaração do critério, não a lista.**
+
+### 107.3 O eixo 09 — a razão escrita, e a pasta não tinha LEIA-ME
+
+**Decisão dele: manter as páginas arquivadas, com a razão escrita** — a saída (a) das três de §89.7.
+
+**E o eixo não tinha onde escrevê-la.** As pastas 06, 07, 08 e 10 têm `LEIA-ME.md`; a **09** — a única de página web arquivada, e a única cujo conteúdo é de terceiro sob direitos reservados — **não tinha nenhum**. Nasceu `Fontes/09_Arquivamento-web/LEIA-ME.md`.
+
+**O que cada arquivo declara sobre si, lido em 30/10/2026:** **6 de 6** da Agência Brasil dizem *"Todos os direitos reservados"*; **4 de 4** do STF **não declaram nada** e não mencionam Creative Commons. A razão de manter tem três pernas — comunicação institucional de órgão público (a EBC é empresa pública, o STF é tribunal); o precedente coerente do item 77, que barrou o HTML do Estadão por ser jornalismo comercial; e **o preço escrito**, que é dez páginas num remoto público, seis delas declarando direitos reservados. **Se os titulares pedirem retirada, retira-se, e nada do aparato se perde:** o que ancora registro é a transcrição literal, que já está no codebook.
+
+**E a medição corrigiu a minha própria cifra, que eu havia dado na listagem de hoje.** Eu disse *"só 4 têm linha no manifesto"*: são **5**. Eu contei só os `.html` e deixei fora a transcrição do Estadão, que ancora PT-08 e está no manifesto. **Censo:** dos **11** arquivos rastreados, **5 no manifesto** e **6 fora** — e a regra que produz isso é declarada, `ancoras_nao_pdf()` recolhe peça não-PDF a partir de `fonte_local`, *"porque é o que define âncora"*.
+
+> **E a convenção do nome ficou declarada, para parar de ser inferida:** o `_PT-XX` no fim do nome diz **para qual registro a página foi coletada**, e **não** que o registro a declare como âncora. **A página arquivada é seguro contra `link rot`, não a âncora.**
+
+### 107.4 E o eixo 09 guarda a fonte do único registro sem arquivo
+
+**`AgenciaBrasil_2018-04-07_Prisao-Curitiba_PT-03D.html`.** Medido hoje: **PT-03D tem `fonte_local` vazio e `fonte_pagina` vazio** — é a exceção que o painel declara, classe `Confirmado`. **A cópia arquivada da fonte dele está nesta pasta, versionada desde sempre, e o registro não a cita.**
+
+**Citá-la em `fonte_local` faria três coisas de uma vez:** daria arquivo ao único registro sem arquivo; levaria a ancoragem documental a **87 de 87**; e traria o arquivo para dentro do manifesto e da vigilância de SHA-256 **pela regra que já existe, sem exceção nenhuma**. O precedente de forma é da mesma pasta — **PT-06B, PT-38 e PT-56** ancoram página web arquivada.
+
+> **Não executei, e a razão é a regra da casa:** acrescentar âncora é **codificação** — ler a página, decidir o que ela sustenta, transcrever literal —, e codificação é decisão dele. **Mas o achado é do tipo que esta agenda existe para registrar: a peça que faltava estava dentro do repositório, com o nome do registro no próprio arquivo.**
+
+### 107.5 O que isto deixa
+
+| | |
+|:--|:--|
+| **PT-03D e a página dele** | o item de maior retorno por esforço de toda a faixa. **Decisão dele**, porque é codificação |
+| **as seis fora do manifesto** | três saídas escritas no LEIA-ME novo: **citar** uma a uma, **destrackear** mantendo a cópia local, ou **manter** como seguro declarado e fora de vigilância |
+| **os sete `.docx` do eixo 05** | a §46.6 os declara **dele**, e a CC BY do `LICENSE` os alcança por isso. **Se a autoria não for dele, o escopo da §1 precisa de uma linha** — não conferi autoria dentro dos arquivos |
+| **os binários da §6** | publicar a tese, o projeto e as planilhas **segue decisão dele**, e o `exportar_aparato.py` continua listando em vez de decidir |
+
+**Nada mais fica aberto desta frente.** As três decisões saíram do ledger, e as pendentes caíram de dez a sete.
+
 ---
 
 <!-- DECISOES-PENDENTES: gerado por scripts/gerar_decisoes.py a partir de data/decisoes_abertas.json. Não editar à mão: o ciclo sobrescreve. -->
 
-## Decisões pendentes — revista em 28/10/2026
+## Decisões pendentes — revista em 30/10/2026
 
 **As decisões abaixo são suas, e nenhuma delas bloqueia as tarefas abertas.** A lista é gerada de `data/decisoes_abertas.json`: **fechar uma decisão é virar um campo**, e a contagem acompanha. **O que não está aqui não está pendente** — as seções *"O que isto deixa"* de cada item da agenda são o registro do que se sabia naquele dia, e várias delas foram resolvidas por itens posteriores.
 
 **A ordem não é de prioridade, e sim de natureza.** Dentro de cada grupo, a ordem é a de nascimento.
 
-**São dez decisões abertas, em três naturezas:** o remoto é público (4) · campo do codebook (3) · leitura (3).
+**São sete decisões abertas, em três naturezas:** o remoto é público (2) · campo do codebook (2) · leitura (3).
 
 ### O remoto é público
 
 | Decisão | Nasceu | Onde |
 |:--|:--|:--|
-| **A licença das dez páginas web do eixo 09.** Seis declaram *"Todos os direitos reservados"* (Agência Brasil) e quatro nada declaram (portal do STF), e o manifesto registra `licenca_declarada` = `NÃO CONFERIDA (não-PDF)` para todas, porque o auditor de licença **só lê PDF**. **As três saídas estão escritas com o preço de cada uma.** A decisão de 21/10 foi sobre PDFs e nunca examinou as peças não-PDF. | 25/10/2026 | §89.7 |
 | **A higiene que sobrou da tarefa 15:** os PDFs do corpus que seguem no **histórico** do git — removê-los exige reescrita e `push --force` —, o PDF versionado em `.backup_pre_lula/`, os oito `.docx` de síntese, e o ramo `backup-antes-de-destrackear-pdfs`, que segue local. | 13/10/2026 | §46.5 |
-| **A licença da sua própria obra** — o que o repositório declara sobre o uso do codebook e dos documentos de análise. | 13/10/2026 | §46.6 |
 | **Devolver ao git o PDF de Singer, Araujo e Rugitsky**, que é de acesso aberto com licença CC lida na folha 4. **Eu recomendo não devolver**, e a razão não é a licença: a regra `Fontes/**/*.pdf` deixaria de ser uma linha e passaria a ser *"todos menos estes"* — e lista de exceção é dívida que ninguém revisita. | 22/10/2026 | §77.6 |
 
 ### Campo do codebook
@@ -6020,7 +6101,6 @@ Varri o repositório procurando guarda que enumera campo à mão, e o censo obri
 | Decisão | Nasceu | Onde |
 |:--|:--|:--|
 | **A grade funcional do enquadramento como 18º campo.** Hoje a classificação vive só em `docs/referencial/02_GRADE-FUNCIONAL-ENQUADRAMENTO.md`, gerada, e **declarada como inferência minha**. Criar campo é sua decisão, e você disse que classifica na escrita. | 21/10/2026 | §73 |
-| **Os quatro registros `N` da grade funcional** — PT-20A, PT-20B, PT-25 e PT-47 têm texto em `framing_narrativa` que **não é quadro de ação coletiva**. São 18 vazios ao todo, e os quatro `N` são os que têm texto e não têm quadro. | 21/10/2026 | §73 |
 | **As duas aspas de PT-38 que não estão em peça do corpus** — a sinopse do documentário (ago/2023) e o levantamento divulgado pela imprensa (jan/2025). **A premissa encolheu duas vezes em dois dias.** Em 27/10 o registro ganhou oito transcrições da CPMI; em 28/10 ganhou sete do Iphan e **foi promovido a `Confirmado em fonte primária`**. A cifra de ago/2023 tem lastro primário na CPMI f. 676; **só a de jan/2025 segue sem**, por ser posterior ao relatório. **Coletar as duas fontes continua sendo sua decisão**, e hoje o que está em jogo é apenas a revisão de 2025 — a alternativa é retirar as duas aspas, e o registro fica com quinze transcrições conferidas. | 25/10/2026 | §97.5 |
 
 ### Leitura
@@ -6035,7 +6115,10 @@ Varri o repositório procurando guarda que enumera campo à mão, e o censo obri
 
 | Decisão | Quando |
 |:--|:--|
+| ~~A licença das páginas web do eixo 09~~ | ✅ 30/10/2026 — mantidas, com a razão escrita no LEIA-ME do eixo |
+| ~~A licença da sua própria obra~~ | ✅ 30/10/2026 — CC BY 4.0 na prosa e nos dados, MIT nos scripts |
 | ~~O nome do mecanismo de PT-62~~ | ✅ 27/10/2026 — nome da tipologia adotado |
+| ~~Os quatro registros `N` da grade funcional — PT-20A, PT-20B, PT-25 e PT-47~~ | ✅ 30/10/2026 — o alcance do campo declarado, zero registro mudou |
 | ~~A alegação do site *Proof* — a matéria do Estadão atribui a ele a notícia de uma reunião em 05/01/2021 nos EUA~~ | ✅ 27/10/2026 — sem rastro na CPMI, medido em 1.333 folhas |
 
 **O que NÃO está nesta lista, e por quê.** As quatro dívidas de Beach e Pedersen, as cobranças dos onze verbetes e a cristalização de quadro **não são decisões**: são trabalho de redação, e a tarefa 16 as cobre. Os limites declarados do aparato **não são decisões suas**: são propostas minhas, e vivem nas seções dos itens que as nomearam. **E esta frase nomeava quatro deles até 27/10/2026, quando três haviam sido fechados no mesmo dia** — a extensão da G2 e da G4 a `reports/` (item 93), a guarda da exceção ociosa (item 92) e a extensão aos manuais e ao inventário (item 94). **Enumerar limites aqui é fazer à mão o que este arquivo existe para gerar**, e por isso a enumeração saiu em vez de ser corrigida.

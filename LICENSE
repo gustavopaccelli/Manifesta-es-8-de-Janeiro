@@ -1,0 +1,109 @@
+Licenças deste repositório
+==========================
+
+Autor: Gustavo Paccelli
+Decisão do pesquisador em 30/10/2026.
+
+Este repositório reúne OBRA DE AUTORIA PRÓPRIA e um CORPUS DOCUMENTAL DE
+TERCEIROS, e os dois não estão sob a mesma licença. O escopo de cada uma está
+declarado abaixo; o que a seção 3 não licencia, este repositório não tem como
+licenciar.
+
+A razão de serem duas licenças, e não uma: a própria Creative Commons
+recomenda não aplicar suas licenças a software, porque elas não tratam de
+patente nem de isenção de garantia. Prosa e dados vão em CC BY; código vai em
+MIT.
+
+
+-------------------------------------------------------------------------------
+1. PROSA, DADOS E DOCUMENTAÇÃO -- Creative Commons Attribution 4.0 (CC BY 4.0)
+-------------------------------------------------------------------------------
+
+Alcança a obra de autoria do pesquisador: o codebook
+(`process_tracing_8jan_eventos.json` e tudo o que é gerado a partir dele),
+`docs/`, `reports/`, `data/`, as figuras, o `README.md` e os textos de
+catalogação e de inventário dentro de `Fontes/` -- entre eles
+`Fontes/MANIFESTO-CORPUS.csv` e os arquivos `LEIA-ME`.
+
+  Resumo: https://creativecommons.org/licenses/by/4.0/deed.pt-br
+  Texto:  https://creativecommons.org/licenses/by/4.0/legalcode.pt
+
+Uso livre, inclusive comercial e derivado, sob UMA condição: ATRIBUIÇÃO.
+Cite o autor, o título do projeto e o endereço do repositório, e indique se
+houve alteração.
+
+Atribuição esperada ao citar o conjunto de dados:
+
+  PACCELLI, Gustavo. Manifestações 8 de Janeiro -- Process Tracing e Análise
+  de Eventos de Protesto. Codebook de sub-eventos, verificado por ciclo
+  automatizado. 2026. Disponível em:
+  https://github.com/gustavopaccelli/Manifesta-es-8-de-Janeiro
+
+A licença alcança o CODEBOOK como obra: a seleção, a codificação, os
+mecanismos nomeados, as notas de auditoria e os campos derivados. Não alcança
+-- porque não pode -- as TRANSCRIÇÕES LITERAIS citadas em `fonte_trecho`, que
+são trechos de obras de terceiros reproduzidos por citação, com fonte e folha
+declaradas em cada registro.
+
+
+-------------------------------------------------------------------------------
+2. SCRIPTS -- MIT
+-------------------------------------------------------------------------------
+
+Alcança `scripts/`: os geradores, os conferidores, o ciclo de verificação e os
+scripts de auditoria datados em `scripts/historico/`.
+
+MIT License
+
+Copyright (c) 2026 Gustavo Paccelli
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+-------------------------------------------------------------------------------
+3. `Fontes/` -- OBRA DE TERCEIROS, NÃO LICENCIADA POR ESTE REPOSITÓRIO
+-------------------------------------------------------------------------------
+
+Nada aqui concede direito sobre o corpus documental. Os textos de catalogação
+dentro de `Fontes/` são do pesquisador e caem na seção 1; as PEÇAS DO CORPUS,
+não.
+
+O que está versionado em `Fontes/`, e sob que título:
+
+  - ATOS OFICIAIS -- o acórdão do TSE em HTML e as notícias do TSE. A Lei
+    9.610/98, art. 8º, IV, põe atos oficiais fora do direito autoral.
+
+  - PÁGINAS WEB ARQUIVADAS contra `link rot`, em
+    `Fontes/09_Arquivamento-web/`: comunicação institucional da Agência Brasil
+    (EBC, empresa pública) e do STF. Mantidas por decisão do pesquisador em
+    30/10/2026, com a razão e o preço escritos em
+    `Fontes/09_Arquivamento-web/LEIA-ME.md`. Os direitos permanecem dos
+    titulares.
+
+  - O RELATÓRIO DO NETLAB-UFRJ, em transcrição, com atribuição declarada no
+    registro que ele ancora.
+
+Os PDFs do corpus NÃO são versionados, por decisão de 21/10/2026 e por razão
+de licença: 28 das peças de literatura não podem ser redistribuídas, e o
+remoto é público. A regra está em `.gitignore` e o raciocínio em
+`LICENCA-E-DISTRIBUICAO.md`.
+
+A verificabilidade não depende da redistribuição: `Fontes/MANIFESTO-CORPUS.csv`
+traz, peça por peça, o SHA-256, as páginas, a classe de licença lida DENTRO do
+arquivo e a rota de obtenção.

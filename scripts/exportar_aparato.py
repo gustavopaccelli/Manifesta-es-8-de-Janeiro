@@ -62,8 +62,19 @@ def main():
     # Aqui o default e EXCLUIR: entra texto e codigo, e binario so por lista.
     TEXTO = (".md", ".py", ".json", ".csv", ".sh", ".html", ".svg", ".txt",
              ".jsonl", ".gitignore", ".gitattributes", ".yml", ".yaml", ".toml")
+    # INCLUSAO POR AUTORIZACAO TEM UM PRECO, e ele apareceu em 30/10/2026:
+    # ela exclui o que ninguem autorizou, e a autorizacao aqui e por SUFIXO.
+    # `LICENSE` nao tem extensao, de modo que a arvore publicavel sairia SEM
+    # a licenca da obra -- no dia em que a licenca foi decidida. Por NOME, e
+    # nao por sufixo novo, porque `endswith("license")` casaria qualquer
+    # caminho terminado nessa palavra. **E note a assimetria da guarda deste
+    # script: ela apaga o destino se peca RESERVADA VAZAR, e nada nela
+    # acusaria a AUSENCIA de um arquivo que devia viajar.**
+    POR_NOME = ("LICENSE",)
     aparato = [p for p in todos
-               if p.lower().endswith(TEXTO) or os.path.basename(p).startswith(".git")]
+               if p.lower().endswith(TEXTO)
+               or os.path.basename(p).startswith(".git")
+               or os.path.basename(p) in POR_NOME]
     excluidos = [p for p in todos if p not in set(aparato)]
 
     if os.path.exists(destino):
@@ -96,10 +107,21 @@ def main():
     bytes_ex = sum(os.path.getsize(os.path.join(RAIZ, p)) for p in excluidos)
     print("APARATO EXPORTADO para %s" % destino)
     print("  %d arquivo(s) de texto e código, %.1f MB" % (len(aparato), bytes_ap / 1e6))
-    print("  EXCLUÍDOS %d arquivo(s) binário(s), %.0f MB — entre eles os %d PDFs do "
-          "corpus, de que fica só o manifesto, com rota e SHA-256 de cada peça"
-          % (len(excluidos), bytes_ex / 1e6,
-             sum(1 for p in excluidos if p.lower().endswith(".pdf"))))
+    # A CIFRA PARTIDA PELO MANIFESTO, que e quem define peca do corpus. Ate
+    # 30/10/2026 esta linha somava todo PDF excluido e os chamava de "PDFs do
+    # corpus" -- e o unico PDF versionado e um backup em `.backup_pre_lula/`.
+    # Era a cifra certa no referente errado, a assinatura desta casa, dentro
+    # do proprio relatorio. E a frase dizia "os 1 PDFs": **releia a frase com
+    # o valor novo, e com zero.**
+    pdfs_ex = [p for p in excluidos if p.lower().endswith(".pdf")]
+    n_corpus = sum(1 for p in pdfs_ex if p in man)
+    # A frase e VERBLESS de proposito: "%d nao sao" lia "1 nao sao".
+    print("  EXCLUÍDOS %d arquivo(s) binário(s), %.0f MB — entre eles %d PDF(s) "
+          "de peça do corpus e %d PDF(s) fora do corpus"
+          % (len(excluidos), bytes_ex / 1e6, n_corpus,
+             len(pdfs_ex) - n_corpus))
+    print("  a verificabilidade do corpus não depende desta exportação: o "
+          "manifesto viaja, com rota e SHA-256 de cada peça")
     print("  guarda: nenhuma peça RESERVADA/SEM/ILEGÍVEL no resultado, conferido "
           "contra o manifesto")
     print()

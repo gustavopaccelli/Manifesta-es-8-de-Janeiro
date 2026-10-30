@@ -64,4 +64,8 @@ Laudos periciais do Instituto de Criminalística (acesso restrito), o inteiro te
 
 ## Fontes de terceiros
 
-O corpus reúne documentos públicos de órgãos oficiais e peças de imprensa arquivadas contra *link rot*, cada um com origem e termos declarados no inventário. São reproduzidos aqui para fins de pesquisa; os direitos permanecem de seus titulares.
+O corpus reúne documentos públicos de órgãos oficiais e peças de imprensa arquivadas contra *link rot*, cada um com origem e termos declarados no inventário; os direitos permanecem de seus titulares. **Os PDFs do corpus não são reproduzidos aqui**: saíram do versionamento em 21/10/2026, por razão de licença e porque o remoto é público. O que está versionado são atos oficiais, as páginas web arquivadas do eixo 09 e uma transcrição — e, para cada peça do corpus, o SHA-256 e a rota de obtenção em `Fontes/MANIFESTO-CORPUS.csv`.
+
+## Licença
+
+**CC BY 4.0** na prosa, nos dados e na documentação — codebook, `docs/`, `reports/`, `data/` e figuras — e **MIT** em `scripts/`, por decisão do pesquisador em 30/10/2026. **`Fontes/` fica fora**: é obra de terceiros, e este repositório não tem como licenciá-la. O escopo de cada licença, a atribuição esperada e o limite das transcrições literais estão em [`LICENSE`](LICENSE).

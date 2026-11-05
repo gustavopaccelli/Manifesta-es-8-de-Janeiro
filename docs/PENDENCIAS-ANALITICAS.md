@@ -22,7 +22,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Corpus | **85 peças / 12.644 p.** no manifesto, em 14 eixos — 75 PDFs e 10 âncoras não-PDF, estas conferidas por arquivo inteiro desde 25/10/2026. Da documental: **35 peças / 7.092 p.**; de literatura: 50 peças |
 | Figuras | SVG da cadeia causal e cronologia navegável. **São a única parte do aparato escrita à mão**, e duas guardas as cobrem: o passo 12 confere que todo registro do codebook aparece na figura, e a tabela-espelho do passo 7 confere o **nome do mecanismo** de cada ponto contra o campo — com linha de base em zero divergências |
 | Verificação | `bash scripts/ciclo.sh` — **16 passos**: 10 geradores e 6 conferidores, entre eles as **10 checagens estruturais**. Toda linha de base reprova com código de saída ≠ 0; nenhuma apenas avisa |
-| Controle de versão | git desde **20/09/2026**, 121 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 05/11/2026 |
+| Controle de versão | git desde **20/09/2026**, 122 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 05/11/2026 |
 | Tarefas abertas | **3** — 10, 17, 16. A lista vive na seção *Ordem de ataque*, gerada pelo passo 4, e 34 tarefas estão fechadas |
 | Decisões pendentes | **7**, em 4 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 5 |
 | **Redação do artigo** | **não iniciada — por decisão, é o último item da fila.** Desde 25/10/2026 ela não tem mais pré-requisito de dado: a tarefa 26 fechou e não há decisão de campo aberta no codebook. **Começá-la é decisão do pesquisador** |
@@ -6341,6 +6341,57 @@ A aspa do `mecanismo_causal` trazia `(...)` no meio e **não conferia na peça q
 | **a guarda sobre as órfãs** | **não a construí, e recomendo não construir.** Depois da classificação a classe acusável tinha **um membro**, e ele saiu em 110.1. Guarda para classe de um, cujo critério exigiria distinguir rótulo de transcrição, custa mais ruído do que pega |
 | **as 3 aspas de PT-03D** | estão em peça **do corpus que o registro não ancora** — o verbete da Wiley-Blackwell e *Dynamics of Contention*. É citação de teoria no campo do mecanismo, e o precedente de PT-19 a trata como legítima. **Declarar ou ancorar é decisão sua** |
 | **as 5 de PT-01** | só se conferem lendo Tatagiba por extração de imagem, como se fez com o folder. **28 folhas** |
+
+**Nada mais fica aberto desta frente.**
+
+
+---
+
+## 111. As cinco órfãs de PT-01 — duas eram citação e conferem, três são convenção — ✅ 05/11/2026
+
+**Encaminhamento:** *"Leia Tatagiba por extração de imagem e confira as 5."*
+
+### 111.1 Tatagiba não tem imagem embutida — foi renderizada
+
+**A extração de imagem não serve para esta peça.** O folder do STF guardava **uma imagem por folha** e bastou extraí-la; Tatagiba (2014) devolve **zero imagens embutidas** nas 28 folhas. **E não tem texto**: o PyMuPDF extrai **49 caracteres no documento inteiro**, e o conferidor do projeto devolve 2 bytes NUL por folha.
+
+**Renderizada a 170 dpi** — que é exatamente a técnica que as duas exceções já existentes deste registro declaravam desde 04/10/2026. **A declaração estava certa e eu havia lido a palavra errada:** *renderização* não é *extração de imagem*.
+
+### 111.2 As duas que eram citação de fonte — e as duas conferem
+
+| aspa | onde | o que a leitura mostrou |
+|:--|:--|:--|
+| *"desde o começo, foi sim uma luta por 0,20 centavos"* | **Tatagiba (2014), f. 6 = p. 40 impressa** | a folha **abre** com ela: *"Portanto, desde o começo, foi sim uma luta por 0,20 centavos."* |
+| *"o maior dos lados de 2013, tão grande quanto ignorado em junho"* | **Alonso (2023), f. 223-224** | **atravessa a quebra**: a 223 fecha em *"tão grande"* e a 224 abre em *"quanto ignorado em junho."* |
+
+**As duas foram promovidas para `fonte_trecho`**, e `fonte_pagina` passou a declarar `ALONSO 2023: 220, 223, 224` — **a folha da citação não estava lá**, só a 220.
+
+> **E as duas precisaram de exceção, por razões diferentes e as duas conhecidas.** A de Tatagiba é **cegueira da peça**, idêntica às duas que o registro já tinha. A de Alonso **não é**: aquela peça tem camada de texto. A aspa tem **62 caracteres** e quebra no meio — **30 na folha 223 e 21 na 224** —, e `casa()` exige janela de **40 caracteres numa folha só**. **E partir a aspa em duas também não serve:** cada metade cai abaixo do piso de 45 de `transcricoes()`, e a aspa **sumiria da conferência em vez de ser conferida**.
+
+**PT-01 passou de `X 10/12` a `OK 10/10`**, e as exceções foram de 9 a **11 de 11 usadas**.
+
+### 111.3 As três que não são citação — e a convenção de ontem as nomeia
+
+| aspa | o que é |
+|:--|:--|
+| *"abertura de estrutura de oportunidade política"* | o **nome RETIRADO** do mecanismo, citado na nota para registrar o que o campo dizia antes de 04/10 |
+| *"Abertura de estrutura de oportunidade política e difusão de repertório de rua massivo, posteriormente apropriado pela direita"* | o **texto anterior do campo**, citado pela mesma razão |
+| *"no ciclo de 2013 há uma janela de oportunidades políticas aberta na qual as direitas passariam a disputar e ocupar posteriormente"* | o **encaminhamento 2 do pesquisador** — é de onde o mecanismo atual veio |
+
+**Nenhuma é asserção de literalidade sobre fonte**, e as três são exatamente os tipos 2 e 3 de `metadados.convencao_da_aspa`, declarada no item 110 no dia anterior. **A convenção foi escrita antes de eu saber que ela resolveria estas três** — e é o teste dela.
+
+### 111.4 E a minha medição de ontem errou uma, pelo motivo que o projeto já tinha batizado
+
+**Eu contei a de Alonso como órfã.** Varri folha a folha com `in` sobre o texto reduzido — e **transcrição que atravessa quebra de página não casa assim**. O conferidor desta casa sabe disso desde sempre: a saída dele declara, a cada corrida, *"4 fragmento(s) conferem POR INTEIRO ao juntar a página vizinha"*.
+
+> **Usei uma ferramenta minha onde havia a da casa.** O censo de ontem tinha o escopo certo — peça inteira, não só folhas listadas — e o **matcher errado**. A correção não muda a conclusão do censo (a classe é de convenção, não de defeito), e muda **um** membro: as órfãs de PT-01 eram cinco, e duas eram citação boa.
+
+### 111.5 O que isto deixa
+
+| | |
+|:--|:--|
+| **a extração de Alonso pelo conferidor** | o `texto_pagina` do projeto devolve, nessa folha, prosa **intercalada com o bloco de notas e NULs**; o PyMuPDF devolve o texto **limpo e em ordem**. **Não medi o alcance disso no corpus** — é frente própria, e pode valer mais que qualquer guarda nova |
+| **as 3 aspas de PT-03D** | seguem como no item 110: citação de teoria em peça do corpus que o registro não ancora. **Decisão sua** |
 
 **Nada mais fica aberto desta frente.**
 

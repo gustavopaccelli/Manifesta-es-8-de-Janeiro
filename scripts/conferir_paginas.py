@@ -110,6 +110,29 @@ EXCECOES = {
     ("PT-01", "nao houve a conformacao de um frame capaz de conferir unidade"):
         "Tatagiba (2014, p. 40) — PDF p. 6, peça sem camada de texto, lida por "
         "renderização a 170 dpi",
+    # AS DUAS DE 05/11/2026 (item 111), promovidas depois de LIDAS, e cada
+    # uma falha por uma razao diferente.
+    #
+    # A PRIMEIRA e irma das duas acima: MESMA PECA, mesma cegueira. Medido
+    # neste dia: Tatagiba tem 28 folhas e NENHUMA legivel -- cada uma devolve
+    # 2 bytes NUL. A folha 6 e a p. 40 impressa, e abre com a frase.
+    ("PT-01", "portanto, desde o comeco, foi sim uma luta por 0,20 centavos"):
+        "Tatagiba (2014, p. 40) — PDF f. 6, peça sem camada de texto, lida por "
+        "renderização a 170 dpi em 05/11/2026. A folha ABRE com a frase, e e o "
+        "que sustenta a recodificacao do `framing_narrativa` de 04/10",
+    # A SEGUNDA NAO E DE CEGUEIRA DA PECA: Alonso tem camada de texto. A frase
+    # ATRAVESSA A QUEBRA DE FOLHA e e CURTA DEMAIS para a tolerancia que
+    # existe. `casa()` pede janela de 40 caracteres numa folha so; a frase tem
+    # 62 e quebra no meio -- 30 na 223, 21 na 224. E **partir em duas nao
+    # serve**: cada metade cai abaixo do piso de 45 de `transcricoes()` e a
+    # aspa sumiria da conferencia em vez de ser conferida. Lido em 05/11: a
+    # 223 termina em "era o maior dos lados de 2013, tao grande" e a 224 abre
+    # com "quanto ignorado em junho."
+    ("PT-01", "o maior dos lados de 2013, tao grande quanto ignorado em junho"):
+        "Alonso (2023) — PDF f. 223-224. A frase atravessa a quebra de folha e "
+        "tem 62 caracteres, curta demais para a janela de 40 que `casa()` pede "
+        "numa folha so. Conferida por leitura das duas folhas em 05/11/2026: a "
+        "223 fecha em «tao grande» e a 224 abre em «quanto ignorado em junho.»",
     # A OITAVA, EM 05/11/2026 (item 109), e e do MESMO tipo das duas de
     # Tatagiba: peca sem camada de texto. O folder de campanha do STF tem 6
     # folhas e cada uma devolve 2 BYTES NUL -- zero caractere legivel --, de

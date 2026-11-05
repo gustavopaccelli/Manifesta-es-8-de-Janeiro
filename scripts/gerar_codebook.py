@@ -69,6 +69,24 @@ DICIONARIO = [
 # identificação oficial mas não foi localizado em domínio oficial — distinção que
 # precisa ficar declarada em pesquisa científica.
 PROCEDENCIA = {
+    # OS DOIS DO IPHAN, ACRESCENTADOS EM 05/11/2026. Eles entraram no
+    # manifesto em 28/10 (8b16372) SEM entrar aqui, de modo que a linha
+    # do manifesto carregava uma rota que este gerador nao reproduz --
+    # e a regeneracao de hoje devolveu "NAO DECLARADA" para as duas.
+    # A rota ja estava escrita no item 97 da agenda e no LEIA-ME das
+    # fontes; o que faltava era ela morar onde o gerador le.
+    "Fontes/03_T0_8-de-janeiro/IPHAN-DF_Relatorio-Preliminar-Vistoria-Bens-Culturais_2023-01-12.pdf":
+        ("Iphan/MinC — snapshot do Internet Archive da URL oficial em gov.br "
+         "(o portal devolve 401 e a notícia exige autenticação desde então)",
+         "oficial",
+         "Relatório preliminar de vistoria dos bens culturais, 12/01/2023. É o DOC 366 "
+         "que a CPMI cita. Ancora PT-38."),
+    "Fontes/03_T0_8-de-janeiro/IPHAN-DF_Relatorio-Vistoria-Bens-Culturais_2023-03-02.pdf":
+        ("Iphan/MinC — snapshot do Internet Archive da URL oficial em gov.br "
+         "(o portal devolve 401 e a notícia exige autenticação desde então)",
+         "oficial",
+         "Relatório de vistoria dos bens culturais, 02/03/2023, com os laudos de "
+         "conservação peça por peça. Ancora PT-38."),
     "Fontes/04_T+1_Resposta-institucional/CPMI-8-de-Janeiro_Relatorio-Final_2023-10-17.pdf":
         ("Senado Federal — senado.leg.br", "oficial", "Espinha dorsal de T0. Numeração impressa coincide com a do PDF."),
     "Fontes/04_T+1_Resposta-institucional/STF_AP-2668_Acordao_Condenacao_2025-09-11.pdf":

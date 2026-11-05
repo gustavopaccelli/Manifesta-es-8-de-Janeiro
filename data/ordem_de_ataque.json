@@ -278,15 +278,15 @@
   "medidos_a_mao": {
     "barradas_no_cliente": {
       "valor": 9,
-      "o_que": "das pendentes da camada A têm arquivo em algum servidor e são barradas no cliente automatizado",
+      "o_que": "das 25 pendentes da camada A DE 13/10/2026 tinham arquivo em algum servidor e eram barradas no cliente automatizado — a BASE É A DE 13/10, e não a de hoje: os pendentes caíram a 17 quando os oito da Mobilization chegaram em 28/10, e esta partição não foi remedida",
       "medido_em": "13/10/2026",
-      "fonte": "item 47.5 — tentativa de rede, não remedida a cada ciclo"
+      "fonte": "item 47.5 — tentativa de rede, não remedida a cada ciclo. BASE DECLARADA EM 05/11/2026 (item 108): a cifra carregava a data da medição e não o DENOMINADOR dela, e a frase gerada a lia contra o total de hoje"
     },
     "sem_deposito": {
       "valor": 16,
-      "o_que": "das pendentes não têm depósito aberto em repositório nenhum",
+      "o_que": "das 25 pendentes da camada A DE 13/10/2026 não tinham depósito aberto em repositório nenhum — a BASE É A DE 13/10, pela mesma razão: a soma das duas é 25, que era o total daquele dia",
       "medido_em": "13/10/2026",
-      "fonte": "item 47.5 — o limite ali é de assinatura, não de coleta"
+      "fonte": "item 47.5 — o limite ali é de assinatura, não de coleta. BASE DECLARADA EM 05/11/2026 (item 108): a cifra carregava a data da medição e não o DENOMINADOR dela, e a frase gerada a lia contra o total de hoje"
     }
   },
   "_lidas_retirada_em": "22/10/2026, item 78. Esta chave era um SEGUNDO censo de estado de leitura, declarado à mão, ao lado do censo medido de gerar_registro_leitura.py. Os dois divergiram em silêncio nos dois eixos que ela cobria, e a prosa gerada chamava de LIDAS as peças que a chave listava por ANCORAREM registro. Valor no momento da retirada: {\"13_Bolsonarismo-mobilizacao\": [\"ARAUJO-SALES_\", \"FERNANDES-SILVA_\", \"VON-BULOW-ABERS_\"]}. Hoje as duas cifras saem do censo único, por `medir_corpus(censo())`, e são dois predicados distintos: `_lidas` e `_ancoram`."

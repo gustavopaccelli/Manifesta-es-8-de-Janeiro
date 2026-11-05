@@ -2,21 +2,21 @@
 
 > **Peça gerada por `scripts/gerar_registro_leitura.py`. Não edite à mão.** É a resposta a um defeito com data: em 21/10/2026 eu relatei seis verbetes como *"lidos-a-ler"* e **os seis estavam lidos**, porque copiei uma lista de 30/09 do documento que **pedia** a leitura em vez de abrir o que a **registrava**. O estado de leitura vivia em prosa espalhada por sete documentos, e nada no ciclo conferia.
 
-**84 peças no corpus. 55 com estado MEDIDO, 29 com estado DECLARADO.**
+**85 peças no corpus. 56 com estado MEDIDO, 29 com estado DECLARADO.**
 
 ## 1. Como o estado é estabelecido — e a maior parte não é declarada
 
 | Origem | Quantas | Como |
 |:--|--:|:--|
-| **MEDIDO** | 55 | a peça **ancora registro** com `fonte_pagina`, e o passo 9 do ciclo confere a transcrição contra a folha do PDF. Leitura parcial **demonstrável**, não afirmada |
+| **MEDIDO** | 56 | a peça **ancora registro** com `fonte_pagina`, e o passo 9 do ciclo confere a transcrição contra a folha do PDF. Leitura parcial **demonstrável**, não afirmada |
 | **DECLARADO** | 29 | a peça **não ancora registro**: informa o desenho sem sustentar dado. O estado vive em `data/estado_de_leitura.json`, que é dado e não prosa |
 
 | Estado | Peças |
 |:--|--:|
 | `ILEGIVEL` | 1 |
-| `LIDO_INTEGRAL` | 17 |
-| `LIDO_PARCIAL` | 64 |
-| `NAO_LIDO` | 2 |
+| `LIDO_INTEGRAL` | 18 |
+| `LIDO_PARCIAL` | 65 |
+| `NAO_LIDO` | 1 |
 
 **Vocabulário.** `LIDO_INTEGRAL` · `LIDO_PARCIAL`, com o que foi lido · `NAO_LIDO` · `ILEGIVEL`, no corpus e sem camada de texto · `NAO_DECLARADO`, quando **nenhum documento do repositório registra o estado** — é confissão, não suposição.
 
@@ -75,13 +75,14 @@
 | `Doxa-IESP-UERJ_Manchetometro_Atos-golpistas-8-jan_2023-03.pdf` | 16 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 7 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `NetLab-UFRJ_Anuncios-golpistas-Meta-Ads_2023-02-07.md` | 0 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 0 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `SciELO-Preprints_Drummond-Manginelli_Editoriais-8-jan_2023-10-09.pdf` | 24 | **NAO_LIDO** | DECLARADO | catalogada no LEIA-ME do eixo 08 como OBJETO DE ANÁLISE, não como fonte de dado. Nenhum documento registra leitura | — |
+| `AgenciaBrasil_2018-04-07_Prisao-Curitiba_PT-03D.html` | 0 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 0 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `AgenciaBrasil_2021-06_Moro-parcial-triplex_PT-06B.html` | 0 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 2 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `AgenciaBrasil_2024-09_Obras-recuperadas_PT-38.html` | 0 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 9 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `Estadao_2021-03-08_Eduardo-Bolsonaro-nega-atuacao-Capitolio.md` | 0 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 7 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `STF-noticias_Penas-16-a-27-anos_PT-56.html` | 0 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 1 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `STF-noticias_Suspeicao-Moro_PT-06B.html` | 0 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 2 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `STF_Democracia-Inabalada_Ebook_28x28cm.pdf` | 210 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 9 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
-| `STF_Democracia-Inabalada_Folder.pdf` | 6 | **NAO_LIDO** | DECLARADO | folder de 6 páginas e 37,4 MB — o pior índice de bytes por página do corpus (item 46.5 da agenda). O conteúdo lido do mesmo título está no Ebook, que ancora registro | — |
+| `STF_Democracia-Inabalada_Folder.pdf` | 6 | **LIDO_INTEGRAL** | DECLARADO | integral, 6 folhas, POR EXTRAÇÃO DE IMAGEM — a peça não tem camada de texto, e a medição é dura: cada folha devolve 2 bytes NUL e zero caractere legível. Lida em 05/11/2026 para resolver, pelo fato, a divergência entre esta declaração e o inventário, que a dava por lida sem data nem método. Conteúdo: f.1 capa `#democraciainabalada`; f.2 citação da Ministra Rosa Weber, presidente do STF; f.3 Plenário em dezembro de 2022; f.4 o Plenário destruído em janeiro de 2023, em preto e branco; f.5 o Plenário restaurado em fevereiro de 2023; f.6 contracapa. É peça de ENQUADRAMENTO ESTATAL, em três tempos | Fontes/LEIA-ME_fontes.md |
 | `STF_Gabinete-Moraes_Balanco-8-de-Janeiro_2026-04-29.pdf` | 15 | **LIDO_PARCIAL** | MEDIDO | ancora 3 registro(s) com 17 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `ALONSO_Repertorio-segundo-Charles-Tilly_Sociologia-e-Antropologia-2-3_2012.pdf` | 21 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 28 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `ALONSO_Treze-a-politica-de-rua-de-Lula-a-Dilma_Companhia-das-Letras_2023.pdf` | 309 | **LIDO_PARCIAL** | MEDIDO | ancora 4 registro(s) com 40 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |

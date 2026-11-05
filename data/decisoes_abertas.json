@@ -35,11 +35,12 @@
     },
     {
       "id": "cc-singer-ao-git",
-      "estado": "aberta",
+      "estado": "decidida",
       "natureza": "o remoto é público",
-      "o_que": "**Devolver ao git o PDF de Singer, Araujo e Rugitsky**, que é de acesso aberto com licença CC lida na folha 4. **Eu recomendo não devolver**, e a razão não é a licença: a regra `Fontes/**/*.pdf` deixaria de ser uma linha e passaria a ser *\"todos menos estes\"* — e lista de exceção é dívida que ninguém revisita.",
-      "onde": "77.6",
-      "nasceu": "22/10/2026"
+      "o_que": "**Devolver ao git o PDF de Singer, Araujo e Rugitsky**, de acesso aberto com licença CC lida na folha 4. **DECIDIDO EM 05/11/2026: não devolver**, e a razão não é a licença — a regra `Fontes/**/*.pdf` deixaria de ser uma linha e passaria a ser *\"todos menos estes\"*, e lista de exceção é dívida que ninguém revisita. **Custo zero de execução:** nenhum arquivo se move, e a verificabilidade da peça continua no manifesto, com SHA-256 e rota.",
+      "onde": "108.4",
+      "nasceu": "22/10/2026",
+      "quando": "✅ 05/11/2026 — não devolver, e a razão não é a licença"
     },
     {
       "id": "nome-pt62",
@@ -88,8 +89,8 @@
       "id": "duas-nao-lidas",
       "estado": "aberta",
       "natureza": "leitura",
-      "o_que": "**As duas peças `NAO_LIDO` do registro de leitura:** o preprint de Drummond e Manginelli (eixo 08) e o folder do STF. **Nenhuma ancora registro e nenhuma é necessária ao desenho atual** — ler ou manter declarado é sua decisão.",
-      "onde": "75",
+      "o_que": "**A peça `NAO_LIDO` que resta no registro de leitura:** o preprint de Drummond e Manginelli (eixo 08), catalogado como OBJETO DE ANÁLISE e não como fonte de dado. **Eram duas até 05/11/2026**, e o folder do STF saiu da lista — não por decisão, mas por medição: o inventário o dava por lido e o registro o dava por não lido, e as 6 folhas foram lidas por extração de imagem para resolver a divergência pelo fato (item 108.2). **Ler o preprint ou mantê-lo declarado segue sendo sua decisão**: ele não ancora registro e não é necessário ao desenho atual.",
+      "onde": "108.2",
       "nasceu": "21/10/2026"
     },
     {

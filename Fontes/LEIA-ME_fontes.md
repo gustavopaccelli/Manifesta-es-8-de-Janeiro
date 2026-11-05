@@ -84,7 +84,7 @@ Pasta criada em 16/08/2026. **Leia o `LEIA-ME.md` dela** — ele desfaz uma conf
 |:--|--:|:--|:--|
 | `STF_Gabinete-Moraes_Balanco-8-de-Janeiro_2026-04-29.pdf` | 15 | **PT-53, PT-61** | **Fonte primária.** Bucket oficial do STF (S3). 1.402 réus responsabilizados, 190 presos. Peça gráfica: dois gráficos vetoriais não extraem valores |
 | `STF_Democracia-Inabalada_Ebook_28x28cm.pdf` | 210 | **PT-38** | Livro oficial do STF (ago/2023, ISBN 978-85-54223-50-2). **Cópia canônica** desde a consolidação de 16/08/2026 |
-| `STF_Democracia-Inabalada_Folder.pdf` | 6 | — | Peça de divulgação, **sem camada de texto**. Lida por extração de imagem |
+| `STF_Democracia-Inabalada_Folder.pdf` | 6 | — | Peça de divulgação, **sem camada de texto** — medido: cada folha devolve 2 bytes NUL e zero caractere legível. **Lida integral por extração de imagem em 05/11/2026** (item 108). Até essa data esta linha a dava por lida **sem data nem método** enquanto o registro de leitura a dava por `NAO_LIDO`, e a divergência sobreviveu porque **nenhuma guarda olha nessa direção**: a G2 vigia documento que AFIRMA não-leitura contra declaração de leitura, e não o inverso. Conteúdo: a citação da Ministra Rosa Weber, presidente do STF, e o Plenário em **três tempos** — dezembro de 2022, janeiro de 2023 em preto e branco, fevereiro de 2023 restaurado. É **enquadramento estatal**, não ilustração |
 
 Mais `PAGINA-CAMPANHA-catalogacao.md` e `DOCUMENTARIO-catalogacao.md` — catalogação da campanha como objeto de enquadramento.
 

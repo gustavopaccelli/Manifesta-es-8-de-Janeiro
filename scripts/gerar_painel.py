@@ -101,6 +101,9 @@ def medir():
         "campos": len(ev[0]),
         "classes": classes,
         "com_local": sum(1 for e in ev if (e.get("fonte_local") or "").strip()),
+        # Os ids dos SEM arquivo, medidos aqui porque `montar` so recebe `m`.
+        "sem_arquivo": sorted(e["id"] for e in ev
+                              if not (e.get("fonte_local") or "").strip()),
         "com_pagina": sum(1 for e in ev if (e.get("fonte_pagina") or "").strip()),
         "com_trecho": sum(1 for e in ev if (e.get("fonte_trecho") or "").strip()),
         "pecas": len(man),
@@ -167,11 +170,28 @@ def montar(m):
         "`metadados.vocabulario_status_classe` desde 25/10/2026 |".format(
             cl.get("Confirmado em fonte primária", 0), cl.get("Confirmado", 0),
             cl.get("Inferência do analista", 0)))
+    # A ORACAO DOS SEM-ARQUIVO E DERIVADA DESDE 05/11/2026 (item 108.5), e a
+    # razao esta na propria linha que ela quebrou: ate aqui o texto dizia "O
+    # unico sem arquivo e PT-03D, declarado", escrito a mao ao lado de uma
+    # cifra derivada -- e quando PT-03D ganhou `fonte_local` a linha passou a
+    # afirmar, de uma vez, que 87 de 87 tem arquivo E que um nao tem.
+    # **Releia a frase com o valor novo, e com zero**: com zero sem-arquivo,
+    # nao ha oracao nenhuma a escrever.
+    sem_arquivo = m["sem_arquivo"]
+    if sem_arquivo:
+        ressalva = (" %s sem arquivo, declarado%s: %s."
+                    % ("O único" if len(sem_arquivo) == 1 else "Os %d"
+                       % len(sem_arquivo),
+                       "" if len(sem_arquivo) == 1 else "s",
+                       ", ".join(sem_arquivo)))
+    else:
+        ressalva = " Nenhum registro sem arquivo."
     out.append(
         "| Ancoragem documental | **{} de {} registros** com arquivo vinculado "
         "· {} com página ou localizador estrutural · {} com transcrição "
-        "literal no campo. O único sem arquivo é PT-03D, declarado |".format(
-            m["com_local"], m["registros"], m["com_pagina"], m["com_trecho"]))
+        "literal no campo.{} |".format(
+            m["com_local"], m["registros"], m["com_pagina"], m["com_trecho"],
+            ressalva))
     out.append(
         "| Corpus | **{} peças / {} p.** no manifesto, em {} eixos — {} PDFs e "
         "{} âncoras não-PDF, estas conferidas por arquivo inteiro desde "

@@ -236,9 +236,9 @@
       ]
     },
     "Fontes/10_Democracia-Inabalada/STF_Democracia-Inabalada_Folder.pdf": {
-      "estado": "NAO_LIDO",
-      "o_que": "folder de 6 páginas e 37,4 MB — o pior índice de bytes por página do corpus (item 46.5 da agenda). O conteúdo lido do mesmo título está no Ebook, que ancora registro",
-      "registrado_em": "",
+      "estado": "LIDO_INTEGRAL",
+      "o_que": "integral, 6 folhas, POR EXTRAÇÃO DE IMAGEM — a peça não tem camada de texto, e a medição é dura: cada folha devolve 2 bytes NUL e zero caractere legível. Lida em 05/11/2026 para resolver, pelo fato, a divergência entre esta declaração e o inventário, que a dava por lida sem data nem método. Conteúdo: f.1 capa `#democraciainabalada`; f.2 citação da Ministra Rosa Weber, presidente do STF; f.3 Plenário em dezembro de 2022; f.4 o Plenário destruído em janeiro de 2023, em preto e branco; f.5 o Plenário restaurado em fevereiro de 2023; f.6 contracapa. É peça de ENQUADRAMENTO ESTATAL, em três tempos",
+      "registrado_em": "Fontes/LEIA-ME_fontes.md",
       "termos": [
         "Democracia-Inabalada_Folder",
         "folder de 6 páginas"

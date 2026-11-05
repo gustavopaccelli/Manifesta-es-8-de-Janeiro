@@ -2,20 +2,20 @@
 
 > **Peça gerada por `scripts/gerar_registro_leitura.py`. Não edite à mão.** É a resposta a um defeito com data: em 21/10/2026 eu relatei seis verbetes como *"lidos-a-ler"* e **os seis estavam lidos**, porque copiei uma lista de 30/09 do documento que **pedia** a leitura em vez de abrir o que a **registrava**. O estado de leitura vivia em prosa espalhada por sete documentos, e nada no ciclo conferia.
 
-**85 peças no corpus. 56 com estado MEDIDO, 29 com estado DECLARADO.**
+**85 peças no corpus. 57 com estado MEDIDO, 28 com estado DECLARADO.**
 
 ## 1. Como o estado é estabelecido — e a maior parte não é declarada
 
 | Origem | Quantas | Como |
 |:--|--:|:--|
-| **MEDIDO** | 56 | a peça **ancora registro** com `fonte_pagina`, e o passo 9 do ciclo confere a transcrição contra a folha do PDF. Leitura parcial **demonstrável**, não afirmada |
-| **DECLARADO** | 29 | a peça **não ancora registro**: informa o desenho sem sustentar dado. O estado vive em `data/estado_de_leitura.json`, que é dado e não prosa |
+| **MEDIDO** | 57 | a peça **ancora registro** com `fonte_pagina`, e o passo 9 do ciclo confere a transcrição contra a folha do PDF. Leitura parcial **demonstrável**, não afirmada |
+| **DECLARADO** | 28 | a peça **não ancora registro**: informa o desenho sem sustentar dado. O estado vive em `data/estado_de_leitura.json`, que é dado e não prosa |
 
 | Estado | Peças |
 |:--|--:|
 | `ILEGIVEL` | 1 |
-| `LIDO_INTEGRAL` | 18 |
-| `LIDO_PARCIAL` | 65 |
+| `LIDO_INTEGRAL` | 17 |
+| `LIDO_PARCIAL` | 66 |
 | `NAO_LIDO` | 1 |
 
 **Vocabulário.** `LIDO_INTEGRAL` · `LIDO_PARCIAL`, com o que foi lido · `NAO_LIDO` · `ILEGIVEL`, no corpus e sem camada de texto · `NAO_DECLARADO`, quando **nenhum documento do repositório registra o estado** — é confissão, não suposição.
@@ -60,7 +60,7 @@
 | `BROER-DUYVENDAK_Discursive-opportunities-feeling-rules_Mobilization-14-3_2009.pdf` | 20 | **LIDO_INTEGRAL** | DECLARADO | integral, 20 folhas; offset impressa = PDF + 336 | docs/analise/16_CAMADA-A-MOBILIZATION.md |
 | `CASTRO_Deterrence-or-defiance_Mobilization-30-4_2025.pdf` | 22 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 4 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `COLLIER_Understanding-process-tracing_PS-44-4_2011.pdf` | 8 | **LIDO_INTEGRAL** | DECLARADO | integral, 8 folhas; offset impressa = PDF + 822 | docs/analise/09_CONCEITO-MECANISMO.md |
-| `ELLEFSEN_Unintended-consequences-of-escalated-repression_Mobilization-26-1_2021.pdf` | 22 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 10 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `ELLEFSEN_Unintended-consequences-of-escalated-repression_Mobilization-26-1_2021.pdf` | 22 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 11 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `GONZALEZ-BAILON-BORGE-HOLTHOEFER-RIVERO-MORENO_Dynamics-of-protest-recruitment-through-an-online-network_Scientific-Reports-1_2011.pdf` | 7 | **LIDO_PARCIAL** | DECLARADO | achados centrais, na ficha 13: os participantes iniciais não têm posição topológica típica; só os disseminadores de cascata são mais centrais | docs/analise/08_BIBLIOGRAFIA-METODOLOGICA.md |
 | `JUNG_Disentangling-protest-cycles_Mobilization-15-1_2010.pdf` | 20 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 4 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `KRIESI-HUTTER-BOJAR_Contentious-episode-analysis_Mobilization-24-3_2019.pdf` | 23 | **LIDO_INTEGRAL** | DECLARADO | integral, 23 folhas; offset impressa = PDF + 250; a folha 17 é figura de página inteira e não traz o número na borda | docs/analise/16_CAMADA-A-MOBILIZATION.md |
@@ -82,8 +82,8 @@
 | `STF-noticias_Penas-16-a-27-anos_PT-56.html` | 0 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 1 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `STF-noticias_Suspeicao-Moro_PT-06B.html` | 0 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 2 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `STF_Democracia-Inabalada_Ebook_28x28cm.pdf` | 210 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 9 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
-| `STF_Democracia-Inabalada_Folder.pdf` | 6 | **LIDO_INTEGRAL** | DECLARADO | integral, 6 folhas, POR EXTRAÇÃO DE IMAGEM — a peça não tem camada de texto, e a medição é dura: cada folha devolve 2 bytes NUL e zero caractere legível. Lida em 05/11/2026 para resolver, pelo fato, a divergência entre esta declaração e o inventário, que a dava por lida sem data nem método. Conteúdo: f.1 capa `#democraciainabalada`; f.2 citação da Ministra Rosa Weber, presidente do STF; f.3 Plenário em dezembro de 2022; f.4 o Plenário destruído em janeiro de 2023, em preto e branco; f.5 o Plenário restaurado em fevereiro de 2023; f.6 contracapa. É peça de ENQUADRAMENTO ESTATAL, em três tempos | Fontes/LEIA-ME_fontes.md |
-| `STF_Gabinete-Moraes_Balanco-8-de-Janeiro_2026-04-29.pdf` | 15 | **LIDO_PARCIAL** | MEDIDO | ancora 3 registro(s) com 17 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `STF_Democracia-Inabalada_Folder.pdf` | 6 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 11 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `STF_Gabinete-Moraes_Balanco-8-de-Janeiro_2026-04-29.pdf` | 15 | **LIDO_PARCIAL** | MEDIDO | ancora 3 registro(s) com 18 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `ALONSO_Repertorio-segundo-Charles-Tilly_Sociologia-e-Antropologia-2-3_2012.pdf` | 21 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 28 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `ALONSO_Treze-a-politica-de-rua-de-Lula-a-Dilma_Companhia-das-Letras_2023.pdf` | 309 | **LIDO_PARCIAL** | MEDIDO | ancora 4 registro(s) com 40 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `KUNRATH-SILVA_Apropriacao-conservadora-do-ciclo-de-protestos_Lusotopie-17-1_2018.pdf` | 20 | **LIDO_PARCIAL** | MEDIDO | ancora 2 registro(s) com 34 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |

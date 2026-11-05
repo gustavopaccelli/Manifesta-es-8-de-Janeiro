@@ -10,7 +10,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 
 ## Painel de estado — medido em 5 de novembro de 2026
 
-**Esta seção é GERADA pelo passo 5 do ciclo. Nenhuma cifra dela é digitada**, e as listas de tarefas e decisões não são repetidas aqui: o painel aponta para as seções que os passos 3 e 4 geram. **A razão tem data** — até 27/10/2026 este painel era escrito à mão, datava-se de 29/09, e a revisão do repositório mediu que **nenhuma das suas cifras estava certa** (item 91).
+**Esta seção é GERADA pelo passo 6 do ciclo. Nenhuma cifra dela é digitada**, e as listas de tarefas e decisões não são repetidas aqui: o painel aponta para as seções que os passos 4 e 5 geram. **A razão tem data** — até 27/10/2026 este painel era escrito à mão, datava-se de 29/09, e a revisão do repositório mediu que **nenhuma das suas cifras estava certa** (item 91).
 
 **O aparato está pronto, auditado, versionado e verificável por um comando; o artigo não começou.** Por decisão do pesquisador em **16/08/2026**, a redação é o **último** item da fila: o conjunto de dados de todo o processo político vem primeiro. Nada mudou nessa decisão desde então.
 
@@ -20,11 +20,11 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Classes de verificação | **71 em fonte primária** · 15 confirmados por outra via · **0 a verificar** · 1 inferência declarada. O critério das três condições está escrito em `metadados.vocabulario_status_classe` desde 25/10/2026 |
 | Ancoragem documental | **87 de 87 registros** com arquivo vinculado · 87 com página ou localizador estrutural · 87 com transcrição literal no campo. Nenhum registro sem arquivo. |
 | Corpus | **85 peças / 12.644 p.** no manifesto, em 14 eixos — 75 PDFs e 10 âncoras não-PDF, estas conferidas por arquivo inteiro desde 25/10/2026. Da documental: **35 peças / 7.092 p.**; de literatura: 50 peças |
-| Figuras | SVG da cadeia causal e cronologia navegável. **São a única parte do aparato escrita à mão**, e duas guardas as cobrem: o passo 11 confere que todo registro do codebook aparece na figura, e a tabela-espelho do passo 6 confere o **nome do mecanismo** de cada ponto contra o campo — com linha de base em zero divergências |
-| Verificação | `bash scripts/ciclo.sh` — **15 passos**: 9 geradores e 6 conferidores, entre eles as **10 checagens estruturais**. Toda linha de base reprova com código de saída ≠ 0; nenhuma apenas avisa |
-| Controle de versão | git desde **20/09/2026**, 119 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 30/10/2026 |
-| Tarefas abertas | **3** — 10, 17, 16. A lista vive na seção *Ordem de ataque*, gerada pelo passo 3, e 34 tarefas estão fechadas |
-| Decisões pendentes | **6**, em 3 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 4 |
+| Figuras | SVG da cadeia causal e cronologia navegável. **São a única parte do aparato escrita à mão**, e duas guardas as cobrem: o passo 12 confere que todo registro do codebook aparece na figura, e a tabela-espelho do passo 7 confere o **nome do mecanismo** de cada ponto contra o campo — com linha de base em zero divergências |
+| Verificação | `bash scripts/ciclo.sh` — **16 passos**: 10 geradores e 6 conferidores, entre eles as **10 checagens estruturais**. Toda linha de base reprova com código de saída ≠ 0; nenhuma apenas avisa |
+| Controle de versão | git desde **20/09/2026**, 120 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 05/11/2026 |
+| Tarefas abertas | **3** — 10, 17, 16. A lista vive na seção *Ordem de ataque*, gerada pelo passo 4, e 34 tarefas estão fechadas |
+| Decisões pendentes | **7**, em 4 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 5 |
 | **Redação do artigo** | **não iniciada — por decisão, é o último item da fila.** Desde 25/10/2026 ela não tem mais pré-requisito de dado: a tarefa 26 fechou e não há decisão de campo aberta no codebook. **Começá-la é decisão do pesquisador** |
 
 > **O que este painel NÃO repete, de propósito.** As tarefas e as decisões abertas têm cada uma a sua seção gerada, e listá-las aqui seria a quarta cópia — a contabilidade deste projeto já envelheceu quatro vezes por cópia à mão, e o histórico está nos itens 49, 78, 83 e 90. **Os itens numerados abaixo são um log cronológico:** a cifra dentro de um item era verdade no dia dele e fica como está.
@@ -6172,6 +6172,89 @@ Quatro decisões dele, perguntadas de uma vez com o preço medido. **As quatro s
 
 **As decisões pendentes caíram de sete a seis.**
 
+
+---
+
+## 109. As cinco pendências — e duas delas mudaram de desenho na medição — ✅ 05/11/2026
+
+**Encaminhamento:** *"Resolva as cinco pendências listadas."*
+
+### 109.1 O manifesto entrou no ciclo, e o ciclo foi a dezesseis passos
+
+**O defeito do item 108.3 tinha causa de arquitetura:** `gerar_manifesto_corpus.py` **não era passo do ciclo**, de modo que o manifesto comitado podia divergir do que o gerador produz — e divergia, em dez campos. Agora ele é o **passo 1**, e três passos adiante o leem: o painel conta peças dele, o registro de leitura parte dele, e a **checagem 8** o compara com o disco.
+
+**O custo era a objeção, e foi medido antes e depois:**
+
+| | |
+|:--|--:|
+| gerar o manifesto, sem cache | **2m38s** — `classifica()` abre 75 PDFs e sozinha custa **46,4s**; o SHA-256 dos 296 MB custa **1,1s** |
+| com o cache, quando o classificador muda | **1m07s** |
+| com o cache quente | **6,2s** |
+| **o ciclo inteiro, dezesseis passos** | **41,7s** |
+
+> **A chave do cache é o SHA-256 da peça**, de modo que arquivo que muda de bytes reclassifica sozinho. **E a receita do cache é o HASH do próprio `auditar_licencas.py`**, não uma cadeia escrita à mão — porque versão à mão só invalida o cache quando alguém lembra de a mudar, e **a garantia que ninguém confere é a que falha**. Editar o classificador invalida tudo sozinho, ao preço de 46s. **O cache é cache: fica fora do git.**
+
+**E o ciclo vinha avisando havia duas semanas sem que nada o cobrasse.** A linha de base do corpus na checagem 6 estava em **21/10** — `65 PDFs / 12.352 p., 23 documentais / 6.970 p.` — e o corpus mudou **quatro vezes** desde então. Ela foi a `75 / 12.644, 25 / 7.092`, e o atraso é o achado: **linha que só avisa é linha que ninguém atualiza.**
+
+**O cabeçalho do `ciclo.sh` dizia *catorze passos* com quinze no arquivo.** A contagem saiu de lá: quem a quiser medida tem `passos_do_ciclo`, que a lê do próprio arquivo.
+
+**E ela passou a REPROVAR, não só avisar — porque o painel afirmava o contrário.** A linha gerada do passo 6 diz, com estas palavras, que *"toda linha de base reprova com código de saída ≠ 0; **nenhuma apenas avisa**"*. **Esta era a exceção que tornava a frase falsa**, e é a razão de ela ter envelhecido duas semanas: linha que só avisa não cobra ninguém.
+
+> **A consequência é a de toda linha de base desta casa, e é deliberada:** entrar peça no corpus **derruba o ciclo** até que a linha se mova, com a razão escrita ao lado. **Provado nos dois sentidos:** como está, saída 0 e `APROVADO`; com a linha movida de um PDF, saída 1 e `X corpus mudou` — **sem cair em aviso**.
+
+### 109.2 A G5 — e o desenho mudou na medição
+
+**A guarda existe**, e **não é a simétrica que eu havia proposto.** A proposta era o inverso de `MARCAS_NAO_LEITURA`; a medição a recusou:
+
+| | |
+|:--|--:|
+| ocorrências de *lido/lida/lidos/lidas* nos 24 documentos vigiados | **638** |
+| **formas distintas** | **417** |
+| formas que a lista positiva existente já cobria | **14** |
+
+> **Afirmar leitura é o caso NÃO MARCADO da língua.** A negação tem vocabulário fechado — *não lido*, *nenhuma lida* — e por isso `MARCAS_NAO_LEITURA` pôde crescer por medição até 22 formas. A afirmação não tem: *"o conteúdo lido do mesmo título está no Ebook"* é frase legítima a dois caracteres do nome da peça. **Guarda por janela de vocabulário produziria ruído sem fim.**
+
+**O que a frase defeituosa tinha de estreito é que ela NOMEAVA O ARQUIVO.** A G5 acusa **a linha que traz o nome do arquivo e afirma leitura**, e nada mais. Superfície medida em todas as **36 peças declaradas**: **uma linha no repositório inteiro, e é a correta**. A guarda nasce verde, com base zero.
+
+**`ILEGIVEL` fica fora de propósito:** peça sem camada de texto lida por renderização é exatamente o caso legítimo das duas exceções de Tatagiba.
+
+**Três provas, e a primeira reconstrói o defeito real:** o folder de volta a `NAO_LIDO` com o inventário dizendo que foi lida — **a G5 acusa e o ciclo cai**; linha injetada nomeando o preprint e afirmando leitura — **acusa**; a mesma linha declarando não-leitura — **não acusa**, porque aí quem governa é a G2.
+
+### 109.3 A citação de Rosa Weber — e ela deu lastro a um quadro que não tinha nenhum
+
+**Ao procurar onde a citação cabia, a medição achou um defeito maior do que a pendência.** O `framing_narrativa` de **PT-61** é, literalmente, a aspa `'Democracia Inabalada'` — **e ela não conferia em lugar nenhum**: o balanço de 2026 não a traz entre aspas.
+
+> **E a guarda das meias-âncoras não a acusava, com razão de desenho:** ela só acusa aspa que **já confere** numa folha ancorada, porque o que ela procura é aspa **promovível**. Aspa que não confere em lugar nenhum é outro defeito, e não tem guarda.
+
+**A folha 2 do folder é de onde a palavra vem** — a presidente do STF dizendo que *"o STF e sua atuação em defesa do estado democrático de direito são **inabaláveis**"*. O folder entrou em `fonte_local` e `fonte_pagina` de PT-61, e a transcrição em `fonte_trecho`.
+
+**E o preço que eu havia declarado foi pago, não evitado:** a peça **não tem camada de texto**, de modo que esta aspa **não pode ser conferida pelo ciclo**. Entrou a **oitava exceção** em `EXCECOES`, pelo mesmo caminho das duas de Tatagiba, com a razão e o modo de conferir escritos — *extraia a imagem embutida da folha 2*. O ciclo fecha com **8 de 8 exceções usadas**.
+
+### 109.4 PT-03D — a hora declarada e a repressão na porta
+
+| campo | o que entrou |
+|:--|:--|
+| `data_hora` | **`07/04/2018 ~18h40`** — e a hora **não precisou de transcrição nova**: ela já estava na que entrou em 108.1, *"aproximadamente às 18h40"*. É hora **declarada pela fonte, com a ressalva dela** |
+| `resposta_estatal` | a dispersão dos manifestantes na porta da Superintendência, com **duas transcrições literais**: *"Foram explodidas bombas de efeito moral para conter a multidão a favor de Lula"* e *"Com o tumulto, a polícia usou bombas de gás lacrimogêneo para dispersar os manifestantes"* |
+
+O registro passou de **`OK 3/3`** a **`OK 5/5`** localizadas.
+
+### 109.5 A ACLED entrou no ledger, e nasceu a quarta natureza
+
+Ela vivia só na prosa do item 105.4 — e o ledger **declara por escrito** que conserta a cópia, não o juízo: ele não detecta sozinho que uma decisão nasceu noutro item.
+
+**A natureza é nova e é `coleta`**, porque as três existentes não a descrevem: trazer série para `Fontes/` tem as perguntas de **licença, procedência, estado de leitura e lugar no manifesto**. As decisões pendentes vão a **sete, em quatro naturezas** — e esta é a única cujo desfecho muda uma classe do codebook: **PT-62 é o único registro em `Inferência do analista`**, e o que o mantém ali é a ausência da medição do desfecho.
+
+### 109.6 O que isto deixa
+
+| | |
+|:--|:--|
+| **a decisão da coleta da ACLED** | agora está no ledger, onde o passo 5 a gera. **É sua**, e é a de maior consequência das sete |
+| **as três aspas que não conferem em lugar nenhum** | a de PT-61 ganhou lastro hoje. **Não varri as outras**: a classe é *aspa em campo analítico que não confere em peça ancorada*, e a guarda das meias-âncoras não a alcança por desenho. **Medir essa classe é frente própria** |
+| **o preprint de Drummond e Manginelli** | a última peça `NAO_LIDO`, e lê-la ou mantê-la declarada segue sua |
+
+**Nada mais fica aberto desta frente.**
+
 ---
 
 <!-- DECISOES-PENDENTES: gerado por scripts/gerar_decisoes.py a partir de data/decisoes_abertas.json. Não editar à mão: o ciclo sobrescreve. -->
@@ -6182,7 +6265,7 @@ Quatro decisões dele, perguntadas de uma vez com o preço medido. **As quatro s
 
 **A ordem não é de prioridade, e sim de natureza.** Dentro de cada grupo, a ordem é a de nascimento.
 
-**São seis decisões abertas, em três naturezas:** o remoto é público (1) · campo do codebook (2) · leitura (3).
+**São sete decisões abertas, em quatro naturezas:** o remoto é público (1) · campo do codebook (2) · leitura (3) · coleta (1).
 
 ### O remoto é público
 
@@ -6204,6 +6287,12 @@ Quatro decisões dele, perguntadas de uma vez com o preço medido. **As quatro s
 | **A peça `NAO_LIDO` que resta no registro de leitura:** o preprint de Drummond e Manginelli (eixo 08), catalogado como OBJETO DE ANÁLISE e não como fonte de dado. **Eram duas até 05/11/2026**, e o folder do STF saiu da lista — não por decisão, mas por medição: o inventário o dava por lido e o registro o dava por não lido, e as 6 folhas foram lidas por extração de imagem para resolver a divergência pelo fato (item 108.2). **Ler o preprint ou mantê-lo declarado segue sendo sua decisão**: ele não ancora registro e não é necessário ao desenho atual. | 21/10/2026 | §108.2 |
 | **As seis peças não abertas da coletânea de Singer, Araujo e Rugitsky:** Rugitsky, Ayers e Saad-Filho, a entrevista com Streeck, Loureiro, Lavinas *et al.* e Braga e Santos. **Todas de economia política, nenhuma necessária ao desenho atual.** | 22/10/2026 | §77.5 |
 | **Os capítulos 4 a 8 de Beach e Pedersen.** O 5 e o 6 sustentariam a **força probatória declarada de cada âncora**, que é a mais dura das quatro dívidas do documento 03. | 21/10/2026 | §74 |
+
+### Coleta
+
+| Decisão | Nasceu | Onde |
+|:--|:--|:--|
+| **Registrar-se na ACLED e trazer a série para `Fontes/`.** É a única PEA que cobre o Brasil de 2018 ao presente, por evento, com data, local, ator e tipo, e **gratuita com registro acadêmico**. A consulta está especificada na §13 de `docs/analise/16_CAMADA-A-MOBILIZATION.md` — país, janela de 09/01/2023 a 29/04/2026, tipos `protests` e `riots`, campos e recorte temático. **O que está em jogo não é mais dado: é a classe de PT-62.** Ele é o **único** registro do codebook em `Inferência do analista`, e o que o mantém ali é a ausência da medição do desfecho — o panorama da ACLED de outubro de 2025 registra 105 manifestações relacionadas ao julgamento de Bolsonaro, que é o lado que PT-62 afirma por inferência. **E é também o que permite testar a hipótese dos sinais opostos** (instrumento penal × físico, por visibilidade), que hoje não tem série brasileira 2023-2026. **Custo:** é coleta, com as quatro perguntas de sempre — licença, procedência, estado de leitura, lugar no manifesto —, e o limite de comparabilidade está escrito: a codificação da ACLED **não é a de Castro**, de modo que Brasil × Chile se compara por **desenho**, não somando séries. | 29/10/2026 | §105.4 |
 
 ### Decididas
 

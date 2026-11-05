@@ -259,6 +259,52 @@ def exame_de_prosa(unidades, lidas, janela=JANELA_RESSALVA):
 
 
 
+# A MARCA DA AFIRMACAO e um padrao, nao uma lista -- e a razao esta medida.
+# A negacao tem vocabulario FECHADO (nao lido, nenhuma lida, ...) e por isso
+# MARCAS_NAO_LEITURA e uma lista que cresce por medicao. A AFIRMACAO e o caso
+# NAO MARCADO: 638 ocorrencias de lido/lida nos documentos vigiados, em 417
+# formas distintas. Listar formas de afirmacao seria lista infinita.
+AFIRMA_LEITURA = re.compile(r"\blid[oa]s?\b", re.IGNORECASE)
+
+
+def exame_de_afirmacao(decl, docs):
+    """G5: linha que NOMEIA o arquivo de peca NAO_LIDO e afirma leitura.
+
+    Devolve [(rotulo, caminho_da_peca, trecho)].
+
+    O RECORTE E A LINHA QUE NOMEIA O ARQUIVO, e nao uma janela de caracteres
+    como na G2. Medido em 05/11/2026: com este recorte ha UMA linha em todo o
+    repositorio, e e a correta; com janela de vocabulario haveria ruido de
+    417 formas. **Linha que traz o nome do arquivo e diz "lida" faz afirmacao
+    sobre AQUELE arquivo** -- foi exatamente a forma do defeito que esta
+    guarda existe para pegar.
+
+    SO `NAO_LIDO`. `ILEGIVEL` fica fora porque peca sem camada de texto lida
+    por renderizacao e o caso legitimo das excecoes de Tatagiba.
+
+    RESSALVA: linha que tambem carrega marca de nao-leitura esta declarando
+    o estado, nao o contradizendo -- e ai quem governa e a G2.
+    """
+    alvos = [c for c, v in decl.items() if v.get("estado") == "NAO_LIDO"]
+    achados = []
+    for doc in docs:
+        if not os.path.exists(doc):
+            continue
+        for i, linha in enumerate(io.open(doc, encoding="utf-8",
+                                          errors="replace").read()
+                                  .split("\n"), 1):
+            if not AFIRMA_LEITURA.search(linha):
+                continue
+            baixo = linha.lower()
+            if any(m in baixo for m in MARCAS_NAO_LEITURA):
+                continue
+            for cam in alvos:
+                if os.path.basename(cam) in linha:
+                    achados.append(("%s:%d" % (doc, i), cam,
+                                    re.sub(r"\s+", " ", linha).strip()))
+    return achados
+
+
 def censo(raiz="."):
     """O ESTADO DE LEITURA de cada peca do manifesto -- o censo UNICO.
 
@@ -372,6 +418,9 @@ def main():
             unidades.append(("%s:%d" % (doc, i), linha))
     incoerencias = exame_de_prosa(unidades, lidas)
 
+    # --- G5: nenhum documento afirma LEITURA de peça NAO_LIDO
+    afirmacoes = exame_de_afirmacao(pecas, DOCS_VIGIADOS)
+
     # ------------------------------------------------------------- relatorio
     medidos = [d for d in linhas if d["origem_do_estado"] == "MEDIDO"]
     declarados = [d for d in linhas if d["origem_do_estado"] == "DECLARADO"]
@@ -394,6 +443,15 @@ def main():
         falhas.append("G2 coerência: {} documento(s) afirmam não-leitura de peça "
                       "declarada lida".format(len(incoerencias)))
 
+    print("  G5 afirmações de leitura: %d" % len(afirmacoes))
+    for rotulo, cam, txt in afirmacoes:
+        print("    X %s afirma LEITURA de «%s», que é NAO_LIDO"
+              % (rotulo, os.path.basename(cam)))
+        print("      %s" % txt[:150])
+    if afirmacoes:
+        falhas.append("G5 coerência: {} linha(s) afirmam leitura de peça "
+                      "declarada NAO_LIDO".format(len(afirmacoes)))
+
     emite(linhas, medidos, declarados, conta, incoerencias, decl)
     print("  -> %s" % SAIDA)
 
@@ -403,7 +461,7 @@ def main():
         for f in falhas:
             print("  X  %s" % f)
         return 1
-    print("  OK — cobertura, coerência de prosa e procedência da leitura")
+    print("  OK — cobertura, coerência de prosa nas DUAS direções e procedência da leitura")
     return 0
 
 

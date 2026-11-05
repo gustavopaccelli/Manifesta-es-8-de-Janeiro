@@ -201,6 +201,7 @@ Além disso, **sete registros citavam dois documentos e declaravam apenas um**. 
 | Pet 14.129 | 1 | 17 | oficial |
 | EP 169-Domiciliar | 1 | 40 | oficial |
 | ELLEFSEN 2021 | 1 | 22 | literatura |
+| Folder STF | 1 | 6 | peça de divulgação |
 | CARVALHO E TATAGIBA 2025 | 1 | 46 | literatura |
 | JUNG 2010 | 1 | 20 | literatura |
 | CASTRO 2025 | 1 | 22 | literatura |
@@ -298,7 +299,7 @@ Cada um aponta arquivo e página. A numeração impressa do relatório da CPMI c
 | PT-58 | Pet 14.129 + EP 169-Transferência | Pet 14.129: 1, 7, 8, 10, 14, 16 \| EP 169-Transferência: 1 | Confirmado em fonte primária |
 | PT-59 | EP 169-Transferência | EP 169-Transferência: 1, 33, 35, 36 | Confirmado em fonte primária |
 | PT-60 | EP 169-Domiciliar | EP 169-Domiciliar: 1, 35, 36, 37, 38, 40 | Confirmado em fonte primária |
-| PT-61 | Balanço 2026 + ELLEFSEN 2021 | Balanço 2026: 6, 7, 8, 10, 11, 13, 14 \| ELLEFSEN 2021: 1 | Confirmado em fonte primária |
+| PT-61 | Balanço 2026 + ELLEFSEN 2021 + Folder STF | Balanço 2026: 6, 7, 8, 10, 11, 13, 14 \| ELLEFSEN 2021: 1 \| Folder STF: 2 | Confirmado em fonte primária |
 | PT-62 | CARVALHO E TATAGIBA 2025 + JUNG 2010 + CASTRO 2025 | CARVALHO E TATAGIBA 2025: 35 \| JUNG 2010: 1 \| CASTRO 2025: 1 | Inferência do analista |
 
 ## Lista 2 — Sem âncora documental por natureza do registro (0)

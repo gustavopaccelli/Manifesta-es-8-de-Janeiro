@@ -108,6 +108,14 @@
       "o_que": "**Os capítulos 4 a 8 de Beach e Pedersen.** O 5 e o 6 sustentariam a **força probatória declarada de cada âncora**, que é a mais dura das quatro dívidas do documento 03.",
       "onde": "74",
       "nasceu": "21/10/2026"
+    },
+    {
+      "id": "acled-serie",
+      "estado": "aberta",
+      "natureza": "coleta",
+      "o_que": "**Registrar-se na ACLED e trazer a série para `Fontes/`.** É a única PEA que cobre o Brasil de 2018 ao presente, por evento, com data, local, ator e tipo, e **gratuita com registro acadêmico**. A consulta está especificada na §13 de `docs/analise/16_CAMADA-A-MOBILIZATION.md` — país, janela de 09/01/2023 a 29/04/2026, tipos `protests` e `riots`, campos e recorte temático. **O que está em jogo não é mais dado: é a classe de PT-62.** Ele é o **único** registro do codebook em `Inferência do analista`, e o que o mantém ali é a ausência da medição do desfecho — o panorama da ACLED de outubro de 2025 registra 105 manifestações relacionadas ao julgamento de Bolsonaro, que é o lado que PT-62 afirma por inferência. **E é também o que permite testar a hipótese dos sinais opostos** (instrumento penal × físico, por visibilidade), que hoje não tem série brasileira 2023-2026. **Custo:** é coleta, com as quatro perguntas de sempre — licença, procedência, estado de leitura, lugar no manifesto —, e o limite de comparabilidade está escrito: a codificação da ACLED **não é a de Castro**, de modo que Brasil × Chile se compara por **desenho**, não somando séries.",
+      "onde": "105.4",
+      "nasceu": "29/10/2026"
     }
   ],
   "depois": [

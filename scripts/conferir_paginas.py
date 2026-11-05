@@ -110,6 +110,20 @@ EXCECOES = {
     ("PT-01", "nao houve a conformacao de um frame capaz de conferir unidade"):
         "Tatagiba (2014, p. 40) — PDF p. 6, peça sem camada de texto, lida por "
         "renderização a 170 dpi",
+    # A OITAVA, EM 05/11/2026 (item 109), e e do MESMO tipo das duas de
+    # Tatagiba: peca sem camada de texto. O folder de campanha do STF tem 6
+    # folhas e cada uma devolve 2 BYTES NUL -- zero caractere legivel --, de
+    # modo que `localizar()` jamais achara esta aspa. Ela entrou porque o
+    # `framing_narrativa` de PT-61 E a aspa 'Democracia Inabalada' e ELA NAO
+    # TINHA LASTRO EM LUGAR NENHUM: o balanco de 2026 nao a traz entre aspas.
+    # A folha 2 do folder traz a frase da presidente do STF de onde a palavra
+    # vem, e foi lida por EXTRACAO DA IMAGEM EMBUTIDA -- a peca guarda uma
+    # imagem por folha. **Ausencia de texto extraivel nao e ausencia de
+    # conteudo**, e quem quiser conferir extraia a imagem da folha 2.
+    ("PT-61", "estarmos reunidos neste plenario tres semanas apos os ataques"):
+        "Ministra Rosa Weber, presidente do STF, no folder «Democracia "
+        "Inabalada» — PDF f. 2, peça sem camada de texto, lida por extração "
+        "da imagem embutida. É o lastro do `framing_narrativa` do registro",
     # As duas exceções abaixo entraram em 09/10/2026 e são do MESMO tipo, que é o
     # caso 4 da lista impressa ao fim deste arquivo: transcrição que está em
     # `fonte_trecho` DE PROPÓSITO sem ser âncora do registro.

@@ -380,11 +380,29 @@ def main():
         # 12.352 paginas; a DOCUMENTAL nao se move, porque e literatura, e e isso
         # que a separacao desta linha serve para mostrar. Licenca lida no arquivo:
         # RESERVADA -- nao redistribuivel, e por isso o manifesto existe.
-        if (n, total, doc_n, doc_total) != (65, 12352, 23, 6970):
-            avisos.append("corpus mudou: {} PDFs / {} páginas, {} documentais / {} p. "
-                          "(era 65 / 12352, 23 / 6970)".format(n, total, doc_n, doc_total))
-            print("  ~ corpus difere da linha de base de 21/10/2026 (65 PDFs / 12352 p., "
-                  "23 documentais / 6970 p.)")
+        # ATUALIZADA EM 05/11/2026 (item 109.1), e o atraso e o achado: ela
+        # estava em 21/10 e o corpus mudou QUATRO VEZES desde entao -- os dois
+        # relatorios do Iphan em 28/10, os oito da Mobilization no mesmo dia, e
+        # a pagina de PT-03D em 05/11. **A linha so AVISA, e linha que so avisa
+        # e linha que ninguem atualiza**: o ciclo imprimiu o aviso em todas as
+        # corridas de duas semanas sem que nada o cobrasse. 65 -> 75 PDFs,
+        # 12.352 -> 12.644 paginas; a DOCUMENTAL move-se de 23 -> 25 e 6.970 ->
+        # 7.092, porque os dois laudos do Iphan ancoram PT-38.
+        # E ELA PASSOU A REPROVAR EM 05/11/2026, em vez de so avisar. A razao
+        # nao e zelo: o painel do passo 6 AFIRMA, com estas palavras, que
+        # "toda linha de base reprova com codigo de saida != 0; nenhuma apenas
+        # avisa" -- e esta era a excecao que tornava a frase falsa. **E foi
+        # por so avisar que ela ficou duas semanas velha**, imprimindo o aviso
+        # em toda corrida sem que nada o cobrasse. A consequencia e a mesma de
+        # toda linha de base desta casa: entrar peca no corpus derruba o ciclo
+        # ate que a linha se mova, com a razao escrita ao lado.
+        BASE = (75, 12644, 25, 7092)
+        if (n, total, doc_n, doc_total) != BASE:
+            falhas.append("corpus mudou: {} PDFs / {} páginas, {} documentais / {} p. "
+                          "(era {} / {}, {} / {}) — mova a linha de base com a "
+                          "razão escrita".format(n, total, doc_n, doc_total, *BASE))
+            print("  ~ corpus difere da linha de base de 05/11/2026 ({} PDFs / {} p., "
+                  "{} documentais / {} p.)".format(*BASE))
         else:
             print("  OK — bate com o inventário")
 

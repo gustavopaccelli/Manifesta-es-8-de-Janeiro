@@ -2,8 +2,10 @@
 # O ciclo completo, na ordem. Falha na primeira checagem que não passar.
 #
 # Substitui o Makefile que o padrão Cookiecutter Data Science prevê: não há
-# make nesta máquina, e o ciclo é linear — catorze passos, sem grafo de
-# dependências para resolver.
+# make nesta máquina, e o ciclo é linear, sem grafo de dependências para
+# resolver. **A contagem de passos não é escrita aqui**: ela dizia *catorze*
+# com quinze passos no arquivo, e quem a quiser medida tem `passos_do_ciclo`
+# em `gerar_painel.py`, que a lê deste arquivo.
 #
 # Uso:  bash scripts/ciclo.sh            # amostra de 12 no passo 7
 #       bash scripts/ciclo.sh --todos    # confere todos os registros com página
@@ -11,17 +13,34 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 export PYTHONIOENCODING=utf-8
 
-echo "== 1/15  gerar_codebook — JSON -> data/processed/ (CSV + XLSX)"
+# O MANIFESTO, acrescentado em 05/11/2026 (item 109.1). Entra como PRIMEIRO
+# passo porque tres passos adiante o leem: o painel conta peças dele, o
+# registro de leitura parte dele, e a checagem 8 o compara com o disco.
+#
+# A RAZAO TEM DATA. Até 05/11 este gerador NAO era passo do ciclo, e por isso
+# o manifesto comitado pôde divergir do que ele produz: regenerá-lo naquele dia
+# mudou DEZ CAMPOS em dez linhas — a procedência de duas peças e a licença de
+# oito —, com o classificador intacto e os arquivos intactos. A checagem 8
+# compara presença e SHA-256, nunca as outras colunas: nada olhava.
+#
+# O CUSTO FOI MEDIDO: 2m38s sem cache, porque `classifica()` abre 75 PDFs.
+# Com o cache por SHA-256 de `data/cache_licenca.json`, 6s com cache quente e
+# 1m07s quando o classificador muda — a receita do cache é o HASH do próprio
+# `auditar_licencas.py`, de modo que editá-lo invalida tudo sozinho.
+echo "== 1/16  gerar_manifesto_corpus — Fontes/ -> MANIFESTO-CORPUS.csv"
+python scripts/gerar_manifesto_corpus.py
+
+echo "== 2/16  gerar_codebook — JSON -> data/processed/ (CSV + XLSX)"
 python scripts/gerar_codebook.py
 
-echo "== 2/15  gerar_auditoria — JSON -> reports/AUDITORIA-FONTES.md"
+echo "== 3/16  gerar_auditoria — JSON -> reports/AUDITORIA-FONTES.md"
 python scripts/gerar_auditoria.py
 
 # A seção "Ordem de ataque" da agenda era escrita à mão e envelheceu três vezes
 # em dezesseis dias — tarefa fechada listada como aberta, contagem de duas
 # rodadas antes na linha que declarava os números como gerados. Agora sai de
 # data/ordem_de_ataque.json, e as cifras saem de medição a cada ciclo.
-echo "== 3/15  gerar_ordem_de_ataque — ledger -> docs/PENDENCIAS-ANALITICAS.md"
+echo "== 4/16  gerar_ordem_de_ataque — ledger -> docs/PENDENCIAS-ANALITICAS.md"
 python scripts/gerar_ordem_de_ataque.py
 
 # A TABELA-ESPELHO, acrescentada em 20/10/2026 a pedido do pesquisador. Ela
@@ -37,7 +56,7 @@ python scripts/gerar_ordem_de_ataque.py
 # era nao haver um lugar unico onde virar o bit. A guarda G-A confere que o
 # ponteiro de secao de cada decisao EXISTE na agenda, porque ponteiro quebrado
 # e a forma que o apodrecimento toma aqui.
-echo "== 4/15  gerar_decisoes — ledger de decisoes -> docs/PENDENCIAS-ANALITICAS.md"
+echo "== 5/16  gerar_decisoes — ledger de decisoes -> docs/PENDENCIAS-ANALITICAS.md"
 python scripts/gerar_decisoes.py
 echo
 
@@ -52,11 +71,11 @@ echo
 # os passos irmaos geram, e DERIVA o numero de cada passo de `ciclo.sh` --
 # porque numero de passo e a cifra que mais apodrece aqui, de oito a catorze em
 # dezenove dias.
-echo "== 5/15  gerar_painel — painel de estado -> docs/PENDENCIAS-ANALITICAS.md"
+echo "== 6/16  gerar_painel — painel de estado -> docs/PENDENCIAS-ANALITICAS.md"
 python scripts/gerar_painel.py
 echo
 
-echo "== 6/15  gerar_tabela_espelho — figuras x codebook -> reports/ + data/processed/"
+echo "== 7/16  gerar_tabela_espelho — figuras x codebook -> reports/ + data/processed/"
 python scripts/gerar_tabela_espelho.py
 
 # A GRADE FUNCIONAL DO ENQUADRAMENTO, acrescentada em 21/10/2026 a pedido do
@@ -69,11 +88,11 @@ python scripts/gerar_tabela_espelho.py
 # checagem 6 confere que a remissao aponta para registro existente; so este
 # passo confere que, se A declara diade com B, B declara com A -- que e a
 # diferenca entre `vide tambem` e uma afirmacao sobre a estrutura do conflito.
-echo "== 7/15  gerar_diades — pares do processo -> reports/TABELA-DIADES.md"
+echo "== 8/16  gerar_diades — pares do processo -> reports/TABELA-DIADES.md"
 python scripts/gerar_diades.py
 echo
 
-echo "== 8/15  gerar_grade_enquadramento — inferencia funcional -> docs/referencial/"
+echo "== 9/16  gerar_grade_enquadramento — inferencia funcional -> docs/referencial/"
 python scripts/gerar_grade_enquadramento.py
 echo
 
@@ -85,20 +104,20 @@ echo
 # A guarda G2 dele e a que faltava: nenhum documento pode afirmar nao-leitura de
 # peca cujo estado e de leitura. Roda depois da grade porque nao depende dela, e
 # antes das checagens estruturais porque e gerador.
-echo "== 9/15  gerar_registro_leitura — estado de leitura -> docs/referencial/"
+echo "== 10/16  gerar_registro_leitura — estado de leitura -> docs/referencial/"
 python scripts/gerar_registro_leitura.py
 echo
 
-echo "== 10/15  verificar_integridade — dez checagens estruturais"
+echo "== 11/16  verificar_integridade — dez checagens estruturais"
 python scripts/verificar_integridade.py
 
-echo "== 11/15  conferir_figuras — as figuras de reports/figures/ x codebook"
+echo "== 12/16  conferir_figuras — as figuras de reports/figures/ x codebook"
 python scripts/conferir_figuras.py
 
-echo "== 12/15  conferir_relatorio — o relatório de pesquisa x codebook"
+echo "== 13/16  conferir_relatorio — o relatório de pesquisa x codebook"
 python scripts/conferir_relatorio.py
 
-echo "== 13/15  conferir_paginas — transcrição x página no PDF"
+echo "== 14/16  conferir_paginas — transcrição x página no PDF"
 # --todos por padrao desde 10/10/2026: a linha de base de casamento parcial
 # (PARCIAIS_BASE) so vale no conjunto completo, e e ela que pega transcricao
 # editada na cauda -- a falha que escapou da prova negativa de 09/10. Guarda
@@ -110,13 +129,13 @@ python scripts/conferir_paginas.py "$@"
 # O campo multiorganizacional declara entidades por fragmento de `ator_grupo` e
 # `target_alvo`. Se um registro for reescrito, o fragmento deixa de ocorrer e o
 # --autoteste aborta — é a checagem que impede a peça de envelhecer em silêncio.
-echo "== 14/15  desenhar_campo --autoteste — o campo x codebook"
+echo "== 15/16  desenhar_campo --autoteste — o campo x codebook"
 python scripts/desenhar_campo.py --autoteste
 
 # O documento 11 cita registro e página à mão. Duas citações da primeira versão
 # foram escritas por dedução de vizinhança, e estavam erradas — esta é a
 # checagem que impede a terceira.
-echo "== 15/15  conferir_hipoteses — o documento 11 x codebook"
+echo "== 16/16  conferir_hipoteses — o documento 11 x codebook"
 python scripts/conferir_hipoteses.py
 
 echo "== OK — ciclo completo sem falhas"

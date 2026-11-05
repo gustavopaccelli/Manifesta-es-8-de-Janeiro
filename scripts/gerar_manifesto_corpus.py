@@ -92,14 +92,58 @@ def ancoras_nao_pdf():
     return sorted(caminhos)
 
 
+CACHE = "data/cache_licenca.json"
+
+
+def receita_do_classificador():
+    """A versao da receita E O HASH DO CLASSIFICADOR, e isso e de proposito.
+
+    Versao escrita a mao so invalida o cache quando alguem lembra de a mudar
+    -- e a licao desta casa e que **a garantia que ninguem confere e a que
+    falha**. Com o hash do arquivo, editar `classifica()` invalida o cache
+    inteiro sozinho, ao preco de um recalculo medido em 46s.
+    """
+    import auditar_licencas as _al
+    bruto = io.open(_al.__file__, "rb").read()
+    return hashlib.sha256(bruto).hexdigest()[:16]
+
+
+def classifica_em_cache(cam, sha, cache, receita):
+    """`classifica()` memorizada pelo SHA-256 da peca.
+
+    O SHA e o que decide se a resposta ainda vale: peca que muda de bytes
+    reclassifica sozinha. **O cache nunca pode guardar valor que
+    `classifica()` nao produziu** -- e essa e a diferenca entre ele e o que
+    aconteceu ao manifesto ate 05/11/2026, que trazia dez campos de origem
+    nenhuma.
+    """
+    chave = "%s|%s" % (receita, sha)
+    posto = cache.get(chave)
+    if posto:
+        return posto["cls"], posto["var"], posto["n"]
+    cls, var, n = classifica(cam)
+    cache[chave] = {"cls": cls, "var": var, "n": n}
+    return cls, var, n
+
+
 def main():
     pdfs = sorted(p.replace("\\", "/") for p in
                   glob.glob("Fontes/**/*.pdf", recursive=True))
+    _receita = receita_do_classificador()
+    try:
+        _cache = json.loads(io.open(CACHE, encoding="utf-8").read())
+    except (OSError, ValueError):
+        _cache = {}
+    # So as chaves da receita corrente sobrevivem: cache que acumula
+    # receitas velhas cresce sem fim e esconde o custo da invalidacao.
+    _cache = {k: v for k, v in _cache.items()
+              if k.startswith(_receita + "|")}
     linhas = []
     for cam in pdfs:
         eixo = cam.split("/")[1]
         doc = eixo not in FORA_DA_DOCUMENTAL
-        cls, var, n = classifica(cam)
+        sha = sha256(cam)
+        cls, var, n = classifica_em_cache(cam, sha, _cache, _receita)
         if doc and cls in ("SEM", "ABERTA"):
             cls = "ATO OFICIAL"
         proc = PROCEDENCIA.get(cam)
@@ -107,7 +151,7 @@ def main():
         rota = (proc[0] if proc else "NAO DECLARADA").replace("\n", " ")
         linhas.append({
             "caminho": cam,
-            "sha256": sha256(cam),
+            "sha256": sha,
             "paginas": n,
             "bytes": os.path.getsize(cam),
             "licenca_declarada": cls,
@@ -140,6 +184,10 @@ def main():
             "documental": "sim" if doc else "nao",
             "procedencia": rota,
         })
+    io.open(CACHE, "w", encoding="utf-8", newline="\n").write(
+        json.dumps(_cache, ensure_ascii=False, indent=2,
+                   sort_keys=True) + "\n")
+
     linhas.sort(key=lambda l: l["caminho"])
 
     with io.open(SAIDA, "w", encoding="utf-8-sig", newline="") as fh:

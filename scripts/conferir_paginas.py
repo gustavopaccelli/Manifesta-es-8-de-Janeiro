@@ -132,6 +132,20 @@ EXCECOES = {
         "PDF com página; entrou antes de o registro ter fonte_pagina. O que PT-03C "
         "ancora com página é a pressão militar sobre este julgamento, em Madeira et "
         "al. (2022), p. 256 e 267 do PDF",
+    # ACRESCENTADA EM 05/11/2026 (item 110.2), e e irma da de PT-19 logo
+    # abaixo: aspa que o registro cita DE PROPOSITO sem que ela seja ancora.
+    # A nota de PT-08 exibe a ELISAO DE LACERDA para a criticar -- ela
+    # transcreve "poder belico minimo para [...] matar todos os policiais la
+    # dentro" e o original diz "para NAO MORRER NINGUEM, matar todos". A
+    # transcricao ancorada reproduz a versao elidida na secao em que
+    # documenta o defeito, de modo que ela CONFERE -- e promove-la poria em
+    # `fonte_trecho` uma aspa que nao sustenta nada do registro: ela exibe um
+    # defeito de terceiro. **A aspa que sustenta o fato esta em
+    # `fonte_trecho`, inteira e sem elisao.**
+    ("PT-08", "poder belico minimo para [...] matar todos os policiais"):
+        "DELIBERADAMENTE NAO E ANCORA: e a citacao intermediaria DEFEITUOSA de "
+        "Lacerda, exibida na nota para ser criticada. A fala inteira e sem "
+        "elisao esta em `fonte_trecho` e e essa que ancora o registro",
     ("PT-19", "ostensibly inspired by the coups in sri lanka and thailand"):
         "DELIBERADAMENTE NÃO É ÂNCORA. A frase é de Bastos e Recuero (2023, p. 4) e "
         "está citada no registro para declarar que NÃO corrobora o Sri Lanka: os "
@@ -675,7 +689,7 @@ INTERVALO = re.compile(r"\b(\d{1,4})\s*[-–—]\s*(\d{1,4})\b")
 ESTRUTURAL = re.compile(r"\bitem\b|\bitens\b|ementa|disposit", re.I)
 
 
-def meias_ancoras(e, pp, docs):
+def meias_ancoras(e, pp, docs, anexos=(), usadas=None):
     """Aspa que vive so em campo de NOTA e confere numa folha JA ancorada.
 
     Devolve [(campo, cod, folha, aspa)].
@@ -718,9 +732,38 @@ def meias_ancoras(e, pp, docs):
                         achou = pg
                         break
                 if achou:
+                    if _perdoada(e["id"], aspa, usadas):
+                        break
                     achados.append((campo, cod, achou, aspa))
                     break
+            else:
+                # NAO-PDF, ACRESCENTADO EM 05/11/2026 (item 110.2). O laco
+                # acima so abre PDF, e por isso esta guarda imprimia zero com
+                # DUAS meias-ancoras na mesa, as duas em `.md`. E o mesmo modo
+                # de falha de 25/10, quando `localizar()` so abria PDF.
+                cam = localizar_nao_pdf(aspa, anexos) if anexos else None
+                if cam and not _perdoada(e["id"], aspa, usadas):
+                    achados.append((campo, Path(cam).name,
+                                    "inteiro teor", aspa))
     return achados
+
+
+def _perdoada(pid, aspa, usadas):
+    """A aspa tem excecao declarada em EXCECOES? Marca o uso e devolve True.
+
+    A guarda consulta a MESMA tabela que `localizar()` usa, e nao uma segunda:
+    tabela de excecao e divida, e duas tabelas sao duas dividas. O efeito
+    colateral e desejado -- a guarda da excecao ociosa passa a cobrir estas
+    entradas tambem, de modo que excecao de meia-ancora que deixe de ser
+    necessaria e acusada como qualquer outra.
+    """
+    chave = next((k for k in EXCECOES
+                  if k[0] == pid and norm(aspa).startswith(k[1])), None)
+    if not chave:
+        return False
+    if usadas is not None:
+        usadas.add(chave)
+    return True
 
 
 # ------------------------------------------------------- ANCORA NAO-PDF ---
@@ -1168,7 +1211,7 @@ def main():
         # NOTA traz aspa que confere numa folha que ele ancora e a
         # meia-ancora mais pura que existe -- e sairia pelo `continue` sem
         # ser examinado se a guarda viesse depois.
-        for _m in meias_ancoras(e, pp, docs):
+        for _m in meias_ancoras(e, pp, docs, anexos, excecoes_usadas):
             meias.append((e["id"],) + _m)
 
         cits = transcricoes(e.get("fonte_trecho"))

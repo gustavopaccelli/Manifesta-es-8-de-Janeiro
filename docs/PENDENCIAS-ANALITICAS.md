@@ -22,7 +22,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Corpus | **85 peças / 12.644 p.** no manifesto, em 14 eixos — 75 PDFs e 10 âncoras não-PDF, estas conferidas por arquivo inteiro desde 25/10/2026. Da documental: **35 peças / 7.092 p.**; de literatura: 50 peças |
 | Figuras | SVG da cadeia causal e cronologia navegável. **São a única parte do aparato escrita à mão**, e duas guardas as cobrem: o passo 12 confere que todo registro do codebook aparece na figura, e a tabela-espelho do passo 7 confere o **nome do mecanismo** de cada ponto contra o campo — com linha de base em zero divergências |
 | Verificação | `bash scripts/ciclo.sh` — **16 passos**: 10 geradores e 6 conferidores, entre eles as **10 checagens estruturais**. Toda linha de base reprova com código de saída ≠ 0; nenhuma apenas avisa |
-| Controle de versão | git desde **20/09/2026**, 120 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 05/11/2026 |
+| Controle de versão | git desde **20/09/2026**, 121 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 05/11/2026 |
 | Tarefas abertas | **3** — 10, 17, 16. A lista vive na seção *Ordem de ataque*, gerada pelo passo 4, e 34 tarefas estão fechadas |
 | Decisões pendentes | **7**, em 4 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 5 |
 | **Redação do artigo** | **não iniciada — por decisão, é o último item da fila.** Desde 25/10/2026 ela não tem mais pré-requisito de dado: a tarefa 26 fechou e não há decisão de campo aberta no codebook. **Começá-la é decisão do pesquisador** |
@@ -6252,6 +6252,95 @@ Ela vivia só na prosa do item 105.4 — e o ledger **declara por escrito** que 
 | **a decisão da coleta da ACLED** | agora está no ledger, onde o passo 5 a gera. **É sua**, e é a de maior consequência das sete |
 | **as três aspas que não conferem em lugar nenhum** | a de PT-61 ganhou lastro hoje. **Não varri as outras**: a classe é *aspa em campo analítico que não confere em peça ancorada*, e a guarda das meias-âncoras não a alcança por desenho. **Medir essa classe é frente própria** |
 | **o preprint de Drummond e Manginelli** | a última peça `NAO_LIDO`, e lê-la ou mantê-la declarada segue sua |
+
+**Nada mais fica aberto desta frente.**
+
+
+---
+
+## 110. O censo das aspas órfãs, executado — e a classe era de convenção, não de defeito — ✅ 05/11/2026
+
+**Encaminhamento:** *"Meça essa classe das aspas órfãs."*, e depois *"Execute as três primeiras."*
+
+**A medição veio antes, e ela mudou o que havia a fazer.** A classe existe e tem **31 membros** na camada que a guarda alcança — aspa de 45+ caracteres em campo de prosa, fora de `fonte_trecho`. Mas **quase nenhum é defeito**: das 26 que não conferem em peça nenhuma, **19 são rótulo cunhado pelo analista ou fala citada do pesquisador**, e nunca terão fonte onde conferir. **Dois defeitos, e os dois saíram.**
+
+### 110.1 A elisão de PT-03E — e o que ela escondia não era adorno
+
+A aspa do `mecanismo_causal` trazia `(...)` no meio e **não conferia na peça que o registro ancora**. Medido:
+
+| | |
+|:--|:--|
+| 1ª metade (112 car.) | **confere** |
+| 2ª metade (44 car.) | **confere** |
+| a aspa inteira, com o `(...)` | **não confere** |
+
+**O vão era de 105 caracteres e estava legível no acórdão**, de modo que a saída foi **devolver o que a elisão tirou** — e não partir a aspa em duas. É a mesma correção de PT-07, em 28/10.
+
+> **E o que a elisão escondia era o fundamento:** *"pelos crimes de corrupção passiva (art. 317 do Código Penal) e lavagem de dinheiro (art. 1º, caput e V, da Lei nº 9.613/1998)"*. A frase afirmava que incide a inelegibilidade **e omitia por quê**. O registro foi de `OK 5/5` a **`OK 7/7`**.
+
+### 110.2 A guarda passou a ler âncora não-PDF — e a segunda aspa não era promovível
+
+**O laço tinha `if not caminho.lower().endswith(".pdf"): continue`**, e por isso a guarda imprimia `meias-âncoras: 0` com **duas na mesa**, as duas em `.md`. **É o mesmo modo de falha de 25/10**, quando `localizar()` só abria PDF — consertado lá, e não aqui.
+
+**E as duas tiveram destinos opostos, que é o que a medição serviu para separar:**
+
+| | |
+|:--|:--|
+| **PT-19A** | **promovida.** A §Relevância para o codebook do post do NetLab diz que *"um anúncio tem anunciante, valor pago e decisão de moderação"* — é a aspa que sustenta o achado do registro: **a peça declara documentável exatamente aquilo que não documenta**. Nenhuma âncora nova foi necessária |
+| **PT-08** | **exceção declarada.** A aspa **confere e não é promovível**: a nota exibe a **elisão de Lacerda** para a criticar — ela transcreve *"poder bélico mínimo para [...] matar todos os policiais lá dentro"* e o original diz *"para **não morrer ninguém**, matar todos"*. **E a transcrição ancorada reproduz a versão elidida na seção em que documenta o defeito**, de modo que ela casa. Promovê-la poria em `fonte_trecho` uma aspa que **não sustenta nada do registro**: ela exibe defeito de terceiro |
+
+> **A exceção entrou na tabela que já existe, e não numa segunda.** Tabela de exceção é dívida, e duas tabelas são duas dívidas — e o efeito colateral é desejado: **a guarda da exceção ociosa passou a cobrir as de meia-âncora também**. O ciclo fecha com **9 de 9 exceções usadas**.
+
+**Duas provas negativas:** a aspa de PT-19A de volta à nota — **a guarda acusa pelo caminho não-PDF**; e a de PT-23 fora de `fonte_trecho` — **o caminho PDF continua pegando**.
+
+### 110.3 A convenção da aspa, declarada em três tipos
+
+**A regra da casa continua valendo** — *aspa é asserção de literalidade* —, e o censo mediu que **a aspa simples faz três trabalhos diferentes** neste codebook:
+
+| tipo | o que é | onde vive | o ciclo confere? |
+|:--|:--|:--|:--|
+| **1 transcrição literal** | citação de peça do corpus | `fonte_trecho` | **sim, por inteiro** |
+| **2 rótulo cunhado pelo analista** | o nome que o projeto dá a um mecanismo | `mecanismo_causal`, `nota_auditoria` | não — **não tem fonte** |
+| **3 fala citada do pesquisador ou do projeto** | encaminhamento dele, convenção da casa | `nota_auditoria` | não — **não é citação de fonte** |
+
+**Entrou em `metadados.convencao_da_aspa`**, no molde do `alcance_framing_narrativa` de 30/10. **Sem ela, quem lê o codebook lê 19 transcrições inexistentes** — e a distinção é pela **procedência declarada ao lado**, não pela aspa: transcrição vem com peça e folha, rótulo e fala não vêm.
+
+> **E o que isto NÃO autoriza ficou escrito:** aspa de fonte que vive fora de `fonte_trecho` continua sendo **meia-âncora**, a guarda a acusa e a linha de base é zero. **A distinção é sobre o que a aspa É, não sobre onde ela pode morar.**
+
+### 110.4 O piso de 45 caracteres fica, e agora está declarado
+
+`transcricoes()` só extrai span de **45+ caracteres**. Abaixo disso nada é extraído e **nada é conferido** — nem dentro de `fonte_trecho`:
+
+| | |
+|:--|--:|
+| spans entre aspas abaixo de 45 caracteres | **354** |
+| dentro de uma transcrição 45+, logo **já conferidos** | 87 |
+| **sozinhos, que nada confere** | **267** |
+| destes, dentro do próprio `fonte_trecho` | **65** |
+
+**O piso é deliberado e fica**, e a razão está medida: a maioria dos spans curtos é **nome próprio ou rótulo** — `'Fora Dilma'`, `'Uma Ponte para o Futuro'`, `'Stop the Steal'`, `'Democracia Inabalada'` —, e baixá-lo transformaria **todo nome entre aspas em transcrição a conferir**.
+
+### 110.5 Dois erros da minha própria medição, e são o mesmo
+
+**`str.strip()` não remove `\x00`.** Declarei primeiro que *"nenhuma peça do corpus está sem camada de texto"* — e Tatagiba (2014), Tarrow e o folder do STF devolvem **2 bytes NUL por folha**. É a **segunda vez em dois dias**: em 04/11 o mesmo teste me fez dizer que *"sem camada de texto"* não conferia para o folder.
+
+**Com o teste corrigido** — folha legível = 200+ caracteres depois de limpar NUL:
+
+| peça | folhas legíveis |
+|:--|--:|
+| `TATAGIBA_Ciclos-de-protestos…2014.pdf` | **0 de 28** |
+| `STF_Democracia-Inabalada_Folder.pdf` | **0 de 6** |
+| `TARROW_O-poder-em-movimento_Vozes-2009.pdf` | **2 de 162** |
+
+**E isso explica 5 das 26 órfãs:** são de PT-01, que ancora Tatagiba — **inconferíveis por construção**, não por defeito.
+
+### 110.6 O que isto deixa
+
+| | |
+|:--|:--|
+| **a guarda sobre as órfãs** | **não a construí, e recomendo não construir.** Depois da classificação a classe acusável tinha **um membro**, e ele saiu em 110.1. Guarda para classe de um, cujo critério exigiria distinguir rótulo de transcrição, custa mais ruído do que pega |
+| **as 3 aspas de PT-03D** | estão em peça **do corpus que o registro não ancora** — o verbete da Wiley-Blackwell e *Dynamics of Contention*. É citação de teoria no campo do mecanismo, e o precedente de PT-19 a trata como legítima. **Declarar ou ancorar é decisão sua** |
+| **as 5 de PT-01** | só se conferem lendo Tatagiba por extração de imagem, como se fez com o folder. **28 folhas** |
 
 **Nada mais fica aberto desta frente.**
 

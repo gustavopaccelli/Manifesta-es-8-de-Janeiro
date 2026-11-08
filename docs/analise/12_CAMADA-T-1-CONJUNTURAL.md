@@ -412,3 +412,95 @@ O eixo 12 já traz **KUNRATH SILVA 2018**, que é a âncora de PT-01, e **KUNRAT
 - **`Fontes/12_Camada-T-1_Literatura/`** — de sete para **oito peças**. Corpus: **75 → 76 PDFs**, **12.644 → 12.668 páginas**. A contagem **documental não se move** — segue em **25 / 7.092** —, porque o eixo 12 está em `FORA_DA_DOCUMENTAL`: entrou artigo de revista, não documento oficial. É a mesma razão pela qual as duas contagens existem separadas.
 - **A linha de base de `verificar_integridade.py` foi movida no mesmo ato**, com esta seção como razão escrita. Desde 05/11/2026 ela **reprova** em vez de avisar, e foi para isto que passou a reprovar: entrar peça no corpus derruba o ciclo até que a linha se mova.
 - **`data/estado_de_leitura.json`** ganhou a declaração da peça, em `LIDO_PARCIAL`, com `o_que` nomeando as folhas lidas e as não lidas.
+
+---
+
+## 11. A nona e a décima peças do eixo 12 — 08/11/2026, no mesmo dia e por decisão do pesquisador
+
+### 11.1 ALONSO 2021 — a maior base de eventos do corpus, e a tese que contraria duas peças que já estavam aqui
+
+**ALONSO, Angela. "La reacción patriota en Brasil". *Población & Sociedad*, 28(2):8-28, jul-dez 2021.** doi 10.19137/pys-2021-280202 · acesso aberto na Redalyc.
+
+**Por que ela entra.** Ela traz a **maior base de eventos de protesto de qualquer peça deste corpus**, e declara o marco: *"la perspectiva teórica de la política contenciosa desarrollada por **McAdam, Tarrow y Tilly (2001)**"* — que é o volume do eixo 05.
+
+| base | o que tem |
+|:--|:--|
+| **Base de Eventos de Protesto** | **1.399 eventos** em **287 cidades** brasileiras, 2013-2016, **36 variáveis** |
+| **Base de Associações Civis e Agrupamentos Políticos** | **389 atores coletivos** ativos desde 2011, **42 variáveis** |
+
+A fonte das duas é a **Folha de S. Paulo**, completada por G1, Estado de S. Paulo e outros. **É base maior que a de TATAGIBA E GALVÃO 2019**, que tem 1.285 protestos e já está no eixo.
+
+**E a tese contraria a datação de duas peças do corpus.** Folha 3 (impressa 8): *"no hubo una irrupción súbita de una nueva derecha en Brasil"* — os movimentos de reação a reformas se manifestam **desde o início da redemocratização**, com aceleração em **2003**. O corpus tem agora **três datações concorrentes e medidas** para a emergência da direita de rua:
+
+| peça | quando começa |
+|:--|:--|
+| TATAGIBA, TRINDADE e TEIXEIRA 2015 | **2007** |
+| ROCHA 2021, fora do corpus | 2006, e 2013 é um de sete momentos críticos |
+| **ALONSO 2021** | **anos 1980**, com aceleração em **2003** |
+
+**As três estão no aparato, e a divergência fica visível** — é o mesmo tratamento que o item 1 da seção 8 deu à divergência sobre a descontinuidade.
+
+**E é a peça que nomeia o conceito.** Folha 4 (impressa 9): *"los **movimientos de reacción a reformas** (Hirshman, 1991)"* — grafado assim, sem o c, no original. **É o nome sob o qual a literatura brasileira mede o que Meyer e Staggenborg chamam de contramovimento.** Medido no artigo: `contramovimiento` **0**, `spin-off` **0**, `abeyance` **0**, `repert` **1**, `ciclo de protesta` **5**.
+
+**O deslocamento, medido: impressa = PDF + 5** — folha 10 imprime 15, folha 21 imprime 26, folha 23 imprime 28. **As folhas 1 e 2 são capa da Redalyc**, não do artigo, e a folha 3 não traz número.
+
+> **Três buscadores atribuíram este MESMO PDF a três autores diferentes** — Alonso, Kunrath Silva e Quiroga — e só a leitura resolveu. **O URL estava no mapa da pesquisa desde a rodada 0 sem autoria**, listado apenas como o termo "irrupção súbita". A procedência registra isso.
+
+### 11.2 GOLD E PEÑA 2021 — e esta entra como âncora não-PDF, por um motivo que precisa ficar escrito
+
+**GOLD, Tomás; PEÑA, Alejandro M. "The Rise of the Contentious Right: Digitally Intermediated Linkage Strategies in Argentina and Brazil". *Latin American Politics and Society*, 63(3):93-118, 2021.** doi 10.1017/lap.2021.23 · 40 citações.
+
+**É process tracing duplo sobre Argentina (2012-2013) e Brasil (2013-2016)**, e é por isso que interessa a um projeto que é process tracing. Conceitua a relação partido-protesto como **vinculação partidária por intermediação digital**, em três fases.
+
+**O QUE ENTROU NÃO É O ARTIGO PUBLICADO.** O publicado está atrás do Cambridge Core, que devolveu **429 ao script em duas tentativas**. O que o repositório White Rose distribui em acesso aberto é a **versão aceita**, em `.docx` — e `.docx` não é extensão que `texto_integral` saiba ler. **Entrou como âncora não-PDF, convertida para Markdown**, com cabeçalho declarando a natureza do arquivo, do mesmo modo como o eixo 09 arquiva transcrição em vez de HTML.
+
+> **É a quarta variante de armadilha de numeração do eixo 12, e a mais perigosa das quatro.** As três anteriores não têm paginação impressa **nenhuma** — KUNRATH SILVA 2018 cita por §, ALONSO 2023 é edição digital, a terceira é o deslocamento variável. **Esta tem uma paginação publicada e citável, 93-118, que o arquivo em mãos não contém.** Logo: **nada pode ser citado por página a partir dele.** A unidade é o arquivo inteiro — `paginas,0` no manifesto —, que é exactamente o que a categoria de âncora não-PDF significa aqui.
+
+**E o que ela NÃO faz:** medido no arquivo, `countermovement` **0**, `spin-off` **0**, `abeyance` **0**. **Ela não testa nenhum dos três conceitos** que a busca bibliográfica procurava. **A ordem de autoria foi conferida pelo DOI**, porque a página do White Rose lista "Peña e Gold" e o registro da revista dá **Gold primeiro**.
+
+> **Um zero meu, falso, pego por reprova:** eu havia medido `process tracing` = 0 neste arquivo. O texto escreve **`process-tracing`, com hífen**, 4 vezes. A sonda sem hífen devolveu zero e eu quase o registrei.
+
+### 11.3 Um erro meu nesta seção, pego antes do ciclo
+
+**Eu declarei as folhas lidas de ALONSO 2021 como "folha 7, impressa 12" para duas passagens, e estimei em vez de medir.** Medido por busca da frase: a atribuição a Hirschman está na **folha 4 (impressa 9)** e a descrição das bases na **folha 5 (impressa 10)**. A declaração foi corrigida antes de o ciclo rodar, e passou a dizer que as três folhas **foram medidas, não estimadas**.
+
+**É a mesma falha que este eixo já documenta três vezes em três armadilhas de numeração** — e a razão de ela existir aqui de novo é que eu li pelo arquivo de texto extraído, onde a linha não é a folha.
+
+### 11.4 O que mudou no aparato
+
+- **`Fontes/12_Camada-T-1_Literatura/`** — de oito para **dez arquivos**. Corpus: **76 → 77 PDFs**, **12.668 → 12.691 páginas** (ALONSO 2021 tem 23 folhas). Manifesto: **86 → 87 peças**.
+- **A contagem documental não se move** — segue **25 / 7.092**. Duas peças de literatura entraram e nenhum documento oficial.
+- **E as âncoras não-PDF seguem 10, não 11** — ver 11.5, que é o achado estrutural desta entrada.
+- **A linha de base de `verificar_integridade.py` foi movida no mesmo ato**, com esta seção como razão escrita.
+
+### 11.5 GOLD E PEÑA está em `Fontes/` e FORA DO MANIFESTO — e isso é a regra, não um descuido
+
+**A guarda G1 derrubou o ciclo** na primeira corrida, com estas palavras: *"G1 cobertura: `GOLD-PENA_…_versao-aceita.md` é declarado e NÃO está no manifesto"*. Eu havia declarado o estado de leitura dele em `data/estado_de_leitura.json`, e **o manifesto não o pegou**.
+
+**A razão está escrita no docstring de `conjunto_nao_pdf()`, em `gerar_manifesto_corpus.py`**, desde 16/10/2026: o conjunto não-PDF do manifesto sai de `fonte_local` do codebook, *"porque é o que define âncora — LEIA-ME, bibliografia e **.docx de teoria não ancoram registro nenhum**, e vigiar byte deles seria ruído"*.
+
+> **Isto é um recorte deliberado, e GOLD E PEÑA cai exatamente nele:** é material não-PDF que **não ancora registro**. O projeto já contempla que `Fontes/` guarde arquivo desse tipo sem manifesto e sem estado declarado — o docstring nomeia `.docx` de teoria como o caso.
+
+**O que foi feito, então:** a declaração saiu de `data/estado_de_leitura.json`, e **o estado de leitura da peça vive no cabeçalho do próprio arquivo** e nesta seção. O arquivo é autodescritivo: abre com "## Natureza deste arquivo", declara que é versão aceita, que a paginação publicada é 93-118 e que **nada pode ser citado por página a partir dele**.
+
+**O CUSTO, e ele fica escrito porque é o modo de falha batizado desta casa:** **nenhuma guarda vigia o byte deste arquivo.** Se ele for alterado ou apagado, nada acusa. A checagem 8 confere SHA-256 peça por peça **do manifesto**, e ele não está lá.
+
+**As três saídas, e a escolha é do pesquisador:**
+
+| saída | custo |
+|:--|:--|
+| **deixar como está** | o arquivo fica em `Fontes/`, autodescritivo, **sem guarda de byte**. É o que está feito |
+| **alargar o recorte do gerador** para varrer literatura não-PDF | muda uma fronteira que o projeto desenhou de propósito, e o docstring argumenta contra |
+| **converter para PDF** | entra no manifesto pela varredura `Fontes/**/*.pdf` e ganha guarda — **mas o manifesto passaria a registrar uma `paginas` que é da MINHA conversão e de mais nada**, ao lado de uma paginação publicada que existe e é outra |
+
+**A terceira é a que eu não tomaria sozinho**, e é por isso que ela está nesta tabela e não executada.
+
+### 11.6 E o arquivo ia para o remoto público — pego pelo `git status`, depois de o ciclo fechar verde
+
+**A regra do `.gitignore` é por extensão — `Fontes/**/*.pdf` — e por isso não pegou um `.md`.** Com o ciclo já verde, o `git status` mostrou `?? Fontes/12_Camada-T-1_Literatura/`: o arquivo seria commitado e **empurrado para o remoto público**.
+
+**Ele não pode ser.** O próprio `.gitignore` declara o que fica versionado de propósito: *"o manifesto, os LEIA-ME de cada eixo, as transcrições em `.md` que eu mesmo produzi e o `.html` de ato judicial público"*. **Este arquivo não é nenhum dos dois** — é o texto integral de artigo de terceiros, depositado em repositório sob licença que não concede redistribuição. **Commitar seria redistribuir**, e é a mesma razão pela qual os PDFs saíram do versionamento em 21/10/2026.
+
+**O arquivo foi para o `.gitignore`, com a razão escrita ao lado.**
+
+> **A lição é de desenho, e é nova: regra de ignorar por extensão não protege por natureza.** A proteção que tirou o corpus do remoto público em 21/10 foi escrita como `*.pdf`, e o que ela protege não é "PDF" — é "conteúdo de terceiros". Bastou uma peça entrar noutra extensão para a proteção não existir. **E nada no ciclo acusa isso**: o ciclo fechou verde com o arquivo pronto para ser empurrado.

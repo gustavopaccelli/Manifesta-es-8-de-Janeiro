@@ -46,6 +46,24 @@ Thumbs.db
 # transcrições em `.md` que eu mesmo produzi e o `.html` de ato judicial público.
 Fontes/**/*.pdf
 
+# ACRESCENTADO EM 08/11/2026. A regra de cima e por extensao, e por isso ela
+# NAO pegou este arquivo: a versao aceita de GOLD e PENA (2021) entrou no eixo
+# 12 como `.md`, porque o publicado esta atras do Cambridge e o que o White Rose
+# distribui aberto e `.docx`, extensao que o conferidor nao le.
+#
+# POR QUE ELE NAO PODE SER VERSIONADO. A linha de cima declara o que fica no
+# git de proposito: "o manifesto, os LEIA-ME de cada eixo, as transcricoes em
+# `.md` que eu mesmo produzi e o `.html` de ato judicial publico". **Este
+# arquivo nao e nenhum dos dois**: e o texto integral de artigo de terceiros,
+# depositado sob licenca de repositorio que nao concede redistribuicao.
+# Commitar num remoto PUBLICO seria redistribuir -- e e a mesma razao pela
+# qual os PDFs sairam do versionamento em 21/10/2026.
+#
+# A LICAO, e ela e de desenho: **regra de ignorar por extensao nao protege por
+# natureza.** Um arquivo de corpus entrou numa extensao que a regra nao cobria,
+# e so o `git status` mostrou, depois de o ciclo estar verde.
+Fontes/12_Camada-T-1_Literatura/GOLD-PENA_Rise-of-the-contentious-right_LAPS-63-3_2021_versao-aceita.md
+
 # O CACHE DE FOLHA e derivado: some sem perda, e a proxima rodada o
 # reconstroi a partir do PDF cuja checagem 8 vigia o SHA-256. Fica fora do
 # git porque e caro em bytes e nao e fonte de nada (item 88).

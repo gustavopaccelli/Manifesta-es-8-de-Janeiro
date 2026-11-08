@@ -629,6 +629,51 @@ for _arq, _ref, _desloc, _nota, _orig in [
      "É a peça que dá o ATOR — o 'campo patriota', presente em junho de 2013 e então não "
      "reconhecido como ator político. Ancora PT-01, PT-02, PT-03 e PT-04.",
      "Exemplar fornecido pelo pesquisador em 04/10/2026 — livro de editora comercial"),
+    ("ALONSO_Reaccion-patriota-en-Brasil_Poblacion-y-Sociedad-28-2_2021.pdf",
+     "ALONSO, Angela. 'La reacción patriota en Brasil'. Población & Sociedad, v. 28, n. 2, "
+     "p. 8-28, jul-dez 2021. DOI 10.19137/pys-2021-280202",
+     "p. da revista = p. do PDF + 5 — MEDIDO em tres folhas: a folha 10 imprime 15, a 21 "
+     "imprime 26 e a 23 imprime 28. As FOLHAS 1 e 2 sao capa da Redalyc, nao do artigo",
+     "A MAIOR BASE DE EVENTOS DE QUALQUER PECA DESTE CORPUS, e por isso ela entra: Base de "
+     "Eventos de Protesto com 1.399 eventos em 287 cidades brasileiras entre 2013 e 2016, "
+     "com 36 variaveis, mais Base de Associacoes Civis e Agrupamentos Politicos com 389 "
+     "atores coletivos ativos desde 2011, com 42 variaveis (p. 32 impressa; a fonte e a "
+     "Folha de S. Paulo completada por G1, Estado de S. Paulo e outros). E DECLARA O MARCO: "
+     "'la perspectiva teorica de la politica contenciosa desarrollada por McAdam, Tarrow y "
+     "Tilly (2001)'. A TESE CONTRARIA a datacao das outras duas pecas do corpus sobre o "
+     "mesmo ponto: 'no hubo una irrupcion subita de una nueva derecha en Brasil', e os "
+     "movimentos de reacao a reformas se manifestam DESDE O INICIO DA REDEMOCRATIZACAO, com "
+     "aceleracao em 2003 -- contra 2007 de TATAGIBA, TRINDADE e TEIXEIRA e 2006 de ROCHA. "
+     "E e a peca que nomeia o conceito sob o qual a literatura brasileira MEDE o que Meyer e "
+     "Staggenborg chamam de contramovimento: 'movimientos de reaccion a reformas "
+     "(Hirshman, 1991)' -- grafado assim, sem o c, no original. Medido no artigo: "
+     "contramovimiento 0, spin-off 0, abeyance 0, repert 1, ciclo de protesta 5. "
+     "NAO ANCORA REGISTRO. Lida em PARTE, declarada em data/estado_de_leitura.json",
+     "Redalyc (redalyc.org/journal/3869/386971258002) — acesso aberto, artigo revisado por "
+     "pares. ATENCAO: TRES buscadores desta pesquisa atribuiram este MESMO PDF a tres "
+     "autores diferentes — Alonso, Kunrath Silva e Quiroga — e so a leitura resolveu. O URL "
+     "estava no mapa da pesquisa desde a rodada 0 SEM AUTORIA, listado apenas como o termo "
+     "'irrupcao subita'"),
+    ("GOLD-PENA_Rise-of-the-contentious-right_LAPS-63-3_2021_versao-aceita.md",
+     "GOLD, Tomás; PEÑA, Alejandro M. 'The Rise of the Contentious Right: Digitally "
+     "Intermediated Linkage Strategies in Argentina and Brazil'. Latin American Politics and "
+     "Society, v. 63, n. 3, p. 93-118, 2021. DOI 10.1017/lap.2021.23",
+     "NAO HA OFFSET A DECLARAR, E O MOTIVO E O PIOR DOS QUATRO DO EIXO: a paginacao "
+     "publicada EXISTE e e citavel (93-118), e este arquivo NAO A REPRODUZ, porque e a "
+     "VERSAO ACEITA do autor. NADA PODE SER CITADO POR PAGINA a partir dele. A unidade e o "
+     "arquivo inteiro, que e o que ancora nao-PDF significa aqui: paginas 0 no manifesto",
+     "ENTRA COMO ANCORA NAO-PDF porque o publicado esta atras do Cambridge, que devolveu "
+     "429 ao script duas vezes, e o que o White Rose distribui aberto e .docx -- extensao "
+     "que `texto_integral` nao sabe ler. Convertida para Markdown por `ebook-convert` em "
+     "08/11/2026, com cabecalho declarando a natureza do arquivo, como o eixo 09 faz com "
+     "transcricao. E PROCESS TRACING DUPLO, e e por isso que interessa a este projeto -- "
+     "grafado `process-tracing`, com hifen, 4 ocorrencias; a sonda sem hifen devolveu zero "
+     "e o zero era falso. MAS NAO TESTA OS TRES CONCEITOS que a busca procurava: medido no "
+     "arquivo, countermovement 0, spin-off 0, abeyance 0. Conceitua a relacao partido-"
+     "protesto como vinculacao partidaria por intermediacao digital. NAO ANCORA REGISTRO",
+     "White Rose (eprints.whiterose.ac.uk/164974) — versao aceita em acesso aberto. A "
+     "ORDEM DE AUTORIA foi conferida pelo DOI, porque a pagina do repositorio lista "
+     "'Peña e Gold' e o registro da revista da Gold primeiro"),
     ("KUNRATH-SILVA-MAZZILLI-PEREIRA_Movimentos-e-contramovimentos-sociais_"
      "Revista-Brasileira-de-Sociologia-8-20_2020.pdf",
      "SILVA, Marcelo Kunrath; PEREIRA, Matheus Mazzilli. 'Movimentos e contramovimentos "

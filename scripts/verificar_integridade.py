@@ -408,7 +408,19 @@ def main():
         # a linha REPROVOU de fato**, depois de passar a reprovar em 05/11 --
         # o ciclo caiu na entrada da peca e so subiu quando esta linha se moveu,
         # que e o comportamento pelo qual ela deixou de so avisar.
-        BASE = (76, 12668, 25, 7092)
+        # MOVIDA DE NOVO EM 08/11/2026, no mesmo dia, e a razao esta em
+        # docs/analise/12_CAMADA-T-1-CONJUNTURAL.md, secao 11: entraram a nona
+        # e a decima pecas do eixo 12, por decisao do pesquisador. 76 -> 77
+        # PDFs, 12.668 -> 12.691 paginas, porque ALONSO 2021 tem 23 folhas.
+        # GOLD E PENA 2021 nao entra nesta conta: e ANCORA NAO-PDF, com 0
+        # paginas, porque o publicado esta atras do Cambridge (429) e o que o
+        # White Rose distribui aberto e .docx, extensao que `texto_integral`
+        # nao le. Foi convertida para Markdown, e **nada pode ser citado por
+        # pagina a partir dela**: a paginacao publicada (93-118) existe e o
+        # arquivo nao a reproduz. A DOCUMENTAL segue 25 / 7.092 -- duas pecas
+        # de literatura entraram e nenhum documento oficial. Nenhuma das duas
+        # ancora registro.
+        BASE = (77, 12691, 25, 7092)
         if (n, total, doc_n, doc_total) != BASE:
             falhas.append("corpus mudou: {} PDFs / {} páginas, {} documentais / {} p. "
                           "(era {} / {}, {} / {}) — mova a linha de base com a "

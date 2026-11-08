@@ -2,20 +2,20 @@
 
 > **Peça gerada por `scripts/gerar_registro_leitura.py`. Não edite à mão.** É a resposta a um defeito com data: em 21/10/2026 eu relatei seis verbetes como *"lidos-a-ler"* e **os seis estavam lidos**, porque copiei uma lista de 30/09 do documento que **pedia** a leitura em vez de abrir o que a **registrava**. O estado de leitura vivia em prosa espalhada por sete documentos, e nada no ciclo conferia.
 
-**85 peças no corpus. 57 com estado MEDIDO, 28 com estado DECLARADO.**
+**86 peças no corpus. 57 com estado MEDIDO, 29 com estado DECLARADO.**
 
 ## 1. Como o estado é estabelecido — e a maior parte não é declarada
 
 | Origem | Quantas | Como |
 |:--|--:|:--|
 | **MEDIDO** | 57 | a peça **ancora registro** com `fonte_pagina`, e o passo 9 do ciclo confere a transcrição contra a folha do PDF. Leitura parcial **demonstrável**, não afirmada |
-| **DECLARADO** | 28 | a peça **não ancora registro**: informa o desenho sem sustentar dado. O estado vive em `data/estado_de_leitura.json`, que é dado e não prosa |
+| **DECLARADO** | 29 | a peça **não ancora registro**: informa o desenho sem sustentar dado. O estado vive em `data/estado_de_leitura.json`, que é dado e não prosa |
 
 | Estado | Peças |
 |:--|--:|
 | `ILEGIVEL` | 1 |
 | `LIDO_INTEGRAL` | 17 |
-| `LIDO_PARCIAL` | 66 |
+| `LIDO_PARCIAL` | 67 |
 | `NAO_LIDO` | 1 |
 
 **Vocabulário.** `LIDO_INTEGRAL` · `LIDO_PARCIAL`, com o que foi lido · `NAO_LIDO` · `ILEGIVEL`, no corpus e sem camada de texto · `NAO_DECLARADO`, quando **nenhum documento do repositório registra o estado** — é confissão, não suposição.
@@ -86,6 +86,7 @@
 | `STF_Gabinete-Moraes_Balanco-8-de-Janeiro_2026-04-29.pdf` | 15 | **LIDO_PARCIAL** | MEDIDO | ancora 3 registro(s) com 18 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `ALONSO_Repertorio-segundo-Charles-Tilly_Sociologia-e-Antropologia-2-3_2012.pdf` | 21 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 28 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `ALONSO_Treze-a-politica-de-rua-de-Lula-a-Dilma_Companhia-das-Letras_2023.pdf` | 309 | **LIDO_PARCIAL** | MEDIDO | ancora 4 registro(s) com 40 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `KUNRATH-SILVA-MAZZILLI-PEREIRA_Movimentos-e-contramovimentos-sociais_Revista-Brasileira-de-Sociologia-8-20_2020.pdf` | 24 | **LIDO_PARCIAL** | DECLARADO | LIDAS em 08/11/2026, duas folhas de 24: a folha 1 (impressa 26), com o resumo e o diagnóstico da perspectiva analítica movimentocêntrica do campo; e a folha 7 (impressa 32), com o censo do conceito na região — nove produções — e a nota 5, que é a ressalva dos autores a esse número. NÃO LIDAS as outras 22 folhas: a trajetória do conceito na literatura norte-americana, a caracterização do debate, os eixos de definição e explicação e as temáticas empíricas. Offset medido em três folhas: impressa = PDF + 25 (folha 2 imprime 27, folha 7 imprime 32, folha 24 imprime 49; a folha 1 não traz número). NÃO ANCORA REGISTRO, e não entrou para ancorar: são duas ocorrências de «2013» no artigo inteiro — é teoria do conceito, não análise do ciclo. Veio da cadeia de citação de Meyer e Staggenborg (1996), e a busca por termo não a havia achado em duas rodadas | docs/analise/12_CAMADA-T-1-CONJUNTURAL.md |
 | `KUNRATH-SILVA_Apropriacao-conservadora-do-ciclo-de-protestos_Lusotopie-17-1_2018.pdf` | 20 | **LIDO_PARCIAL** | MEDIDO | ancora 2 registro(s) com 34 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `KUNRATH-SILVA_Ciclo-de-protestos-de-2013-objeto-de-disputa_Desigualdade-e-Diversidade-23_2023.pdf` | 34 | **LIDO_PARCIAL** | MEDIDO | ancora 4 registro(s) com 40 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `PINTO_Trajetoria-discursiva-das-manifestacoes-de-rua_Lua-Nova-100_2017.pdf` | 37 | **LIDO_PARCIAL** | MEDIDO | ancora 2 registro(s) com 34 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |

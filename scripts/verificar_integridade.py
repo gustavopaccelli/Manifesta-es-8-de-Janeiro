@@ -396,7 +396,19 @@ def main():
         # em toda corrida sem que nada o cobrasse. A consequencia e a mesma de
         # toda linha de base desta casa: entrar peca no corpus derruba o ciclo
         # ate que a linha se mova, com a razao escrita ao lado.
-        BASE = (75, 12644, 25, 7092)
+        # MOVIDA EM 08/11/2026, e a razao esta escrita em
+        # docs/analise/12_CAMADA-T-1-CONJUNTURAL.md, secao 10: entrou no eixo
+        # 12 a oitava peca, KUNRATH SILVA e MAZZILLI PEREIRA (2020), RBS 8(20),
+        # por decisao do pesquisador. 75 -> 76 PDFs, 12.644 -> 12.668 paginas
+        # (24 folhas). **A DOCUMENTAL NAO SE MOVE** -- segue 25 / 7.092 --,
+        # porque o eixo 12 esta em FORA_DA_DOCUMENTAL: entrou artigo de revista,
+        # nao documento oficial, e e exatamente isso que a separacao das duas
+        # contagens serve para mostrar. A peca NAO ANCORA REGISTRO: sao duas
+        # ocorrencias de "2013" no artigo inteiro. **E esta e a primeira vez que
+        # a linha REPROVOU de fato**, depois de passar a reprovar em 05/11 --
+        # o ciclo caiu na entrada da peca e so subiu quando esta linha se moveu,
+        # que e o comportamento pelo qual ela deixou de so avisar.
+        BASE = (76, 12668, 25, 7092)
         if (n, total, doc_n, doc_total) != BASE:
             falhas.append("corpus mudou: {} PDFs / {} páginas, {} documentais / {} p. "
                           "(era {} / {}, {} / {}) — mova a linha de base com a "

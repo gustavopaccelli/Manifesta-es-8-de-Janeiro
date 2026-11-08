@@ -365,3 +365,50 @@ Dos nove pontos acumulados, **seis estão resolvidos** e riscados abaixo — doi
 - **Quarta rodada, 04/10/2026.** O corpus não cresceu: a peça lida já estava nele desde a entrega da manhã. **`conferir_paginas.py` ganhou dois consertos** — apóstrofo intrapalavra deixou de ser delimitador de aspa, e a hifenização de quebra de linha passou a ser unida em `norm_busca` —, os dois com invariância provada sobre as 66 âncoras anteriores. Ver §5.6. **`scripts/historico/recodificar_pt06_bolsonarismo_movimento.py`** é a quarta rodada, com `--dry-run` como as três anteriores.
 
 Classes de verificação: **61 em fonte primária · 20 confirmados · 1 contextual · 0 a verificar · 1 inferência declarada.**
+
+---
+
+## 10. A oitava peça do eixo 12 — 08/11/2026, por decisão do pesquisador
+
+**KUNRATH SILVA, M.; MAZZILLI PEREIRA, M. "Movimentos e contramovimentos sociais: o caráter relacional da conflitualidade social". *Revista Brasileira de Sociologia*, 8(20):26-49, set-dez/2020.** doi 10.20336/rbs.647 · 25 citações · acesso aberto.
+
+**De onde veio.** Da quarta rodada de uma busca bibliográfica externa ao repositório, em `~/research/ciclo-2013-apropriacao-conservadora/`, conduzida entre 05 e 08/11/2026 para responder se a literatura revisada por pares mede, no caso brasileiro de 2013 a 2018, a dinâmica entre movimento e oposição organizada. **Foi achada pela cadeia de citação**, entre os citantes de Meyer e Staggenborg (1996) — e **não** pela busca por termo, que a procurou em duas rodadas anteriores e não a devolveu.
+
+### 10.1 Por que ela entra, e é o mesmo autor de duas peças que já estavam aqui
+
+O eixo 12 já traz **KUNRATH SILVA 2018**, que é a âncora de PT-01, e **KUNRATH SILVA 2023**. Esta é a terceira peça do mesmo autor, e é a que **monta o conceito** que as outras duas aplicam: 154 ocorrências de "contramovimento" no artigo, com Meyer e Staggenborg citados sete vezes, Zald seis e Useem três.
+
+**A procedência da palavra importa para o aparato.** PT-07A e PT-07B foram promovidos a fonte primária em 29/10/2026 sobre o verbete *Movement/countermovement dynamics* de Dillard, na enciclopédia Wiley-Blackwell. **A peça que agora entra é a formulação brasileira do mesmo conceito**, publicada em periódico nacional, e por um autor que o projeto já cita.
+
+### 10.2 O que foi lido, e o que não foi
+
+**LIDO_PARCIAL**, e a declaração em `data/estado_de_leitura.json` nomeia as três passagens:
+
+| folha | impressa | o que traz |
+|--:|--:|:--|
+| 1 | 26 | o resumo e o diagnóstico da **perspectiva analítica movimentocêntrica** do campo |
+| 7 | 32 | o **censo do conceito na região: nove produções**, e a nota 5, que é a ressalva dos autores a esse número |
+
+**NÃO LIDAS:** as demais 22 folhas, que cobrem a trajetória do conceito na literatura norte-americana, a caracterização do debate, os eixos de definição e explicação e as temáticas empíricas. **A leitura foi instrumental** — serviu a uma pergunta de busca bibliográfica, não à codificação de registro.
+
+### 10.3 O deslocamento de numeração, medido
+
+**Impressa = PDF + 25**, conferido em três folhas: a folha 2 imprime 27, a folha 7 imprime 32 e a folha 24 imprime 49. A folha 1 não traz número, como é usual na página de abertura. O artigo tem **24 folhas** e ocupa as páginas **26 a 49** da revista.
+
+### 10.4 O achado que a peça traz, e ele é um censo
+
+`:280` da extração: *"Na pesquisa sobre a literatura brasileira e latino-americana realizada através de repositórios de periódicos e de teses e dissertações, foram encontradas **apenas nove produções** que mobilizam, direta ou indiretamente, a discussão sobre contramovimentos sociais (Alonso, 2014; Inclán, 2012; Malagón Penen, 2018; Pereira, 2018; Rezende, 2016; Ruibal, 2014, 2015; Szwako, 2014; Vaggione, 2012)."*
+
+**E nenhuma das nove é sobre o ciclo de 2013** — a Alonso de 2014 é "O abolicionismo como movimento social", conferido na bibliografia da própria peça.
+
+**Com a ressalva dos autores, na nota 5**, que fica registrada porque negativa sem predicado é negativa falsa: *"A produção brasileira e latino-americana, certamente, transcende as obras referidas. Isso não invalida, no entanto, o diagnóstico sobre o caráter incipiente das análises que mobilizam o conceito de contramovimentos sociais na região."*
+
+### 10.5 O que esta peça NÃO faz
+
+**Ela não ancora registro, e não foi promovida para ancorar.** São **duas** ocorrências de "2013" no artigo inteiro: é teoria do conceito, não análise do ciclo. **Nenhum campo de nenhum registro foi tocado pela entrada desta peça**, e `fonte_local` de PT-01 segue apontando para KUNRATH SILVA 2018.
+
+### 10.6 O que mudou no aparato
+
+- **`Fontes/12_Camada-T-1_Literatura/`** — de sete para **oito peças**. Corpus: **75 → 76 PDFs**, **12.644 → 12.668 páginas**. A contagem **documental não se move** — segue em **25 / 7.092** —, porque o eixo 12 está em `FORA_DA_DOCUMENTAL`: entrou artigo de revista, não documento oficial. É a mesma razão pela qual as duas contagens existem separadas.
+- **A linha de base de `verificar_integridade.py` foi movida no mesmo ato**, com esta seção como razão escrita. Desde 05/11/2026 ela **reprova** em vez de avisar, e foi para isto que passou a reprovar: entrar peça no corpus derruba o ciclo até que a linha se mova.
+- **`data/estado_de_leitura.json`** ganhou a declaração da peça, em `LIDO_PARCIAL`, com `o_que` nomeando as folhas lidas e as não lidas.

@@ -629,6 +629,26 @@ for _arq, _ref, _desloc, _nota, _orig in [
      "É a peça que dá o ATOR — o 'campo patriota', presente em junho de 2013 e então não "
      "reconhecido como ator político. Ancora PT-01, PT-02, PT-03 e PT-04.",
      "Exemplar fornecido pelo pesquisador em 04/10/2026 — livro de editora comercial"),
+    ("KUNRATH-SILVA-MAZZILLI-PEREIRA_Movimentos-e-contramovimentos-sociais_"
+     "Revista-Brasileira-de-Sociologia-8-20_2020.pdf",
+     "SILVA, Marcelo Kunrath; PEREIRA, Matheus Mazzilli. 'Movimentos e contramovimentos "
+     "sociais: o caráter relacional da conflitualidade social'. Revista Brasileira de "
+     "Sociologia, v. 8, n. 20, p. 26-49, set-dez 2020. DOI 10.20336/rbs.647",
+     "p. da revista = p. do PDF + 25 — MEDIDO em três folhas: a folha 2 imprime 27, a 7 "
+     "imprime 32 e a 24 imprime 49; a folha 1 não traz número, como é usual na abertura",
+     "NÃO ANCORA REGISTRO, e não entrou para ancorar: são DUAS ocorrências de '2013' no "
+     "artigo inteiro — é teoria do conceito, não análise do ciclo. É a TERCEIRA peça do "
+     "mesmo autor no eixo, e a que MONTA o conceito que as outras duas aplicam: 154 "
+     "ocorrências de 'contramovimento', com Meyer e Staggenborg citados sete vezes, Zald "
+     "seis e Useem três. Traz o CENSO do conceito na região — nove produções, contadas por "
+     "busca em repositórios de periódicos e de teses (p. 32 impressa) —, e nenhuma das nove "
+     "é sobre o ciclo de 2013. A nota 5 da mesma folha é a ressalva dos próprios autores a "
+     "esse número, e fica registrada porque negativa sem predicado é negativa falsa. "
+     "Lida em PARTE: duas folhas de 24, declaradas em data/estado_de_leitura.json",
+     "Revista Brasileira de Sociologia (rbs.sbsociologia.com.br) — acesso aberto, artigo "
+     "revisado por pares. Achada em 08/11/2026 pela CADEIA DE CITAÇÃO, entre os citantes de "
+     "Meyer e Staggenborg (1996); a busca por termo não a devolveu em duas rodadas, porque "
+     "'contramovimento' em português é termo de biomecânica — 'salto com contramovimento'"),
 ]:
     PROCEDENCIA["Fontes/12_Camada-T-1_Literatura/" + _arq] = (
         _orig, "literatura", "{} | {} | {}".format(_ref, _desloc, _nota))

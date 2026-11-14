@@ -1,6 +1,6 @@
 # Manifestações 8 de Janeiro
 
-Reconstrução cronológico-causal do 8 de janeiro de 2023 por *process tracing*, com marco na Teoria do Processo Político (McAdam, Tarrow, Tilly). O produto central é um codebook de **85 sub-eventos × 17 campos**, ancorado documento a documento e página a página em um corpus de fontes primárias — relatório da CPMI, relatório do interventor federal, denúncia da PGR, acórdãos do STF, TRF-4 e TSE, decisões de execução penal e o balanço do Gabinete do Min. Moraes.
+Reconstrução cronológico-causal do 8 de janeiro de 2023 por *process tracing*, com marco na Teoria do Processo Político (McAdam, Tarrow, Tilly). O produto central é um codebook de **87 sub-eventos × 17 campos**, ancorado documento a documento e página a página em um corpus de fontes primárias — relatório da CPMI, relatório do interventor federal, denúncia da PGR, acórdãos do STF, TRF-4 e TSE, decisões de execução penal e o balanço do Gabinete do Min. Moraes.
 
 O artigo ainda não foi escrito: por decisão de 16/08/2026, a redação é o último item da fila.
 
@@ -11,7 +11,7 @@ pip install -r requirements.txt
 bash scripts/ciclo.sh
 ```
 
-O ciclo tem **16 passos**: **10 geram** — o manifesto do corpus, os formatos derivados, a auditoria de fontes, as seções *Ordem de ataque*, *Decisões pendentes* e *Painel de estado* da agenda, a tabela-espelho das figuras, as díades, a grade funcional do enquadramento e o registro de estado de leitura — e **6 conferem**: as **10 checagens estruturais**, as figuras, o relatório, as transcrições contra a folha do PDF, o campo multiorganizacional e as citações do documento 11. Ele falha — com código de saída diferente de zero — se qualquer coisa divergir. Rode-o depois de **toda** alteração no JSON ou no corpus.
+O ciclo tem **17 passos**: **11 geram** — o manifesto do corpus, os formatos derivados, o SQL do codebook, a auditoria de fontes, as seções *Ordem de ataque*, *Decisões pendentes* e *Painel de estado* da agenda, a tabela-espelho das figuras, as díades, a grade funcional do enquadramento e o registro de estado de leitura — e **6 conferem**: as **10 checagens estruturais**, as figuras, o relatório, as transcrições contra a folha do PDF, o campo multiorganizacional e as citações do documento 11. Ele falha — com código de saída diferente de zero — se qualquer coisa divergir. Rode-o depois de **toda** alteração no JSON ou no corpus.
 
 > **As cifras de estado deste README são conferidas pela checagem 10 do ciclo**, que as compara com o medido e **falha se a frase que ela vigia desaparecer** — porque guarda que não acha a sua âncora e passa em silêncio é pior que guarda nenhuma. O estado completo e sempre atual vive no **Painel de estado**, gerado, no alto de [`docs/PENDENCIAS-ANALITICAS.md`](docs/PENDENCIAS-ANALITICAS.md).
 
@@ -31,7 +31,7 @@ A estrutura segue os princípios do padrão *Cookiecutter Data Science* — dado
 |:--|:--|:--|
 | `Fontes/` | Corpus, **imutável**. **77 PDFs, 12.691 p.** e **10 âncoras não-PDF** — dos quais **25 PDFs / 7.092 p. são fonte documental**, e o resto é bibliografia teórica e literatura —, mais HTML, arquivamento web e sínteses. Inventário em `Fontes/LEIA-ME_fontes.md`, manifesto gerado em `Fontes/MANIFESTO-CORPUS.csv`. **Estes dois números são a linha de base de 08/11/2026 da checagem 6**, que **reprova** — e não só avisa — quando o corpus se move | `data/raw` |
 | `process_tracing_8jan_eventos.json` | Codebook — a fonte única da verdade. Fica na raiz porque é a porta de entrada dos dados e o que todo script lê | `data/interim` (curado à mão) |
-| `data/processed/` | Derivados, **gerados**: o CSV e o XLSX do codebook, o catálogo da imprensa, a planilha dos 411 DOIs das sínteses e a triagem deles por pertinência. Não editar — a próxima execução sobrescreve | `data/processed` |
+| `data/processed/` | Derivados, **gerados**: o CSV e o XLSX do codebook, o SQL do codebook (`codebook.sql`, versionado; `codebook.db`, SQLite, ignorado pelo git — `scripts/gerar_sql.py`), o catálogo da imprensa, a planilha dos 411 DOIs das sínteses e a triagem deles por pertinência. Não editar — a próxima execução sobrescreve | `data/processed` |
 | `Caderno-de-evidencias/` | Transcrições literais com página, por registro | `references` |
 | `scripts/` | **Só o que roda hoje**: 18 geradores e verificadores. Ver `scripts/LEIA-ME.md` | `src` |
 | `scripts/historico/` | As **27 migrações de uso único** já executadas — `recodificar_*`, `inserir_*`, `migrar_*`. Não são parte do ciclo e **não se reexecutam**: cada uma afirma, por `assert`, o estado anterior que já não existe. Ficam como registro de o que mudou o codebook, e quando | `src` |

@@ -13,6 +13,10 @@ __pycache__/
 # está no histórico. Regere com:  bash scripts/ciclo.sh
 data/processed/process_tracing_8jan_codebook.xlsx
 
+# O banco SQLite do codebook é binário, sem diff. O texto versionado é
+# data/processed/codebook.sql. Regere ambos com:  python scripts/gerar_sql.py
+data/processed/codebook.db
+
 # Sistema
 Thumbs.db
 .DS_Store

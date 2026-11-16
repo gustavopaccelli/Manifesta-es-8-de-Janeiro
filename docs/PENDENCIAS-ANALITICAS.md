@@ -8,7 +8,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 
 <!-- PAINEL: gerado por scripts/gerar_painel.py. Não editar à mão: o ciclo sobrescreve. -->
 
-## Painel de estado — medido em 13 de novembro de 2026
+## Painel de estado — medido em 16 de novembro de 2026
 
 **Esta seção é GERADA pelo passo 7 do ciclo. Nenhuma cifra dela é digitada**, e as listas de tarefas e decisões não são repetidas aqui: o painel aponta para as seções que os passos 5 e 6 geram. **A razão tem data** — até 27/10/2026 este painel era escrito à mão, datava-se de 29/09, e a revisão do repositório mediu que **nenhuma das suas cifras estava certa** (item 91).
 
@@ -22,7 +22,7 @@ Está fora do codebook de propósito. Codebook guarda dados; isto guarda pergunt
 | Corpus | **87 peças / 12.691 p.** no manifesto, em 14 eixos — 77 PDFs e 10 âncoras não-PDF, estas conferidas por arquivo inteiro desde 25/10/2026. Da documental: **35 peças / 7.092 p.**; de literatura: 52 peças |
 | Figuras | SVG da cadeia causal e cronologia navegável. **São a única parte do aparato escrita à mão**, e duas guardas as cobrem: o passo 13 confere que todo registro do codebook aparece na figura, e a tabela-espelho do passo 8 confere o **nome do mecanismo** de cada ponto contra o campo — com linha de base em zero divergências |
 | Verificação | `bash scripts/ciclo.sh` — **17 passos**: 11 geradores e 6 conferidores, entre eles as **10 checagens estruturais**. Toda linha de base reprova com código de saída ≠ 0; nenhuma apenas avisa |
-| Controle de versão | git desde **20/09/2026**, 125 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 08/11/2026 |
+| Controle de versão | git desde **20/09/2026**, 126 commits, **remoto PÚBLICO** em `gustavopaccelli/Manifesta-es-8-de-Janeiro.git` — e é por ele ser público que os PDFs do corpus saíram do versionamento em 21/10/2026. Último commit: 13/11/2026 |
 | Tarefas abertas | **3** — 10, 17, 16. A lista vive na seção *Ordem de ataque*, gerada pelo passo 5, e 34 tarefas estão fechadas |
 | Decisões pendentes | **7**, em 4 naturezas. A lista vive na seção *Decisões pendentes*, no fim deste arquivo, gerada pelo passo 6 |
 | **Redação do artigo** | **não iniciada — por decisão, é o último item da fila.** Desde 25/10/2026 ela não tem mais pré-requisito de dado: a tarefa 26 fechou e não há decisão de campo aberta no codebook. **Começá-la é decisão do pesquisador** |

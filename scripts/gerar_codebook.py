@@ -694,6 +694,35 @@ for _arq, _ref, _desloc, _nota, _orig in [
      "revisado por pares. Achada em 08/11/2026 pela CADEIA DE CITAÇÃO, entre os citantes de "
      "Meyer e Staggenborg (1996); a busca por termo não a devolveu em duas rodadas, porque "
      "'contramovimento' em português é termo de biomecânica — 'salto com contramovimento'"),
+    ("RUIBAL_Movilizacion-y-contra-movilizacion-legal_"
+     "Politica-y-gobierno-22-1_2015.pdf",
+     "RUIBAL, Alba M. 'Movilización y contra-movilización legal: propuesta para su análisis "
+     "en América Latina'. Política y gobierno, v. XXII, n. 1, p. 175-198, I semestre de "
+     "2015",
+     "p. da revista = p. do PDF + 174 — MEDIDO em quatro folhas: a folha 1 imprime 175, a 2 "
+     "imprime 176, a 10 imprime 184 e a 24 imprime 198. A folha 1 TRAZ número, diferente de "
+     "KUNRATH SILVA e MAZZILLI PEREIRA (2020), cuja folha de abertura não traz",
+     "NÃO ANCORA REGISTRO, e entrou por outra razão: é a peça que NOMEIA A ARENA em que o "
+     "conceito de contramovimento foi operado na América Latina, e a arena NÃO é a rua. "
+     "Propõe, literalmente no resumo em inglês (p. 175), 'the use of the terms "
+     "counter-movement and counter-legal mobilization for the study of collective action "
+     "and legal strategies developed by conservative sectors'. MEDIDO no arquivo: é a peça "
+     "de MAIOR densidade de Meyer e Staggenborg de todo o censo de nove obras que KUNRATH "
+     "SILVA e MAZZILLI PEREIRA (2020) levantam — 15 ocorrências de Meyer e 11 de "
+     "Staggenborg — e tem ZERO ocorrências de '2013'. É a obra 7 das 9 do censo, e o censo "
+     "foi ao arquivo em 16/11/2026: oito das nove obtidas, e 'junho de 2013' tem ZERO "
+     "ocorrências nas oito, nas três grafias (pt, es, en). ARMADILHA DE GRAFIA DECLARADA, "
+     "porque a sonda errada já mordeu este projeto em GOLD e PEÑA: a forma SEM hífen devolve "
+     "0 e a forma COM hífen devolve 44 — o espanhol escreve 'contra-movimiento' e "
+     "'contra-movilización'. E a peça é parte da tese de doutorado da autora no Instituto "
+     "Universitário Europeu, declarada por ela na nota de autoria da folha 1. Lida em "
+     "PARTE: declarada em data/estado_de_leitura.json",
+     "Política y gobierno (politicaygobierno.cide.edu/index.php/pyg/article/download/117/34) "
+     "— CIDE, acesso aberto, artigo revisado por pares. SEM DECLARAÇÃO DE LICENÇA LIDA NO "
+     "ARQUIVO, como outras 25 peças do corpus. O endereço que o OJS exibe NÃO é o do "
+     "arquivo: '/article/view/117/34' devolve HTML e '/article/download/117/34' devolve o "
+     "PDF — registrado porque é a rota de obtenção, e rota que não serve o arquivo não é "
+     "rota. Obtida em 16/11/2026 pela execução do censo, não por busca"),
 ]:
     PROCEDENCIA["Fontes/12_Camada-T-1_Literatura/" + _arq] = (
         _orig, "literatura", "{} | {} | {}".format(_ref, _desloc, _nota))

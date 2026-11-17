@@ -504,3 +504,72 @@ A fonte das duas é a **Folha de S. Paulo**, completada por G1, Estado de S. Pau
 **O arquivo foi para o `.gitignore`, com a razão escrita ao lado.**
 
 > **A lição é de desenho, e é nova: regra de ignorar por extensão não protege por natureza.** A proteção que tirou o corpus do remoto público em 21/10 foi escrita como `*.pdf`, e o que ela protege não é "PDF" — é "conteúdo de terceiros". Bastou uma peça entrar noutra extensão para a proteção não existir. **E nada no ciclo acusa isso**: o ciclo fechou verde com o arquivo pronto para ser empurrado.
+
+---
+
+## 12. A décima primeira peça do eixo 12 — 17/11/2026, por decisão do pesquisador
+
+> RUIBAL, Alba M. "Movilización y contra-movilización legal: propuesta para su análisis en América Latina". *Política y gobierno*, XXII(1):175-198, I semestre de 2015. CIDE, acesso aberto, revisado por pares.
+
+**Ela entrou por nomear uma coisa que nenhuma outra peça do eixo nomeia: a arena.** E a arena **não é a rua**.
+
+### 12.1 O que a peça é, e o que ela não é
+
+**É uma proposta de aparato, não um estudo de caso.** O resumo em inglês diz, na folha 2 (impressa 176), que o trabalho propõe *"the use of the terms counter-movement and counter-legal mobilization for the study of collective action and legal strategies developed by conservative sectors"*. É a **ponte latino-americana** do conceito de Meyer e Staggenborg — e a ponte foi construída **para o campo jurídico**.
+
+**Medido no arquivo: é a peça de maior densidade teórica do censo inteiro, e tem zero do nosso objeto.**
+
+| sonda | ocorrências |
+|:--|--:|
+| Meyer | **15** |
+| Staggenborg | **11** |
+| `contra-movi…` (**com** hífen) | **44** |
+| `contramovi…` (**sem** hífen) | **0** |
+| `2013` | **0** |
+| «junho de 2013» · «junio de 2013» · «june 2013» | **0** |
+
+> **A armadilha de grafia fica declarada, porque ela já mordeu este projeto.** A forma **sem** hífen devolve **zero** e a forma **com** hífen devolve **44**: o espanhol escreve *contra-movimiento* e *contra-movilización*. **É o defeito de Gold e Peña repetido** — lá a grafia era `process-tracing` com hífen, e a sonda sem hífen "provou" que o artigo não fazia process tracing. **A sonda desta seção declara dois controles**: um positivo (`de|the|of`, que devolve 772 neste arquivo) e um **negativo** (`zzqxwj`, que devolve 0). E a primeira versão dela rodou por `python -c`, onde o limite de palavra do controle virou **caractere de retrocesso** — o controle devolveu zero, e **o zero do controle é o que impediu que eu declarasse o zero do dado**.
+
+### 12.2 O que ela acrescenta ao argumento, e é um recorte do problema
+
+O eixo 12 já tinha medido, pelo censo de Kunrath Silva e Mazzilli Pereira (2020, seção 10), que **nenhuma das nove obras latino-americanas sobre contramovimento é sobre o ciclo de 2013**. Até aqui esse censo era uma afirmação **dos autores**. Em 16/11/2026 ele **foi ao arquivo**: oito das nove foram obtidas e varridas uma a uma, e «junho de 2013» dá **zero nas oito**, nas três grafias. A nona, Inclán (2012), **não foi obtida**, e o limite é de licença — fechada na Sage, sem depósito aberto em repositório nenhum.
+
+**O que a leitura de Ruibal 2015 acrescenta é mais preciso do que "a literatura não trata":**
+
+| | |
+|:--|:--|
+| o conceito **está** na região | 44 ocorrências nesta peça, 154 em Kunrath e Mazzilli, 76 em Rezende |
+| e está **numa arena só** | aborto, casamento igualitário, cortes constitucionais |
+| **a lacuna não é de conceito nem de região** | é de **arena**: ninguém levou o aparato para a rua |
+
+**E a mesma autora, em 2022, tipifica o Brasil como caso legislativo** — influência de forças conservadoras sobre o legislativo e formação de bancada inter-religiosa —, **não como caso de rua**. Essa peça de 2022 **não está no corpus**, e é dela a única frase de toda a obra de Ruibal que encosta no nosso objeto: o processo permitiu às forças de direita *"capitalize the social unrest manifested in the cycle of street protests started in June 2013"*. **É uma oração de contexto, não medição** — e está registrada na frente bibliográfica, não aqui.
+
+### 12.3 Uma pista que toca PT-01 diretamente, e ela não está no corpus
+
+Na folha 23 (impressa 197) está a entrada bibliográfica de **MEYER e STAGGENBORG (2008), "Opposing Movement Strategies in U.S. Abortion Politics", *Research in Social Movements, Conflicts and Change* 28:207-238** — a continuação da peça de 1996, que **é** do corpus.
+
+**Ruibal a cita nas pp. 209 e 213 para a tese de que uma via institucional receptiva a um movimento não é necessariamente menos favorável ao oponente dele.** No vocabulário deste projeto, isso é exatamente o que PT-01 afirma da janela de 2013: **a oportunidade aberta não pertence a quem a abriu.** **Obter a peça é decisão sua**, e ela não bloqueia registro nenhum.
+
+### 12.4 As folhas lidas foram MEDIDAS, não derivadas
+
+**Quatro passagens de 24 folhas**, e as quatro folhas saíram de busca da frase no PDF: folha 2 (impressa 176), o resumo em inglês com a proposta; folha 1 (impressa 175), a nota de autoria que declara ser o artigo parte da tese de doutorado da autora no **Instituto Universitário Europeu**; folha 4 (impressa 178), a projeção dos contra-movimentos latino-americanos; folha 23 (impressa 197), a entrada de Meyer e Staggenborg (2008).
+
+**Deslocamento medido em quatro folhas: impressa = PDF + 174** — folha 1 imprime 175, folha 2 imprime 176, folha 10 imprime 184, folha 24 imprime 198. **A folha 1 traz número**, diferente de Kunrath Silva e Mazzilli Pereira (2020), cuja folha de abertura não traz.
+
+> **Um erro meu, pego pela medição e antes de a peça entrar.** A transcrição da frente bibliográfica dizia *"Resumo em inglês, p. 175"* — **derivado da paginação do artigo**, que começa em 175. Medido: está na **folha 2, impressa 176**. É o mesmo erro de Alonso 2021, em que eu declarei "folha 7, impressa 12" para duas passagens que estavam nas folhas 4 e 5. **A causa é a mesma: ler pelo `.txt` extraído, onde a linha não é a folha.** Corrigido nos dois lugares.
+
+### 12.5 O inventário estava nove dias defasado, e nenhuma guarda viu
+
+`Fontes/LEIA-ME_fontes.md` traz, para o eixo 12, uma **tabela que nomeia arquivo por arquivo**. Ela dizia **"Sete peças"** e listava sete. **As três que entraram em 08/11/2026 — Kunrath Silva e Mazzilli Pereira, Alonso 2021, Gold e Peña — nunca foram acrescentadas a ela.**
+
+**Por que o ciclo não acusou:** a **checagem 3** confere que todo arquivo de `Fontes/` tenha entrada em `PROCEDENCIA` ou seja citado em `fonte_local`. **Ela não lê o inventário.** As três tinham procedência declarada, o manifesto as contava, a linha de base se moveu com a razão escrita — e a prosa que descreve o eixo ficou nove dias dizendo sete.
+
+> **A lição, e ela tem a forma das outras desta casa: guarda que confere o dicionário não confere a prosa que o descreve.** É a mesma família do item 109 — artefato gerado que ninguém regera é artefato escrito à mão —, aplicada a um artefato que **não** é gerado.
+
+**Medido em 17/11/2026, para não transformar isto numa afirmação maior do que é:** dos **106** arquivos de `Fontes/` (fora os LEIA-ME e o manifesto), **57 não têm o nome escrito no inventário**. **Isso não são 57 defeitos:** a maioria dos eixos descreve o conjunto em prosa e deixa o nome do arquivo para `PROCEDENCIA` e para o manifesto, que é **convenção, não omissão**. **O eixo 12 é diferente porque tem tabela que nomeia**, e tabela que nomeia tem de nomear todas. As quatro linhas entraram, com a errata ao lado.
+
+**A guarda que fecharia isso eu NÃO escrevi**, e a razão é de desenho: ela exigiria decidir, eixo por eixo, qual é a convenção do inventário — tabela que nomeia ou prosa que descreve —, e **isso é juízo seu, não medição minha**. Fica proposto no fechamento.
+
+### 12.6 O que ela não faz
+
+**Não ancora registro, e não entrou para ancorar.** Zero ocorrências de «2013». **Nenhum campo de nenhum registro do codebook foi tocado.** A documental segue **25 peças / 7.092 p.** — entrou artigo de revista, não documento oficial, e é exatamente isso que a separação das duas contagens serve para mostrar.

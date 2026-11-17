@@ -420,7 +420,19 @@ def main():
         # arquivo nao a reproduz. A DOCUMENTAL segue 25 / 7.092 -- duas pecas
         # de literatura entraram e nenhum documento oficial. Nenhuma das duas
         # ancora registro.
-        BASE = (77, 12691, 25, 7092)
+        # MOVIDA EM 17/11/2026, e a razao esta em
+        # docs/analise/12_CAMADA-T-1-CONJUNTURAL.md, secao 12: entrou a decima
+        # primeira peca do eixo 12, RUIBAL (2015), Politica y gobierno XXII(1),
+        # por decisao do pesquisador. 77 -> 78 PDFs, 12.691 -> 12.715 paginas
+        # (24 folhas). A DOCUMENTAL SEGUE 25 / 7.092, pelo mesmo motivo das
+        # tres anteriores: o eixo 12 esta em FORA_DA_DOCUMENTAL, e entrou
+        # artigo de revista. NAO ANCORA REGISTRO -- sao ZERO ocorrencias de
+        # "2013" no artigo inteiro, e ela entrou por NOMEAR A ARENA em que o
+        # conceito de contramovimento foi operado na America Latina, que e o
+        # campo juridico e nao a rua. E a obra 7 das 9 do censo de KUNRATH
+        # SILVA e MAZZILLI PEREIRA (2020), oito das quais foram ao arquivo em
+        # 16/11/2026.
+        BASE = (78, 12715, 25, 7092)
         if (n, total, doc_n, doc_total) != BASE:
             falhas.append("corpus mudou: {} PDFs / {} páginas, {} documentais / {} p. "
                           "(era {} / {}, {} / {}) — mova a linha de base com a "

@@ -2,20 +2,20 @@
 
 > **Peça gerada por `scripts/gerar_registro_leitura.py`. Não edite à mão.** É a resposta a um defeito com data: em 21/10/2026 eu relatei seis verbetes como *"lidos-a-ler"* e **os seis estavam lidos**, porque copiei uma lista de 30/09 do documento que **pedia** a leitura em vez de abrir o que a **registrava**. O estado de leitura vivia em prosa espalhada por sete documentos, e nada no ciclo conferia.
 
-**87 peças no corpus. 57 com estado MEDIDO, 30 com estado DECLARADO.**
+**88 peças no corpus. 57 com estado MEDIDO, 31 com estado DECLARADO.**
 
 ## 1. Como o estado é estabelecido — e a maior parte não é declarada
 
 | Origem | Quantas | Como |
 |:--|--:|:--|
 | **MEDIDO** | 57 | a peça **ancora registro** com `fonte_pagina`, e o passo 9 do ciclo confere a transcrição contra a folha do PDF. Leitura parcial **demonstrável**, não afirmada |
-| **DECLARADO** | 30 | a peça **não ancora registro**: informa o desenho sem sustentar dado. O estado vive em `data/estado_de_leitura.json`, que é dado e não prosa |
+| **DECLARADO** | 31 | a peça **não ancora registro**: informa o desenho sem sustentar dado. O estado vive em `data/estado_de_leitura.json`, que é dado e não prosa |
 
 | Estado | Peças |
 |:--|--:|
 | `ILEGIVEL` | 1 |
 | `LIDO_INTEGRAL` | 17 |
-| `LIDO_PARCIAL` | 68 |
+| `LIDO_PARCIAL` | 69 |
 | `NAO_LIDO` | 1 |
 
 **Vocabulário.** `LIDO_INTEGRAL` · `LIDO_PARCIAL`, com o que foi lido · `NAO_LIDO` · `ILEGIVEL`, no corpus e sem camada de texto · `NAO_DECLARADO`, quando **nenhum documento do repositório registra o estado** — é confissão, não suposição.
@@ -91,6 +91,7 @@
 | `KUNRATH-SILVA_Apropriacao-conservadora-do-ciclo-de-protestos_Lusotopie-17-1_2018.pdf` | 20 | **LIDO_PARCIAL** | MEDIDO | ancora 2 registro(s) com 34 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `KUNRATH-SILVA_Ciclo-de-protestos-de-2013-objeto-de-disputa_Desigualdade-e-Diversidade-23_2023.pdf` | 34 | **LIDO_PARCIAL** | MEDIDO | ancora 4 registro(s) com 40 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `PINTO_Trajetoria-discursiva-das-manifestacoes-de-rua_Lua-Nova-100_2017.pdf` | 37 | **LIDO_PARCIAL** | MEDIDO | ancora 2 registro(s) com 34 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
+| `RUIBAL_Movilizacion-y-contra-movilizacion-legal_Politica-y-gobierno-22-1_2015.pdf` | 24 | **LIDO_PARCIAL** | DECLARADO | LIDAS em 17/11/2026, quatro passagens de 24 folhas, e as QUATRO FOLHAS FORAM MEDIDAS por busca da frase no PDF, nao derivadas da paginacao do artigo -- que foi exatamente o erro cometido em ALONSO 2021: o resumo em ingles com a proposta dos termos para a America Latina (folha 2, impressa 176), que e a passagem citada; a nota de autoria que declara ser o artigo parte da tese de doutorado da autora no Instituto Universitario Europeu (folha 1, impressa 175); a passagem que projeta os contra-movimentos latino-americanos desenvolvendo formas de mobilizacao legal semelhantes as dos movimentos (folha 4, impressa 178); e a entrada bibliografica de MEYER e STAGGENBORG (2008), 'Opposing Movement Strategies in U.S. Abortion Politics', RSMCC 28:207-238 (folha 23, impressa 197), que e a continuacao da peca de 1996 e NAO esta no corpus. NAO LIDAS as outras 20 folhas: a integracao das tres tradicoes academicas, as hipoteses sobre constitucionalismo democratico e o estudo do caso do aborto. Offset medido em quatro folhas: impressa = PDF + 174 (folha 1 imprime 175, folha 2 imprime 176, folha 10 imprime 184, folha 24 imprime 198). NAO ANCORA REGISTRO. MEDIDO no arquivo, com sonda de hifen declarada: 'contramovi' sem hifen devolve 0 e 'contra-movi' com hifen devolve 44 -- o espanhol escreve 'contra-movimiento' e 'contra-movilizacion', e a sonda sem hifen produziria um zero falso, como ja produziu em GOLD e PENA. Meyer 15, Staggenborg 11 -- a maior densidade das nove obras do censo --, '2013' 0 e 'junho de 2013' 0 nas tres grafias. | docs/analise/12_CAMADA-T-1-CONJUNTURAL.md |
 | `TATAGIBA-GALVAO_Protestos-no-Brasil-em-tempos-de-crise_Opiniao-Publica-25-1_2019.pdf` | 34 | **LIDO_PARCIAL** | MEDIDO | ancora 3 registro(s) com 39 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `TATAGIBA_Ciclos-de-protestos-e-democracia_Politica-e-Sociedade-28_2014.pdf` | 28 | **LIDO_PARCIAL** | MEDIDO | ancora 1 registro(s) com 18 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |
 | `ARAUJO-SALES_Atuacao-politica-das-Forcas-Armadas-e-bolsonarismo_Cadernos-do-Tempo-Presente-13-1_2022.pdf` | 17 | **LIDO_PARCIAL** | MEDIDO | ancora 5 registro(s) com 42 folha(s) citada(s); o passo 9 do ciclo confere a transcrição contra a folha | o próprio codebook (`fonte_pagina`) |

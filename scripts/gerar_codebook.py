@@ -723,6 +723,50 @@ for _arq, _ref, _desloc, _nota, _orig in [
      "arquivo: '/article/view/117/34' devolve HTML e '/article/download/117/34' devolve o "
      "PDF — registrado porque é a rota de obtenção, e rota que não serve o arquivo não é "
      "rota. Obtida em 16/11/2026 pela execução do censo, não por busca"),
+    ("RUIBAL_Forms-of-countermovement-and-counter-reform_"
+     "Limits-of-Judicialization-CUP_2022_versao-aceita.pdf",
+     "RUIBAL, Alba. 'Forms of Countermovement and Counter-Reform in Latin America: Judicial "
+     "Backlash or Resources and Political and Legal Opportunities?'. In: BOTERO, Sandra; "
+     "BRINKS, Daniel; GONZÁLEZ OCANTOS, Ezequiel (eds.). The Limits of Judicialization: "
+     "From Progress to Backlash in Latin American Politics. Cambridge: Cambridge University "
+     "Press, 2022, p. 89-114. DOI 10.1017/9781009093859.004",
+     "NÃO HÁ DESLOCAMENTO A DECLARAR, E ESTA É A QUINTA VARIANTE DE ARMADILHA DE NUMERAÇÃO "
+     "DO EIXO 12 — E A PIOR DE TODAS, por uma razão que as quatro anteriores não têm: ESTE "
+     "ARQUIVO IMPRIME NÚMERO DE PÁGINA EM TODAS AS 20 FOLHAS, de 1 a 20, e NENHUM DELES É "
+     "A PAGINAÇÃO PUBLICADA. Quem citar 'p. 7' estará citando página que EXISTE e está "
+     "impressa — a do manuscrito aceito, não a do livro. GOLD e PEÑA (2021) foi declarada "
+     "a pior das quatro porque não tem paginação nenhuma; esta é pior ainda, porque tem "
+     "uma que PARECE citável. E O DESLOCAMENTO NÃO É DERIVÁVEL, o que está MEDIDO e não "
+     "suposto: o intervalo publicado 89-114 tem 26 páginas e o arquivo tem 20 folhas — as "
+     "diagramações diferem em 6 páginas, de modo que não existe soma constante que leve "
+     "uma à outra. `fonte_pagina` guardaria a FOLHA DO ARQUIVO, e a paginação citável do "
+     "capítulo não está reproduzida aqui. A CITAÇÃO COMPLETA, COM O INTERVALO PUBLICADO, "
+     "ESTÁ NA FOLHA 1 DO PRÓPRIO ARQUIVO — é o que distingue esta peça de GOLD e PEÑA, "
+     "onde o intervalo teve de ser buscado fora",
+     "NÃO ANCORA REGISTRO. É a SEGUNDA peça de RUIBAL no eixo, e a que TIPIFICA: identifica "
+     "quatro formas de contramobilização e contrarreforma na América Latina (folha 2) e "
+     "apresenta a tipologia na Tabela 1 (folha 4), e o TIPO BRASILEIRO É LEGISLATIVO — "
+     "'the influence of conservative forces on the legislature and the formation of an "
+     "inter-religious caucus at the national Congress' (folha 2), não contramobilização de "
+     "rua. É o que FECHA o argumento que RUIBAL (2015) abre: o aparato de contramovimento "
+     "foi operado na região no CAMPO JURÍDICO, e a lacuna da literatura não é de conceito "
+     "nem de região, é de ARENA. E TRAZ A ÚNICA FRASE DE TODA A OBRA DE RUIBAL QUE ENCOSTA "
+     "NO OBJETO DESTE PROJETO, na folha 10: o processo permitiu às forças de direita "
+     "'capitalize the social unrest manifested in the cycle of street protests started in "
+     "June 2013'. É A TESE DA APROPRIAÇÃO CONSERVADORA DITA DENTRO DE UMA PEÇA DE "
+     "CONTRAMOVIMENTO — e é UMA ORAÇÃO DE CONTEXTO, NÃO MEDIÇÃO: o capítulo é sobre aborto "
+     "e cortes. MEDIDO no arquivo: countermov 25, 'june 2013' 1, 'contra-movi' 0 (porque "
+     "escreve em inglês), abeyance 0, spin-off 0. A SONDA DE 16/11/2026 PROCURAVA 'junho "
+     "de 2013' EM PORTUGUÊS E DEVOLVEU UM ZERO FALSO para esta peça — a grafia era "
+     "inglesa. Lida em PARTE: declarada em data/estado_de_leitura.json",
+     "Cadmus, repositório do Instituto Universitário Europeu "
+     "(cadmus.eui.eu/bitstreams/44e120d2-9a52-51d9-bfc3-26f74537cdf1/download) — VERSÃO "
+     "ACEITA do autor, em acesso aberto. SEM DECLARAÇÃO DE LICENÇA LIDA NO ARQUIVO. O "
+     "endereço que o OpenAlex serve para esta peça é o caminho LEGADO "
+     "(cadmus.eui.eu/bitstream/1814/74940/1/...pdf), que responde HTTP 200 COM UM CORPO DE "
+     "ERRO 502 DE PROXY DENTRO: o 200 é do proxy e não do arquivo, e quem conferisse só o "
+     "código de status registraria sucesso. O endereço acima saiu do registro do próprio "
+     "repositório. Obtida em 16/11/2026"),
 ]:
     PROCEDENCIA["Fontes/12_Camada-T-1_Literatura/" + _arq] = (
         _orig, "literatura", "{} | {} | {}".format(_ref, _desloc, _nota))

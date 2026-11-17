@@ -432,7 +432,17 @@ def main():
         # campo juridico e nao a rua. E a obra 7 das 9 do censo de KUNRATH
         # SILVA e MAZZILLI PEREIRA (2020), oito das quais foram ao arquivo em
         # 16/11/2026.
-        BASE = (78, 12715, 25, 7092)
+        # MOVIDA DE NOVO EM 17/11/2026, no mesmo dia, e a razao esta em
+        # docs/analise/12_CAMADA-T-1-CONJUNTURAL.md, secao 13: entrou a decima
+        # segunda peca do eixo 12, RUIBAL (2022), capitulo da Cambridge
+        # University Press em VERSAO ACEITA, por decisao do pesquisador.
+        # 78 -> 79 PDFs, 12.715 -> 12.735 paginas (20 folhas). A DOCUMENTAL
+        # SEGUE 25 / 7.092. NAO ANCORA REGISTRO. E e a QUINTA variante de
+        # armadilha de numeracao do eixo, e a pior: o arquivo IMPRIME numero
+        # em todas as 20 folhas, de 1 a 20, e nenhum deles e a paginacao
+        # publicada (89-114, que tem 26 paginas). O deslocamento nao e
+        # derivavel, e isso esta MEDIDO: as diagramacoes diferem em 6 paginas.
+        BASE = (79, 12735, 25, 7092)
         if (n, total, doc_n, doc_total) != BASE:
             falhas.append("corpus mudou: {} PDFs / {} páginas, {} documentais / {} p. "
                           "(era {} / {}, {} / {}) — mova a linha de base com a "

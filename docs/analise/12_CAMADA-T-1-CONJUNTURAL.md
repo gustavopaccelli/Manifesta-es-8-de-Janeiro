@@ -566,10 +566,68 @@ Na folha 23 (impressa 197) está a entrada bibliográfica de **MEYER e STAGGENBO
 
 > **A lição, e ela tem a forma das outras desta casa: guarda que confere o dicionário não confere a prosa que o descreve.** É a mesma família do item 109 — artefato gerado que ninguém regera é artefato escrito à mão —, aplicada a um artefato que **não** é gerado.
 
-**Medido em 17/11/2026, para não transformar isto numa afirmação maior do que é:** dos **106** arquivos de `Fontes/` (fora os LEIA-ME e o manifesto), **57 não têm o nome escrito no inventário**. **Isso não são 57 defeitos:** a maioria dos eixos descreve o conjunto em prosa e deixa o nome do arquivo para `PROCEDENCIA` e para o manifesto, que é **convenção, não omissão**. **O eixo 12 é diferente porque tem tabela que nomeia**, e tabela que nomeia tem de nomear todas. As quatro linhas entraram, com a errata ao lado.
+**Medido em 17/11/2026, para não transformar isto numa afirmação maior do que é:** dos **106** arquivos de `Fontes/` (fora os LEIA-ME e o manifesto), **57 não têm o nome escrito no inventário**. **Isso não são 57 defeitos:** a maioria dos eixos descreve o conjunto em prosa e deixa o nome do arquivo para `PROCEDENCIA` e para o manifesto, que é **convenção, não omissão**. **O eixo 12 é diferente porque tem tabela que nomeia**, e tabela que nomeia tem de nomear todas. As linhas que faltavam entraram, com a errata ao lado — **cinco ao todo**, com a de Ruibal (2022) da seção 13.
 
 **A guarda que fecharia isso eu NÃO escrevi**, e a razão é de desenho: ela exigiria decidir, eixo por eixo, qual é a convenção do inventário — tabela que nomeia ou prosa que descreve —, e **isso é juízo seu, não medição minha**. Fica proposto no fechamento.
 
 ### 12.6 O que ela não faz
 
 **Não ancora registro, e não entrou para ancorar.** Zero ocorrências de «2013». **Nenhum campo de nenhum registro do codebook foi tocado.** A documental segue **25 peças / 7.092 p.** — entrou artigo de revista, não documento oficial, e é exatamente isso que a separação das duas contagens serve para mostrar.
+
+---
+
+## 13. A décima segunda peça do eixo 12 — 17/11/2026, no mesmo dia e por decisão do pesquisador
+
+> RUIBAL, Alba. "Forms of Countermovement and Counter-Reform in Latin America: Judicial Backlash or Resources and Political and Legal Opportunities?". In: BOTERO, Sandra; BRINKS, Daniel; GONZÁLEZ OCANTOS, Ezequiel (eds.). *The Limits of Judicialization: From Progress to Backlash in Latin American Politics*. Cambridge: Cambridge University Press, 2022, p. 89-114. DOI 10.1017/9781009093859.004. **Versão aceita**, depósito do Instituto Universitário Europeu.
+
+**Ela fecha o argumento que a seção 12 abre.** Ruibal (2015) *propõe* o aparato para a América Latina e nomeia a arena; esta **tipifica** o que se encontrou nela — e o tipo brasileiro **não é de rua**.
+
+### 13.1 O tipo brasileiro é legislativo, e está medido na folha 2
+
+A peça *"identifies four types of counter-mobilization and counter-reform, according to the predominant and most successful strategy of conservative actors"* (folha 2), com a tipologia na **Tabela 1** (folha 4). E o Brasil entra assim, na mesma folha 2:
+
+> *"In this account, Brazil is analyzed as an emblematic case of the influence of conservative forces on the legislature and the formation of an inter-religious caucus at the national Congress"*
+
+**Bancada inter-religiosa no Congresso — não contramobilização de rua.** Com isto o eixo 12 tem a afirmação completa e com lastro: **o conceito de contramovimento está na América Latina, está no campo jurídico-legislativo, e a lacuna da literatura não é de conceito nem de região — é de arena.**
+
+### 13.2 A única frase de toda a obra de Ruibal que encosta no nosso objeto
+
+Na **folha 10**, descrevendo o processo de impeachment:
+
+> *"which allowed right-wing political forces to capitalize the social unrest manifested in the cycle of street protests started in June 2013"*
+
+**É a tese da apropriação conservadora dita dentro de uma peça de contramovimento** — o que nenhuma das outras onze peças do eixo faz nesse vocabulário. **E é uma oração de contexto, não medição:** o capítulo é sobre aborto e cortes constitucionais, e esta frase situa o caso brasileiro. **Não ancora registro, e não serve de âncora para PT-01**, que já tem a sua em Kunrath Silva (2018).
+
+> **A frase só apareceu porque a sonda foi corrigida, e o erro era meu.** A varredura do censo, em 16/11/2026, procurava **«junho de 2013» em português** e devolveu **zero** para esta peça. **O zero era falso: a peça escreve em inglês, «June 2013».** A sonda refeita procura as três grafias — `junho de 2013`, `junio de 2013`, `june 2013` — e declara controle positivo e negativo. **Zero de sonda que não cobre a língua do arquivo é silêncio, não ausência.**
+
+### 13.3 A quinta variante de armadilha de numeração, e é a pior das cinco
+
+| peça | o que a numeração faz |
+|:--|:--|
+| Kunrath Silva (2018) | edição eletrônica **sem** as páginas do impresso; a unidade é o **parágrafo** |
+| Alonso (2023) | edição digital, **sem paginação de papel e sem rótulo de página** |
+| Araujo e Sales (2022) | nenhuma folha imprime número; o offset é **derivado do cabeçalho**, não lido |
+| Gold e Peña (2021) | paginação publicada (93-118) **existe e o arquivo não a reproduz** — e o arquivo **não tem paginação nenhuma** |
+| **Ruibal (2022)** | **o arquivo IMPRIME número em todas as 20 folhas, de 1 a 20 — e nenhum deles é a paginação publicada** |
+
+**Esta é pior que a de Gold e Peña, e a razão é precisa:** lá não havia número para confundir ninguém. **Aqui há.** Quem citar *"Ruibal 2022, p. 7"* estará citando uma página que **existe e está impressa no arquivo** — a do manuscrito aceito, não a do livro. **A armadilha não é a ausência do número: é a presença de um número errado que parece certo.**
+
+**E o deslocamento não é derivável, o que está MEDIDO e não suposto:** o intervalo publicado **89-114 tem 26 páginas** e o arquivo tem **20 folhas**. As diagramações diferem em **6 páginas** — logo **não existe soma constante** que leve uma à outra. Tentar declarar `impressa = folha + 88` produziria a cifra correta no referente errado, que é o modo de falha desta casa.
+
+**Uma coisa esta peça tem e Gold e Peña não tinha:** a **citação completa com o intervalo publicado está na folha 1 do próprio arquivo**. O arquivo declara o que ele não reproduz. Em Gold e Peña o intervalo teve de ser buscado fora.
+
+### 13.4 O que ela diz sobre a questão tabelada em 11.5 — e não é decisão, é contraste
+
+A seção 11.5 tabela três saídas para a guarda de byte de Gold e Peña, e a terceira — **converter para PDF** — está lá não executada, porque o manifesto passaria a registrar uma `paginas` que seria **da minha conversão e de mais nada**.
+
+**Ruibal (2022) mostra o caso vizinho, e a diferença importa:** aqui o depósito **já é PDF**, feito pela autora e distribuído pelo repositório. As **20 folhas são propriedade do artefato**, não da minha conversão. **Então ela entra no manifesto, entra na linha de base e tem o byte vigiado pela checagem 8 — sem que eu tenha fabricado paginação nenhuma.**
+
+> **O que isto NÃO resolve:** a questão de Gold e Peña continua sendo a dele, porque lá o que o repositório distribui é `.docx` e **qualquer PDF teria de ser feito por mim**. O contraste só torna a escolha mais clara: **a diferença entre as duas não é de licença nem de formato, é de quem paginou.**
+
+### 13.5 O que ela não faz
+
+**Não ancora registro, e nenhum campo de nenhum registro foi tocado.** Medido no arquivo: `countermov` **25**, `june 2013` **1**, `contra-movi` **0** — porque escreve em inglês —, `abeyance` **0**, `spin-off` **0**.
+
+**Linha de base movida de (78, 12.715) para (79, 12.735)** — 20 folhas. **A documental segue 25 peças / 7.092 p.**: entrou capítulo de livro acadêmico, não documento oficial. **As âncoras não-PDF seguem 10** — esta entra como PDF, diferente de Gold e Peña.
+
+**E a tabela do inventário recebeu a quinta linha**, com a errata da seção 12.5 atualizada: o eixo tem **doze peças — onze PDFs e uma âncora não-PDF — e 574 páginas**.

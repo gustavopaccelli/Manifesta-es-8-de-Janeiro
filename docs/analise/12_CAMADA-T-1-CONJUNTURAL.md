@@ -546,7 +546,11 @@ O eixo 12 já tinha medido, pelo censo de Kunrath Silva e Mazzilli Pereira (2020
 
 ### 12.3 Uma pista que toca PT-01 diretamente, e ela não está no corpus
 
-Na folha 23 (impressa 197) está a entrada bibliográfica de **MEYER e STAGGENBORG (2008), "Opposing Movement Strategies in U.S. Abortion Politics", *Research in Social Movements, Conflicts and Change* 28:207-238** — a continuação da peça de 1996, que **é** do corpus.
+Na folha 23 (impressa 197) está a entrada bibliográfica de **MEYER e STAGGENBORG (2008), "Opposing Movement Strategies in U.S. Abortion Politics", *Research in Social Movements, Conflicts and Change* 28:207-238** — a continuação da peça de 1996.
+
+> **ERRATA DE 17/11/2026, no mesmo dia em que a frase foi escrita.** Esta linha dizia que a peça de 1996 *"é do corpus"*. **É FALSO, e medido: `Meyer` e `Staggenborg` não aparecem em nenhum caminho do `MANIFESTO-CORPUS.csv` nem em campo algum do codebook** — o manifesto só os menciona **dentro de uma nota de procedência**, a de Kunrath Silva e Mazzilli Pereira (2020), que foi achada entre os citantes deles. **MEYER e STAGGENBORG (1996), AJS 101(6):1628-1660, está na frente bibliográfica** (`~/research/ciclo-2013-apropriacao-conservadora/sources/`), entregue pelo pesquisador em 06/11/2026 e lida nas seis primeiras proposições — **e não em `Fontes/`**. Promovê-la é decisão dele, e ela é a origem nomeada da Proposição 4, que é a candidata a âncora teórica de PT-01.
+>
+> **Como o erro passou:** eu o escrevi a partir do que lembrava da frente bibliográfica, onde a peça está, e não conferi contra o manifesto. **Arquivo que eu li não é arquivo que o corpus tem** — são dois lugares, e só um deles tem guarda de byte.
 
 **Ruibal a cita nas pp. 209 e 213 para a tese de que uma via institucional receptiva a um movimento não é necessariamente menos favorável ao oponente dele.** No vocabulário deste projeto, isso é exatamente o que PT-01 afirma da janela de 2013: **a oportunidade aberta não pertence a quem a abriu.**
 

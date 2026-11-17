@@ -548,7 +548,21 @@ O eixo 12 já tinha medido, pelo censo de Kunrath Silva e Mazzilli Pereira (2020
 
 Na folha 23 (impressa 197) está a entrada bibliográfica de **MEYER e STAGGENBORG (2008), "Opposing Movement Strategies in U.S. Abortion Politics", *Research in Social Movements, Conflicts and Change* 28:207-238** — a continuação da peça de 1996, que **é** do corpus.
 
-**Ruibal a cita nas pp. 209 e 213 para a tese de que uma via institucional receptiva a um movimento não é necessariamente menos favorável ao oponente dele.** No vocabulário deste projeto, isso é exatamente o que PT-01 afirma da janela de 2013: **a oportunidade aberta não pertence a quem a abriu.** **Obter a peça é decisão sua**, e ela não bloqueia registro nenhum.
+**Ruibal a cita nas pp. 209 e 213 para a tese de que uma via institucional receptiva a um movimento não é necessariamente menos favorável ao oponente dele.** No vocabulário deste projeto, isso é exatamente o que PT-01 afirma da janela de 2013: **a oportunidade aberta não pertence a quem a abriu.**
+
+> **PROCURADA EM 17/11/2026 E NÃO OBTIDA — e o limite é de LICENÇA, não de técnica.** Isto fica escrito aqui porque *"não está no corpus"* e *"foi procurada e está fechada"* não são a mesma declaração, e só a segunda é medição.
+>
+> **Três medições independentes dizem fechado:** o OpenAlex devolve `is_oa: false`, `closed`, com **localização única na editora**; o OpenAIRE devolve um resultado com acesso **«unspecified»** e só o DOI; a Semantic Scholar devolve `isOpenAccess: false` e `openAccessPdf.status: CLOSED`. **Não há depósito aberto em repositório nenhum.** A referência está resolvida e confere com a paginação que Ruibal cita: **doi 10.1016/S0163-786X(08)28007-9**, RSMCC 28:207-238, conferido no Crossref.
+>
+> **As três rotas de cópia de autor param em desafio de robô, e desafio de robô não se tenta:** o DOI redireciona para `emerald.com`, que cai em verificação de segurança; o site de David S. Meyer na UCI devolve **403 ao script e ao navegador**; e o **eScholarship** da Universidade da Califórnia — o repositório onde um autor da UC depositaria — está atrás de *«BotStopper»*.
+>
+> **A consequência analítica, declarada:** a tese atribuída **segue sendo citação de citação**. O parágrafo acima a atribui a **Ruibal**, não à peça, e é assim que ela pode ser usada na redação — *"Ruibal (2015) atribui a Meyer e Staggenborg (2008) a tese de que…"*, nunca *"Meyer e Staggenborg (2008) sustentam que…"*. **É a regra da casa: não se cita tese nem cifra conferida apenas contra outra citação dela.**
+>
+> **E uma divergência de ano fica registrada sem ser resolvida:** Ruibal e a Semantic Scholar dizem **2008**, o OpenAlex diz **2009**, e o volume é o **28** nas três. **Não a resolvi, e não a afirmo em nenhum dos dois sentidos.**
+>
+> **O que apareceu no lugar, e NÃO é substituto:** STAGGENBORG (2024), *"Movement and Countermovement Mobilization in the US Abortion Conflict"*, *PS: Political Science & Politics* 58(1):65-68, **CC BY** — mesma autora, mesma pergunta, 16 anos depois, e aberta. **Ela não restitui a proposição de 2008, e isso está medido na própria peça: a lista de referências dela cita apenas Meyer e Staggenborg 1996.** Está na frente bibliográfica, **não no corpus**, e entrar é decisão sua.
+
+**Obter a peça segue sendo decisão sua** — hoje, por pedido de arquivo, que é como nove peças deste projeto chegaram. **Ela não bloqueia registro nenhum.**
 
 ### 12.4 As folhas lidas foram MEDIDAS, não derivadas
 
